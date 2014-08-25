@@ -12,7 +12,7 @@ public abstract class Basic {
 
     public String backgroundColor;
     public String borderColor;
-    public Integer borderWidth ;
+    public Integer borderWidth;
     public Integer padding;
     public Integer itemGap;
 

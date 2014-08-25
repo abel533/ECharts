@@ -12,6 +12,6 @@ public class SplitArea {
     public SplitArea() {
         this.show = false;
         this.areaStyle = new AreaStyle();
-        this.areaStyle.color = new String[]{"rgba(250,250,250,0.3)","rgba(200,200,200,0.3)"};
+        this.areaStyle.color = new String[]{"rgba(250,250,250,0.3)", "rgba(200,200,200,0.3)"};
     }
 }

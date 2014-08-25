@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 14-8-25.
  */
-public class Toolbox extends Basic{
+public class Toolbox extends Basic {
     public Boolean show;
     public Align orient;
 
@@ -22,7 +22,7 @@ public class Toolbox extends Basic{
     public Integer itemSize;
     public Boolean showTitle;
 
-    public Map<String,Feature> feature;
+    public Map<String, Feature> feature;
 
     public Toolbox() {
         super();
@@ -30,7 +30,7 @@ public class Toolbox extends Basic{
         this.orient = Align.horizontal;
         this.x = XPosition.right;
         this.y = YPosition.top;
-        this.color = new String[]{"#1e90ff","#22bb22","#4b0082","#d2691e"};
+        this.color = new String[]{"#1e90ff", "#22bb22", "#4b0082", "#d2691e"};
         this.disableColor = "#ddd";
         this.effectiveColor = "red";
         this.itemSize = 16;
