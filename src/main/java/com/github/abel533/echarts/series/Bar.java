@@ -1,7 +1,7 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.Label;
-import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.code.SeriesType;
 
 /**
  * Description: Bar
@@ -14,13 +14,14 @@ public class Bar extends Series {
     public String barCategoryGap;
 
     public Bar() {
+        super();
+        this.type = SeriesType.bar;
         this.xAxisIndex = 0;
         this.yAxisIndex = 0;
         this.barMinHeight = 0;
         this.barGap = "30%";
         this.barCategoryGap = "20%";
 
-        this.itemStyle = new ItemStyle();
         this.itemStyle.normal.borderColor = "#fff";
         this.itemStyle.normal.borderRadius = 0;
         this.itemStyle.normal.borderWidth = 0;

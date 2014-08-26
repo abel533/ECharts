@@ -1,9 +1,11 @@
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Description: Series
@@ -18,11 +20,16 @@ public abstract class Series {
     public Tooltip tooltip;
     public SeriesType type;
     public ItemStyle itemStyle;
-    public Data[] data;
+    public List<Object> data;
 
     public MarkPoint markPoint;
     public MarkLine markLine;
 
     public Integer symbolSize;
     public Boolean showAllSymbol;
+
+    protected Series() {
+        this.data = new ArrayList<Object>();
+        this.itemStyle = new ItemStyle();
+    }
 }

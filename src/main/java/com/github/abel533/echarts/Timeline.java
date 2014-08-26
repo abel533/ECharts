@@ -1,9 +1,14 @@
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.ControlPosition;
 import com.github.abel533.echarts.code.LineType;
 import com.github.abel533.echarts.code.Symbol;
+import com.github.abel533.echarts.style.CheckpointStyle;
+import com.github.abel533.echarts.style.ControlStyle;
 import com.github.abel533.echarts.style.LineStyle;
-import com.github.abel533.echarts.style.TextStyle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Description: Timeline
@@ -28,10 +33,6 @@ public class Timeline {
     public Integer borderWidth;
     public Integer padding;
 
-    public static enum ControlPosition {
-        left, right, none
-    }
-
     public ControlPosition controlPosition;
 
     public Boolean autoPlay;
@@ -42,49 +43,7 @@ public class Timeline {
 
     public Label label;
 
-    public class CheckpointStyle {
-        public Object symbol;
-        public Object symbolSize;
-        public String color;
-        public String borderColor;
-        public Object borderWidth;
-        public Label label;
-
-        public CheckpointStyle() {
-            this.symbol = "auto";
-            this.symbolSize = "auto";
-            this.color = "auto";
-            this.borderColor = "auto";
-            this.borderWidth = "auto";
-            this.label = new Label();
-            this.label.show = true;
-            this.label.interval = "auto";
-            this.label.rotate = 0;
-            this.label.textStyle = new TextStyle();
-            this.label.textStyle.color = "#333";
-            this.label.show = false;
-            this.label.interval = null;
-            this.label.rotate = null;
-        }
-    }
-
     public CheckpointStyle checkpointStyle;
-
-    public class ControlStyle {
-        public class Color {
-            public String color;
-        }
-
-        public Color normal;
-        public Color emphasis;
-
-        public ControlStyle() {
-            this.normal = new Color();
-            this.normal.color = "#333";
-            this.emphasis = new Color();
-            this.emphasis.color = "#1e90ff";
-        }
-    }
 
     public ControlStyle controlStyle;
 
@@ -93,7 +52,7 @@ public class Timeline {
     public Integer symbolSize;
     public Integer currentIndex;
 
-    public Data[] data;
+    public List<Object> data;
 
     public Timeline() {
         this.show = true;
@@ -126,5 +85,7 @@ public class Timeline {
 
         this.symbolSize = 4;
         this.currentIndex = 0;
+
+        this.data = new ArrayList<Object>();
     }
 }

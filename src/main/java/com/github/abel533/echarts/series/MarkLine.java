@@ -1,10 +1,11 @@
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,7 +20,7 @@ public class MarkLine {
     public Effect effect;
     public ItemStyle itemStyle;
     public Map geoCoord;
-    public Data[] data;
+    public List<Object> data;
 
     public MarkLine() {
         this.symbol = new Object[]{Symbol.circle, Symbol.arrow};
@@ -27,5 +28,7 @@ public class MarkLine {
         this.effect = new Effect();
         this.itemStyle = new ItemStyle();
         this.geoCoord = new HashMap();
+
+        this.data = new ArrayList<Object>();
     }
 }

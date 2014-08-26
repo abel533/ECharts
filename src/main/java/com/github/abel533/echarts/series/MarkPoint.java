@@ -1,12 +1,13 @@
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,7 +22,7 @@ public class MarkPoint {
     public Effect effect;
     public ItemStyle itemStyle;
     public Map geoCoord;
-    public Data[] data;
+    public List<Object> data;
 
     public MarkPoint() {
         this.symbol = Symbol.pin;
@@ -39,5 +40,7 @@ public class MarkPoint {
 
 
         this.geoCoord = new HashMap();
+
+        this.data = new ArrayList<Object>();
     }
 }

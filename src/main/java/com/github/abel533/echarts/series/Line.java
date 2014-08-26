@@ -2,7 +2,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.LineType;
-import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.LineStyle;
 
 /**
@@ -12,9 +12,11 @@ import com.github.abel533.echarts.style.LineStyle;
  */
 public class Line extends Series {
     public Line() {
+        super();
+        this.type = SeriesType.line;
         this.xAxisIndex = 0;
         this.yAxisIndex = 0;
-        this.itemStyle = new ItemStyle();
+
         this.itemStyle.normal.label = new Label();
         this.itemStyle.normal.label.show = false;
         this.itemStyle.normal.lineStyle = new LineStyle();

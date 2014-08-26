@@ -4,6 +4,9 @@ import com.github.abel533.echarts.code.Align;
 import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Administrator on 14-8-25.
  */
@@ -17,7 +20,7 @@ public class Legend extends Basic {
     //enum SelectedMode
     public Object selectedMode;
 
-    public Data[] data;
+    public List<Object> data;
 
     public Legend() {
         super();
@@ -27,5 +30,7 @@ public class Legend extends Basic {
         this.selectedMode = true;
         this.textStyle = new TextStyle();
         this.textStyle.color = "#333";
+
+        this.data = new ArrayList<Object>();
     }
 }

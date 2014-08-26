@@ -1,6 +1,6 @@
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.LineStyle;
 
 /**
@@ -10,10 +10,11 @@ import com.github.abel533.echarts.style.LineStyle;
  */
 public class K extends Series {
     public K() {
+        super();
+        this.type = SeriesType.kK;
         this.xAxisIndex = 0;
         this.yAxisIndex = 0;
 
-        this.itemStyle = new ItemStyle();
         this.itemStyle.normal.color = "#fff";
         this.itemStyle.normal.color0 = "#00aa11";
         this.itemStyle.normal.lineStyle = new LineStyle();

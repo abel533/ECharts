@@ -1,5 +1,6 @@
 package com.github.abel533.echarts.axis;
 
+import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.code.XPosition;
 
@@ -19,6 +20,7 @@ public class ValueAxis extends Axis {
 
 
     public ValueAxis() {
+        this.type = AxisType.value;
         this.position = XPosition.left;
         this.name = "";
         this.nameLocation = NameLocation.end;

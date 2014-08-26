@@ -3,7 +3,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.LabelLine;
 import com.github.abel533.echarts.code.Position;
-import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.code.SeriesType;
 
 /**
  * Description: Pie
@@ -19,6 +19,8 @@ public class Pie extends Series {
     public Integer selectedOffset;
 
     public Pie() {
+        super();
+        this.type = SeriesType.pie;
         this.center[0] = "50%";
         this.center[1] = "50%";
         this.radius[0] = 0;
@@ -28,7 +30,6 @@ public class Pie extends Series {
         this.minAngle = 0;
         this.selectedOffset = 10;
 
-        this.itemStyle = new ItemStyle();
         this.itemStyle.normal.borderColor = "rgba(0,0,0,0)";
         this.itemStyle.normal.borderWidth = 1;
         this.itemStyle.normal.label = new Label();
