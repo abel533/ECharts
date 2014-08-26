@@ -6,5 +6,5 @@ package com.github.abel533.echarts.code;
  * Update: liuzh(2014-08-26 10:10)
  */
 public enum Position {
-    inside, left, right, top, bottom
+    outer, inside, left, right, top, bottom
 }

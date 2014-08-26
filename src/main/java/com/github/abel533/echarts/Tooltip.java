@@ -12,7 +12,7 @@ public class Tooltip extends Basic {
     public Trigger trigger;
 
     public Object position;
-    public String formatter;
+    public Object formatter;
 
     public String islandFormatter;
     public Integer showDelay;

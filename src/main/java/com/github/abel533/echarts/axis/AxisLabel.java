@@ -12,7 +12,7 @@ public class AxisLabel {
     public Integer rotate;
     public Integer margin;
     public Boolean clickable;
-    public String formatter;
+    public Object formatter;
     public TextStyle textStyle;
 
     public AxisLabel() {

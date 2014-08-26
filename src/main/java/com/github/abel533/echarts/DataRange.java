@@ -24,7 +24,7 @@ public class DataRange extends Basic {
 
     public String[] color;
 
-    public String formatter;
+    public Object formatter;
 
     public String[] text;
 

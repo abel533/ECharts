@@ -10,6 +10,8 @@ import com.github.abel533.echarts.style.TextStyle;
 public class Label {
     public Boolean show;
     public Object position;
-    public String formatter;
+    public Object interval;
+    public Integer rotate;
+    public Object formatter;
     public TextStyle textStyle;
 }

@@ -10,11 +10,12 @@ import com.github.abel533.echarts.LabelLine;
  */
 public class ItemStyle {
 
-    private abstract class Style {
+    public abstract class Style {
         public Label label;
         public LabelLine labelLine;
 
         public String color;
+        public String color0;
         public LineStyle lineStyle;
         public AreaStyle areaStyle;
         public ChordStyle chordStyle;

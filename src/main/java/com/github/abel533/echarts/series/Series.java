@@ -10,7 +10,7 @@ import com.github.abel533.echarts.style.ItemStyle;
  * Author: liuzh
  * Update: liuzh(2014-08-26 09:26)
  */
-public class Series {
+public abstract class Series {
     public Integer xAxisIndex;
     public Integer yAxisIndex;
 

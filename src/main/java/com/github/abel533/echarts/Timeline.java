@@ -40,22 +40,6 @@ public class Timeline {
 
     public LineStyle lineStyle;
 
-    public class Label {
-        public Boolean show;
-        public Object interval;
-        public Integer rotate;
-        public String formatter;
-        public TextStyle textStyle;
-
-        public Label() {
-            this.show = true;
-            this.interval = "auto";
-            this.rotate = 0;
-            this.textStyle = new TextStyle();
-            this.textStyle.color = "#333";
-        }
-    }
-
     public Label label;
 
     public class CheckpointStyle {
@@ -73,6 +57,11 @@ public class Timeline {
             this.borderColor = "auto";
             this.borderWidth = "auto";
             this.label = new Label();
+            this.label.show = true;
+            this.label.interval = "auto";
+            this.label.rotate = 0;
+            this.label.textStyle = new TextStyle();
+            this.label.textStyle.color = "#333";
             this.label.show = false;
             this.label.interval = null;
             this.label.rotate = null;
