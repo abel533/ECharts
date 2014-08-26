@@ -1,4 +1,4 @@
-package com.github.abel533.echarts;
+package com.github.abel533.echarts.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

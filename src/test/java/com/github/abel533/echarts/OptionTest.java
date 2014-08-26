@@ -8,6 +8,8 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.series.MarkLine;
+import com.github.abel533.echarts.util.GsonFormatter;
+import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -57,5 +59,7 @@ public class OptionTest {
 
         //输出结构
         GsonFormatter.print(option);
+
+        ViewECharts.view(option, "d:/echarts");
     }
 }

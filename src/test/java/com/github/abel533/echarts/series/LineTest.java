@@ -1,6 +1,6 @@
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.GsonFormatter;
+import com.github.abel533.echarts.util.GsonFormatter;
 import org.junit.Test;
 
 /**
