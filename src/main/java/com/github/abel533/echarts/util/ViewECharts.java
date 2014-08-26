@@ -35,8 +35,10 @@ public class ViewECharts {
         FileWriter writer = null;
         List<String> lines = new ArrayList<String>();
         String line;
+        //写入文件
+        File html = new File(folder.getPath() + "/" + "ECharts-" + System.currentTimeMillis() + ".html");
         try {
-            is = ViewECharts.class.getResourceAsStream("/template.html");
+            is = ViewECharts.class.getResourceAsStream("/template");
             iReader = new InputStreamReader(is);
             bufferedReader = new BufferedReader(iReader);
             while ((line = bufferedReader.readLine()) != null) {
@@ -45,14 +47,11 @@ public class ViewECharts {
                 }
                 lines.add(line);
             }
-            //写入文件
-            File html = new File(folder.getPath() + "/" + "ECharts-" + System.currentTimeMillis() + ".html");
+
             writer = new FileWriter(html);
             for (String l : lines) {
                 writer.write(l + "\n");
             }
-            //处理
-            browse(html.getAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -70,6 +69,12 @@ public class ViewECharts {
                     e.printStackTrace();
                 }
             }
+        }
+        //处理
+        try {
+            browse(html.getAbsolutePath());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

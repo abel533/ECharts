@@ -8,7 +8,6 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.series.MarkLine;
-import com.github.abel533.echarts.util.GsonFormatter;
 import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
 
@@ -40,7 +39,7 @@ public class OptionTest {
         ValueAxis valueAxis = new ValueAxis();
         option.yAxis = new ArrayList<Axis>();
         valueAxis.boundaryGap = new Double[]{0.1, 0.1};
-        valueAxis.splitNumber = 4;
+        valueAxis.splitNumber = 10;
         option.yAxis.add(valueAxis);
 
         Line line = new Line();
@@ -58,8 +57,7 @@ public class OptionTest {
         option.series.add(line);
 
         //输出结构
-        GsonFormatter.print(option);
-
-        ViewECharts.view(option, "d:/echarts");
+        //GsonFormatter.print(option);
+        ViewECharts.view(option);
     }
 }
