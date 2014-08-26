@@ -9,4 +9,8 @@ public class LineStyle {
     public Object color;
     public Integer width;
     public LineType type;
+    public String shadowColor;
+    public Integer shadowBlur;
+    public Integer shadowOffsetX;
+    public Integer shadowOffsetY;
 }
