@@ -10,6 +10,18 @@ import com.github.abel533.echarts.code.MarkType;
 public class LineData extends PointData {
     public Integer valueIndex;
 
+    public LineData() {
+        super();
+    }
+
+    public LineData(Object value, Object symbol) {
+        super(value, symbol);
+    }
+
+    public LineData(Object value, Object symbol, Integer symbolSize) {
+        super(value, symbol, symbolSize);
+    }
+
     public LineData(String name, Object value, Integer x, Integer y) {
         super(name, value, x, y);
     }

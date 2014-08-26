@@ -1,6 +1,7 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.code.MarkType;
+import com.github.abel533.echarts.style.ItemStyle;
 
 /**
  * Description: PointData
@@ -19,6 +20,25 @@ public class PointData {
     public Integer yAxis;
 
     public MarkType type;
+
+    public Object symbol;
+    public Integer symbolSize;
+
+    public ItemStyle itemStyle;
+
+    public PointData() {
+    }
+
+    public PointData(Object value, Object symbol) {
+        this.value = value;
+        this.symbol = symbol;
+    }
+
+    public PointData(Object value, Object symbol, Integer symbolSize) {
+        this.value = value;
+        this.symbol = symbol;
+        this.symbolSize = symbolSize;
+    }
 
     public PointData(String name, Object value, Integer x, Integer y) {
         this.name = name;

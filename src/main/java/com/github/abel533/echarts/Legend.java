@@ -5,6 +5,7 @@ import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -32,5 +33,16 @@ public class Legend extends Basic {
         this.textStyle.color = "#333";
 
         this.data = new ArrayList<Object>();
+    }
+
+    /**
+     * 添加图例属性
+     *
+     * @param values
+     * @return
+     */
+    public Legend addData(Object... values) {
+        data.addAll(Arrays.asList(values));
+        return this;
     }
 }

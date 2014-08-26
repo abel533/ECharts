@@ -18,14 +18,16 @@ public abstract class Series {
     public Integer yAxisIndex;
 
     public String name;
-    public Tooltip tooltip;
     public SeriesType type;
+    public String stack;
+    public Tooltip tooltip;
     public ItemStyle itemStyle;
     public List<Object> data;
 
     public MarkPoint markPoint;
     public MarkLine markLine;
 
+    public Object symbol;
     public Integer symbolSize;
     public Boolean showAllSymbol;
 

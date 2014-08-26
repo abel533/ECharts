@@ -1,6 +1,7 @@
 package com.github.abel533.echarts.style;
 
 import com.github.abel533.echarts.Label;
+import com.github.abel533.echarts.code.Symbol;
 
 /**
  * Description: 该类只在Timeline中使用
@@ -16,7 +17,7 @@ public class CheckpointStyle {
     public Label label;
 
     public CheckpointStyle() {
-        this.symbol = "auto";
+        this.symbol = Symbol.auto;
         this.symbolSize = "auto";
         this.color = "auto";
         this.borderColor = "auto";

@@ -16,7 +16,7 @@ import java.util.Map;
  * Update: liuzh(2014-08-26 09:51)
  */
 public class MarkPoint {
-    public Symbol symbol;
+    public Object symbol;
     public Object symbolSize;
     public Boolean large;
     public Effect effect;

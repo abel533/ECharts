@@ -11,6 +11,8 @@ import com.github.abel533.echarts.style.LineStyle;
  * Update: liuzh(2014-08-26 10:14)
  */
 public class Line extends Series {
+    public Boolean smooth;
+
     public Line() {
         super();
         this.type = SeriesType.line;

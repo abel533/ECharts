@@ -47,7 +47,7 @@ public class Timeline {
 
     public ControlStyle controlStyle;
 
-    public Symbol symbol;
+    public Object symbol;
 
     public Integer symbolSize;
     public Integer currentIndex;
