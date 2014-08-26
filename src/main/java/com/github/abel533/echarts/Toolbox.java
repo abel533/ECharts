@@ -17,7 +17,6 @@ public class Toolbox extends Basic {
     public String[] color;
     public String disableColor;
     public String effectiveColor;
-    public String backgroundColor;
 
     public Integer itemSize;
     public Boolean showTitle;

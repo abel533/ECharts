@@ -5,6 +5,7 @@ import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,5 +32,17 @@ public abstract class Series {
     protected Series() {
         this.data = new ArrayList<Object>();
         this.itemStyle = new ItemStyle();
+    }
+
+
+    /**
+     * 添加数据
+     *
+     * @param values
+     * @return
+     */
+    public Series addData(Object... values) {
+        this.data.addAll(Arrays.asList(values));
+        return this;
     }
 }

@@ -5,13 +5,11 @@ import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.code.YPosition;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Administrator on 14-8-26.
  */
 public class CategoryAxis extends Axis {
-    public List<Object> data;
 
     public CategoryAxis() {
         this.type = AxisType.category;

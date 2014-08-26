@@ -8,8 +8,6 @@ import com.github.abel533.echarts.code.XPosition;
  * Created by Administrator on 14-8-26.
  */
 public class ValueAxis extends Axis {
-    public Integer[] boundaryGap;
-
     public Integer min;
     public Integer max;
     public Boolean scale;
