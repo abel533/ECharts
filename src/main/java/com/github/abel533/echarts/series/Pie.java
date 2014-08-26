@@ -11,8 +11,8 @@ import com.github.abel533.echarts.code.SeriesType;
  * Update: liuzh(2014-08-26 11:27)
  */
 public class Pie extends Series {
-    public final Object[] center = new Object[2];
-    public final Object[] radius = new Object[2];
+    public Object center;
+    public Object radius;
     public Boolean clockWise;
     public Integer startAngle;
     public Integer minAngle;
@@ -21,10 +21,8 @@ public class Pie extends Series {
     public Pie() {
         super();
         this.type = SeriesType.pie;
-        this.center[0] = "50%";
-        this.center[1] = "50%";
-        this.radius[0] = 0;
-        this.radius[1] = "75%";
+        this.center = new String[]{"50%", "50%"};
+        this.radius = "75%";
         this.clockWise = true;
         this.startAngle = 90;
         this.minAngle = 0;
