@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Administrator on 14-8-25.
  */
-public class Legend extends Basic {
+public class Legend extends Basic implements Data<Legend> {
     public Align orient;
 
     public Integer itemWidth;

@@ -1,5 +1,6 @@
 package com.github.abel533.echarts.axis;
 
+import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.style.LineStyle;
@@ -11,7 +12,7 @@ import java.util.List;
 /**
  * Created by Administrator on 14-8-26.
  */
-public class Axis {
+public class Axis implements Data<Axis> {
     public AxisType type;
     public Object position;
     public String name;
@@ -54,5 +55,4 @@ public class Axis {
         this.data.addAll(Arrays.asList(values));
         return this;
     }
-
 }
