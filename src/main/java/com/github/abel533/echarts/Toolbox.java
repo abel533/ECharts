@@ -102,19 +102,17 @@ public class Toolbox extends Basic implements Component {
     /**
      * 添加组件
      *
-     * @param values
+     * @param value
      * @return
      */
-    public Toolbox addFeature(Feature... values) {
-        if (values == null && values.length == 0) {
+    private Toolbox _addFeature(Feature value) {
+        if (value == null) {
             return this;
         }
-        for (Feature f : values) {
-            //第一个字母转小写
-            String name = f.getClass().getSimpleName();
-            name = name.substring(0, 1).toLowerCase() + name.substring(1);
-            addFeatureOnce(name, f);
-        }
+        //第一个字母转小写
+        String name = value.getClass().getSimpleName();
+        name = name.substring(0, 1).toLowerCase() + name.substring(1);
+        _addFeatureOnce(name, value);
         return this;
     }
 
@@ -124,35 +122,39 @@ public class Toolbox extends Basic implements Component {
      * @param values
      * @return
      */
-    public Toolbox addFeature(Tool... values) {
+    public Toolbox addFeature(Object... values) {
         if (values == null && values.length == 0) {
             return this;
         }
         if (this.feature == null) {
             this.feature = new HashMap<String, Feature>();
         }
-        for (Tool t : values) {
-            switch (t) {
-                case dataView:
-                    addFeatureOnce(t, Feature.dataView);
-                    break;
-                case dataZoom:
-                    addFeatureOnce(t, Feature.dataZoom);
-                    break;
-                case magicType:
-                    addFeatureOnce(t, Feature.magicType);
-                    break;
-                case mark:
-                    addFeatureOnce(t, Feature.mark);
-                    break;
-                case restore:
-                    addFeatureOnce(t, Feature.restore);
-                    break;
-                case saveAsImage:
-                    addFeatureOnce(t, Feature.saveAsImage);
-                    break;
-                default:
-                    //ignore
+        for (Object t : values) {
+            if (t instanceof Feature) {
+                _addFeature((Feature) t);
+            } else if (t instanceof Tool) {
+                switch ((Tool)t) {
+                    case dataView:
+                        _addFeatureOnce(t, Feature.dataView);
+                        break;
+                    case dataZoom:
+                        _addFeatureOnce(t, Feature.dataZoom);
+                        break;
+                    case magicType:
+                        _addFeatureOnce(t, Feature.magicType);
+                        break;
+                    case mark:
+                        _addFeatureOnce(t, Feature.mark);
+                        break;
+                    case restore:
+                        _addFeatureOnce(t, Feature.restore);
+                        break;
+                    case saveAsImage:
+                        _addFeatureOnce(t, Feature.saveAsImage);
+                        break;
+                    default:
+                        //ignore
+                }
             }
         }
         return this;
@@ -164,7 +166,7 @@ public class Toolbox extends Basic implements Component {
      * @param name
      * @param feature
      */
-    private void addFeatureOnce(Object name, Feature feature) {
+    private void _addFeatureOnce(Object name, Feature feature) {
         String _name = String.valueOf(name);
         if (!this.feature().containsKey(_name)) {
             this.feature().put(_name, feature);

@@ -27,8 +27,10 @@ package com.github.abel533.echarts.samples.line;
 import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.Magic;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
+import com.github.abel533.echarts.feature.MagicType;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
@@ -46,7 +48,7 @@ public class LineTest5 {
         option.addLegend("高度(km)与气温(°C)变化关系");
 
         option.toolbox().show = true;
-        option.toolbox().addFeature(Tool.mark, Tool.dataView, Tool.magicType, Tool.restore, Tool.saveAsImage);
+        option.toolbox().addFeature(Tool.mark, Tool.dataView, new MagicType(Magic.line,Magic.bar), Tool.restore, Tool.saveAsImage);
 
         option.calculable = true;
         option.tooltip().trigger = Trigger.axis;
