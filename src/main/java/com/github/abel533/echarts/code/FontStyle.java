@@ -27,7 +27,7 @@ package com.github.abel533.echarts.code;
 /**
  * Description : FontStyle
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 12:41)
  */
 public enum FontStyle {

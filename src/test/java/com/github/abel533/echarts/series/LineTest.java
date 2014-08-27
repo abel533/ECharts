@@ -29,8 +29,9 @@ import org.junit.Test;
 
 /**
  * Description: LineTest
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:23)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:23)
  */
 public class LineTest {
 

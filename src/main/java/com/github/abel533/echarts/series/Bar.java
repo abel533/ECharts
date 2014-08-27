@@ -27,13 +27,25 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 
 /**
- * Description: Bar
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:29)
+ * 柱形图
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:29)
  */
 public class Bar extends Series {
+    /**
+     * 柱条最小高度，可用于防止某item的值过小而影响交互
+     */
     public Integer barMinHeight;
+
+    /**
+     * 柱间距离，默认为柱形宽度的30%，可设固定值
+     */
     public String barGap;
+
+    /**
+     * 类目间柱形距离，默认为类目间距的20%，可设固定值
+     */
     public String barCategoryGap;
 
     public Bar() {

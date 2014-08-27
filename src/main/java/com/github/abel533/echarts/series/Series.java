@@ -27,6 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.ArrayList;
@@ -35,25 +36,91 @@ import java.util.List;
 
 /**
  * Description: Series
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:26)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:26)
  */
 public abstract class Series implements Data<Series> {
+    /**
+     * xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
+     */
     public Integer xAxisIndex;
+
+    /**
+     * yAxis坐标轴数组的索引，指定该系列数据所用的纵坐标轴
+     */
     public Integer yAxisIndex;
 
+    /**
+     * 系列名称，如启用legend，该值将被legend.data索引相关
+     */
     public String name;
+
+    /**
+     * 图表类型，必要参数！如为空或不支持类型，则该系列数据不被显示
+     *
+     * @see com.github.abel533.echarts.code.SeriesType
+     */
     public SeriesType type;
+
+    /**
+     * 组合名称，多组数据的堆积图时使用，eg：stack:'group1'，则series数组中stack值等于'group1'的数据做堆积计算
+     */
     public String stack;
+
+    /**
+     * 提示框样式，仅对本系列有效，如不设则用option.tooltip（详见tooltip）,鼠标悬浮交互时的信息提示
+     *
+     * @see com.github.abel533.echarts.Tooltip
+     */
     public Tooltip tooltip;
+
+    /**
+     * 图形样式
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
     public ItemStyle itemStyle;
+
+    /**
+     * 数据
+     */
     public List<Object> data;
 
+    /**
+     * 标注
+     *
+     * @see com.github.abel533.echarts.series.MarkPoint
+     */
     public MarkPoint markPoint;
+
+    /**
+     * 标线
+     *
+     * @see com.github.abel533.echarts.series.MarkLine
+     */
     public MarkLine markLine;
 
-    public Object symbol;
-    public Integer symbolSize;
+    /**
+     * 标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'）
+     *
+     * @see com.github.abel533.echarts.code.Symbol
+     */
+    public Symbol symbol;
+
+    /**
+     * 标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
+     */
+    public Object symbolSize;
+
+    /**
+     * 标志图形旋转角度[-180,180]
+     */
+    public Object symbolRoate;
+
+    /**
+     * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
+     */
     public Boolean showAllSymbol;
 
     /**

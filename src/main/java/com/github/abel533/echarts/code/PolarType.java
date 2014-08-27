@@ -27,7 +27,7 @@ package com.github.abel533.echarts.code;
 /**
  * 极坐标的形状，'polygon'|'circle' 多边形|圆形
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 13:24)
  */
 public enum PolarType {

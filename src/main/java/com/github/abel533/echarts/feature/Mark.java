@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * Description : Mark
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 13:49)
  */
 public class Mark extends Feature {

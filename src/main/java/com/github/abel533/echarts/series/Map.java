@@ -29,8 +29,9 @@ import com.github.abel533.echarts.code.SeriesType;
 
 /**
  * 地图
- * Author: liuzh
- * Update: liuzh(2014-08-26 11:34)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 11:34)
  */
 public class Map extends Series {
     /**

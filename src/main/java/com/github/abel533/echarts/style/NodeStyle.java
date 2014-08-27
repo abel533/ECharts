@@ -24,16 +24,22 @@
 
 package com.github.abel533.echarts.style;
 
+import com.github.abel533.echarts.code.BrushType;
+
 /**
  * Description: NodeStyle
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:34)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:34)
  */
 public class NodeStyle extends LinkStyle {
-    public static enum BrushType {
-        both, stroke, fill
-    }
-
+    /**
+     * 可选 'both', 'stroke', 'fill'
+     */
     public BrushType brushType;
+
+    /**
+     * 填充颜色
+     */
     public String color;
 }

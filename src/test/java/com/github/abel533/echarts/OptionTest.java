@@ -40,8 +40,9 @@ import java.util.ArrayList;
 
 /**
  * Description: OptionTest
- * Author: liuzh
- * Update: liuzh(2014-08-26 14:08)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 14:08)
  */
 public class OptionTest {
 

@@ -29,8 +29,9 @@ import com.github.abel533.echarts.style.ItemStyle;
 
 /**
  * Description: PointData
- * Author: liuzh
- * Update: liuzh(2014-08-26 13:17)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 13:17)
  */
 public class PointData {
     public String name;
@@ -51,8 +52,8 @@ public class PointData {
 
     public MarkType type;
 
-    public Object symbol;
-    public Integer symbolSize;
+    public Symbol symbol;
+    public Object symbolSize;
 
     public ItemStyle itemStyle;
 
@@ -64,7 +65,7 @@ public class PointData {
         this.symbol = symbol;
     }
 
-    public PointData(Object value, Object symbol, Integer symbolSize) {
+    public PointData(Object value, Object symbol, Object symbolSize) {
         this.value = value;
         this.symbol = symbol;
         this.symbolSize = symbolSize;

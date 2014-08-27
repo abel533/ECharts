@@ -26,8 +26,9 @@ package com.github.abel533.echarts.code;
 
 /**
  * Description: SeriesType
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:27)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:27)
  */
 public enum SeriesType {
     line,//折线图

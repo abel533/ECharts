@@ -28,10 +28,14 @@ import com.github.abel533.echarts.code.SeriesType;
 
 /**
  * Description: Line
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:14)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:14)
  */
 public class Line extends Series {
+    /**
+     * 平滑曲线
+     */
     public Boolean smooth;
 
     public Line() {

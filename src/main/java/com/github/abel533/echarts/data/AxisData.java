@@ -30,7 +30,7 @@ import com.github.abel533.echarts.style.TextStyle;
  * 自定义样式的数据 - 适用于axis.data
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 12:06)
+ * @since liuzh(2014-08-26 12:06)
  */
 public class AxisData {
 

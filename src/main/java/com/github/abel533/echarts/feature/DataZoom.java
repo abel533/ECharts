@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * Description : DataZoom
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 13:52)
  */
 public class DataZoom extends Feature {

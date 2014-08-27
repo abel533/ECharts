@@ -26,8 +26,9 @@ package com.github.abel533.echarts.data;
 
 /**
  * Description: ScatterData
- * Author: liuzh
- * Update: liuzh(2014-08-26 12:56)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 12:56)
  */
 public class ScatterData {
     public Object[] value;

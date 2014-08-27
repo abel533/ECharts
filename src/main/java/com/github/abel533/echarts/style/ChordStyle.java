@@ -25,10 +25,16 @@
 package com.github.abel533.echarts.style;
 
 /**
- * Description: ChordStyle
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:33)
+ * 弦样式
+ *
+ * @author liuzh
+ * @since 2014-08-26 09:33
  */
 public class ChordStyle {
+    /**
+     * 线条样式
+     *
+     * @see com.github.abel533.echarts.style.LineStyle
+     */
     public LineStyle lineStyle;
 }

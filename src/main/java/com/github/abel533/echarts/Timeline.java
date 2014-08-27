@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.ControlPosition;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.TimeLineType;
 import com.github.abel533.echarts.style.CheckpointStyle;
 import com.github.abel533.echarts.style.ControlStyle;
@@ -36,8 +37,9 @@ import java.util.List;
 
 /**
  * Description: Timeline
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:05)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:05)
  */
 public class Timeline implements Data<Timeline> {
     /**
@@ -169,12 +171,12 @@ public class Timeline implements Data<Timeline> {
      * @see com.github.abel533.echarts.code.Symbol
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Object symbol;
+    public Symbol symbol;
 
     /**
      * 默认值4，轴点symbol，同serie.symbolSize
      */
-    public Integer symbolSize;
+    public Object symbolSize;
 
     /**
      * 默认值0，当前索引位置，对应options数组，用于指定显示特定系列

@@ -27,7 +27,7 @@ package com.github.abel533.echarts.code;
 /**
  * Description : MagicType
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 13:46)
  */
 public enum MagicType {

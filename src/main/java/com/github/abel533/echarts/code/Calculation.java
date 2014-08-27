@@ -27,7 +27,7 @@ package com.github.abel533.echarts.code;
 /**
  * 计算方式
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 14:36)
  */
 public enum Calculation {

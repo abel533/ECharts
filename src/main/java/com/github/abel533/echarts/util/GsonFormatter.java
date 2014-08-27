@@ -31,8 +31,9 @@ import com.google.gson.JsonParser;
 
 /**
  * Description: GsonFormatter
- * Author: liuzh
- * Update: liuzh(2014-08-26 14:10)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 14:10)
  */
 public class GsonFormatter {
 

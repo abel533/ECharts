@@ -27,11 +27,29 @@ package com.github.abel533.echarts.series.force;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 力导向图的边数据
+ *
+ * @author liuzh
+ *         Created by liuzh on 14-8-26.
  */
 public class Link {
+    /**
+     * 源节点的index或者源节点的name
+     */
     public Object source;
+
+    /**
+     * 目标节点的index或者目标节点的name
+     */
     public Object target;
+
+    /**
+     * 边的权重，权重越大邻接节点越靠拢
+     */
     public Integer weight;
+
+    /**
+     * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
+     */
     public ItemStyle itemStyle;
 }

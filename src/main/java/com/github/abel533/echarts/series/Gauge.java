@@ -36,7 +36,7 @@ import com.github.abel533.echarts.series.gauge.Pointer;
  * 仪表盘
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 11:36)
+ * @since liuzh(2014-08-26 11:36)
  */
 public class Gauge extends Series {
     /**

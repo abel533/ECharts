@@ -28,13 +28,39 @@ import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 力导向图中节点的分类
+ *
+ * @author liuzh
+ *         Created by liuzh on 14-8-26.
  */
 public class Category {
+    /**
+     * 类目名称
+     */
     public String name;
+
+    /**
+     * 所有该类目的节点的形状, 详见 symbolList
+     *
+     * @see com.github.abel533.echarts.code.Symbol
+     */
     public Symbol symbol;
-    public Integer symbolSize;
+
+    /**
+     * 所有该类目的节点的大小
+     */
+    public Object symbolSize;
+
+    /**
+     * 所有该类目的节点是否能被拖拽
+     */
     public Boolean draggable;
+
+    /**
+     * 详见 itemStyle
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
     public ItemStyle itemStyle;
 
     public Category() {

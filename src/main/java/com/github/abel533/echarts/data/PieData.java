@@ -28,7 +28,7 @@ package com.github.abel533.echarts.data;
  * 饼图
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 13:08)
+ * @since liuzh(2014-08-26 13:08)
  */
 public class PieData {
     public Object value;

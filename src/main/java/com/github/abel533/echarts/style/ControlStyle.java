@@ -25,9 +25,10 @@
 package com.github.abel533.echarts.style;
 
 /**
- * Description: ControlStyle
- * Author: liuzh
- * Update: liuzh(2014-08-26 13:52)
+ * 时间轴控制器样式
+ *
+ * @author liuzh
+ * @since 2014-08-26 13:52
  */
 public class ControlStyle {
     public class Color {

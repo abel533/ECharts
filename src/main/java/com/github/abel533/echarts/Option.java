@@ -33,8 +33,9 @@ import java.util.List;
 
 /**
  * Description: Option
- * Author: liuzh
- * Update: liuzh(2014-08-26 11:57)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 11:57)
  */
 public class Option {
     /**

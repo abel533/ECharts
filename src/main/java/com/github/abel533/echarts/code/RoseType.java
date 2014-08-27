@@ -22,59 +22,14 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.series.gauge;
-
-import com.github.abel533.echarts.style.TextStyle;
+package com.github.abel533.echarts.code;
 
 /**
- * 仪表盘详情
+ * Description : RoseType
  *
- * @author liuzh
- * @since : liuzh(2014-08-27 14:23)
+ * @author : liuzh
+ * @since : liuzh(2014-08-27 16:49)
  */
-public class Detail {
-    /**
-     * 属性show控制显示与否
-     */
-    public Boolean show;
-
-    /**
-     * 标题背景颜色，默认透明
-     */
-    public String backgroundColor;
-
-    /**
-     * 标题边框颜色
-     */
-    public String borderColor;
-
-    /**
-     * borderWidth
-     */
-    public Integer borderWidth;
-
-    /**
-     * 属性width控制详情宽度
-     */
-    public Object width;
-
-    /**
-     * 属性height控制详情高度
-     */
-    public Object height;
-
-    /**
-     * 属性offsetCenter用于详情定位，数组为横纵相对仪表盘圆心坐标偏移，支持百分比（相对外半径）
-     */
-    public Object offsetCenter;
-
-    /**
-     * 属性formatter可以格式化文本
-     */
-    public String formatter;
-
-    /**
-     * 属性textStyle（详见textStyle）控制文本样式
-     */
-    public TextStyle textStyle;
+public enum RoseType {
+    radius, area
 }

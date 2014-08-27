@@ -27,12 +27,20 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 
 /**
- * Description: Scatter
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:37)
+ * 散点图、气泡图
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:37)
  */
 public class Scatter extends Series {
+    /**
+     * 大规模散点图
+     */
     public Boolean large;
+
+    /**
+     * 大规模阀值，large为true且数据量>largeThreshold才启用大规模模式
+     */
     public Long largeThreshold;
 
     public Scatter() {

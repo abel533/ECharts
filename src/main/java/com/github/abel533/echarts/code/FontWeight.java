@@ -27,7 +27,7 @@ package com.github.abel533.echarts.code;
 /**
  * Description : FontWeight
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 12:43)
  */
 public enum FontWeight {

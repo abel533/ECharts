@@ -30,7 +30,7 @@ import com.github.abel533.echarts.style.LineStyle;
  * 标签视觉引导线l
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 09:45)
+ * @since liuzh(2014-08-26 09:45)
  */
 public class LabelLine {
     /**

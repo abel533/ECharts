@@ -29,17 +29,45 @@ import com.github.abel533.echarts.code.Sort;
 
 /**
  * Description: Chord
- * Author: liuzh
- * Update: liuzh(2014-08-26 11:36)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 11:36)
  */
 public class Chord extends Series {
+    /**
+     * 每个sector之间的间距(用角度表示)
+     */
     public Integer padding;
+
+    /**
+     * 数据排序， 可以取none, ascending, descending
+     */
     public Sort sort;
+
+    /**
+     * 数据排序（弦）， 可以取none, ascending, descending
+     */
     public Sort sortSub;
+
+    /**
+     * 是否显示刻度
+     */
     public Boolean showScale;
+
+    /**
+     * 是否显示刻度文字
+     */
     public Boolean showScaleText;
+
+    /**
+     * 显示是否顺时针
+     */
     public Boolean clockWise;
-    public Object matrix;
+
+    /**
+     * 关系数据，用二维数组表示，项 [i][j] 的数值表示 i 到 j 的关系数据
+     */
+    public Object[][] matrix;
 
     public Chord() {
         this.type = SeriesType.chord;

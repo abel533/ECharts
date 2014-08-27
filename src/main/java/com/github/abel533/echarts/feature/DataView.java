@@ -27,7 +27,7 @@ package com.github.abel533.echarts.feature;
 /**
  * Description : DataView
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 13:53)
  */
 public class DataView extends Feature {

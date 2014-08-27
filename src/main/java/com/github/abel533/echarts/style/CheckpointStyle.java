@@ -27,15 +27,16 @@ package com.github.abel533.echarts.style;
 import com.github.abel533.echarts.Label;
 
 /**
- * Description: 该类只在Timeline中使用
- * Author: liuzh
- * Update: liuzh(2014-08-26 13:52)
+ * 时间轴当前点，该类只在Timeline中使用
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 13:52)
  */
 public class CheckpointStyle {
     /**
      * 当前点symbol，默认随轴上的symbol
      */
-    public Object symbol;
+    public Symbol symbol;
 
     /**
      * 当前点symbol大小，默认随轴上symbol大小

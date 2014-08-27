@@ -26,8 +26,9 @@ package com.github.abel533.echarts.code;
 
 /**
  * Description: Symbol
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:19)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:19)
  */
 public enum Symbol {
     none, auto,

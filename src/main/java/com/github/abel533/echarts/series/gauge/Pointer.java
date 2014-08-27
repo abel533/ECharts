@@ -27,7 +27,7 @@ package com.github.abel533.echarts.series.gauge;
 /**
  * 仪表盘 - 指针样式
  *
- * @author : liuzh
+ * @author liuzh
  * @since : liuzh(2014-08-27 14:20)
  */
 public class Pointer {

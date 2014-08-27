@@ -28,8 +28,9 @@ import com.github.abel533.echarts.style.TextStyle;
 
 /**
  * Description: Label
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:08)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:08)
  */
 public class Label {
     /**

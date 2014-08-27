@@ -31,15 +31,62 @@ import java.util.Map;
 
 /**
  * Description: MarkPoint
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:51)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:51)
  */
 public class MarkPoint {
-    public Object symbol;
+    /**
+     * 标注类型
+     *
+     * @see com.github.abel533.echarts.series.Series#symbol
+     */
+    public Symbol symbol;
+
+    /**
+     * 标注大小
+     *
+     * @see com.github.abel533.echarts.series.Series#symbolSize
+     */
     public Object symbolSize;
+
+    /**
+     * 标注图形旋转角度
+     *
+     * @see com.github.abel533.echarts.series.Series#symbolRoate
+     */
+    public Object symbolRoate;
+
+    /**
+     * 是否启动大规模标注模式
+     */
     public Boolean large;
+
+    /**
+     * 标注图形炫光特效
+     *
+     * @see com.github.abel533.echarts.series.Effect
+     */
     public Effect effect;
+
+    /**
+     * 标注图形样式属性
+     *
+     * @see com.github.abel533.echarts.series.Series#itemStyle
+     */
     public ItemStyle itemStyle;
+
+    /**
+     * 地图特有，标注图形定位坐标
+     *
+     * @see com.github.abel533.echarts.series.Map#geoCoord
+     */
     public Map geoCoord;
+
+    /**
+     * 标注图形数据
+     *
+     * @see com.github.abel533.echarts.data.PointData
+     */
     public List<Object> data;
 }

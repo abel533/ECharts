@@ -25,16 +25,44 @@
 package com.github.abel533.echarts.series;
 
 /**
- * Description: Effect
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:52)
+ * 图形炫光特效
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 09:52)
  */
 public class Effect {
+    /**
+     * 是否开启，默认关闭
+     */
     public Boolean show;
+
+    /**
+     * 循环动画，默认开启
+     */
     public Boolean loop;
+
+    /**
+     * 运动周期，无单位，值越大越慢，默认为15
+     */
     public Integer period;
+
+    /**
+     * 放大倍数，以markPoint symbolSize为基准
+     */
     public Integer scaleSize;
+
+    /**
+     * 炫光颜色，默认跟随markPoint itemStyle定义颜色
+     */
     public String color;
+
+    /**
+     * 光影颜色，默认跟随color
+     */
     public String shadowColor;
+
+    /**
+     * 光影模糊度，默认为0
+     */
     public Integer shadowBlur;
 }

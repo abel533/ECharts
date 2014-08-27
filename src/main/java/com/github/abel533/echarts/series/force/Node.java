@@ -28,18 +28,68 @@ import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 力导向图的顶点数据
+ *
+ * @author liuzh
+ *         Created by liuzh on 14-8-26.
  */
 public class Node {
+    /**
+     * 节点名称
+     */
     public String name;
+
+    /**
+     * 节点值，在不指定 symbolSize 的时候会被映射成 minRadius - maxRadius 作为节点大小
+     */
     public Integer value;
+
+    /**
+     * 强制指定节点的初始值，在不指定的时候会在某个范围内随机生成
+     */
     public Object initial;
+
+    /**
+     * 是否固定节点在 X 轴上的值，配合 initial 使用
+     */
     public Boolean fixX;
+
+    /**
+     * 是否固定节点在 Y 轴上的值，配合 initial 使用
+     */
     public Boolean fixY;
+
+    /**
+     * 是否忽略该节点
+     */
     public Boolean ignore;
+
+    /**
+     * 节点的形状, 详见 symbolList
+     *
+     * @see com.github.abel533.echarts.code.Symbol
+     */
     public Symbol symbol;
-    public Integer symbolSize;
+
+    /**
+     * 强制指定节点的大小
+     */
+    public Object symbolSize;
+
+    /**
+     * 节点是否能被拖拽
+     */
     public Boolean draggable;
+
+    /**
+     * 节点的 category index
+     */
     public Integer category;
+
+    /**
+     * 详见 itemStyle
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
     public ItemStyle itemStyle;
 }

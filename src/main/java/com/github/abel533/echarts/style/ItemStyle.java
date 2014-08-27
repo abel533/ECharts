@@ -29,24 +29,86 @@ import com.github.abel533.echarts.LabelLine;
 
 /**
  * Description: ItemStyle
- * Author: liuzh
- * Update: liuzh(2014-08-26 09:30)
+ *
+ * @author liuzh
+ * @since 2014-08-26 09:30
  */
 public class ItemStyle {
 
     public abstract class Style {
+        /**
+         * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置
+         * 折线图，柱形图，K线图，散点图可指定position见下
+         *
+         * @see com.github.abel533.echarts.Label
+         */
         public Label label;
+
+        /**
+         * 饼图标签视觉引导线，默认显示
+         *
+         * @see com.github.abel533.echarts.LabelLine
+         */
         public LabelLine labelLine;
 
+        /**
+         * 阳线颜色
+         */
         public String color;
+
+        /**
+         * 阴线颜色
+         */
         public String color0;
+
+        /**
+         * 线条样式
+         *
+         * @see com.github.abel533.echarts.style.LineStyle
+         */
         public LineStyle lineStyle;
+
+        /**
+         * 区域样式
+         *
+         * @see com.github.abel533.echarts.style.AreaStyle
+         */
         public AreaStyle areaStyle;
+
+        /**
+         * 和弦图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.ChordStyle
+         */
         public ChordStyle chordStyle;
+
+        /**
+         * 力导向图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.NodeStyle
+         */
         public NodeStyle nodeStyle;
+
+        /**
+         * 力导向图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.LinkStyle
+         */
         public LinkStyle linkStyle;
+
+        /**
+         * 柱形边框颜色
+         */
         public String borderColor;
+
+        /**
+         * 柱形边框圆角，单位px，默认为0
+         */
         public Integer borderRadius;
+
+        /**
+         * 柱形边框线宽，单位px，默认为1
+         */
         public Integer borderWidth;
     }
 
@@ -56,7 +118,14 @@ public class ItemStyle {
     public class Emphasis extends Style {
     }
 
+    /**
+     * 默认样式
+     */
     public Normal normal;
+
+    /**
+     * 强调样式（悬浮时样式）
+     */
     public Emphasis emphasis;
 
     public ItemStyle() {

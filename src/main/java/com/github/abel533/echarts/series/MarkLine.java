@@ -24,22 +24,66 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Description: MarkLine
- * Author: liuzh
- * Update: liuzh(2014-08-26 10:00)
+ *
+ * @author liuzh
+ * @since liuzh(2014-08-26 10:00)
  */
 public class MarkLine {
-    public Object symbol;
+    /**
+     * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
+     *
+     * @see com.github.abel533.echarts.code.Symbol
+     * @see com.github.abel533.echarts.series.Series#symbol
+     */
+    public Symbol symbol;
+
+    /**
+     * 标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize
+     *
+     * @see com.github.abel533.echarts.series.Series#symbolSize
+     */
     public Object symbolSize;
+
+    /**
+     * 标线起始和结束的symbol旋转控制，同series中的symbolRotate
+     *
+     * @see com.github.abel533.echarts.series.Series#symbolRoate
+     */
     public Object symbolRoate;
+
+    /**
+     * 标线图形炫光特效
+     *
+     * @see com.github.abel533.echarts.series.Effect
+     */
     public Effect effect;
+
+    /**
+     * 标线图形样式属性
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     * @see com.github.abel533.echarts.series.Series#itemStyle
+     */
     public ItemStyle itemStyle;
-    public Map geoCoord;
+
+    /**
+     * 地图特有，标线图形定位坐标
+     *
+     * @see com.github.abel533.echarts.series.Map#geoCoord
+     */
+    public Object geoCoord;
+
+    /**
+     * 标线图形数据
+     *
+     * @see com.github.abel533.echarts.data.PointData
+     */
     public List<Object> data;
 }

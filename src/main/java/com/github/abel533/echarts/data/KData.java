@@ -28,7 +28,7 @@ package com.github.abel533.echarts.data;
  * KData
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 12:58)
+ * @since liuzh(2014-08-26 12:58)
  */
 public class KData {
     public Double[] value;

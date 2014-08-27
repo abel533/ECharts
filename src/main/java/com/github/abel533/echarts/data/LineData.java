@@ -30,7 +30,7 @@ import com.github.abel533.echarts.code.MarkType;
  * LineData
  *
  * @author liuzh
- *         Update: liuzh(2014-08-26 13:25)
+ * @since liuzh(2014-08-26 13:25)
  */
 public class LineData extends PointData {
     /**
