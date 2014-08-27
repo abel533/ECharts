@@ -25,7 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.ControlPosition;
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.TimeLineType;
 import com.github.abel533.echarts.style.CheckpointStyle;
 import com.github.abel533.echarts.style.ControlStyle;
@@ -171,7 +170,7 @@ public class Timeline implements Data<Timeline> {
      * @see com.github.abel533.echarts.code.Symbol
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 默认值4，轴点symbol，同serie.symbolSize

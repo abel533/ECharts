@@ -41,7 +41,7 @@ public class MarkPoint {
      *
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 标注大小

@@ -27,7 +27,6 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.ArrayList;
@@ -106,7 +105,7 @@ public abstract class Series implements Data<Series> {
      *
      * @see com.github.abel533.echarts.code.Symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）

@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.series.force;
 
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -44,7 +43,7 @@ public class Category {
      *
      * @see com.github.abel533.echarts.code.Symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 所有该类目的节点的大小

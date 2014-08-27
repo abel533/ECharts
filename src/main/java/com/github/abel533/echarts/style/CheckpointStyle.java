@@ -36,7 +36,7 @@ public class CheckpointStyle {
     /**
      * 当前点symbol，默认随轴上的symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 当前点symbol大小，默认随轴上symbol大小

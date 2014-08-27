@@ -74,19 +74,6 @@ public class Force extends Series {
     public Integer maxRadius;
 
     /**
-     * 节点的形状, 详见 symbolList
-     *
-     * @see com.github.abel533.echarts.code.Symbol
-     */
-    public Symbol symbol;
-
-    /**
-     * 节点的大小
-     * symbolSize 为 0 的话使用映射到minRadius-maxRadius后的值
-     */
-    public Object symbolSize;
-
-    /**
      * 力导向图的边两端图形样式，可指定为'arrow', 详见symbolList
      */
     public String linkSymbol;

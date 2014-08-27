@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.List;
@@ -42,7 +41,7 @@ public class MarkLine {
      * @see com.github.abel533.echarts.code.Symbol
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize

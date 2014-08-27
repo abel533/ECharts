@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.series.force;
 
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -69,7 +68,7 @@ public class Node {
      *
      * @see com.github.abel533.echarts.code.Symbol
      */
-    public Symbol symbol;
+    public Object symbol;
 
     /**
      * 强制指定节点的大小

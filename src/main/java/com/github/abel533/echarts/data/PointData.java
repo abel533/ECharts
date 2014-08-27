@@ -52,7 +52,7 @@ public class PointData {
 
     public MarkType type;
 
-    public Symbol symbol;
+    public Object symbol;
     public Object symbolSize;
 
     public ItemStyle itemStyle;
