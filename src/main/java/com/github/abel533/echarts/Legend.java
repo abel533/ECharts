@@ -73,6 +73,13 @@ public class Legend extends Basic implements Data<Legend>, Component {
      */
     public List<Object> data;
 
+    public Legend() {
+    }
+
+    public Legend(Object... values) {
+        this.addData(values);
+    }
+
     /**
      * 添加图例属性
      *

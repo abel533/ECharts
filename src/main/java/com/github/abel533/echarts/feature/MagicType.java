@@ -24,6 +24,8 @@
 
 package com.github.abel533.echarts.feature;
 
+import com.github.abel533.echarts.code.Magic;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +33,7 @@ import java.util.Map;
  * @author liuzh
  */
 public class MagicType extends Feature {
-    public MagicType() {
+    public MagicType(Magic... magics) {
         this.show = true;
         Map title = new HashMap<String, String>();
         title.put("line", "折线图切换");
@@ -39,5 +41,10 @@ public class MagicType extends Feature {
         title.put("stack", "堆积");
         title.put("tiled", "平铺");
         this.title = title;
+        if (magics == null || magics.length == 0) {
+            this.type = new Object[]{Magic.bar, Magic.line, Magic.stack, Magic.tiled};
+        } else {
+            this.type = magics;
+        }
     }
 }

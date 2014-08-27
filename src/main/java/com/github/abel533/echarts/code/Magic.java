@@ -27,6 +27,6 @@ package com.github.abel533.echarts.code;
 /**
  * @author liuzh
  */
-public enum MagicType {
+public enum Magic {
     line, bar, stack, tiled
 }

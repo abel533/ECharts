@@ -28,6 +28,7 @@ import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.series.Series;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -135,4 +136,54 @@ public class Option {
         legend.addData(values);
         return this;
     }
+
+    /**
+     * 添加x轴
+     *
+     * @param axis
+     * @return
+     */
+    public Option addXAxis(Axis axis) {
+        if (xAxis == null) {
+            xAxis = new ArrayList<Axis>();
+        }
+        if (xAxis.size() == 2) {
+            throw new RuntimeException("xAxis已经存在2个，无法继续添加!");
+        }
+        xAxis.add(axis);
+        return this;
+    }
+
+    /**
+     * 添加y轴
+     *
+     * @param axis
+     * @return
+     */
+    public Option addYAxis(Axis axis) {
+        if (yAxis == null) {
+            yAxis = new ArrayList<Axis>();
+        }
+        if (yAxis.size() == 2) {
+            throw new RuntimeException("xAxis已经存在2个，无法继续添加!");
+        }
+        yAxis.add(axis);
+        return this;
+    }
+
+    /**
+     * 添加数据
+     *
+     * @param series
+     * @return
+     */
+    public Option addSeries(Series... series) {
+        if (series == null || series.length == 0) {
+            return this;
+        }
+        this.series.addAll(Arrays.asList(series));
+        return this;
+    }
+
+
 }

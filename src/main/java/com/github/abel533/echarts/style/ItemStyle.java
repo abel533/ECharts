@@ -67,6 +67,15 @@ public class ItemStyle {
          */
         public LineStyle lineStyle;
 
+        public LineStyle lineStyle() {
+            if (this.lineStyle == null) {
+                this.lineStyle = new LineStyle();
+            }
+            return this.lineStyle;
+        }
+
+        ;
+
         /**
          * 区域样式
          *

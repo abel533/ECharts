@@ -31,6 +31,13 @@ import com.github.abel533.echarts.style.TextStyle;
  * @author liuzh
  */
 public abstract class Feature {
+    public static final DataView dataView = new DataView();
+    public static final DataZoom dataZoom = new DataZoom();
+    public static final Mark mark = new Mark();
+    public static final SaveAsImage saveAsImage = new SaveAsImage();
+    public static final MagicType magicType = new MagicType();
+    public static final Restore restore = new Restore();
+
     /**
      * 是否显示
      */
@@ -44,7 +51,7 @@ public abstract class Feature {
     /**
      * 类型
      *
-     * @see com.github.abel533.echarts.code.MagicType
+     * @see com.github.abel533.echarts.code.Magic
      * @see com.github.abel533.echarts.code.LineType
      */
     public Object type;

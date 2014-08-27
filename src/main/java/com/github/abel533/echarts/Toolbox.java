@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
 
 import java.util.HashMap;
@@ -93,10 +94,61 @@ public class Toolbox extends Basic implements Component {
             //第一个字母转小写
             String name = f.getClass().getSimpleName();
             name = name.substring(0, 1).toLowerCase() + name.substring(1);
-            if (!this.feature.containsKey(name)) {
-                this.feature.put(name, f);
+            addFeatureOnce(name, f);
+        }
+        return this;
+    }
+
+    /**
+     * 添加组件
+     *
+     * @param values
+     * @return
+     */
+    public Toolbox addFeature(Tool... values) {
+        if (values == null && values.length == 0) {
+            return this;
+        }
+        if (this.feature == null) {
+            this.feature = new HashMap<String, Feature>();
+        }
+        for (Tool t : values) {
+            switch (t) {
+                case dataView:
+                    addFeatureOnce(t, Feature.dataView);
+                    break;
+                case dataZoom:
+                    addFeatureOnce(t, Feature.dataZoom);
+                    break;
+                case magicType:
+                    addFeatureOnce(t, Feature.magicType);
+                    break;
+                case mark:
+                    addFeatureOnce(t, Feature.mark);
+                    break;
+                case restore:
+                    addFeatureOnce(t, Feature.restore);
+                    break;
+                case saveAsImage:
+                    addFeatureOnce(t, Feature.saveAsImage);
+                    break;
+                default:
+                    //ignore
             }
         }
         return this;
+    }
+
+    /**
+     * 同一种组件只添加一次
+     *
+     * @param name
+     * @param feature
+     */
+    private void addFeatureOnce(Object name, Feature feature) {
+        String _name = String.valueOf(name);
+        if (!this.feature.containsKey(_name)) {
+            this.feature.put(_name, feature);
+        }
     }
 }
