@@ -22,40 +22,31 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.axis;
+package com.github.abel533.echarts.data;
 
-import com.github.abel533.echarts.code.LineType;
-import com.github.abel533.echarts.style.LineStyle;
+import com.github.abel533.echarts.style.TextStyle;
 
 /**
- * 分隔线
+ * Description : LegendData
  *
- * @author liuzh
- *         Created by liuzh on 14-8-26.
+ * @author : liuzh
+ * @since : liuzh(2014-08-27 13:16)
  */
-public class SplitLine {
+public class LegendData {
     /**
-     * 默认显示，属性show控制显示与否
+     * 名称
      */
-    public Boolean show;
+    public String name;
 
     /**
-     * 小标记是否显示为间隔，默认等于boundaryGap
-     */
-    public Boolean onGap;
-
-    /**
-     * 属性lineStyle（详见lineStyle）控制线条样式
+     * 文字样式
      *
-     * @see com.github.abel533.echarts.style.LineStyle
+     * @see com.github.abel533.echarts.style.TextStyle
      */
-    public LineStyle lineStyle;
+    public TextStyle textStyle;
 
-    public SplitLine() {
-        this.show = true;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.color = new String[]{"#ccc"};
-        this.lineStyle.width = 1;
-        this.lineStyle.type = LineType.solid;
-    }
+    /**
+     * 图标
+     */
+    public String icon;
 }

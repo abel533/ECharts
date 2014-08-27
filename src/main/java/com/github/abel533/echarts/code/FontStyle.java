@@ -22,40 +22,14 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.axis;
-
-import com.github.abel533.echarts.code.LineType;
-import com.github.abel533.echarts.style.LineStyle;
+package com.github.abel533.echarts.code;
 
 /**
- * 分隔线
+ * Description : FontStyle
  *
- * @author liuzh
- *         Created by liuzh on 14-8-26.
+ * @author : liuzh
+ * @since : liuzh(2014-08-27 12:41)
  */
-public class SplitLine {
-    /**
-     * 默认显示，属性show控制显示与否
-     */
-    public Boolean show;
-
-    /**
-     * 小标记是否显示为间隔，默认等于boundaryGap
-     */
-    public Boolean onGap;
-
-    /**
-     * 属性lineStyle（详见lineStyle）控制线条样式
-     *
-     * @see com.github.abel533.echarts.style.LineStyle
-     */
-    public LineStyle lineStyle;
-
-    public SplitLine() {
-        this.show = true;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.color = new String[]{"#ccc"};
-        this.lineStyle.width = 1;
-        this.lineStyle.type = LineType.solid;
-    }
+public enum FontStyle {
+    normal, italic, oblique
 }
