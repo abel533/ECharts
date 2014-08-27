@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.force.Category;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
@@ -55,4 +56,7 @@ public class Force extends Series {
     public Boolean useWorker;
     public Integer steps;
 
+    public Force() {
+        this.type = SeriesType.force;
+    }
 }

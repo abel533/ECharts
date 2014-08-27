@@ -24,11 +24,8 @@
 
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,14 +42,4 @@ public class MarkLine {
     public ItemStyle itemStyle;
     public Map geoCoord;
     public List<Object> data;
-
-    public MarkLine() {
-        this.symbol = new Object[]{Symbol.circle, Symbol.arrow};
-        this.symbolSize = new Integer[]{2, 4};
-        this.effect = new Effect();
-        this.itemStyle = new ItemStyle();
-        this.geoCoord = new HashMap();
-
-        this.data = new ArrayList<Object>();
-    }
 }

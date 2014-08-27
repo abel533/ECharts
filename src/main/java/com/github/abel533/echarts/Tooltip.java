@@ -95,19 +95,4 @@ public class Tooltip extends Basic {
      * @see com.github.abel533.echarts.style.TextStyle
      */
     public TextStyle textStyle;
-
-    public Tooltip() {
-        super();
-        this.show = true;
-        this.showContent = true;
-        this.trigger = Trigger.item;
-        this.islandFormatter = "{a} <br/>{b} : {c}";
-        this.showDelay = 20;
-        this.hideDelay = 100;
-        this.transitionDuration = 0.4;
-        this.borderRadius = 4;
-        this.axisPointer = new AxisPointer();
-        this.textStyle = new TextStyle();
-        this.textStyle.color = "#fff";
-    }
 }

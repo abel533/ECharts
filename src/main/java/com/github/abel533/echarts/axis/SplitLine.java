@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.axis;
 
-import com.github.abel533.echarts.code.LineType;
 import com.github.abel533.echarts.style.LineStyle;
 
 /**
@@ -50,12 +49,4 @@ public class SplitLine {
      * @see com.github.abel533.echarts.style.LineStyle
      */
     public LineStyle lineStyle;
-
-    public SplitLine() {
-        this.show = true;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.color = new String[]{"#ccc"};
-        this.lineStyle.width = 1;
-        this.lineStyle.type = LineType.solid;
-    }
 }

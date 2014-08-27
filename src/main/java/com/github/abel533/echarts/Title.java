@@ -25,7 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.XPosition;
-import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
@@ -82,15 +81,4 @@ public class Title extends Basic {
      * @see com.github.abel533.echarts.style.TextStyle
      */
     public TextStyle subtextStyle;
-
-    public Title() {
-        super();
-        this.text = "";
-        this.x = XPosition.left;
-        this.y = YPosition.top;
-        this.textStyle = new TextStyle();
-        this.textStyle.fontSize = 18;
-        this.textStyle.fontWeight = "bolder";
-        this.textStyle.color = "#333";
-    }
 }

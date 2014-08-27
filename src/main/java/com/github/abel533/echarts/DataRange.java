@@ -25,8 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Align;
-import com.github.abel533.echarts.code.XPosition;
-import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
@@ -102,20 +100,4 @@ public class DataRange extends Basic {
      * 默认只设定了值域控件文字颜色
      */
     public TextStyle textStyle;
-
-    public DataRange() {
-        super();
-        this.orient = Align.vertical;
-        this.x = XPosition.left;
-        this.y = YPosition.bottom;
-        this.itemWidth = 20;
-        this.itemHeight = 14;
-        this.precision = 0;
-        this.splitNumber = 5;
-        this.calculable = false;
-        this.realtime = true;
-        this.color = new String[]{"#006edd", "#e0ffff"};
-        this.textStyle = new TextStyle();
-        this.textStyle.color = "#333";
-    }
 }

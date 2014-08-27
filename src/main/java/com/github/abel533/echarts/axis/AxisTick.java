@@ -61,13 +61,4 @@ public class AxisTick {
      * @see com.github.abel533.echarts.style.LineStyle
      */
     public LineStyle lineStyle;
-
-    public AxisTick() {
-        //this.show = false;
-        this.inside = false;
-        this.length = 5;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.color = "#333";
-        this.lineStyle.width = 1;
-    }
 }

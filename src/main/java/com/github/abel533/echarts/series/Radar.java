@@ -24,10 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Label;
-import com.github.abel533.echarts.code.LineType;
 import com.github.abel533.echarts.code.SeriesType;
-import com.github.abel533.echarts.style.LineStyle;
 
 /**
  * Description: Radar
@@ -38,20 +35,6 @@ public class Radar extends Series {
     public Integer polarIndex;
 
     public Radar() {
-        super();
         this.type = SeriesType.radar;
-
-        this.polarIndex = 0;
-
-        this.itemStyle.normal.label = new Label();
-        this.itemStyle.normal.label.show = false;
-        this.itemStyle.normal.lineStyle = new LineStyle();
-        this.itemStyle.normal.lineStyle.width = 2;
-        this.itemStyle.normal.lineStyle.type = LineType.solid;
-
-        this.itemStyle.emphasis.label = new Label();
-        this.itemStyle.emphasis.label.show = false;
-
-        this.symbolSize = 2;
     }
 }

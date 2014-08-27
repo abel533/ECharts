@@ -46,11 +46,4 @@ public class ControlStyle {
      * 高亮
      */
     public Color emphasis;
-
-    public ControlStyle() {
-        this.normal = new Color();
-        this.normal.color = "#333";
-        this.emphasis = new Color();
-        this.emphasis.color = "#1e90ff";
-    }
 }

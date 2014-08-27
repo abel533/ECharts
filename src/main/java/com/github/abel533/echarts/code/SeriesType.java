@@ -33,10 +33,12 @@ public enum SeriesType {
     line,//折线图
     bar,//柱状图
     scatter,//散点图
-    kK,//线图
+    k,//K线图
     pie,//饼图
     radar,//雷达图
     chord,//和弦图
     force,//力导向布局图
-    map//地图
+    map,//地图
+    funnel,//漏斗图
+    guage,//仪表盘
 }

@@ -126,7 +126,7 @@ public class Axis implements Data<Axis> {
      * @return
      */
     public Axis addData(Object... values) {
-        if (values == null && values.length == 0) {
+        if (values == null || values.length == 0) {
             return this;
         }
         if (this.data == null) {

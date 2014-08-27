@@ -25,8 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Align;
-import com.github.abel533.echarts.code.XPosition;
-import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.feature.Feature;
 
 import java.util.HashMap;
@@ -78,20 +76,6 @@ public class Toolbox extends Basic {
      */
     public Map<String, Feature> feature;
 
-    public Toolbox() {
-        super();
-        this.show = false;
-        this.orient = Align.horizontal;
-        this.x = XPosition.right;
-        this.y = YPosition.top;
-        this.color = new String[]{"#1e90ff", "#22bb22", "#4b0082", "#d2691e"};
-        this.disableColor = "#ddd";
-        this.effectiveColor = "red";
-        this.itemSize = 16;
-        this.showTitle = true;
-        this.feature = new HashMap<String, Feature>();
-    }
-
     /**
      * 添加组件
      *
@@ -99,6 +83,9 @@ public class Toolbox extends Basic {
      * @return
      */
     public Toolbox addFeature(Feature... values) {
+        if (values == null && values.length == 0) {
+            return this;
+        }
         if (this.feature == null) {
             this.feature = new HashMap<String, Feature>();
         }

@@ -78,13 +78,4 @@ public class TextStyle {
      * @see com.github.abel533.echarts.code.FontWeight
      */
     public Object fontWeight;
-
-    public TextStyle() {
-        this.decoration = "none";
-        this.fontFamily = "Arial, Verdana, sans-serif";
-        this.fontFamily2 = "微软雅黑";
-        this.fontSize = 12;
-        this.fontStyle = FontStyle.normal;
-        this.fontWeight = "normal";
-    }
 }

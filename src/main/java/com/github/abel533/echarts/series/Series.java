@@ -56,12 +56,6 @@ public abstract class Series implements Data<Series> {
     public Integer symbolSize;
     public Boolean showAllSymbol;
 
-    protected Series() {
-        this.data = new ArrayList<Object>();
-        this.itemStyle = new ItemStyle();
-    }
-
-
     /**
      * 添加数据
      *
@@ -69,6 +63,9 @@ public abstract class Series implements Data<Series> {
      * @return
      */
     public Series addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
         if (this.data == null) {
             this.data = new ArrayList<Object>();
         }

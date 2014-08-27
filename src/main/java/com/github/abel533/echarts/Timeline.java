@@ -25,8 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.ControlPosition;
-import com.github.abel533.echarts.code.LineType;
-import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.TimeLineType;
 import com.github.abel533.echarts.style.CheckpointStyle;
 import com.github.abel533.echarts.style.ControlStyle;
@@ -188,47 +186,13 @@ public class Timeline implements Data<Timeline> {
      */
     public List<Object> data;
 
-    public Timeline() {
-        this.show = true;
-        this.type = TimeLineType.time;
-        this.notMerge = false;
-        this.realtime = true;
-        this.x = 80;
-        this.x2 = 80;
-        this.y2 = 0;
-        this.height = 50;
-        this.backgroundColor = "rgba(0,0,0,0)";
-        this.borderColor = "#ccc";
-        this.borderWidth = 0;
-        this.padding = 5;
-        this.controlPosition = ControlPosition.left;
-        this.autoPlay = false;
-        this.loop = true;
-        this.playInterval = 2000;
-
-        this.lineStyle = new LineStyle();
-        this.lineStyle.width = 1;
-        this.lineStyle.color = "#666";
-        this.lineStyle.type = LineType.dashed;
-
-        this.label = new Label();
-        this.checkpointStyle = new CheckpointStyle();
-        this.controlStyle = new ControlStyle();
-
-        this.symbol = Symbol.emptyDiamond;
-
-        this.symbolSize = 4;
-        this.currentIndex = 0;
-        this.data = new ArrayList<Object>();
-    }
-
     @Override
     public Timeline addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
         if (this.data == null) {
             this.data = new ArrayList<Object>();
-        }
-        if (values == null && values.length == 0) {
-            return this;
         }
         this.data.addAll(Arrays.asList(values));
         return this;

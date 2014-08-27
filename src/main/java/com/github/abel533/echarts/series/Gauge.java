@@ -28,6 +28,7 @@ import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.Title;
 import com.github.abel533.echarts.axis.AxisTick;
 import com.github.abel533.echarts.axis.SplitLine;
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.gauge.Detail;
 import com.github.abel533.echarts.series.gauge.Pointer;
 
@@ -127,4 +128,8 @@ public class Gauge extends Series {
      * @see com.github.abel533.echarts.series.gauge.Detail
      */
     public Detail detail;
+
+    public Gauge() {
+        this.type = SeriesType.guage;
+    }
 }

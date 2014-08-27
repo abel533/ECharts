@@ -73,14 +73,6 @@ public abstract class Basic {
      */
     public Integer itemGap;
 
-    protected Basic() {
-        this.backgroundColor = "rgba(0,0,0,0)";
-        this.borderColor = "#ccc";
-        this.borderWidth = 0;
-        this.padding = 5;
-        this.itemGap = 5;
-    }
-
     public void setX(Integer x) {
         this.x = x;
     }

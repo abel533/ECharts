@@ -36,10 +36,4 @@ public class NodeStyle extends LinkStyle {
 
     public BrushType brushType;
     public String color;
-
-    public NodeStyle() {
-        super();
-        this.brushType = BrushType.both;
-        this.color = "#f08c2e";
-    }
 }

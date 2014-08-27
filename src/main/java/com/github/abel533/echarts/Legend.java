@@ -25,7 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Align;
-import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
@@ -74,18 +73,6 @@ public class Legend extends Basic implements Data<Legend> {
      */
     public List<Object> data;
 
-    public Legend() {
-        super();
-        this.orient = Align.horizontal;
-        this.x = YPosition.center;
-        this.y = YPosition.top;
-        this.selectedMode = true;
-        this.textStyle = new TextStyle();
-        this.textStyle.color = "#333";
-
-        this.data = new ArrayList<Object>();
-    }
-
     /**
      * 添加图例属性
      *
@@ -93,6 +80,12 @@ public class Legend extends Basic implements Data<Legend> {
      * @return
      */
     public Legend addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        if (this.data == null) {
+            this.data = new ArrayList<Object>();
+        }
         data.addAll(Arrays.asList(values));
         return this;
     }

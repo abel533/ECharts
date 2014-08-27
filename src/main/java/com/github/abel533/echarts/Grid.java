@@ -52,11 +52,4 @@ public class Grid extends Basic {
      * 支持百分比（字符串），如'50%'(显示区域一半的高度)
      */
     public Object height;
-
-    public Grid() {
-        this.x = 80;
-        this.y = 60;
-        this.x2 = 80;
-        this.y2 = 60;
-    }
 }

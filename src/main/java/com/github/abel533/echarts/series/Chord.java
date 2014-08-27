@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
 
 /**
@@ -41,5 +42,6 @@ public class Chord extends Series {
     public Object matrix;
 
     public Chord() {
+        this.type = SeriesType.chord;
     }
 }

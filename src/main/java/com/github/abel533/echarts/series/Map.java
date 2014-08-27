@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.Calculation;
+import com.github.abel533.echarts.code.SeriesType;
 
 /**
  * 地图
@@ -97,4 +98,8 @@ public class Map extends Series {
      * 通过绝对经纬度指定地区的名称文本位置，如{'Islands':[113.95, 22.26]}，香港离岛区名称显示定位到东经113.95，北纬22.26上
      */
     public Object geoCoord;
+
+    public Map() {
+        this.type = SeriesType.map;
+    }
 }

@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
 
 /**
@@ -95,4 +96,7 @@ public class Funnel extends Series {
      */
     public Integer gap;
 
+    public Funnel() {
+        this.type = SeriesType.funnel;
+    }
 }

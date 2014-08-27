@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.LineType;
 import com.github.abel533.echarts.style.LineStyle;
 
 /**
@@ -50,12 +49,4 @@ public class LabelLine {
      * @see com.github.abel533.echarts.style.LineStyle
      */
     public LineStyle lineStyle;
-
-    public LabelLine() {
-        //this.show
-        this.length = 20;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.width = 1;
-        this.lineStyle.type = LineType.solid;
-    }
 }

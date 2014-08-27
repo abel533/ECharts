@@ -87,14 +87,4 @@ public class DataZoom extends Basic {
      * 数据缩放锁，默认为false，当设置为true时选择区域不能伸缩，即(end - start)值保持不变，仅能做数据漫游
      */
     public Boolean zoomLook;
-
-    public DataZoom() {
-        super();
-        this.show = false;
-        this.orient = Align.horizontal;
-        this.dataBackgroundColor = "#eee";
-        this.fillerColor = "rgba(144,197,237,0.2)";
-        this.handleColor = "rgba(70,130,180,0.8)";
-        this.realtime = true;
-    }
 }

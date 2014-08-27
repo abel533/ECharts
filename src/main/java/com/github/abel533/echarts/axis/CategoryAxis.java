@@ -24,11 +24,7 @@
 
 package com.github.abel533.echarts.axis;
 
-import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.AxisType;
-import com.github.abel533.echarts.code.YPosition;
-
-import java.util.ArrayList;
 
 /**
  * Created by liuzh on 14-8-26.
@@ -45,17 +41,5 @@ public class CategoryAxis extends Axis {
 
     public CategoryAxis() {
         this.type = AxisType.category;
-        this.position = YPosition.bottom;
-        this.boundaryGap = true;
-        this.axisLine = new AxisLine();
-        this.axisTick = new AxisTick();
-        this.axisTick.show = true;
-        this.axisTick.interval = "auto";
-        this.axisLabel = new Label();
-        this.axisLabel.interval = "auto";
-        this.splitLine = new SplitLine();
-        this.splitArea = new SplitArea();
-
-        this.data = new ArrayList<Object>();
     }
 }

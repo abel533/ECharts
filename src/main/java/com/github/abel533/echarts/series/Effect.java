@@ -37,12 +37,4 @@ public class Effect {
     public String color;
     public String shadowColor;
     public Integer shadowBlur;
-
-    public Effect() {
-        this.show = false;
-        this.loop = true;
-        this.period = 15;
-        this.scaleSize = 2;
-        this.shadowBlur = 0;
-    }
 }

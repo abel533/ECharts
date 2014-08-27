@@ -31,10 +31,4 @@ package com.github.abel533.echarts.style;
  */
 public class ChordStyle {
     public LineStyle lineStyle;
-
-    public ChordStyle() {
-        this.lineStyle = new LineStyle();
-        this.lineStyle.width = 1;
-        this.lineStyle.color = "#999";
-    }
 }

@@ -32,9 +32,4 @@ package com.github.abel533.echarts.style;
 public class LinkStyle {
     public String strokeColor;
     public Integer lineWidth;
-
-    public LinkStyle() {
-        this.strokeColor = "#5182ab";
-        this.lineWidth = 1;
-    }
 }

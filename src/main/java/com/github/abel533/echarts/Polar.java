@@ -135,33 +135,11 @@ public class Polar implements Data<Polar> {
      */
     public List<Object> indicator;
 
-    public Polar() {
-        this.center = new String[2];
-        this.center[0] = "50%";
-        this.center[1] = "50%";
-        this.radius = "75%";
-        this.startAngle = 90;
-        this.splitNumber = 5;
-        this.name = new Name();
-        this.axisLine = new AxisLine();
-        this.axisLine.lineStyle.color = "#ccc";
-        this.axisLine.lineStyle.width = 1;
-
-        this.axisLabel = new Label();
-        this.axisLabel.rotate = null;
-        this.axisLabel.margin = null;
-
-        this.splitArea = new SplitArea();
-        this.splitArea.show = true;
-
-        this.splitLine = new SplitLine();
-        this.splitLine.lineStyle.type = null;
-
-        this.type = PolarType.polygon;
-    }
-
     @Override
     public Polar addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
         if (this.indicator == null) {
             this.indicator = new ArrayList<Object>();
         }
