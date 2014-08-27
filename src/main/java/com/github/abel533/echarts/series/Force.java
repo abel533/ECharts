@@ -29,6 +29,8 @@ import com.github.abel533.echarts.series.force.Category;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,17 +42,86 @@ public class Force extends Series {
     /**
      * 力导向图中节点的分类
      */
-    public List<Category> categories;
+    private List<Category> categories;
+
+    /**
+     * 力导向图中节点的分类
+     */
+    public List<Category> categories(){
+        if (this.categories == null) {
+            this.categories = new ArrayList<Category>();
+        }
+        return this.categories;
+    }
+
+    /**
+     * 添加节点分类
+     * @param values
+     * @return
+     */
+    public Force addCategory(Category... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.categories().addAll(Arrays.asList(values));
+        return this;
+    }
 
     /**
      * 力导向图的顶点数据
      */
-    public List<Node> nodes;
+    private List<Node> nodes;
+
+    /**
+     * 力导向图的顶点数据
+     */
+    public List<Node> nodes(){
+        if (this.nodes == null) {
+            this.nodes = new ArrayList<Node>();
+        }
+        return this.nodes;
+    }
+
+    /**
+     * 添加力导向图的顶点数据
+     * @param values
+     * @return
+     */
+    public Force addNode(Node... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.nodes().addAll(Arrays.asList(values));
+        return this;
+    }
 
     /**
      * 力导向图的边数据
      */
-    public List<Link> links;
+    private List<Link> links;
+
+    /**
+     * 力导向图的边数据
+     */
+    public List<Link> links(){
+        if (this.links == null) {
+            this.links = new ArrayList<Link>();
+        }
+        return this.links;
+    }
+
+    /**
+     * 添加力导向图的边数据
+     * @param values
+     * @return
+     */
+    public Force addNode(Link... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.links().addAll(Arrays.asList(values));
+        return this;
+    }
 
     /**
      * 布局中心，可以是绝对值或者相对百分比
@@ -114,5 +185,29 @@ public class Force extends Series {
 
     public Force() {
         this.type = SeriesType.force;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
+
+    public List<Node> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Node> nodes) {
+        this.nodes = nodes;
+    }
+
+    public List<Link> getLinks() {
+        return links;
+    }
+
+    public void setLinks(List<Link> links) {
+        this.links = links;
     }
 }

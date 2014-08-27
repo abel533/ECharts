@@ -57,7 +57,19 @@ public class Legend extends Basic implements Data<Legend>, Component {
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 文字样式
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
 
     /**
      * 选择模式，默认开启图例开关
@@ -71,7 +83,14 @@ public class Legend extends Basic implements Data<Legend>, Component {
      *
      * @see com.github.abel533.echarts.data.LegendData
      */
-    public List<Object> data;
+    private List<Object> data;
+
+    public List<Object> data() {
+        if (this.data == null) {
+            this.data = new ArrayList<Object>();
+        }
+        return this.data;
+    }
 
     public Legend() {
     }
@@ -90,10 +109,23 @@ public class Legend extends Basic implements Data<Legend>, Component {
         if (values == null || values.length == 0) {
             return this;
         }
-        if (this.data == null) {
-            this.data = new ArrayList<Object>();
-        }
-        data.addAll(Arrays.asList(values));
+        this.data().addAll(Arrays.asList(values));
         return this;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
+
+    public List<Object> getData() {
+        return data;
+    }
+
+    public void setData(List<Object> data) {
+        this.data = data;
     }
 }

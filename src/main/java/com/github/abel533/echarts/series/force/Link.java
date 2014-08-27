@@ -50,5 +50,23 @@ public class Link {
     /**
      * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
      */
-    public ItemStyle itemStyle;
+    private ItemStyle itemStyle;
+
+    /**
+     * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
+     */
+    public ItemStyle itemStyle(){
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
 }

@@ -87,12 +87,34 @@ public class Tooltip extends Basic implements Component {
     /**
      * 坐标轴指示器，坐标轴触发有效
      */
-    public AxisPointer axisPointer;
+    private AxisPointer axisPointer;
+
+    /**
+     * 坐标轴指示器，坐标轴触发有效
+     */
+    public AxisPointer axisPointer(){
+        if (this.axisPointer == null) {
+            this.axisPointer = new AxisPointer();
+        }
+        return this.axisPointer;
+    }
 
     /**
      * 文本样式，默认为白色字体
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 文本样式，默认为白色字体
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
 }

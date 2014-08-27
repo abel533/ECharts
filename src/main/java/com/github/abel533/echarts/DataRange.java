@@ -27,6 +27,10 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.Align;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 值域选择，每个图表最多仅有一个值域控件
  *
@@ -83,7 +87,31 @@ public class DataRange extends Basic implements Component {
     /**
      * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
      */
-    public String[] color;
+    private List<String> color;
+
+    /**
+     * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
+     */
+    public List<String> color() {
+        if (this.color == null) {
+            this.color = new ArrayList<String>();
+        }
+        return this.color;
+    }
+
+    /**
+     * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
+     *
+     * @param colors
+     * @return
+     */
+    public DataRange addColor(String... colors) {
+        if (colors == null || colors.length == 0) {
+            return this;
+        }
+        this.color().addAll(Arrays.asList(colors));
+        return this;
+    }
 
     /**
      * 内容格式器：{string}（Template） | {Function}，模板变量为'{value}'和'{value2}'，代表数值起始值和结束值，函数参数两个，含义同模板变量
@@ -93,10 +121,68 @@ public class DataRange extends Basic implements Component {
     /**
      * 值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行
      */
-    public String[] text;
+    private List<String> text;
+
+    /**
+     * 值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行
+     */
+    public List<String> text() {
+        if (this.color == null) {
+            this.color = new ArrayList<String>();
+        }
+        return this.color;
+    }
+
+    /**
+     * 值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行
+     *
+     * @param texts
+     * @return
+     */
+    public DataRange addText(String... texts) {
+        if (texts == null || texts.length == 0) {
+            return this;
+        }
+        this.text().addAll(Arrays.asList(texts));
+        return this;
+    }
 
     /**
      * 默认只设定了值域控件文字颜色
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 默认只设定了值域控件文字颜色
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public List<String> getColor() {
+        return color;
+    }
+
+    public void setColor(List<String> color) {
+        this.color = color;
+    }
+
+    public List<String> getText() {
+        return text;
+    }
+
+    public void setText(List<String> text) {
+        this.text = text;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
 }

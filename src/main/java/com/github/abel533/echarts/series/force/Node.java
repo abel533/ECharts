@@ -89,5 +89,25 @@ public class Node {
      *
      * @see com.github.abel533.echarts.style.ItemStyle
      */
-    public ItemStyle itemStyle;
+    private ItemStyle itemStyle;
+
+    /**
+     * 详见 itemStyle
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
+    public ItemStyle itemStyle(){
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
 }

@@ -75,5 +75,23 @@ public class Detail {
     /**
      * 属性textStyle（详见textStyle）控制文本样式
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 属性textStyle（详见textStyle）控制文本样式
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
 }

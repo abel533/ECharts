@@ -47,5 +47,25 @@ public class SplitLine {
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle;
+    private LineStyle lineStyle;
+
+    /**
+     * 属性lineStyle（详见lineStyle）控制线条样式
+     *
+     * @see com.github.abel533.echarts.style.LineStyle
+     */
+    public LineStyle lineStyle(){
+        if (this.lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
+    }
+
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+    }
 }

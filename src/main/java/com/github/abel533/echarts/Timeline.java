@@ -138,26 +138,72 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle;
+    private LineStyle lineStyle;
+
+    /**
+     * 默认值{color: '#666', width: 1, type: 'dashed'}，时间轴轴线样式lineStyle控制线条样式，
+     *
+     * @see com.github.abel533.echarts.style.LineStyle
+     */
+    public LineStyle lineStyle(){
+        if (this.lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
+    }
 
     /**
      * @see com.github.abel533.echarts.Label
      */
-    public Label label;
+    private Label label;
+
+    /**
+     * @see com.github.abel533.echarts.Label
+     */
+    public Label label(){
+        if (this.label == null) {
+            this.label = new Label();
+        }
+        return this.label;
+    }
 
     /**
      * 时间轴当前点
      *
      * @see com.github.abel533.echarts.style.CheckpointStyle
      */
-    public CheckpointStyle checkpointStyle;
+    private CheckpointStyle checkpointStyle;
+
+    /**
+     * 时间轴当前点
+     *
+     * @see com.github.abel533.echarts.style.CheckpointStyle
+     */
+    public CheckpointStyle checkpointStyle(){
+        if (this.checkpointStyle == null) {
+            this.checkpointStyle = new CheckpointStyle();
+        }
+        return this.checkpointStyle;
+    }
 
     /**
      * 时间轴控制器样式，可指定正常和高亮颜色
      *
      * @see com.github.abel533.echarts.code.ControlPosition
      */
-    public ControlStyle controlStyle;
+    private ControlStyle controlStyle;
+
+    /**
+     * 时间轴控制器样式，可指定正常和高亮颜色
+     *
+     * @see com.github.abel533.echarts.code.ControlPosition
+     */
+    public ControlStyle controlStyle(){
+        if (this.controlStyle == null) {
+            this.controlStyle = new ControlStyle();
+        }
+        return this.controlStyle;
+    }
 
     /**
      * 默认值emptyDiamond，轴点symbol，同serie.symbol
@@ -176,4 +222,36 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      * 默认值0，当前索引位置，对应options数组，用于指定显示特定系列
      */
     public Integer currentIndex;
+
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+    }
+
+    public Label getLabel() {
+        return label;
+    }
+
+    public void setLabel(Label label) {
+        this.label = label;
+    }
+
+    public CheckpointStyle getCheckpointStyle() {
+        return checkpointStyle;
+    }
+
+    public void setCheckpointStyle(CheckpointStyle checkpointStyle) {
+        this.checkpointStyle = checkpointStyle;
+    }
+
+    public ControlStyle getControlStyle() {
+        return controlStyle;
+    }
+
+    public void setControlStyle(ControlStyle controlStyle) {
+        this.controlStyle = controlStyle;
+    }
 }

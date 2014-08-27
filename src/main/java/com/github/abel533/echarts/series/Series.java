@@ -68,28 +68,76 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      *
      * @see com.github.abel533.echarts.Tooltip
      */
-    public Tooltip tooltip;
+    private Tooltip tooltip;
+
+    /**
+     * 提示框样式，仅对本系列有效，如不设则用option.tooltip（详见tooltip）,鼠标悬浮交互时的信息提示
+     *
+     * @see com.github.abel533.echarts.Tooltip
+     */
+    public Tooltip tooltip(){
+        if (this.tooltip == null) {
+            this.tooltip = new Tooltip();
+        }
+        return this.tooltip;
+    }
 
     /**
      * 图形样式
      *
      * @see com.github.abel533.echarts.style.ItemStyle
      */
-    public ItemStyle itemStyle;
+    private ItemStyle itemStyle;
+
+    /**
+     * 图形样式
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
+    public ItemStyle itemStyle(){
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
 
     /**
      * 标注
      *
      * @see com.github.abel533.echarts.series.MarkPoint
      */
-    public MarkPoint markPoint;
+    private MarkPoint markPoint;
+
+    /**
+     * 标注
+     *
+     * @see com.github.abel533.echarts.series.MarkPoint
+     */
+    public MarkPoint markPoint(){
+        if (this.markPoint == null) {
+            this.markPoint = new MarkPoint();
+        }
+        return this.markPoint;
+    }
 
     /**
      * 标线
      *
      * @see com.github.abel533.echarts.series.MarkLine
      */
-    public MarkLine markLine;
+    private MarkLine markLine;
+
+    /**
+     * 标线
+     *
+     * @see com.github.abel533.echarts.series.MarkLine
+     */
+    public MarkLine markLine(){
+        if (this.markLine == null) {
+            this.markLine = new MarkLine();
+        }
+        return this.markLine;
+    }
 
     /**
      * 标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'）
@@ -112,4 +160,36 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
      */
     public Boolean showAllSymbol;
+
+    public Tooltip getTooltip() {
+        return tooltip;
+    }
+
+    public void setTooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
+
+    public MarkPoint getMarkPoint() {
+        return markPoint;
+    }
+
+    public void setMarkPoint(MarkPoint markPoint) {
+        this.markPoint = markPoint;
+    }
+
+    public MarkLine getMarkLine() {
+        return markLine;
+    }
+
+    public void setMarkLine(MarkLine markLine) {
+        this.markLine = markLine;
+    }
 }

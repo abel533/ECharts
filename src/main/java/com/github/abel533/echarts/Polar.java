@@ -30,6 +30,7 @@ import com.github.abel533.echarts.axis.SplitLine;
 import com.github.abel533.echarts.code.PolarType;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -72,13 +73,30 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 坐标轴名称
      */
-    public Name name;
+    private Name name;
+
+    /**
+     * 坐标轴名称
+     */
+    public Name name(){
+        if (this.name == null) {
+            this.name = new Name();
+        }
+        return this.name;
+    }
 
     /**
      * 数值轴两端空白策略，数组内数值代表百分比，[原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
      */
-    public Object[] boundaryGap;
+    private Object[] boundaryGap;
 
+    /**
+     * 数值轴两端空白策略，数组内数值代表百分比，[原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
+     */
+    public Polar boundaryGap(Object min,Object max) {
+        this.boundaryGap = new Object[]{min,max};
+        return this;
+    }
     /**
      * 脱离0值比例，放大聚焦到最终_min，_max区间
      */
@@ -99,28 +117,76 @@ public class Polar extends AbstractData<Polar> implements Component {
      *
      * @see com.github.abel533.echarts.axis.AxisLine
      */
-    public AxisLine axisLine;
+    private AxisLine axisLine;
+
+    /**
+     * 坐标轴线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
+     *
+     * @see com.github.abel533.echarts.axis.AxisLine
+     */
+    public AxisLine axisLine(){
+        if (this.axisLine == null) {
+            this.axisLine = new AxisLine();
+        }
+        return this.axisLine;
+    }
 
     /**
      * 坐标轴文本标签，详见axis.axisLabel
      *
      * @see com.github.abel533.echarts.Label
      */
-    public Label axisLabel;
+    private Label axisLabel;
+
+    /**
+     * 坐标轴文本标签，详见axis.axisLabel
+     *
+     * @see com.github.abel533.echarts.Label
+     */
+    public Label axisLabel(){
+        if (this.axisLabel == null) {
+            this.axisLabel = new Label();
+        }
+        return this.axisLabel;
+    }
 
     /**
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      *
      * @see com.github.abel533.echarts.axis.SplitArea
      */
-    public SplitArea splitArea;
+    private SplitArea splitArea;
+
+    /**
+     * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
+     *
+     * @see com.github.abel533.echarts.axis.SplitArea
+     */
+    public SplitArea splitArea(){
+        if (this.splitArea == null) {
+            this.splitArea = new SplitArea();
+        }
+        return this.splitArea;
+    }
 
     /**
      * 分隔线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
      * @see com.github.abel533.echarts.axis.SplitLine
      */
-    public SplitLine splitLine;
+    private SplitLine splitLine;
+
+    /**
+     * 分隔线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
+     *
+     * @see com.github.abel533.echarts.axis.SplitLine
+     */
+    public SplitLine splitLine(){
+        if (this.splitLine == null) {
+            this.splitLine = new SplitLine();
+        }
+        return this.splitLine;
+    }
 
     /**
      * 极坐标的形状，'polygon'|'circle' 多边形|圆形
@@ -128,7 +194,73 @@ public class Polar extends AbstractData<Polar> implements Component {
     public PolarType type;
 
     /**
-     * 雷达指标列表，同时也是label内容，例子见下
+     * 雷达指标列表，同时也是label内容
      */
-    public List<Object> indicator;
+    private List<Object> indicator;
+
+    /**
+     * 雷达指标列表，同时也是label内容
+     */
+    public List<Object> indicator(){
+        if (this.indicator == null) {
+            this.indicator = new ArrayList<Object>();
+        }
+        return this.indicator;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
+
+    public Object[] getBoundaryGap() {
+        return boundaryGap;
+    }
+
+    public void setBoundaryGap(Object[] boundaryGap) {
+        this.boundaryGap = boundaryGap;
+    }
+
+    public AxisLine getAxisLine() {
+        return axisLine;
+    }
+
+    public void setAxisLine(AxisLine axisLine) {
+        this.axisLine = axisLine;
+    }
+
+    public Label getAxisLabel() {
+        return axisLabel;
+    }
+
+    public void setAxisLabel(Label axisLabel) {
+        this.axisLabel = axisLabel;
+    }
+
+    public SplitArea getSplitArea() {
+        return splitArea;
+    }
+
+    public void setSplitArea(SplitArea splitArea) {
+        this.splitArea = splitArea;
+    }
+
+    public SplitLine getSplitLine() {
+        return splitLine;
+    }
+
+    public void setSplitLine(SplitLine splitLine) {
+        this.splitLine = splitLine;
+    }
+
+    public List<Object> getIndicator() {
+        return indicator;
+    }
+
+    public void setIndicator(List<Object> indicator) {
+        this.indicator = indicator;
+    }
 }

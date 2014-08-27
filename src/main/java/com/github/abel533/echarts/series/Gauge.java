@@ -41,13 +41,31 @@ public class Gauge extends Series {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
-    public Object[] center;
+    private Object[] center;
+
+    /**
+     * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
+     */
+    public Gauge center(Object width,Object height) {
+        this.center = new Object[]{width,height};
+        return this;
+    }
 
     /**
      * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
      * 传数组实现环形图，[内半径，外半径]
      */
-    public Object[] radius;
+    private Object radius;
+
+    public Gauge radius(Object value) {
+        this.radius = value;
+        return this;
+    }
+
+    public Gauge radius(Object width,Object height) {
+        radius = new Object[]{width,height};
+        return this;
+    }
 
     /**
      * 开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
@@ -84,51 +102,207 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.series.Line
      */
-    public Line axisLine;
+    private Line axisLine;
+
+    /**
+     * 坐标轴线，默认显示
+     *
+     * @see com.github.abel533.echarts.series.Line
+     */
+    public Line axisLine(){
+        if (this.axisLine == null) {
+            this.axisLine = new Line();
+        }
+        return this.axisLine;
+    }
 
     /**
      * 坐标轴小标记，默认显示
      *
      * @see com.github.abel533.echarts.axis.AxisTick
      */
-    public AxisTick axisTick;
+    private AxisTick axisTick;
+
+    /**
+     * 坐标轴小标记，默认显示
+     *
+     * @see com.github.abel533.echarts.axis.AxisTick
+     */
+    public AxisTick axisTick(){
+        if (this.axisTick == null) {
+            this.axisTick = new AxisTick();
+        }
+        return this.axisTick;
+    }
 
     /**
      * 坐标轴文本标签
      *
      * @see com.github.abel533.echarts.Label
      */
-    public Label axisLabel;
+    private Label axisLabel;
+
+    /**
+     * 坐标轴文本标签
+     *
+     * @see com.github.abel533.echarts.Label
+     */
+    public Label axisLabel(){
+        if (this.axisLabel == null) {
+            this.axisLabel = new Label();
+        }
+        return this.axisLabel;
+    }
 
     /**
      * 主分隔线，默认显示
      *
      * @see com.github.abel533.echarts.axis.SplitLine
      */
-    public SplitLine splitLine;
+    private SplitLine splitLine;
+
+    /**
+     * 主分隔线，默认显示
+     *
+     * @see com.github.abel533.echarts.axis.SplitLine
+     */
+    public SplitLine splitLine(){
+        if (this.splitLine == null) {
+            this.splitLine = new SplitLine();
+        }
+        return this.splitLine;
+    }
 
     /**
      * 指针样式
      *
      * @see com.github.abel533.echarts.series.gauge.Pointer
      */
-    public Pointer pointer;
+    private Pointer pointer;
+
+    /**
+     * 指针样式
+     *
+     * @see com.github.abel533.echarts.series.gauge.Pointer
+     */
+    public Pointer pointer(){
+        if (this.pointer == null) {
+            this.pointer = new Pointer();
+        }
+        return this.pointer;
+    }
 
     /**
      * 仪表盘标题
      *
      * @see com.github.abel533.echarts.Title
      */
-    public Title title;
+    private Title title;
+
+    /**
+     * 仪表盘标题
+     *
+     * @see com.github.abel533.echarts.Title
+     */
+    public Title title(){
+        if (this.title == null) {
+            this.title = new Title();
+        }
+        return this.title;
+    }
 
     /**
      * 仪表盘详情
      *
      * @see com.github.abel533.echarts.series.gauge.Detail
      */
-    public Detail detail;
+    private Detail detail;
+
+    /**
+     * 仪表盘详情
+     *
+     * @see com.github.abel533.echarts.series.gauge.Detail
+     */
+    public Detail detail(){
+        if (this.detail == null) {
+            this.detail = new Detail();
+        }
+        return this.detail;
+    }
 
     public Gauge() {
         this.type = SeriesType.guage;
+    }
+
+    public Object[] getCenter() {
+        return center;
+    }
+
+    public void setCenter(Object[] center) {
+        this.center = center;
+    }
+
+    public Object getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Object radius) {
+        this.radius = radius;
+    }
+
+    public Line getAxisLine() {
+        return axisLine;
+    }
+
+    public void setAxisLine(Line axisLine) {
+        this.axisLine = axisLine;
+    }
+
+    public AxisTick getAxisTick() {
+        return axisTick;
+    }
+
+    public void setAxisTick(AxisTick axisTick) {
+        this.axisTick = axisTick;
+    }
+
+    public Label getAxisLabel() {
+        return axisLabel;
+    }
+
+    public void setAxisLabel(Label axisLabel) {
+        this.axisLabel = axisLabel;
+    }
+
+    public SplitLine getSplitLine() {
+        return splitLine;
+    }
+
+    public void setSplitLine(SplitLine splitLine) {
+        this.splitLine = splitLine;
+    }
+
+    public Pointer getPointer() {
+        return pointer;
+    }
+
+    public void setPointer(Pointer pointer) {
+        this.pointer = pointer;
+    }
+
+    public Title getTitle() {
+        return title;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
+    public Detail getDetail() {
+        return detail;
+    }
+
+    public void setDetail(Detail detail) {
+        this.detail = detail;
     }
 }

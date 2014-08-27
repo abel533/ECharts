@@ -73,12 +73,52 @@ public class Title extends Basic implements Component {
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 主标题文本样式（详见textStyle）
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
 
     /**
      * 默认值{color: '#aaa'}，副标题文本样式
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle subtextStyle;
+    private TextStyle subtextStyle;
+
+    /**
+     * 默认值{color: '#aaa'}，副标题文本样式
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    public TextStyle subtextStyle(){
+        if (this.subtextStyle == null) {
+            this.subtextStyle = new TextStyle();
+        }
+        return this.subtextStyle;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
+
+    public TextStyle getSubtextStyle() {
+        return subtextStyle;
+    }
+
+    public void setSubtextStyle(TextStyle subtextStyle) {
+        this.subtextStyle = subtextStyle;
+    }
 }

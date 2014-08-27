@@ -41,14 +41,39 @@ public class ItemStyle {
          *
          * @see com.github.abel533.echarts.Label
          */
-        public Label label;
+        private Label label;
+
+        /**
+         * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置
+         * 折线图，柱形图，K线图，散点图可指定position见下
+         *
+         * @see com.github.abel533.echarts.Label
+         */
+        public Label label(){
+            if (this.label == null) {
+                this.label = new Label();
+            }
+            return this.label;
+        }
 
         /**
          * 饼图标签视觉引导线，默认显示
          *
          * @see com.github.abel533.echarts.LabelLine
          */
-        public LabelLine labelLine;
+        private LabelLine labelLine;
+
+        /**
+         * 饼图标签视觉引导线，默认显示
+         *
+         * @see com.github.abel533.echarts.LabelLine
+         */
+        public LabelLine labelLine(){
+            if (this.labelLine == null) {
+                this.labelLine = new LabelLine();
+            }
+            return this.labelLine;
+        }
 
         /**
          * 阳线颜色
@@ -67,6 +92,11 @@ public class ItemStyle {
          */
         public LineStyle lineStyle;
 
+        /**
+         * 线条样式
+         *
+         * @see com.github.abel533.echarts.style.LineStyle
+         */
         public LineStyle lineStyle() {
             if (this.lineStyle == null) {
                 this.lineStyle = new LineStyle();
@@ -74,35 +104,81 @@ public class ItemStyle {
             return this.lineStyle;
         }
 
-        ;
+        /**
+         * 区域样式
+         *
+         * @see com.github.abel533.echarts.style.AreaStyle
+         */
+        private AreaStyle areaStyle;
 
         /**
          * 区域样式
          *
          * @see com.github.abel533.echarts.style.AreaStyle
          */
-        public AreaStyle areaStyle;
+        public AreaStyle areaStyle(){
+            if (this.areaStyle == null) {
+                this.areaStyle = new AreaStyle();
+            }
+            return this.areaStyle;
+        }
 
         /**
          * 和弦图 - 弦样式
          *
          * @see com.github.abel533.echarts.style.ChordStyle
          */
-        public ChordStyle chordStyle;
+        private ChordStyle chordStyle;
+
+        /**
+         * 和弦图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.ChordStyle
+         */
+        public ChordStyle chordStyle(){
+            if (this.chordStyle == null) {
+                this.chordStyle = new ChordStyle();
+            }
+            return this.chordStyle;
+        }
 
         /**
          * 力导向图 - 弦样式
          *
          * @see com.github.abel533.echarts.style.NodeStyle
          */
-        public NodeStyle nodeStyle;
+        private NodeStyle nodeStyle;
+
+        /**
+         * 力导向图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.NodeStyle
+         */
+        public NodeStyle nodeStyle(){
+            if (this.nodeStyle == null) {
+                this.nodeStyle = new NodeStyle();
+            }
+            return this.nodeStyle;
+        }
 
         /**
          * 力导向图 - 弦样式
          *
          * @see com.github.abel533.echarts.style.LinkStyle
          */
-        public LinkStyle linkStyle;
+        private LinkStyle linkStyle;
+
+        /**
+         * 力导向图 - 弦样式
+         *
+         * @see com.github.abel533.echarts.style.LinkStyle
+         */
+        public LinkStyle linkStyle(){
+            if (this.linkStyle == null) {
+                this.linkStyle = new LinkStyle();
+            }
+            return this.linkStyle;
+        }
 
         /**
          * 柱形边框颜色
@@ -118,6 +194,54 @@ public class ItemStyle {
          * 柱形边框线宽，单位px，默认为1
          */
         public Integer borderWidth;
+
+        public Label getLabel() {
+            return label;
+        }
+
+        public void setLabel(Label label) {
+            this.label = label;
+        }
+
+        public LabelLine getLabelLine() {
+            return labelLine;
+        }
+
+        public void setLabelLine(LabelLine labelLine) {
+            this.labelLine = labelLine;
+        }
+
+        public AreaStyle getAreaStyle() {
+            return areaStyle;
+        }
+
+        public void setAreaStyle(AreaStyle areaStyle) {
+            this.areaStyle = areaStyle;
+        }
+
+        public ChordStyle getChordStyle() {
+            return chordStyle;
+        }
+
+        public void setChordStyle(ChordStyle chordStyle) {
+            this.chordStyle = chordStyle;
+        }
+
+        public NodeStyle getNodeStyle() {
+            return nodeStyle;
+        }
+
+        public void setNodeStyle(NodeStyle nodeStyle) {
+            this.nodeStyle = nodeStyle;
+        }
+
+        public LinkStyle getLinkStyle() {
+            return linkStyle;
+        }
+
+        public void setLinkStyle(LinkStyle linkStyle) {
+            this.linkStyle = linkStyle;
+        }
     }
 
     public class Normal extends Style {
@@ -140,4 +264,6 @@ public class ItemStyle {
         this.normal = new Normal();
         this.emphasis = new Emphasis();
     }
+
+
 }

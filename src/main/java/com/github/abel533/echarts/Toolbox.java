@@ -28,7 +28,9 @@ import com.github.abel533.echarts.code.Align;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -50,7 +52,17 @@ public class Toolbox extends Basic implements Component {
     /**
      * 工具箱背景颜色，默认透明
      */
-    public Object[] color;
+    private List<Object> color;
+
+    /**
+     * 工具箱背景颜色，默认透明
+     */
+    public List<Object> color(){
+        if (this.color == null) {
+            this.color = new ArrayList<Object>();
+        }
+        return this.color;
+    }
 
     /**
      * 无效颜色
@@ -75,7 +87,17 @@ public class Toolbox extends Basic implements Component {
     /**
      * 启用功能，目前支持feature见下，工具箱自定义功能回调处理
      */
-    public Map<String, Feature> feature;
+    private Map<String, Feature> feature;
+
+    /**
+     * 启用功能，目前支持feature见下，工具箱自定义功能回调处理
+     */
+    public Map<String, Feature> feature(){
+        if (this.feature == null) {
+            this.feature = new HashMap<String, Feature>();
+        }
+        return this.feature;
+    }
 
     /**
      * 添加组件
@@ -86,9 +108,6 @@ public class Toolbox extends Basic implements Component {
     public Toolbox addFeature(Feature... values) {
         if (values == null && values.length == 0) {
             return this;
-        }
-        if (this.feature == null) {
-            this.feature = new HashMap<String, Feature>();
         }
         for (Feature f : values) {
             //第一个字母转小写
@@ -147,8 +166,24 @@ public class Toolbox extends Basic implements Component {
      */
     private void addFeatureOnce(Object name, Feature feature) {
         String _name = String.valueOf(name);
-        if (!this.feature.containsKey(_name)) {
-            this.feature.put(_name, feature);
+        if (!this.feature().containsKey(_name)) {
+            this.feature().put(_name, feature);
         }
+    }
+
+    public List<Object> getColor() {
+        return color;
+    }
+
+    public void setColor(List<Object> color) {
+        this.color = color;
+    }
+
+    public Map<String, Feature> getFeature() {
+        return feature;
+    }
+
+    public void setFeature(Map<String, Feature> feature) {
+        this.feature = feature;
     }
 }

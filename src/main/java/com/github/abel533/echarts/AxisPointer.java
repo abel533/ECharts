@@ -47,15 +47,71 @@ public class AxisPointer {
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle;
+    private LineStyle lineStyle;
+
+    /**
+     * 设置直线指示器
+     *
+     * @see com.github.abel533.echarts.style.LineStyle
+     */
+    public LineStyle lineStyle(){
+        if (this.lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
+    }
 
     /**
      * 设置十字准星指示器
      */
-    public CrossStyle crossStyle;
+    private CrossStyle crossStyle;
+
+    /**
+     * 设置十字准星指示器
+     */
+    public CrossStyle crossStyle(){
+        if (this.crossStyle == null) {
+            this.crossStyle = new CrossStyle();
+        }
+        return this.crossStyle;
+    }
 
     /**
      * 设置阴影指示器
      */
-    public ShadowStyle shadowStyle;
+    private ShadowStyle shadowStyle;
+
+    /**
+     * 设置阴影指示器
+     */
+    public ShadowStyle shadowStyle(){
+        if (this.shadowStyle == null) {
+            this.shadowStyle = new ShadowStyle();
+        }
+        return this.shadowStyle;
+    }
+
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+    }
+
+    public CrossStyle getCrossStyle() {
+        return crossStyle;
+    }
+
+    public void setCrossStyle(CrossStyle crossStyle) {
+        this.crossStyle = crossStyle;
+    }
+
+    public ShadowStyle getShadowStyle() {
+        return shadowStyle;
+    }
+
+    public void setShadowStyle(ShadowStyle shadowStyle) {
+        this.shadowStyle = shadowStyle;
+    }
 }

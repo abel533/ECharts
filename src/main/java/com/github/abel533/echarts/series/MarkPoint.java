@@ -24,17 +24,15 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.style.ItemStyle;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * Description: MarkPoint
  *
  * @author liuzh
  */
-public class MarkPoint {
+public class MarkPoint extends AbstractData<MarkPoint>{
     /**
      * 标注类型
      *
@@ -66,26 +64,60 @@ public class MarkPoint {
      *
      * @see com.github.abel533.echarts.series.Effect
      */
-    public Effect effect;
+    private Effect effect;
+
+    /**
+     * 标注图形炫光特效
+     *
+     * @see com.github.abel533.echarts.series.Effect
+     */
+    public Effect effect(){
+        if (this.effect == null) {
+            this.effect = new Effect();
+        }
+        return this.effect;
+    }
 
     /**
      * 标注图形样式属性
      *
      * @see com.github.abel533.echarts.series.Series#itemStyle
      */
-    public ItemStyle itemStyle;
+    private ItemStyle itemStyle;
+
+    /**
+     * 标线图形样式属性
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     * @see com.github.abel533.echarts.series.Series#itemStyle
+     */
+    public ItemStyle itemStyle(){
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
 
     /**
      * 地图特有，标注图形定位坐标
      *
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
-    public Map geoCoord;
+    public Object geoCoord;
 
-    /**
-     * 标注图形数据
-     *
-     * @see com.github.abel533.echarts.data.PointData
-     */
-    public List<Object> data;
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
+
+    public Effect getEffect() {
+        return effect;
+    }
+
+    public void setEffect(Effect effect) {
+        this.effect = effect;
+    }
 }

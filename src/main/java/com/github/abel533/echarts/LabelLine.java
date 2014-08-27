@@ -47,5 +47,25 @@ public class LabelLine {
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle;
+    private LineStyle lineStyle;
+
+    /**
+     * 线条样式，详见lineStyle
+     *
+     * @see com.github.abel533.echarts.style.LineStyle
+     */
+    public LineStyle lineStyle(){
+        if (this.lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
+    }
+
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+    }
 }

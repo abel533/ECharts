@@ -42,5 +42,25 @@ public class SplitArea {
      *
      * @see com.github.abel533.echarts.style.AreaStyle
      */
-    public AreaStyle areaStyle;
+    private AreaStyle areaStyle;
+
+    /**
+     * 属性areaStyle（详见areaStyle）控制区域样式
+     *
+     * @see com.github.abel533.echarts.style.AreaStyle
+     */
+    public AreaStyle areaStyle(){
+        if (this.areaStyle == null) {
+            this.areaStyle = new AreaStyle();
+        }
+        return this.areaStyle;
+    }
+
+    public AreaStyle getAreaStyle() {
+        return areaStyle;
+    }
+
+    public void setAreaStyle(AreaStyle areaStyle) {
+        this.areaStyle = areaStyle;
+    }
 }

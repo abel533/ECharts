@@ -66,124 +66,312 @@ public class Option {
     /**
      * 时间轴（详见timeline），每个图表最多仅有一个时间轴控件
      */
-    public Timeline timeline;
+    private Timeline timeline;
+
+    /**
+     * 时间轴（详见timeline），每个图表最多仅有一个时间轴控件
+     */
+    public Timeline timeline(){
+        if (this.timeline == null) {
+            this.timeline = new Timeline();
+        }
+        return this.timeline;
+    }
 
     /**
      * 标题（详见title），每个图表最多仅有一个标题控件
      */
-    public Title title;
+    private Title title;
+
+    /**
+     * 标题（详见title），每个图表最多仅有一个标题控件
+     */
+    public Title title(){
+        if (this.title == null) {
+            this.title = new Title();
+        }
+        return this.title;
+    }
 
     /**
      * 工具箱（详见toolbox），每个图表最多仅有一个工具箱
      */
-    public Toolbox toolbox;
+    private Toolbox toolbox;
+
+    /**
+     * 工具箱（详见toolbox），每个图表最多仅有一个工具箱
+     */
+    public Toolbox toolbox(){
+        if (this.toolbox == null) {
+            this.toolbox = new Toolbox();
+        }
+        return this.toolbox;
+    }
 
     /**
      * 提示框（详见tooltip），鼠标悬浮交互时的信息提示
      */
-    public Tooltip tooltip;
+    private Tooltip tooltip;
+
+    /**
+     * 提示框（详见tooltip），鼠标悬浮交互时的信息提示
+     */
+    public Tooltip tooltip(){
+        if (this.tooltip == null) {
+            this.tooltip = new Tooltip();
+        }
+        return this.tooltip;
+    }
 
     /**
      * 图例（详见legend），每个图表最多仅有一个图例，混搭图表共享
      */
-    public Legend legend;
+    private Legend legend;
+
+    /**
+     * 图例（详见legend），每个图表最多仅有一个图例，混搭图表共享
+     */
+    public Legend legend(){
+        if (this.legend == null) {
+            this.legend = new Legend();
+        }
+        return this.legend;
+    }
+
+    /**
+     * 添加图例（详见legend），每个图表最多仅有一个图例，混搭图表共享
+     *
+     * @param values
+     * @return
+     */
+    public Legend addLegend(Object... values){
+        this.legend().addData(values);
+        return this.legend();
+    }
 
     /**
      * 值域选择（详见dataRange）,值域范围
      */
-    public DataRange dataRange;
+    private DataRange dataRange;
+
+    /**
+     * 值域选择（详见dataRange）,值域范围
+     */
+    public DataRange dataRange(){
+        if (this.dataRange == null) {
+            this.dataRange = new DataRange();
+        }
+        return this.dataRange;
+    }
 
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
-    public DataZoom dataZoom;
+    private DataZoom dataZoom;
+
+    /**
+     * 数据区域缩放（详见dataZoom）,数据展现范围选择
+     */
+    public DataZoom dataZoom(){
+        if (this.dataZoom == null) {
+            this.dataZoom = new DataZoom();
+        }
+        return this.dataZoom;
+    }
 
     /**
      * 直角坐标系内绘图网格（详见grid）
      */
-    public Grid grid;
+    private Grid grid;
+
+    /**
+     * 直角坐标系内绘图网格（详见grid）
+     */
+    public Grid grid(){
+        if (this.grid == null) {
+            this.grid = new Grid();
+        }
+        return this.grid;
+    }
 
     /**
      * 直角坐标系中横轴数组（详见xAxis），数组中每一项代表一条横轴坐标轴，标准（1.0）中规定最多同时存在2条横轴
      */
-    public List<Axis> xAxis;
+    private List<Axis> xAxis;
+
+    /**
+     * 直角坐标系中横轴数组（详见xAxis），数组中每一项代表一条横轴坐标轴，标准（1.0）中规定最多同时存在2条横轴
+     */
+    public List<Axis> xAxis() {
+        if (this.xAxis == null) {
+            this.xAxis = new ArrayList<Axis>();
+        }
+        return this.xAxis;
+    }
+
+    /**
+     * 添加x轴
+     * @param values
+     * @return
+     */
+    public Option addXAxis(Axis... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        if (this.xAxis().size() == 2) {
+            throw new RuntimeException("xAxis已经存在2个，无法继续添加!");
+        }
+        if (this.xAxis().size() + values.length > 2) {
+            throw new RuntimeException("添加的xAxis超出了最大允许的范围:2!");
+        }
+        this.xAxis().addAll(Arrays.asList(values));
+        return this;
+    }
 
     /**
      * 直角坐标系中纵轴数组（详见yAxis），数组中每一项代表一条纵轴坐标轴，标准（1.0）中规定最多同时存在2条纵轴
      */
-    public List<Axis> yAxis;
+    private List<Axis> yAxis;
+
+    /**
+     * 直角坐标系中横轴数组（详见xAxis），数组中每一项代表一条横轴坐标轴，标准（1.0）中规定最多同时存在2条横轴
+     */
+    public List<Axis> yAxis() {
+        if (this.yAxis == null) {
+            this.yAxis = new ArrayList<Axis>();
+        }
+        return this.yAxis;
+    }
+
+    /**
+     * 添加y轴
+     * @param values
+     * @return
+     */
+    public Option addYAxis(Axis... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        if (this.yAxis().size() == 2) {
+            throw new RuntimeException("yAxis已经存在2个，无法继续添加!");
+        }
+        if (this.yAxis().size() + values.length > 2) {
+            throw new RuntimeException("添加的yAxis超出了最大允许的范围:2!");
+        }
+        this.yAxis().addAll(Arrays.asList(values));
+        return this;
+    }
 
     /**
      * 驱动图表生成的数据内容（详见series），数组中每一项代表一个系列的特殊选项及数据
      */
     public List<Series> series;
 
+    /**
+     * 驱动图表生成的数据内容（详见series），数组中每一项代表一个系列的特殊选项及数据
+     */
+    public List<Series> series() {
+        if (this.series == null) {
+            this.series = new ArrayList<Series>();
+        }
+        return this.series;
+    }
+
+    /**
+     * 添加数据
+     * @param values
+     * @return
+     */
+    public Option addSeries(Series... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.series().addAll(Arrays.asList(values));
+        return this;
+    }
+
     public Option() {
         //数据必须有
         this.series = new ArrayList<Series>();
     }
 
-    /**
-     * 添加图例属性
-     *
-     * @param values
-     * @return
-     */
-    public Option addLegend(Object... values) {
-        if (legend == null) {
-            legend = new Legend();
-        }
-        legend.addData(values);
-        return this;
+    public Timeline getTimeline() {
+        return timeline;
     }
 
-    /**
-     * 添加x轴
-     *
-     * @param axis
-     * @return
-     */
-    public Option addXAxis(Axis axis) {
-        if (xAxis == null) {
-            xAxis = new ArrayList<Axis>();
-        }
-        if (xAxis.size() == 2) {
-            throw new RuntimeException("xAxis已经存在2个，无法继续添加!");
-        }
-        xAxis.add(axis);
-        return this;
+    public void setTimeline(Timeline timeline) {
+        this.timeline = timeline;
     }
 
-    /**
-     * 添加y轴
-     *
-     * @param axis
-     * @return
-     */
-    public Option addYAxis(Axis axis) {
-        if (yAxis == null) {
-            yAxis = new ArrayList<Axis>();
-        }
-        if (yAxis.size() == 2) {
-            throw new RuntimeException("xAxis已经存在2个，无法继续添加!");
-        }
-        yAxis.add(axis);
-        return this;
+    public Title getTitle() {
+        return title;
     }
 
-    /**
-     * 添加数据
-     *
-     * @param series
-     * @return
-     */
-    public Option addSeries(Series... series) {
-        if (series == null || series.length == 0) {
-            return this;
-        }
-        this.series.addAll(Arrays.asList(series));
-        return this;
+    public void setTitle(Title title) {
+        this.title = title;
     }
 
+    public Toolbox getToolbox() {
+        return toolbox;
+    }
 
+    public void setToolbox(Toolbox toolbox) {
+        this.toolbox = toolbox;
+    }
+
+    public Tooltip getTooltip() {
+        return tooltip;
+    }
+
+    public void setTooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
+    }
+
+    public Legend getLegend() {
+        return legend;
+    }
+
+    public void setLegend(Legend legend) {
+        this.legend = legend;
+    }
+
+    public DataRange getDataRange() {
+        return dataRange;
+    }
+
+    public void setDataRange(DataRange dataRange) {
+        this.dataRange = dataRange;
+    }
+
+    public DataZoom getDataZoom() {
+        return dataZoom;
+    }
+
+    public void setDataZoom(DataZoom dataZoom) {
+        this.dataZoom = dataZoom;
+    }
+
+    public Grid getGrid() {
+        return grid;
+    }
+
+    public void setGrid(Grid grid) {
+        this.grid = grid;
+    }
+
+    public List<Axis> getxAxis() {
+        return xAxis;
+    }
+
+    public void setxAxis(List<Axis> xAxis) {
+        this.xAxis = xAxis;
+    }
+
+    public List<Axis> getyAxis() {
+        return yAxis;
+    }
+
+    public void setyAxis(List<Axis> yAxis) {
+        this.yAxis = yAxis;
+    }
 }

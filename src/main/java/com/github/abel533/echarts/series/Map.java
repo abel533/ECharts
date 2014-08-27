@@ -97,6 +97,7 @@ public class Map extends Series {
     /**
      * 通过绝对经纬度指定地区的名称文本位置，如{'Islands':[113.95, 22.26]}，香港离岛区名称显示定位到东经113.95，北纬22.26上
      */
+    //TODO 结构可以优化
     public Object geoCoord;
 
     public Map() {

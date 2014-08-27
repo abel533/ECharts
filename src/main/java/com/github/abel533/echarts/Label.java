@@ -62,10 +62,28 @@ public class Label {
     /**
      * 文字样式（详见{@link com.github.abel533.echarts.style.TextStyle}）
      */
-    public TextStyle textStyle;
+    private TextStyle textStyle;
+
+    /**
+     * 文字样式（详见{@link com.github.abel533.echarts.style.TextStyle}）
+     */
+    public TextStyle textStyle(){
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
 
     /**
      * 坐标轴文本标签与坐标轴的间距
      */
     public Integer margin;
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
 }

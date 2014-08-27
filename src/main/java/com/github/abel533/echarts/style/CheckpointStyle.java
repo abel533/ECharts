@@ -60,5 +60,23 @@ public class CheckpointStyle {
     /**
      * @see com.github.abel533.echarts.Label
      */
-    public Label label;
+    private Label label;
+
+    /**
+     * @see com.github.abel533.echarts.Label
+     */
+    public Label label(){
+        if (this.label == null) {
+            this.label = new Label();
+        }
+        return this.label;
+    }
+
+    public Label getLabel() {
+        return label;
+    }
+
+    public void setLabel(Label label) {
+        this.label = label;
+    }
 }

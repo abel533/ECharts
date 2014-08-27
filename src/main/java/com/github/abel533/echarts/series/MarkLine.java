@@ -60,7 +60,19 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @see com.github.abel533.echarts.series.Effect
      */
-    public Effect effect;
+    private Effect effect;
+
+    /**
+     * 标线图形炫光特效
+     *
+     * @see com.github.abel533.echarts.series.Effect
+     */
+    public Effect effect(){
+        if (this.effect == null) {
+            this.effect = new Effect();
+        }
+        return this.effect;
+    }
 
     /**
      * 标线图形样式属性
@@ -68,7 +80,20 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.style.ItemStyle
      * @see com.github.abel533.echarts.series.Series#itemStyle
      */
-    public ItemStyle itemStyle;
+    private ItemStyle itemStyle;
+
+    /**
+     * 标线图形样式属性
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     * @see com.github.abel533.echarts.series.Series#itemStyle
+     */
+    public ItemStyle itemStyle(){
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
 
     /**
      * 地图特有，标线图形定位坐标
@@ -76,4 +101,20 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
     public Object geoCoord;
+
+    public Effect getEffect() {
+        return effect;
+    }
+
+    public void setEffect(Effect effect) {
+        this.effect = effect;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
 }
