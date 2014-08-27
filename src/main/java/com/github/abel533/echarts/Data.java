@@ -24,18 +24,38 @@
 
 package com.github.abel533.echarts;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Data接口 - 添加数据
  *
  * @author liuzh
  *         Created by liuzh on 14-8-25.
  */
-public interface Data<T> {
+public abstract class Data<T> {
+    /**
+     * 标线图形数据
+     *
+     * @see com.github.abel533.echarts.data.PointData
+     */
+    public List<Object> data;
+
     /**
      * 添加元素
      *
      * @param values
      * @return
      */
-    T addData(Object... values);
+    public T addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return (T) this;
+        }
+        if (this.data == null) {
+            this.data = new ArrayList<Object>();
+        }
+        this.data.addAll(Arrays.asList(values));
+        return (T) this;
+    }
 }
