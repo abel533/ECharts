@@ -24,8 +24,11 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.Data;
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -34,7 +37,7 @@ import java.util.List;
  * @author liuzh
  * @since liuzh(2014-08-26 10:00)
  */
-public class MarkLine {
+public class MarkLine implements Data<MarkLine> {
     /**
      * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
      *
@@ -85,4 +88,16 @@ public class MarkLine {
      * @see com.github.abel533.echarts.data.PointData
      */
     public List<Object> data;
+
+    @Override
+    public MarkLine addData(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        if (this.data == null) {
+            this.data = new ArrayList<Object>();
+        }
+        data.addAll(Arrays.asList(values));
+        return this;
+    }
 }

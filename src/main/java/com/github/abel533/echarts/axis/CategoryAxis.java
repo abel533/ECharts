@@ -31,14 +31,6 @@ import com.github.abel533.echarts.code.AxisType;
  */
 public class CategoryAxis extends Axis {
 
-    /**
-     * [类目型]类目起始和结束两端空白策略，见下图，默认为true留空，false则顶头
-     * <p/>
-     * [数值型]数值轴两端空白策略，数组内数值代表百分比，
-     * [原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
-     */
-    public Object boundaryGap;
-
     public CategoryAxis() {
         this.type = AxisType.category;
     }

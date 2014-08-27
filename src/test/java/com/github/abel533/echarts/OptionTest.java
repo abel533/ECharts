@@ -32,6 +32,7 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.series.MarkLine;
+import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.util.GsonFormatter;
 import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
@@ -72,12 +73,14 @@ public class OptionTest {
         line.name = "ios7";
         line.addData(112, 23, 45, 56, 233, 343, 454, 89, 343, 123, 45, 123);
         MarkLine markLine = new MarkLine();
-        markLine.data.add(new LineData(MarkType.average, "ios7"));
+        markLine.addData(new LineData(MarkType.average, "ios7"));
         line.markLine = markLine;
         option.series.add(line);
 
         line = new Line();
         line.name = "android4";
+        line.itemStyle = new ItemStyle();
+        line.itemStyle.normal.label = new Label();
         line.itemStyle.normal.label.show = true;
         line.addData(45, 123, 145, 526, 233, 343, 44, 829, 33, 123, 45, 13);
         option.series.add(line);

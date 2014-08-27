@@ -28,7 +28,6 @@ import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.series.Series;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -134,7 +133,7 @@ public class Option {
         if (legend == null) {
             legend = new Legend();
         }
-        legend.data.addAll(Arrays.asList(values));
+        legend.addData(values);
         return this;
     }
 }
