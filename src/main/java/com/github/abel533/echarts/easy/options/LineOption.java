@@ -22,33 +22,15 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts;
+package com.github.abel533.echarts.easy.options;
+
+import com.github.abel533.echarts.Option;
 
 /**
- * 直角坐标系内绘图网格
- *
  * @author liuzh
  */
-public class Grid extends Basic implements Component {
-    /**
-     * 直角坐标系内绘图网格左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
-     */
-    public Object x2;
+public class LineOption extends Option {
+    public LineOption() {
 
-    /**
-     * 直角坐标系内绘图网格左上角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
-     */
-    public Object y2;
-
-    /**
-     * 直角坐标系内绘图网格（不含坐标轴）宽度，默认为总宽度 - x - x2，数值单位px，指定width后将忽略x2，见下图。
-     * 支持百分比（字符串），如'50%'(显示区域一半的宽度)
-     */
-    public Object width;
-
-    /**
-     * 直角坐标系内绘图网格（不含坐标轴）高度，默认为总宽度 - y - y2，数值单位px，指定height后将忽略y2，见下图。
-     * 支持百分比（字符串），如'50%'(显示区域一半的高度)
-     */
-    public Object height;
+    }
 }

@@ -30,7 +30,7 @@ import com.github.abel533.echarts.style.TextStyle;
 /**
  * @author liuzh
  */
-public class Title extends Basic {
+public class Title extends Basic implements Component {
     /**
      * 主标题文本，'\n'指定换行
      */

@@ -37,7 +37,7 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Polar extends AbstractData<Polar> {
+public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */

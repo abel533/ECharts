@@ -30,7 +30,7 @@ import com.github.abel533.echarts.style.TextStyle;
 /**
  * @author liuzh
  */
-public class Tooltip extends Basic {
+public class Tooltip extends Basic implements Component {
     /**
      * 显示策略，可选为：true（显示） | false（隐藏）
      */

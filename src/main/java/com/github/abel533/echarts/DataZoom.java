@@ -31,7 +31,7 @@ import com.github.abel533.echarts.code.Align;
  *
  * @author liuzh
  */
-public class DataZoom extends Basic {
+public class DataZoom extends Basic implements Component {
     /**
      * 是否显示，当show为true时则接管使用指定类目轴的全部系列数据，如不指定则接管全部直角坐标系数据
      */

@@ -35,7 +35,7 @@ import com.github.abel533.echarts.style.LineStyle;
  *
  * @author liuzh
  */
-public class Timeline extends AbstractData<Timeline> {
+public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 默认值true,显示策略，可选为：true（显示） | false（隐藏）
      */

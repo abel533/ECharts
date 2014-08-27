@@ -32,7 +32,7 @@ import com.github.abel533.echarts.style.TextStyle;
  *
  * @author liuzh
  */
-public class DataRange extends Basic {
+public class DataRange extends Basic implements Component {
     /**
      * 布局方式，默认为垂直布局，可选为：'horizontal' | 'vertical'
      *

@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * @author liuzh
  */
-public class Toolbox extends Basic {
+public class Toolbox extends Basic implements Component {
     /**
      * 默认false，显示策略，可选为：true（显示） | false（隐藏）
      */
@@ -91,7 +91,7 @@ public class Toolbox extends Basic {
         }
         for (Feature f : values) {
             //第一个字母转小写
-            String name = f.getClass().getName();
+            String name = f.getClass().getSimpleName();
             name = name.substring(0, 1).toLowerCase() + name.substring(1);
             if (!this.feature.containsKey(name)) {
                 this.feature.put(name, f);

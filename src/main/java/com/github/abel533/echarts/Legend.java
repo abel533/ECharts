@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * @author liuzh
  */
-public class Legend extends Basic implements Data<Legend> {
+public class Legend extends Basic implements Data<Legend>, Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *

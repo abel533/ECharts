@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.AbstractData;
+import com.github.abel533.echarts.Component;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
@@ -38,7 +39,7 @@ import java.util.Arrays;
  *
  * @author liuzh
  */
-public class Axis extends AbstractData<Axis> {
+public class Axis extends AbstractData<Axis> implements Component {
 
     /**
      * 坐标轴类型，横轴默认为类目型'category'，纵轴默认为数值型'value'
