@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.AbstractData;
+import com.github.abel533.echarts.Chart;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
@@ -34,7 +35,7 @@ import com.github.abel533.echarts.style.ItemStyle;
  *
  * @author liuzh
  */
-public abstract class Series extends AbstractData<Series> {
+public abstract class Series extends AbstractData<Series> implements Chart {
     /**
      * xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
      */
