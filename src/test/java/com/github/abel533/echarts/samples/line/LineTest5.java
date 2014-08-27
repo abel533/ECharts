@@ -24,14 +24,12 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.*;
-import com.github.abel533.echarts.axis.AxisLine;
+import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.series.Line;
-import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
 
@@ -45,27 +43,22 @@ public class LineTest5 {
         //地址:http://echarts.baidu.com/doc/example/line5.html
 
         Option option = new Option();
-        option.legend = new Legend("高度(km)与气温(°C)变化关系");
+        option.addLegend("高度(km)与气温(°C)变化关系");
 
-        option.toolbox = new Toolbox();
-        option.toolbox.show = true;
-        option.toolbox.addFeature(Tool.mark, Tool.dataView, Tool.magicType, Tool.restore, Tool.saveAsImage);
+        option.toolbox().show = true;
+        option.toolbox().addFeature(Tool.mark, Tool.dataView, Tool.magicType, Tool.restore, Tool.saveAsImage);
 
         option.calculable = true;
-        option.tooltip = new Tooltip();
-        option.tooltip.trigger = Trigger.axis;
-        option.tooltip.formatter = "Temperature : <br/>{b}km : {c}°C";
+        option.tooltip().trigger = Trigger.axis;
+        option.tooltip().formatter = "Temperature : <br/>{b}km : {c}°C";
 
         ValueAxis valueAxis = new ValueAxis();
-        valueAxis.axisLabel = new Label();
-        valueAxis.axisLabel.formatter = "{value} °C";
+        valueAxis.axisLabel().formatter = "{value} °C";
         option.addXAxis(valueAxis);
 
         CategoryAxis categoryAxis = new CategoryAxis();
-        categoryAxis.axisLine = new AxisLine();
-        categoryAxis.axisLine.onZero = false;
-        categoryAxis.axisLabel = new Label();
-        categoryAxis.axisLabel.formatter = "{value} km";
+        categoryAxis.axisLine().onZero = false;
+        categoryAxis.axisLabel().formatter = "{value} km";
         categoryAxis.boundaryGap = false;
         categoryAxis.addData(0, 10, 20, 30, 40, 50, 60, 70, 80);
         option.addYAxis(categoryAxis);
@@ -73,8 +66,7 @@ public class LineTest5 {
         Line line = new Line();
         line.name = "高度(km)与气温(°C)变化关系";
         line.smooth = true;
-        line.itemStyle = new ItemStyle();
-        line.itemStyle.normal.lineStyle().shadowColor = "rgba(0,0,0,0.4)";
+        line.itemStyle().normal.lineStyle().shadowColor = "rgba(0,0,0,0.4)";
         line.addData(15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5);
         option.addSeries(line);
 

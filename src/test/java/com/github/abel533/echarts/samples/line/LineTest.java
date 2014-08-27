@@ -24,8 +24,7 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.*;
-import com.github.abel533.echarts.axis.Axis;
+import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Symbol;
@@ -33,11 +32,8 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.style.ItemStyle;
-import com.github.abel533.echarts.style.TextStyle;
 import com.github.abel533.echarts.util.ViewECharts;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 /**
  * Created by liuzh on 14-8-26.
@@ -48,14 +44,11 @@ public class LineTest {
     public void test() {
         //例子：http://echarts.baidu.com/doc/example/line.html
         Option option = new Option();
-        option.tooltip = new Tooltip();
-        option.tooltip.trigger = Trigger.axis;
+        option.tooltip().trigger = Trigger.axis;
 
-        option.legend = new Legend();
-        option.legend.addData("邮件营销", "联盟广告", "直接访问", "搜索引擎");
+        option.addLegend("邮件营销", "联盟广告", "直接访问", "搜索引擎");
 
-        option.toolbox = new Toolbox();
-        option.toolbox.show = true;
+        option.toolbox().show = true;
         //option.toolbox.feature
 
         option.calculable = true;
@@ -63,12 +56,10 @@ public class LineTest {
         CategoryAxis categoryAxis = new CategoryAxis();
         categoryAxis.boundaryGap = false;
         categoryAxis.addData("周一", "周二", "周三", "周四", "周五", "周六", "周日");
-        option.xAxis = new ArrayList<Axis>();
-        option.xAxis.add(categoryAxis);
+        option.addXAxis(categoryAxis);
 
         ValueAxis valueAxis = new ValueAxis();
-        option.yAxis = new ArrayList<Axis>();
-        option.yAxis.add(valueAxis);
+        option.addYAxis(valueAxis);
 
         Line line = new Line();
         line.name = "邮件营销";
@@ -90,12 +81,10 @@ public class LineTest {
         //line.itemStyle.normal.areaStyle = new AreaStyle();
         LineData lineData = new LineData(201, Symbol.star, 15);
         lineData.itemStyle = new ItemStyle();
-        lineData.itemStyle.normal.label = new Label();
-        lineData.itemStyle.normal.label.show = true;
-        lineData.itemStyle.normal.label.textStyle = new TextStyle();
-        lineData.itemStyle.normal.label.textStyle.fontSize = 20;
-        lineData.itemStyle.normal.label.textStyle.fontFamily = "微软雅黑";
-        lineData.itemStyle.normal.label.textStyle.fontWeight = "bold";
+        lineData.itemStyle.normal.label().show = true;
+        lineData.itemStyle.normal.label().textStyle().fontSize = 20;
+        lineData.itemStyle.normal.label().textStyle().fontFamily = "微软雅黑";
+        lineData.itemStyle.normal.label().textStyle().fontWeight = "bold";
         line.addData(120, 82, lineData, new LineData(134, Symbol.none), 190, new LineData(230, Symbol.emptypin, 8), 110);
         option.series.add(line);
 
