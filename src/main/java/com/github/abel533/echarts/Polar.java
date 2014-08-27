@@ -36,7 +36,6 @@ import java.util.List;
  * 极坐标
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class Polar extends AbstractData<Polar> {
     /**

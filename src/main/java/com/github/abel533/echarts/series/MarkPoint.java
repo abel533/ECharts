@@ -33,7 +33,6 @@ import java.util.Map;
  * Description: MarkPoint
  *
  * @author liuzh
- * @since liuzh(2014-08-26 09:51)
  */
 public class MarkPoint {
     /**

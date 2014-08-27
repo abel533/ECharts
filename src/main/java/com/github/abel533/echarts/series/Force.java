@@ -35,7 +35,6 @@ import java.util.List;
  * Description: Force
  *
  * @author liuzh
- * @since liuzh(2014-08-26 11:35)
  */
 public class Force extends Series {
     /**

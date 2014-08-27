@@ -28,7 +28,6 @@ package com.github.abel533.echarts;
  * Description: Event
  *
  * @author liuzh
- * @since liuzh(2014-08-26 11:43)
  */
 public enum Event {
     // -------全局通用

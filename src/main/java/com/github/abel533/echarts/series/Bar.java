@@ -30,7 +30,6 @@ import com.github.abel533.echarts.code.SeriesType;
  * 柱形图
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:29)
  */
 public class Bar extends Series {
     /**

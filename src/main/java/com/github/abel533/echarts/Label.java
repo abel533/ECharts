@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.TextStyle;
  * Description: Label
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:08)
  */
 public class Label {
     /**

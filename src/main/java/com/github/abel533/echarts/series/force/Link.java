@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  * 力导向图的边数据
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class Link {
     /**

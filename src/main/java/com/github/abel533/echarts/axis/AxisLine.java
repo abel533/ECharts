@@ -28,7 +28,8 @@ import com.github.abel533.echarts.style.LineStyle;
 
 /**
  * 坐标轴线
- * Created by liuzh on 14-8-26.
+ *
+ * @author liuzh
  */
 public class AxisLine {
     /**

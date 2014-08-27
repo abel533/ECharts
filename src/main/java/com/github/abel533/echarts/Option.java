@@ -34,7 +34,6 @@ import java.util.List;
  * Description: Option
  *
  * @author liuzh
- * @since liuzh(2014-08-26 11:57)
  */
 public class Option {
     /**

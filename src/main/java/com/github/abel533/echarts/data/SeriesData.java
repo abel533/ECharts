@@ -31,7 +31,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  * Description: Series.Data
  *
  * @author liuzh
- * @since liuzh(2014-08-26 12:54)
  */
 public class SeriesData {
     public Object value;

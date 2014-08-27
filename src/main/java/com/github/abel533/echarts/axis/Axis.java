@@ -32,10 +32,11 @@ import com.github.abel533.echarts.style.LineStyle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 坐标轴
+ *
+ * @author liuzh
  */
 public class Axis extends AbstractData<Axis> {
 
@@ -113,11 +114,6 @@ public class Axis extends AbstractData<Axis> {
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      */
     public SplitArea splitArea;
-
-    /**
-     * 类目列表，同时也是label内容
-     */
-    public List<Object> data;
 
     /**
      * 添加坐标轴的类目属性

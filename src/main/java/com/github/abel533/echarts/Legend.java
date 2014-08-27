@@ -32,7 +32,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by liuzh on 14-8-25.
+ * @author liuzh
  */
 public class Legend extends Basic implements Data<Legend> {
     /**

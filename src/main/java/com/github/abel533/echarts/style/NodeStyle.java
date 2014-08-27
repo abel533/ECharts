@@ -30,7 +30,6 @@ import com.github.abel533.echarts.code.BrushType;
  * Description: NodeStyle
  *
  * @author liuzh
- * @since liuzh(2014-08-26 09:34)
  */
 public class NodeStyle extends LinkStyle {
     /**

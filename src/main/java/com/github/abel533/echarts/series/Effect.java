@@ -28,7 +28,6 @@ package com.github.abel533.echarts.series;
  * 图形炫光特效
  *
  * @author liuzh
- * @since liuzh(2014-08-26 09:52)
  */
 public class Effect {
     /**

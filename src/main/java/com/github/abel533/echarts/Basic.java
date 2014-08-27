@@ -31,7 +31,6 @@ import com.github.abel533.echarts.code.YPosition;
  * 组件的基础类
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public abstract class Basic {
     /**

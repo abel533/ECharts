@@ -25,10 +25,7 @@
 package com.github.abel533.echarts.code;
 
 /**
- * Description: TimeLineType
- *
  * @author liuzh
- * @since liuzh(2014-08-27 08:31)
  */
 public enum TimeLineType {
     time, number

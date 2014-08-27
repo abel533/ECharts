@@ -25,10 +25,7 @@
 package com.github.abel533.echarts.code;
 
 /**
- * Description : RoseType
- *
  * @author : liuzh
- * @since : liuzh(2014-08-27 16:49)
  */
 public enum RoseType {
     radius, area

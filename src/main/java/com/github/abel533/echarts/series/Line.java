@@ -27,10 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 
 /**
- * Description: Line
- *
  * @author liuzh
- * @since liuzh(2014-08-26 10:14)
  */
 public class Line extends Series {
     /**

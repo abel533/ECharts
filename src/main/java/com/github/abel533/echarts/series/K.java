@@ -30,7 +30,6 @@ import com.github.abel533.echarts.code.SeriesType;
  * Description: K
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:33)
  */
 public class K extends Series {
     public K() {

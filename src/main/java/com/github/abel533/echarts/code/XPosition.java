@@ -25,7 +25,7 @@
 package com.github.abel533.echarts.code;
 
 /**
- * Created by liuzh on 14-8-25.
+ * @author liuzh
  */
 public enum XPosition {
     center, left, right

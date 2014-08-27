@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.LineStyle;
  * 分隔线
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class SplitLine {
     /**

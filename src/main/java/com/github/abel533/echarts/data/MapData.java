@@ -28,7 +28,6 @@ package com.github.abel533.echarts.data;
  * MapData
  *
  * @author liuzh
- * @since liuzh(2014-08-26 13:09)
  */
 public class MapData {
     public String name;

@@ -27,7 +27,7 @@ package com.github.abel533.echarts.style;
 import com.github.abel533.echarts.code.LineType;
 
 /**
- * Created by liuzh on 14-8-25.
+ * @author liuzh
  */
 public class LineStyle {
     /**

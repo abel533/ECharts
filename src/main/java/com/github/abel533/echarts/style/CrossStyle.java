@@ -28,7 +28,6 @@ package com.github.abel533.echarts.style;
  * 坐标轴指示器
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public class CrossStyle extends LineStyle {
 }

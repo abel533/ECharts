@@ -30,13 +30,10 @@ import com.github.abel533.echarts.style.CheckpointStyle;
 import com.github.abel533.echarts.style.ControlStyle;
 import com.github.abel533.echarts.style.LineStyle;
 
-import java.util.List;
-
 /**
  * Description: Timeline
  *
  * @author liuzh
- * @since liuzh(2014-08-26 09:05)
  */
 public class Timeline extends AbstractData<Timeline> {
     /**
@@ -179,9 +176,4 @@ public class Timeline extends AbstractData<Timeline> {
      * 默认值0，当前索引位置，对应options数组，用于指定显示特定系列
      */
     public Integer currentIndex;
-
-    /**
-     * 时间轴列表，同时也是轴label内容
-     */
-    public List<Object> data;
 }

@@ -32,7 +32,6 @@ import com.github.abel533.echarts.code.SeriesType;
  * 饼图
  *
  * @author liuzh
- * @since liuzh(2014-08-26 11:27)
  */
 public class Pie extends Series {
     /**

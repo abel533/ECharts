@@ -35,7 +35,6 @@ import java.util.List;
  * Description: 提供浏览器查看图标的功能 - 必须能够联网
  *
  * @author liuzh
- * @since liuzh(2014-08-26 15:18)
  */
 public class ViewECharts {
 

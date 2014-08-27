@@ -28,7 +28,6 @@ package com.github.abel533.echarts.style;
  * 阴影指示器样式设置
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public class ShadowStyle {
     /**

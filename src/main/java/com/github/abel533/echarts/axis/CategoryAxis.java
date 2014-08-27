@@ -27,7 +27,9 @@ package com.github.abel533.echarts.axis;
 import com.github.abel533.echarts.code.AxisType;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 类目轴
+ *
+ * @author liuzh
  */
 public class CategoryAxis extends Axis {
 

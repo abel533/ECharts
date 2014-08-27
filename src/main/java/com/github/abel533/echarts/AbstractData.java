@@ -32,7 +32,6 @@ import java.util.List;
  * Data接口 - 添加数据
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public abstract class AbstractData<T> implements Data<T> {
     /**

@@ -31,7 +31,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  * Description: MarkLine
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:00)
  */
 public class MarkLine extends AbstractData<MarkLine> {
     /**

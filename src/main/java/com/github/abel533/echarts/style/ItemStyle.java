@@ -31,7 +31,6 @@ import com.github.abel533.echarts.LabelLine;
  * Description: ItemStyle
  *
  * @author liuzh
- * @since 2014-08-26 09:30
  */
 public class ItemStyle {
 

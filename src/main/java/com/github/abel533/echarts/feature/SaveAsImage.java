@@ -25,10 +25,7 @@
 package com.github.abel533.echarts.feature;
 
 /**
- * Description : SaveAsImage
- *
  * @author liuzh
- * @since : liuzh(2014-08-27 13:56)
  */
 public class SaveAsImage extends Feature {
     public SaveAsImage() {

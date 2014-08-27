@@ -28,7 +28,6 @@ package com.github.abel533.echarts.style;
  * 区域填充样式
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class AreaStyle {
     /**

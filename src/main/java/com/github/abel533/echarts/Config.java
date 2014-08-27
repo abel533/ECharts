@@ -28,7 +28,6 @@ package com.github.abel533.echarts;
  * 配置信息
  *
  * @author liuzh
- * @since 2014-08-26 11:46
  */
 public interface Config {
     // 图表类型

@@ -31,7 +31,6 @@ import com.github.abel533.echarts.style.TextStyle;
  * 值域选择，每个图表最多仅有一个值域控件
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public class DataRange extends Basic {
     /**

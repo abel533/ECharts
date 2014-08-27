@@ -28,10 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description : MagicType
- *
  * @author liuzh
- * @since : liuzh(2014-08-27 13:54)
  */
 public class MagicType extends Feature {
     public MagicType() {

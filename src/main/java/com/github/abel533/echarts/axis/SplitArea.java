@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.AreaStyle;
  * 分隔区域
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class SplitArea {
     /**

@@ -28,7 +28,6 @@ package com.github.abel533.echarts.code;
  * Description: Position
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:10)
  */
 public enum Position {
     outer, inside, left, right, top, bottom

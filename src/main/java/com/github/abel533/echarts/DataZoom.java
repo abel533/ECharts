@@ -30,7 +30,6 @@ import com.github.abel533.echarts.code.Align;
  * 数据区域缩放。与toolbox.feature.dataZoom同步，仅对直角坐标系图表有效
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class DataZoom extends Basic {
     /**

@@ -28,7 +28,6 @@ package com.github.abel533.echarts.style;
  * 弦样式
  *
  * @author liuzh
- * @since 2014-08-26 09:33
  */
 public class ChordStyle {
     /**

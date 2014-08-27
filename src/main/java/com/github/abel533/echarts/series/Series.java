@@ -29,13 +29,10 @@ import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
 
-import java.util.List;
-
 /**
  * Description: Series
  *
  * @author liuzh
- * @since liuzh(2014-08-26 09:26)
  */
 public abstract class Series extends AbstractData<Series> {
     /**
@@ -78,11 +75,6 @@ public abstract class Series extends AbstractData<Series> {
      * @see com.github.abel533.echarts.style.ItemStyle
      */
     public ItemStyle itemStyle;
-
-    /**
-     * 数据
-     */
-    public List<Object> data;
 
     /**
      * 标注

@@ -31,7 +31,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  * Description: PointData
  *
  * @author liuzh
- * @since liuzh(2014-08-26 13:17)
  */
 public class PointData {
     public String name;

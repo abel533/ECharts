@@ -25,10 +25,7 @@
 package com.github.abel533.echarts.code;
 
 /**
- * Description : BrushType
- *
- * @author : liuzh
- * @since : liuzh(2014-08-27 16:21)
+ * @author liuzh
  */
 public enum BrushType {
     both, stroke, fill

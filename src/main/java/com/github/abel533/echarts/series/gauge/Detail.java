@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.TextStyle;
  * 仪表盘详情
  *
  * @author liuzh
- * @since : liuzh(2014-08-27 14:23)
  */
 public class Detail {
     /**

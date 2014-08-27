@@ -30,7 +30,6 @@ import com.github.abel533.echarts.style.TextStyle;
  * Description : LegendData
  *
  * @author liuzh
- * @since : liuzh(2014-08-27 13:16)
  */
 public class LegendData {
     /**

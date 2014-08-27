@@ -33,7 +33,6 @@ import com.github.abel533.echarts.style.ShadowStyle;
  * 坐标轴指示器，坐标轴触发有效
  *
  * @author liuzh
- *         Created by liuzh on 14-8-25.
  */
 public class AxisPointer {
     /**

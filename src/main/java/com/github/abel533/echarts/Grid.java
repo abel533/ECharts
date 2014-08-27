@@ -28,7 +28,6 @@ package com.github.abel533.echarts;
  * 直角坐标系内绘图网格
  *
  * @author liuzh
- *         Created by liuzh on 14-8-26.
  */
 public class Grid extends Basic {
     /**

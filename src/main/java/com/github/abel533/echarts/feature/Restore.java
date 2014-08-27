@@ -25,10 +25,7 @@
 package com.github.abel533.echarts.feature;
 
 /**
- * Description : Restore
- *
  * @author liuzh
- * @since : liuzh(2014-08-27 13:56)
  */
 public class Restore extends Feature {
     public Restore() {

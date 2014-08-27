@@ -27,7 +27,9 @@ package com.github.abel533.echarts.axis;
 import com.github.abel533.echarts.style.LineStyle;
 
 /**
- * Created by liuzh on 14-8-26.
+ * 坐标轴小标记
+ *
+ * @author liuzh
  */
 public class AxisTick {
     /**

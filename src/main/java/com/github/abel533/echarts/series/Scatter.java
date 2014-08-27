@@ -30,7 +30,6 @@ import com.github.abel533.echarts.code.SeriesType;
  * 散点图、气泡图
  *
  * @author liuzh
- * @since liuzh(2014-08-26 10:37)
  */
 public class Scatter extends Series {
     /**

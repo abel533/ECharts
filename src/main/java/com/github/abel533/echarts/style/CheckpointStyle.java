@@ -30,7 +30,6 @@ import com.github.abel533.echarts.Label;
  * 时间轴当前点，该类只在Timeline中使用
  *
  * @author liuzh
- * @since liuzh(2014-08-26 13:52)
  */
 public class CheckpointStyle {
     /**

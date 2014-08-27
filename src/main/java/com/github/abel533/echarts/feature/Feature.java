@@ -28,7 +28,7 @@ import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
- * Created by liuzh on 14-8-25.
+ * @author liuzh
  */
 public abstract class Feature {
     /**
