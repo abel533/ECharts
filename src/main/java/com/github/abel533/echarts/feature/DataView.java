@@ -24,58 +24,17 @@
 
 package com.github.abel533.echarts.feature;
 
-import com.github.abel533.echarts.style.LineStyle;
-import com.github.abel533.echarts.style.TextStyle;
-
 /**
- * Created by liuzh on 14-8-25.
+ * Description : DataView
+ *
+ * @author : liuzh
+ * @since : liuzh(2014-08-27 13:53)
  */
-public abstract class Feature {
-    /**
-     * 是否显示
-     */
-    public Boolean show;
-
-    /**
-     * 标题
-     */
-    public Object title;
-
-    /**
-     * 类型
-     *
-     * @see com.github.abel533.echarts.code.MagicType
-     * @see com.github.abel533.echarts.code.LineType
-     */
-    public Object type;
-
-    /**
-     * 只读
-     */
-    public Boolean readOnly;
-
-    /**
-     * lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
-     */
-    public Object lang;
-
-    /**
-     * 线条颜色
-     *
-     * @see com.github.abel533.echarts.style.LineStyle
-     */
-    public LineStyle lineStyle;
-
-    /**
-     * 文字颜色
-     *
-     * @see com.github.abel533.echarts.style.TextStyle
-     */
-    public TextStyle textStyle;
-
-    /**
-     * 图标，image://开头
-     */
-    public String icon;
-
+public class DataView extends Feature {
+    public DataView() {
+        this.show = true;
+        this.title = "数据视图";
+        this.readOnly = false;
+        this.lang = new String[]{"Data View", "close", "refresh"};
+    }
 }

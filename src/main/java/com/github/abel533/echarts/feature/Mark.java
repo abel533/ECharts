@@ -24,58 +24,29 @@
 
 package com.github.abel533.echarts.feature;
 
+import com.github.abel533.echarts.code.LineType;
 import com.github.abel533.echarts.style.LineStyle;
-import com.github.abel533.echarts.style.TextStyle;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * Created by liuzh on 14-8-25.
+ * Description : Mark
+ *
+ * @author : liuzh
+ * @since : liuzh(2014-08-27 13:49)
  */
-public abstract class Feature {
-    /**
-     * 是否显示
-     */
-    public Boolean show;
-
-    /**
-     * 标题
-     */
-    public Object title;
-
-    /**
-     * 类型
-     *
-     * @see com.github.abel533.echarts.code.MagicType
-     * @see com.github.abel533.echarts.code.LineType
-     */
-    public Object type;
-
-    /**
-     * 只读
-     */
-    public Boolean readOnly;
-
-    /**
-     * lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
-     */
-    public Object lang;
-
-    /**
-     * 线条颜色
-     *
-     * @see com.github.abel533.echarts.style.LineStyle
-     */
-    public LineStyle lineStyle;
-
-    /**
-     * 文字颜色
-     *
-     * @see com.github.abel533.echarts.style.TextStyle
-     */
-    public TextStyle textStyle;
-
-    /**
-     * 图标，image://开头
-     */
-    public String icon;
-
+public class Mark extends Feature {
+    public Mark() {
+        this.show = true;
+        Map title = new HashMap<String, String>();
+        title.put("mark", "辅助线开关");
+        title.put("markUndo", "删除辅助线");
+        title.put("markClear", "清空辅助线");
+        this.title = title;
+        this.lineStyle = new LineStyle();
+        this.lineStyle.width = 2;
+        this.lineStyle.color = "#1e90ff";
+        this.lineStyle.type = LineType.dashed;
+    }
 }

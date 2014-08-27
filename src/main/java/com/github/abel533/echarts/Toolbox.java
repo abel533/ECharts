@@ -29,6 +29,7 @@ import com.github.abel533.echarts.code.XPosition;
 import com.github.abel533.echarts.code.YPosition;
 import com.github.abel533.echarts.feature.Feature;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -88,6 +89,27 @@ public class Toolbox extends Basic {
         this.effectiveColor = "red";
         this.itemSize = 16;
         this.showTitle = true;
-        //TODO feature
+        this.feature = new HashMap<String, Feature>();
+    }
+
+    /**
+     * 添加组件
+     *
+     * @param values
+     * @return
+     */
+    public Toolbox addFeature(Feature... values) {
+        if (this.feature == null) {
+            this.feature = new HashMap<String, Feature>();
+        }
+        for (Feature f : values) {
+            //第一个字母转小写
+            String name = f.getClass().getName();
+            name = name.substring(0, 1).toLowerCase() + name.substring(1);
+            if (!this.feature.containsKey(name)) {
+                this.feature.put(name, f);
+            }
+        }
+        return this;
     }
 }
