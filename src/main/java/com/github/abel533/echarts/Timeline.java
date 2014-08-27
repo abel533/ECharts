@@ -30,8 +30,6 @@ import com.github.abel533.echarts.style.CheckpointStyle;
 import com.github.abel533.echarts.style.ControlStyle;
 import com.github.abel533.echarts.style.LineStyle;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,7 +38,7 @@ import java.util.List;
  * @author liuzh
  * @since liuzh(2014-08-26 09:05)
  */
-public class Timeline implements Data<Timeline> {
+public class Timeline extends AbstractData<Timeline> {
     /**
      * 默认值true,显示策略，可选为：true（显示） | false（隐藏）
      */
@@ -186,16 +184,4 @@ public class Timeline implements Data<Timeline> {
      * 时间轴列表，同时也是轴label内容
      */
     public List<Object> data;
-
-    @Override
-    public Timeline addData(Object... values) {
-        if (values == null || values.length == 0) {
-            return this;
-        }
-        if (this.data == null) {
-            this.data = new ArrayList<Object>();
-        }
-        this.data.addAll(Arrays.asList(values));
-        return this;
-    }
 }

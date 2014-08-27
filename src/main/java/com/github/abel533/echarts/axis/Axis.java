@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts.axis;
 
-import com.github.abel533.echarts.Data;
+import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * Created by liuzh on 14-8-26.
  */
-public class Axis implements Data<Axis> {
+public class Axis extends AbstractData<Axis> {
 
     /**
      * 坐标轴类型，横轴默认为类目型'category'，纵轴默认为数值型'value'
@@ -125,6 +125,7 @@ public class Axis implements Data<Axis> {
      * @param values
      * @return
      */
+    @Override
     public Axis addData(Object... values) {
         if (values == null || values.length == 0) {
             return this;

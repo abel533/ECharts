@@ -24,13 +24,11 @@
 
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Data;
+import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -39,7 +37,7 @@ import java.util.List;
  * @author liuzh
  * @since liuzh(2014-08-26 09:26)
  */
-public abstract class Series implements Data<Series> {
+public abstract class Series extends AbstractData<Series> {
     /**
      * xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
      */
@@ -121,21 +119,4 @@ public abstract class Series implements Data<Series> {
      * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
      */
     public Boolean showAllSymbol;
-
-    /**
-     * 添加数据
-     *
-     * @param values
-     * @return
-     */
-    public Series addData(Object... values) {
-        if (values == null || values.length == 0) {
-            return this;
-        }
-        if (this.data == null) {
-            this.data = new ArrayList<Object>();
-        }
-        this.data.addAll(Arrays.asList(values));
-        return this;
-    }
 }

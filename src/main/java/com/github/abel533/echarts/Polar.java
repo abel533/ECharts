@@ -30,8 +30,6 @@ import com.github.abel533.echarts.axis.SplitLine;
 import com.github.abel533.echarts.code.PolarType;
 import com.github.abel533.echarts.style.TextStyle;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,7 +38,7 @@ import java.util.List;
  * @author liuzh
  *         Created by liuzh on 14-8-26.
  */
-public class Polar implements Data<Polar> {
+public class Polar extends AbstractData<Polar> {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
@@ -134,16 +132,4 @@ public class Polar implements Data<Polar> {
      * 雷达指标列表，同时也是label内容，例子见下
      */
     public List<Object> indicator;
-
-    @Override
-    public Polar addData(Object... values) {
-        if (values == null || values.length == 0) {
-            return this;
-        }
-        if (this.indicator == null) {
-            this.indicator = new ArrayList<Object>();
-        }
-        this.indicator.addAll(Arrays.asList(values));
-        return this;
-    }
 }

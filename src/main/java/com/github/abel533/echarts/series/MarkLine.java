@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
-import com.github.abel533.echarts.Data;
+import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -33,7 +33,7 @@ import com.github.abel533.echarts.style.ItemStyle;
  * @author liuzh
  * @since liuzh(2014-08-26 10:00)
  */
-public class MarkLine extends Data<MarkLine> {
+public class MarkLine extends AbstractData<MarkLine> {
     /**
      * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
      *
