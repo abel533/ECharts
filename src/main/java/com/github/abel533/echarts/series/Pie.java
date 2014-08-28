@@ -120,6 +120,10 @@ public class Pie extends Series {
         this.type = SeriesType.pie;
     }
 
+    public Pie(String name) {
+        super(name);
+    }
+
     public Object[] getCenter() {
         return center;
     }

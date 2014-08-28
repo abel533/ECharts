@@ -24,6 +24,8 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.SeriesType;
+
 /**
  * @author liuzh
  */
@@ -34,4 +36,12 @@ public class Island extends Series {
      * 滚轮可计算步长 0.1 = 10%
      */
     public Object calculateStep;
+
+    public Island() {
+        this.type = SeriesType.island;
+    }
+
+    public Island(String name) {
+        super(name);
+    }
 }

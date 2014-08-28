@@ -35,4 +35,14 @@ public class K extends Series {
     public K() {
         this.type = SeriesType.k;
     }
+
+    public K(String name) {
+        super(name);
+    }
+
+    public K addData(Double open, Double close, Double min, Double max) {
+        Double[] kData = new Double[]{open, close, min, max};
+        super.addData(kData);
+        return this;
+    }
 }

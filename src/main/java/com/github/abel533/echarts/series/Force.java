@@ -187,6 +187,10 @@ public class Force extends Series {
         this.type = SeriesType.force;
     }
 
+    public Force(String name) {
+        super(name);
+    }
+
     public List<Category> getCategories() {
         return categories;
     }

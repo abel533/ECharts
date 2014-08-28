@@ -114,4 +114,8 @@ public class Map extends Series {
     public Map() {
         this.type = SeriesType.map;
     }
+
+    public Map(String name) {
+        super(name);
+    }
 }

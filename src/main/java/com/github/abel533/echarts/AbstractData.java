@@ -39,7 +39,14 @@ public abstract class AbstractData<T> implements Data<T> {
      *
      * @see com.github.abel533.echarts.data.PointData
      */
-    public List<Object> data;
+    protected List<Object> data;
+
+    public List<Object> data(){
+        if (this.data == null) {
+            this.data = new ArrayList<Object>();
+        }
+        return this.data;
+    }
 
     /**
      * 添加元素
@@ -51,10 +58,7 @@ public abstract class AbstractData<T> implements Data<T> {
         if (values == null || values.length == 0) {
             return (T) this;
         }
-        if (this.data == null) {
-            this.data = new ArrayList<Object>();
-        }
-        this.data.addAll(Arrays.asList(values));
+        this.data().addAll(Arrays.asList(values));
         return (T) this;
     }
 }

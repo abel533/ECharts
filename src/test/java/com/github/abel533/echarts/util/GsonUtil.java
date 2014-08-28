@@ -43,7 +43,7 @@ public class GsonUtil {
      * @return
      */
     public static String format(Object object) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
         JsonParser jp = new JsonParser();
         JsonElement je = jp.parse(gson.toJson(object));
         String prettyJsonString = gson.toJson(je);

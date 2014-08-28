@@ -70,6 +70,17 @@ public class PointData {
         this.symbolSize = symbolSize;
     }
 
+    public PointData(Object value, Object symbol) {
+        this.value = value;
+        this.symbol = symbol;
+    }
+
+    public PointData(Object value, Object symbol, Object symbolSize) {
+        this.value = value;
+        this.symbol = symbol;
+        this.symbolSize = symbolSize;
+    }
+
     public PointData setName(String name) {
         this.name = name;
         return this;

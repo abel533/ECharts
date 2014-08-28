@@ -38,4 +38,8 @@ public class Line extends Series {
     public Line() {
         this.type = SeriesType.line;
     }
+
+    public Line(String name) {
+        super(name);
+    }
 }

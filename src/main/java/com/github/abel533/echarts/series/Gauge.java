@@ -249,6 +249,10 @@ public class Gauge extends Series {
         this.type = SeriesType.gauge;
     }
 
+    public Gauge(String name) {
+        super(name);
+    }
+
     public Object[] getCenter() {
         return center;
     }

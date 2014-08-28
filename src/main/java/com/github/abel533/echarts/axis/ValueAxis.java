@@ -50,7 +50,7 @@ public class ValueAxis extends Axis {
     /**
      * 小数精度，默认为0，无小数点
      */
-    public Integer percision;
+    public Integer precision;
 
     /**
      * 整数精度，默认为100，个位和百位为0

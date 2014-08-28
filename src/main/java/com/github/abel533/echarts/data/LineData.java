@@ -46,6 +46,14 @@ public class LineData extends PointData {
         super(name, symbol, symbolSize);
     }
 
+    public LineData(Object value, Object symbol) {
+        super(value, symbol);
+    }
+
+    public LineData(Object value, Object symbol, Object symbolSize) {
+        super(value, symbol, symbolSize);
+    }
+
     public LineData setValueIndex(Integer valueIndex) {
         this.valueIndex = valueIndex;
         return this;

@@ -161,6 +161,13 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      */
     public Boolean showAllSymbol;
 
+    protected Series() {
+    }
+
+    protected Series(String name) {
+        this.name = name;
+    }
+
     public Tooltip getTooltip() {
         return tooltip;
     }

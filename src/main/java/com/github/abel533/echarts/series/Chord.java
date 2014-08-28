@@ -71,4 +71,8 @@ public class Chord extends Series {
     public Chord() {
         this.type = SeriesType.chord;
     }
+
+    public Chord(String name) {
+        super(name);
+    }
 }
