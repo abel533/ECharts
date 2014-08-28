@@ -24,8 +24,6 @@
 
 package com.github.abel533.echarts.data;
 
-import com.github.abel533.echarts.code.MarkType;
-
 /**
  * LineData
  *
@@ -38,18 +36,18 @@ public class LineData extends PointData {
     public Integer valueIndex;
 
     public LineData() {
-        super();
     }
 
-    public LineData(Object value, Object symbol) {
-        super(value, symbol);
+    public LineData(String name, Object value) {
+        super(name, value);
     }
 
-    public LineData(Object value, Object symbol, Integer symbolSize) {
-        super(value, symbol, symbolSize);
+    public LineData(String name, Object symbol, Object symbolSize) {
+        super(name, symbol, symbolSize);
     }
 
-    public LineData(MarkType type, String name) {
-        super(type, name);
+    public LineData setValueIndex(Integer valueIndex) {
+        this.valueIndex = valueIndex;
+        return this;
     }
 }

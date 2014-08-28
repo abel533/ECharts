@@ -44,22 +44,12 @@ public class PieTest7 implements TestConfig {
     @Test
     public void test() {
         //地址：http://echarts.baidu.com/doc/example/pie7.html
-
         EnhancedOption option = new EnhancedOption();
-
-        //特殊的自定义时间点
-        LineData ld1 = new LineData();
-        ld1.name = "2013-06-01";
-        ld1.symbol = "emptyStart6";
-        ld1.symbolSize = 8;
-        LineData ld2 = new LineData();
-        ld2.name = "2013-12-01";
-        ld2.symbol = "star6";
-        ld2.symbolSize = 8;
 
         //时间轴
         option.timeline().addData("2013-01-01", "2013-02-01", "2013-03-01", "2013-04-01", "2013-05-01",
-                ld1, "2013-07-01", "2013-08-01", "2013-09-01", "2013-10-01", "2013-11-01", ld2);
+                new LineData("2013-06-01","emptyStart6",8), "2013-07-01", "2013-08-01", "2013-09-01", "2013-10-01",
+                "2013-11-01", new LineData("2013-12-01","star6",8));
         option.timeline().autoPlay = true;
 
         option.timeline().label().formatter = "function(s){return s.slice(0,7);}";

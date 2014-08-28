@@ -48,4 +48,19 @@ public class LegendData {
      * 图标
      */
     public String icon;
+
+    public LegendData(String name) {
+        this.name = name;
+    }
+
+    public LegendData(String name, TextStyle textStyle) {
+        this.name = name;
+        this.textStyle = textStyle;
+    }
+
+    public LegendData(String name, TextStyle textStyle, String icon) {
+        this.name = name;
+        this.textStyle = textStyle;
+        this.icon = icon;
+    }
 }

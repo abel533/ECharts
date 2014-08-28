@@ -59,19 +59,64 @@ public class PointData {
     public PointData() {
     }
 
-    public PointData(Object value, Object symbol) {
+    public PointData(String name, Object value) {
+        this.name = name;
         this.value = value;
-        this.symbol = symbol;
     }
 
-    public PointData(Object value, Object symbol, Object symbolSize) {
-        this.value = value;
+    public PointData(String name, Object symbol, Object symbolSize) {
+        this.name = name;
         this.symbol = symbol;
         this.symbolSize = symbolSize;
     }
 
-    public PointData(MarkType type, String name) {
-        this.type = type;
+    public PointData setName(String name) {
         this.name = name;
+        return this;
+    }
+
+    public PointData setValue(Object value) {
+        this.value = value;
+        return this;
+    }
+
+    public PointData setX(Integer x) {
+        this.x = x;
+        return this;
+    }
+
+    public PointData setY(Integer y) {
+        this.y = y;
+        return this;
+    }
+
+    public PointData setxAxis(Integer xAxis) {
+        this.xAxis = xAxis;
+        return this;
+    }
+
+    public PointData setyAxis(Integer yAxis) {
+        this.yAxis = yAxis;
+        return this;
+    }
+
+    public PointData setType(MarkType type) {
+        this.type = type;
+        return this;
+    }
+
+    public PointData setSymbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public PointData setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public PointData setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+        return this;
     }
 }
