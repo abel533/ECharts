@@ -30,7 +30,7 @@ import com.github.abel533.echarts.style.TextStyle;
 /**
  * @author liuzh
  */
-public abstract class Feature {
+public class Feature {
     public static final DataView dataView = new DataView();
     public static final DataZoom dataZoom = new DataZoom();
     public static final Mark mark = new Mark();
