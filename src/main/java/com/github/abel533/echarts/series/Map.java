@@ -55,7 +55,18 @@ public class Map extends Series {
     /**
      * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
      */
-    public Object mapLocation;
+    private MapLocation mapLocation;
+
+    /**
+     * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
+     */
+    public MapLocation mapLocation() {
+        if (this.mapLocation == null) {
+            this.mapLocation = new MapLocation();
+        }
+        return this.mapLocation;
+    }
+
 
     /**
      * 地图数值计算方式，默认为加和，可选为：'sum'（总数） | 'average'（均值）
