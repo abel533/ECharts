@@ -38,5 +38,6 @@ public enum SeriesType {
     force,//力导向布局图
     map,//地图
     funnel,//漏斗图
-    guage,//仪表盘
+    gauge,//仪表盘
+    island,//孤岛
 }

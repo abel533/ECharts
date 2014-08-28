@@ -46,8 +46,8 @@ public class Gauge extends Series {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
-    public Gauge center(Object width,Object height) {
-        this.center = new Object[]{width,height};
+    public Gauge center(Object width, Object height) {
+        this.center = new Object[]{width, height};
         return this;
     }
 
@@ -62,8 +62,8 @@ public class Gauge extends Series {
         return this;
     }
 
-    public Gauge radius(Object width,Object height) {
-        radius = new Object[]{width,height};
+    public Gauge radius(Object width, Object height) {
+        radius = new Object[]{width, height};
         return this;
     }
 
@@ -109,7 +109,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.series.Line
      */
-    public Line axisLine(){
+    public Line axisLine() {
         if (this.axisLine == null) {
             this.axisLine = new Line();
         }
@@ -128,7 +128,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.axis.AxisTick
      */
-    public AxisTick axisTick(){
+    public AxisTick axisTick() {
         if (this.axisTick == null) {
             this.axisTick = new AxisTick();
         }
@@ -147,7 +147,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.Label
      */
-    public Label axisLabel(){
+    public Label axisLabel() {
         if (this.axisLabel == null) {
             this.axisLabel = new Label();
         }
@@ -166,7 +166,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.axis.SplitLine
      */
-    public SplitLine splitLine(){
+    public SplitLine splitLine() {
         if (this.splitLine == null) {
             this.splitLine = new SplitLine();
         }
@@ -185,7 +185,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.series.gauge.Pointer
      */
-    public Pointer pointer(){
+    public Pointer pointer() {
         if (this.pointer == null) {
             this.pointer = new Pointer();
         }
@@ -204,7 +204,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.Title
      */
-    public Title title(){
+    public Title title() {
         if (this.title == null) {
             this.title = new Title();
         }
@@ -223,7 +223,7 @@ public class Gauge extends Series {
      *
      * @see com.github.abel533.echarts.series.gauge.Detail
      */
-    public Detail detail(){
+    public Detail detail() {
         if (this.detail == null) {
             this.detail = new Detail();
         }
@@ -231,7 +231,7 @@ public class Gauge extends Series {
     }
 
     public Gauge() {
-        this.type = SeriesType.guage;
+        this.type = SeriesType.gauge;
     }
 
     public Object[] getCenter() {
