@@ -74,7 +74,7 @@ public class OptionUtil {
             return exportToHtml(option, folderPath);
         }
 
-        String optionStr = GsonFormatter.format(option);
+        String optionStr = GsonUtil.format(option);
         File folder = new File(folderPath);
         if (folder.exists() && folder.isFile()) {
             String tempPath = folder.getParent();

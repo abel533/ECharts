@@ -24,6 +24,8 @@
 
 package com.github.abel533.echarts.util;
 
+import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.series.Series;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -32,7 +34,7 @@ import com.google.gson.JsonParser;
 /**
  * @author liuzh
  */
-public class GsonFormatter {
+public class GsonUtil {
 
     /**
      * 格式化对象为Json
@@ -49,6 +51,34 @@ public class GsonFormatter {
         prettyJsonString = prettyJsonString.replaceAll("\"function", "function");
         prettyJsonString = prettyJsonString.replaceAll("\\}\"", "\\}");
         return prettyJsonString;
+    }
+
+    /**
+     * 反序列化
+     *
+     * @param json
+     * @param type
+     * @param <T>
+     * @return
+     */
+    public static <T extends Option> T fromJSON(String json, Class<T> type) {
+        Gson gson = new GsonBuilder().
+                setPrettyPrinting().
+                registerTypeAdapter(Series.class, new SeriesDeserializer()).
+                create();
+        return gson.fromJson(json, type);
+    }
+
+    /**
+     * 反序列化
+     *
+     * @param json
+     * @return
+     */
+    public static Option fromJSON(String json) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Series.class, new SeriesDeserializer()).create();
+        Option option = gson.fromJson(json, Option.class);
+        return option;
     }
 
     /**

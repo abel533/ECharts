@@ -35,14 +35,14 @@ public class EnhancedOption extends Option {
 
     @Override
     public String toString() {
-        return GsonFormatter.format(this);
+        return GsonUtil.format(this);
     }
 
     /**
      * 输出到控制台
      */
     public void print() {
-        GsonFormatter.print(this);
+        GsonUtil.print(this);
     }
 
     /**
