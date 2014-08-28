@@ -22,24 +22,11 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.series;
-
-import com.github.abel533.echarts.util.GsonFormatter;
-import org.junit.Test;
+package com.github.abel533.echarts;
 
 /**
- * Description: LineTest
- *
  * @author liuzh
- * @since liuzh(2014-08-26 10:23)
  */
-public class LineTest {
-
-    @Test
-    public void printLine() {
-        Line line = new Line();
-        GsonFormatter.print(line);
-    }
-
-
+public interface TestConfig {
+    String EXPORT_PATH = "d:/echarts/sample";
 }
