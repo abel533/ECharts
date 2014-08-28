@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.series.Bar;
 import com.github.abel533.echarts.util.EnhancedOption;
 import com.github.abel533.echarts.util.GsonUtil;
 import org.junit.Test;
@@ -98,7 +99,14 @@ public class FromJsonTest {
                 "}";
 
         EnhancedOption option = GsonUtil.fromJSON(json, EnhancedOption.class);
-
+        //增加一些内容
+        option.addLegend("测试");
+        Bar bar = new Bar();
+        bar.name = "测试";
+        bar.stack = "总量";
+        bar.itemStyle().normal.label().show = true;
+        bar.addData(142, 123, 65, 441, 341, 467, 90);
+        option.addSeries(bar);
         option.view();
     }
 }
