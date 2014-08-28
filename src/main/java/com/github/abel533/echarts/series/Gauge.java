@@ -57,11 +57,26 @@ public class Gauge extends Series {
      */
     private Object radius;
 
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param value
+     * @return
+     */
     public Gauge radius(Object value) {
         this.radius = value;
         return this;
     }
 
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param width
+     * @param height
+     * @return
+     */
     public Gauge radius(Object width, Object height) {
         radius = new Object[]{width, height};
         return this;

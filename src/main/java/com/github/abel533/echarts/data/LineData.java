@@ -49,14 +49,6 @@ public class LineData extends PointData {
         super(value, symbol, symbolSize);
     }
 
-    public LineData(String name, Object value, Integer x, Integer y) {
-        super(name, value, x, y);
-    }
-
-    public LineData(Integer xAxis, Integer yAxis, String name, Object value) {
-        super(xAxis, yAxis, name, value);
-    }
-
     public LineData(MarkType type, String name) {
         super(type, name);
     }

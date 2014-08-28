@@ -293,6 +293,35 @@ public class Option {
         return this;
     }
 
+    /**
+     * 当使用timeline时，每一组数据要放到单独的option中
+     */
+    private List<Option> options;
+
+    /**
+     * 当使用timeline时，每一组数据要放到单独的option中
+     */
+    public List<Option> options() {
+        if (this.options == null) {
+            this.options = new ArrayList<Option>();
+        }
+        return this.options;
+    }
+
+    /**
+     * 添加Option数据
+     *
+     * @param values
+     * @return
+     */
+    public Option addOptions(Option... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.options().addAll(Arrays.asList(values));
+        return this;
+    }
+
     public Timeline getTimeline() {
         return timeline;
     }

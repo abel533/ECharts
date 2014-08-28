@@ -42,12 +42,50 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
-    public String[] center;
+    private Object[] center;
 
     /**
-     * 半径，支持绝对值（px）和百分比，百分比计算min(width, height) / 2 * 75%,
+     * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
+     *
+     * @param width
+     * @param height
+     * @return
      */
-    public Object radius;
+    public Polar center(Object width, Object height) {
+        this.center = new Object[]{width, height};
+        return this;
+    }
+
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     */
+    private Object radius;
+
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param value
+     * @return
+     */
+    public Polar radius(Object value) {
+        this.radius = value;
+        return this;
+    }
+
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param width
+     * @param height
+     * @return
+     */
+    public Polar radius(Object width, Object height) {
+        radius = new Object[]{width, height};
+        return this;
+    }
 
     /**
      * 开始角度, 有效输入范围：[-180,180]
@@ -78,7 +116,7 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 坐标轴名称
      */
-    public Name name(){
+    public Name name() {
         if (this.name == null) {
             this.name = new Name();
         }
@@ -93,10 +131,11 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 数值轴两端空白策略，数组内数值代表百分比，[原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
      */
-    public Polar boundaryGap(Object min,Object max) {
-        this.boundaryGap = new Object[]{min,max};
+    public Polar boundaryGap(Object min, Object max) {
+        this.boundaryGap = new Object[]{min, max};
         return this;
     }
+
     /**
      * 脱离0值比例，放大聚焦到最终_min，_max区间
      */
@@ -124,7 +163,7 @@ public class Polar extends AbstractData<Polar> implements Component {
      *
      * @see com.github.abel533.echarts.axis.AxisLine
      */
-    public AxisLine axisLine(){
+    public AxisLine axisLine() {
         if (this.axisLine == null) {
             this.axisLine = new AxisLine();
         }
@@ -143,7 +182,7 @@ public class Polar extends AbstractData<Polar> implements Component {
      *
      * @see com.github.abel533.echarts.Label
      */
-    public Label axisLabel(){
+    public Label axisLabel() {
         if (this.axisLabel == null) {
             this.axisLabel = new Label();
         }
@@ -162,7 +201,7 @@ public class Polar extends AbstractData<Polar> implements Component {
      *
      * @see com.github.abel533.echarts.axis.SplitArea
      */
-    public SplitArea splitArea(){
+    public SplitArea splitArea() {
         if (this.splitArea == null) {
             this.splitArea = new SplitArea();
         }
@@ -181,7 +220,7 @@ public class Polar extends AbstractData<Polar> implements Component {
      *
      * @see com.github.abel533.echarts.axis.SplitLine
      */
-    public SplitLine splitLine(){
+    public SplitLine splitLine() {
         if (this.splitLine == null) {
             this.splitLine = new SplitLine();
         }
@@ -201,7 +240,7 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 雷达指标列表，同时也是label内容
      */
-    public List<Object> indicator(){
+    public List<Object> indicator() {
         if (this.indicator == null) {
             this.indicator = new ArrayList<Object>();
         }
@@ -260,7 +299,24 @@ public class Polar extends AbstractData<Polar> implements Component {
         return indicator;
     }
 
+    public Object[] getCenter() {
+        return center;
+    }
+
+    public void setCenter(Object[] center) {
+        this.center = center;
+    }
+
+    public Object getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Object radius) {
+        this.radius = radius;
+    }
+
     public void setIndicator(List<Object> indicator) {
+
         this.indicator = indicator;
     }
 }

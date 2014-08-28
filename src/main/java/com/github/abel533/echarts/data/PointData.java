@@ -70,20 +70,6 @@ public class PointData {
         this.symbolSize = symbolSize;
     }
 
-    public PointData(String name, Object value, Integer x, Integer y) {
-        this.name = name;
-        this.value = value;
-        this.x = x;
-        this.y = y;
-    }
-
-    public PointData(Integer xAxis, Integer yAxis, String name, Object value) {
-        this.xAxis = xAxis;
-        this.yAxis = yAxis;
-        this.name = name;
-        this.value = value;
-    }
-
     public PointData(MarkType type, String name) {
         this.type = type;
         this.name = name;
