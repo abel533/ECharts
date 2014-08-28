@@ -67,16 +67,14 @@ public class OptionTest {
         line.name = "ios7";
         line.addData(112, 23, 45, 56, 233, 343, 454, 89, 343, 123, 45, 123);
         line.markLine().addData(new LineData(MarkType.average, "ios7"));
-        option.series.add(line);
+        option.addSeries(line);
 
         line = new Line();
         line.name = "android4";
         line.itemStyle().normal.label().show = true;
         line.addData(45, 123, 145, 526, 233, 343, 44, 829, 33, 123, 45, 13);
-        option.series.add(line);
+        option.addSeries(line);
 
-        //输出结构
-        option.print();
         option.view();
     }
 }

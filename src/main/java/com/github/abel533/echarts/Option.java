@@ -267,7 +267,7 @@ public class Option {
     /**
      * 驱动图表生成的数据内容（详见series），数组中每一项代表一个系列的特殊选项及数据
      */
-    public List<Series> series;
+    private List<Series> series;
 
     /**
      * 驱动图表生成的数据内容（详见series），数组中每一项代表一个系列的特殊选项及数据

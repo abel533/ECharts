@@ -69,7 +69,7 @@ public class LineTest implements TestConfig {
         //实现不了js的这个效果
         //line.itemStyle.normal.areaStyle = new AreaStyle();
         line.addData(120, 132, 301, 134, new LineData(90, Symbol.droplet, 5), 230, 210);
-        option.series.add(line);
+        option.addSeries(line);
 
         line = new Line();
         line.name = "联盟广告";
@@ -86,7 +86,7 @@ public class LineTest implements TestConfig {
         lineData.itemStyle.normal.label().textStyle().fontFamily = "微软雅黑";
         lineData.itemStyle.normal.label().textStyle().fontWeight = "bold";
         line.addData(120, 82, lineData, new LineData(134, Symbol.none), 190, new LineData(230, Symbol.emptypin, 8), 110);
-        option.series.add(line);
+        option.addSeries(line);
 
        /* line = new Line();
         line.name = "邮件营销";
