@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Symbol;
@@ -32,7 +31,7 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
 import com.github.abel533.echarts.style.ItemStyle;
-import com.github.abel533.echarts.util.ViewECharts;
+import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
 
 /**
@@ -43,7 +42,7 @@ public class LineTest {
     @Test
     public void test() {
         //例子：http://echarts.baidu.com/doc/example/line.html
-        Option option = new Option();
+        EnhancedOption option = new EnhancedOption();
         option.tooltip().trigger = Trigger.axis;
 
         option.addLegend("邮件营销", "联盟广告", "直接访问", "搜索引擎");
@@ -108,6 +107,6 @@ public class LineTest {
         line.addData(120, 132, 301, 134,new LineData(90,Symbol.droplet,5),230,210);
         option.series.add(line);*/
 
-        ViewECharts.view(option);
+        option.view();
     }
 }

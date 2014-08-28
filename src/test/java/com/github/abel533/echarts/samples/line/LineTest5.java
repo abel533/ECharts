@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Magic;
@@ -32,7 +31,7 @@ import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.feature.MagicType;
 import com.github.abel533.echarts.series.Line;
-import com.github.abel533.echarts.util.ViewECharts;
+import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
 
 /**
@@ -44,11 +43,11 @@ public class LineTest5 {
     public void test() {
         //地址:http://echarts.baidu.com/doc/example/line5.html
 
-        Option option = new Option();
+        EnhancedOption option = new EnhancedOption();
         option.addLegend("高度(km)与气温(°C)变化关系");
 
         option.toolbox().show = true;
-        option.toolbox().addFeature(Tool.mark, Tool.dataView, new MagicType(Magic.line,Magic.bar), Tool.restore, Tool.saveAsImage);
+        option.toolbox().addFeature(Tool.mark, Tool.dataView, new MagicType(Magic.line, Magic.bar), Tool.restore, Tool.saveAsImage);
 
         option.calculable = true;
         option.tooltip().trigger = Trigger.axis;
@@ -72,6 +71,6 @@ public class LineTest5 {
         line.addData(15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5);
         option.addSeries(line);
 
-        ViewECharts.view(option);
+        option.view();
     }
 }

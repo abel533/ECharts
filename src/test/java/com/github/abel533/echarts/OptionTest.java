@@ -31,9 +31,7 @@ import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.series.Line;
-import com.github.abel533.echarts.series.MarkLine;
-import com.github.abel533.echarts.util.GsonFormatter;
-import com.github.abel533.echarts.util.ViewECharts;
+import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
 
 /**
@@ -46,7 +44,7 @@ public class OptionTest {
 
     @Test
     public void basicOption() {
-        Option option = new Option();
+        EnhancedOption option = new EnhancedOption();
         option.legend().padding = 5;
         option.legend().itemGap = 10;
         option.addLegend("ios7", "android4");
@@ -68,9 +66,7 @@ public class OptionTest {
         Line line = new Line();
         line.name = "ios7";
         line.addData(112, 23, 45, 56, 233, 343, 454, 89, 343, 123, 45, 123);
-        MarkLine markLine = new MarkLine();
-        markLine.addData(new LineData(MarkType.average, "ios7"));
-//        line.markLine = markLine;
+        line.markLine().addData(new LineData(MarkType.average, "ios7"));
         option.series.add(line);
 
         line = new Line();
@@ -80,7 +76,7 @@ public class OptionTest {
         option.series.add(line);
 
         //输出结构
-        GsonFormatter.print(option);
-        ViewECharts.view(option);
+        option.print();
+        option.view();
     }
 }
