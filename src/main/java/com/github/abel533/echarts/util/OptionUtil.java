@@ -36,14 +36,44 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class ViewECharts {
+public class OptionUtil {
 
-    public static void view(Option option) {
+    /**
+     * 导出到html（tmp文件夹）
+     *
+     * @param option
+     * @return 返回html路径
+     */
+    public static String exportToHtml(Option option) {
         String folderPath = System.getProperty("java.io.tmpdir");
-        view(option, folderPath);
+        return exportToHtml(option, folderPath);
     }
 
-    public static void view(Option option, String folderPath) {
+    /**
+     * 导出到指定文件夹，文件名随机
+     *
+     * @param option
+     * @param folderPath
+     * @return 返回html路径
+     */
+    public static String exportToHtml(Option option, String folderPath) {
+        String fileName = "ECharts-" + System.currentTimeMillis() + ".html";
+        return exportToHtml(option, folderPath, fileName);
+    }
+
+    /**
+     * 导出到指定文件
+     *
+     * @param option
+     * @param folderPath
+     * @param fileName
+     * @return 返回html路径
+     */
+    public static String exportToHtml(Option option, String folderPath, String fileName) {
+        if (fileName == null || fileName.length() == 0) {
+            return exportToHtml(option, folderPath);
+        }
+
         String optionStr = GsonFormatter.format(option);
         File folder = new File(folderPath);
         if (folder.exists() && folder.isFile()) {
@@ -60,9 +90,9 @@ public class ViewECharts {
         List<String> lines = new ArrayList<String>();
         String line;
         //写入文件
-        File html = new File(folder.getPath() + "/" + "ECharts-" + System.currentTimeMillis() + ".html");
+        File html = new File(folder.getPath() + "/" + fileName);
         try {
-            is = ViewECharts.class.getResourceAsStream("/template");
+            is = OptionUtil.class.getResourceAsStream("/template");
             iReader = new InputStreamReader(is);
             bufferedReader = new BufferedReader(iReader);
             while ((line = bufferedReader.readLine()) != null) {
@@ -83,20 +113,35 @@ public class ViewECharts {
                 try {
                     is.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    //ignore
                 }
             }
             if (writer != null) {
                 try {
                     writer.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    //ignore
                 }
             }
         }
         //处理
         try {
-            browse(html.getAbsolutePath());
+            return html.getAbsolutePath();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * 在浏览器中查看Option效果
+     *
+     * @param option
+     */
+    public static void browse(Option option) {
+        String htmlPath = exportToHtml(option);
+        //处理
+        try {
+            browse(htmlPath);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -108,7 +153,7 @@ public class ViewECharts {
      * @param url
      * @throws Exception
      */
-    private static void browse(String url) throws Exception {
+    public static void browse(String url) throws Exception {
         //获取操作系统的名字
         String osName = System.getProperty("os.name", "");
         if (osName.startsWith("Mac OS")) {

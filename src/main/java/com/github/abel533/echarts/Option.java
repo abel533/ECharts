@@ -71,7 +71,7 @@ public class Option {
     /**
      * 时间轴（详见timeline），每个图表最多仅有一个时间轴控件
      */
-    public Timeline timeline(){
+    public Timeline timeline() {
         if (this.timeline == null) {
             this.timeline = new Timeline();
         }
@@ -86,7 +86,7 @@ public class Option {
     /**
      * 标题（详见title），每个图表最多仅有一个标题控件
      */
-    public Title title(){
+    public Title title() {
         if (this.title == null) {
             this.title = new Title();
         }
@@ -101,7 +101,7 @@ public class Option {
     /**
      * 工具箱（详见toolbox），每个图表最多仅有一个工具箱
      */
-    public Toolbox toolbox(){
+    public Toolbox toolbox() {
         if (this.toolbox == null) {
             this.toolbox = new Toolbox();
         }
@@ -116,7 +116,7 @@ public class Option {
     /**
      * 提示框（详见tooltip），鼠标悬浮交互时的信息提示
      */
-    public Tooltip tooltip(){
+    public Tooltip tooltip() {
         if (this.tooltip == null) {
             this.tooltip = new Tooltip();
         }
@@ -131,7 +131,7 @@ public class Option {
     /**
      * 图例（详见legend），每个图表最多仅有一个图例，混搭图表共享
      */
-    public Legend legend(){
+    public Legend legend() {
         if (this.legend == null) {
             this.legend = new Legend();
         }
@@ -144,7 +144,7 @@ public class Option {
      * @param values
      * @return
      */
-    public Legend addLegend(Object... values){
+    public Legend addLegend(Object... values) {
         this.legend().addData(values);
         return this.legend();
     }
@@ -157,7 +157,7 @@ public class Option {
     /**
      * 值域选择（详见dataRange）,值域范围
      */
-    public DataRange dataRange(){
+    public DataRange dataRange() {
         if (this.dataRange == null) {
             this.dataRange = new DataRange();
         }
@@ -172,7 +172,7 @@ public class Option {
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
-    public DataZoom dataZoom(){
+    public DataZoom dataZoom() {
         if (this.dataZoom == null) {
             this.dataZoom = new DataZoom();
         }
@@ -187,7 +187,7 @@ public class Option {
     /**
      * 直角坐标系内绘图网格（详见grid）
      */
-    public Grid grid(){
+    public Grid grid() {
         if (this.grid == null) {
             this.grid = new Grid();
         }
@@ -211,6 +211,7 @@ public class Option {
 
     /**
      * 添加x轴
+     *
      * @param values
      * @return
      */
@@ -245,6 +246,7 @@ public class Option {
 
     /**
      * 添加y轴
+     *
      * @param values
      * @return
      */
@@ -279,6 +281,7 @@ public class Option {
 
     /**
      * 添加数据
+     *
      * @param values
      * @return
      */
@@ -288,11 +291,6 @@ public class Option {
         }
         this.series().addAll(Arrays.asList(values));
         return this;
-    }
-
-    public Option() {
-        //数据必须有
-        this.series = new ArrayList<Series>();
     }
 
     public Timeline getTimeline() {

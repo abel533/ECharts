@@ -24,42 +24,63 @@
 
 package com.github.abel533.echarts.util;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
+import com.github.abel533.echarts.Option;
 
 /**
+ * 增强的Option - 主要用于测试、演示
+ *
  * @author liuzh
  */
-public class GsonFormatter {
+public class EnhancedOption extends Option {
 
-    /**
-     * 格式化对象为Json
-     *
-     * @param object
-     * @return
-     */
-    public static String format(Object object) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonParser jp = new JsonParser();
-        JsonElement je = jp.parse(gson.toJson(object));
-        String prettyJsonString = gson.toJson(je);
-        //简单处理function
-        prettyJsonString = prettyJsonString.replaceAll("\"function", "function");
-        prettyJsonString = prettyJsonString.replaceAll("\\}\"", "\\}");
-        return prettyJsonString;
+    @Override
+    public String toString() {
+        return GsonFormatter.format(this);
     }
 
     /**
-     * 输出Json
-     *
-     * @param object
-     * @return
+     * 输出到控制台
      */
-    public static void print(Object object) {
-        System.out.println(format(object));
+    public void print() {
+        GsonFormatter.print(this);
     }
 
+    /**
+     * 在浏览器中查看
+     */
+    public void view() {
+        OptionUtil.browse(this);
+    }
 
+    /**
+     * 导出到html（tmp文件夹）
+     *
+     * @return 返回html路径
+     */
+    public String exportToHtml() {
+        String folderPath = System.getProperty("java.io.tmpdir");
+        return OptionUtil.exportToHtml(this, folderPath);
+    }
+
+    /**
+     * 导出到指定文件夹，文件名随机
+     *
+     * @param folderPath
+     * @return 返回html路径
+     */
+    public String exportToHtml(String folderPath) {
+        String fileName = "ECharts-" + System.currentTimeMillis() + ".html";
+        return OptionUtil.exportToHtml(this, folderPath, fileName);
+    }
+
+    /**
+     * 导出到指定文件
+     *
+     * @param folderPath
+     * @param fileName
+     * @return 返回html路径
+     */
+    public String exportToHtml(String folderPath, String fileName) {
+        return OptionUtil.exportToHtml(this, folderPath, fileName);
+    }
 }
