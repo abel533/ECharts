@@ -42,7 +42,7 @@ public class K extends Series {
     }
 
     public K addData(Double open, Double close, Double min, Double max) {
-        Double[] kData = new Double[]{open, close, min, max};
+        Object[] kData = new Object[]{open, close, min, max};
         super.addData(kData);
         return this;
     }
