@@ -122,6 +122,7 @@ public class Pie extends Series {
 
     public Pie(String name) {
         super(name);
+        this.type = SeriesType.pie;
     }
 
     public Object[] getCenter() {

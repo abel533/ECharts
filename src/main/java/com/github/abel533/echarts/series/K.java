@@ -38,6 +38,7 @@ public class K extends Series {
 
     public K(String name) {
         super(name);
+        this.type = SeriesType.k;
     }
 
     public K addData(Double open, Double close, Double min, Double max) {

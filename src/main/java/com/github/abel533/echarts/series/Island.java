@@ -43,5 +43,6 @@ public class Island extends Series {
 
     public Island(String name) {
         super(name);
+        this.type = SeriesType.island;
     }
 }

@@ -41,5 +41,6 @@ public class Line extends Series {
 
     public Line(String name) {
         super(name);
+        this.type = SeriesType.line;
     }
 }

@@ -47,7 +47,7 @@ public class Force extends Series {
     /**
      * 力导向图中节点的分类
      */
-    public List<Category> categories(){
+    public List<Category> categories() {
         if (this.categories == null) {
             this.categories = new ArrayList<Category>();
         }
@@ -56,6 +56,7 @@ public class Force extends Series {
 
     /**
      * 添加节点分类
+     *
      * @param values
      * @return
      */
@@ -75,7 +76,7 @@ public class Force extends Series {
     /**
      * 力导向图的顶点数据
      */
-    public List<Node> nodes(){
+    public List<Node> nodes() {
         if (this.nodes == null) {
             this.nodes = new ArrayList<Node>();
         }
@@ -84,6 +85,7 @@ public class Force extends Series {
 
     /**
      * 添加力导向图的顶点数据
+     *
      * @param values
      * @return
      */
@@ -103,7 +105,7 @@ public class Force extends Series {
     /**
      * 力导向图的边数据
      */
-    public List<Link> links(){
+    public List<Link> links() {
         if (this.links == null) {
             this.links = new ArrayList<Link>();
         }
@@ -112,6 +114,7 @@ public class Force extends Series {
 
     /**
      * 添加力导向图的边数据
+     *
      * @param values
      * @return
      */
@@ -189,6 +192,7 @@ public class Force extends Series {
 
     public Force(String name) {
         super(name);
+        this.type = SeriesType.force;
     }
 
     public List<Category> getCategories() {

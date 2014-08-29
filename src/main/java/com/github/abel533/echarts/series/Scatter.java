@@ -48,5 +48,6 @@ public class Scatter extends Series {
 
     public Scatter(String name) {
         super(name);
+        this.type = SeriesType.scatter;
     }
 }

@@ -43,5 +43,6 @@ public class Radar extends Series {
 
     public Radar(String name) {
         super(name);
+        this.type = SeriesType.radar;
     }
 }

@@ -101,5 +101,6 @@ public class Funnel extends Series {
 
     public Funnel(String name) {
         super(name);
+        this.type = SeriesType.funnel;
     }
 }

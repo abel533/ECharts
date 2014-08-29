@@ -53,5 +53,6 @@ public class Bar extends Series {
 
     public Bar(String name) {
         super(name);
+        this.type = SeriesType.bar;
     }
 }
