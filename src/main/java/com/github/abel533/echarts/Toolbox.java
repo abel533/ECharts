@@ -40,7 +40,7 @@ public class Toolbox extends Basic<Toolbox> implements Component {
     /**
      * 启用功能，目前支持feature见下，工具箱自定义功能回调处理
      */
-    public Map<String, Feature> feature;
+    private Map<String, Feature> feature;
     /**
      * 默认false，显示策略，可选为：true（显示） | false（隐藏）
      */
