@@ -137,7 +137,7 @@ public class OptionUtil {
      *
      * @param option
      */
-    public static void browse(Option option) {
+    public static String browse(Option option) {
         String htmlPath = exportToHtml(option);
         //处理
         try {
@@ -145,6 +145,7 @@ public class OptionUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return htmlPath;
     }
 
     /**

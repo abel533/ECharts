@@ -45,32 +45,19 @@ public class OptionTest {
     @Test
     public void basicOption() {
         EnhancedOption option = new EnhancedOption();
-        option.legend().padding(5).itemGap(10);
-        option.addLegend("ios7", "android4");
-
-        option.toolbox().show(true).addFeature(Tool.dataView, Tool.saveAsImage, Tool.dataZoom, Tool.magicType);
-
+        option.legend().padding(5).itemGap(10).data("ios7", "android4");
+        option.toolbox().show(true).feature(Tool.dataView, Tool.saveAsImage, Tool.dataZoom, Tool.magicType);
         option.tooltip().trigger(Trigger.item);
-
-        CategoryAxis categoryAxis = new CategoryAxis();
-        categoryAxis.addData("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
-        option.addXAxis(categoryAxis);
-
-        ValueAxis valueAxis = new ValueAxis();
-        valueAxis.boundaryGap(new Double[]{0.1, 0.1});
-        valueAxis.splitNumber(10);
-        option.addYAxis(valueAxis);
+        option.xAxis(new CategoryAxis().data("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"));
+        option.yAxis(new ValueAxis().boundaryGap(new Double[]{0.1, 0.1}).splitNumber(10));
 
         Line line = new Line();
-        line.name("ios7");
-        line.addData(112, 23, 45, 56, 233, 343, 454, 89, 343, 123, 45, 123);
-        line.markLine().addData(new LineData().type(MarkType.average).name("ios7"));
-        option.addSeries(line);
+        line.name("ios7").data(112, 23, 45, 56, 233, 343, 454, 89, 343, 123, 45, 123).markLine().data(new LineData().type(MarkType.average).name("ios7"));
+        option.series(line);
 
         line = new Line();
-        line.name("android4").itemStyle().normal().label().show(true);
-        line.addData(45, 123, 145, 526, 233, 343, 44, 829, 33, 123, 45, 13);
-        option.addSeries(line);
+        line.name("android4").data(45, 123, 145, 526, 233, 343, 44, 829, 33, 123, 45, 13).itemStyle().normal().label().show(true);
+        option.series(line);
 
         option.view();
     }

@@ -50,8 +50,8 @@ public class KTest1 implements TestConfig {
                 "            res += '<br/>  收盘 : ' + params[0][2][1] + '  最低 : ' + params[0][2][2];" +
                 "            return res;" +
                 "        }");
-        option.legend().addData("上证指数");
-        option.toolbox().show(true).addFeature(Tool.mark, Tool.dataZoom, Tool.dataView, new MagicType(Magic.line, Magic.bar),
+        option.legend().data("上证指数");
+        option.toolbox().show(true).feature(Tool.mark, Tool.dataZoom, Tool.dataView, new MagicType(Magic.line, Magic.bar),
                 Tool.restore, Tool.saveAsImage);
         option.dataZoom().show(true).realtime(true).start(50).end(100);
 
@@ -59,7 +59,7 @@ public class KTest1 implements TestConfig {
         categoryAxis.boundaryGap(true);
         categoryAxis.axisTick().onGap(false);
         categoryAxis.splitLine().show(false);
-        categoryAxis.addData("2013/1/24", "2013/1/25", "2013/1/28", "2013/1/29", "2013/1/30",
+        categoryAxis.data("2013/1/24", "2013/1/25", "2013/1/28", "2013/1/29", "2013/1/30",
                 "2013/1/31", "2013/2/1", "2013/2/4", "2013/2/5", "2013/2/6",
                 "2013/2/7", "2013/2/8", "2013/2/18", "2013/2/19", "2013/2/20",
                 "2013/2/21", "2013/2/22", "2013/2/25", "2013/2/26", "2013/2/27",
@@ -77,12 +77,12 @@ public class KTest1 implements TestConfig {
                 "2013/5/23", "2013/5/24", "2013/5/27", "2013/5/28", "2013/5/29",
                 "2013/5/30", "2013/5/31", "2013/6/3", "2013/6/4", "2013/6/5",
                 "2013/6/6", "2013/6/7", "2013/6/13");
-        option.addXAxis(categoryAxis);
+        option.xAxis(categoryAxis);
 
-        option.addYAxis(new ValueAxis().scale(true).precision(2).splitNumber(9).boundaryGap(new Object[]{0.01, 0.01}));
+        option.yAxis(new ValueAxis().scale(true).precision(2).splitNumber(9).boundaryGap(new Object[]{0.01, 0.01}));
 
         K k = new K("上证指数");
-        k.addData(new Object[]{2320.26, 2302.6, 2287.3, 2362.94},
+        k.data(new Object[]{2320.26, 2302.6, 2287.3, 2362.94},
                 new Object[]{2300, 2291.3, 2288.26, 2308.38},
                 new Object[]{2295.35, 2346.5, 2295.35, 2346.92},
                 new Object[]{2347.22, 2358.98, 2337.35, 2363.8},
@@ -171,7 +171,8 @@ public class KTest1 implements TestConfig {
                 new Object[]{2242.26, 2210.9, 2205.07, 2250.63},
                 new Object[]{2190.1, 2148.35, 2126.22, 2190.1});
 
-        option.addSeries(k);
+        option.series(k);
+        option.exportToHtml(EXPORT_PATH, "k.html");
         option.view();
     }
 }

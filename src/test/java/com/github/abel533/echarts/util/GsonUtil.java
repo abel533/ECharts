@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.util;
 
 import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.series.Series;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -62,10 +63,9 @@ public class GsonUtil {
      * @return
      */
     public static <T extends Option> T fromJSON(String json, Class<T> type) {
-        Gson gson = new GsonBuilder().
-                setPrettyPrinting().
+        Gson gson = new GsonBuilder().setPrettyPrinting().
                 registerTypeAdapter(Series.class, new SeriesDeserializer()).
-                create();
+                registerTypeAdapter(Axis.class, new AxisDeserializer()).create();
         return gson.fromJson(json, type);
     }
 
@@ -76,7 +76,9 @@ public class GsonUtil {
      * @return
      */
     public static Option fromJSON(String json) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Series.class, new SeriesDeserializer()).create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().
+                registerTypeAdapter(Series.class, new SeriesDeserializer()).
+                registerTypeAdapter(Axis.class, new AxisDeserializer()).create();
         Option option = gson.fromJson(json, Option.class);
         return option;
     }

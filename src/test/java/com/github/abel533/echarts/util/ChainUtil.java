@@ -36,12 +36,13 @@ import java.util.List;
 public class ChainUtil {
     public static void main(String[] args) {
         //输出全部类
-        String srcPath = getSrcPath();
-        File srcFoler = new File(srcPath);
-        List<File> all = allFiles(srcFoler);
-        for (File file : all) {
-            chainFile(file);
-        }
+//        String srcPath = getSrcPath();
+//        File srcFoler = new File(srcPath);
+//        List<File> all = allFiles(srcFoler);
+//        for (File file : all) {
+//            chainFile(file);
+//        }
+//        chainFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\Tooltip.java"));
     }
 
     public static void chainFile(File file) {
@@ -73,7 +74,7 @@ public class ChainUtil {
                     sb.append(line).append("\n");
                 }
             }
-            System.out.println(sb.toString());
+            //System.out.println(sb.toString());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

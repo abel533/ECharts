@@ -100,10 +100,10 @@ public class FromJsonTest {
 
         EnhancedOption option = GsonUtil.fromJSON(json, EnhancedOption.class);
         //增加一些内容
-        option.addLegend("测试");
+        option.legend("测试");
         Bar bar = new Bar();
-        bar.name("测试").stack("总量").addData(142, 123, 65, 441, 341, 467, 90).itemStyle().normal().label().show(true);
-        option.addSeries(bar);
+        bar.name("测试").stack("总量").data(142, 123, 65, 441, 341, 467, 90).itemStyle().normal().label().show(true);
+        option.series(bar);
         option.view();
     }
 }

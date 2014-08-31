@@ -32,6 +32,7 @@ import com.github.abel533.echarts.Option;
  * @author liuzh
  */
 public class EnhancedOption extends Option {
+    private String filepath;
 
     @Override
     public String toString() {
@@ -49,7 +50,15 @@ public class EnhancedOption extends Option {
      * 在浏览器中查看
      */
     public void view() {
-        OptionUtil.browse(this);
+        if (this.filepath != null) {
+            try {
+                OptionUtil.browse(this.filepath);
+            } catch (Exception e) {
+                this.filepath = OptionUtil.browse(this);
+            }
+        } else {
+            this.filepath = OptionUtil.browse(this);
+        }
     }
 
     /**
@@ -59,7 +68,8 @@ public class EnhancedOption extends Option {
      */
     public String exportToHtml() {
         String folderPath = System.getProperty("java.io.tmpdir");
-        return OptionUtil.exportToHtml(this, folderPath);
+        this.filepath = OptionUtil.exportToHtml(this, folderPath);
+        return this.filepath;
     }
 
     /**
@@ -70,7 +80,8 @@ public class EnhancedOption extends Option {
      */
     public String exportToHtml(String folderPath) {
         String fileName = "ECharts-" + System.currentTimeMillis() + ".html";
-        return OptionUtil.exportToHtml(this, folderPath, fileName);
+        this.filepath = OptionUtil.exportToHtml(this, folderPath, fileName);
+        return this.filepath;
     }
 
     /**
@@ -81,6 +92,7 @@ public class EnhancedOption extends Option {
      * @return 返回html路径
      */
     public String exportToHtml(String folderPath, String fileName) {
-        return OptionUtil.exportToHtml(this, folderPath, fileName);
+        this.filepath = OptionUtil.exportToHtml(this, folderPath, fileName);
+        return this.filepath;
     }
 }
