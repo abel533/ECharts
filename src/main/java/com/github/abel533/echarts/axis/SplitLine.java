@@ -35,31 +35,11 @@ public class SplitLine {
     /**
      * 默认显示，属性show控制显示与否
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public SplitLine show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 小标记是否显示为间隔，默认等于boundaryGap
      */
-	private Boolean onGap;
-
-	public Boolean onGap(){
-		return this.onGap;
-	}
-
-	public SplitLine onGap(Boolean onGap){
-		this.onGap = onGap;
-		return this;
-	}
-
+    private Boolean onGap;
     /**
      * 属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -67,12 +47,35 @@ public class SplitLine {
      */
     private LineStyle lineStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public SplitLine show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Boolean onGap() {
+        return this.onGap;
+    }
+
+    public SplitLine onGap(Boolean onGap) {
+        this.onGap = onGap;
+        return this;
+    }
+
+    public SplitLine lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
     /**
      * 属性lineStyle（详见lineStyle）控制线条样式
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }
@@ -85,5 +88,21 @@ public class SplitLine {
 
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Boolean getOnGap() {
+        return onGap;
+    }
+
+    public void setOnGap(Boolean onGap) {
+        this.onGap = onGap;
     }
 }

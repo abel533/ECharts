@@ -29,20 +29,11 @@ package com.github.abel533.echarts.data;
  *
  * @author liuzh
  */
-public class LineData extends PointData {
+public class LineData extends BasicData<LineData> {
     /**
      * 可以通过valueIndex:0指定为横轴特殊点
      */
-	private Integer valueIndex;
-
-	public Integer valueIndex(){
-		return this.valueIndex;
-	}
-
-	public LineData valueIndex(Integer valueIndex){
-		this.valueIndex = valueIndex;
-		return this;
-	}
+    private Integer valueIndex;
 
     public LineData() {
     }
@@ -61,6 +52,19 @@ public class LineData extends PointData {
 
     public LineData(Object value, Object symbol, Object symbolSize) {
         super(value, symbol, symbolSize);
+    }
+
+    public Integer valueIndex() {
+        return this.valueIndex;
+    }
+
+    public LineData valueIndex(Integer valueIndex) {
+        this.valueIndex = valueIndex;
+        return this;
+    }
+
+    public Integer getValueIndex() {
+        return valueIndex;
     }
 
     public LineData setValueIndex(Integer valueIndex) {

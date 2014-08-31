@@ -31,7 +31,7 @@ public class SaveAsImage extends Feature {
     public SaveAsImage() {
         this.show(true);
         this.title("保存为图片");
-        type("png");
+        this.type("png");
         this.lang(new String[]{"点击保存"});
     }
 }

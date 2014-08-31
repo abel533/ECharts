@@ -40,30 +40,52 @@ public class AxisPointer {
      *
      * @see com.github.abel533.echarts.code.PointerType
      */
-	private PointerType type;
-
-	public PointerType type(){
-		return this.type;
-	}
-
-	public AxisPointer type(PointerType type){
-		this.type = type;
-		return this;
-	}
-
+    private PointerType type;
     /**
      * 设置直线指示器
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
     private LineStyle lineStyle;
+    /**
+     * 设置十字准星指示器
+     */
+    private CrossStyle crossStyle;
+    /**
+     * 设置阴影指示器
+     */
+    private ShadowStyle shadowStyle;
+
+    public AxisPointer lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
+    public AxisPointer crossStyle(CrossStyle crossStyle) {
+        this.crossStyle = crossStyle;
+        return this;
+    }
+
+    public AxisPointer shadowStyle(ShadowStyle shadowStyle) {
+        this.shadowStyle = shadowStyle;
+        return this;
+    }
+
+    public PointerType type() {
+        return this.type;
+    }
+
+    public AxisPointer type(PointerType type) {
+        this.type = type;
+        return this;
+    }
 
     /**
      * 设置直线指示器
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }
@@ -73,12 +95,7 @@ public class AxisPointer {
     /**
      * 设置十字准星指示器
      */
-    private CrossStyle crossStyle;
-
-    /**
-     * 设置十字准星指示器
-     */
-    public CrossStyle crossStyle(){
+    public CrossStyle crossStyle() {
         if (this.crossStyle == null) {
             this.crossStyle = new CrossStyle();
         }
@@ -88,12 +105,7 @@ public class AxisPointer {
     /**
      * 设置阴影指示器
      */
-    private ShadowStyle shadowStyle;
-
-    /**
-     * 设置阴影指示器
-     */
-    public ShadowStyle shadowStyle(){
+    public ShadowStyle shadowStyle() {
         if (this.shadowStyle == null) {
             this.shadowStyle = new ShadowStyle();
         }
@@ -122,5 +134,13 @@ public class AxisPointer {
 
     public void setShadowStyle(ShadowStyle shadowStyle) {
         this.shadowStyle = shadowStyle;
+    }
+
+    public PointerType getType() {
+        return type;
+    }
+
+    public void setType(PointerType type) {
+        this.type = type;
     }
 }

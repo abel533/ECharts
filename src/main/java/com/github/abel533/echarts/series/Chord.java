@@ -36,100 +36,31 @@ public class Chord extends Series<Chord> {
     /**
      * 每个sector之间的间距(用角度表示)
      */
-	private Integer padding;
-
-	public Integer padding(){
-		return this.padding;
-	}
-
-	public Chord padding(Integer padding){
-		this.padding = padding;
-		return this;
-	}
-
+    private Integer padding;
     /**
      * 数据排序， 可以取none, ascending, descending
      */
-	private Sort sort;
-
-	public Sort sort(){
-		return this.sort;
-	}
-
-	public Chord sort(Sort sort){
-		this.sort = sort;
-		return this;
-	}
-
+    private Sort sort;
     /**
      * 数据排序（弦）， 可以取none, ascending, descending
      */
-	private Sort sortSub;
-
-	public Sort sortSub(){
-		return this.sortSub;
-	}
-
-	public Chord sortSub(Sort sortSub){
-		this.sortSub = sortSub;
-		return this;
-	}
-
+    private Sort sortSub;
     /**
      * 是否显示刻度
      */
-	private Boolean showScale;
-
-	public Boolean showScale(){
-		return this.showScale;
-	}
-
-	public Chord showScale(Boolean showScale){
-		this.showScale = showScale;
-		return this;
-	}
-
+    private Boolean showScale;
     /**
      * 是否显示刻度文字
      */
-	private Boolean showScaleText;
-
-	public Boolean showScaleText(){
-		return this.showScaleText;
-	}
-
-	public Chord showScaleText(Boolean showScaleText){
-		this.showScaleText = showScaleText;
-		return this;
-	}
-
+    private Boolean showScaleText;
     /**
      * 显示是否顺时针
      */
-	private Boolean clockWise;
-
-	public Boolean clockWise(){
-		return this.clockWise;
-	}
-
-	public Chord clockWise(Boolean clockWise){
-		this.clockWise = clockWise;
-		return this;
-	}
-
+    private Boolean clockWise;
     /**
      * 关系数据，用二维数组表示，项 [i][j] 的数值表示 i 到 j 的关系数据
      */
-	private Object[][] matrix;
-
-	public Object[][] matrix(){
-		return this.matrix;
-	}
-
-	public Chord matrix(Object[][] matrix){
-		this.matrix = matrix;
-		return this;
-	}
+    private Object[][] matrix;
 
     public Chord() {
         this.type(SeriesType.chord);
@@ -138,5 +69,124 @@ public class Chord extends Series<Chord> {
     public Chord(String name) {
         super(name);
         this.type(SeriesType.chord);
+    }
+
+    public Integer padding() {
+        return this.padding;
+    }
+
+    public Chord padding(Integer padding) {
+        this.padding = padding;
+        return this;
+    }
+
+    public Sort sort() {
+        return this.sort;
+    }
+
+    public Chord sort(Sort sort) {
+        this.sort = sort;
+        return this;
+    }
+
+    public Sort sortSub() {
+        return this.sortSub;
+    }
+
+    public Chord sortSub(Sort sortSub) {
+        this.sortSub = sortSub;
+        return this;
+    }
+
+    public Boolean showScale() {
+        return this.showScale;
+    }
+
+    public Chord showScale(Boolean showScale) {
+        this.showScale = showScale;
+        return this;
+    }
+
+    public Boolean showScaleText() {
+        return this.showScaleText;
+    }
+
+    public Chord showScaleText(Boolean showScaleText) {
+        this.showScaleText = showScaleText;
+        return this;
+    }
+
+    public Boolean clockWise() {
+        return this.clockWise;
+    }
+
+    public Chord clockWise(Boolean clockWise) {
+        this.clockWise = clockWise;
+        return this;
+    }
+
+    public Object[][] matrix() {
+        return this.matrix;
+    }
+
+    public Chord matrix(Object[][] matrix) {
+        this.matrix = matrix;
+        return this;
+    }
+
+    public Integer getPadding() {
+        return padding;
+    }
+
+    public void setPadding(Integer padding) {
+        this.padding = padding;
+    }
+
+    public Sort getSort() {
+        return sort;
+    }
+
+    public void setSort(Sort sort) {
+        this.sort = sort;
+    }
+
+    public Sort getSortSub() {
+        return sortSub;
+    }
+
+    public void setSortSub(Sort sortSub) {
+        this.sortSub = sortSub;
+    }
+
+    public Boolean getShowScale() {
+        return showScale;
+    }
+
+    public void setShowScale(Boolean showScale) {
+        this.showScale = showScale;
+    }
+
+    public Boolean getShowScaleText() {
+        return showScaleText;
+    }
+
+    public void setShowScaleText(Boolean showScaleText) {
+        this.showScaleText = showScaleText;
+    }
+
+    public Boolean getClockWise() {
+        return clockWise;
+    }
+
+    public void setClockWise(Boolean clockWise) {
+        this.clockWise = clockWise;
+    }
+
+    public Object[][] getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(Object[][] matrix) {
+        this.matrix = matrix;
     }
 }

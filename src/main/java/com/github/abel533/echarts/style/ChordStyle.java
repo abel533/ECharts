@@ -37,12 +37,17 @@ public class ChordStyle {
      */
     private LineStyle lineStyle;
 
+    public ChordStyle lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
     /**
      * 线条样式
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }

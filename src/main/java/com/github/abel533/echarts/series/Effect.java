@@ -33,98 +33,148 @@ public class Effect {
     /**
      * 是否开启，默认关闭
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public Effect show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 循环动画，默认开启
      */
-	private Boolean loop;
-
-	public Boolean loop(){
-		return this.loop;
-	}
-
-	public Effect loop(Boolean loop){
-		this.loop = loop;
-		return this;
-	}
-
+    private Boolean loop;
     /**
      * 运动周期，无单位，值越大越慢，默认为15
      */
-	private Integer period;
-
-	public Integer period(){
-		return this.period;
-	}
-
-	public Effect period(Integer period){
-		this.period = period;
-		return this;
-	}
-
+    private Integer period;
     /**
      * 放大倍数，以markPoint symbolSize为基准
      */
-	private Integer scaleSize;
-
-	public Integer scaleSize(){
-		return this.scaleSize;
-	}
-
-	public Effect scaleSize(Integer scaleSize){
-		this.scaleSize = scaleSize;
-		return this;
-	}
-
+    private Integer scaleSize;
     /**
      * 炫光颜色，默认跟随markPoint itemStyle定义颜色
      */
-	private String color;
-
-	public String color(){
-		return this.color;
-	}
-
-	public Effect color(String color){
-		this.color = color;
-		return this;
-	}
-
+    private String color;
     /**
      * 光影颜色，默认跟随color
      */
-	private String shadowColor;
-
-	public String shadowColor(){
-		return this.shadowColor;
-	}
-
-	public Effect shadowColor(String shadowColor){
-		this.shadowColor = shadowColor;
-		return this;
-	}
-
+    private String shadowColor;
     /**
      * 光影模糊度，默认为0
      */
-	private Integer shadowBlur;
+    private Integer shadowBlur;
 
-	public Integer shadowBlur(){
-		return this.shadowBlur;
-	}
+    public Boolean show() {
+        return this.show;
+    }
 
-	public Effect shadowBlur(Integer shadowBlur){
-		this.shadowBlur = shadowBlur;
-		return this;
-	}
+    public Effect show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Boolean loop() {
+        return this.loop;
+    }
+
+    public Effect loop(Boolean loop) {
+        this.loop = loop;
+        return this;
+    }
+
+    public Integer period() {
+        return this.period;
+    }
+
+    public Effect period(Integer period) {
+        this.period = period;
+        return this;
+    }
+
+    public Integer scaleSize() {
+        return this.scaleSize;
+    }
+
+    public Effect scaleSize(Integer scaleSize) {
+        this.scaleSize = scaleSize;
+        return this;
+    }
+
+    public String color() {
+        return this.color;
+    }
+
+    public Effect color(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public String shadowColor() {
+        return this.shadowColor;
+    }
+
+    public Effect shadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+        return this;
+    }
+
+    public Integer shadowBlur() {
+        return this.shadowBlur;
+    }
+
+    public Effect shadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+        return this;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Boolean getLoop() {
+        return loop;
+    }
+
+    public void setLoop(Boolean loop) {
+        this.loop = loop;
+    }
+
+    public Integer getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(Integer period) {
+        this.period = period;
+    }
+
+    public Integer getScaleSize() {
+        return scaleSize;
+    }
+
+    public void setScaleSize(Integer scaleSize) {
+        this.scaleSize = scaleSize;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getShadowColor() {
+        return shadowColor;
+    }
+
+    public void setShadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+    }
+
+    public Integer getShadowBlur() {
+        return shadowBlur;
+    }
+
+    public void setShadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+    }
 }

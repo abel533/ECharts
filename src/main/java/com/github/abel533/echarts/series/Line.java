@@ -33,16 +33,7 @@ public class Line extends Series<Line> {
     /**
      * 平滑曲线
      */
-	private Boolean smooth;
-
-	public Boolean smooth(){
-		return this.smooth;
-	}
-
-	public Line smooth(Boolean smooth){
-		this.smooth = smooth;
-		return this;
-	}
+    private Boolean smooth;
 
     public Line() {
         this.type(SeriesType.line);
@@ -51,5 +42,22 @@ public class Line extends Series<Line> {
     public Line(String name) {
         super(name);
         this.type(SeriesType.line);
+    }
+
+    public Boolean smooth() {
+        return this.smooth;
+    }
+
+    public Line smooth(Boolean smooth) {
+        this.smooth = smooth;
+        return this;
+    }
+
+    public Boolean getSmooth() {
+        return smooth;
+    }
+
+    public void setSmooth(Boolean smooth) {
+        this.smooth = smooth;
     }
 }

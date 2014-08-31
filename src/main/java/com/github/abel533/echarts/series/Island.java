@@ -30,30 +30,11 @@ import com.github.abel533.echarts.code.SeriesType;
  * @author liuzh
  */
 public class Island extends Series<Island> {
-	private Object r;
-
-	public Object r(){
-		return this.r;
-	}
-
-	public Island r(Object r){
-		this.r = r;
-		return this;
-	}
-
+    private Object r;
     /**
      * 滚轮可计算步长 0.1 = 10%
      */
-	private Object calculateStep;
-
-	public Object calculateStep(){
-		return this.calculateStep;
-	}
-
-	public Island calculateStep(Object calculateStep){
-		this.calculateStep = calculateStep;
-		return this;
-	}
+    private Object calculateStep;
 
     public Island() {
         this.type(SeriesType.island);
@@ -62,5 +43,39 @@ public class Island extends Series<Island> {
     public Island(String name) {
         super(name);
         this.type(SeriesType.island);
+    }
+
+    public Object r() {
+        return this.r;
+    }
+
+    public Island r(Object r) {
+        this.r = r;
+        return this;
+    }
+
+    public Object calculateStep() {
+        return this.calculateStep;
+    }
+
+    public Island calculateStep(Object calculateStep) {
+        this.calculateStep = calculateStep;
+        return this;
+    }
+
+    public Object getR() {
+        return r;
+    }
+
+    public void setR(Object r) {
+        this.r = r;
+    }
+
+    public Object getCalculateStep() {
+        return calculateStep;
+    }
+
+    public void setCalculateStep(Object calculateStep) {
+        this.calculateStep = calculateStep;
     }
 }

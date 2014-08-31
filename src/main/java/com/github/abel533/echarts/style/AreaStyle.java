@@ -33,28 +33,43 @@ public class AreaStyle {
     /**
      * 颜色
      */
-	private Object color;
-
-	public Object color(){
-		return this.color;
-	}
-
-	public AreaStyle color(Object color){
-		this.color = color;
-		return this;
-	}
-
+    private Object color;
     /**
      * 填充样式，目前仅支持'default'(实填充)
      */
-	private Object type;
+    private Object type;
 
-	public Object type(){
-		return this.type;
-	}
+    public Object color() {
+        return this.color;
+    }
 
-	public AreaStyle type(Object type){
-		this.type = type;
-		return this;
-	}
+    public AreaStyle color(Object color) {
+        this.color = color;
+        return this;
+    }
+
+    public Object type() {
+        return this.type;
+    }
+
+    public AreaStyle type(Object type) {
+        this.type = type;
+        return this;
+    }
+
+    public Object getColor() {
+        return color;
+    }
+
+    public void setColor(Object color) {
+        this.color = color;
+    }
+
+    public Object getType() {
+        return type;
+    }
+
+    public void setType(Object type) {
+        this.type = type;
+    }
 }

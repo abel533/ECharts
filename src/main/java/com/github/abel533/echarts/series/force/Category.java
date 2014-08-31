@@ -35,61 +35,21 @@ public class Category {
     /**
      * 类目名称
      */
-	private String name;
-
-	public String name(){
-		return this.name;
-	}
-
-	public Category name(String name){
-		this.name = name;
-		return this;
-	}
-
+    private String name;
     /**
      * 所有该类目的节点的形状, 详见 symbolList
      *
      * @see com.github.abel533.echarts.code.Symbol
      */
-	private Object symbol;
-
-	public Object symbol(){
-		return this.symbol;
-	}
-
-	public Category symbol(Object symbol){
-		this.symbol = symbol;
-		return this;
-	}
-
+    private Object symbol;
     /**
      * 所有该类目的节点的大小
      */
-	private Object symbolSize;
-
-	public Object symbolSize(){
-		return this.symbolSize;
-	}
-
-	public Category symbolSize(Object symbolSize){
-		this.symbolSize = symbolSize;
-		return this;
-	}
-
+    private Object symbolSize;
     /**
      * 所有该类目的节点是否能被拖拽
      */
-	private Boolean draggable;
-
-	public Boolean draggable(){
-		return this.draggable;
-	}
-
-	public Category draggable(Boolean draggable){
-		this.draggable = draggable;
-		return this;
-	}
-
+    private Boolean draggable;
     /**
      * 详见 itemStyle
      *
@@ -97,19 +57,55 @@ public class Category {
      */
     private ItemStyle itemStyle;
 
+    public Category() {
+    }
+
+    public String name() {
+        return this.name;
+    }
+
+    public Category name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Object symbol() {
+        return this.symbol;
+    }
+
+    public Category symbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    public Category symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public Boolean draggable() {
+        return this.draggable;
+    }
+
+    public Category draggable(Boolean draggable) {
+        this.draggable = draggable;
+        return this;
+    }
+
     /**
      * 详见 itemStyle
      *
      * @see com.github.abel533.echarts.style.ItemStyle
      */
-    public ItemStyle itemStyle(){
+    public ItemStyle itemStyle() {
         if (this.itemStyle == null) {
             this.itemStyle = new ItemStyle();
         }
         return this.itemStyle;
-    }
-
-    public Category() {
     }
 
     public ItemStyle getItemStyle() {
@@ -118,5 +114,37 @@ public class Category {
 
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public Boolean getDraggable() {
+        return draggable;
+    }
+
+    public void setDraggable(Boolean draggable) {
+        this.draggable = draggable;
     }
 }

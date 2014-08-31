@@ -35,31 +35,11 @@ public class LabelLine {
     /**
      * 饼图标签视觉引导线显示策略，可选为：true（显示） | false（隐藏）
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public LabelLine show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 线长 ，从外圆边缘起计算，可为负值
      */
-	private Integer length;
-
-	public Integer length(){
-		return this.length;
-	}
-
-	public LabelLine length(Integer length){
-		this.length = length;
-		return this;
-	}
-
+    private Integer length;
     /**
      * 线条样式，详见lineStyle
      *
@@ -67,12 +47,30 @@ public class LabelLine {
      */
     private LineStyle lineStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public LabelLine show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Integer length() {
+        return this.length;
+    }
+
+    public LabelLine length(Integer length) {
+        this.length = length;
+        return this;
+    }
+
     /**
      * 线条样式，详见lineStyle
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }

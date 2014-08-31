@@ -30,52 +30,75 @@ package com.github.abel533.echarts.style;
  * @author liuzh
  */
 public class ControlStyle {
+    /**
+     * 正常
+     */
+    private Color normal;
+    /**
+     * 高亮
+     */
+    private Color emphasis;
+
+    public ControlStyle() {
+        this.normal = new Color();
+        this.emphasis = new Color();
+    }
+
+    public Color normal() {
+        return this.normal;
+    }
+
+    public ControlStyle normal(Color normal) {
+        this.normal = normal;
+        return this;
+    }
+
+    public Color emphasis() {
+        return this.emphasis;
+    }
+
+    public ControlStyle emphasis(Color emphasis) {
+        this.emphasis = emphasis;
+        return this;
+    }
+
+    public Color getNormal() {
+        return normal;
+    }
+
+    public void setNormal(Color normal) {
+        this.normal = normal;
+    }
+
+    public Color getEmphasis() {
+        return emphasis;
+    }
+
+    public void setEmphasis(Color emphasis) {
+        this.emphasis = emphasis;
+    }
+
     public class Color {
         /**
          * 时间轴控制器样式颜色
          */
         private String color;
 
-        public String color(){
+        public String color() {
             return this.color;
         }
 
-        public Color color(String color){
+        public Color color(String color) {
             this.color = color;
             return this;
         }
-    }
 
-    /**
-     * 正常
-     */
-	private Color normal;
+        public String getColor() {
+            return color;
+        }
 
-	public Color normal(){
-		return this.normal;
-	}
-
-	public ControlStyle normal(Color normal){
-		this.normal = normal;
-		return this;
-	}
-
-    /**
-     * 高亮
-     */
-	private Color emphasis;
-
-	public Color emphasis(){
-		return this.emphasis;
-	}
-
-	public ControlStyle emphasis(Color emphasis){
-		this.emphasis = emphasis;
-		return this;
-	}
-
-    public ControlStyle() {
-        this.normal = new Color();
-        this.emphasis = new Color();
+        public void setColor(String color) {
+            this.color = color;
+        }
     }
 }

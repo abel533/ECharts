@@ -31,158 +31,236 @@ import com.github.abel533.echarts.code.Align;
  *
  * @author liuzh
  */
-public class DataZoom extends Basic implements Component {
+public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 是否显示，当show为true时则接管使用指定类目轴的全部系列数据，如不指定则接管全部直角坐标系数据
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public DataZoom show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      */
-	private Align orient;
-
-	public Align orient(){
-		return this.orient;
-	}
-
-	public DataZoom orient(Align orient){
-		this.orient = orient;
-		return this;
-	}
-
+    private Align orient;
     /**
      * 默认#ccc，数据缩略背景颜色
      */
-	private String dataBackgroundColor;
-
-	public String dataBackgroundColor(){
-		return this.dataBackgroundColor;
-	}
-
-	public DataZoom dataBackgroundColor(String dataBackgroundColor){
-		this.dataBackgroundColor = dataBackgroundColor;
-		return this;
-	}
-
+    private String dataBackgroundColor;
     /**
      * 默认值rgba(144,197,237,0.2)，选择区域填充颜色
      */
-	private String fillerColor;
-
-	public String fillerColor(){
-		return this.fillerColor;
-	}
-
-	public DataZoom fillerColor(String fillerColor){
-		this.fillerColor = fillerColor;
-		return this;
-	}
-
+    private String fillerColor;
     /**
      * 默认值rgba(70,130,180,0.8)，控制手柄颜色
      */
-	private String handleColor;
-
-	public String handleColor(){
-		return this.handleColor;
-	}
-
-	public DataZoom handleColor(String handleColor){
-		this.handleColor = handleColor;
-		return this;
-	}
-
+    private String handleColor;
     /**
      * 当不指定时默认控制所有横向类目，可通过数组指定多个需要控制的横向类目坐标轴Index，仅一个时可直接为数字
      */
-	private Object xAxisIndex;
-
-	public Object xAxisIndex(){
-		return this.xAxisIndex;
-	}
-
-	public DataZoom xAxisIndex(Object xAxisIndex){
-		this.xAxisIndex = xAxisIndex;
-		return this;
-	}
-
+    private Object xAxisIndex;
     /**
      * 当不指定时默认控制所有纵向类目，可通过数组指定多个需要控制的纵向类目坐标轴Index，仅一个时可直接为数字
      */
-	private Object yAxisIndex;
-
-	public Object yAxisIndex(){
-		return this.yAxisIndex;
-	}
-
-	public DataZoom yAxisIndex(Object yAxisIndex){
-		this.yAxisIndex = yAxisIndex;
-		return this;
-	}
-
+    private Object yAxisIndex;
     /**
      * 数据缩放，选择起始比例，默认为0（%），从首个数据起选择
      */
-	private Integer start;
-
-	public Integer start(){
-		return this.start;
-	}
-
-	public DataZoom start(Integer start){
-		this.start = start;
-		return this;
-	}
-
+    private Integer start;
     /**
      * 数据缩放，选择结束比例，默认为100（%），到最后一个数据选择结束
      */
-	private Integer end;
-
-	public Integer end(){
-		return this.end;
-	}
-
-	public DataZoom end(Integer end){
-		this.end = end;
-		return this;
-	}
-
+    private Integer end;
     /**
      * 缩放变化是否实时显示，建议性能较低的浏览器或数据量巨大时不启动实时效果
      */
-	private Boolean realtime;
-
-	public Boolean realtime(){
-		return this.realtime;
-	}
-
-	public DataZoom realtime(Boolean realtime){
-		this.realtime = realtime;
-		return this;
-	}
-
+    private Boolean realtime;
     /**
      * 数据缩放锁，默认为false，当设置为true时选择区域不能伸缩，即(end - start)值保持不变，仅能做数据漫游
      */
-	private Boolean zoomLook;
+    private Boolean zoomLook;
 
-	public Boolean zoomLook(){
-		return this.zoomLook;
-	}
+    public Boolean show() {
+        return this.show;
+    }
 
-	public DataZoom zoomLook(Boolean zoomLook){
-		this.zoomLook = zoomLook;
-		return this;
-	}
+    public DataZoom show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Align orient() {
+        return this.orient;
+    }
+
+    public DataZoom orient(Align orient) {
+        this.orient = orient;
+        return this;
+    }
+
+    public String dataBackgroundColor() {
+        return this.dataBackgroundColor;
+    }
+
+    public DataZoom dataBackgroundColor(String dataBackgroundColor) {
+        this.dataBackgroundColor = dataBackgroundColor;
+        return this;
+    }
+
+    public String fillerColor() {
+        return this.fillerColor;
+    }
+
+    public DataZoom fillerColor(String fillerColor) {
+        this.fillerColor = fillerColor;
+        return this;
+    }
+
+    public String handleColor() {
+        return this.handleColor;
+    }
+
+    public DataZoom handleColor(String handleColor) {
+        this.handleColor = handleColor;
+        return this;
+    }
+
+    public Object xAxisIndex() {
+        return this.xAxisIndex;
+    }
+
+    public DataZoom xAxisIndex(Object xAxisIndex) {
+        this.xAxisIndex = xAxisIndex;
+        return this;
+    }
+
+    public Object yAxisIndex() {
+        return this.yAxisIndex;
+    }
+
+    public DataZoom yAxisIndex(Object yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+        return this;
+    }
+
+    public Integer start() {
+        return this.start;
+    }
+
+    public DataZoom start(Integer start) {
+        this.start = start;
+        return this;
+    }
+
+    public Integer end() {
+        return this.end;
+    }
+
+    public DataZoom end(Integer end) {
+        this.end = end;
+        return this;
+    }
+
+    public Boolean realtime() {
+        return this.realtime;
+    }
+
+    public DataZoom realtime(Boolean realtime) {
+        this.realtime = realtime;
+        return this;
+    }
+
+    public Boolean zoomLook() {
+        return this.zoomLook;
+    }
+
+    public DataZoom zoomLook(Boolean zoomLook) {
+        this.zoomLook = zoomLook;
+        return this;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Align getOrient() {
+        return orient;
+    }
+
+    public void setOrient(Align orient) {
+        this.orient = orient;
+    }
+
+    public String getDataBackgroundColor() {
+        return dataBackgroundColor;
+    }
+
+    public void setDataBackgroundColor(String dataBackgroundColor) {
+        this.dataBackgroundColor = dataBackgroundColor;
+    }
+
+    public String getFillerColor() {
+        return fillerColor;
+    }
+
+    public void setFillerColor(String fillerColor) {
+        this.fillerColor = fillerColor;
+    }
+
+    public String getHandleColor() {
+        return handleColor;
+    }
+
+    public void setHandleColor(String handleColor) {
+        this.handleColor = handleColor;
+    }
+
+    public Object getxAxisIndex() {
+        return xAxisIndex;
+    }
+
+    public void setxAxisIndex(Object xAxisIndex) {
+        this.xAxisIndex = xAxisIndex;
+    }
+
+    public Object getyAxisIndex() {
+        return yAxisIndex;
+    }
+
+    public void setyAxisIndex(Object yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+    }
+
+    public Integer getStart() {
+        return start;
+    }
+
+    public void setStart(Integer start) {
+        this.start = start;
+    }
+
+    public Integer getEnd() {
+        return end;
+    }
+
+    public void setEnd(Integer end) {
+        this.end = end;
+    }
+
+    public Boolean getRealtime() {
+        return realtime;
+    }
+
+    public void setRealtime(Boolean realtime) {
+        this.realtime = realtime;
+    }
+
+    public Boolean getZoomLook() {
+        return zoomLook;
+    }
+
+    public void setZoomLook(Boolean zoomLook) {
+        this.zoomLook = zoomLook;
+    }
 }

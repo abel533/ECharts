@@ -34,92 +34,104 @@ import java.util.List;
 /**
  * @author liuzh
  */
-public class Legend extends Basic implements Data<Legend>, Component {
+public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
      * @see com.github.abel533.echarts.code.Align
      */
-	private Align orient;
-
-	public Align orient(){
-		return this.orient;
-	}
-
-	public Legend orient(Align orient){
-		this.orient = orient;
-		return this;
-	}
-
+    private Align orient;
     /**
      * 图例图形宽度
      */
-	private Integer itemWidth;
-
-	public Integer itemWidth(){
-		return this.itemWidth;
-	}
-
-	public Legend itemWidth(Integer itemWidth){
-		this.itemWidth = itemWidth;
-		return this;
-	}
-
+    private Integer itemWidth;
     /**
      * 图例图形高度
      */
-	private Integer itemHeight;
-
-	public Integer itemHeight(){
-		return this.itemHeight;
-	}
-
-	public Legend itemHeight(Integer itemHeight){
-		this.itemHeight = itemHeight;
-		return this;
-	}
-
+    private Integer itemHeight;
     /**
      * 文字样式
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
     private TextStyle textStyle;
-
-    /**
-     * 文字样式
-     *
-     * @see com.github.abel533.echarts.style.TextStyle
-     */
-    public TextStyle textStyle(){
-        if (this.textStyle == null) {
-            this.textStyle = new TextStyle();
-        }
-        return this.textStyle;
-    }
-
     /**
      * 选择模式，默认开启图例开关
      *
      * @see com.github.abel533.echarts.code.SelectedMode
      */
-	private Object selectedMode;
-
-	public Object selectedMode(){
-		return this.selectedMode;
-	}
-
-	public Legend selectedMode(Object selectedMode){
-		this.selectedMode = selectedMode;
-		return this;
-	}
-
+    private Object selectedMode;
     /**
      * 图例内容数组，数组项通常为{string}，每一项代表一个系列的name。
      *
      * @see com.github.abel533.echarts.data.LegendData
      */
     private List<Object> data;
+
+    public Legend() {
+    }
+
+    public Legend(Object... values) {
+        this.data(values);
+    }
+
+    public Legend textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public Legend data(List<Object> data) {
+        this.data = data;
+        return this;
+    }
+
+    public Align orient() {
+        return this.orient;
+    }
+
+    public Legend orient(Align orient) {
+        this.orient = orient;
+        return this;
+    }
+
+    public Integer itemWidth() {
+        return this.itemWidth;
+    }
+
+    public Legend itemWidth(Integer itemWidth) {
+        this.itemWidth = itemWidth;
+        return this;
+    }
+
+    public Integer itemHeight() {
+        return this.itemHeight;
+    }
+
+    public Legend itemHeight(Integer itemHeight) {
+        this.itemHeight = itemHeight;
+        return this;
+    }
+
+    /**
+     * 文字样式
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public Object selectedMode() {
+        return this.selectedMode;
+    }
+
+    public Legend selectedMode(Object selectedMode) {
+        this.selectedMode = selectedMode;
+        return this;
+    }
 
     public List<Object> data() {
         if (this.data == null) {
@@ -128,20 +140,13 @@ public class Legend extends Basic implements Data<Legend>, Component {
         return this.data;
     }
 
-    public Legend() {
-    }
-
-    public Legend(Object... values) {
-        this.addData(values);
-    }
-
     /**
      * 添加图例属性
      *
      * @param values
      * @return
      */
-    public Legend addData(Object... values) {
+    public Legend data(Object... values) {
         if (values == null || values.length == 0) {
             return this;
         }
@@ -163,5 +168,37 @@ public class Legend extends Basic implements Data<Legend>, Component {
 
     public void setData(List<Object> data) {
         this.data = data;
+    }
+
+    public Align getOrient() {
+        return orient;
+    }
+
+    public void setOrient(Align orient) {
+        this.orient = orient;
+    }
+
+    public Integer getItemWidth() {
+        return itemWidth;
+    }
+
+    public void setItemWidth(Integer itemWidth) {
+        this.itemWidth = itemWidth;
+    }
+
+    public Integer getItemHeight() {
+        return itemHeight;
+    }
+
+    public void setItemHeight(Integer itemHeight) {
+        this.itemHeight = itemHeight;
+    }
+
+    public Object getSelectedMode() {
+        return selectedMode;
+    }
+
+    public void setSelectedMode(Object selectedMode) {
+        this.selectedMode = selectedMode;
     }
 }

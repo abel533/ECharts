@@ -110,9 +110,50 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.type;
     }
 
+    public AxisType getType() {
+        return type;
+    }
+
+    public void setType(AxisType type) {
+        this.type = type;
+    }
+
+    public Object getPosition() {
+        return position;
+    }
+
+    public void setPosition(Object position) {
+        this.position = position;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public NameLocation getNameLocation() {
+        return nameLocation;
+    }
+
+    public void setNameLocation(NameLocation nameLocation) {
+        this.nameLocation = nameLocation;
+    }
+
+    public Object getBoundaryGap() {
+        return boundaryGap;
+    }
+
+    public void setBoundaryGap(Object boundaryGap) {
+        this.boundaryGap = boundaryGap;
+    }
+
     public T type(AxisType type) {
         this.type = type;
         return (T) this;
+
     }
 
     public Object position() {
@@ -152,6 +193,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.nameTextStyle;
     }
 
+    public T nameTextStyle(LineStyle style) {
+        this.nameTextStyle = style;
+        return (T) this;
+    }
+
     public Object boundaryGap() {
         return this.boundaryGap;
     }
@@ -174,6 +220,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.axisLine;
     }
 
+    public T axisLine(AxisLine axisLine) {
+        this.axisLine = axisLine;
+        return (T) this;
+    }
+
     /**
      * 坐标轴小标记，默认不显示，属性show控制显示与否，属性length控制线长，属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -185,6 +236,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
             this.axisTick = new AxisTick();
         }
         return this.axisTick;
+    }
+
+    public T axisTick(AxisTick axisTick) {
+        this.axisTick = axisTick;
+        return (T) this;
     }
 
     /**
@@ -199,6 +255,12 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.axisLabel;
     }
 
+    public T axisLabel(Label label) {
+        this.axisLabel = label;
+        return (T) this;
+    }
+
+
     /**
      * 分隔线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -211,6 +273,13 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.splitLine;
     }
 
+    public T splitLine(SplitLine splitLine) {
+        if (this.splitLine == null) {
+            this.splitLine = splitLine;
+        }
+        return (T) this;
+    }
+
     /**
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      */
@@ -221,6 +290,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.splitArea;
     }
 
+    public T splitArea(SplitArea splitArea) {
+        this.splitArea = splitArea;
+        return (T) this;
+    }
+
     /**
      * 添加坐标轴的类目属性
      *
@@ -228,7 +302,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * @return
      */
     @Override
-    public T addData(Object... values) {
+    public T data(Object... values) {
         if (values == null || values.length == 0) {
             return (T) this;
         }

@@ -41,9 +41,9 @@ public class K extends Series<K> {
         this.type(SeriesType.k);
     }
 
-    public K addData(Double open, Double close, Double min, Double max) {
+    public K data(Double open, Double close, Double min, Double max) {
         Object[] kData = new Object[]{open, close, min, max};
-        super.addData(kData);
+        super.data(kData);
         return this;
     }
 }

@@ -35,73 +35,24 @@ public class AxisTick {
     /**
      * 是否显示，默认为false，设为true后下面为默认样式
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public AxisTick show(Boolean show){
-		this.show = show;
-		return this;
-	}
+    private Boolean show;
     /**
      * 小标记显示挑选间隔，默认为'auto'，可选为：
      * 'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}（用户指定选择间隔）
      */
-	private Object interval;
-
-	public Object interval(){
-		return this.interval;
-	}
-
-	public AxisTick interval(Object interval){
-		this.interval = interval;
-		return this;
-	}
-
+    private Object interval;
     /**
      * 小标记是否显示为间隔，默认等于boundaryGap
      */
-	private Boolean onGap;
-
-	public Boolean onGap(){
-		return this.onGap;
-	}
-
-	public AxisTick onGap(Boolean onGap){
-		this.onGap = onGap;
-		return this;
-	}
-
+    private Boolean onGap;
     /**
      * 小标记是否显示为在grid内部，默认在外部
      */
-	private Boolean inside;
-
-	public Boolean inside(){
-		return this.inside;
-	}
-
-	public AxisTick inside(Boolean inside){
-		this.inside = inside;
-		return this;
-	}
-
+    private Boolean inside;
     /**
      * 默认值5，属性length控制线长
      */
-	private Integer length;
-
-	public Integer length(){
-		return this.length;
-	}
-
-	public AxisTick length(Integer length){
-		this.length = length;
-		return this;
-	}
-
+    private Integer length;
     /**
      * 属性lineStyle控制线条样式，（详见lineStyle）
      *
@@ -109,16 +60,66 @@ public class AxisTick {
      */
     private LineStyle lineStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public AxisTick show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Object interval() {
+        return this.interval;
+    }
+
+    public AxisTick interval(Object interval) {
+        this.interval = interval;
+        return this;
+    }
+
+    public Boolean onGap() {
+        return this.onGap;
+    }
+
+    public AxisTick onGap(Boolean onGap) {
+        this.onGap = onGap;
+        return this;
+    }
+
+    public Boolean inside() {
+        return this.inside;
+    }
+
+    public AxisTick inside(Boolean inside) {
+        this.inside = inside;
+        return this;
+    }
+
+    public Integer length() {
+        return this.length;
+    }
+
+    public AxisTick length(Integer length) {
+        this.length = length;
+        return this;
+    }
+
     /**
      * 属性lineStyle控制线条样式，（详见lineStyle）
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }
         return this.lineStyle;
+    }
+
+    public AxisTick lineStyle(LineStyle style) {
+        this.lineStyle = style;
+        return this;
     }
 
     public LineStyle getLineStyle() {
@@ -127,5 +128,45 @@ public class AxisTick {
 
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Object getInterval() {
+        return interval;
+    }
+
+    public void setInterval(Object interval) {
+        this.interval = interval;
+    }
+
+    public Boolean getOnGap() {
+        return onGap;
+    }
+
+    public void setOnGap(Boolean onGap) {
+        this.onGap = onGap;
+    }
+
+    public Boolean getInside() {
+        return inside;
+    }
+
+    public void setInside(Boolean inside) {
+        this.inside = inside;
+    }
+
+    public Integer getLength() {
+        return length;
+    }
+
+    public void setLength(Integer length) {
+        this.length = length;
     }
 }

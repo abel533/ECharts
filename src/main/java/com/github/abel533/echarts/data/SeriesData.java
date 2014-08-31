@@ -33,36 +33,9 @@ import com.github.abel533.echarts.style.ItemStyle;
  * @author liuzh
  */
 public class SeriesData {
-	private Object value;
-
-	public Object value(){
-		return this.value;
-	}
-
-	public SeriesData value(Object value){
-		this.value = value;
-		return this;
-	}
-	private Tooltip tooltip;
-
-	public Tooltip tooltip(){
-		return this.tooltip;
-	}
-
-	public SeriesData tooltip(Tooltip tooltip){
-		this.tooltip = tooltip;
-		return this;
-	}
-	private ItemStyle itemStyle;
-
-	public ItemStyle itemStyle(){
-		return this.itemStyle;
-	}
-
-	public SeriesData itemStyle(ItemStyle itemStyle){
-		this.itemStyle = itemStyle;
-		return this;
-	}
+    private Object value;
+    private Tooltip tooltip;
+    private ItemStyle itemStyle;
 
     public SeriesData(Object value) {
         this.value = value;
@@ -82,5 +55,35 @@ public class SeriesData {
         this.value = value;
         this.tooltip = tooltip;
         this.itemStyle = itemStyle;
+    }
+
+    public Object value() {
+        return this.value;
+    }
+
+    public SeriesData value(Object value) {
+        this.value = value;
+        return this;
+    }
+
+    public Tooltip tooltip() {
+        return this.tooltip;
+    }
+
+    public SeriesData tooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
+        return this;
+    }
+
+    public ItemStyle itemStyle() {
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
+
+    public SeriesData itemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+        return this;
     }
 }

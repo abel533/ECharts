@@ -35,44 +35,15 @@ public class Bar extends Series<Bar> {
     /**
      * 柱条最小高度，可用于防止某item的值过小而影响交互
      */
-	private Integer barMinHeight;
-
-	public Integer barMinHeight(){
-		return this.barMinHeight;
-	}
-
-	public Bar barMinHeight(Integer barMinHeight){
-		this.barMinHeight = barMinHeight;
-		return this;
-	}
-
+    private Integer barMinHeight;
     /**
      * 柱间距离，默认为柱形宽度的30%，可设固定值
      */
-	private String barGap;
-
-	public String barGap(){
-		return this.barGap;
-	}
-
-	public Bar barGap(String barGap){
-		this.barGap = barGap;
-		return this;
-	}
-
+    private String barGap;
     /**
      * 类目间柱形距离，默认为类目间距的20%，可设固定值
      */
-	private String barCategoryGap;
-
-	public String barCategoryGap(){
-		return this.barCategoryGap;
-	}
-
-	public Bar barCategoryGap(String barCategoryGap){
-		this.barCategoryGap = barCategoryGap;
-		return this;
-	}
+    private String barCategoryGap;
 
     public Bar() {
         this.type(SeriesType.bar);
@@ -81,5 +52,56 @@ public class Bar extends Series<Bar> {
     public Bar(String name) {
         super(name);
         this.type(SeriesType.bar);
+    }
+
+    public Integer barMinHeight() {
+        return this.barMinHeight;
+    }
+
+    public Bar barMinHeight(Integer barMinHeight) {
+        this.barMinHeight = barMinHeight;
+        return this;
+    }
+
+    public String barGap() {
+        return this.barGap;
+    }
+
+    public Bar barGap(String barGap) {
+        this.barGap = barGap;
+        return this;
+    }
+
+    public String barCategoryGap() {
+        return this.barCategoryGap;
+    }
+
+    public Bar barCategoryGap(String barCategoryGap) {
+        this.barCategoryGap = barCategoryGap;
+        return this;
+    }
+
+    public Integer getBarMinHeight() {
+        return barMinHeight;
+    }
+
+    public void setBarMinHeight(Integer barMinHeight) {
+        this.barMinHeight = barMinHeight;
+    }
+
+    public String getBarGap() {
+        return barGap;
+    }
+
+    public void setBarGap(String barGap) {
+        this.barGap = barGap;
+    }
+
+    public String getBarCategoryGap() {
+        return barCategoryGap;
+    }
+
+    public void setBarCategoryGap(String barCategoryGap) {
+        this.barCategoryGap = barCategoryGap;
     }
 }

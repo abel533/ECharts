@@ -35,124 +35,116 @@ public class Detail {
     /**
      * 属性show控制显示与否
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public Detail show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 标题背景颜色，默认透明
      */
-	private String backgroundColor;
-
-	public String backgroundColor(){
-		return this.backgroundColor;
-	}
-
-	public Detail backgroundColor(String backgroundColor){
-		this.backgroundColor = backgroundColor;
-		return this;
-	}
-
+    private String backgroundColor;
     /**
      * 标题边框颜色
      */
-	private String borderColor;
-
-	public String borderColor(){
-		return this.borderColor;
-	}
-
-	public Detail borderColor(String borderColor){
-		this.borderColor = borderColor;
-		return this;
-	}
-
+    private String borderColor;
     /**
      * borderWidth
      */
-	private Integer borderWidth;
-
-	public Integer borderWidth(){
-		return this.borderWidth;
-	}
-
-	public Detail borderWidth(Integer borderWidth){
-		this.borderWidth = borderWidth;
-		return this;
-	}
-
+    private Integer borderWidth;
     /**
      * 属性width控制详情宽度
      */
-	private Object width;
-
-	public Object width(){
-		return this.width;
-	}
-
-	public Detail width(Object width){
-		this.width = width;
-		return this;
-	}
-
+    private Object width;
     /**
      * 属性height控制详情高度
      */
-	private Object height;
-
-	public Object height(){
-		return this.height;
-	}
-
-	public Detail height(Object height){
-		this.height = height;
-		return this;
-	}
-
+    private Object height;
     /**
      * 属性offsetCenter用于详情定位，数组为横纵相对仪表盘圆心坐标偏移，支持百分比（相对外半径）
      */
-	private Object offsetCenter;
-
-	public Object offsetCenter(){
-		return this.offsetCenter;
-	}
-
-	public Detail offsetCenter(Object offsetCenter){
-		this.offsetCenter = offsetCenter;
-		return this;
-	}
-
+    private Object offsetCenter;
     /**
      * 属性formatter可以格式化文本
      */
-	private String formatter;
-
-	public String formatter(){
-		return this.formatter;
-	}
-
-	public Detail formatter(String formatter){
-		this.formatter = formatter;
-		return this;
-	}
-
+    private String formatter;
     /**
      * 属性textStyle（详见textStyle）控制文本样式
      */
     private TextStyle textStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public Detail show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public String backgroundColor() {
+        return this.backgroundColor;
+    }
+
+    public Detail backgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
+    public String borderColor() {
+        return this.borderColor;
+    }
+
+    public Detail borderColor(String borderColor) {
+        this.borderColor = borderColor;
+        return this;
+    }
+
+    public Integer borderWidth() {
+        return this.borderWidth;
+    }
+
+    public Detail borderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+        return this;
+    }
+
+    public Object width() {
+        return this.width;
+    }
+
+    public Detail width(Object width) {
+        this.width = width;
+        return this;
+    }
+
+    public Object height() {
+        return this.height;
+    }
+
+    public Detail height(Object height) {
+        this.height = height;
+        return this;
+    }
+
+    public Object offsetCenter() {
+        return this.offsetCenter;
+    }
+
+    public Detail offsetCenter(Object offsetCenter) {
+        this.offsetCenter = offsetCenter;
+        return this;
+    }
+
+    public String formatter() {
+        return this.formatter;
+    }
+
+    public Detail formatter(String formatter) {
+        this.formatter = formatter;
+        return this;
+    }
+
     /**
      * 属性textStyle（详见textStyle）控制文本样式
      */
-    public TextStyle textStyle(){
+    public TextStyle textStyle() {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
         }
@@ -165,5 +157,69 @@ public class Detail {
 
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public Integer getBorderWidth() {
+        return borderWidth;
+    }
+
+    public void setBorderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+    }
+
+    public Object getWidth() {
+        return width;
+    }
+
+    public void setWidth(Object width) {
+        this.width = width;
+    }
+
+    public Object getHeight() {
+        return height;
+    }
+
+    public void setHeight(Object height) {
+        this.height = height;
+    }
+
+    public Object getOffsetCenter() {
+        return offsetCenter;
+    }
+
+    public void setOffsetCenter(Object offsetCenter) {
+        this.offsetCenter = offsetCenter;
+    }
+
+    public String getFormatter() {
+        return formatter;
+    }
+
+    public void setFormatter(String formatter) {
+        this.formatter = formatter;
     }
 }

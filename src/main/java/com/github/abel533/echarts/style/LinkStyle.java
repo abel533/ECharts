@@ -33,28 +33,43 @@ public class LinkStyle {
     /**
      * 线条颜色
      */
-	private String strokeColor;
-
-	public String strokeColor(){
-		return this.strokeColor;
-	}
-
-	public LinkStyle strokeColor(String strokeColor){
-		this.strokeColor = strokeColor;
-		return this;
-	}
-
+    private String strokeColor;
     /**
      * 线宽
      */
-	private Integer lineWidth;
+    private Integer lineWidth;
 
-	public Integer lineWidth(){
-		return this.lineWidth;
-	}
+    public String strokeColor() {
+        return this.strokeColor;
+    }
 
-	public LinkStyle lineWidth(Integer lineWidth){
-		this.lineWidth = lineWidth;
-		return this;
-	}
+    public LinkStyle strokeColor(String strokeColor) {
+        this.strokeColor = strokeColor;
+        return this;
+    }
+
+    public Integer lineWidth() {
+        return this.lineWidth;
+    }
+
+    public LinkStyle lineWidth(Integer lineWidth) {
+        this.lineWidth = lineWidth;
+        return this;
+    }
+
+    public String getStrokeColor() {
+        return strokeColor;
+    }
+
+    public void setStrokeColor(String strokeColor) {
+        this.strokeColor = strokeColor;
+    }
+
+    public Integer getLineWidth() {
+        return lineWidth;
+    }
+
+    public void setLineWidth(Integer lineWidth) {
+        this.lineWidth = lineWidth;
+    }
 }

@@ -35,17 +35,7 @@ public class SplitArea {
     /**
      * 默认不显示，属性show控制显示与否
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public SplitArea show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 属性areaStyle（详见areaStyle）控制区域样式
      *
@@ -53,12 +43,26 @@ public class SplitArea {
      */
     private AreaStyle areaStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public SplitArea show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public SplitArea areaStyle(AreaStyle areaStyle) {
+        this.areaStyle = areaStyle;
+        return this;
+    }
+
     /**
      * 属性areaStyle（详见areaStyle）控制区域样式
      *
      * @see com.github.abel533.echarts.style.AreaStyle
      */
-    public AreaStyle areaStyle(){
+    public AreaStyle areaStyle() {
         if (this.areaStyle == null) {
             this.areaStyle = new AreaStyle();
         }
@@ -71,5 +75,13 @@ public class SplitArea {
 
     public void setAreaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
     }
 }

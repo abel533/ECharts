@@ -35,31 +35,11 @@ public class AxisLine {
     /**
      * 默认显示，属性show控制显示与否
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public AxisLine show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 定位到垂直方向的0值坐标上
      */
-	private Boolean onZero;
-
-	public Boolean onZero(){
-		return this.onZero;
-	}
-
-	public AxisLine onZero(Boolean onZero){
-		this.onZero = onZero;
-		return this;
-	}
-
+    private Boolean onZero;
     /**
      * {color: '#48b', width: 2, type: 'solid'}
      *
@@ -67,16 +47,39 @@ public class AxisLine {
      */
     private LineStyle lineStyle;
 
+    public Boolean show() {
+        return this.show;
+    }
+
+    public AxisLine show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Boolean onZero() {
+        return this.onZero;
+    }
+
+    public AxisLine onZero(Boolean onZero) {
+        this.onZero = onZero;
+        return this;
+    }
+
     /**
      * {color: '#48b', width: 2, type: 'solid'}
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle(){
+    public LineStyle lineStyle() {
         if (this.lineStyle == null) {
             this.lineStyle = new LineStyle();
         }
         return this.lineStyle;
+    }
+
+    public AxisLine lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
     }
 
     public LineStyle getLineStyle() {
@@ -85,5 +88,21 @@ public class AxisLine {
 
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Boolean getOnZero() {
+        return onZero;
+    }
+
+    public void setOnZero(Boolean onZero) {
+        this.onZero = onZero;
     }
 }

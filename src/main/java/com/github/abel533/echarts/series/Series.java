@@ -108,6 +108,26 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
         this.name = name;
     }
 
+    public Series tooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
+        return this;
+    }
+
+    public Series itemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+        return this;
+    }
+
+    public Series markPoint(MarkPoint markPoint) {
+        this.markPoint = markPoint;
+        return this;
+    }
+
+    public Series markLine(MarkLine markLine) {
+        this.markLine = markLine;
+        return this;
+    }
+
     public Integer xAxisIndex() {
         return this.xAxisIndex;
     }
@@ -267,5 +287,77 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
 
     public void setMarkLine(MarkLine markLine) {
         this.markLine = markLine;
+    }
+
+    public Integer getxAxisIndex() {
+        return xAxisIndex;
+    }
+
+    public void setxAxisIndex(Integer xAxisIndex) {
+        this.xAxisIndex = xAxisIndex;
+    }
+
+    public Integer getyAxisIndex() {
+        return yAxisIndex;
+    }
+
+    public void setyAxisIndex(Integer yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public SeriesType getType() {
+        return type;
+    }
+
+    public void setType(SeriesType type) {
+        this.type = type;
+    }
+
+    public String getStack() {
+        return stack;
+    }
+
+    public void setStack(String stack) {
+        this.stack = stack;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public Object getSymbolRoate() {
+        return symbolRoate;
+    }
+
+    public void setSymbolRoate(Object symbolRoate) {
+        this.symbolRoate = symbolRoate;
+    }
+
+    public Boolean getShowAllSymbol() {
+        return showAllSymbol;
+    }
+
+    public void setShowAllSymbol(Boolean showAllSymbol) {
+        this.showAllSymbol = showAllSymbol;
     }
 }

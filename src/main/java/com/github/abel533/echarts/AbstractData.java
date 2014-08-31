@@ -41,7 +41,7 @@ public abstract class AbstractData<T> implements Data<T> {
      */
     protected List<Object> data;
 
-    public List<Object> data(){
+    public List<Object> data() {
         if (this.data == null) {
             this.data = new ArrayList<Object>();
         }
@@ -54,11 +54,19 @@ public abstract class AbstractData<T> implements Data<T> {
      * @param values
      * @return
      */
-    public T addData(Object... values) {
+    public T data(Object... values) {
         if (values == null || values.length == 0) {
             return (T) this;
         }
         this.data().addAll(Arrays.asList(values));
         return (T) this;
+    }
+
+    public List<Object> getData() {
+        return data;
+    }
+
+    public void setData(List<Object> data) {
+        this.data = data;
     }
 }

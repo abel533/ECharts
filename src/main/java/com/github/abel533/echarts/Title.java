@@ -30,120 +30,129 @@ import com.github.abel533.echarts.style.TextStyle;
 /**
  * @author liuzh
  */
-public class Title extends Basic implements Component {
+public class Title extends Basic<Title> implements Component {
     /**
      * 主标题文本，'\n'指定换行
      */
-	private String text;
-
-	public String text(){
-		return this.text;
-	}
-
-	public Title text(String text){
-		this.text = text;
-		return this;
-	}
-
+    private String text;
     /**
      * 主标题文本超链接
      */
-	private String link;
-
-	public String link(){
-		return this.link;
-	}
-
-	public Title link(String link){
-		this.link = link;
-		return this;
-	}
-
+    private String link;
     /**
      * 指定窗口打开主标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
      */
-	private String target;
-
-	public String target(){
-		return this.target;
-	}
-
-	public Title target(String target){
-		this.target = target;
-		return this;
-	}
-
+    private String target;
     /**
      * 副标题文本，'\n'指定换行
      */
-	private String subtext;
-
-	public String subtext(){
-		return this.subtext;
-	}
-
-	public Title subtext(String subtext){
-		this.subtext = subtext;
-		return this;
-	}
-
+    private String subtext;
     /**
      * 副标题文本超链接
      */
-	private String sublink;
-
-	public String sublink(){
-		return this.sublink;
-	}
-
-	public Title sublink(String sublink){
-		this.sublink = sublink;
-		return this;
-	}
-
+    private String sublink;
     /**
      * 指定窗口打开副标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
      */
-	private String subtarget;
-
-	public String subtarget(){
-		return this.subtarget;
-	}
-
-	public Title subtarget(String subtarget){
-		this.subtarget = subtarget;
-		return this;
-	}
-
+    private String subtarget;
     /**
      * 水平对齐方式，默认根据x设置自动调整，可选为： left' | 'right' | 'center
      *
      * @see com.github.abel533.echarts.code.XPosition
      */
-	private XPosition textAlign;
-
-	public XPosition textAlign(){
-		return this.textAlign;
-	}
-
-	public Title textAlign(XPosition textAlign){
-		this.textAlign = textAlign;
-		return this;
-	}
-
+    private XPosition textAlign;
     /**
      * 主标题文本样式（详见textStyle）
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
     private TextStyle textStyle;
+    /**
+     * 默认值{color: '#aaa'}，副标题文本样式
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    private TextStyle subtextStyle;
+
+    public Title textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public Title subtextStyle(TextStyle subtextStyle) {
+        this.subtextStyle = subtextStyle;
+        return this;
+    }
+
+    public String text() {
+        return this.text;
+    }
+
+    public Title text(String text) {
+        this.text = text;
+        return this;
+    }
+
+    public String link() {
+        return this.link;
+    }
+
+    public Title link(String link) {
+        this.link = link;
+        return this;
+    }
+
+    public String target() {
+        return this.target;
+    }
+
+    public Title target(String target) {
+        this.target = target;
+        return this;
+    }
+
+    public String subtext() {
+        return this.subtext;
+    }
+
+    public Title subtext(String subtext) {
+        this.subtext = subtext;
+        return this;
+    }
+
+    public String sublink() {
+        return this.sublink;
+    }
+
+    public Title sublink(String sublink) {
+        this.sublink = sublink;
+        return this;
+    }
+
+    public String subtarget() {
+        return this.subtarget;
+    }
+
+    public Title subtarget(String subtarget) {
+        this.subtarget = subtarget;
+        return this;
+    }
+
+    public XPosition textAlign() {
+        return this.textAlign;
+    }
+
+    public Title textAlign(XPosition textAlign) {
+        this.textAlign = textAlign;
+        return this;
+    }
 
     /**
      * 主标题文本样式（详见textStyle）
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle(){
+    public TextStyle textStyle() {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
         }
@@ -155,14 +164,7 @@ public class Title extends Basic implements Component {
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    private TextStyle subtextStyle;
-
-    /**
-     * 默认值{color: '#aaa'}，副标题文本样式
-     *
-     * @see com.github.abel533.echarts.style.TextStyle
-     */
-    public TextStyle subtextStyle(){
+    public TextStyle subtextStyle() {
         if (this.subtextStyle == null) {
             this.subtextStyle = new TextStyle();
         }
@@ -183,5 +185,61 @@ public class Title extends Basic implements Component {
 
     public void setSubtextStyle(TextStyle subtextStyle) {
         this.subtextStyle = subtextStyle;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getTarget() {
+        return target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
+
+    public String getSubtext() {
+        return subtext;
+    }
+
+    public void setSubtext(String subtext) {
+        this.subtext = subtext;
+    }
+
+    public String getSublink() {
+        return sublink;
+    }
+
+    public void setSublink(String sublink) {
+        this.sublink = sublink;
+    }
+
+    public String getSubtarget() {
+        return subtarget;
+    }
+
+    public void setSubtarget(String subtarget) {
+        this.subtarget = subtarget;
+    }
+
+    public XPosition getTextAlign() {
+        return textAlign;
+    }
+
+    public void setTextAlign(XPosition textAlign) {
+        this.textAlign = textAlign;
     }
 }

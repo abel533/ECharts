@@ -35,54 +35,51 @@ public class Link {
     /**
      * 源节点的index或者源节点的name
      */
-	private Object source;
-
-	public Object source(){
-		return this.source;
-	}
-
-	public Link source(Object source){
-		this.source = source;
-		return this;
-	}
-
+    private Object source;
     /**
      * 目标节点的index或者目标节点的name
      */
-	private Object target;
-
-	public Object target(){
-		return this.target;
-	}
-
-	public Link target(Object target){
-		this.target = target;
-		return this;
-	}
-
+    private Object target;
     /**
      * 边的权重，权重越大邻接节点越靠拢
      */
-	private Integer weight;
-
-	public Integer weight(){
-		return this.weight;
-	}
-
-	public Link weight(Integer weight){
-		this.weight = weight;
-		return this;
-	}
-
+    private Integer weight;
     /**
      * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
      */
     private ItemStyle itemStyle;
 
+    public Object source() {
+        return this.source;
+    }
+
+    public Link source(Object source) {
+        this.source = source;
+        return this;
+    }
+
+    public Object target() {
+        return this.target;
+    }
+
+    public Link target(Object target) {
+        this.target = target;
+        return this;
+    }
+
+    public Integer weight() {
+        return this.weight;
+    }
+
+    public Link weight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+
     /**
      * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
      */
-    public ItemStyle itemStyle(){
+    public ItemStyle itemStyle() {
         if (this.itemStyle == null) {
             this.itemStyle = new ItemStyle();
         }
@@ -95,5 +92,29 @@ public class Link {
 
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
+    }
+
+    public Object getSource() {
+        return source;
+    }
+
+    public void setSource(Object source) {
+        this.source = source;
+    }
+
+    public Object getTarget() {
+        return target;
+    }
+
+    public void setTarget(Object target) {
+        this.target = target;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
 }

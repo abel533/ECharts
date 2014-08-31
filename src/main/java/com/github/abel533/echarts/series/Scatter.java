@@ -35,30 +35,11 @@ public class Scatter extends Series<Scatter> {
     /**
      * 大规模散点图
      */
-	private Boolean large;
-
-	public Boolean large(){
-		return this.large;
-	}
-
-	public Scatter large(Boolean large){
-		this.large = large;
-		return this;
-	}
-
+    private Boolean large;
     /**
      * 大规模阀值，large为true且数据量>largeThreshold才启用大规模模式
      */
-	private Long largeThreshold;
-
-	public Long largeThreshold(){
-		return this.largeThreshold;
-	}
-
-	public Scatter largeThreshold(Long largeThreshold){
-		this.largeThreshold = largeThreshold;
-		return this;
-	}
+    private Long largeThreshold;
 
     public Scatter() {
         this.type(SeriesType.scatter);
@@ -67,5 +48,39 @@ public class Scatter extends Series<Scatter> {
     public Scatter(String name) {
         super(name);
         this.type(SeriesType.scatter);
+    }
+
+    public Boolean large() {
+        return this.large;
+    }
+
+    public Scatter large(Boolean large) {
+        this.large = large;
+        return this;
+    }
+
+    public Long largeThreshold() {
+        return this.largeThreshold;
+    }
+
+    public Scatter largeThreshold(Long largeThreshold) {
+        this.largeThreshold = largeThreshold;
+        return this;
+    }
+
+    public Boolean getLarge() {
+        return large;
+    }
+
+    public void setLarge(Boolean large) {
+        this.large = large;
+    }
+
+    public Long getLargeThreshold() {
+        return largeThreshold;
+    }
+
+    public void setLargeThreshold(Long largeThreshold) {
+        this.largeThreshold = largeThreshold;
     }
 }

@@ -35,82 +35,82 @@ public class CheckpointStyle {
     /**
      * 当前点symbol，默认随轴上的symbol
      */
-	private Object symbol;
-
-	public Object symbol(){
-		return this.symbol;
-	}
-
-	public CheckpointStyle symbol(Object symbol){
-		this.symbol = symbol;
-		return this;
-	}
-
+    private Object symbol;
     /**
      * 当前点symbol大小，默认随轴上symbol大小
      */
-	private Object symbolSize;
-
-	public Object symbolSize(){
-		return this.symbolSize;
-	}
-
-	public CheckpointStyle symbolSize(Object symbolSize){
-		this.symbolSize = symbolSize;
-		return this;
-	}
-
+    private Object symbolSize;
     /**
      * 当前点symbol颜色，默认为随当前点颜色，可指定具体颜色，如无则为'#1e90ff'
      */
-	private String color;
-
-	public String color(){
-		return this.color;
-	}
-
-	public CheckpointStyle color(String color){
-		this.color = color;
-		return this;
-	}
-
+    private String color;
     /**
      * 当前点symbol边线颜色
      */
-	private String borderColor;
-
-	public String borderColor(){
-		return this.borderColor;
-	}
-
-	public CheckpointStyle borderColor(String borderColor){
-		this.borderColor = borderColor;
-		return this;
-	}
-
+    private String borderColor;
     /**
      * 当前点symbol边线宽度
      */
-	private Object borderWidth;
-
-	public Object borderWidth(){
-		return this.borderWidth;
-	}
-
-	public CheckpointStyle borderWidth(Object borderWidth){
-		this.borderWidth = borderWidth;
-		return this;
-	}
-
+    private Object borderWidth;
     /**
      * @see com.github.abel533.echarts.Label
      */
     private Label label;
 
+    public CheckpointStyle label(Label label) {
+        this.label = label;
+        return this;
+    }
+
+    public Object symbol() {
+        return this.symbol;
+    }
+
+    public CheckpointStyle symbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    public CheckpointStyle symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public String color() {
+        return this.color;
+    }
+
+    public CheckpointStyle color(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public String borderColor() {
+        return this.borderColor;
+    }
+
+    public CheckpointStyle borderColor(String borderColor) {
+        this.borderColor = borderColor;
+        return this;
+    }
+
+    public Object borderWidth() {
+        return this.borderWidth;
+    }
+
+    public CheckpointStyle borderWidth(Object borderWidth) {
+        this.borderWidth = borderWidth;
+        return this;
+    }
+
     /**
      * @see com.github.abel533.echarts.Label
      */
-    public Label label(){
+    public Label label() {
         if (this.label == null) {
             this.label = new Label();
         }
@@ -123,5 +123,45 @@ public class CheckpointStyle {
 
     public void setLabel(Label label) {
         this.label = label;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public Object getBorderWidth() {
+        return borderWidth;
+    }
+
+    public void setBorderWidth(Object borderWidth) {
+        this.borderWidth = borderWidth;
     }
 }

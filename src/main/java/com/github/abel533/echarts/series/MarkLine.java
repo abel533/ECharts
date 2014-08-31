@@ -39,62 +39,82 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.code.Symbol
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-	private Object symbol;
-
-	public Object symbol(){
-		return this.symbol;
-	}
-
-	public MarkLine symbol(Object symbol){
-		this.symbol = symbol;
-		return this;
-	}
-
+    private Object symbol;
     /**
      * 标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize
      *
      * @see com.github.abel533.echarts.series.Series#symbolSize
      */
-	private Object symbolSize;
-
-	public Object symbolSize(){
-		return this.symbolSize;
-	}
-
-	public MarkLine symbolSize(Object symbolSize){
-		this.symbolSize = symbolSize;
-		return this;
-	}
-
+    private Object symbolSize;
     /**
      * 标线起始和结束的symbol旋转控制，同series中的symbolRotate
      *
      * @see com.github.abel533.echarts.series.Series#symbolRoate
      */
-	private Object symbolRoate;
-
-	public Object symbolRoate(){
-		return this.symbolRoate;
-	}
-
-	public MarkLine symbolRoate(Object symbolRoate){
-		this.symbolRoate = symbolRoate;
-		return this;
-	}
-
+    private Object symbolRoate;
     /**
      * 标线图形炫光特效
      *
      * @see com.github.abel533.echarts.series.Effect
      */
     private Effect effect;
+    /**
+     * 标线图形样式属性
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     * @see com.github.abel533.echarts.series.Series#itemStyle
+     */
+    private ItemStyle itemStyle;
+    /**
+     * 地图特有，标线图形定位坐标
+     *
+     * @see com.github.abel533.echarts.series.Map#geoCoord
+     */
+    private Object geoCoord;
+
+    public MarkLine effect(Effect effect) {
+        this.effect = effect;
+        return this;
+    }
+
+    public MarkLine itemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+        return this;
+    }
+
+    public Object symbol() {
+        return this.symbol;
+    }
+
+    public MarkLine symbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    public MarkLine symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public Object symbolRoate() {
+        return this.symbolRoate;
+    }
+
+    public MarkLine symbolRoate(Object symbolRoate) {
+        this.symbolRoate = symbolRoate;
+        return this;
+    }
 
     /**
      * 标线图形炫光特效
      *
      * @see com.github.abel533.echarts.series.Effect
      */
-    public Effect effect(){
+    public Effect effect() {
         if (this.effect == null) {
             this.effect = new Effect();
         }
@@ -107,36 +127,21 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.style.ItemStyle
      * @see com.github.abel533.echarts.series.Series#itemStyle
      */
-    private ItemStyle itemStyle;
-
-    /**
-     * 标线图形样式属性
-     *
-     * @see com.github.abel533.echarts.style.ItemStyle
-     * @see com.github.abel533.echarts.series.Series#itemStyle
-     */
-    public ItemStyle itemStyle(){
+    public ItemStyle itemStyle() {
         if (this.itemStyle == null) {
             this.itemStyle = new ItemStyle();
         }
         return this.itemStyle;
     }
 
-    /**
-     * 地图特有，标线图形定位坐标
-     *
-     * @see com.github.abel533.echarts.series.Map#geoCoord
-     */
-	private Object geoCoord;
+    public Object geoCoord() {
+        return this.geoCoord;
+    }
 
-	public Object geoCoord(){
-		return this.geoCoord;
-	}
-
-	public MarkLine geoCoord(Object geoCoord){
-		this.geoCoord = geoCoord;
-		return this;
-	}
+    public MarkLine geoCoord(Object geoCoord) {
+        this.geoCoord = geoCoord;
+        return this;
+    }
 
     public Effect getEffect() {
         return effect;
@@ -152,5 +157,37 @@ public class MarkLine extends AbstractData<MarkLine> {
 
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public Object getSymbolRoate() {
+        return symbolRoate;
+    }
+
+    public void setSymbolRoate(Object symbolRoate) {
+        this.symbolRoate = symbolRoate;
+    }
+
+    public Object getGeoCoord() {
+        return geoCoord;
+    }
+
+    public void setGeoCoord(Object geoCoord) {
+        this.geoCoord = geoCoord;
     }
 }

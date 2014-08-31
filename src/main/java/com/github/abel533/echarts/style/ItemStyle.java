@@ -131,6 +131,36 @@ public class ItemStyle {
          */
         private Integer borderWidth;
 
+        public Style label(Label label) {
+            this.label = label;
+            return this;
+        }
+
+        public Style labelLine(LabelLine labelLine) {
+            this.labelLine = labelLine;
+            return this;
+        }
+
+        public Style areaStyle(AreaStyle areaStyle) {
+            this.areaStyle = areaStyle;
+            return this;
+        }
+
+        public Style chordStyle(ChordStyle chordStyle) {
+            this.chordStyle = chordStyle;
+            return this;
+        }
+
+        public Style nodeStyle(NodeStyle nodeStyle) {
+            this.nodeStyle = nodeStyle;
+            return this;
+        }
+
+        public Style linkStyle(LinkStyle linkStyle) {
+            this.linkStyle = linkStyle;
+            return this;
+        }
+
         /**
          * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置
          * 折线图，柱形图，K线图，散点图可指定position见下
@@ -361,6 +391,7 @@ public class ItemStyle {
         public void setBorderWidth(Integer borderWidth) {
             this.borderWidth = borderWidth;
         }
+
     }
 
     public class Normal extends Style {
@@ -368,6 +399,5 @@ public class ItemStyle {
 
     public class Emphasis extends Style {
     }
-
 
 }

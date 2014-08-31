@@ -36,32 +36,13 @@ public class AxisData {
     /**
      * 值
      */
-	private Object value;
-
-	public Object value(){
-		return this.value;
-	}
-
-	public AxisData value(Object value){
-		this.value = value;
-		return this;
-	}
-
+    private Object value;
     /**
      * 特殊样式
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-	private TextStyle textStyle;
-
-	public TextStyle textStyle(){
-		return this.textStyle;
-	}
-
-	public AxisData textStyle(TextStyle textStyle){
-		this.textStyle = textStyle;
-		return this;
-	}
+    private TextStyle textStyle;
 
     public AxisData(Object value) {
         this.value = value;
@@ -69,6 +50,43 @@ public class AxisData {
 
     public AxisData(Object value, TextStyle textStyle) {
         this.value = value;
+        this.textStyle = textStyle;
+    }
+
+    public Object value() {
+        return this.value;
+    }
+
+    public AxisData value(Object value) {
+        this.value = value;
+        return this;
+    }
+
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public AxisData textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
+    public void setValue(Object value) {
+        this.value = value;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }
 }

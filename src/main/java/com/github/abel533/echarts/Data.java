@@ -10,5 +10,5 @@ public interface Data<T> {
      * @param values
      * @return
      */
-    T addData(Object... values);
+    T data(Object... values);
 }

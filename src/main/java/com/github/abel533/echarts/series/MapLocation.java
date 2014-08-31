@@ -30,44 +30,76 @@ package com.github.abel533.echarts.series;
  * @author liuzh
  */
 public class MapLocation {
-	private Object x;
+    private Object x;
+    private Object y;
+    private Object width;
+    private Object height;
 
-	public Object x(){
-		return this.x;
-	}
+    public Object x() {
+        return this.x;
+    }
 
-	public MapLocation x(Object x){
-		this.x = x;
-		return this;
-	}
-	private Object y;
+    public MapLocation x(Object x) {
+        this.x = x;
+        return this;
+    }
 
-	public Object y(){
-		return this.y;
-	}
+    public Object y() {
+        return this.y;
+    }
 
-	public MapLocation y(Object y){
-		this.y = y;
-		return this;
-	}
-	private Object width;
+    public MapLocation y(Object y) {
+        this.y = y;
+        return this;
+    }
 
-	public Object width(){
-		return this.width;
-	}
+    public Object width() {
+        return this.width;
+    }
 
-	public MapLocation width(Object width){
-		this.width = width;
-		return this;
-	}
-	private Object height;
+    public MapLocation width(Object width) {
+        this.width = width;
+        return this;
+    }
 
-	public Object height(){
-		return this.height;
-	}
+    public Object height() {
+        return this.height;
+    }
 
-	public MapLocation height(Object height){
-		this.height = height;
-		return this;
-	}
+    public MapLocation height(Object height) {
+        this.height = height;
+        return this;
+    }
+
+    public Object getX() {
+        return x;
+    }
+
+    public void setX(Object x) {
+        this.x = x;
+    }
+
+    public Object getY() {
+        return y;
+    }
+
+    public void setY(Object y) {
+        this.y = y;
+    }
+
+    public Object getWidth() {
+        return width;
+    }
+
+    public void setWidth(Object width) {
+        this.width = width;
+    }
+
+    public Object getHeight() {
+        return height;
+    }
+
+    public void setHeight(Object height) {
+        this.height = height;
+    }
 }

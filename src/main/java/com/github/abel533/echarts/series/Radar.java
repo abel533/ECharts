@@ -35,16 +35,7 @@ public class Radar extends Series<Radar> {
     /**
      * 极坐标索引
      */
-	private Integer polarIndex;
-
-	public Integer polarIndex(){
-		return this.polarIndex;
-	}
-
-	public Radar polarIndex(Integer polarIndex){
-		this.polarIndex = polarIndex;
-		return this;
-	}
+    private Integer polarIndex;
 
     public Radar() {
         this.type(SeriesType.radar);
@@ -53,5 +44,22 @@ public class Radar extends Series<Radar> {
     public Radar(String name) {
         super(name);
         this.type(SeriesType.radar);
+    }
+
+    public Integer polarIndex() {
+        return this.polarIndex;
+    }
+
+    public Radar polarIndex(Integer polarIndex) {
+        this.polarIndex = polarIndex;
+        return this;
+    }
+
+    public Integer getPolarIndex() {
+        return polarIndex;
+    }
+
+    public void setPolarIndex(Integer polarIndex) {
+        this.polarIndex = polarIndex;
     }
 }

@@ -32,122 +32,176 @@ import com.github.abel533.echarts.code.YPosition;
  *
  * @author liuzh
  */
-public abstract class Basic {
+public abstract class Basic<T> {
     /**
      * 水平安放位置，默认为左侧，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
      *
      * @see com.github.abel533.echarts.code.XPosition
      */
-	private Object x;
-
-	public Object x(){
-		return this.x;
-	}
-
-	public Basic x(Object x){
-		this.x = x;
-		return this;
-	}
-
+    private Object x;
     /**
      * 垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
      *
      * @see com.github.abel533.echarts.code.YPosition
      */
-	private Object y;
-
-	public Object y(){
-		return this.y;
-	}
-
-	public Basic y(Object y){
-		this.y = y;
-		return this;
-	}
-
+    private Object y;
     /**
      * 标题背景颜色，默认透明
      */
-	private String backgroundColor;
-
-	public String backgroundColor(){
-		return this.backgroundColor;
-	}
-
-	public Basic backgroundColor(String backgroundColor){
-		this.backgroundColor = backgroundColor;
-		return this;
-	}
-
+    private String backgroundColor;
     /**
      * 标题边框颜色
      */
-	private String borderColor;
-
-	public String borderColor(){
-		return this.borderColor;
-	}
-
-	public Basic borderColor(String borderColor){
-		this.borderColor = borderColor;
-		return this;
-	}
-
+    private String borderColor;
     /**
      * borderWidth
      */
-	private Integer borderWidth;
-
-	public Integer borderWidth(){
-		return this.borderWidth;
-	}
-
-	public Basic borderWidth(Integer borderWidth){
-		this.borderWidth = borderWidth;
-		return this;
-	}
-
+    private Integer borderWidth;
     /**
      * 标题内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
      */
-	private Integer padding;
-
-	public Integer padding(){
-		return this.padding;
-	}
-
-	public Basic padding(Integer padding){
-		this.padding = padding;
-		return this;
-	}
-
+    private Integer padding;
     /**
      * 主副标题纵向间隔，单位px，默认为10
      */
-	private Integer itemGap;
+    private Integer itemGap;
 
-	public Integer itemGap(){
-		return this.itemGap;
-	}
+    public Object x() {
+        return this.x;
+    }
 
-	public Basic itemGap(Integer itemGap){
-		this.itemGap = itemGap;
-		return this;
-	}
+    public T x(Object x) {
+        this.x = x;
+        return (T) this;
+    }
 
-    public void setX(Integer x) {
+    public Object y() {
+        return this.y;
+    }
+
+    public T y(Object y) {
+        this.y = y;
+        return (T) this;
+    }
+
+    public String backgroundColor() {
+        return this.backgroundColor;
+    }
+
+    public T backgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return (T) this;
+    }
+
+    public String borderColor() {
+        return this.borderColor;
+    }
+
+    public T borderColor(String borderColor) {
+        this.borderColor = borderColor;
+        return (T) this;
+    }
+
+    public Integer borderWidth() {
+        return this.borderWidth;
+    }
+
+    public T borderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+        return (T) this;
+    }
+
+    public Integer padding() {
+        return this.padding;
+    }
+
+    public T padding(Integer padding) {
+        this.padding = padding;
+        return (T) this;
+    }
+
+    public Integer itemGap() {
+        return this.itemGap;
+    }
+
+    public T itemGap(Integer itemGap) {
+        this.itemGap = itemGap;
+        return (T) this;
+    }
+
+    public T x(Integer x) {
+        this.x = x;
+        return (T) this;
+    }
+
+    public T x(XPosition x) {
+        this.x = x;
+        return (T) this;
+    }
+
+    public T y(Integer y) {
+        this.y = y;
+        return (T) this;
+    }
+
+    public T y(YPosition y) {
+        this.y = y;
+        return (T) this;
+    }
+
+    public Object getX() {
+        return x;
+    }
+
+    public void setX(Object x) {
         this.x = x;
     }
 
-    public void setX(XPosition x) {
-        this.x = x;
+    public Object getY() {
+        return y;
     }
 
-    public void setY(Integer y) {
+    public void setY(Object y) {
         this.y = y;
     }
 
-    public void setY(YPosition y) {
-        this.y = y;
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public Integer getBorderWidth() {
+        return borderWidth;
+    }
+
+    public void setBorderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+    }
+
+    public Integer getPadding() {
+        return padding;
+    }
+
+    public void setPadding(Integer padding) {
+        this.padding = padding;
+    }
+
+    public Integer getItemGap() {
+        return itemGap;
+    }
+
+    public void setItemGap(Integer itemGap) {
+        this.itemGap = itemGap;
     }
 }

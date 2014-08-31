@@ -41,120 +41,113 @@ public class Feature {
     /**
      * 是否显示
      */
-	private Boolean show;
-
-	public Boolean show(){
-		return this.show;
-	}
-
-	public Feature show(Boolean show){
-		this.show = show;
-		return this;
-	}
-
+    private Boolean show;
     /**
      * 标题
      */
-	private Object title;
-
-	public Object title(){
-		return this.title;
-	}
-
-	public Feature title(Object title){
-		this.title = title;
-		return this;
-	}
-
+    private Object title;
     /**
      * 类型
      *
      * @see com.github.abel533.echarts.code.Magic
      * @see com.github.abel533.echarts.code.LineType
      */
-	private Object type;
-
-	public Object type(){
-		return this.type;
-	}
-
-	public Feature type(Object type){
-		this.type = type;
-		return this;
-	}
-
+    private Object type;
     /**
      * 只读
      */
-	private Boolean readOnly;
-
-	public Boolean readOnly(){
-		return this.readOnly;
-	}
-
-	public Feature readOnly(Boolean readOnly){
-		this.readOnly = readOnly;
-		return this;
-	}
-
+    private Boolean readOnly;
     /**
      * lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
      */
-	private Object lang;
-
-	public Object lang(){
-		return this.lang;
-	}
-
-	public Feature lang(Object lang){
-		this.lang = lang;
-		return this;
-	}
-
+    private Object lang;
     /**
      * 线条颜色
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-	private LineStyle lineStyle;
-
-	public LineStyle lineStyle(){
-		return this.lineStyle;
-	}
-
-	public Feature lineStyle(LineStyle lineStyle){
-		this.lineStyle = lineStyle;
-		return this;
-	}
-
+    private LineStyle lineStyle;
     /**
      * 文字颜色
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-	private TextStyle textStyle;
-
-	public TextStyle textStyle(){
-		return this.textStyle;
-	}
-
-	public Feature textStyle(TextStyle textStyle){
-		this.textStyle = textStyle;
-		return this;
-	}
-
+    private TextStyle textStyle;
     /**
      * 图标，image://开头
      */
-	private String icon;
+    private String icon;
 
-	public String icon(){
-		return this.icon;
-	}
+    public Boolean show() {
+        return this.show;
+    }
 
-	public Feature icon(String icon){
-		this.icon = icon;
-		return this;
-	}
+    public Feature show(Boolean show) {
+        this.show = show;
+        return this;
+    }
+
+    public Object title() {
+        return this.title;
+    }
+
+    public Feature title(Object title) {
+        this.title = title;
+        return this;
+    }
+
+    public Object type() {
+        return this.type;
+    }
+
+    public Feature type(Object type) {
+        this.type = type;
+        return this;
+    }
+
+    public Boolean readOnly() {
+        return this.readOnly;
+    }
+
+    public Feature readOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+        return this;
+    }
+
+    public Object lang() {
+        return this.lang;
+    }
+
+    public Feature lang(Object lang) {
+        this.lang = lang;
+        return this;
+    }
+
+    public LineStyle lineStyle() {
+        return this.lineStyle;
+    }
+
+    public Feature lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
+    public TextStyle textStyle() {
+        return this.textStyle;
+    }
+
+    public Feature textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public String icon() {
+        return this.icon;
+    }
+
+    public Feature icon(String icon) {
+        this.icon = icon;
+        return this;
+    }
 
 }

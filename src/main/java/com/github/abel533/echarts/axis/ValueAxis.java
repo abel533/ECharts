@@ -35,89 +35,131 @@ public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
      */
-	private Integer min;
-
-	public Integer min(){
-		return this.min;
-	}
-
-	public ValueAxis min(Integer min){
-		this.min = min;
-		return this;
-	}
-
+    private Integer min;
     /**
      * 指定的最大值，eg: 100，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[1]
      */
-	private Integer max;
-
-	public Integer max(){
-		return this.max;
-	}
-
-	public ValueAxis max(Integer max){
-		this.max = max;
-		return this;
-	}
-
+    private Integer max;
     /**
      * 默认值false，脱离0值比例，放大聚焦到最终_min，_max区间
      */
-	private Boolean scale;
-
-	public Boolean scale(){
-		return this.scale;
-	}
-
-	public ValueAxis scale(Boolean scale){
-		this.scale = scale;
-		return this;
-	}
-
+    private Boolean scale;
     /**
      * 小数精度，默认为0，无小数点
      */
-	private Integer precision;
-
-	public Integer precision(){
-		return this.precision;
-	}
-
-	public ValueAxis precision(Integer precision){
-		this.precision = precision;
-		return this;
-	}
-
+    private Integer precision;
     /**
      * 整数精度，默认为100，个位和百位为0
      */
-	private Integer power;
-
-	public Integer power(){
-		return this.power;
-	}
-
-	public ValueAxis power(Integer power){
-		this.power = power;
-		return this;
-	}
-
+    private Integer power;
     /**
      * 分割段数，默认为5
      */
-	private Integer splitNumber;
-
-	public Integer splitNumber(){
-		return this.splitNumber;
-	}
-
-	public ValueAxis splitNumber(Integer splitNumber){
-		this.splitNumber = splitNumber;
-		return this;
-	}
-
+    private Integer splitNumber;
 
     public ValueAxis() {
         this.type(AxisType.value);
+    }
+
+    public Integer min() {
+        return this.min;
+    }
+
+    public ValueAxis min(Integer min) {
+        this.min = min;
+        return this;
+    }
+
+    public Integer max() {
+        return this.max;
+    }
+
+    public ValueAxis max(Integer max) {
+        this.max = max;
+        return this;
+    }
+
+    public Boolean scale() {
+        return this.scale;
+    }
+
+    public ValueAxis scale(Boolean scale) {
+        this.scale = scale;
+        return this;
+    }
+
+    public Integer precision() {
+        return this.precision;
+    }
+
+    public ValueAxis precision(Integer precision) {
+        this.precision = precision;
+        return this;
+    }
+
+    public Integer power() {
+        return this.power;
+    }
+
+    public ValueAxis power(Integer power) {
+        this.power = power;
+        return this;
+    }
+
+    public Integer splitNumber() {
+        return this.splitNumber;
+    }
+
+    public ValueAxis splitNumber(Integer splitNumber) {
+        this.splitNumber = splitNumber;
+        return this;
+    }
+
+    public Integer getMin() {
+        return min;
+    }
+
+    public void setMin(Integer min) {
+        this.min = min;
+    }
+
+    public Integer getMax() {
+        return max;
+    }
+
+    public void setMax(Integer max) {
+        this.max = max;
+    }
+
+    public Boolean getScale() {
+        return scale;
+    }
+
+    public void setScale(Boolean scale) {
+        this.scale = scale;
+    }
+
+    public Integer getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(Integer precision) {
+        this.precision = precision;
+    }
+
+    public Integer getPower() {
+        return power;
+    }
+
+    public void setPower(Integer power) {
+        this.power = power;
+    }
+
+    public Integer getSplitNumber() {
+        return splitNumber;
+    }
+
+    public void setSplitNumber(Integer splitNumber) {
+        this.splitNumber = splitNumber;
     }
 }

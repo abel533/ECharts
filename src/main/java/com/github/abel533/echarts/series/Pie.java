@@ -38,6 +38,61 @@ public class Pie extends Series<Pie> {
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
     private Object[] center;
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     */
+    private Object radius;
+    /**
+     * 开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
+     */
+    private Integer startAngle;
+    /**
+     * 最小角度，可用于防止某item的值过小而影响交互
+     */
+    private Integer minAngle;
+    /**
+     * 显示是否顺时针
+     */
+    private Boolean clockWise;
+    /**
+     * 南丁格尔玫瑰图模式，'radius'（半径） | 'area'（面积）
+     *
+     * @see com.github.abel533.echarts.code.RoseType
+     */
+    private RoseType roseType;
+    /**
+     * 选中是扇区偏移量
+     */
+    private Integer selectedOffset;
+    /**
+     * 选中模式，默认关闭，可选single，multiple
+     *
+     * @see com.github.abel533.echarts.code.SelectedMode
+     */
+    private SelectedMode selectedMode;
+
+    public Pie() {
+        this.type(SeriesType.pie);
+    }
+
+    public Pie(String name) {
+        super(name);
+        this.type(SeriesType.pie);
+    }
+
+    public Object[] center() {
+        return this.center;
+    }
+
+    public Pie center(Object[] center) {
+        this.center = center;
+        return this;
+    }
+
+    public Object radius() {
+        return this.radius;
+    }
 
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
@@ -54,18 +109,12 @@ public class Pie extends Series<Pie> {
     /**
      * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
      * 传数组实现环形图，[内半径，外半径]
-     */
-    private Object radius;
-
-    /**
-     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
-     * 传数组实现环形图，[内半径，外半径]
      *
-     * @param value
+     * @param radius
      * @return
      */
-    public Pie radius(Object value) {
-        this.radius = value;
+    public Pie radius(Object radius) {
+        this.radius = radius;
         return this;
     }
 
@@ -82,101 +131,58 @@ public class Pie extends Series<Pie> {
         return this;
     }
 
-    /**
-     * 开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
-     */
-	private Integer startAngle;
-
-	public Integer startAngle(){
-		return this.startAngle;
-	}
-
-	public Pie startAngle(Integer startAngle){
-		this.startAngle = startAngle;
-		return this;
-	}
-
-    /**
-     * 最小角度，可用于防止某item的值过小而影响交互
-     */
-	private Integer minAngle;
-
-	public Integer minAngle(){
-		return this.minAngle;
-	}
-
-	public Pie minAngle(Integer minAngle){
-		this.minAngle = minAngle;
-		return this;
-	}
-
-    /**
-     * 显示是否顺时针
-     */
-	private Boolean clockWise;
-
-	public Boolean clockWise(){
-		return this.clockWise;
-	}
-
-	public Pie clockWise(Boolean clockWise){
-		this.clockWise = clockWise;
-		return this;
-	}
-
-    /**
-     * 南丁格尔玫瑰图模式，'radius'（半径） | 'area'（面积）
-     *
-     * @see com.github.abel533.echarts.code.RoseType
-     */
-	private RoseType roseType;
-
-	public RoseType roseType(){
-		return this.roseType;
-	}
-
-	public Pie roseType(RoseType roseType){
-		this.roseType = roseType;
-		return this;
-	}
-
-    /**
-     * 选中是扇区偏移量
-     */
-	private Integer selectedOffset;
-
-	public Integer selectedOffset(){
-		return this.selectedOffset;
-	}
-
-	public Pie selectedOffset(Integer selectedOffset){
-		this.selectedOffset = selectedOffset;
-		return this;
-	}
-
-    /**
-     * 选中模式，默认关闭，可选single，multiple
-     *
-     * @see com.github.abel533.echarts.code.SelectedMode
-     */
-	private SelectedMode selectedMode;
-
-	public SelectedMode selectedMode(){
-		return this.selectedMode;
-	}
-
-	public Pie selectedMode(SelectedMode selectedMode){
-		this.selectedMode = selectedMode;
-		return this;
-	}
-
-    public Pie() {
-        this.type(SeriesType.pie);
+    public Integer startAngle() {
+        return this.startAngle;
     }
 
-    public Pie(String name) {
-        super(name);
-        this.type(SeriesType.pie);
+    public Pie startAngle(Integer startAngle) {
+        this.startAngle = startAngle;
+        return this;
+    }
+
+    public Integer minAngle() {
+        return this.minAngle;
+    }
+
+    public Pie minAngle(Integer minAngle) {
+        this.minAngle = minAngle;
+        return this;
+    }
+
+    public Boolean clockWise() {
+        return this.clockWise;
+    }
+
+    public Pie clockWise(Boolean clockWise) {
+        this.clockWise = clockWise;
+        return this;
+    }
+
+    public RoseType roseType() {
+        return this.roseType;
+    }
+
+    public Pie roseType(RoseType roseType) {
+        this.roseType = roseType;
+        return this;
+    }
+
+    public Integer selectedOffset() {
+        return this.selectedOffset;
+    }
+
+    public Pie selectedOffset(Integer selectedOffset) {
+        this.selectedOffset = selectedOffset;
+        return this;
+    }
+
+    public SelectedMode selectedMode() {
+        return this.selectedMode;
+    }
+
+    public Pie selectedMode(SelectedMode selectedMode) {
+        this.selectedMode = selectedMode;
+        return this;
     }
 
     public Object[] getCenter() {

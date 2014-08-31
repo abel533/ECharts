@@ -35,46 +35,17 @@ public class LegendData {
     /**
      * 名称
      */
-	private String name;
-
-	public String name(){
-		return this.name;
-	}
-
-	public LegendData name(String name){
-		this.name = name;
-		return this;
-	}
-
+    private String name;
     /**
      * 文字样式
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-	private TextStyle textStyle;
-
-	public TextStyle textStyle(){
-		return this.textStyle;
-	}
-
-	public LegendData textStyle(TextStyle textStyle){
-		this.textStyle = textStyle;
-		return this;
-	}
-
+    private TextStyle textStyle;
     /**
      * 图标
      */
-	private String icon;
-
-	public String icon(){
-		return this.icon;
-	}
-
-	public LegendData icon(String icon){
-		this.icon = icon;
-		return this;
-	}
+    private String icon;
 
     public LegendData(String name) {
         this.name = name;
@@ -88,6 +59,60 @@ public class LegendData {
     public LegendData(String name, TextStyle textStyle, String icon) {
         this.name = name;
         this.textStyle = textStyle;
+        this.icon = icon;
+    }
+
+    public String name() {
+        return this.name;
+    }
+
+    public LegendData name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public LegendData textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public String icon() {
+        return this.icon;
+    }
+
+    public LegendData icon(String icon) {
+        this.icon = icon;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 }
