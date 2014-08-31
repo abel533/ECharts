@@ -26,6 +26,7 @@ package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.code.MarkType;
 import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.style.TextStyle;
 
 /**
  * Description: BasicData
@@ -34,6 +35,7 @@ import com.github.abel533.echarts.style.ItemStyle;
  */
 public abstract class BasicData<T> {
     private String name;
+    private String text;
     private Object value;
     /**
      * 饼图、雷达图、力导、和弦图使用x,y
@@ -50,6 +52,12 @@ public abstract class BasicData<T> {
     private Object symbol;
     private Object symbolSize;
     private ItemStyle itemStyle;
+    /**
+     * 特殊样式
+     *
+     * @see com.github.abel533.echarts.style.TextStyle
+     */
+    private TextStyle textStyle;
 
     public BasicData() {
     }
@@ -74,6 +82,27 @@ public abstract class BasicData<T> {
         this.value = value;
         this.symbol = symbol;
         this.symbolSize = symbolSize;
+    }
+
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public T textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return (T) this;
+    }
+
+    public String text() {
+        return this.text;
+    }
+
+    public T text(String text) {
+        this.text = text;
+        return (T) this;
     }
 
     public String name() {
@@ -257,5 +286,21 @@ public abstract class BasicData<T> {
     public T setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return (T) this;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
     }
 }

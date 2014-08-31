@@ -31,6 +31,7 @@ import com.github.abel533.echarts.code.PolarType;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -115,6 +116,14 @@ public class Polar extends AbstractData<Polar> implements Component {
 
     public Polar center(Object[] center) {
         this.center = center;
+        return this;
+    }
+
+    public Polar indicator(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.indicator().addAll(Arrays.asList(values));
         return this;
     }
 

@@ -67,6 +67,9 @@ public class SeriesData {
     }
 
     public Tooltip tooltip() {
+        if (this.tooltip == null) {
+            this.tooltip = new Tooltip();
+        }
         return this.tooltip;
     }
 

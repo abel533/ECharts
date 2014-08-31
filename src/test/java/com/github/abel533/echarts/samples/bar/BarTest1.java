@@ -44,6 +44,7 @@ public class BarTest1 implements TestConfig {
 
     @Test
     public void test() {
+        //地址：http://echarts.baidu.com/doc/example/bar1.html
         EnhancedOption option = new EnhancedOption();
         option.title().text("某地区蒸发量和降水量").subtext("纯属虚构");
         option.tooltip().trigger(Trigger.axis);

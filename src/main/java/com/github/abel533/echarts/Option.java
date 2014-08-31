@@ -90,6 +90,11 @@ public class Option {
      * 直角坐标系内绘图网格（详见grid）
      */
     private Grid grid;
+
+    /**
+     * 极坐标
+     */
+    private List<Polar> polar;
     /**
      * 直角坐标系中横轴数组（详见xAxis），数组中每一项代表一条横轴坐标轴，标准（1.0）中规定最多同时存在2条横轴
      */
@@ -106,6 +111,26 @@ public class Option {
      * 当使用timeline时，每一组数据要放到单独的option中
      */
     private List<Option> options;
+
+    public List<Polar> polar() {
+        if (this.polar == null) {
+            this.polar = new ArrayList<Polar>();
+        }
+        return this.polar;
+    }
+
+    public Option polar(List<Polar> polar) {
+        this.polar = polar;
+        return this;
+    }
+
+    public Option polar(Polar... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.polar().addAll(Arrays.asList(values));
+        return this;
+    }
 
     public Option timeline(Timeline timeline) {
         this.timeline = timeline;
@@ -545,5 +570,13 @@ public class Option {
 
     public void setOptions(List<Option> options) {
         this.options = options;
+    }
+
+    public List<Polar> getPolar() {
+        return polar;
+    }
+
+    public void setPolar(List<Polar> polar) {
+        this.polar = polar;
     }
 }
