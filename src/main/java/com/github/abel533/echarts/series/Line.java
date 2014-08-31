@@ -29,18 +29,27 @@ import com.github.abel533.echarts.code.SeriesType;
 /**
  * @author liuzh
  */
-public class Line extends Series {
+public class Line extends Series<Line> {
     /**
      * 平滑曲线
      */
-    public Boolean smooth;
+	private Boolean smooth;
+
+	public Boolean smooth(){
+		return this.smooth;
+	}
+
+	public Line smooth(Boolean smooth){
+		this.smooth = smooth;
+		return this;
+	}
 
     public Line() {
-        this.type = SeriesType.line;
+        this.type(SeriesType.line);
     }
 
     public Line(String name) {
         super(name);
-        this.type = SeriesType.line;
+        this.type(SeriesType.line);
     }
 }

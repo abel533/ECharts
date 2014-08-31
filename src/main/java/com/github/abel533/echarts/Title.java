@@ -34,39 +34,102 @@ public class Title extends Basic implements Component {
     /**
      * 主标题文本，'\n'指定换行
      */
-    public String text;
+	private String text;
+
+	public String text(){
+		return this.text;
+	}
+
+	public Title text(String text){
+		this.text = text;
+		return this;
+	}
 
     /**
      * 主标题文本超链接
      */
-    public String link;
+	private String link;
+
+	public String link(){
+		return this.link;
+	}
+
+	public Title link(String link){
+		this.link = link;
+		return this;
+	}
 
     /**
      * 指定窗口打开主标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
      */
-    public String target;
+	private String target;
+
+	public String target(){
+		return this.target;
+	}
+
+	public Title target(String target){
+		this.target = target;
+		return this;
+	}
 
     /**
      * 副标题文本，'\n'指定换行
      */
-    public String subtext;
+	private String subtext;
+
+	public String subtext(){
+		return this.subtext;
+	}
+
+	public Title subtext(String subtext){
+		this.subtext = subtext;
+		return this;
+	}
 
     /**
      * 副标题文本超链接
      */
-    public String sublink;
+	private String sublink;
+
+	public String sublink(){
+		return this.sublink;
+	}
+
+	public Title sublink(String sublink){
+		this.sublink = sublink;
+		return this;
+	}
 
     /**
      * 指定窗口打开副标题超链接，支持'self' | 'blank'，不指定等同为'blank'（新窗口）
      */
-    public String subtarget;
+	private String subtarget;
+
+	public String subtarget(){
+		return this.subtarget;
+	}
+
+	public Title subtarget(String subtarget){
+		this.subtarget = subtarget;
+		return this;
+	}
 
     /**
      * 水平对齐方式，默认根据x设置自动调整，可选为： left' | 'right' | 'center
      *
      * @see com.github.abel533.echarts.code.XPosition
      */
-    public XPosition textAlign;
+	private XPosition textAlign;
+
+	public XPosition textAlign(){
+		return this.textAlign;
+	}
+
+	public Title textAlign(XPosition textAlign){
+		this.textAlign = textAlign;
+		return this;
+	}
 
     /**
      * 主标题文本样式（详见textStyle）

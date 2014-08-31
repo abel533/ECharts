@@ -30,8 +30,44 @@ package com.github.abel533.echarts.series;
  * @author liuzh
  */
 public class MapLocation {
-    public Object x;
-    public Object y;
-    public Object width;
-    public Object height;
+	private Object x;
+
+	public Object x(){
+		return this.x;
+	}
+
+	public MapLocation x(Object x){
+		this.x = x;
+		return this;
+	}
+	private Object y;
+
+	public Object y(){
+		return this.y;
+	}
+
+	public MapLocation y(Object y){
+		this.y = y;
+		return this;
+	}
+	private Object width;
+
+	public Object width(){
+		return this.width;
+	}
+
+	public MapLocation width(Object width){
+		this.width = width;
+		return this;
+	}
+	private Object height;
+
+	public Object height(){
+		return this.height;
+	}
+
+	public MapLocation height(Object height){
+		this.height = height;
+		return this;
+	}
 }

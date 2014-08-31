@@ -40,17 +40,44 @@ public class Legend extends Basic implements Data<Legend>, Component {
      *
      * @see com.github.abel533.echarts.code.Align
      */
-    public Align orient;
+	private Align orient;
+
+	public Align orient(){
+		return this.orient;
+	}
+
+	public Legend orient(Align orient){
+		this.orient = orient;
+		return this;
+	}
 
     /**
      * 图例图形宽度
      */
-    public Integer itemWidth;
+	private Integer itemWidth;
+
+	public Integer itemWidth(){
+		return this.itemWidth;
+	}
+
+	public Legend itemWidth(Integer itemWidth){
+		this.itemWidth = itemWidth;
+		return this;
+	}
 
     /**
      * 图例图形高度
      */
-    public Integer itemHeight;
+	private Integer itemHeight;
+
+	public Integer itemHeight(){
+		return this.itemHeight;
+	}
+
+	public Legend itemHeight(Integer itemHeight){
+		this.itemHeight = itemHeight;
+		return this;
+	}
 
     /**
      * 文字样式
@@ -76,7 +103,16 @@ public class Legend extends Basic implements Data<Legend>, Component {
      *
      * @see com.github.abel533.echarts.code.SelectedMode
      */
-    public Object selectedMode;
+	private Object selectedMode;
+
+	public Object selectedMode(){
+		return this.selectedMode;
+	}
+
+	public Legend selectedMode(Object selectedMode){
+		this.selectedMode = selectedMode;
+		return this;
+	}
 
     /**
      * 图例内容数组，数组项通常为{string}，每一项代表一个系列的name。

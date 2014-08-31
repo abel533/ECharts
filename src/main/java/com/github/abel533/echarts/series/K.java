@@ -31,14 +31,14 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
-public class K extends Series {
+public class K extends Series<K> {
     public K() {
-        this.type = SeriesType.k;
+        this.type(SeriesType.k);
     }
 
     public K(String name) {
         super(name);
-        this.type = SeriesType.k;
+        this.type(SeriesType.k);
     }
 
     public K addData(Double open, Double close, Double min, Double max) {

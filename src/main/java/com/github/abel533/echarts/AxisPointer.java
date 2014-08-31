@@ -40,7 +40,16 @@ public class AxisPointer {
      *
      * @see com.github.abel533.echarts.code.PointerType
      */
-    public PointerType type;
+	private PointerType type;
+
+	public PointerType type(){
+		return this.type;
+	}
+
+	public AxisPointer type(PointerType type){
+		this.type = type;
+		return this;
+	}
 
     /**
      * 设置直线指示器

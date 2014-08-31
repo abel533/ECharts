@@ -30,7 +30,16 @@ package com.github.abel533.echarts.data;
  * @author liuzh
  */
 public class ScatterData {
-    public Object[] value;
+	private Object[] value;
+
+	public Object[] value(){
+		return this.value;
+	}
+
+	public ScatterData value(Object[] value){
+		this.value = value;
+		return this;
+	}
 
     /**
      * 横值，纵值，大小(可选)

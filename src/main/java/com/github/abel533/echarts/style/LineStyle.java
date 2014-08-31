@@ -33,42 +33,114 @@ public class LineStyle {
     /**
      * 阳线颜色
      */
-    public Object color;
+	private Object color;
+
+	public Object color(){
+		return this.color;
+	}
+
+	public LineStyle color(Object color){
+		this.color = color;
+		return this;
+	}
 
     /**
      * 阴线颜色
      */
-    public Object color0;
+	private Object color0;
+
+	public Object color0(){
+		return this.color0;
+	}
+
+	public LineStyle color0(Object color0){
+		this.color0 = color0;
+		return this;
+	}
 
     /**
      * 线条样式，可选为：'solid' | 'dotted' | 'dashed'
      *
      * @see com.github.abel533.echarts.code.LineType
      */
-    public LineType type;
+	private LineType type;
+
+	public LineType type(){
+		return this.type;
+	}
+
+	public LineStyle type(LineType type){
+		this.type = type;
+		return this;
+	}
 
     /**
      * 线宽
      */
-    public Integer width;
+	private Integer width;
+
+	public Integer width(){
+		return this.width;
+	}
+
+	public LineStyle width(Integer width){
+		this.width = width;
+		return this;
+	}
 
     /**
      * 折线主线(IE8+)有效，阴影色彩，支持rgba
      */
-    public String shadowColor;
+	private String shadowColor;
+
+	public String shadowColor(){
+		return this.shadowColor;
+	}
+
+	public LineStyle shadowColor(String shadowColor){
+		this.shadowColor = shadowColor;
+		return this;
+	}
 
     /**
      * 默认值5，折线主线(IE8+)有效，阴影模糊度，大于0有效
      */
-    public Integer shadowBlur;
+	private Integer shadowBlur;
+
+	public Integer shadowBlur(){
+		return this.shadowBlur;
+	}
+
+	public LineStyle shadowBlur(Integer shadowBlur){
+		this.shadowBlur = shadowBlur;
+		return this;
+	}
 
     /**
      * 默认值3，折线主线(IE8+)有效，阴影横向偏移，正值往右，负值往左
      */
-    public Integer shadowOffsetX;
+	private Integer shadowOffsetX;
+
+	public Integer shadowOffsetX(){
+		return this.shadowOffsetX;
+	}
+
+	public LineStyle shadowOffsetX(Integer shadowOffsetX){
+		this.shadowOffsetX = shadowOffsetX;
+		return this;
+	}
 
     /**
      * 默认值3，折线主线(IE8+)有效，阴影纵向偏移，正值往下，负值往上
      */
-    public Integer shadowOffsetY;
+	private Integer shadowOffsetY;
+
+	public Integer shadowOffsetY(){
+		return this.shadowOffsetY;
+	}
+
+	public LineStyle shadowOffsetY(Integer shadowOffsetY){
+		this.shadowOffsetY = shadowOffsetY;
+		return this;
+	}
 }

@@ -31,28 +31,55 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
-public class Bar extends Series {
+public class Bar extends Series<Bar> {
     /**
      * 柱条最小高度，可用于防止某item的值过小而影响交互
      */
-    public Integer barMinHeight;
+	private Integer barMinHeight;
+
+	public Integer barMinHeight(){
+		return this.barMinHeight;
+	}
+
+	public Bar barMinHeight(Integer barMinHeight){
+		this.barMinHeight = barMinHeight;
+		return this;
+	}
 
     /**
      * 柱间距离，默认为柱形宽度的30%，可设固定值
      */
-    public String barGap;
+	private String barGap;
+
+	public String barGap(){
+		return this.barGap;
+	}
+
+	public Bar barGap(String barGap){
+		this.barGap = barGap;
+		return this;
+	}
 
     /**
      * 类目间柱形距离，默认为类目间距的20%，可设固定值
      */
-    public String barCategoryGap;
+	private String barCategoryGap;
+
+	public String barCategoryGap(){
+		return this.barCategoryGap;
+	}
+
+	public Bar barCategoryGap(String barCategoryGap){
+		this.barCategoryGap = barCategoryGap;
+		return this;
+	}
 
     public Bar() {
-        this.type = SeriesType.bar;
+        this.type(SeriesType.bar);
     }
 
     public Bar(String name) {
         super(name);
-        this.type = SeriesType.bar;
+        this.type(SeriesType.bar);
     }
 }

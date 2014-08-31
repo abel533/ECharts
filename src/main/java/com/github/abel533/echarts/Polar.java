@@ -90,21 +90,57 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 开始角度, 有效输入范围：[-180,180]
      */
-    public Integer startAngle;
+	private Integer startAngle;
+
+	public Integer startAngle(){
+		return this.startAngle;
+	}
+
+	public Polar startAngle(Integer startAngle){
+		this.startAngle = startAngle;
+		return this;
+	}
 
     /**
      * 分割段数，默认为5
      */
-    public Integer splitNumber;
+	private Integer splitNumber;
+
+	public Integer splitNumber(){
+		return this.splitNumber;
+	}
+
+	public Polar splitNumber(Integer splitNumber){
+		this.splitNumber = splitNumber;
+		return this;
+	}
 
     public static class Name {
-        public Boolean show;
-        public TextStyle textStyle;
+        private Boolean show;
+
+        public Boolean show(){
+            return this.show;
+        }
+
+        public Name show(Boolean show){
+            this.show = show;
+            return this;
+        }
+        private TextStyle textStyle;
+
+        public TextStyle textStyle(){
+            return this.textStyle;
+        }
+
+        public Name textStyle(TextStyle textStyle){
+            this.textStyle = textStyle;
+            return this;
+        }
 
         public Name() {
-            this.show = true;
-            this.textStyle = new TextStyle();
-            this.textStyle.color = "#333";
+            this.show(true);
+            this.textStyle(new TextStyle());
+            this.textStyle.color("#333");
         }
     }
 
@@ -139,17 +175,44 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 脱离0值比例，放大聚焦到最终_min，_max区间
      */
-    public Boolean scale;
+	private Boolean scale;
+
+	public Boolean scale(){
+		return this.scale;
+	}
+
+	public Polar scale(Boolean scale){
+		this.scale = scale;
+		return this;
+	}
 
     /**
      * 小数精度，默认为0，无小数点
      */
-    public Integer precision;
+	private Integer precision;
+
+	public Integer precision(){
+		return this.precision;
+	}
+
+	public Polar precision(Integer precision){
+		this.precision = precision;
+		return this;
+	}
 
     /**
      * 整数精度，默认为100，个位和百位为0
      */
-    public Integer power;
+	private Integer power;
+
+	public Integer power(){
+		return this.power;
+	}
+
+	public Polar power(Integer power){
+		this.power = power;
+		return this;
+	}
 
     /**
      * 坐标轴线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
@@ -230,7 +293,16 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 极坐标的形状，'polygon'|'circle' 多边形|圆形
      */
-    public PolarType type;
+	private PolarType type;
+
+	public PolarType type(){
+		return this.type;
+	}
+
+	public Polar type(PolarType type){
+		this.type = type;
+		return this;
+	}
 
     /**
      * 雷达指标列表，同时也是label内容

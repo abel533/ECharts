@@ -41,12 +41,30 @@ public class Feature {
     /**
      * 是否显示
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public Feature show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 标题
      */
-    public Object title;
+	private Object title;
+
+	public Object title(){
+		return this.title;
+	}
+
+	public Feature title(Object title){
+		this.title = title;
+		return this;
+	}
 
     /**
      * 类型
@@ -54,35 +72,89 @@ public class Feature {
      * @see com.github.abel533.echarts.code.Magic
      * @see com.github.abel533.echarts.code.LineType
      */
-    public Object type;
+	private Object type;
+
+	public Object type(){
+		return this.type;
+	}
+
+	public Feature type(Object type){
+		this.type = type;
+		return this;
+	}
 
     /**
      * 只读
      */
-    public Boolean readOnly;
+	private Boolean readOnly;
+
+	public Boolean readOnly(){
+		return this.readOnly;
+	}
+
+	public Feature readOnly(Boolean readOnly){
+		this.readOnly = readOnly;
+		return this;
+	}
 
     /**
      * lang 非IE浏览器支持点击下载，有保存话术，默认是“点击保存”，可修改
      */
-    public Object lang;
+	private Object lang;
+
+	public Object lang(){
+		return this.lang;
+	}
+
+	public Feature lang(Object lang){
+		this.lang = lang;
+		return this;
+	}
 
     /**
      * 线条颜色
      *
      * @see com.github.abel533.echarts.style.LineStyle
      */
-    public LineStyle lineStyle;
+	private LineStyle lineStyle;
+
+	public LineStyle lineStyle(){
+		return this.lineStyle;
+	}
+
+	public Feature lineStyle(LineStyle lineStyle){
+		this.lineStyle = lineStyle;
+		return this;
+	}
 
     /**
      * 文字颜色
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle;
+	private TextStyle textStyle;
+
+	public TextStyle textStyle(){
+		return this.textStyle;
+	}
+
+	public Feature textStyle(TextStyle textStyle){
+		this.textStyle = textStyle;
+		return this;
+	}
 
     /**
      * 图标，image://开头
      */
-    public String icon;
+	private String icon;
+
+	public String icon(){
+		return this.icon;
+	}
+
+	public Feature icon(String icon){
+		this.icon = icon;
+		return this;
+	}
 
 }

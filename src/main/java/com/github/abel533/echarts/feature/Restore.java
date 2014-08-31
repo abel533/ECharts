@@ -29,7 +29,7 @@ package com.github.abel533.echarts.feature;
  */
 public class Restore extends Feature {
     public Restore() {
-        this.show = true;
-        this.title = "还原";
+        this.show(true);
+        this.title("还原");
     }
 }

@@ -32,10 +32,10 @@ import java.util.Map;
  */
 public class DataZoom extends Feature {
     public DataZoom() {
-        this.show = true;
+        this.show(true);
         Map title = new HashMap<String, String>();
         title.put("dataZoom", "区域缩放");
         title.put("dataZoomReset", "区域缩放后退");
-        this.title = title;
+        this.title(title);
     }
 }

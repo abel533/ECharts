@@ -35,42 +35,114 @@ public class Detail {
     /**
      * 属性show控制显示与否
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public Detail show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 标题背景颜色，默认透明
      */
-    public String backgroundColor;
+	private String backgroundColor;
+
+	public String backgroundColor(){
+		return this.backgroundColor;
+	}
+
+	public Detail backgroundColor(String backgroundColor){
+		this.backgroundColor = backgroundColor;
+		return this;
+	}
 
     /**
      * 标题边框颜色
      */
-    public String borderColor;
+	private String borderColor;
+
+	public String borderColor(){
+		return this.borderColor;
+	}
+
+	public Detail borderColor(String borderColor){
+		this.borderColor = borderColor;
+		return this;
+	}
 
     /**
      * borderWidth
      */
-    public Integer borderWidth;
+	private Integer borderWidth;
+
+	public Integer borderWidth(){
+		return this.borderWidth;
+	}
+
+	public Detail borderWidth(Integer borderWidth){
+		this.borderWidth = borderWidth;
+		return this;
+	}
 
     /**
      * 属性width控制详情宽度
      */
-    public Object width;
+	private Object width;
+
+	public Object width(){
+		return this.width;
+	}
+
+	public Detail width(Object width){
+		this.width = width;
+		return this;
+	}
 
     /**
      * 属性height控制详情高度
      */
-    public Object height;
+	private Object height;
+
+	public Object height(){
+		return this.height;
+	}
+
+	public Detail height(Object height){
+		this.height = height;
+		return this;
+	}
 
     /**
      * 属性offsetCenter用于详情定位，数组为横纵相对仪表盘圆心坐标偏移，支持百分比（相对外半径）
      */
-    public Object offsetCenter;
+	private Object offsetCenter;
+
+	public Object offsetCenter(){
+		return this.offsetCenter;
+	}
+
+	public Detail offsetCenter(Object offsetCenter){
+		this.offsetCenter = offsetCenter;
+		return this;
+	}
 
     /**
      * 属性formatter可以格式化文本
      */
-    public String formatter;
+	private String formatter;
+
+	public String formatter(){
+		return this.formatter;
+	}
+
+	public Detail formatter(String formatter){
+		this.formatter = formatter;
+		return this;
+	}
 
     /**
      * 属性textStyle（详见textStyle）控制文本样式

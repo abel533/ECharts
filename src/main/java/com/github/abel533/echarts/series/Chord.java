@@ -32,48 +32,111 @@ import com.github.abel533.echarts.code.Sort;
  *
  * @author liuzh
  */
-public class Chord extends Series {
+public class Chord extends Series<Chord> {
     /**
      * 每个sector之间的间距(用角度表示)
      */
-    public Integer padding;
+	private Integer padding;
+
+	public Integer padding(){
+		return this.padding;
+	}
+
+	public Chord padding(Integer padding){
+		this.padding = padding;
+		return this;
+	}
 
     /**
      * 数据排序， 可以取none, ascending, descending
      */
-    public Sort sort;
+	private Sort sort;
+
+	public Sort sort(){
+		return this.sort;
+	}
+
+	public Chord sort(Sort sort){
+		this.sort = sort;
+		return this;
+	}
 
     /**
      * 数据排序（弦）， 可以取none, ascending, descending
      */
-    public Sort sortSub;
+	private Sort sortSub;
+
+	public Sort sortSub(){
+		return this.sortSub;
+	}
+
+	public Chord sortSub(Sort sortSub){
+		this.sortSub = sortSub;
+		return this;
+	}
 
     /**
      * 是否显示刻度
      */
-    public Boolean showScale;
+	private Boolean showScale;
+
+	public Boolean showScale(){
+		return this.showScale;
+	}
+
+	public Chord showScale(Boolean showScale){
+		this.showScale = showScale;
+		return this;
+	}
 
     /**
      * 是否显示刻度文字
      */
-    public Boolean showScaleText;
+	private Boolean showScaleText;
+
+	public Boolean showScaleText(){
+		return this.showScaleText;
+	}
+
+	public Chord showScaleText(Boolean showScaleText){
+		this.showScaleText = showScaleText;
+		return this;
+	}
 
     /**
      * 显示是否顺时针
      */
-    public Boolean clockWise;
+	private Boolean clockWise;
+
+	public Boolean clockWise(){
+		return this.clockWise;
+	}
+
+	public Chord clockWise(Boolean clockWise){
+		this.clockWise = clockWise;
+		return this;
+	}
 
     /**
      * 关系数据，用二维数组表示，项 [i][j] 的数值表示 i 到 j 的关系数据
      */
-    public Object[][] matrix;
+	private Object[][] matrix;
+
+	public Object[][] matrix(){
+		return this.matrix;
+	}
+
+	public Chord matrix(Object[][] matrix){
+		this.matrix = matrix;
+		return this;
+	}
 
     public Chord() {
-        this.type = SeriesType.chord;
+        this.type(SeriesType.chord);
     }
 
     public Chord(String name) {
         super(name);
-        this.type = SeriesType.chord;
+        this.type(SeriesType.chord);
     }
 }

@@ -34,55 +34,145 @@ public class Tooltip extends Basic implements Component {
     /**
      * 显示策略，可选为：true（显示） | false（隐藏）
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public Tooltip show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * tooltip主体内容显示策略，只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为falase，
      * 可选为：true（显示） | false（隐藏）
      */
-    public Boolean showContent;
+	private Boolean showContent;
+
+	public Boolean showContent(){
+		return this.showContent;
+	}
+
+	public Tooltip showContent(Boolean showContent){
+		this.showContent = showContent;
+		return this;
+	}
 
     /**
      * 触发类型，默认数据触发，见下图，可选为：'item' | 'axis'
      *
      * @see com.github.abel533.echarts.code.Trigger
      */
-    public Trigger trigger;
+	private Trigger trigger;
+
+	public Trigger trigger(){
+		return this.trigger;
+	}
+
+	public Tooltip trigger(Trigger trigger){
+		this.trigger = trigger;
+		return this;
+	}
 
     /**
      *
      */
-    public Object position;
+	private Object position;
+
+	public Object position(){
+		return this.position;
+	}
+
+	public Tooltip position(Object position){
+		this.position = position;
+		return this;
+	}
 
     /**
      * 位置指定，传入{Array}，如[x, y]， 固定位置[x, y]；传入{Function}，如function([x, y]) {return [newX,newY]}，默认显示坐标为输入参数，用户指定的新坐标为输出返回。
      */
-    public Object formatter;
+	private Object formatter;
+
+	public Object formatter(){
+		return this.formatter;
+	}
+
+	public Tooltip formatter(Object formatter){
+		this.formatter = formatter;
+		return this;
+	}
 
     /**
      * 内容格式器：{string}（Template） | {Function}，支持异步回调见表格下方
      */
-    public String islandFormatter;
+	private String islandFormatter;
+
+	public String islandFormatter(){
+		return this.islandFormatter;
+	}
+
+	public Tooltip islandFormatter(String islandFormatter){
+		this.islandFormatter = islandFormatter;
+		return this;
+	}
 
     /**
      * 默认20，显示延迟，添加显示延迟可以避免频繁切换，特别是在详情内容需要异步获取的场景，单位ms
      */
-    public Integer showDelay;
+	private Integer showDelay;
+
+	public Integer showDelay(){
+		return this.showDelay;
+	}
+
+	public Tooltip showDelay(Integer showDelay){
+		this.showDelay = showDelay;
+		return this;
+	}
 
     /**
      * 默认100，隐藏延迟，单位ms
      */
-    public Integer hideDelay;
+	private Integer hideDelay;
+
+	public Integer hideDelay(){
+		return this.hideDelay;
+	}
+
+	public Tooltip hideDelay(Integer hideDelay){
+		this.hideDelay = hideDelay;
+		return this;
+	}
 
     /**
      * 动画变换时长，单位s，如果你希望tooltip的跟随实时响应，showDelay设置为0是关键，同时transitionDuration设0也会有交互体验上的差别
      */
-    public Double transitionDuration;
+	private Double transitionDuration;
+
+	public Double transitionDuration(){
+		return this.transitionDuration;
+	}
+
+	public Tooltip transitionDuration(Double transitionDuration){
+		this.transitionDuration = transitionDuration;
+		return this;
+	}
 
     /**
      * 提示边框圆角，单位px，默认为4
      */
-    public Integer borderRadius;
+	private Integer borderRadius;
+
+	public Integer borderRadius(){
+		return this.borderRadius;
+	}
+
+	public Tooltip borderRadius(Integer borderRadius){
+		this.borderRadius = borderRadius;
+		return this;
+	}
 
     /**
      * 坐标轴指示器，坐标轴触发有效

@@ -29,9 +29,9 @@ package com.github.abel533.echarts.feature;
  */
 public class DataView extends Feature {
     public DataView() {
-        this.show = true;
-        this.title = "数据视图";
-        this.readOnly = false;
-        this.lang = new String[]{"Data View", "close", "refresh"};
+        this.show(true);
+        this.title("数据视图");
+        this.readOnly(false);
+        this.lang(new String[]{"Data View", "close", "refresh"});
     }
 }

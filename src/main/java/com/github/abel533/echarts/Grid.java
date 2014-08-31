@@ -33,22 +33,58 @@ public class Grid extends Basic implements Component {
     /**
      * 直角坐标系内绘图网格左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
      */
-    public Object x2;
+	private Object x2;
+
+	public Object x2(){
+		return this.x2;
+	}
+
+	public Grid x2(Object x2){
+		this.x2 = x2;
+		return this;
+	}
 
     /**
      * 直角坐标系内绘图网格左上角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
      */
-    public Object y2;
+	private Object y2;
+
+	public Object y2(){
+		return this.y2;
+	}
+
+	public Grid y2(Object y2){
+		this.y2 = y2;
+		return this;
+	}
 
     /**
      * 直角坐标系内绘图网格（不含坐标轴）宽度，默认为总宽度 - x - x2，数值单位px，指定width后将忽略x2，见下图。
      * 支持百分比（字符串），如'50%'(显示区域一半的宽度)
      */
-    public Object width;
+	private Object width;
+
+	public Object width(){
+		return this.width;
+	}
+
+	public Grid width(Object width){
+		this.width = width;
+		return this;
+	}
 
     /**
      * 直角坐标系内绘图网格（不含坐标轴）高度，默认为总宽度 - y - y2，数值单位px，指定height后将忽略y2，见下图。
      * 支持百分比（字符串），如'50%'(显示区域一半的高度)
      */
-    public Object height;
+	private Object height;
+
+	public Object height(){
+		return this.height;
+	}
+
+	public Grid height(Object height){
+		this.height = height;
+		return this;
+	}
 }

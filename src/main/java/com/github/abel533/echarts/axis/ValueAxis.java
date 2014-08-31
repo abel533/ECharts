@@ -35,35 +35,89 @@ public class ValueAxis extends Axis {
     /**
      * 指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
      */
-    public Integer min;
+	private Integer min;
+
+	public Integer min(){
+		return this.min;
+	}
+
+	public ValueAxis min(Integer min){
+		this.min = min;
+		return this;
+	}
 
     /**
      * 指定的最大值，eg: 100，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[1]
      */
-    public Integer max;
+	private Integer max;
+
+	public Integer max(){
+		return this.max;
+	}
+
+	public ValueAxis max(Integer max){
+		this.max = max;
+		return this;
+	}
 
     /**
      * 默认值false，脱离0值比例，放大聚焦到最终_min，_max区间
      */
-    public Boolean scale;
+	private Boolean scale;
+
+	public Boolean scale(){
+		return this.scale;
+	}
+
+	public ValueAxis scale(Boolean scale){
+		this.scale = scale;
+		return this;
+	}
 
     /**
      * 小数精度，默认为0，无小数点
      */
-    public Integer precision;
+	private Integer precision;
+
+	public Integer precision(){
+		return this.precision;
+	}
+
+	public ValueAxis precision(Integer precision){
+		this.precision = precision;
+		return this;
+	}
 
     /**
      * 整数精度，默认为100，个位和百位为0
      */
-    public Integer power;
+	private Integer power;
+
+	public Integer power(){
+		return this.power;
+	}
+
+	public ValueAxis power(Integer power){
+		this.power = power;
+		return this;
+	}
 
     /**
      * 分割段数，默认为5
      */
-    public Integer splitNumber;
+	private Integer splitNumber;
+
+	public Integer splitNumber(){
+		return this.splitNumber;
+	}
+
+	public ValueAxis splitNumber(Integer splitNumber){
+		this.splitNumber = splitNumber;
+		return this;
+	}
 
 
     public ValueAxis() {
-        this.type = AxisType.value;
+        this.type(AxisType.value);
     }
 }

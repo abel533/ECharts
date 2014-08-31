@@ -35,29 +35,83 @@ public class Label {
     /**
      * 是否显示，在Timeline中默认true
      */
-    public Boolean show;
+	private Boolean show;
 
-    public Object position;
+	public Boolean show(){
+		return this.show;
+	}
+
+	public Label show(Boolean show){
+		this.show = show;
+		return this;
+	}
+
+	private Object position;
+
+	public Object position(){
+		return this.position;
+	}
+
+	public Label position(Object position){
+		this.position = position;
+		return this;
+	}
 
     /**
      * 挑选间隔，默认为'auto'，可选为：'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}
      */
-    public Object interval;
+	private Object interval;
+
+	public Object interval(){
+		return this.interval;
+	}
+
+	public Label interval(Object interval){
+		this.interval = interval;
+		return this;
+	}
 
     /**
      * rotate : 旋转角度，默认为0，不旋转，正值为逆时针，负值为顺时针，可选为：-90 ~ 90
      */
-    public Integer rotate;
+	private Integer rotate;
+
+	public Integer rotate(){
+		return this.rotate;
+	}
+
+	public Label rotate(Integer rotate){
+		this.rotate = rotate;
+		return this;
+	}
 
     /**
      * [Axis有效]坐标轴文本标签是否可点击
      */
-    public Boolean clickable;
+	private Boolean clickable;
+
+	public Boolean clickable(){
+		return this.clickable;
+	}
+
+	public Label clickable(Boolean clickable){
+		this.clickable = clickable;
+		return this;
+	}
 
     /**
      * 间隔名称格式器：{string}（Template） | {Function}
      */
-    public Object formatter;
+	private Object formatter;
+
+	public Object formatter(){
+		return this.formatter;
+	}
+
+	public Label formatter(Object formatter){
+		this.formatter = formatter;
+		return this;
+	}
 
     /**
      * 文字样式（详见{@link com.github.abel533.echarts.style.TextStyle}）
@@ -77,7 +131,16 @@ public class Label {
     /**
      * 坐标轴文本标签与坐标轴的间距
      */
-    public Integer margin;
+	private Integer margin;
+
+	public Integer margin(){
+		return this.margin;
+	}
+
+	public Label margin(Integer margin){
+		this.margin = margin;
+		return this;
+	}
 
     public TextStyle getTextStyle() {
         return textStyle;

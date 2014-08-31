@@ -33,28 +33,118 @@ import com.github.abel533.echarts.style.ItemStyle;
  * @author liuzh
  */
 public class PointData {
-    public String name;
-    public Object value;
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public PointData name(String name){
+		this.name = name;
+		return this;
+	}
+	private Object value;
+
+	public Object value(){
+		return this.value;
+	}
+
+	public PointData value(Object value){
+		this.value = value;
+		return this;
+	}
 
     /**
      * 饼图、雷达图、力导、和弦图使用x,y
      */
-    public Integer x;
-    public Integer y;
+	private Integer x;
+
+	public Integer x(){
+		return this.x;
+	}
+
+	public PointData x(Integer x){
+		this.x = x;
+		return this;
+	}
+	private Integer y;
+
+	public Integer y(){
+		return this.y;
+	}
+
+	public PointData y(Integer y){
+		this.y = y;
+		return this;
+	}
 
     /**
      * 在存在直角坐标系的图表如折线、柱形、K线、散点图中
      * 除了通过直接指定位置外，如果希望标注基于直角系的定位，可以通过xAxis，yAxis
      */
-    public Integer xAxis;
-    public Integer yAxis;
+	private Integer xAxis;
 
-    public MarkType type;
+	public Integer xAxis(){
+		return this.xAxis;
+	}
 
-    public Object symbol;
-    public Object symbolSize;
+	public PointData xAxis(Integer xAxis){
+		this.xAxis = xAxis;
+		return this;
+	}
+	private Integer yAxis;
 
-    public ItemStyle itemStyle;
+	public Integer yAxis(){
+		return this.yAxis;
+	}
+
+	public PointData yAxis(Integer yAxis){
+		this.yAxis = yAxis;
+		return this;
+	}
+
+	private MarkType type;
+
+	public MarkType type(){
+		return this.type;
+	}
+
+	public PointData type(MarkType type){
+		this.type = type;
+		return this;
+	}
+
+	private Object symbol;
+
+	public Object symbol(){
+		return this.symbol;
+	}
+
+	public PointData symbol(Object symbol){
+		this.symbol = symbol;
+		return this;
+	}
+	private Object symbolSize;
+
+	public Object symbolSize(){
+		return this.symbolSize;
+	}
+
+	public PointData symbolSize(Object symbolSize){
+		this.symbolSize = symbolSize;
+		return this;
+	}
+
+	private ItemStyle itemStyle;
+
+	public ItemStyle itemStyle(){
+		return this.itemStyle;
+	}
+
+	public PointData itemStyle(ItemStyle itemStyle){
+		this.itemStyle = itemStyle;
+		return this;
+	}
 
     public PointData() {
     }

@@ -38,39 +38,102 @@ public abstract class Basic {
      *
      * @see com.github.abel533.echarts.code.XPosition
      */
-    public Object x;
+	private Object x;
+
+	public Object x(){
+		return this.x;
+	}
+
+	public Basic x(Object x){
+		this.x = x;
+		return this;
+	}
 
     /**
      * 垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
      *
      * @see com.github.abel533.echarts.code.YPosition
      */
-    public Object y;
+	private Object y;
+
+	public Object y(){
+		return this.y;
+	}
+
+	public Basic y(Object y){
+		this.y = y;
+		return this;
+	}
 
     /**
      * 标题背景颜色，默认透明
      */
-    public String backgroundColor;
+	private String backgroundColor;
+
+	public String backgroundColor(){
+		return this.backgroundColor;
+	}
+
+	public Basic backgroundColor(String backgroundColor){
+		this.backgroundColor = backgroundColor;
+		return this;
+	}
 
     /**
      * 标题边框颜色
      */
-    public String borderColor;
+	private String borderColor;
+
+	public String borderColor(){
+		return this.borderColor;
+	}
+
+	public Basic borderColor(String borderColor){
+		this.borderColor = borderColor;
+		return this;
+	}
 
     /**
      * borderWidth
      */
-    public Integer borderWidth;
+	private Integer borderWidth;
+
+	public Integer borderWidth(){
+		return this.borderWidth;
+	}
+
+	public Basic borderWidth(Integer borderWidth){
+		this.borderWidth = borderWidth;
+		return this;
+	}
 
     /**
      * 标题内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
      */
-    public Integer padding;
+	private Integer padding;
+
+	public Integer padding(){
+		return this.padding;
+	}
+
+	public Basic padding(Integer padding){
+		this.padding = padding;
+		return this;
+	}
 
     /**
      * 主副标题纵向间隔，单位px，默认为10
      */
-    public Integer itemGap;
+	private Integer itemGap;
+
+	public Integer itemGap(){
+		return this.itemGap;
+	}
+
+	public Basic itemGap(Integer itemGap){
+		this.itemGap = itemGap;
+		return this;
+	}
 
     public void setX(Integer x) {
         this.x = x;

@@ -37,7 +37,7 @@ import com.github.abel533.echarts.series.gauge.Pointer;
  *
  * @author liuzh
  */
-public class Gauge extends Series {
+public class Gauge extends Series<Gauge> {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
      */
@@ -85,32 +85,86 @@ public class Gauge extends Series {
     /**
      * 开始角度, 饼图（90）、仪表盘（225），有效输入范围：[-360,360]
      */
-    public Integer startAngle;
+	private Integer startAngle;
+
+	public Integer startAngle(){
+		return this.startAngle;
+	}
+
+	public Gauge startAngle(Integer startAngle){
+		this.startAngle = startAngle;
+		return this;
+	}
 
     /**
      * 结束角度,有效输入范围：[-360,360]，保证startAngle - endAngle为正值
      */
-    public Integer endAngle;
+	private Integer endAngle;
+
+	public Integer endAngle(){
+		return this.endAngle;
+	}
+
+	public Gauge endAngle(Integer endAngle){
+		this.endAngle = endAngle;
+		return this;
+	}
 
     /**
      * 指定的最小值
      */
-    public Integer min;
+	private Integer min;
+
+	public Integer min(){
+		return this.min;
+	}
+
+	public Gauge min(Integer min){
+		this.min = min;
+		return this;
+	}
 
     /**
      * 指定的最大值
      */
-    public Integer max;
+	private Integer max;
+
+	public Integer max(){
+		return this.max;
+	}
+
+	public Gauge max(Integer max){
+		this.max = max;
+		return this;
+	}
 
     /**
      * 小数精度，默认为0，无小数点
      */
-    public Integer precision;
+	private Integer precision;
+
+	public Integer precision(){
+		return this.precision;
+	}
+
+	public Gauge precision(Integer precision){
+		this.precision = precision;
+		return this;
+	}
 
     /**
      * 分割段数，默认为5，为0时为线性渐变，calculable为true是默认均分100份
      */
-    public Integer splitNumber;
+	private Integer splitNumber;
+
+	public Integer splitNumber(){
+		return this.splitNumber;
+	}
+
+	public Gauge splitNumber(Integer splitNumber){
+		this.splitNumber = splitNumber;
+		return this;
+	}
 
     /**
      * 坐标轴线，默认显示
@@ -246,12 +300,12 @@ public class Gauge extends Series {
     }
 
     public Gauge() {
-        this.type = SeriesType.gauge;
+        this.type(SeriesType.gauge);
     }
 
     public Gauge(String name) {
         super(name);
-        this.type = SeriesType.gauge;
+        this.type(SeriesType.gauge);
     }
 
     public Object[] getCenter() {

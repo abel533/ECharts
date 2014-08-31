@@ -30,9 +30,36 @@ package com.github.abel533.echarts.data;
  * @author liuzh
  */
 public class MapData {
-    public String name;
-    public Object value;
-    public Boolean selected;
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public MapData name(String name){
+		this.name = name;
+		return this;
+	}
+	private Object value;
+
+	public Object value(){
+		return this.value;
+	}
+
+	public MapData value(Object value){
+		this.value = value;
+		return this;
+	}
+	private Boolean selected;
+
+	public Boolean selected(){
+		return this.selected;
+	}
+
+	public MapData selected(Boolean selected){
+		this.selected = selected;
+		return this;
+	}
 
     public MapData(String name, Object value) {
         this.name = name;

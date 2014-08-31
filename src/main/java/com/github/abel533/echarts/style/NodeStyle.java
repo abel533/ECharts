@@ -35,10 +35,28 @@ public class NodeStyle extends LinkStyle {
     /**
      * 可选 'both', 'stroke', 'fill'
      */
-    public BrushType brushType;
+	private BrushType brushType;
+
+	public BrushType brushType(){
+		return this.brushType;
+	}
+
+	public NodeStyle brushType(BrushType brushType){
+		this.brushType = brushType;
+		return this;
+	}
 
     /**
      * 填充颜色
      */
-    public String color;
+	private String color;
+
+	public String color(){
+		return this.color;
+	}
+
+	public NodeStyle color(String color){
+		this.color = color;
+		return this;
+	}
 }

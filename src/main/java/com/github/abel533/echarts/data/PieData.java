@@ -30,8 +30,26 @@ package com.github.abel533.echarts.data;
  * @author liuzh
  */
 public class PieData {
-    public Object value;
-    public String name;
+	private Object value;
+
+	public Object value(){
+		return this.value;
+	}
+
+	public PieData value(Object value){
+		this.value = value;
+		return this;
+	}
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public PieData name(String name){
+		this.name = name;
+		return this;
+	}
 
     public PieData(String name, Object value) {
         this.value = value;

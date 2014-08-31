@@ -42,47 +42,128 @@ public class DataRange extends Basic implements Component {
      *
      * @see com.github.abel533.echarts.code.Align
      */
-    public Align orient;
+	private Align orient;
+
+	public Align orient(){
+		return this.orient;
+	}
+
+	public DataRange orient(Align orient){
+		this.orient = orient;
+		return this;
+	}
 
     /**
      * 默认值20，值域控件图形宽度
      */
-    public Integer itemWidth;
+	private Integer itemWidth;
+
+	public Integer itemWidth(){
+		return this.itemWidth;
+	}
+
+	public DataRange itemWidth(Integer itemWidth){
+		this.itemWidth = itemWidth;
+		return this;
+	}
 
     /**
      * 默认值14，值域控件图形高度
      */
-    public Integer itemHeight;
+	private Integer itemHeight;
+
+	public Integer itemHeight(){
+		return this.itemHeight;
+	}
+
+	public DataRange itemHeight(Integer itemHeight){
+		this.itemHeight = itemHeight;
+		return this;
+	}
 
     /**
      * 指定的最小值，eg: 0，默认无，必须参数
      */
-    public Integer min;
+	private Integer min;
+
+	public Integer min(){
+		return this.min;
+	}
+
+	public DataRange min(Integer min){
+		this.min = min;
+		return this;
+	}
 
     /**
      * 指定的最大值，eg: 100，默认无，必须参数
      */
-    public Integer max;
+	private Integer max;
+
+	public Integer max(){
+		return this.max;
+	}
+
+	public DataRange max(Integer max){
+		this.max = max;
+		return this;
+	}
 
     /**
      * 小数精度，默认为0，无小数点，当 min ~ max 间在当前精度下无法整除splitNumber份时，精度会自动提高以满足均分，不支持不等划分
      */
-    public Integer precision;
+	private Integer precision;
+
+	public Integer precision(){
+		return this.precision;
+	}
+
+	public DataRange precision(Integer precision){
+		this.precision = precision;
+		return this;
+	}
 
     /**
      * 分割段数，默认为5，为0时为线性渐变，calculable为true是默认均分100份
      */
-    public Integer splitNumber;
+	private Integer splitNumber;
+
+	public Integer splitNumber(){
+		return this.splitNumber;
+	}
+
+	public DataRange splitNumber(Integer splitNumber){
+		this.splitNumber = splitNumber;
+		return this;
+	}
 
     /**
      * 是否启用值域漫游，启用后无视splitNumber，值域显示为线性渐变
      */
-    public Boolean calculable;
+	private Boolean calculable;
+
+	public Boolean calculable(){
+		return this.calculable;
+	}
+
+	public DataRange calculable(Boolean calculable){
+		this.calculable = calculable;
+		return this;
+	}
 
     /**
      * 值域漫游是否实时显示
      */
-    public Boolean realtime;
+	private Boolean realtime;
+
+	public Boolean realtime(){
+		return this.realtime;
+	}
+
+	public DataRange realtime(Boolean realtime){
+		this.realtime = realtime;
+		return this;
+	}
 
     /**
      * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
@@ -116,7 +197,16 @@ public class DataRange extends Basic implements Component {
     /**
      * 内容格式器：{string}（Template） | {Function}，模板变量为'{value}'和'{value2}'，代表数值起始值和结束值，函数参数两个，含义同模板变量
      */
-    public Object formatter;
+	private Object formatter;
+
+	public Object formatter(){
+		return this.formatter;
+	}
+
+	public DataRange formatter(Object formatter){
+		this.formatter = formatter;
+		return this;
+	}
 
     /**
      * 值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行

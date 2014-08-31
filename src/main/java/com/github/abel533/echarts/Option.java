@@ -40,28 +40,73 @@ public class Option {
     /**
      * 全图默认背景，（详见backgroundColor），默认为无，透明
      */
-    public Object backgroundColor;
+	private Object backgroundColor;
+
+	public Object backgroundColor(){
+		return this.backgroundColor;
+	}
+
+	public Option backgroundColor(Object backgroundColor){
+		this.backgroundColor = backgroundColor;
+		return this;
+	}
 
     /**
      * 数值系列的颜色列表，（详见color），可配数组，eg：['#87cefa', 'rgba(123,123,123,0.5)','...']，当系列数量个数比颜色列表长度大时将循环选取
      */
-    public Object[] color;
+	private Object[] color;
+
+	public Object[] color(){
+		return this.color;
+	}
+
+	public Option color(Object[] color){
+		this.color = color;
+		return this;
+	}
 
     /**
      * 非IE8-支持渲染为图片，（详见renderAsImage）
      * {boolean | string} false，非IE8-支持渲染为图片，可设为true或指定图片格式（png | jpeg），渲染为图片后实例依然可用（如setOption，resize等），但各种交互失效
      */
-    public Object renderAsImage;
+	private Object renderAsImage;
+
+	public Object renderAsImage(){
+		return this.renderAsImage;
+	}
+
+	public Option renderAsImage(Object renderAsImage){
+		this.renderAsImage = renderAsImage;
+		return this;
+	}
 
     /**
      * 是否启用拖拽重计算特性，默认关闭，（详见calculable，相关的还有 calculableColor， calculableHolderColor， nameConnector， valueConnector）
      */
-    public Boolean calculable;
+	private Boolean calculable;
+
+	public Boolean calculable(){
+		return this.calculable;
+	}
+
+	public Option calculable(Boolean calculable){
+		this.calculable = calculable;
+		return this;
+	}
 
     /**
      * 是否开启动画，默认开启，（详见 animation，相关的还有 addDataAnimation， animationThreshold， animationDuration， animationEasing）
      */
-    public Boolean animation;
+	private Boolean animation;
+
+	public Boolean animation(){
+		return this.animation;
+	}
+
+	public Option animation(Boolean animation){
+		this.animation = animation;
+		return this;
+	}
 
     /**
      * 时间轴（详见timeline），每个图表最多仅有一个时间轴控件

@@ -35,12 +35,30 @@ public class SplitLine {
     /**
      * 默认显示，属性show控制显示与否
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public SplitLine show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 小标记是否显示为间隔，默认等于boundaryGap
      */
-    public Boolean onGap;
+	private Boolean onGap;
+
+	public Boolean onGap(){
+		return this.onGap;
+	}
+
+	public SplitLine onGap(Boolean onGap){
+		this.onGap = onGap;
+		return this;
+	}
 
     /**
      * 属性lineStyle（详见lineStyle）控制线条样式

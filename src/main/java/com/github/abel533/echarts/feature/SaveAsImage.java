@@ -29,9 +29,9 @@ package com.github.abel533.echarts.feature;
  */
 public class SaveAsImage extends Feature {
     public SaveAsImage() {
-        this.show = true;
-        this.title = "保存为图片";
-        type = "png";
-        this.lang = new String[]{"点击保存"};
+        this.show(true);
+        this.title("保存为图片");
+        type("png");
+        this.lang(new String[]{"点击保存"});
     }
 }

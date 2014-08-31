@@ -35,54 +35,144 @@ public class Node {
     /**
      * 节点名称
      */
-    public String name;
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public Node name(String name){
+		this.name = name;
+		return this;
+	}
 
     /**
      * 节点值，在不指定 symbolSize 的时候会被映射成 minRadius - maxRadius 作为节点大小
      */
-    public Integer value;
+	private Integer value;
+
+	public Integer value(){
+		return this.value;
+	}
+
+	public Node value(Integer value){
+		this.value = value;
+		return this;
+	}
 
     /**
      * 强制指定节点的初始值，在不指定的时候会在某个范围内随机生成
      */
-    public Object initial;
+	private Object initial;
+
+	public Object initial(){
+		return this.initial;
+	}
+
+	public Node initial(Object initial){
+		this.initial = initial;
+		return this;
+	}
 
     /**
      * 是否固定节点在 X 轴上的值，配合 initial 使用
      */
-    public Boolean fixX;
+	private Boolean fixX;
+
+	public Boolean fixX(){
+		return this.fixX;
+	}
+
+	public Node fixX(Boolean fixX){
+		this.fixX = fixX;
+		return this;
+	}
 
     /**
      * 是否固定节点在 Y 轴上的值，配合 initial 使用
      */
-    public Boolean fixY;
+	private Boolean fixY;
+
+	public Boolean fixY(){
+		return this.fixY;
+	}
+
+	public Node fixY(Boolean fixY){
+		this.fixY = fixY;
+		return this;
+	}
 
     /**
      * 是否忽略该节点
      */
-    public Boolean ignore;
+	private Boolean ignore;
+
+	public Boolean ignore(){
+		return this.ignore;
+	}
+
+	public Node ignore(Boolean ignore){
+		this.ignore = ignore;
+		return this;
+	}
 
     /**
      * 节点的形状, 详见 symbolList
      *
      * @see com.github.abel533.echarts.code.Symbol
      */
-    public Object symbol;
+	private Object symbol;
+
+	public Object symbol(){
+		return this.symbol;
+	}
+
+	public Node symbol(Object symbol){
+		this.symbol = symbol;
+		return this;
+	}
 
     /**
      * 强制指定节点的大小
      */
-    public Object symbolSize;
+	private Object symbolSize;
+
+	public Object symbolSize(){
+		return this.symbolSize;
+	}
+
+	public Node symbolSize(Object symbolSize){
+		this.symbolSize = symbolSize;
+		return this;
+	}
 
     /**
      * 节点是否能被拖拽
      */
-    public Boolean draggable;
+	private Boolean draggable;
+
+	public Boolean draggable(){
+		return this.draggable;
+	}
+
+	public Node draggable(Boolean draggable){
+		this.draggable = draggable;
+		return this;
+	}
 
     /**
      * 节点的 category index
      */
-    public Integer category;
+	private Integer category;
+
+	public Integer category(){
+		return this.category;
+	}
+
+	public Node category(Integer category){
+		this.category = category;
+		return this;
+	}
 
     /**
      * 详见 itemStyle

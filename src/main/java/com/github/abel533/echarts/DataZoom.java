@@ -35,55 +35,154 @@ public class DataZoom extends Basic implements Component {
     /**
      * 是否显示，当show为true时则接管使用指定类目轴的全部系列数据，如不指定则接管全部直角坐标系数据
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public DataZoom show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      */
-    public Align orient;
+	private Align orient;
+
+	public Align orient(){
+		return this.orient;
+	}
+
+	public DataZoom orient(Align orient){
+		this.orient = orient;
+		return this;
+	}
 
     /**
      * 默认#ccc，数据缩略背景颜色
      */
-    public String dataBackgroundColor;
+	private String dataBackgroundColor;
+
+	public String dataBackgroundColor(){
+		return this.dataBackgroundColor;
+	}
+
+	public DataZoom dataBackgroundColor(String dataBackgroundColor){
+		this.dataBackgroundColor = dataBackgroundColor;
+		return this;
+	}
 
     /**
      * 默认值rgba(144,197,237,0.2)，选择区域填充颜色
      */
-    public String fillerColor;
+	private String fillerColor;
+
+	public String fillerColor(){
+		return this.fillerColor;
+	}
+
+	public DataZoom fillerColor(String fillerColor){
+		this.fillerColor = fillerColor;
+		return this;
+	}
 
     /**
      * 默认值rgba(70,130,180,0.8)，控制手柄颜色
      */
-    public String handleColor;
+	private String handleColor;
+
+	public String handleColor(){
+		return this.handleColor;
+	}
+
+	public DataZoom handleColor(String handleColor){
+		this.handleColor = handleColor;
+		return this;
+	}
 
     /**
      * 当不指定时默认控制所有横向类目，可通过数组指定多个需要控制的横向类目坐标轴Index，仅一个时可直接为数字
      */
-    public Object xAxisIndex;
+	private Object xAxisIndex;
+
+	public Object xAxisIndex(){
+		return this.xAxisIndex;
+	}
+
+	public DataZoom xAxisIndex(Object xAxisIndex){
+		this.xAxisIndex = xAxisIndex;
+		return this;
+	}
 
     /**
      * 当不指定时默认控制所有纵向类目，可通过数组指定多个需要控制的纵向类目坐标轴Index，仅一个时可直接为数字
      */
-    public Object yAxisIndex;
+	private Object yAxisIndex;
+
+	public Object yAxisIndex(){
+		return this.yAxisIndex;
+	}
+
+	public DataZoom yAxisIndex(Object yAxisIndex){
+		this.yAxisIndex = yAxisIndex;
+		return this;
+	}
 
     /**
      * 数据缩放，选择起始比例，默认为0（%），从首个数据起选择
      */
-    public Integer start;
+	private Integer start;
+
+	public Integer start(){
+		return this.start;
+	}
+
+	public DataZoom start(Integer start){
+		this.start = start;
+		return this;
+	}
 
     /**
      * 数据缩放，选择结束比例，默认为100（%），到最后一个数据选择结束
      */
-    public Integer end;
+	private Integer end;
+
+	public Integer end(){
+		return this.end;
+	}
+
+	public DataZoom end(Integer end){
+		this.end = end;
+		return this;
+	}
 
     /**
      * 缩放变化是否实时显示，建议性能较低的浏览器或数据量巨大时不启动实时效果
      */
-    public Boolean realtime;
+	private Boolean realtime;
+
+	public Boolean realtime(){
+		return this.realtime;
+	}
+
+	public DataZoom realtime(Boolean realtime){
+		this.realtime = realtime;
+		return this;
+	}
 
     /**
      * 数据缩放锁，默认为false，当设置为true时选择区域不能伸缩，即(end - start)值保持不变，仅能做数据漫游
      */
-    public Boolean zoomLook;
+	private Boolean zoomLook;
+
+	public Boolean zoomLook(){
+		return this.zoomLook;
+	}
+
+	public DataZoom zoomLook(Boolean zoomLook){
+		this.zoomLook = zoomLook;
+		return this;
+	}
 }

@@ -31,18 +31,27 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
-public class Radar extends Series {
+public class Radar extends Series<Radar> {
     /**
      * 极坐标索引
      */
-    public Integer polarIndex;
+	private Integer polarIndex;
+
+	public Integer polarIndex(){
+		return this.polarIndex;
+	}
+
+	public Radar polarIndex(Integer polarIndex){
+		this.polarIndex = polarIndex;
+		return this;
+	}
 
     public Radar() {
-        this.type = SeriesType.radar;
+        this.type(SeriesType.radar);
     }
 
     public Radar(String name) {
         super(name);
-        this.type = SeriesType.radar;
+        this.type(SeriesType.radar);
     }
 }

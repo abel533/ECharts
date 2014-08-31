@@ -33,7 +33,16 @@ public class LineData extends PointData {
     /**
      * 可以通过valueIndex:0指定为横轴特殊点
      */
-    public Integer valueIndex;
+	private Integer valueIndex;
+
+	public Integer valueIndex(){
+		return this.valueIndex;
+	}
+
+	public LineData valueIndex(Integer valueIndex){
+		this.valueIndex = valueIndex;
+		return this;
+	}
 
     public LineData() {
     }

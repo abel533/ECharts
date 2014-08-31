@@ -35,7 +35,16 @@ public class SplitArea {
     /**
      * 默认不显示，属性show控制显示与否
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public SplitArea show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 属性areaStyle（详见areaStyle）控制区域样式

@@ -40,14 +40,32 @@ public class Toolbox extends Basic implements Component {
     /**
      * 默认false，显示策略，可选为：true（显示） | false（隐藏）
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public Toolbox show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
      * @see com.github.abel533.echarts.code.Align
      */
-    public Align orient;
+	private Align orient;
+
+	public Align orient(){
+		return this.orient;
+	}
+
+	public Toolbox orient(Align orient){
+		this.orient = orient;
+		return this;
+	}
 
     /**
      * 工具箱背景颜色，默认透明
@@ -67,22 +85,58 @@ public class Toolbox extends Basic implements Component {
     /**
      * 无效颜色
      */
-    public String disableColor;
+	private String disableColor;
+
+	public String disableColor(){
+		return this.disableColor;
+	}
+
+	public Toolbox disableColor(String disableColor){
+		this.disableColor = disableColor;
+		return this;
+	}
 
     /**
      * 激活颜色
      */
-    public String effectiveColor;
+	private String effectiveColor;
+
+	public String effectiveColor(){
+		return this.effectiveColor;
+	}
+
+	public Toolbox effectiveColor(String effectiveColor){
+		this.effectiveColor = effectiveColor;
+		return this;
+	}
 
     /**
      * 工具箱icon大小，单位（px）
      */
-    public Integer itemSize;
+	private Integer itemSize;
+
+	public Integer itemSize(){
+		return this.itemSize;
+	}
+
+	public Toolbox itemSize(Integer itemSize){
+		this.itemSize = itemSize;
+		return this;
+	}
 
     /**
      * 是否显示工具箱文字提示，默认启用
      */
-    public Boolean showTitle;
+	private Boolean showTitle;
+
+	public Boolean showTitle(){
+		return this.showTitle;
+	}
+
+	public Toolbox showTitle(Boolean showTitle){
+		this.showTitle = showTitle;
+		return this;
+	}
 
     /**
      * 启用功能，目前支持feature见下，工具箱自定义功能回调处理

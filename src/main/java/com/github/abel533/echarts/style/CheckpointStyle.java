@@ -35,27 +35,72 @@ public class CheckpointStyle {
     /**
      * 当前点symbol，默认随轴上的symbol
      */
-    public Object symbol;
+	private Object symbol;
+
+	public Object symbol(){
+		return this.symbol;
+	}
+
+	public CheckpointStyle symbol(Object symbol){
+		this.symbol = symbol;
+		return this;
+	}
 
     /**
      * 当前点symbol大小，默认随轴上symbol大小
      */
-    public Object symbolSize;
+	private Object symbolSize;
+
+	public Object symbolSize(){
+		return this.symbolSize;
+	}
+
+	public CheckpointStyle symbolSize(Object symbolSize){
+		this.symbolSize = symbolSize;
+		return this;
+	}
 
     /**
      * 当前点symbol颜色，默认为随当前点颜色，可指定具体颜色，如无则为'#1e90ff'
      */
-    public String color;
+	private String color;
+
+	public String color(){
+		return this.color;
+	}
+
+	public CheckpointStyle color(String color){
+		this.color = color;
+		return this;
+	}
 
     /**
      * 当前点symbol边线颜色
      */
-    public String borderColor;
+	private String borderColor;
+
+	public String borderColor(){
+		return this.borderColor;
+	}
+
+	public CheckpointStyle borderColor(String borderColor){
+		this.borderColor = borderColor;
+		return this;
+	}
 
     /**
      * 当前点symbol边线宽度
      */
-    public Object borderWidth;
+	private Object borderWidth;
+
+	public Object borderWidth(){
+		return this.borderWidth;
+	}
+
+	public CheckpointStyle borderWidth(Object borderWidth){
+		this.borderWidth = borderWidth;
+		return this;
+	}
 
     /**
      * @see com.github.abel533.echarts.Label

@@ -35,12 +35,30 @@ public class AxisLine {
     /**
      * 默认显示，属性show控制显示与否
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public AxisLine show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 定位到垂直方向的0值坐标上
      */
-    public Boolean onZero;
+	private Boolean onZero;
+
+	public Boolean onZero(){
+		return this.onZero;
+	}
+
+	public AxisLine onZero(Boolean onZero){
+		this.onZero = onZero;
+		return this;
+	}
 
     /**
      * {color: '#48b', width: 2, type: 'solid'}

@@ -35,15 +35,15 @@ import java.util.Map;
  */
 public class Mark extends Feature {
     public Mark() {
-        this.show = true;
+        this.show(true);
         Map title = new HashMap<String, String>();
         title.put("mark", "辅助线开关");
         title.put("markUndo", "删除辅助线");
         title.put("markClear", "清空辅助线");
-        this.title = title;
-        this.lineStyle = new LineStyle();
-        this.lineStyle.width = 2;
-        this.lineStyle.color = "#1e90ff";
-        this.lineStyle.type = LineType.dashed;
+        this.title(title);
+        this.lineStyle(new LineStyle());
+        this.lineStyle().width(2);
+        this.lineStyle().color("#1e90ff");
+        this.lineStyle().type(LineType.dashed);
     }
 }

@@ -38,26 +38,62 @@ public class MarkPoint extends AbstractData<MarkPoint>{
      *
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Object symbol;
+	private Object symbol;
+
+	public Object symbol(){
+		return this.symbol;
+	}
+
+	public MarkPoint symbol(Object symbol){
+		this.symbol = symbol;
+		return this;
+	}
 
     /**
      * 标注大小
      *
      * @see com.github.abel533.echarts.series.Series#symbolSize
      */
-    public Object symbolSize;
+	private Object symbolSize;
+
+	public Object symbolSize(){
+		return this.symbolSize;
+	}
+
+	public MarkPoint symbolSize(Object symbolSize){
+		this.symbolSize = symbolSize;
+		return this;
+	}
 
     /**
      * 标注图形旋转角度
      *
      * @see com.github.abel533.echarts.series.Series#symbolRoate
      */
-    public Object symbolRoate;
+	private Object symbolRoate;
+
+	public Object symbolRoate(){
+		return this.symbolRoate;
+	}
+
+	public MarkPoint symbolRoate(Object symbolRoate){
+		this.symbolRoate = symbolRoate;
+		return this;
+	}
 
     /**
      * 是否启动大规模标注模式
      */
-    public Boolean large;
+	private Boolean large;
+
+	public Boolean large(){
+		return this.large;
+	}
+
+	public MarkPoint large(Boolean large){
+		this.large = large;
+		return this;
+	}
 
     /**
      * 标注图形炫光特效
@@ -103,7 +139,16 @@ public class MarkPoint extends AbstractData<MarkPoint>{
      *
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
-    public Object geoCoord;
+	private Object geoCoord;
+
+	public Object geoCoord(){
+		return this.geoCoord;
+	}
+
+	public MarkPoint geoCoord(Object geoCoord){
+		this.geoCoord = geoCoord;
+		return this;
+	}
 
     public ItemStyle getItemStyle() {
         return itemStyle;

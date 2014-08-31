@@ -39,21 +39,48 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.code.Symbol
      * @see com.github.abel533.echarts.series.Series#symbol
      */
-    public Object symbol;
+	private Object symbol;
+
+	public Object symbol(){
+		return this.symbol;
+	}
+
+	public MarkLine symbol(Object symbol){
+		this.symbol = symbol;
+		return this;
+	}
 
     /**
      * 标线起始和结束的symbol大小，半宽（半径）参数，如果都一样，可以直接传number或function，同series中的symbolSize
      *
      * @see com.github.abel533.echarts.series.Series#symbolSize
      */
-    public Object symbolSize;
+	private Object symbolSize;
+
+	public Object symbolSize(){
+		return this.symbolSize;
+	}
+
+	public MarkLine symbolSize(Object symbolSize){
+		this.symbolSize = symbolSize;
+		return this;
+	}
 
     /**
      * 标线起始和结束的symbol旋转控制，同series中的symbolRotate
      *
      * @see com.github.abel533.echarts.series.Series#symbolRoate
      */
-    public Object symbolRoate;
+	private Object symbolRoate;
+
+	public Object symbolRoate(){
+		return this.symbolRoate;
+	}
+
+	public MarkLine symbolRoate(Object symbolRoate){
+		this.symbolRoate = symbolRoate;
+		return this;
+	}
 
     /**
      * 标线图形炫光特效
@@ -100,7 +127,16 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
-    public Object geoCoord;
+	private Object geoCoord;
+
+	public Object geoCoord(){
+		return this.geoCoord;
+	}
+
+	public MarkLine geoCoord(Object geoCoord){
+		this.geoCoord = geoCoord;
+		return this;
+	}
 
     public Effect getEffect() {
         return effect;

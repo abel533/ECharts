@@ -50,25 +50,19 @@ public class PieTest7 implements TestConfig {
         option.timeline().addData("2013-01-01", "2013-02-01", "2013-03-01", "2013-04-01", "2013-05-01",
                 new LineData("2013-06-01","emptyStart6",8), "2013-07-01", "2013-08-01", "2013-09-01", "2013-10-01",
                 "2013-11-01", new LineData("2013-12-01","star6",8));
-        option.timeline().autoPlay = true;
-
-        option.timeline().label().formatter = "function(s){return s.slice(0,7);}";
+        option.timeline().autoPlay(true).label().formatter("function(s){return s.slice(0,7);}");
 
         //timeline变态的地方在于多个Option
         Option basic = new Option();
-        basic.title().text = "浏览器占比变化";
-        basic.title().subtext = "纯属虚构";
-        basic.tooltip().trigger = Trigger.item;
-        basic.tooltip().formatter = "{a} <br/>{b} : {c} ({d}%)";
+        basic.title().text("浏览器占比变化").subtext("纯属虚构");
+        basic.tooltip().trigger(Trigger.item).formatter("{a} <br/>{b} : {c} ({d}%)");
         basic.legend().addData("Chrome", "Firefox", "Safari", "IE9+", "IE8-");
-        basic.toolbox().show = true;
-        basic.toolbox().addFeature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
+        basic.toolbox().show(true).addFeature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
 
         int idx = 1;
 
         Pie bPie = getPie(idx++);
-        bPie.center("50%", "45%");
-        bPie.radius("50%");
+        bPie.center("50%", "45%").radius("50%");
         basic.addSeries(bPie);
         //加入
         option.addOptions(basic);
@@ -103,8 +97,7 @@ public class PieTest7 implements TestConfig {
      */
     public Pie getPie(int idx) {
         Pie p = new Pie();
-        p.name = "浏览器（数据纯属虚构）";
-        p.addData(
+        p.name("浏览器（数据纯属虚构）").addData(
                 new PieData("Chrome", idx * 128 + 80),
                 new PieData("Firefox", idx * 64 + 160),
                 new PieData("Safari", idx * 32 + 320),

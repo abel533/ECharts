@@ -32,25 +32,52 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
-public class Map extends Series {
+public class Map extends Series<Map> {
     /**
      * 选中模式，默认关闭，可选single，multiple
      *
      * @see com.github.abel533.echarts.code.SelectedMode
      */
-    public Object selectedMode;
+	private Object selectedMode;
+
+	public Object selectedMode(){
+		return this.selectedMode;
+	}
+
+	public Map selectedMode(Object selectedMode){
+		this.selectedMode = selectedMode;
+		return this;
+	}
 
     /**
      * 地图类型，支持world，china及全国34个省市自治区。省市自治区的mapType直接使用简体中文
      * 支持子区域模式，通过主地图类型扩展出所包含的子区域地图，格式为'主地图类型|子区域名称'，如
      * 'world|Brazil'，'china|广东'
      */
-    public String mapType;
+	private String mapType;
+
+	public String mapType(){
+		return this.mapType;
+	}
+
+	public Map mapType(String mapType){
+		this.mapType = mapType;
+		return this;
+	}
 
     /**
      * 非数值显示（如仅用于显示标注标线时），可以通过hoverable:false关闭区域悬浮高亮
      */
-    public Boolean hoverable;
+	private Boolean hoverable;
+
+	public Boolean hoverable(){
+		return this.hoverable;
+	}
+
+	public Map hoverable(Boolean hoverable){
+		this.hoverable = hoverable;
+		return this;
+	}
 
     /**
      * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
@@ -73,50 +100,122 @@ public class Map extends Series {
      *
      * @see com.github.abel533.echarts.code.Calculation
      */
-    public Calculation mapValueCalculation;
+	private Calculation mapValueCalculation;
+
+	public Calculation mapValueCalculation(){
+		return this.mapValueCalculation;
+	}
+
+	public Map mapValueCalculation(Calculation mapValueCalculation){
+		this.mapValueCalculation = mapValueCalculation;
+		return this;
+	}
 
     /**
      * 地图数值计算结果小数精度，mapValueCalculation为average时有效，默认为取整，需要小数精度时设置大于0的整数
      */
-    public Integer mapValuePrecision;
+	private Integer mapValuePrecision;
+
+	public Integer mapValuePrecision(){
+		return this.mapValuePrecision;
+	}
+
+	public Map mapValuePrecision(Integer mapValuePrecision){
+		this.mapValuePrecision = mapValuePrecision;
+		return this;
+	}
 
     /**
      * 显示图例颜色标识（系列标识的小圆点），存在legend时生效
      */
-    public Boolean showLegendSymbol;
+	private Boolean showLegendSymbol;
+
+	public Boolean showLegendSymbol(){
+		return this.showLegendSymbol;
+	}
+
+	public Map showLegendSymbol(Boolean showLegendSymbol){
+		this.showLegendSymbol = showLegendSymbol;
+		return this;
+	}
 
     /**
      * 是否开启滚轮缩放和拖拽漫游
      */
-    public Boolean roam;
+	private Boolean roam;
+
+	public Boolean roam(){
+		return this.roam;
+	}
+
+	public Map roam(Boolean roam){
+		this.roam = roam;
+		return this;
+	}
 
     /**
      * 滚轮缩放的极限控制，可指定{max:number, min:number}，其中max为放大系数，有效值应大于1，min为缩小系数，有效值应小于1
      */
-    public Object scaleLimit;
+	private Object scaleLimit;
+
+	public Object scaleLimit(){
+		return this.scaleLimit;
+	}
+
+	public Map scaleLimit(Object scaleLimit){
+		this.scaleLimit = scaleLimit;
+		return this;
+	}
 
     /**
      * 自定义地区的名称映射，如{'China' : '中国'}
      */
-    public Object nameMap;
+	private Object nameMap;
+
+	public Object nameMap(){
+		return this.nameMap;
+	}
+
+	public Map nameMap(Object nameMap){
+		this.nameMap = nameMap;
+		return this;
+	}
 
     /**
      * 地区的名称文本位置修正，数值单位为px，正值为左下偏移，负值为右上偏移，如{'China' : [10, -10]}
      */
-    public Object textFixed;
+	private Object textFixed;
+
+	public Object textFixed(){
+		return this.textFixed;
+	}
+
+	public Map textFixed(Object textFixed){
+		this.textFixed = textFixed;
+		return this;
+	}
 
     /**
      * 通过绝对经纬度指定地区的名称文本位置，如{'Islands':[113.95, 22.26]}，香港离岛区名称显示定位到东经113.95，北纬22.26上
      */
     //TODO 结构可以优化
-    public Object geoCoord;
+	private Object geoCoord;
+
+	public Object geoCoord(){
+		return this.geoCoord;
+	}
+
+	public Map geoCoord(Object geoCoord){
+		this.geoCoord = geoCoord;
+		return this;
+	}
 
     public Map() {
-        this.type = SeriesType.map;
+        this.type(SeriesType.map);
     }
 
     public Map(String name) {
         super(name);
-        this.type = SeriesType.map;
+        this.type(SeriesType.map);
     }
 }

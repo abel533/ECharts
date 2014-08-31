@@ -35,19 +35,46 @@ public class LegendData {
     /**
      * 名称
      */
-    public String name;
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public LegendData name(String name){
+		this.name = name;
+		return this;
+	}
 
     /**
      * 文字样式
      *
      * @see com.github.abel533.echarts.style.TextStyle
      */
-    public TextStyle textStyle;
+	private TextStyle textStyle;
+
+	public TextStyle textStyle(){
+		return this.textStyle;
+	}
+
+	public LegendData textStyle(TextStyle textStyle){
+		this.textStyle = textStyle;
+		return this;
+	}
 
     /**
      * 图标
      */
-    public String icon;
+	private String icon;
+
+	public String icon(){
+		return this.icon;
+	}
+
+	public LegendData icon(String icon){
+		this.icon = icon;
+		return this;
+	}
 
     public LegendData(String name) {
         this.name = name;

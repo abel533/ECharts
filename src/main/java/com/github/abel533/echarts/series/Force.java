@@ -38,7 +38,7 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Force extends Series {
+public class Force extends Series<Force> {
     /**
      * 力导向图中节点的分类
      */
@@ -129,70 +129,178 @@ public class Force extends Series {
     /**
      * 布局中心，可以是绝对值或者相对百分比
      */
-    public Object center;
+	private Object center;
+
+	public Object center(){
+		return this.center;
+	}
+
+	public Force center(Object center){
+		this.center = center;
+		return this;
+	}
 
     /**
      * 布局大小，可以是绝对值或者相对百分比
      */
-    public Object size;
+	private Object size;
+
+	public Object size(){
+		return this.size;
+	}
+
+	public Force size(Object size){
+		this.size = size;
+		return this;
+	}
 
     /**
      * 顶点数据映射成圆半径后的最小半径
      */
-    public Integer minRadius;
+	private Integer minRadius;
+
+	public Integer minRadius(){
+		return this.minRadius;
+	}
+
+	public Force minRadius(Integer minRadius){
+		this.minRadius = minRadius;
+		return this;
+	}
 
     /**
      * 顶点数据映射成圆半径后的最大半径
      */
-    public Integer maxRadius;
+	private Integer maxRadius;
+
+	public Integer maxRadius(){
+		return this.maxRadius;
+	}
+
+	public Force maxRadius(Integer maxRadius){
+		this.maxRadius = maxRadius;
+		return this;
+	}
 
     /**
      * 力导向图的边两端图形样式，可指定为'arrow', 详见symbolList
      */
-    public String linkSymbol;
+	private String linkSymbol;
+
+	public String linkSymbol(){
+		return this.linkSymbol;
+	}
+
+	public Force linkSymbol(String linkSymbol){
+		this.linkSymbol = linkSymbol;
+		return this;
+	}
 
     /**
      * 力导向图的边两端图形大小
      */
-    public Integer linkSymbolSize;
+	private Integer linkSymbolSize;
+
+	public Integer linkSymbolSize(){
+		return this.linkSymbolSize;
+	}
+
+	public Force linkSymbolSize(Integer linkSymbolSize){
+		this.linkSymbolSize = linkSymbolSize;
+		return this;
+	}
 
     /**
      * 布局缩放系数，并不完全精确, 效果跟布局大小类似
      */
-    public Integer scaling;
+	private Integer scaling;
+
+	public Integer scaling(){
+		return this.scaling;
+	}
+
+	public Force scaling(Integer scaling){
+		this.scaling = scaling;
+		return this;
+	}
 
     /**
      * 向心力系数，系数越大则节点越往中心靠拢
      */
-    public Integer gravity;
+	private Integer gravity;
+
+	public Integer gravity(){
+		return this.gravity;
+	}
+
+	public Force gravity(Integer gravity){
+		this.gravity = gravity;
+		return this;
+	}
 
     /**
      * 节点是否能被拖拽
      */
-    public Boolean draggable;
+	private Boolean draggable;
+
+	public Boolean draggable(){
+		return this.draggable;
+	}
+
+	public Force draggable(Boolean draggable){
+		this.draggable = draggable;
+		return this;
+	}
 
     /**
      * 在 500+ 顶点的图上建议设置 large 为 true, 会使用 Barnes-Hut simulation, 同时开启 useWorker 并且把 steps 值调大
      */
-    public Boolean large;
+	private Boolean large;
+
+	public Boolean large(){
+		return this.large;
+	}
+
+	public Force large(Boolean large){
+		this.large = large;
+		return this;
+	}
 
     /**
      * 是否在浏览器支持 web worker 的时候把布局计算放入 web worker 中
      */
-    public Boolean useWorker;
+	private Boolean useWorker;
+
+	public Boolean useWorker(){
+		return this.useWorker;
+	}
+
+	public Force useWorker(Boolean useWorker){
+		this.useWorker = useWorker;
+		return this;
+	}
 
     /**
      * 每一帧布局计算的迭代次数，因为每一帧绘制的时间经常会比布局时间长很多，所以在使用 web worker 的时候可以把 steps 调大来平衡两者的时间从而达到效率最优化
      */
-    public Integer steps;
+	private Integer steps;
+
+	public Integer steps(){
+		return this.steps;
+	}
+
+	public Force steps(Integer steps){
+		this.steps = steps;
+		return this;
+	}
 
     public Force() {
-        this.type = SeriesType.force;
+        this.type(SeriesType.force);
     }
 
     public Force(String name) {
         super(name);
-        this.type = SeriesType.force;
+        this.type(SeriesType.force);
     }
 
     public List<Category> getCategories() {

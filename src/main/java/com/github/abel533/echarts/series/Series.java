@@ -35,47 +35,130 @@ import com.github.abel533.echarts.style.ItemStyle;
  *
  * @author liuzh
  */
-public abstract class Series extends AbstractData<Series> implements Chart {
+public abstract class Series<T> extends AbstractData<T> implements Chart {
     /**
      * xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
      */
-    public Integer xAxisIndex;
-
+    private Integer xAxisIndex;
     /**
      * yAxis坐标轴数组的索引，指定该系列数据所用的纵坐标轴
      */
-    public Integer yAxisIndex;
-
+    private Integer yAxisIndex;
     /**
      * 系列名称，如启用legend，该值将被legend.data索引相关
      */
-    public String name;
-
+    private String name;
     /**
      * 图表类型，必要参数！如为空或不支持类型，则该系列数据不被显示
      *
      * @see com.github.abel533.echarts.code.SeriesType
      */
-    public SeriesType type;
-
+    private SeriesType type;
     /**
      * 组合名称，多组数据的堆积图时使用，eg：stack:'group1'，则series数组中stack值等于'group1'的数据做堆积计算
      */
-    public String stack;
-
+    private String stack;
     /**
      * 提示框样式，仅对本系列有效，如不设则用option.tooltip（详见tooltip）,鼠标悬浮交互时的信息提示
      *
      * @see com.github.abel533.echarts.Tooltip
      */
     private Tooltip tooltip;
+    /**
+     * 图形样式
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
+    private ItemStyle itemStyle;
+    /**
+     * 标注
+     *
+     * @see com.github.abel533.echarts.series.MarkPoint
+     */
+    private MarkPoint markPoint;
+    /**
+     * 标线
+     *
+     * @see com.github.abel533.echarts.series.MarkLine
+     */
+    private MarkLine markLine;
+    /**
+     * 标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'）
+     *
+     * @see com.github.abel533.echarts.code.Symbol
+     */
+    private Object symbol;
+    /**
+     * 标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
+     */
+    private Object symbolSize;
+    /**
+     * 标志图形旋转角度[-180,180]
+     */
+    private Object symbolRoate;
+    /**
+     * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
+     */
+    private Boolean showAllSymbol;
+
+    protected Series() {
+    }
+
+    protected Series(String name) {
+        this.name = name;
+    }
+
+    public Integer xAxisIndex() {
+        return this.xAxisIndex;
+    }
+
+    public T xAxisIndex(Integer xAxisIndex) {
+        this.xAxisIndex = xAxisIndex;
+        return (T) this;
+    }
+
+    public Integer yAxisIndex() {
+        return this.yAxisIndex;
+    }
+
+    public T yAxisIndex(Integer yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+        return (T) this;
+    }
+
+    public String name() {
+        return this.name;
+    }
+
+    public T name(String name) {
+        this.name = name;
+        return (T) this;
+    }
+
+    public SeriesType type() {
+        return this.type;
+    }
+
+    public T type(SeriesType type) {
+        this.type = type;
+        return (T) this;
+    }
+
+    public String stack() {
+        return this.stack;
+    }
+
+    public T stack(String stack) {
+        this.stack = stack;
+        return (T) this;
+    }
 
     /**
      * 提示框样式，仅对本系列有效，如不设则用option.tooltip（详见tooltip）,鼠标悬浮交互时的信息提示
      *
      * @see com.github.abel533.echarts.Tooltip
      */
-    public Tooltip tooltip(){
+    public Tooltip tooltip() {
         if (this.tooltip == null) {
             this.tooltip = new Tooltip();
         }
@@ -87,14 +170,7 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      *
      * @see com.github.abel533.echarts.style.ItemStyle
      */
-    private ItemStyle itemStyle;
-
-    /**
-     * 图形样式
-     *
-     * @see com.github.abel533.echarts.style.ItemStyle
-     */
-    public ItemStyle itemStyle(){
+    public ItemStyle itemStyle() {
         if (this.itemStyle == null) {
             this.itemStyle = new ItemStyle();
         }
@@ -106,14 +182,7 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      *
      * @see com.github.abel533.echarts.series.MarkPoint
      */
-    private MarkPoint markPoint;
-
-    /**
-     * 标注
-     *
-     * @see com.github.abel533.echarts.series.MarkPoint
-     */
-    public MarkPoint markPoint(){
+    public MarkPoint markPoint() {
         if (this.markPoint == null) {
             this.markPoint = new MarkPoint();
         }
@@ -125,47 +194,47 @@ public abstract class Series extends AbstractData<Series> implements Chart {
      *
      * @see com.github.abel533.echarts.series.MarkLine
      */
-    private MarkLine markLine;
-
-    /**
-     * 标线
-     *
-     * @see com.github.abel533.echarts.series.MarkLine
-     */
-    public MarkLine markLine(){
+    public MarkLine markLine() {
         if (this.markLine == null) {
             this.markLine = new MarkLine();
         }
         return this.markLine;
     }
 
-    /**
-     * 标志图形类型，默认自动选择（8种类型循环使用，不显示标志图形可设为'none'）
-     *
-     * @see com.github.abel533.echarts.code.Symbol
-     */
-    public Object symbol;
-
-    /**
-     * 标志图形大小，可计算特性启用情况建议增大以提高交互体验。实现气泡图时symbolSize需为Function，气泡大小取决于该方法返回值，传入参数为当前数据项（value数组）
-     */
-    public Object symbolSize;
-
-    /**
-     * 标志图形旋转角度[-180,180]
-     */
-    public Object symbolRoate;
-
-    /**
-     * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
-     */
-    public Boolean showAllSymbol;
-
-    protected Series() {
+    public Object symbol() {
+        return this.symbol;
     }
 
-    protected Series(String name) {
-        this.name = name;
+    public T symbol(Object symbol) {
+        this.symbol = symbol;
+        return (T) this;
+    }
+
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    public T symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return (T) this;
+    }
+
+    public Object symbolRoate() {
+        return this.symbolRoate;
+    }
+
+    public T symbolRoate(Object symbolRoate) {
+        this.symbolRoate = symbolRoate;
+        return (T) this;
+    }
+
+    public Boolean showAllSymbol() {
+        return this.showAllSymbol;
+    }
+
+    public T showAllSymbol(Boolean showAllSymbol) {
+        this.showAllSymbol = showAllSymbol;
+        return (T) this;
     }
 
     public Tooltip getTooltip() {

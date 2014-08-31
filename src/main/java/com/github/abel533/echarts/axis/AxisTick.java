@@ -35,27 +35,72 @@ public class AxisTick {
     /**
      * 是否显示，默认为false，设为true后下面为默认样式
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public AxisTick show(Boolean show){
+		this.show = show;
+		return this;
+	}
     /**
      * 小标记显示挑选间隔，默认为'auto'，可选为：
      * 'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}（用户指定选择间隔）
      */
-    public Object interval;
+	private Object interval;
+
+	public Object interval(){
+		return this.interval;
+	}
+
+	public AxisTick interval(Object interval){
+		this.interval = interval;
+		return this;
+	}
 
     /**
      * 小标记是否显示为间隔，默认等于boundaryGap
      */
-    public Boolean onGap;
+	private Boolean onGap;
+
+	public Boolean onGap(){
+		return this.onGap;
+	}
+
+	public AxisTick onGap(Boolean onGap){
+		this.onGap = onGap;
+		return this;
+	}
 
     /**
      * 小标记是否显示为在grid内部，默认在外部
      */
-    public Boolean inside;
+	private Boolean inside;
+
+	public Boolean inside(){
+		return this.inside;
+	}
+
+	public AxisTick inside(Boolean inside){
+		this.inside = inside;
+		return this;
+	}
 
     /**
      * 默认值5，属性length控制线长
      */
-    public Integer length;
+	private Integer length;
+
+	public Integer length(){
+		return this.length;
+	}
+
+	public AxisTick length(Integer length){
+		this.length = length;
+		return this;
+	}
 
     /**
      * 属性lineStyle控制线条样式，（详见lineStyle）

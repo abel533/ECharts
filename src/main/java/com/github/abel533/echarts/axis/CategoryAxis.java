@@ -34,6 +34,6 @@ import com.github.abel533.echarts.code.AxisType;
 public class CategoryAxis extends Axis {
 
     public CategoryAxis() {
-        this.type = AxisType.category;
+        this.type(AxisType.category);
     }
 }

@@ -33,15 +33,42 @@ public class Pointer {
     /**
      * 属性length控制线长，百分比相对的是仪表盘的外半径
      */
-    public Object length;
+	private Object length;
+
+	public Object length(){
+		return this.length;
+	}
+
+	public Pointer length(Object length){
+		this.length = length;
+		return this;
+	}
 
     /**
      * 属性width控制指针最宽处，
      */
-    public Object width;
+	private Object width;
+
+	public Object width(){
+		return this.width;
+	}
+
+	public Pointer width(Object width){
+		this.width = width;
+		return this;
+	}
 
     /**
      * 属性color控制指针颜色
      */
-    public String color;
+	private String color;
+
+	public String color(){
+		return this.color;
+	}
+
+	public Pointer color(String color){
+		this.color = color;
+		return this;
+	}
 }

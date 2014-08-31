@@ -35,12 +35,30 @@ public class LabelLine {
     /**
      * 饼图标签视觉引导线显示策略，可选为：true（显示） | false（隐藏）
      */
-    public Boolean show;
+	private Boolean show;
+
+	public Boolean show(){
+		return this.show;
+	}
+
+	public LabelLine show(Boolean show){
+		this.show = show;
+		return this;
+	}
 
     /**
      * 线长 ，从外圆边缘起计算，可为负值
      */
-    public Integer length;
+	private Integer length;
+
+	public Integer length(){
+		return this.length;
+	}
+
+	public LabelLine length(Integer length){
+		this.length = length;
+		return this;
+	}
 
     /**
      * 线条样式，详见lineStyle

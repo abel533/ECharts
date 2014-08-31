@@ -34,17 +34,17 @@ import java.util.Map;
  */
 public class MagicType extends Feature {
     public MagicType(Magic... magics) {
-        this.show = true;
+        this.show(true);
         Map title = new HashMap<String, String>();
         title.put("line", "折线图切换");
         title.put("bar", "柱形图切换");
         title.put("stack", "堆积");
         title.put("tiled", "平铺");
-        this.title = title;
+        this.title(title);
         if (magics == null || magics.length == 0) {
-            this.type = new Object[]{Magic.bar, Magic.line, Magic.stack, Magic.tiled};
+            this.type(new Object[]{Magic.bar, Magic.line, Magic.stack, Magic.tiled});
         } else {
-            this.type = magics;
+            this.type(magics);
         }
     }
 }

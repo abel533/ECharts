@@ -34,18 +34,45 @@ public class ControlStyle {
         /**
          * 时间轴控制器样式颜色
          */
-        public String color;
+        private String color;
+
+        public String color(){
+            return this.color;
+        }
+
+        public Color color(String color){
+            this.color = color;
+            return this;
+        }
     }
 
     /**
      * 正常
      */
-    public Color normal;
+	private Color normal;
+
+	public Color normal(){
+		return this.normal;
+	}
+
+	public ControlStyle normal(Color normal){
+		this.normal = normal;
+		return this;
+	}
 
     /**
      * 高亮
      */
-    public Color emphasis;
+	private Color emphasis;
+
+	public Color emphasis(){
+		return this.emphasis;
+	}
+
+	public ControlStyle emphasis(Color emphasis){
+		this.emphasis = emphasis;
+		return this;
+	}
 
     public ControlStyle() {
         this.normal = new Color();

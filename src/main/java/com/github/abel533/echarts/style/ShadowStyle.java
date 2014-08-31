@@ -33,15 +33,42 @@ public class ShadowStyle {
     /**
      * 阴影颜色
      */
-    public String color;
+	private String color;
+
+	public String color(){
+		return this.color;
+	}
+
+	public ShadowStyle color(String color){
+		this.color = color;
+		return this;
+	}
 
     /**
      * 默认auto，阴影大小
      */
-    public Object width;
+	private Object width;
+
+	public Object width(){
+		return this.width;
+	}
+
+	public ShadowStyle width(Object width){
+		this.width = width;
+		return this;
+	}
 
     /**
      * 填充方式，默认只有default
      */
-    public String type;
+	private String type;
+
+	public String type(){
+		return this.type;
+	}
+
+	public ShadowStyle type(String type){
+		this.type = type;
+		return this;
+	}
 }

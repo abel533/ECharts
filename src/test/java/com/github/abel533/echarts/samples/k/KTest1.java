@@ -43,27 +43,22 @@ public class KTest1 implements TestConfig {
     @Test
     public void test() {
         EnhancedOption option = new EnhancedOption();
-        option.title().text = "2013年上半年上证指数";
-        option.tooltip().trigger = Trigger.axis;
-        option.tooltip().formatter = "function (params) {" +
+        option.title().text("2013年上半年上证指数");
+        option.tooltip().trigger(Trigger.axis).formatter("function (params) {" +
                 "            var res = params[0][0] + ' ' + params[0][1];" +
                 "            res += '<br/>  开盘 : ' + params[0][2][0] + '  最高 : ' + params[0][2][3];" +
                 "            res += '<br/>  收盘 : ' + params[0][2][1] + '  最低 : ' + params[0][2][2];" +
                 "            return res;" +
-                "        }";
+                "        }");
         option.legend().addData("上证指数");
-        option.toolbox().show = true;
-        option.toolbox().addFeature(Tool.mark, Tool.dataZoom, Tool.dataView, new MagicType(Magic.line, Magic.bar),
+        option.toolbox().show(true).addFeature(Tool.mark, Tool.dataZoom, Tool.dataView, new MagicType(Magic.line, Magic.bar),
                 Tool.restore, Tool.saveAsImage);
-        option.dataZoom().show = true;
-        option.dataZoom().realtime = true;
-        option.dataZoom().start = 50;
-        option.dataZoom().end = 100;
+        option.dataZoom().show(true).realtime(true).start(50).end(100);
 
         CategoryAxis categoryAxis = new CategoryAxis();
-        categoryAxis.boundaryGap = true;
-        categoryAxis.axisTick().onGap = false;
-        categoryAxis.splitLine().show = false;
+        categoryAxis.boundaryGap(true);
+        categoryAxis.axisTick().onGap(false);
+        categoryAxis.splitLine().show(false);
         categoryAxis.addData("2013/1/24", "2013/1/25", "2013/1/28", "2013/1/29", "2013/1/30",
                 "2013/1/31", "2013/2/1", "2013/2/4", "2013/2/5", "2013/2/6",
                 "2013/2/7", "2013/2/8", "2013/2/18", "2013/2/19", "2013/2/20",
@@ -84,12 +79,7 @@ public class KTest1 implements TestConfig {
                 "2013/6/6", "2013/6/7", "2013/6/13");
         option.addXAxis(categoryAxis);
 
-        ValueAxis valueAxis = new ValueAxis();
-        valueAxis.scale = true;
-        valueAxis.precision = 2;
-        valueAxis.splitNumber = 9;
-        valueAxis.boundaryGap = new Object[]{0.01, 0.01};
-        option.addYAxis(valueAxis);
+        option.addYAxis(new ValueAxis().scale(true).precision(2).splitNumber(9).boundaryGap(new Object[]{0.01, 0.01}));
 
         K k = new K("上证指数");
         k.addData(new Object[]{2320.26, 2302.6, 2287.3, 2362.94},

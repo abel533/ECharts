@@ -30,7 +30,16 @@ package com.github.abel533.echarts.data;
  * @author liuzh
  */
 public class KData {
-    public Double[] value;
+	private Double[] value;
+
+	public Double[] value(){
+		return this.value;
+	}
+
+	public KData value(Double[] value){
+		this.value = value;
+		return this;
+	}
 
     /**
      * 开盘，收盘，最低，最高

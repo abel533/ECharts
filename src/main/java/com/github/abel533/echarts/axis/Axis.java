@@ -46,7 +46,16 @@ public class Axis extends AbstractData<Axis> implements Component {
      *
      * @see com.github.abel533.echarts.code.AxisType
      */
-    public AxisType type;
+	private AxisType type;
+
+	public AxisType type(){
+		return this.type;
+	}
+
+	public Axis type(AxisType type){
+		this.type = type;
+		return this;
+	}
 
     /**
      * 坐标轴类型，横轴默认为类目型'bottom'，纵轴默认为数值型'left'，可选为：'bottom' | 'top' | 'left' | 'right'
@@ -54,19 +63,46 @@ public class Axis extends AbstractData<Axis> implements Component {
      * @see com.github.abel533.echarts.code.XPosition
      * @see com.github.abel533.echarts.code.YPosition
      */
-    public Object position;
+	private Object position;
+
+	public Object position(){
+		return this.position;
+	}
+
+	public Axis position(Object position){
+		this.position = position;
+		return this;
+	}
 
     /**
      * 坐标轴名称，默认为空
      */
-    public String name;
+	private String name;
+
+	public String name(){
+		return this.name;
+	}
+
+	public Axis name(String name){
+		this.name = name;
+		return this;
+	}
 
     /**
      * 坐标轴名称位置，默认为'end'，可选为：'start' | 'end'
      *
      * @see com.github.abel533.echarts.code.NameLocation
      */
-    public NameLocation nameLocation;
+	private NameLocation nameLocation;
+
+	public NameLocation nameLocation(){
+		return this.nameLocation;
+	}
+
+	public Axis nameLocation(NameLocation nameLocation){
+		this.nameLocation = nameLocation;
+		return this;
+	}
 
     /**
      * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
@@ -89,7 +125,16 @@ public class Axis extends AbstractData<Axis> implements Component {
      * [数值型]数值轴两端空白策略，数组内数值代表百分比，
      * [原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
      */
-    public Object boundaryGap;
+	private Object boundaryGap;
+
+	public Object boundaryGap(){
+		return this.boundaryGap;
+	}
+
+	public Axis boundaryGap(Object boundaryGap){
+		this.boundaryGap = boundaryGap;
+		return this;
+	}
 
     /**
      * 坐标轴线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式

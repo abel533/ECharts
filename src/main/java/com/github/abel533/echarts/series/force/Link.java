@@ -35,17 +35,44 @@ public class Link {
     /**
      * 源节点的index或者源节点的name
      */
-    public Object source;
+	private Object source;
+
+	public Object source(){
+		return this.source;
+	}
+
+	public Link source(Object source){
+		this.source = source;
+		return this;
+	}
 
     /**
      * 目标节点的index或者目标节点的name
      */
-    public Object target;
+	private Object target;
+
+	public Object target(){
+		return this.target;
+	}
+
+	public Link target(Object target){
+		this.target = target;
+		return this;
+	}
 
     /**
      * 边的权重，权重越大邻接节点越靠拢
      */
-    public Integer weight;
+	private Integer weight;
+
+	public Integer weight(){
+		return this.weight;
+	}
+
+	public Link weight(Integer weight){
+		this.weight = weight;
+		return this;
+	}
 
     /**
      * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性

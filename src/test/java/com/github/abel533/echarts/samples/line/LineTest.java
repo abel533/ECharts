@@ -44,47 +44,36 @@ public class LineTest implements TestConfig {
     public void test() {
         //例子：http://echarts.baidu.com/doc/example/line.html
         EnhancedOption option = new EnhancedOption();
-        option.tooltip().trigger = Trigger.axis;
+        option.tooltip().trigger(Trigger.axis);
 
         option.addLegend("邮件营销", "联盟广告", "直接访问", "搜索引擎");
 
-        option.toolbox().show = true;
+        option.toolbox().show(true);
         //option.toolbox.feature
 
-        option.calculable = true;
+        option.calculable(true);
 
         CategoryAxis categoryAxis = new CategoryAxis();
-        categoryAxis.boundaryGap = false;
-        categoryAxis.addData("周一", "周二", "周三", "周四", "周五", "周六", "周日");
+        categoryAxis.boundaryGap(false).addData("周一", "周二", "周三", "周四", "周五", "周六", "周日");
         option.addXAxis(categoryAxis);
 
         ValueAxis valueAxis = new ValueAxis();
         option.addYAxis(valueAxis);
 
         Line line = new Line();
-        line.name = "邮件营销";
-        line.stack = "总量";
-        line.symbol = Symbol.none;
-        line.smooth = true;
+        line.smooth(true).name("邮件营销").stack("总量").symbol(Symbol.none);
         //实现不了js的这个效果
         //line.itemStyle.normal.areaStyle = new AreaStyle();
         line.addData(120, 132, 301, 134, new LineData(90, Symbol.droplet, 5), 230, 210);
         option.addSeries(line);
 
         line = new Line();
-        line.name = "联盟广告";
-        line.stack = "总量";
-        line.symbol = "image://http://echarts.baidu.com/doc/asset/ico/favicon.png";
-        line.symbolSize = 8;
-        line.smooth = true;
+        line.smooth(true).name("联盟广告").stack("总量").symbol("image://http://echarts.baidu.com/doc/asset/ico/favicon.png").symbolSize(8);
         //实现不了js的这个效果
         //line.itemStyle.normal.areaStyle = new AreaStyle();
         LineData lineData = new LineData(201, Symbol.star, 15);
-        lineData.itemStyle = new ItemStyle();
-        lineData.itemStyle.normal.label().show = true;
-        lineData.itemStyle.normal.label().textStyle().fontSize = 20;
-        lineData.itemStyle.normal.label().textStyle().fontFamily = "微软雅黑";
-        lineData.itemStyle.normal.label().textStyle().fontWeight = "bold";
+        lineData.itemStyle(new ItemStyle());
+        lineData.itemStyle().normal().label().show(true).textStyle().fontSize(20).fontFamily("微软雅黑").fontWeight("bold");
         line.addData(120, 82, lineData, new LineData(134, Symbol.none), 190, new LineData(230, Symbol.emptypin, 8), 110);
         option.addSeries(line);
 

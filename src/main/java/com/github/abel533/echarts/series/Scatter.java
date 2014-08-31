@@ -31,23 +31,41 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
-public class Scatter extends Series {
+public class Scatter extends Series<Scatter> {
     /**
      * 大规模散点图
      */
-    public Boolean large;
+	private Boolean large;
+
+	public Boolean large(){
+		return this.large;
+	}
+
+	public Scatter large(Boolean large){
+		this.large = large;
+		return this;
+	}
 
     /**
      * 大规模阀值，large为true且数据量>largeThreshold才启用大规模模式
      */
-    public Long largeThreshold;
+	private Long largeThreshold;
+
+	public Long largeThreshold(){
+		return this.largeThreshold;
+	}
+
+	public Scatter largeThreshold(Long largeThreshold){
+		this.largeThreshold = largeThreshold;
+		return this;
+	}
 
     public Scatter() {
-        this.type = SeriesType.scatter;
+        this.type(SeriesType.scatter);
     }
 
     public Scatter(String name) {
         super(name);
-        this.type = SeriesType.scatter;
+        this.type(SeriesType.scatter);
     }
 }
