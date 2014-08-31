@@ -31,7 +31,7 @@ import com.github.abel533.echarts.code.AxisType;
  *
  * @author liuzh.
  */
-public class ValueAxis extends Axis {
+public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
      */
