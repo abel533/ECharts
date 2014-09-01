@@ -40,11 +40,12 @@ public class ControlStyle {
     private Color emphasis;
 
     public ControlStyle() {
-        this.normal = new Color();
-        this.emphasis = new Color();
     }
 
     public Color normal() {
+        if (this.normal == null) {
+            this.normal = new Color();
+        }
         return this.normal;
     }
 
@@ -54,6 +55,9 @@ public class ControlStyle {
     }
 
     public Color emphasis() {
+        if (this.emphasis == null) {
+            this.emphasis = new Color();
+        }
         return this.emphasis;
     }
 

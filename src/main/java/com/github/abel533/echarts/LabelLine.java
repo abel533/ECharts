@@ -77,6 +77,11 @@ public class LabelLine {
         return this.lineStyle;
     }
 
+    public LabelLine lineStyle(LineStyle style) {
+        this.lineStyle = style;
+        return this;
+    }
+
     public LineStyle getLineStyle() {
         return lineStyle;
     }

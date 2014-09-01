@@ -44,11 +44,12 @@ public class ItemStyle {
     private Emphasis emphasis;
 
     public ItemStyle() {
-        this.normal = new Normal();
-        this.emphasis = new Emphasis();
     }
 
     public Normal normal() {
+        if (this.normal == null) {
+            this.normal = new Normal();
+        }
         return this.normal;
     }
 
@@ -58,6 +59,9 @@ public class ItemStyle {
     }
 
     public Emphasis emphasis() {
+        if (this.emphasis == null) {
+            this.emphasis = new Emphasis();
+        }
         return this.emphasis;
     }
 
