@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.bar;
 
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Magic;
@@ -40,7 +39,7 @@ import org.junit.Test;
 /**
  * @author liuzh
  */
-public class BarTest1 implements TestConfig {
+public class BarTest1 {
 
     @Test
     public void test() {
@@ -65,7 +64,7 @@ public class BarTest1 implements TestConfig {
         bar2.markLine().data(new PointData().type(MarkType.average).name("平均值"));
 
         option.series(bar, bar2);
-        option.exportToHtml(EXPORT_PATH, "bar1.html");
+        option.exportToHtml("bar1.html");
         option.view();
     }
 }

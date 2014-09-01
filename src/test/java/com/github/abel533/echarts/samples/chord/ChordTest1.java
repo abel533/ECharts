@@ -60,6 +60,7 @@ public class ChordTest1 {
                 }).
                 itemStyle().normal().label().show(true);
         option.series(chord);
+        option.exportToHtml("chord1.html");
         option.view();
     }
 }

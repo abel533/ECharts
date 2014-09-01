@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Magic;
@@ -38,7 +37,7 @@ import org.junit.Test;
 /**
  * @author liuzh
  */
-public class LineTest5 implements TestConfig {
+public class LineTest5 {
 
     @Test
     public void test() {
@@ -65,7 +64,7 @@ public class LineTest5 implements TestConfig {
         Line line = new Line();
         line.smooth(true).name("高度(km)与气温(°C)变化关系").data(15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5).itemStyle().normal().lineStyle().shadowColor("rgba(0,0,0,0.4)");
         option.series(line);
-        option.exportToHtml(EXPORT_PATH, "line5.html");
+        option.exportToHtml("line5.html");
         option.view();
     }
 }

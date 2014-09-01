@@ -25,13 +25,14 @@
 package com.github.abel533.echarts.util;
 
 import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.TestConfig;
 
 /**
  * 增强的Option - 主要用于测试、演示
  *
  * @author liuzh
  */
-public class EnhancedOption extends Option {
+public class EnhancedOption extends Option implements TestConfig {
     private String filepath;
 
     @Override
@@ -50,6 +51,9 @@ public class EnhancedOption extends Option {
      * 在浏览器中查看
      */
     public void view() {
+        if (!VIEW) {
+            return;
+        }
         if (this.filepath != null) {
             try {
                 OptionUtil.browse(this.filepath);
@@ -62,37 +66,13 @@ public class EnhancedOption extends Option {
     }
 
     /**
-     * 导出到html（tmp文件夹）
+     * 导出到指定文件名
      *
-     * @return 返回html路径
-     */
-    public String exportToHtml() {
-        String folderPath = System.getProperty("java.io.tmpdir");
-        this.filepath = OptionUtil.exportToHtml(this, folderPath);
-        return this.filepath;
-    }
-
-    /**
-     * 导出到指定文件夹，文件名随机
-     *
-     * @param folderPath
-     * @return 返回html路径
-     */
-    public String exportToHtml(String folderPath) {
-        String fileName = "ECharts-" + System.currentTimeMillis() + ".html";
-        this.filepath = OptionUtil.exportToHtml(this, folderPath, fileName);
-        return this.filepath;
-    }
-
-    /**
-     * 导出到指定文件
-     *
-     * @param folderPath
      * @param fileName
      * @return 返回html路径
      */
-    public String exportToHtml(String folderPath, String fileName) {
-        this.filepath = OptionUtil.exportToHtml(this, folderPath, fileName);
+    public String exportToHtml(String fileName) {
+        this.filepath = OptionUtil.exportToHtml(this, EXPORT_PATH, fileName);
         return this.filepath;
     }
 }

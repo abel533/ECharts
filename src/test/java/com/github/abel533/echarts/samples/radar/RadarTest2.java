@@ -25,7 +25,6 @@
 package com.github.abel533.echarts.samples.radar;
 
 import com.github.abel533.echarts.Polar;
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.code.XPosition;
@@ -37,7 +36,7 @@ import org.junit.Test;
 /**
  * @author liuzh
  */
-public class RadarTest2 implements TestConfig {
+public class RadarTest2 {
 
     @Test
     public void test() {
@@ -62,7 +61,7 @@ public class RadarTest2 implements TestConfig {
         radar.itemStyle().normal().areaStyle().typeDefault();
         radar.data(new AllData().name("舍普琴科").value(new Object[]{97, 42, 88, 94, 90, 86}), new AllData().name("罗纳尔多").value(new Object[]{97, 32, 74, 95, 88, 92}));
         option.series(radar);
-        option.exportToHtml(EXPORT_PATH, "radar2.html");
+        option.exportToHtml("radar2.html");
         option.view();
     }
 }

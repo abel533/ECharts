@@ -25,7 +25,6 @@
 package com.github.abel533.echarts.samples.pie;
 
 import com.github.abel533.echarts.Option;
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.data.LineData;
@@ -39,7 +38,7 @@ import org.junit.Test;
  *
  * @author liuzh
  */
-public class PieTest7 implements TestConfig {
+public class PieTest7 {
 
     @Test
     public void test() {
@@ -67,7 +66,7 @@ public class PieTest7 implements TestConfig {
             os[i] = new Option().series(getPie(idx++));
         }
         option.options(os);
-        option.exportToHtml(EXPORT_PATH, "pie7.html");
+        option.exportToHtml("pie7.html");
         option.view();
     }
 

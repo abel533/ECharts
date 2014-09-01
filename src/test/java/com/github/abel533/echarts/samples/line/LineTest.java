@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.line;
 
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Symbol;
@@ -37,7 +36,7 @@ import org.junit.Test;
 /**
  * Created by liuzh on 14-8-26.
  */
-public class LineTest implements TestConfig {
+public class LineTest {
 
     @Test
     public void test() {
@@ -78,7 +77,7 @@ public class LineTest implements TestConfig {
         line.addData(120, 132, 301, 134,new LineData(90,Symbol.droplet,5),230,210);
         option.series.add(line);*/
 
-        option.exportToHtml(EXPORT_PATH, "line.html");
+        option.exportToHtml("line.html");
         option.view();
     }
 }

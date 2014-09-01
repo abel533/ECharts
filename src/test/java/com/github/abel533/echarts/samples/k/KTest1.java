@@ -24,7 +24,6 @@
 
 package com.github.abel533.echarts.samples.k;
 
-import com.github.abel533.echarts.TestConfig;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.Magic;
@@ -38,7 +37,7 @@ import org.junit.Test;
 /**
  * @author liuzh
  */
-public class KTest1 implements TestConfig {
+public class KTest1 {
 
     @Test
     public void test() {
@@ -172,7 +171,7 @@ public class KTest1 implements TestConfig {
                 new Object[]{2190.1, 2148.35, 2126.22, 2190.1});
 
         option.series(k);
-        option.exportToHtml(EXPORT_PATH, "k.html");
+        option.exportToHtml("k.html");
         option.view();
     }
 }
