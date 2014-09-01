@@ -26,6 +26,7 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.series.Series;
+import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -111,6 +112,20 @@ public class Option {
      * 当使用timeline时，每一组数据要放到单独的option中
      */
     private List<Option> options;
+
+    private ItemStyle itemStyle;
+
+    public ItemStyle itemStyle() {
+        if (this.itemStyle == null) {
+            this.itemStyle = new ItemStyle();
+        }
+        return this.itemStyle;
+    }
+
+    public Option itemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+        return this;
+    }
 
     public List<Polar> polar() {
         if (this.polar == null) {
@@ -578,5 +593,13 @@ public class Option {
 
     public void setPolar(List<Polar> polar) {
         this.polar = polar;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
     }
 }
