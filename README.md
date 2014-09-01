@@ -48,7 +48,7 @@ public void test() {
     Line line = new Line();
     line.smooth(true).name("高度(km)与气温(°C)变化关系").data(15, -50, -56.5, -46.5, -22.1, -2.5, -27.7, -55.7, -76.5).itemStyle().normal().lineStyle().shadowColor("rgba(0,0,0,0.4)");
     option.series(line);
-    //option.exportToHtml(EXPORT_PATH, "line5.html");
+    option.exportToHtml("line5.html");
     option.view();
 }
 ```
@@ -178,7 +178,7 @@ public void test() {
         os[i] = new Option().series(getPie(idx++));
     }
     option.options(os);
-    option.exportToHtml(EXPORT_PATH, "pie7.html");
+    option.exportToHtml("pie7.html");
     option.view();
 }
 
