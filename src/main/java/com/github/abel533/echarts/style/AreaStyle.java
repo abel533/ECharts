@@ -57,6 +57,11 @@ public class AreaStyle {
         return this;
     }
 
+    public AreaStyle typeDefault() {
+        this.type = "default";
+        return this;
+    }
+
     public Object getColor() {
         return color;
     }

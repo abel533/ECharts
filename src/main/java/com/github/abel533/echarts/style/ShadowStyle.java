@@ -70,6 +70,11 @@ public class ShadowStyle {
         return this;
     }
 
+    public ShadowStyle typeDefault() {
+        this.type = "default";
+        return this;
+    }
+
     public String getColor() {
         return color;
     }
