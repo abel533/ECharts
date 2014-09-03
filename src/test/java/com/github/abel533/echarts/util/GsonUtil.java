@@ -49,9 +49,21 @@ public class GsonUtil {
         JsonElement je = jp.parse(gson.toJson(object));
         String prettyJsonString = gson.toJson(je);
         //简单处理function
-        prettyJsonString = prettyJsonString.replaceAll("\"function", "function");
-        prettyJsonString = prettyJsonString.replaceAll("\\}\"", "\\}");
-        return prettyJsonString;
+        String[] lines = prettyJsonString.split("\n");
+        StringBuilder stringBuilder = new StringBuilder();
+        boolean function = false;
+        for (String line : lines) {
+            if (!function && line.contains("\"function")) {
+                function = true;
+                line = line.replaceAll("\"function", "function");
+            }
+            if (function && line.contains("}\"")) {
+                function = false;
+                line = line.replaceAll("\\}\"", "\\}");
+            }
+            stringBuilder.append(line + "\n");
+        }
+        return stringBuilder.toString();
     }
 
     /**
