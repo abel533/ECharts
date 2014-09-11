@@ -13,6 +13,15 @@
 http://echarts.baidu.com/
 
 
+##注意
+1. `EnhancedOption`是测试中使用的，正式代码中无法使用。
+
+2. 正式代码中请用标准的`Option`。
+
+3. `EnhancedOption`只是继承`Option`然后增加了几个方便导出图表查看的方法。  
+ 
+
+
 ##挑两个例子大概的看看这个Java类库如何使用
 
 
