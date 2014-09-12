@@ -12,6 +12,14 @@
 
 http://echarts.baidu.com/
 
+##Option说明
+
+1. `Option`正式代码中使用，不需要任何依赖。
+
+2. `GsonOption`正式代码中可以使用，需要引入`Gson`包，使用`toString()`方法可以转换为JSON结构的数据（支持formatter的`function`）。
+
+3. `EnhancedOption`测试专用，主要方便在浏览器中直接查看效果。
+
 
 ##挑两个例子大概的看看这个Java类库如何使用
 
@@ -26,7 +34,7 @@ http://echarts.baidu.com/
 @Test
 public void test() {
     //地址:http://echarts.baidu.com/doc/example/line5.html
-    GsonOption option = new GsonOption();
+    EnhancedOption option = new EnhancedOption();
     option.legend("高度(km)与气温(°C)变化关系");
 
     option.toolbox().show(true).feature(Tool.mark, Tool.dataView, new MagicType(Magic.line, Magic.bar), Tool.restore, Tool.saveAsImage);
@@ -155,7 +163,7 @@ public void test() {
 @Test
 public void test() {
     //地址：http://echarts.baidu.com/doc/example/pie7.html
-    GsonOption option = new GsonOption();
+    EnhancedOption option = new EnhancedOption();
     //时间轴
     option.timeline().data("2013-01-01", "2013-02-01", "2013-03-01", "2013-04-01", "2013-05-01",
             new LineData("2013-06-01","emptyStart6",8), "2013-07-01", "2013-08-01", "2013-09-01", "2013-10-01",
