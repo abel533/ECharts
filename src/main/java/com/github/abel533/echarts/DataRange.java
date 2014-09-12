@@ -179,7 +179,11 @@ public class DataRange extends Basic<DataRange> implements Component {
     }
 
     public void setFormatter(Object formatter) {
-        this.formatter = formatter;
+        if (formatter instanceof Function) {
+            this.formatter = ((Function) formatter).getScript();
+        } else {
+            this.formatter = "\"" + formatter + "\"";
+        }
     }
 
     public DataRange textStyle(TextStyle textStyle) {
@@ -297,7 +301,11 @@ public class DataRange extends Basic<DataRange> implements Component {
     }
 
     public DataRange formatter(Object formatter) {
-        this.formatter = formatter;
+        if (formatter instanceof Function) {
+            this.formatter = ((Function) formatter).getScript();
+        } else {
+            this.formatter = "\"" + formatter + "\"";
+        }
         return this;
     }
 

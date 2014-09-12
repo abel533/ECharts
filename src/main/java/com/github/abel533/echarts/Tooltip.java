@@ -26,6 +26,7 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.style.TextStyle;
+import org.codehaus.jackson.annotate.JsonRawValue;
 
 /**
  * @author liuzh
@@ -53,6 +54,7 @@ public class Tooltip extends Basic<Tooltip> implements Component {
     /**
      * 位置指定，传入{Array}，如[x, y]， 固定位置[x, y]；传入{Function}，如function([x, y]) {return [newX,newY]}，默认显示坐标为输入参数，用户指定的新坐标为输出返回。
      */
+    @JsonRawValue
     private Object formatter;
     /**
      * 内容格式器：{string}（Template） | {Function}，支持异步回调见表格下方
@@ -136,7 +138,11 @@ public class Tooltip extends Basic<Tooltip> implements Component {
     }
 
     public Tooltip formatter(Object formatter) {
-        this.formatter = formatter;
+        if (formatter instanceof Function) {
+            this.formatter = ((Function) formatter).getScript();
+        } else {
+            this.formatter = "\"" + formatter + "\"";
+        }
         return this;
     }
 
@@ -244,7 +250,11 @@ public class Tooltip extends Basic<Tooltip> implements Component {
     }
 
     public void setFormatter(Object formatter) {
-        this.formatter = formatter;
+        if (formatter instanceof Function) {
+            this.formatter = ((Function) formatter).getScript();
+        } else {
+            this.formatter = "\"" + formatter + "\"";
+        }
     }
 
     public String getIslandFormatter() {
