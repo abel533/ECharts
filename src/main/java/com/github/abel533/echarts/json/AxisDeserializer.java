@@ -22,15 +22,34 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.easy.options;
+package com.github.abel533.echarts.json;
 
-import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.axis.Axis;
+import com.github.abel533.echarts.axis.CategoryAxis;
+import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.AxisType;
+import com.google.gson.*;
+
+import java.lang.reflect.Type;
 
 /**
  * @author liuzh
  */
-public class LineOption extends Option {
-    public LineOption() {
-
+public class AxisDeserializer implements JsonDeserializer<Axis> {
+    @Override
+    public Axis deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        final JsonObject jsonObject = json.getAsJsonObject();
+        String _type = jsonObject.get("type").getAsString();
+        AxisType type = AxisType.valueOf(_type);
+        Axis axis = null;
+        switch (type) {
+            case category:
+                axis = context.deserialize(jsonObject, CategoryAxis.class);
+                break;
+            case value:
+                axis = context.deserialize(jsonObject, ValueAxis.class);
+                break;
+        }
+        return axis;
     }
 }

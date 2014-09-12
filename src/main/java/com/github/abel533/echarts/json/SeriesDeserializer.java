@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.util;
+package com.github.abel533.echarts.json;
 
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.*;

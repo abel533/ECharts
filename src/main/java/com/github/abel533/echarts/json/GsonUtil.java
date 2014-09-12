@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.util;
+package com.github.abel533.echarts.json;
 
 import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.axis.Axis;
@@ -44,6 +44,35 @@ public class GsonUtil {
      * @return
      */
     public static String format(Object object) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(gson.toJson(object));
+        String prettyJsonString = gson.toJson(je);
+        //简单处理function
+        String[] lines = prettyJsonString.split("\n");
+        StringBuilder stringBuilder = new StringBuilder();
+        boolean function = false;
+        for (String line : lines) {
+            if (!function && line.contains("\"function")) {
+                function = true;
+                line = line.replaceAll("\"function", "function");
+            }
+            if (function && line.contains("}\"")) {
+                function = false;
+                line = line.replaceAll("\\}\"", "\\}");
+            }
+            stringBuilder.append(line);
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 格式化对象为Json
+     *
+     * @param object
+     * @return
+     */
+    public static String prettyFormat(Object object) {
         Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
         JsonParser jp = new JsonParser();
         JsonElement je = jp.parse(gson.toJson(object));

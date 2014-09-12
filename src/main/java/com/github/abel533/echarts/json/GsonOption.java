@@ -22,34 +22,24 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.util;
+package com.github.abel533.echarts.json;
 
-import com.github.abel533.echarts.axis.Axis;
-import com.github.abel533.echarts.axis.CategoryAxis;
-import com.github.abel533.echarts.axis.ValueAxis;
-import com.github.abel533.echarts.code.AxisType;
-import com.google.gson.*;
-
-import java.lang.reflect.Type;
+import com.github.abel533.echarts.Option;
 
 /**
+ * 增强的Option - 主要用于测试、演示
+ *
  * @author liuzh
  */
-public class AxisDeserializer implements JsonDeserializer<Axis> {
+public class GsonOption extends Option {
+
     @Override
-    public Axis deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        final JsonObject jsonObject = json.getAsJsonObject();
-        String _type = jsonObject.get("type").getAsString();
-        AxisType type = AxisType.valueOf(_type);
-        Axis axis = null;
-        switch (type) {
-            case category:
-                axis = context.deserialize(jsonObject, CategoryAxis.class);
-                break;
-            case value:
-                axis = context.deserialize(jsonObject, ValueAxis.class);
-                break;
-        }
-        return axis;
+    public String toString() {
+        return GsonUtil.format(this);
     }
+
+    public String toPrettyString() {
+        return GsonUtil.prettyFormat(this);
+    }
+
 }

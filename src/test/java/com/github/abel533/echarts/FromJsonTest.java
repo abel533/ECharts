@@ -24,9 +24,9 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.json.GsonUtil;
 import com.github.abel533.echarts.series.Bar;
 import com.github.abel533.echarts.util.EnhancedOption;
-import com.github.abel533.echarts.util.GsonUtil;
 import org.junit.Test;
 
 /**

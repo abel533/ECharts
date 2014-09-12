@@ -24,21 +24,18 @@
 
 package com.github.abel533.echarts.util;
 
-import com.github.abel533.echarts.Option;
 import com.github.abel533.echarts.TestConfig;
+import com.github.abel533.echarts.json.GsonOption;
+import com.github.abel533.echarts.json.GsonUtil;
+import com.github.abel533.echarts.json.OptionUtil;
 
 /**
  * 增强的Option - 主要用于测试、演示
  *
  * @author liuzh
  */
-public class EnhancedOption extends Option implements TestConfig {
+public class EnhancedOption extends GsonOption implements TestConfig {
     private String filepath;
-
-    @Override
-    public String toString() {
-        return GsonUtil.format(this);
-    }
 
     /**
      * 输出到控制台
