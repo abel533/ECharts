@@ -24,6 +24,51 @@ http://echarts.baidu.com/
 
 5. 由于`function`的问题比较麻烦，所以【准备尝试】将各种常用库的关键的代码（一般是注解、或者解析的接口）直接拷贝到本项目中，当你用到某个库的时候自己添加相应的依赖即可。
 
+##不同Json库的处理Function的方法
+
+###Jackson
+
+如果使用Jackson，需要引入依赖
+
+```xml
+<dependency>
+  <groupId>org.codehaus.jackson</groupId>
+  <artifactId>jackson-core-asl</artifactId>
+  <version>1.9.4</version>
+</dependency>
+<dependency>
+  <groupId>org.codehaus.jackson</groupId>
+  <artifactId>jackson-mapper-asl</artifactId>
+  <version>1.9.4</version>
+</dependency>
+```
+
+在使用formatter时，如果需要Function，向下面这样用new Function("script")
+```java
+//省略其他代码...
+
+//在使用formatter时，如果需要Function，向下面这样用new Function("script")
+option.tooltip().trigger(Trigger.axis).formatter(new Function("function(){return 'Temperature : <br/>{b}km : {c}°C';}"));
+//省略其他代码...
+
+ObjectMapper mapper = new ObjectMapper();
+try {
+    mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
+    mapper.writeValue(System.out,option);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+**需要注意的地方**：一定要设置`NON_NULL`，否则生成的Json会包含全部属性，属性空的会设置为null，因而导致Echarts加载option失败。
+
+###Gson
+
+待补充，暂不支持Function
+
+###Fastjson
+
+待补充，暂不支持Function
 
 ##挑两个例子大概的看看这个Java类库如何使用
 
