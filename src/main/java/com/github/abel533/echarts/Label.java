@@ -25,7 +25,6 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.style.TextStyle;
-import org.codehaus.jackson.annotate.JsonRawValue;
 
 /**
  * Description: Label
@@ -53,7 +52,6 @@ public class Label {
     /**
      * 间隔名称格式器：{string}（Template） | {Function}
      */
-    @JsonRawValue
     private Object formatter;
     /**
      * 文字样式（详见{@link com.github.abel533.echarts.style.TextStyle}）
@@ -119,11 +117,7 @@ public class Label {
     }
 
     public Label formatter(Object formatter) {
-        if (formatter instanceof Function) {
-            this.formatter = ((Function) formatter).getScript();
-        } else {
-            this.formatter = "\"" + formatter + "\"";
-        }
+        this.formatter = formatter;
         return this;
     }
 
@@ -199,11 +193,7 @@ public class Label {
     }
 
     public void setFormatter(Object formatter) {
-        if (formatter instanceof Function) {
-            this.formatter = ((Function) formatter).getScript();
-        } else {
-            this.formatter = "\"" + formatter + "\"";
-        }
+        this.formatter = formatter;
     }
 
     public Integer getMargin() {
