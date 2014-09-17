@@ -122,8 +122,8 @@ public class Pie extends Series<Pie> {
      * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
      * 传数组实现环形图，[内半径，外半径]
      *
-     * @param width
-     * @param height
+     * @param width  内半径
+     * @param height 外半径
      * @return
      */
     public Pie radius(Object width, Object height) {

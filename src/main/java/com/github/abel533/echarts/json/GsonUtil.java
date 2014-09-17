@@ -134,5 +134,15 @@ public class GsonUtil {
         System.out.println(format(object));
     }
 
+    /**
+     * 输出Json
+     *
+     * @param object
+     * @return
+     */
+    public static void printPretty(Object object) {
+        System.out.println(prettyFormat(object));
+    }
+
 
 }
