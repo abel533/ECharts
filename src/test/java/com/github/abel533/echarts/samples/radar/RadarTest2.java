@@ -28,7 +28,7 @@ import com.github.abel533.echarts.Polar;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.code.XPosition;
-import com.github.abel533.echarts.data.AllData;
+import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.series.Radar;
 import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
@@ -49,17 +49,17 @@ public class RadarTest2 {
         option.calculable(true);
 
         Polar polar = new Polar();
-        polar.indicator(new AllData().text("进攻").max(100),
-                new AllData().text("防守").max(100),
-                new AllData().text("体能").max(100),
-                new AllData().text("速度").max(100),
-                new AllData().text("力量").max(100),
-                new AllData().text("技巧").max(100)).radius(130);
+        polar.indicator(new Data().text("进攻").max(100),
+                new Data().text("防守").max(100),
+                new Data().text("体能").max(100),
+                new Data().text("速度").max(100),
+                new Data().text("力量").max(100),
+                new Data().text("技巧").max(100)).radius(130);
         option.polar(polar);
 
         Radar radar = new Radar("完全实况球员数据");
         radar.itemStyle().normal().areaStyle().typeDefault();
-        radar.data(new AllData().name("舍普琴科").value(new Object[]{97, 42, 88, 94, 90, 86}), new AllData().name("罗纳尔多").value(new Object[]{97, 32, 74, 95, 88, 92}));
+        radar.data(new Data().name("舍普琴科").value(new Object[]{97, 42, 88, 94, 90, 86}), new Data().name("罗纳尔多").value(new Object[]{97, 32, 74, 95, 88, 92}));
         option.series(radar);
         option.exportToHtml("radar2.html");
         option.view();

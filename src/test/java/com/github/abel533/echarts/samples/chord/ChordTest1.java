@@ -25,7 +25,7 @@
 package com.github.abel533.echarts.samples.chord;
 
 import com.github.abel533.echarts.code.*;
-import com.github.abel533.echarts.data.AllData;
+import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.series.Chord;
 import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
@@ -48,10 +48,10 @@ public class ChordTest1 {
                 sortSub(Sort.descending).
                 showScale(true).
                 showScaleText(true).
-                data(new AllData().name("group1"),
-                        new AllData().name("group2"),
-                        new AllData().name("group3"),
-                        new AllData().name("group4")).
+                data(new Data().name("group1"),
+                        new Data().name("group2"),
+                        new Data().name("group3"),
+                        new Data().name("group4")).
                 matrix(new Object[][]{
                         {11975, 5871, 8916, 2868},
                         {1951, 10048, 2060, 6171},

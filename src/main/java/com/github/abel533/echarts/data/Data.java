@@ -27,11 +27,11 @@ package com.github.abel533.echarts.data;
 import com.github.abel533.echarts.Tooltip;
 
 /**
- * LineData
+ * 通用的Data对象...和Data接口同名，Data接口中的data使用的就是这里的Data..
  *
  * @author liuzh
  */
-public class AllData extends BasicData<AllData> {
+public class Data extends BasicData<Data> {
     /**
      * 可以通过valueIndex:0指定为横轴特殊点
      */
@@ -46,22 +46,22 @@ public class AllData extends BasicData<AllData> {
     private Boolean selected;
     private Tooltip tooltip;
 
-    public AllData() {
+    public Data() {
     }
 
-    public AllData(String name, Object value) {
+    public Data(String name, Object value) {
         super(name, value);
     }
 
-    public AllData(String name, Object symbol, Object symbolSize) {
+    public Data(String name, Object symbol, Object symbolSize) {
         super(name, symbol, symbolSize);
     }
 
-    public AllData(Object value, Object symbol) {
+    public Data(Object value, Object symbol) {
         super(value, symbol);
     }
 
-    public AllData(Object value, Object symbol, Object symbolSize) {
+    public Data(Object value, Object symbol, Object symbolSize) {
         super(value, symbol, symbolSize);
     }
 
@@ -72,7 +72,7 @@ public class AllData extends BasicData<AllData> {
         return this.tooltip;
     }
 
-    public AllData tooltip(Tooltip tooltip) {
+    public Data tooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
         return this;
     }
@@ -81,7 +81,7 @@ public class AllData extends BasicData<AllData> {
         return this.selected;
     }
 
-    public AllData selected(Boolean selected) {
+    public Data selected(Boolean selected) {
         this.selected = selected;
         return this;
     }
@@ -90,7 +90,7 @@ public class AllData extends BasicData<AllData> {
         return this.icon;
     }
 
-    public AllData icon(String icon) {
+    public Data icon(String icon) {
         this.icon = icon;
         return this;
     }
@@ -99,7 +99,7 @@ public class AllData extends BasicData<AllData> {
         return this.min;
     }
 
-    public AllData min(Object min) {
+    public Data min(Object min) {
         this.min = min;
         return this;
     }
@@ -108,7 +108,7 @@ public class AllData extends BasicData<AllData> {
         return this.max;
     }
 
-    public AllData max(Object max) {
+    public Data max(Object max) {
         this.max = max;
         return this;
     }
@@ -117,7 +117,7 @@ public class AllData extends BasicData<AllData> {
         return this.valueIndex;
     }
 
-    public AllData valueIndex(Integer valueIndex) {
+    public Data valueIndex(Integer valueIndex) {
         this.valueIndex = valueIndex;
         return this;
     }
@@ -126,7 +126,7 @@ public class AllData extends BasicData<AllData> {
         return valueIndex;
     }
 
-    public AllData setValueIndex(Integer valueIndex) {
+    public Data setValueIndex(Integer valueIndex) {
         this.valueIndex = valueIndex;
         return this;
     }

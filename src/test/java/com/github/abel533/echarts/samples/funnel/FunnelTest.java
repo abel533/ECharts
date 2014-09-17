@@ -27,7 +27,7 @@ package com.github.abel533.echarts.samples.funnel;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.LabelLine;
 import com.github.abel533.echarts.code.*;
-import com.github.abel533.echarts.data.AllData;
+import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.series.Funnel;
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.TextStyle;
@@ -61,11 +61,11 @@ public class FunnelTest {
                 label(new Label().show(true).formatter("{b}:{c}%").textStyle(new TextStyle().fontSize(20))).
                 labelLine(new LabelLine().show(true));
 
-        funnel.data(new AllData().value(60).name("访问"),
-                new AllData().value(40).name("咨询"),
-                new AllData().value(20).name("订单"),
-                new AllData().value(80).name("点击"),
-                new AllData().value(100).name("展现")
+        funnel.data(new Data().value(60).name("访问"),
+                new Data().value(40).name("咨询"),
+                new Data().value(20).name("订单"),
+                new Data().value(80).name("点击"),
+                new Data().value(100).name("展现")
         );
 
         option.series(funnel);
