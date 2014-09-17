@@ -157,6 +157,29 @@ public class Option {
         return this;
     }
 
+    /**
+     * 标题
+     *
+     * @param text
+     * @return
+     */
+    public Option title(String text) {
+        this.title().text(text);
+        return this;
+    }
+
+    /**
+     * 标题和副标题
+     *
+     * @param text
+     * @param subtext
+     * @return
+     */
+    public Option title(String text, String subtext) {
+        this.title().text(text).subtext(subtext);
+        return this;
+    }
+
     public Option toolbox(Toolbox toolbox) {
         this.toolbox = toolbox;
         return this;

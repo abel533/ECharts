@@ -40,6 +40,7 @@ public class MapTest {
 
     @Test
     public void test() {
+        //地址：http://echarts.baidu.com/doc/example/map.html
         EnhancedOption option = new EnhancedOption();
         Map map = new Map("Map");
         map.mapLocation(new MapLocation(X.left, Y.top, 500));
