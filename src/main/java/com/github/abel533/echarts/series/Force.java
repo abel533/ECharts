@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.series.force.Category;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
@@ -70,7 +71,7 @@ public class Force extends Series<Force> {
     /**
      * 力导向图的边两端图形样式，可指定为'arrow', 详见symbolList
      */
-    private String linkSymbol;
+    private Object linkSymbol;
     /**
      * 力导向图的边两端图形大小
      */
@@ -78,11 +79,11 @@ public class Force extends Series<Force> {
     /**
      * 布局缩放系数，并不完全精确, 效果跟布局大小类似
      */
-    private Integer scaling;
+    private Double scaling;
     /**
      * 向心力系数，系数越大则节点越往中心靠拢
      */
-    private Integer gravity;
+    private Double gravity;
     /**
      * 节点是否能被拖拽
      */
@@ -232,8 +233,13 @@ public class Force extends Series<Force> {
         return this;
     }
 
-    public String linkSymbol() {
+    public Object linkSymbol() {
         return this.linkSymbol;
+    }
+
+    public Force linkSymbol(Symbol linkSymbol) {
+        this.linkSymbol = linkSymbol;
+        return this;
     }
 
     public Force linkSymbol(String linkSymbol) {
@@ -250,20 +256,20 @@ public class Force extends Series<Force> {
         return this;
     }
 
-    public Integer scaling() {
+    public Double scaling() {
         return this.scaling;
     }
 
-    public Force scaling(Integer scaling) {
+    public Force scaling(Double scaling) {
         this.scaling = scaling;
         return this;
     }
 
-    public Integer gravity() {
+    public Double gravity() {
         return this.gravity;
     }
 
-    public Force gravity(Integer gravity) {
+    public Force gravity(Double gravity) {
         this.gravity = gravity;
         return this;
     }
@@ -360,11 +366,11 @@ public class Force extends Series<Force> {
         this.maxRadius = maxRadius;
     }
 
-    public String getLinkSymbol() {
+    public Object getLinkSymbol() {
         return linkSymbol;
     }
 
-    public void setLinkSymbol(String linkSymbol) {
+    public void setLinkSymbol(Object linkSymbol) {
         this.linkSymbol = linkSymbol;
     }
 
@@ -376,19 +382,19 @@ public class Force extends Series<Force> {
         this.linkSymbolSize = linkSymbolSize;
     }
 
-    public Integer getScaling() {
+    public Double getScaling() {
         return scaling;
     }
 
-    public void setScaling(Integer scaling) {
+    public void setScaling(Double scaling) {
         this.scaling = scaling;
     }
 
-    public Integer getGravity() {
+    public Double getGravity() {
         return gravity;
     }
 
-    public void setGravity(Integer gravity) {
+    public void setGravity(Double gravity) {
         this.gravity = gravity;
     }
 

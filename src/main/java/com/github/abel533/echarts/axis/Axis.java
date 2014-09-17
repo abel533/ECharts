@@ -50,8 +50,8 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     /**
      * 坐标轴类型，横轴默认为类目型'bottom'，纵轴默认为数值型'left'，可选为：'bottom' | 'top' | 'left' | 'right'
      *
-     * @see com.github.abel533.echarts.code.XPosition
-     * @see com.github.abel533.echarts.code.YPosition
+     * @see com.github.abel533.echarts.code.X
+     * @see com.github.abel533.echarts.code.Y
      */
     private Object position;
     /**

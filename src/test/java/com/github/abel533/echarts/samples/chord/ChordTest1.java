@@ -38,10 +38,10 @@ public class ChordTest1 {
     @Test
     public void test() {
         EnhancedOption option = new EnhancedOption();
-        option.title().text("测试数据").subtext("From d3.js").x(XPosition.right).y(YPosition.bottom);
+        option.title().text("测试数据").subtext("From d3.js").x(X.right).y(Y.bottom);
         option.tooltip().trigger(Trigger.item);
         option.toolbox().show(true).feature(Tool.restore, Tool.saveAsImage);
-        option.legend().x(XPosition.left).data("group1", "group2", "group3", "group4");
+        option.legend().x(X.left).data("group1", "group2", "group3", "group4");
 
         Chord chord = new Chord();
         chord.sort(Sort.ascending).

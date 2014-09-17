@@ -22,11 +22,55 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.code;
+package com.github.abel533.echarts.series;
 
 /**
  * @author liuzh
  */
-public enum XPosition {
-    center, left, right
+public class ScaleLimit {
+    private Double min;
+
+    public Double min() {
+        return this.min;
+    }
+
+    public ScaleLimit min(Double min) {
+        this.min = min;
+        return this;
+    }
+
+    private Double max;
+
+    public Double max() {
+        return this.max;
+    }
+
+    public ScaleLimit max(Double max) {
+        this.max = max;
+        return this;
+    }
+
+    public ScaleLimit() {
+    }
+
+    public ScaleLimit(Double min, Double max) {
+        this.min = min;
+        this.max = max;
+    }
+
+    public Double getMin() {
+        return min;
+    }
+
+    public void setMin(Double min) {
+        this.min = min;
+    }
+
+    public Double getMax() {
+        return max;
+    }
+
+    public void setMax(Double max) {
+        this.max = max;
+    }
 }

@@ -25,7 +25,7 @@
 package com.github.abel533.echarts.style;
 
 import com.github.abel533.echarts.code.FontStyle;
-import com.github.abel533.echarts.code.XPosition;
+import com.github.abel533.echarts.code.X;
 
 /**
  * 文字样式
@@ -45,9 +45,9 @@ public class TextStyle {
     /**
      * 水平对齐方式，可选为：'left' | 'right' | 'center'
      *
-     * @see com.github.abel533.echarts.code.XPosition
+     * @see com.github.abel533.echarts.code.X
      */
-    private XPosition align;
+    private X align;
     /**
      * 字号 ，单位px
      */
@@ -90,11 +90,11 @@ public class TextStyle {
         return this;
     }
 
-    public XPosition align() {
+    public X align() {
         return this.align;
     }
 
-    public TextStyle align(XPosition align) {
+    public TextStyle align(X align) {
         this.align = align;
         return this;
     }
@@ -160,11 +160,11 @@ public class TextStyle {
         this.decoration = decoration;
     }
 
-    public XPosition getAlign() {
+    public X getAlign() {
         return align;
     }
 
-    public void setAlign(XPosition align) {
+    public void setAlign(X align) {
         this.align = align;
     }
 

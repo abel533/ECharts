@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.XPosition;
+import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
@@ -58,9 +58,9 @@ public class Title extends Basic<Title> implements Component {
     /**
      * 水平对齐方式，默认根据x设置自动调整，可选为： left' | 'right' | 'center
      *
-     * @see com.github.abel533.echarts.code.XPosition
+     * @see com.github.abel533.echarts.code.X
      */
-    private XPosition textAlign;
+    private X textAlign;
     /**
      * 主标题文本样式（详见textStyle）
      *
@@ -138,11 +138,11 @@ public class Title extends Basic<Title> implements Component {
         return this;
     }
 
-    public XPosition textAlign() {
+    public X textAlign() {
         return this.textAlign;
     }
 
-    public Title textAlign(XPosition textAlign) {
+    public Title textAlign(X textAlign) {
         this.textAlign = textAlign;
         return this;
     }
@@ -235,11 +235,11 @@ public class Title extends Basic<Title> implements Component {
         this.subtarget = subtarget;
     }
 
-    public XPosition getTextAlign() {
+    public X getTextAlign() {
         return textAlign;
     }
 
-    public void setTextAlign(XPosition textAlign) {
+    public void setTextAlign(X textAlign) {
         this.textAlign = textAlign;
     }
 }

@@ -27,6 +27,6 @@ package com.github.abel533.echarts.code;
 /**
  * @author liuzh
  */
-public enum YPosition {
+public enum Y {
     center, top, bottom
 }

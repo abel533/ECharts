@@ -74,7 +74,7 @@ public class Map extends Series<Map> {
     /**
      * 滚轮缩放的极限控制，可指定{max:number, min:number}，其中max为放大系数，有效值应大于1，min为缩小系数，有效值应小于1
      */
-    private Object scaleLimit;
+    private ScaleLimit scaleLimit;
     /**
      * 自定义地区的名称映射，如{'China' : '中国'}
      */
@@ -176,11 +176,11 @@ public class Map extends Series<Map> {
         return this;
     }
 
-    public Object scaleLimit() {
+    public ScaleLimit scaleLimit() {
         return this.scaleLimit;
     }
 
-    public Map scaleLimit(Object scaleLimit) {
+    public Map scaleLimit(ScaleLimit scaleLimit) {
         this.scaleLimit = scaleLimit;
         return this;
     }
@@ -276,11 +276,11 @@ public class Map extends Series<Map> {
         this.roam = roam;
     }
 
-    public Object getScaleLimit() {
+    public ScaleLimit getScaleLimit() {
         return scaleLimit;
     }
 
-    public void setScaleLimit(Object scaleLimit) {
+    public void setScaleLimit(ScaleLimit scaleLimit) {
         this.scaleLimit = scaleLimit;
     }
 

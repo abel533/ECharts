@@ -24,8 +24,8 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.XPosition;
-import com.github.abel533.echarts.code.YPosition;
+import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.code.Y;
 
 /**
  * 组件的基础类
@@ -36,13 +36,13 @@ public abstract class Basic<T> {
     /**
      * 水平安放位置，默认为左侧，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
      *
-     * @see com.github.abel533.echarts.code.XPosition
+     * @see com.github.abel533.echarts.code.X
      */
     private Object x;
     /**
      * 垂直安放位置，默认为全图顶端，可选为：'top' | 'bottom' | 'center' | {number}（y坐标，单位px）
      *
-     * @see com.github.abel533.echarts.code.YPosition
+     * @see com.github.abel533.echarts.code.Y
      */
     private Object y;
     /**
@@ -134,7 +134,7 @@ public abstract class Basic<T> {
         return (T) this;
     }
 
-    public T x(XPosition x) {
+    public T x(X x) {
         this.x = x;
         return (T) this;
     }
@@ -144,7 +144,7 @@ public abstract class Basic<T> {
         return (T) this;
     }
 
-    public T y(YPosition y) {
+    public T y(Y y) {
         this.y = y;
         return (T) this;
     }

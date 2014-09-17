@@ -49,6 +49,15 @@ public class Link {
      */
     private ItemStyle itemStyle;
 
+    public Link() {
+    }
+
+    public Link(Object source, Object target, Integer weight) {
+        this.source = source;
+        this.target = target;
+        this.weight = weight;
+    }
+
     public Object source() {
         return this.source;
     }

@@ -81,6 +81,15 @@ public class Node {
      */
     private ItemStyle itemStyle;
 
+    public Node() {
+    }
+
+    public Node(Integer category, String name, Integer value) {
+        this.category = category;
+        this.name = name;
+        this.value = value;
+    }
+
     public String name() {
         return this.name;
     }

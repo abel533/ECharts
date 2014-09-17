@@ -27,7 +27,7 @@ package com.github.abel533.echarts.samples.radar;
 import com.github.abel533.echarts.Polar;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
-import com.github.abel533.echarts.code.XPosition;
+import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.series.Radar;
 import com.github.abel533.echarts.util.EnhancedOption;
@@ -44,7 +44,7 @@ public class RadarTest2 {
         EnhancedOption option = new EnhancedOption();
         option.title().text("罗纳尔多 vs 舍普琴科").subtext("完全实况球员数据");
         option.tooltip().trigger(Trigger.axis);
-        option.legend().data("罗纳尔多", "舍普琴科").x(XPosition.center);
+        option.legend().data("罗纳尔多", "舍普琴科").x(X.center);
         option.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
         option.calculable(true);
 
