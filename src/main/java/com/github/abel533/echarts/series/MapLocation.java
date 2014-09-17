@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.code.Y;
+
 /**
  * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
  *
@@ -35,6 +38,45 @@ public class MapLocation {
     private Object width;
     private Object height;
 
+    public MapLocation() {
+    }
+
+    public MapLocation(Object x, Object y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public MapLocation(Object x, Object y, Object width) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+    }
+
+    public MapLocation(Object x, Object y, Object width, Object height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    public MapLocation(X x, Y y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public MapLocation(X x, Y y, Object width) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+    }
+
+    public MapLocation(X x, Y y, Object width, Object height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
     public Object x() {
         return this.x;
     }
@@ -44,8 +86,18 @@ public class MapLocation {
         return this;
     }
 
+    public MapLocation x(X x) {
+        this.x = x;
+        return this;
+    }
+
     public Object y() {
         return this.y;
+    }
+
+    public MapLocation y(Y y) {
+        this.y = y;
+        return this;
     }
 
     public MapLocation y(Object y) {

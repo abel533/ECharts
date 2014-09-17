@@ -62,6 +62,10 @@ public abstract class BasicData<T> {
     public BasicData() {
     }
 
+    protected BasicData(String name) {
+        this.name = name;
+    }
+
     public BasicData(String name, Object value) {
         this.name = name;
         this.value = value;

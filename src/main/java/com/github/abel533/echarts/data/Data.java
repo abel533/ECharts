@@ -49,6 +49,10 @@ public class Data extends BasicData<Data> {
     public Data() {
     }
 
+    public Data(String name) {
+        super(name);
+    }
+
     public Data(String name, Object value) {
         super(name, value);
     }

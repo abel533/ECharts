@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.Calculation;
+import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.code.SeriesType;
 
 /**
@@ -86,8 +87,7 @@ public class Map extends Series<Map> {
     /**
      * 通过绝对经纬度指定地区的名称文本位置，如{'Islands':[113.95, 22.26]}，香港离岛区名称显示定位到东经113.95，北纬22.26上
      */
-    //TODO 结构可以优化
-    private Object geoCoord;
+    private GeoCoord geoCoord;
 
     public Map() {
         this.type(SeriesType.map);
@@ -108,6 +108,11 @@ public class Map extends Series<Map> {
     }
 
     public Map selectedMode(Object selectedMode) {
+        this.selectedMode = selectedMode;
+        return this;
+    }
+
+    public Map selectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
@@ -177,6 +182,9 @@ public class Map extends Series<Map> {
     }
 
     public ScaleLimit scaleLimit() {
+        if (this.scaleLimit == null) {
+            this.scaleLimit = new ScaleLimit();
+        }
         return this.scaleLimit;
     }
 
@@ -203,12 +211,15 @@ public class Map extends Series<Map> {
         return this;
     }
 
-    public Object geoCoord() {
+    public GeoCoord geoCoord() {
+        if (this.geoCoord == null) {
+            this.geoCoord = new GeoCoord();
+        }
         return this.geoCoord;
     }
 
-    public Map geoCoord(Object geoCoord) {
-        this.geoCoord = geoCoord;
+    public Map geoCoord(String name, String x, String y) {
+        this.geoCoord().put(name, x, y);
         return this;
     }
 
@@ -300,11 +311,11 @@ public class Map extends Series<Map> {
         this.textFixed = textFixed;
     }
 
-    public Object getGeoCoord() {
+    public GeoCoord getGeoCoord() {
         return geoCoord;
     }
 
-    public void setGeoCoord(Object geoCoord) {
+    public void setGeoCoord(GeoCoord geoCoord) {
         this.geoCoord = geoCoord;
     }
 }

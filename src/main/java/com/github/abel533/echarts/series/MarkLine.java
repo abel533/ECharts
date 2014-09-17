@@ -70,7 +70,7 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
-    private Object geoCoord;
+    private GeoCoord geoCoord;
 
     public MarkLine effect(Effect effect) {
         this.effect = effect;
@@ -134,12 +134,15 @@ public class MarkLine extends AbstractData<MarkLine> {
         return this.itemStyle;
     }
 
-    public Object geoCoord() {
+    public GeoCoord geoCoord() {
+        if (this.geoCoord == null) {
+            this.geoCoord = new GeoCoord();
+        }
         return this.geoCoord;
     }
 
-    public MarkLine geoCoord(Object geoCoord) {
-        this.geoCoord = geoCoord;
+    public MarkLine geoCoord(String name, String x, String y) {
+        this.geoCoord().put(name, x, y);
         return this;
     }
 
@@ -183,11 +186,11 @@ public class MarkLine extends AbstractData<MarkLine> {
         this.symbolRoate = symbolRoate;
     }
 
-    public Object getGeoCoord() {
+    public GeoCoord getGeoCoord() {
         return geoCoord;
     }
 
-    public void setGeoCoord(Object geoCoord) {
+    public void setGeoCoord(GeoCoord geoCoord) {
         this.geoCoord = geoCoord;
     }
 }

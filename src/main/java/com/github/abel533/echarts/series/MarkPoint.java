@@ -72,7 +72,7 @@ public class MarkPoint extends AbstractData<MarkPoint> {
      *
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
-    private Object geoCoord;
+    private GeoCoord geoCoord;
 
     public MarkPoint effect(Effect effect) {
         this.effect = effect;
@@ -145,12 +145,15 @@ public class MarkPoint extends AbstractData<MarkPoint> {
         return this.itemStyle;
     }
 
-    public Object geoCoord() {
+    public GeoCoord geoCoord() {
+        if (this.geoCoord == null) {
+            this.geoCoord = new GeoCoord();
+        }
         return this.geoCoord;
     }
 
-    public MarkPoint geoCoord(Object geoCoord) {
-        this.geoCoord = geoCoord;
+    public MarkPoint geoCoord(String name, String x, String y) {
+        this.geoCoord().put(name, x, y);
         return this;
     }
 
@@ -202,11 +205,11 @@ public class MarkPoint extends AbstractData<MarkPoint> {
         this.large = large;
     }
 
-    public Object getGeoCoord() {
+    public GeoCoord getGeoCoord() {
         return geoCoord;
     }
 
-    public void setGeoCoord(Object geoCoord) {
+    public void setGeoCoord(GeoCoord geoCoord) {
         this.geoCoord = geoCoord;
     }
 }
