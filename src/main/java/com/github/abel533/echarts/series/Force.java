@@ -150,6 +150,43 @@ public class Force extends Series<Force> {
     }
 
     /**
+     * 添加节点分类，使用分类名
+     *
+     * @param names
+     * @return
+     */
+    public Force categories(String... names) {
+        if (names == null || names.length == 0) {
+            return this;
+        }
+        for (String name : names) {
+            this.categories().add(new Category(name));
+        }
+        return this;
+    }
+
+    /**
+     * 添加节点分类，使用分类名
+     *
+     * @param values
+     * @return
+     */
+    public Force categories(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        for (Object value : values) {
+            if (value instanceof String) {
+                this.categories().add(new Category((String) value));
+            } else if (value instanceof Category) {
+                this.categories().add((Category) value);
+            }
+            //其他忽略
+        }
+        return this;
+    }
+
+    /**
      * 力导向图的顶点数据
      */
     public List<Node> nodes() {

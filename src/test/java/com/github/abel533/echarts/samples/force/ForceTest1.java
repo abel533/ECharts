@@ -27,7 +27,6 @@ package com.github.abel533.echarts.samples.force;
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.*;
 import com.github.abel533.echarts.series.Force;
-import com.github.abel533.echarts.series.force.Category;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
 import com.github.abel533.echarts.style.LinkStyle;
@@ -52,7 +51,7 @@ public class ForceTest1 {
 
         //数据
         Force force = new Force("人物关系");
-        force.categories(new Category("人物"), new Category("家人"), new Category("朋友"));
+        force.categories("人物", "家人", "朋友");
         force.itemStyle().normal()
                 .label(new Label().show(true).textStyle(new TextStyle().color("#333")))
                 .nodeStyle().brushType(BrushType.both).strokeColor("rgba(255,215,0,0.4)").lineWidth(1);
