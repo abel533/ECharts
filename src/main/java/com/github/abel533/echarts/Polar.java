@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.axis.AxisLabel;
 import com.github.abel533.echarts.axis.AxisLine;
 import com.github.abel533.echarts.axis.SplitArea;
 import com.github.abel533.echarts.axis.SplitLine;
@@ -86,9 +87,9 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 坐标轴文本标签，详见axis.axisLabel
      *
-     * @see com.github.abel533.echarts.Label
+     * @see com.github.abel533.echarts.axis.AxisLabel
      */
-    private Label axisLabel;
+    private AxisLabel axisLabel;
     /**
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      *
@@ -150,7 +151,7 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this;
     }
 
-    public Polar axisLabel(Label axisLabel) {
+    public Polar axisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
         return this;
     }
@@ -285,11 +286,11 @@ public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 坐标轴文本标签，详见axis.axisLabel
      *
-     * @see com.github.abel533.echarts.Label
+     * @see com.github.abel533.echarts.axis.AxisLabel
      */
-    public Label axisLabel() {
+    public AxisLabel axisLabel() {
         if (this.axisLabel == null) {
-            this.axisLabel = new Label();
+            this.axisLabel = new AxisLabel();
         }
         return this.axisLabel;
     }
@@ -361,11 +362,11 @@ public class Polar extends AbstractData<Polar> implements Component {
         this.axisLine = axisLine;
     }
 
-    public Label getAxisLabel() {
+    public AxisLabel getAxisLabel() {
         return axisLabel;
     }
 
-    public void setAxisLabel(Label axisLabel) {
+    public void setAxisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
     }
 

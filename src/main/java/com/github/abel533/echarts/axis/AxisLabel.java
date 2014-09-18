@@ -22,13 +22,15 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts;
+package com.github.abel533.echarts.axis;
+
+import com.github.abel533.echarts.AbstractLabel;
 
 /**
- * Description: Label
+ * 坐标轴专用，和Label没有区别
  *
  * @author liuzh
  */
-public class Label extends AbstractLabel<Label> {
+public class AxisLabel extends AbstractLabel<AxisLabel> {
 
 }

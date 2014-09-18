@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.axis.Axis;
+import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.series.Series;
 import com.github.abel533.echarts.style.ItemStyle;
 
@@ -187,6 +188,11 @@ public class Option {
 
     public Option tooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
+        return this;
+    }
+
+    public Option tooltip(Trigger trigger) {
+        this.tooltip().trigger(trigger);
         return this;
     }
 

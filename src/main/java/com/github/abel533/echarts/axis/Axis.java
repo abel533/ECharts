@@ -26,7 +26,6 @@ package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Component;
-import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.style.LineStyle;
@@ -92,9 +91,9 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     /**
      * 坐标轴文本标签，详见axis.axisLabel
      *
-     * @see com.github.abel533.echarts.Label
+     * @see com.github.abel533.echarts.axis.AxisLabel
      */
-    private Label axisLabel;
+    private AxisLabel axisLabel;
     /**
      * 分隔线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -246,16 +245,16 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     /**
      * 坐标轴文本标签，详见axis.axisLabel
      *
-     * @see com.github.abel533.echarts.Label
+     * @see com.github.abel533.echarts.axis.AxisLabel
      */
-    public Label axisLabel() {
+    public AxisLabel axisLabel() {
         if (this.axisLabel == null) {
-            this.axisLabel = new Label();
+            this.axisLabel = new AxisLabel();
         }
         return this.axisLabel;
     }
 
-    public T axisLabel(Label label) {
+    public T axisLabel(AxisLabel label) {
         this.axisLabel = label;
         return (T) this;
     }
@@ -341,11 +340,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         this.axisTick = axisTick;
     }
 
-    public Label getAxisLabel() {
+    public AxisLabel getAxisLabel() {
         return axisLabel;
     }
 
-    public void setAxisLabel(Label axisLabel) {
+    public void setAxisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
     }
 
