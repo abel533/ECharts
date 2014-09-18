@@ -39,6 +39,13 @@ import java.util.List;
 public class OptionUtil {
 
     /**
+     * 私有构造函数，防止创建该类
+     */
+    private OptionUtil() {
+
+    }
+
+    /**
      * 导出到html（tmp文件夹）
      *
      * @param option
@@ -62,6 +69,60 @@ public class OptionUtil {
     }
 
     /**
+     * 获取文件夹路径，如果不存在则创建
+     *
+     * @param folderPath
+     * @return
+     */
+    private static String getFolderPath(String folderPath) {
+        File folder = new File(folderPath);
+        if (folder.exists() && folder.isFile()) {
+            String tempPath = folder.getParent();
+            folder = new File(tempPath);
+        }
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+        return folder.getPath();
+    }
+
+    /**
+     * 读取模板并写入数据
+     *
+     * @param option
+     * @return
+     */
+    private static List<String> readLines(Option option){
+        String optionStr = GsonUtil.format(option);
+        InputStream is = null;
+        InputStreamReader iReader = null;
+        BufferedReader bufferedReader = null;
+        List<String> lines = new ArrayList<String>();
+        String line;
+        try {
+            is = OptionUtil.class.getResourceAsStream("/template");
+            iReader = new InputStreamReader(is);
+            bufferedReader = new BufferedReader(iReader);
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.contains("##option##")) {
+                    line = line.replace("##option##", optionStr);
+                }
+                lines.add(line);
+            }
+        } catch (Exception e) {
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    //ignore
+                }
+            }
+        }
+        return lines;
+    }
+
+    /**
      * 导出到指定文件
      *
      * @param option
@@ -73,49 +134,17 @@ public class OptionUtil {
         if (fileName == null || fileName.length() == 0) {
             return exportToHtml(option, folderPath);
         }
-
-        String optionStr = GsonUtil.format(option);
-        File folder = new File(folderPath);
-        if (folder.exists() && folder.isFile()) {
-            String tempPath = folder.getParent();
-            folder = new File(tempPath);
-        }
-        if (!folder.exists()) {
-            folder.mkdirs();
-        }
-        InputStream is = null;
-        InputStreamReader iReader = null;
-        BufferedReader bufferedReader = null;
         FileWriter writer = null;
-        List<String> lines = new ArrayList<String>();
-        String line;
+        List<String> lines = readLines(option);
         //写入文件
-        File html = new File(folder.getPath() + "/" + fileName);
+        File html = new File(getFolderPath(folderPath) + "/" + fileName);
         try {
-            is = OptionUtil.class.getResourceAsStream("/template");
-            iReader = new InputStreamReader(is);
-            bufferedReader = new BufferedReader(iReader);
-            while ((line = bufferedReader.readLine()) != null) {
-                if (line.contains("##option##")) {
-                    line = line.replace("##option##", optionStr);
-                }
-                lines.add(line);
-            }
-
             writer = new FileWriter(html);
             for (String l : lines) {
                 writer.write(l + "\n");
             }
         } catch (Exception e) {
-            e.printStackTrace();
         } finally {
-            if (is != null) {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    //ignore
-                }
-            }
             if (writer != null) {
                 try {
                     writer.close();
@@ -143,7 +172,6 @@ public class OptionUtil {
         try {
             browse(htmlPath);
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return htmlPath;
     }
