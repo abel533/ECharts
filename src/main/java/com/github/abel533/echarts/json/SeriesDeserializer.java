@@ -35,6 +35,13 @@ import java.lang.reflect.Type;
  */
 public class SeriesDeserializer implements JsonDeserializer<Series> {
     @Override
+    /**
+     * 设置json,typeOfT,context值
+     *
+     * @param json
+     * @param typeOfT
+     * @param context
+     */
     public Series deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         final JsonObject jsonObject = json.getAsJsonObject();
         String _type = jsonObject.get("type").getAsString();

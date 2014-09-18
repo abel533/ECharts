@@ -114,58 +114,112 @@ public class Gauge extends Series<Gauge> {
      */
     private Detail detail;
 
+    /**
+     * 构造函数
+     */
     public Gauge() {
         this.type(SeriesType.gauge);
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Gauge(String name) {
         super(name);
         this.type(SeriesType.gauge);
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] center() {
         return this.center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public Gauge center(Object[] center) {
         this.center = center;
         return this;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object radius() {
         return this.radius;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public Gauge axisLine(Line axisLine) {
         this.axisLine = axisLine;
         return this;
     }
 
+    /**
+     * 设置axisTick值
+     *
+     * @param axisTick
+     */
     public Gauge axisTick(AxisTick axisTick) {
         this.axisTick = axisTick;
         return this;
     }
 
+    /**
+     * 设置axisLabel值
+     *
+     * @param axisLabel
+     */
     public Gauge axisLabel(Label axisLabel) {
         this.axisLabel = axisLabel;
         return this;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public Gauge splitLine(SplitLine splitLine) {
         this.splitLine = splitLine;
         return this;
     }
 
+    /**
+     * 设置pointer值
+     *
+     * @param pointer
+     */
     public Gauge pointer(Pointer pointer) {
         this.pointer = pointer;
         return this;
     }
 
+    /**
+     * 设置title值
+     *
+     * @param title
+     */
     public Gauge title(Title title) {
         this.title = title;
         return this;
     }
 
+    /**
+     * 设置detail值
+     *
+     * @param detail
+     */
     public Gauge detail(Detail detail) {
         this.detail = detail;
         return this;
@@ -204,55 +258,103 @@ public class Gauge extends Series<Gauge> {
         return this;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer startAngle() {
         return this.startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public Gauge startAngle(Integer startAngle) {
         this.startAngle = startAngle;
         return this;
     }
 
+    /**
+     * 获取endAngle值
+     */
     public Integer endAngle() {
         return this.endAngle;
     }
 
+    /**
+     * 设置endAngle值
+     *
+     * @param endAngle
+     */
     public Gauge endAngle(Integer endAngle) {
         this.endAngle = endAngle;
         return this;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer min() {
         return this.min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public Gauge min(Integer min) {
         this.min = min;
         return this;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer max() {
         return this.max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public Gauge max(Integer max) {
         this.max = max;
         return this;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer precision() {
         return this.precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public Gauge precision(Integer precision) {
         this.precision = precision;
         return this;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer splitNumber() {
         return this.splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public Gauge splitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
         return this;
@@ -342,122 +444,242 @@ public class Gauge extends Series<Gauge> {
         return this.detail;
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] getCenter() {
         return center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public void setCenter(Object[] center) {
         this.center = center;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object getRadius() {
         return radius;
     }
 
+    /**
+     * 设置radius值
+     *
+     * @param radius
+     */
     public void setRadius(Object radius) {
         this.radius = radius;
     }
 
+    /**
+     * 获取axisLine值
+     */
     public Line getAxisLine() {
         return axisLine;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public void setAxisLine(Line axisLine) {
         this.axisLine = axisLine;
     }
 
+    /**
+     * 获取axisTick值
+     */
     public AxisTick getAxisTick() {
         return axisTick;
     }
 
+    /**
+     * 设置axisTick值
+     *
+     * @param axisTick
+     */
     public void setAxisTick(AxisTick axisTick) {
         this.axisTick = axisTick;
     }
 
+    /**
+     * 获取axisLabel值
+     */
     public Label getAxisLabel() {
         return axisLabel;
     }
 
+    /**
+     * 设置axisLabel值
+     *
+     * @param axisLabel
+     */
     public void setAxisLabel(Label axisLabel) {
         this.axisLabel = axisLabel;
     }
 
+    /**
+     * 获取splitLine值
+     */
     public SplitLine getSplitLine() {
         return splitLine;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public void setSplitLine(SplitLine splitLine) {
         this.splitLine = splitLine;
     }
 
+    /**
+     * 获取pointer值
+     */
     public Pointer getPointer() {
         return pointer;
     }
 
+    /**
+     * 设置pointer值
+     *
+     * @param pointer
+     */
     public void setPointer(Pointer pointer) {
         this.pointer = pointer;
     }
 
+    /**
+     * 获取title值
+     */
     public Title getTitle() {
         return title;
     }
 
+    /**
+     * 设置title值
+     *
+     * @param title
+     */
     public void setTitle(Title title) {
         this.title = title;
     }
 
+    /**
+     * 获取detail值
+     */
     public Detail getDetail() {
         return detail;
     }
 
+    /**
+     * 设置detail值
+     *
+     * @param detail
+     */
     public void setDetail(Detail detail) {
         this.detail = detail;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer getStartAngle() {
         return startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public void setStartAngle(Integer startAngle) {
         this.startAngle = startAngle;
     }
 
+    /**
+     * 获取endAngle值
+     */
     public Integer getEndAngle() {
         return endAngle;
     }
 
+    /**
+     * 设置endAngle值
+     *
+     * @param endAngle
+     */
     public void setEndAngle(Integer endAngle) {
         this.endAngle = endAngle;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer getMin() {
         return min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public void setMin(Integer min) {
         this.min = min;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer getMax() {
         return max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public void setMax(Integer max) {
         this.max = max;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer getPrecision() {
         return precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public void setPrecision(Integer precision) {
         this.precision = precision;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer getSplitNumber() {
         return splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
     }

@@ -49,70 +49,134 @@ public class Grid extends Basic<Grid> implements Component {
      */
     private Object height;
 
+    /**
+     * 获取x2值
+     */
     public Object x2() {
         return this.x2;
     }
 
+    /**
+     * 设置x2值
+     *
+     * @param x2
+     */
     public Grid x2(Object x2) {
         this.x2 = x2;
         return this;
     }
 
+    /**
+     * 获取y2值
+     */
     public Object y2() {
         return this.y2;
     }
 
+    /**
+     * 设置y2值
+     *
+     * @param y2
+     */
     public Grid y2(Object y2) {
         this.y2 = y2;
         return this;
     }
 
+    /**
+     * 获取width值
+     */
     public Object width() {
         return this.width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public Grid width(Object width) {
         this.width = width;
         return this;
     }
 
+    /**
+     * 获取height值
+     */
     public Object height() {
         return this.height;
     }
 
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
     public Grid height(Object height) {
         this.height = height;
         return this;
     }
 
+    /**
+     * 获取x2值
+     */
     public Object getX2() {
         return x2;
     }
 
+    /**
+     * 设置x2值
+     *
+     * @param x2
+     */
     public void setX2(Object x2) {
         this.x2 = x2;
     }
 
+    /**
+     * 获取y2值
+     */
     public Object getY2() {
         return y2;
     }
 
+    /**
+     * 设置y2值
+     *
+     * @param y2
+     */
     public void setY2(Object y2) {
         this.y2 = y2;
     }
 
+    /**
+     * 获取width值
+     */
     public Object getWidth() {
         return width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public void setWidth(Object width) {
         this.width = width;
     }
 
+    /**
+     * 获取height值
+     */
     public Object getHeight() {
         return height;
     }
 
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
     public void setHeight(Object height) {
         this.height = height;
     }

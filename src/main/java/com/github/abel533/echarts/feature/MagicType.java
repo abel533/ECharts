@@ -33,6 +33,11 @@ import java.util.Map;
  * @author liuzh
  */
 public class MagicType extends Feature {
+    /**
+     * 构造函数,参数:magics
+     *
+     * @param magics
+     */
     public MagicType(Magic... magics) {
         this.show(true);
         Map title = new HashMap<String, String>();

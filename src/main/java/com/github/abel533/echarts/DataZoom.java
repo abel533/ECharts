@@ -77,189 +77,365 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      */
     private Boolean zoomLook;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public DataZoom show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient orient() {
         return this.orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public DataZoom orient(Orient orient) {
         this.orient = orient;
         return this;
     }
 
+    /**
+     * 获取dataBackgroundColor值
+     */
     public String dataBackgroundColor() {
         return this.dataBackgroundColor;
     }
 
+    /**
+     * 设置dataBackgroundColor值
+     *
+     * @param dataBackgroundColor
+     */
     public DataZoom dataBackgroundColor(String dataBackgroundColor) {
         this.dataBackgroundColor = dataBackgroundColor;
         return this;
     }
 
+    /**
+     * 获取fillerColor值
+     */
     public String fillerColor() {
         return this.fillerColor;
     }
 
+    /**
+     * 设置fillerColor值
+     *
+     * @param fillerColor
+     */
     public DataZoom fillerColor(String fillerColor) {
         this.fillerColor = fillerColor;
         return this;
     }
 
+    /**
+     * 获取handleColor值
+     */
     public String handleColor() {
         return this.handleColor;
     }
 
+    /**
+     * 设置handleColor值
+     *
+     * @param handleColor
+     */
     public DataZoom handleColor(String handleColor) {
         this.handleColor = handleColor;
         return this;
     }
 
+    /**
+     * 获取xAxisIndex值
+     */
     public Object xAxisIndex() {
         return this.xAxisIndex;
     }
 
+    /**
+     * 设置xAxisIndex值
+     *
+     * @param xAxisIndex
+     */
     public DataZoom xAxisIndex(Object xAxisIndex) {
         this.xAxisIndex = xAxisIndex;
         return this;
     }
 
+    /**
+     * 获取yAxisIndex值
+     */
     public Object yAxisIndex() {
         return this.yAxisIndex;
     }
 
+    /**
+     * 设置yAxisIndex值
+     *
+     * @param yAxisIndex
+     */
     public DataZoom yAxisIndex(Object yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
         return this;
     }
 
+    /**
+     * 获取start值
+     */
     public Integer start() {
         return this.start;
     }
 
+    /**
+     * 设置start值
+     *
+     * @param start
+     */
     public DataZoom start(Integer start) {
         this.start = start;
         return this;
     }
 
+    /**
+     * 获取end值
+     */
     public Integer end() {
         return this.end;
     }
 
+    /**
+     * 设置end值
+     *
+     * @param end
+     */
     public DataZoom end(Integer end) {
         this.end = end;
         return this;
     }
 
+    /**
+     * 获取realtime值
+     */
     public Boolean realtime() {
         return this.realtime;
     }
 
+    /**
+     * 设置realtime值
+     *
+     * @param realtime
+     */
     public DataZoom realtime(Boolean realtime) {
         this.realtime = realtime;
         return this;
     }
 
+    /**
+     * 获取zoomLook值
+     */
     public Boolean zoomLook() {
         return this.zoomLook;
     }
 
+    /**
+     * 设置zoomLook值
+     *
+     * @param zoomLook
+     */
     public DataZoom zoomLook(Boolean zoomLook) {
         this.zoomLook = zoomLook;
         return this;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient getOrient() {
         return orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
+    /**
+     * 获取dataBackgroundColor值
+     */
     public String getDataBackgroundColor() {
         return dataBackgroundColor;
     }
 
+    /**
+     * 设置dataBackgroundColor值
+     *
+     * @param dataBackgroundColor
+     */
     public void setDataBackgroundColor(String dataBackgroundColor) {
         this.dataBackgroundColor = dataBackgroundColor;
     }
 
+    /**
+     * 获取fillerColor值
+     */
     public String getFillerColor() {
         return fillerColor;
     }
 
+    /**
+     * 设置fillerColor值
+     *
+     * @param fillerColor
+     */
     public void setFillerColor(String fillerColor) {
         this.fillerColor = fillerColor;
     }
 
+    /**
+     * 获取handleColor值
+     */
     public String getHandleColor() {
         return handleColor;
     }
 
+    /**
+     * 设置handleColor值
+     *
+     * @param handleColor
+     */
     public void setHandleColor(String handleColor) {
         this.handleColor = handleColor;
     }
 
+    /**
+     * 获取xAxisIndex值
+     */
     public Object getxAxisIndex() {
         return xAxisIndex;
     }
 
+    /**
+     * 设置xAxisIndex值
+     *
+     * @param xAxisIndex
+     */
     public void setxAxisIndex(Object xAxisIndex) {
         this.xAxisIndex = xAxisIndex;
     }
 
+    /**
+     * 获取yAxisIndex值
+     */
     public Object getyAxisIndex() {
         return yAxisIndex;
     }
 
+    /**
+     * 设置yAxisIndex值
+     *
+     * @param yAxisIndex
+     */
     public void setyAxisIndex(Object yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
     }
 
+    /**
+     * 获取start值
+     */
     public Integer getStart() {
         return start;
     }
 
+    /**
+     * 设置start值
+     *
+     * @param start
+     */
     public void setStart(Integer start) {
         this.start = start;
     }
 
+    /**
+     * 获取end值
+     */
     public Integer getEnd() {
         return end;
     }
 
+    /**
+     * 设置end值
+     *
+     * @param end
+     */
     public void setEnd(Integer end) {
         this.end = end;
     }
 
+    /**
+     * 获取realtime值
+     */
     public Boolean getRealtime() {
         return realtime;
     }
 
+    /**
+     * 设置realtime值
+     *
+     * @param realtime
+     */
     public void setRealtime(Boolean realtime) {
         this.realtime = realtime;
     }
 
+    /**
+     * 获取zoomLook值
+     */
     public Boolean getZoomLook() {
         return zoomLook;
     }
 
+    /**
+     * 设置zoomLook值
+     *
+     * @param zoomLook
+     */
     public void setZoomLook(Boolean zoomLook) {
         this.zoomLook = zoomLook;
     }

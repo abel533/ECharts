@@ -33,6 +33,9 @@ import com.github.abel533.echarts.code.AxisType;
  */
 public class CategoryAxis extends Axis<CategoryAxis> {
 
+    /**
+     * 构造函数
+     */
     public CategoryAxis() {
         this.type(AxisType.category);
     }

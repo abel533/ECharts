@@ -105,78 +105,150 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     private SplitArea splitArea;
 
+    /**
+     * 获取type值
+     */
     public AxisType type() {
         return this.type;
     }
 
+    /**
+     * 获取type值
+     */
     public AxisType getType() {
         return type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public void setType(AxisType type) {
         this.type = type;
     }
 
+    /**
+     * 获取position值
+     */
     public Object getPosition() {
         return position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public void setPosition(Object position) {
         this.position = position;
     }
 
+    /**
+     * 获取name值
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * 获取nameLocation值
+     */
     public NameLocation getNameLocation() {
         return nameLocation;
     }
 
+    /**
+     * 设置nameLocation值
+     *
+     * @param nameLocation
+     */
     public void setNameLocation(NameLocation nameLocation) {
         this.nameLocation = nameLocation;
     }
 
+    /**
+     * 获取boundaryGap值
+     */
     public Object getBoundaryGap() {
         return boundaryGap;
     }
 
+    /**
+     * 设置boundaryGap值
+     *
+     * @param boundaryGap
+     */
     public void setBoundaryGap(Object boundaryGap) {
         this.boundaryGap = boundaryGap;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public T type(AxisType type) {
         this.type = type;
         return (T) this;
 
     }
 
+    /**
+     * 获取position值
+     */
     public Object position() {
         return this.position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public T position(Object position) {
         this.position = position;
         return (T) this;
     }
 
+    /**
+     * 获取name值
+     */
     public String name() {
         return this.name;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public T name(String name) {
         this.name = name;
         return (T) this;
     }
 
+    /**
+     * 获取nameLocation值
+     */
     public NameLocation nameLocation() {
         return this.nameLocation;
     }
 
+    /**
+     * 设置nameLocation值
+     *
+     * @param nameLocation
+     */
     public T nameLocation(NameLocation nameLocation) {
         this.nameLocation = nameLocation;
         return (T) this;
@@ -192,15 +264,28 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.nameTextStyle;
     }
 
+    /**
+     * 设置style值
+     *
+     * @param style
+     */
     public T nameTextStyle(LineStyle style) {
         this.nameTextStyle = style;
         return (T) this;
     }
 
+    /**
+     * 获取boundaryGap值
+     */
     public Object boundaryGap() {
         return this.boundaryGap;
     }
 
+    /**
+     * 设置boundaryGap值
+     *
+     * @param boundaryGap
+     */
     public T boundaryGap(Object boundaryGap) {
         this.boundaryGap = boundaryGap;
         return (T) this;
@@ -219,6 +304,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.axisLine;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public T axisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
         return (T) this;
@@ -237,6 +327,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.axisTick;
     }
 
+    /**
+     * 设置axisTick值
+     *
+     * @param axisTick
+     */
     public T axisTick(AxisTick axisTick) {
         this.axisTick = axisTick;
         return (T) this;
@@ -276,6 +371,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.splitLine;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public T splitLine(SplitLine splitLine) {
         if (this.splitLine == null) {
             this.splitLine = splitLine;
@@ -293,6 +393,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.splitArea;
     }
 
+    /**
+     * 设置splitArea值
+     *
+     * @param splitArea
+     */
     public T splitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
         return (T) this;
@@ -305,6 +410,11 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * @return
      */
     @Override
+    /**
+     * 设置values值
+     *
+     * @param values
+     */
     public T data(Object... values) {
         if (values == null || values.length == 0) {
             return (T) this;
@@ -320,50 +430,98 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return (T) this;
     }
 
+    /**
+     * 获取nameTextStyle值
+     */
     public LineStyle getNameTextStyle() {
         return nameTextStyle;
     }
 
+    /**
+     * 设置nameTextStyle值
+     *
+     * @param nameTextStyle
+     */
     public void setNameTextStyle(LineStyle nameTextStyle) {
         this.nameTextStyle = nameTextStyle;
     }
 
+    /**
+     * 获取axisLine值
+     */
     public AxisLine getAxisLine() {
         return axisLine;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public void setAxisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
     }
 
+    /**
+     * 获取axisTick值
+     */
     public AxisTick getAxisTick() {
         return axisTick;
     }
 
+    /**
+     * 设置axisTick值
+     *
+     * @param axisTick
+     */
     public void setAxisTick(AxisTick axisTick) {
         this.axisTick = axisTick;
     }
 
+    /**
+     * 获取axisLabel值
+     */
     public AxisLabel getAxisLabel() {
         return axisLabel;
     }
 
+    /**
+     * 设置axisLabel值
+     *
+     * @param axisLabel
+     */
     public void setAxisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
     }
 
+    /**
+     * 获取splitLine值
+     */
     public SplitLine getSplitLine() {
         return splitLine;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public void setSplitLine(SplitLine splitLine) {
         this.splitLine = splitLine;
     }
 
+    /**
+     * 获取splitArea值
+     */
     public SplitArea getSplitArea() {
         return splitArea;
     }
 
+    /**
+     * 设置splitArea值
+     *
+     * @param splitArea
+     */
     public void setSplitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
     }

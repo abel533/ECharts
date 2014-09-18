@@ -153,163 +153,307 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      */
     private Integer currentIndex;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public Timeline show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取type值
+     */
     public TimeLineType type() {
         return this.type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public Timeline type(TimeLineType type) {
         this.type = type;
         return this;
     }
 
+    /**
+     * 获取notMerge值
+     */
     public Boolean notMerge() {
         return this.notMerge;
     }
 
+    /**
+     * 设置notMerge值
+     *
+     * @param notMerge
+     */
     public Timeline notMerge(Boolean notMerge) {
         this.notMerge = notMerge;
         return this;
     }
 
+    /**
+     * 获取realtime值
+     */
     public Boolean realtime() {
         return this.realtime;
     }
 
+    /**
+     * 设置realtime值
+     *
+     * @param realtime
+     */
     public Timeline realtime(Boolean realtime) {
         this.realtime = realtime;
         return this;
     }
 
+    /**
+     * 获取x值
+     */
     public Object x() {
         return this.x;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public Timeline x(Object x) {
         this.x = x;
         return this;
     }
 
+    /**
+     * 获取y值
+     */
     public Object y() {
         return this.y;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public Timeline y(Object y) {
         this.y = y;
         return this;
     }
 
+    /**
+     * 获取x2值
+     */
     public Object x2() {
         return this.x2;
     }
 
+    /**
+     * 设置x2值
+     *
+     * @param x2
+     */
     public Timeline x2(Object x2) {
         this.x2 = x2;
         return this;
     }
 
+    /**
+     * 获取y2值
+     */
     public Object y2() {
         return this.y2;
     }
 
+    /**
+     * 设置y2值
+     *
+     * @param y2
+     */
     public Timeline y2(Object y2) {
         this.y2 = y2;
         return this;
     }
 
+    /**
+     * 获取width值
+     */
     public Object width() {
         return this.width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public Timeline width(Object width) {
         this.width = width;
         return this;
     }
 
+    /**
+     * 获取height值
+     */
     public Object height() {
         return this.height;
     }
 
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
     public Timeline height(Object height) {
         this.height = height;
         return this;
     }
 
+    /**
+     * 获取backgroundColor值
+     */
     public String backgroundColor() {
         return this.backgroundColor;
     }
 
+    /**
+     * 设置backgroundColor值
+     *
+     * @param backgroundColor
+     */
     public Timeline backgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String borderColor() {
         return this.borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public Timeline borderColor(String borderColor) {
         this.borderColor = borderColor;
         return this;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Integer borderWidth() {
         return this.borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public Timeline borderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
         return this;
     }
 
+    /**
+     * 获取padding值
+     */
     public Integer padding() {
         return this.padding;
     }
 
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
     public Timeline padding(Integer padding) {
         this.padding = padding;
         return this;
     }
 
+    /**
+     * 获取controlPosition值
+     */
     public ControlPosition controlPosition() {
         return this.controlPosition;
     }
 
+    /**
+     * 设置controlPosition值
+     *
+     * @param controlPosition
+     */
     public Timeline controlPosition(ControlPosition controlPosition) {
         this.controlPosition = controlPosition;
         return this;
     }
 
+    /**
+     * 获取autoPlay值
+     */
     public Boolean autoPlay() {
         return this.autoPlay;
     }
 
+    /**
+     * 设置autoPlay值
+     *
+     * @param autoPlay
+     */
     public Timeline autoPlay(Boolean autoPlay) {
         this.autoPlay = autoPlay;
         return this;
     }
 
+    /**
+     * 获取loop值
+     */
     public Boolean loop() {
         return this.loop;
     }
 
+    /**
+     * 设置loop值
+     *
+     * @param loop
+     */
     public Timeline loop(Boolean loop) {
         this.loop = loop;
         return this;
     }
 
+    /**
+     * 获取playInterval值
+     */
     public Integer playInterval() {
         return this.playInterval;
     }
 
+    /**
+     * 设置playInterval值
+     *
+     * @param playInterval
+     */
     public Timeline playInterval(Integer playInterval) {
         this.playInterval = playInterval;
         return this;
@@ -361,61 +505,117 @@ public class Timeline extends AbstractData<Timeline> implements Component {
         return this.controlStyle;
     }
 
+    /**
+     * 获取symbol值
+     */
     public Object symbol() {
         return this.symbol;
     }
 
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
     public Timeline symbol(Object symbol) {
         this.symbol = symbol;
         return this;
     }
 
+    /**
+     * 获取symbolSize值
+     */
     public Object symbolSize() {
         return this.symbolSize;
     }
 
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
     public Timeline symbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
         return this;
     }
 
+    /**
+     * 获取currentIndex值
+     */
     public Integer currentIndex() {
         return this.currentIndex;
     }
 
+    /**
+     * 设置currentIndex值
+     *
+     * @param currentIndex
+     */
     public Timeline currentIndex(Integer currentIndex) {
         this.currentIndex = currentIndex;
         return this;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }
 
+    /**
+     * 获取label值
+     */
     public Label getLabel() {
         return label;
     }
 
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
     public void setLabel(Label label) {
         this.label = label;
     }
 
+    /**
+     * 获取checkpointStyle值
+     */
     public CheckpointStyle getCheckpointStyle() {
         return checkpointStyle;
     }
 
+    /**
+     * 设置checkpointStyle值
+     *
+     * @param checkpointStyle
+     */
     public void setCheckpointStyle(CheckpointStyle checkpointStyle) {
         this.checkpointStyle = checkpointStyle;
     }
 
+    /**
+     * 获取controlStyle值
+     */
     public ControlStyle getControlStyle() {
         return controlStyle;
     }
 
+    /**
+     * 设置controlStyle值
+     *
+     * @param controlStyle
+     */
     public void setControlStyle(ControlStyle controlStyle) {
         this.controlStyle = controlStyle;
     }

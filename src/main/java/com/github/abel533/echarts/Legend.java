@@ -68,45 +68,87 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     private List<Object> data;
 
+    /**
+     * 构造函数
+     */
     public Legend() {
     }
 
+    /**
+     * 构造函数,参数:values
+     *
+     * @param values
+     */
     public Legend(Object... values) {
         this.data(values);
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public Legend textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
+    /**
+     * 设置data值
+     *
+     * @param data
+     */
     public Legend data(List<Object> data) {
         this.data = data;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient orient() {
         return this.orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public Legend orient(Orient orient) {
         this.orient = orient;
         return this;
     }
 
+    /**
+     * 获取itemWidth值
+     */
     public Integer itemWidth() {
         return this.itemWidth;
     }
 
+    /**
+     * 设置itemWidth值
+     *
+     * @param itemWidth
+     */
     public Legend itemWidth(Integer itemWidth) {
         this.itemWidth = itemWidth;
         return this;
     }
 
+    /**
+     * 获取itemHeight值
+     */
     public Integer itemHeight() {
         return this.itemHeight;
     }
 
+    /**
+     * 设置itemHeight值
+     *
+     * @param itemHeight
+     */
     public Legend itemHeight(Integer itemHeight) {
         this.itemHeight = itemHeight;
         return this;
@@ -124,15 +166,26 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         return this.textStyle;
     }
 
+    /**
+     * 获取selectedMode值
+     */
     public Object selectedMode() {
         return this.selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public Legend selectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 获取data值
+     */
     public List<Object> data() {
         if (this.data == null) {
             this.data = new ArrayList<Object>();
@@ -154,50 +207,98 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         return this;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }
 
+    /**
+     * 获取data值
+     */
     public List<Object> getData() {
         return data;
     }
 
+    /**
+     * 设置data值
+     *
+     * @param data
+     */
     public void setData(List<Object> data) {
         this.data = data;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient getOrient() {
         return orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
+    /**
+     * 获取itemWidth值
+     */
     public Integer getItemWidth() {
         return itemWidth;
     }
 
+    /**
+     * 设置itemWidth值
+     *
+     * @param itemWidth
+     */
     public void setItemWidth(Integer itemWidth) {
         this.itemWidth = itemWidth;
     }
 
+    /**
+     * 获取itemHeight值
+     */
     public Integer getItemHeight() {
         return itemHeight;
     }
 
+    /**
+     * 设置itemHeight值
+     *
+     * @param itemHeight
+     */
     public void setItemHeight(Integer itemHeight) {
         this.itemHeight = itemHeight;
     }
 
+    /**
+     * 获取selectedMode值
+     */
     public Object getSelectedMode() {
         return selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public void setSelectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
     }

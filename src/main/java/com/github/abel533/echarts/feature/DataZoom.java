@@ -31,6 +31,9 @@ import java.util.Map;
  * @author liuzh
  */
 public class DataZoom extends Feature {
+    /**
+     * 构造函数
+     */
     public DataZoom() {
         this.show(true);
         Map title = new HashMap<String, String>();

@@ -41,19 +41,35 @@ public class ScatterData {
         this.value = value;
     }
 
+    /**
+     * 获取value值
+     */
     public Object[] value() {
         return this.value;
     }
 
+    /**
+     * 设置value值
+     *
+     * @param value
+     */
     public ScatterData value(Object[] value) {
         this.value = value;
         return this;
     }
 
+    /**
+     * 获取value值
+     */
     public Object[] getValue() {
         return value;
     }
 
+    /**
+     * 设置value值
+     *
+     * @param value
+     */
     public void setValue(Object[] value) {
         this.value = value;
     }

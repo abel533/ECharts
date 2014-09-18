@@ -96,31 +96,61 @@ public abstract class Style<T> {
      */
     private Integer borderWidth;
 
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
     public T label(Label label) {
         this.label = label;
         return (T) this;
     }
 
+    /**
+     * 设置labelLine值
+     *
+     * @param labelLine
+     */
     public T labelLine(LabelLine labelLine) {
         this.labelLine = labelLine;
         return (T) this;
     }
 
+    /**
+     * 设置areaStyle值
+     *
+     * @param areaStyle
+     */
     public T areaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
         return (T) this;
     }
 
+    /**
+     * 设置chordStyle值
+     *
+     * @param chordStyle
+     */
     public T chordStyle(ChordStyle chordStyle) {
         this.chordStyle = chordStyle;
         return (T) this;
     }
 
+    /**
+     * 设置nodeStyle值
+     *
+     * @param nodeStyle
+     */
     public T nodeStyle(NodeStyle nodeStyle) {
         this.nodeStyle = nodeStyle;
         return (T) this;
     }
 
+    /**
+     * 设置linkStyle值
+     *
+     * @param linkStyle
+     */
     public T linkStyle(LinkStyle linkStyle) {
         this.linkStyle = linkStyle;
         return (T) this;
@@ -151,24 +181,45 @@ public abstract class Style<T> {
         return this.labelLine;
     }
 
+    /**
+     * 获取color值
+     */
     public String color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public T color(String color) {
         this.color = color;
         return (T) this;
     }
 
+    /**
+     * 获取color0值
+     */
     public String color0() {
         return this.color0;
     }
 
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
     public T color0(String color0) {
         this.color0 = color0;
         return (T) this;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public T lineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
         return (T) this;
@@ -234,125 +285,245 @@ public abstract class Style<T> {
         return this.linkStyle;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String borderColor() {
         return this.borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public T borderColor(String borderColor) {
         this.borderColor = borderColor;
         return (T) this;
     }
 
+    /**
+     * 获取borderRadius值
+     */
     public Integer borderRadius() {
         return this.borderRadius;
     }
 
+    /**
+     * 设置borderRadius值
+     *
+     * @param borderRadius
+     */
     public T borderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
         return (T) this;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Integer borderWidth() {
         return this.borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public T borderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
         return (T) this;
     }
 
+    /**
+     * 获取label值
+     */
     public Label getLabel() {
         return label;
     }
 
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
     public void setLabel(Label label) {
         this.label = label;
     }
 
+    /**
+     * 获取labelLine值
+     */
     public LabelLine getLabelLine() {
         return labelLine;
     }
 
+    /**
+     * 设置labelLine值
+     *
+     * @param labelLine
+     */
     public void setLabelLine(LabelLine labelLine) {
         this.labelLine = labelLine;
     }
 
+    /**
+     * 获取areaStyle值
+     */
     public AreaStyle getAreaStyle() {
         return areaStyle;
     }
 
+    /**
+     * 设置areaStyle值
+     *
+     * @param areaStyle
+     */
     public void setAreaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
     }
 
+    /**
+     * 获取chordStyle值
+     */
     public ChordStyle getChordStyle() {
         return chordStyle;
     }
 
+    /**
+     * 设置chordStyle值
+     *
+     * @param chordStyle
+     */
     public void setChordStyle(ChordStyle chordStyle) {
         this.chordStyle = chordStyle;
     }
 
+    /**
+     * 获取nodeStyle值
+     */
     public NodeStyle getNodeStyle() {
         return nodeStyle;
     }
 
+    /**
+     * 设置nodeStyle值
+     *
+     * @param nodeStyle
+     */
     public void setNodeStyle(NodeStyle nodeStyle) {
         this.nodeStyle = nodeStyle;
     }
 
+    /**
+     * 获取linkStyle值
+     */
     public LinkStyle getLinkStyle() {
         return linkStyle;
     }
 
+    /**
+     * 设置linkStyle值
+     *
+     * @param linkStyle
+     */
     public void setLinkStyle(LinkStyle linkStyle) {
         this.linkStyle = linkStyle;
     }
 
+    /**
+     * 获取color值
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * 获取color0值
+     */
     public String getColor0() {
         return color0;
     }
 
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
     public void setColor0(String color0) {
         this.color0 = color0;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String getBorderColor() {
         return borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public void setBorderColor(String borderColor) {
         this.borderColor = borderColor;
     }
 
+    /**
+     * 获取borderRadius值
+     */
     public Integer getBorderRadius() {
         return borderRadius;
     }
 
+    /**
+     * 设置borderRadius值
+     *
+     * @param borderRadius
+     */
     public void setBorderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Integer getBorderWidth() {
         return borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public void setBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
     }

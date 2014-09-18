@@ -37,6 +37,11 @@ public class ChordStyle {
      */
     private LineStyle lineStyle;
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public ChordStyle lineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
         return this;
@@ -54,10 +59,18 @@ public class ChordStyle {
         return this.lineStyle;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }

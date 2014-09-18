@@ -67,69 +67,130 @@ public abstract class AbstractLabel<T> {
      */
     private String color;
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public T textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return (T) this;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public T show(Boolean show) {
         this.show = show;
         return (T) this;
     }
 
+    /**
+     * 获取position值
+     */
     public Object position() {
         return this.position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public T position(Object position) {
         this.position = position;
         return (T) this;
     }
 
+    /**
+     * 获取interval值
+     */
     public Object interval() {
         return this.interval;
     }
 
+    /**
+     * 设置interval值
+     *
+     * @param interval
+     */
     public T interval(Object interval) {
         this.interval = interval;
         return (T) this;
     }
 
+    /**
+     * 获取rotate值
+     */
     public Integer rotate() {
         return this.rotate;
     }
 
+    /**
+     * 设置rotate值
+     *
+     * @param rotate
+     */
     public T rotate(Integer rotate) {
         this.rotate = rotate;
         return (T) this;
     }
 
+    /**
+     * 获取clickable值
+     */
     public Boolean clickable() {
         return this.clickable;
     }
 
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
     public T clickable(Boolean clickable) {
         this.clickable = clickable;
         return (T) this;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object formatter() {
         return this.formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public T formatter(Object formatter) {
         this.formatter = formatter;
         return (T) this;
     }
 
+    /**
+     * 获取color值
+     */
     public String color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public T color(String color) {
         this.color = color;
         return (T) this;
@@ -145,83 +206,163 @@ public abstract class AbstractLabel<T> {
         return this.textStyle;
     }
 
+    /**
+     * 获取margin值
+     */
     public Integer margin() {
         return this.margin;
     }
 
+    /**
+     * 设置margin值
+     *
+     * @param margin
+     */
     public T margin(Integer margin) {
         this.margin = margin;
         return (T) this;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取position值
+     */
     public Object getPosition() {
         return position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public void setPosition(Object position) {
         this.position = position;
     }
 
+    /**
+     * 获取interval值
+     */
     public Object getInterval() {
         return interval;
     }
 
+    /**
+     * 设置interval值
+     *
+     * @param interval
+     */
     public void setInterval(Object interval) {
         this.interval = interval;
     }
 
+    /**
+     * 获取rotate值
+     */
     public Integer getRotate() {
         return rotate;
     }
 
+    /**
+     * 设置rotate值
+     *
+     * @param rotate
+     */
     public void setRotate(Integer rotate) {
         this.rotate = rotate;
     }
 
+    /**
+     * 获取clickable值
+     */
     public Boolean getClickable() {
         return clickable;
     }
 
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
     public void setClickable(Boolean clickable) {
         this.clickable = clickable;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object getFormatter() {
         return formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public void setFormatter(Object formatter) {
         this.formatter = formatter;
     }
 
+    /**
+     * 获取margin值
+     */
     public Integer getMargin() {
         return margin;
     }
 
+    /**
+     * 设置margin值
+     *
+     * @param margin
+     */
     public void setMargin(Integer margin) {
         this.margin = margin;
     }
 
+    /**
+     * 获取color值
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }

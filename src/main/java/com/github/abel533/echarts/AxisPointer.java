@@ -56,25 +56,48 @@ public class AxisPointer {
      */
     private ShadowStyle shadowStyle;
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public AxisPointer lineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
         return this;
     }
 
+    /**
+     * 设置crossStyle值
+     *
+     * @param crossStyle
+     */
     public AxisPointer crossStyle(CrossStyle crossStyle) {
         this.crossStyle = crossStyle;
         return this;
     }
 
+    /**
+     * 设置shadowStyle值
+     *
+     * @param shadowStyle
+     */
     public AxisPointer shadowStyle(ShadowStyle shadowStyle) {
         this.shadowStyle = shadowStyle;
         return this;
     }
 
+    /**
+     * 获取type值
+     */
     public PointerType type() {
         return this.type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public AxisPointer type(PointerType type) {
         this.type = type;
         return this;
@@ -112,34 +135,66 @@ public class AxisPointer {
         return this.shadowStyle;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }
 
+    /**
+     * 获取crossStyle值
+     */
     public CrossStyle getCrossStyle() {
         return crossStyle;
     }
 
+    /**
+     * 设置crossStyle值
+     *
+     * @param crossStyle
+     */
     public void setCrossStyle(CrossStyle crossStyle) {
         this.crossStyle = crossStyle;
     }
 
+    /**
+     * 获取shadowStyle值
+     */
     public ShadowStyle getShadowStyle() {
         return shadowStyle;
     }
 
+    /**
+     * 设置shadowStyle值
+     *
+     * @param shadowStyle
+     */
     public void setShadowStyle(ShadowStyle shadowStyle) {
         this.shadowStyle = shadowStyle;
     }
 
+    /**
+     * 获取type值
+     */
     public PointerType getType() {
         return type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public void setType(PointerType type) {
         this.type = type;
     }

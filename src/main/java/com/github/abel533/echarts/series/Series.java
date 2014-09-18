@@ -101,73 +101,141 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     private Boolean showAllSymbol;
 
+    /**
+     * 构造函数
+     */
     protected Series() {
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     protected Series(String name) {
         this.name = name;
     }
 
+    /**
+     * 设置tooltip值
+     *
+     * @param tooltip
+     */
     public Series tooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
         return this;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public Series itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return this;
     }
 
+    /**
+     * 设置markPoint值
+     *
+     * @param markPoint
+     */
     public Series markPoint(MarkPoint markPoint) {
         this.markPoint = markPoint;
         return this;
     }
 
+    /**
+     * 设置markLine值
+     *
+     * @param markLine
+     */
     public Series markLine(MarkLine markLine) {
         this.markLine = markLine;
         return this;
     }
 
+    /**
+     * 获取xAxisIndex值
+     */
     public Integer xAxisIndex() {
         return this.xAxisIndex;
     }
 
+    /**
+     * 设置xAxisIndex值
+     *
+     * @param xAxisIndex
+     */
     public T xAxisIndex(Integer xAxisIndex) {
         this.xAxisIndex = xAxisIndex;
         return (T) this;
     }
 
+    /**
+     * 获取yAxisIndex值
+     */
     public Integer yAxisIndex() {
         return this.yAxisIndex;
     }
 
+    /**
+     * 设置yAxisIndex值
+     *
+     * @param yAxisIndex
+     */
     public T yAxisIndex(Integer yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
         return (T) this;
     }
 
+    /**
+     * 获取name值
+     */
     public String name() {
         return this.name;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public T name(String name) {
         this.name = name;
         return (T) this;
     }
 
+    /**
+     * 获取type值
+     */
     public SeriesType type() {
         return this.type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public T type(SeriesType type) {
         this.type = type;
         return (T) this;
     }
 
+    /**
+     * 获取stack值
+     */
     public String stack() {
         return this.stack;
     }
 
+    /**
+     * 设置stack值
+     *
+     * @param stack
+     */
     public T stack(String stack) {
         this.stack = stack;
         return (T) this;
@@ -221,142 +289,278 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
         return this.markLine;
     }
 
+    /**
+     * 获取symbol值
+     */
     public Object symbol() {
         return this.symbol;
     }
 
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
     public T symbol(Object symbol) {
         this.symbol = symbol;
         return (T) this;
     }
 
+    /**
+     * 获取symbolSize值
+     */
     public Object symbolSize() {
         return this.symbolSize;
     }
 
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
     public T symbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
         return (T) this;
     }
 
+    /**
+     * 获取symbolRoate值
+     */
     public Object symbolRoate() {
         return this.symbolRoate;
     }
 
+    /**
+     * 设置symbolRoate值
+     *
+     * @param symbolRoate
+     */
     public T symbolRoate(Object symbolRoate) {
         this.symbolRoate = symbolRoate;
         return (T) this;
     }
 
+    /**
+     * 获取showAllSymbol值
+     */
     public Boolean showAllSymbol() {
         return this.showAllSymbol;
     }
 
+    /**
+     * 设置showAllSymbol值
+     *
+     * @param showAllSymbol
+     */
     public T showAllSymbol(Boolean showAllSymbol) {
         this.showAllSymbol = showAllSymbol;
         return (T) this;
     }
 
+    /**
+     * 获取tooltip值
+     */
     public Tooltip getTooltip() {
         return tooltip;
     }
 
+    /**
+     * 设置tooltip值
+     *
+     * @param tooltip
+     */
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
     }
 
+    /**
+     * 获取itemStyle值
+     */
     public ItemStyle getItemStyle() {
         return itemStyle;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
     }
 
+    /**
+     * 获取markPoint值
+     */
     public MarkPoint getMarkPoint() {
         return markPoint;
     }
 
+    /**
+     * 设置markPoint值
+     *
+     * @param markPoint
+     */
     public void setMarkPoint(MarkPoint markPoint) {
         this.markPoint = markPoint;
     }
 
+    /**
+     * 获取markLine值
+     */
     public MarkLine getMarkLine() {
         return markLine;
     }
 
+    /**
+     * 设置markLine值
+     *
+     * @param markLine
+     */
     public void setMarkLine(MarkLine markLine) {
         this.markLine = markLine;
     }
 
+    /**
+     * 获取xAxisIndex值
+     */
     public Integer getxAxisIndex() {
         return xAxisIndex;
     }
 
+    /**
+     * 设置xAxisIndex值
+     *
+     * @param xAxisIndex
+     */
     public void setxAxisIndex(Integer xAxisIndex) {
         this.xAxisIndex = xAxisIndex;
     }
 
+    /**
+     * 获取yAxisIndex值
+     */
     public Integer getyAxisIndex() {
         return yAxisIndex;
     }
 
+    /**
+     * 设置yAxisIndex值
+     *
+     * @param yAxisIndex
+     */
     public void setyAxisIndex(Integer yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
     }
 
+    /**
+     * 获取name值
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * 获取type值
+     */
     public SeriesType getType() {
         return type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public void setType(SeriesType type) {
         this.type = type;
     }
 
+    /**
+     * 获取stack值
+     */
     public String getStack() {
         return stack;
     }
 
+    /**
+     * 设置stack值
+     *
+     * @param stack
+     */
     public void setStack(String stack) {
         this.stack = stack;
     }
 
+    /**
+     * 获取symbol值
+     */
     public Object getSymbol() {
         return symbol;
     }
 
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
     public void setSymbol(Object symbol) {
         this.symbol = symbol;
     }
 
+    /**
+     * 获取symbolSize值
+     */
     public Object getSymbolSize() {
         return symbolSize;
     }
 
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
     public void setSymbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
     }
 
+    /**
+     * 获取symbolRoate值
+     */
     public Object getSymbolRoate() {
         return symbolRoate;
     }
 
+    /**
+     * 设置symbolRoate值
+     *
+     * @param symbolRoate
+     */
     public void setSymbolRoate(Object symbolRoate) {
         this.symbolRoate = symbolRoate;
     }
 
+    /**
+     * 获取showAllSymbol值
+     */
     public Boolean getShowAllSymbol() {
         return showAllSymbol;
     }
 
+    /**
+     * 设置showAllSymbol值
+     *
+     * @param showAllSymbol
+     */
     public void setShowAllSymbol(Boolean showAllSymbol) {
         this.showAllSymbol = showAllSymbol;
     }

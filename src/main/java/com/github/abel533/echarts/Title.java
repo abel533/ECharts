@@ -74,74 +74,140 @@ public class Title extends Basic<Title> implements Component {
      */
     private TextStyle subtextStyle;
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public Title textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
+    /**
+     * 设置subtextStyle值
+     *
+     * @param subtextStyle
+     */
     public Title subtextStyle(TextStyle subtextStyle) {
         this.subtextStyle = subtextStyle;
         return this;
     }
 
+    /**
+     * 获取text值
+     */
     public String text() {
         return this.text;
     }
 
+    /**
+     * 设置text值
+     *
+     * @param text
+     */
     public Title text(String text) {
         this.text = text;
         return this;
     }
 
+    /**
+     * 获取link值
+     */
     public String link() {
         return this.link;
     }
 
+    /**
+     * 设置link值
+     *
+     * @param link
+     */
     public Title link(String link) {
         this.link = link;
         return this;
     }
 
+    /**
+     * 获取target值
+     */
     public String target() {
         return this.target;
     }
 
+    /**
+     * 设置target值
+     *
+     * @param target
+     */
     public Title target(String target) {
         this.target = target;
         return this;
     }
 
+    /**
+     * 获取subtext值
+     */
     public String subtext() {
         return this.subtext;
     }
 
+    /**
+     * 设置subtext值
+     *
+     * @param subtext
+     */
     public Title subtext(String subtext) {
         this.subtext = subtext;
         return this;
     }
 
+    /**
+     * 获取sublink值
+     */
     public String sublink() {
         return this.sublink;
     }
 
+    /**
+     * 设置sublink值
+     *
+     * @param sublink
+     */
     public Title sublink(String sublink) {
         this.sublink = sublink;
         return this;
     }
 
+    /**
+     * 获取subtarget值
+     */
     public String subtarget() {
         return this.subtarget;
     }
 
+    /**
+     * 设置subtarget值
+     *
+     * @param subtarget
+     */
     public Title subtarget(String subtarget) {
         this.subtarget = subtarget;
         return this;
     }
 
+    /**
+     * 获取textAlign值
+     */
     public X textAlign() {
         return this.textAlign;
     }
 
+    /**
+     * 设置textAlign值
+     *
+     * @param textAlign
+     */
     public Title textAlign(X textAlign) {
         this.textAlign = textAlign;
         return this;
@@ -171,74 +237,146 @@ public class Title extends Basic<Title> implements Component {
         return this.subtextStyle;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }
 
+    /**
+     * 获取subtextStyle值
+     */
     public TextStyle getSubtextStyle() {
         return subtextStyle;
     }
 
+    /**
+     * 设置subtextStyle值
+     *
+     * @param subtextStyle
+     */
     public void setSubtextStyle(TextStyle subtextStyle) {
         this.subtextStyle = subtextStyle;
     }
 
+    /**
+     * 获取text值
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * 设置text值
+     *
+     * @param text
+     */
     public void setText(String text) {
         this.text = text;
     }
 
+    /**
+     * 获取link值
+     */
     public String getLink() {
         return link;
     }
 
+    /**
+     * 设置link值
+     *
+     * @param link
+     */
     public void setLink(String link) {
         this.link = link;
     }
 
+    /**
+     * 获取target值
+     */
     public String getTarget() {
         return target;
     }
 
+    /**
+     * 设置target值
+     *
+     * @param target
+     */
     public void setTarget(String target) {
         this.target = target;
     }
 
+    /**
+     * 获取subtext值
+     */
     public String getSubtext() {
         return subtext;
     }
 
+    /**
+     * 设置subtext值
+     *
+     * @param subtext
+     */
     public void setSubtext(String subtext) {
         this.subtext = subtext;
     }
 
+    /**
+     * 获取sublink值
+     */
     public String getSublink() {
         return sublink;
     }
 
+    /**
+     * 设置sublink值
+     *
+     * @param sublink
+     */
     public void setSublink(String sublink) {
         this.sublink = sublink;
     }
 
+    /**
+     * 获取subtarget值
+     */
     public String getSubtarget() {
         return subtarget;
     }
 
+    /**
+     * 设置subtarget值
+     *
+     * @param subtarget
+     */
     public void setSubtarget(String subtarget) {
         this.subtarget = subtarget;
     }
 
+    /**
+     * 获取textAlign值
+     */
     public X getTextAlign() {
         return textAlign;
     }
 
+    /**
+     * 设置textAlign值
+     *
+     * @param textAlign
+     */
     public void setTextAlign(X textAlign) {
         this.textAlign = textAlign;
     }

@@ -116,6 +116,9 @@ public class Option {
 
     private ItemStyle itemStyle;
 
+    /**
+     * 获取itemStyle值
+     */
     public ItemStyle itemStyle() {
         if (this.itemStyle == null) {
             this.itemStyle = new ItemStyle();
@@ -123,11 +126,19 @@ public class Option {
         return this.itemStyle;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public Option itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return this;
     }
 
+    /**
+     * 获取polar值
+     */
     public List<Polar> polar() {
         if (this.polar == null) {
             this.polar = new ArrayList<Polar>();
@@ -135,11 +146,21 @@ public class Option {
         return this.polar;
     }
 
+    /**
+     * 设置polar值
+     *
+     * @param polar
+     */
     public Option polar(List<Polar> polar) {
         this.polar = polar;
         return this;
     }
 
+    /**
+     * 设置values值
+     *
+     * @param values
+     */
     public Option polar(Polar... values) {
         if (values == null || values.length == 0) {
             return this;
@@ -148,11 +169,21 @@ public class Option {
         return this;
     }
 
+    /**
+     * 设置timeline值
+     *
+     * @param timeline
+     */
     public Option timeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
     }
 
+    /**
+     * 设置title值
+     *
+     * @param title
+     */
     public Option title(Title title) {
         this.title = title;
         return this;
@@ -181,101 +212,196 @@ public class Option {
         return this;
     }
 
+    /**
+     * 设置toolbox值
+     *
+     * @param toolbox
+     */
     public Option toolbox(Toolbox toolbox) {
         this.toolbox = toolbox;
         return this;
     }
 
+    /**
+     * 设置tooltip值
+     *
+     * @param tooltip
+     */
     public Option tooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
         return this;
     }
 
+    /**
+     * 设置trigger值
+     *
+     * @param trigger
+     */
     public Option tooltip(Trigger trigger) {
         this.tooltip().trigger(trigger);
         return this;
     }
 
+    /**
+     * 设置legend值
+     *
+     * @param legend
+     */
     public Option legend(Legend legend) {
         this.legend = legend;
         return this;
     }
 
+    /**
+     * 设置dataRange值
+     *
+     * @param dataRange
+     */
     public Option dataRange(DataRange dataRange) {
         this.dataRange = dataRange;
         return this;
     }
 
+    /**
+     * 设置dataZoom值
+     *
+     * @param dataZoom
+     */
     public Option dataZoom(DataZoom dataZoom) {
         this.dataZoom = dataZoom;
         return this;
     }
 
+    /**
+     * 设置grid值
+     *
+     * @param grid
+     */
     public Option grid(Grid grid) {
         this.grid = grid;
         return this;
     }
 
+    /**
+     * 设置xAxis值
+     *
+     * @param xAxis
+     */
     public Option xAxis(List<Axis> xAxis) {
         this.xAxis = xAxis;
         return this;
     }
 
+    /**
+     * 设置yAxis值
+     *
+     * @param yAxis
+     */
     public Option yAxis(List<Axis> yAxis) {
         this.yAxis = yAxis;
         return this;
     }
 
+    /**
+     * 设置series值
+     *
+     * @param series
+     */
     public Option series(List<Series> series) {
         this.series = series;
         return this;
     }
 
+    /**
+     * 设置options值
+     *
+     * @param options
+     */
     public Option options(List<Option> options) {
         this.options = options;
         return this;
     }
 
+    /**
+     * 获取backgroundColor值
+     */
     public Object backgroundColor() {
         return this.backgroundColor;
     }
 
+    /**
+     * 设置backgroundColor值
+     *
+     * @param backgroundColor
+     */
     public Option backgroundColor(Object backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
 
+    /**
+     * 获取color值
+     */
     public Object[] color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public Option color(Object[] color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 获取renderAsImage值
+     */
     public Object renderAsImage() {
         return this.renderAsImage;
     }
 
+    /**
+     * 设置renderAsImage值
+     *
+     * @param renderAsImage
+     */
     public Option renderAsImage(Object renderAsImage) {
         this.renderAsImage = renderAsImage;
         return this;
     }
 
+    /**
+     * 获取calculable值
+     */
     public Boolean calculable() {
         return this.calculable;
     }
 
+    /**
+     * 设置calculable值
+     *
+     * @param calculable
+     */
     public Option calculable(Boolean calculable) {
         this.calculable = calculable;
         return this;
     }
 
+    /**
+     * 获取animation值
+     */
     public Boolean animation() {
         return this.animation;
     }
 
+    /**
+     * 设置animation值
+     *
+     * @param animation
+     */
     public Option animation(Boolean animation) {
         this.animation = animation;
         return this;
@@ -480,154 +606,306 @@ public class Option {
         return this;
     }
 
+    /**
+     * 获取timeline值
+     */
     public Timeline getTimeline() {
         return timeline;
     }
 
+    /**
+     * 设置timeline值
+     *
+     * @param timeline
+     */
     public void setTimeline(Timeline timeline) {
         this.timeline = timeline;
     }
 
+    /**
+     * 获取title值
+     */
     public Title getTitle() {
         return title;
     }
 
+    /**
+     * 设置title值
+     *
+     * @param title
+     */
     public void setTitle(Title title) {
         this.title = title;
     }
 
+    /**
+     * 获取toolbox值
+     */
     public Toolbox getToolbox() {
         return toolbox;
     }
 
+    /**
+     * 设置toolbox值
+     *
+     * @param toolbox
+     */
     public void setToolbox(Toolbox toolbox) {
         this.toolbox = toolbox;
     }
 
+    /**
+     * 获取tooltip值
+     */
     public Tooltip getTooltip() {
         return tooltip;
     }
 
+    /**
+     * 设置tooltip值
+     *
+     * @param tooltip
+     */
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
     }
 
+    /**
+     * 获取legend值
+     */
     public Legend getLegend() {
         return legend;
     }
 
+    /**
+     * 设置legend值
+     *
+     * @param legend
+     */
     public void setLegend(Legend legend) {
         this.legend = legend;
     }
 
+    /**
+     * 获取dataRange值
+     */
     public DataRange getDataRange() {
         return dataRange;
     }
 
+    /**
+     * 设置dataRange值
+     *
+     * @param dataRange
+     */
     public void setDataRange(DataRange dataRange) {
         this.dataRange = dataRange;
     }
 
+    /**
+     * 获取dataZoom值
+     */
     public DataZoom getDataZoom() {
         return dataZoom;
     }
 
+    /**
+     * 设置dataZoom值
+     *
+     * @param dataZoom
+     */
     public void setDataZoom(DataZoom dataZoom) {
         this.dataZoom = dataZoom;
     }
 
+    /**
+     * 获取grid值
+     */
     public Grid getGrid() {
         return grid;
     }
 
+    /**
+     * 设置grid值
+     *
+     * @param grid
+     */
     public void setGrid(Grid grid) {
         this.grid = grid;
     }
 
+    /**
+     * 获取xAxis值
+     */
     public List<Axis> getxAxis() {
         return xAxis;
     }
 
+    /**
+     * 设置xAxis值
+     *
+     * @param xAxis
+     */
     public void setxAxis(List<Axis> xAxis) {
         this.xAxis = xAxis;
     }
 
+    /**
+     * 获取yAxis值
+     */
     public List<Axis> getyAxis() {
         return yAxis;
     }
 
+    /**
+     * 设置yAxis值
+     *
+     * @param yAxis
+     */
     public void setyAxis(List<Axis> yAxis) {
         this.yAxis = yAxis;
     }
 
+    /**
+     * 获取backgroundColor值
+     */
     public Object getBackgroundColor() {
         return backgroundColor;
     }
 
+    /**
+     * 设置backgroundColor值
+     *
+     * @param backgroundColor
+     */
     public void setBackgroundColor(Object backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
 
+    /**
+     * 获取color值
+     */
     public Object[] getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(Object[] color) {
         this.color = color;
     }
 
+    /**
+     * 获取renderAsImage值
+     */
     public Object getRenderAsImage() {
         return renderAsImage;
     }
 
+    /**
+     * 设置renderAsImage值
+     *
+     * @param renderAsImage
+     */
     public void setRenderAsImage(Object renderAsImage) {
         this.renderAsImage = renderAsImage;
     }
 
+    /**
+     * 获取calculable值
+     */
     public Boolean getCalculable() {
         return calculable;
     }
 
+    /**
+     * 设置calculable值
+     *
+     * @param calculable
+     */
     public void setCalculable(Boolean calculable) {
         this.calculable = calculable;
     }
 
+    /**
+     * 获取animation值
+     */
     public Boolean getAnimation() {
         return animation;
     }
 
+    /**
+     * 设置animation值
+     *
+     * @param animation
+     */
     public void setAnimation(Boolean animation) {
         this.animation = animation;
     }
 
+    /**
+     * 获取series值
+     */
     public List<Series> getSeries() {
         return series;
     }
 
+    /**
+     * 设置series值
+     *
+     * @param series
+     */
     public void setSeries(List<Series> series) {
         this.series = series;
     }
 
+    /**
+     * 获取options值
+     */
     public List<Option> getOptions() {
         return options;
     }
 
+    /**
+     * 设置options值
+     *
+     * @param options
+     */
     public void setOptions(List<Option> options) {
         this.options = options;
     }
 
+    /**
+     * 获取polar值
+     */
     public List<Polar> getPolar() {
         return polar;
     }
 
+    /**
+     * 设置polar值
+     *
+     * @param polar
+     */
     public void setPolar(List<Polar> polar) {
         this.polar = polar;
     }
 
+    /**
+     * 获取itemStyle值
+     */
     public ItemStyle getItemStyle() {
         return itemStyle;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
     }

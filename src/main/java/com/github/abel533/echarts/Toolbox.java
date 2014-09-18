@@ -72,24 +72,45 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      */
     private Boolean showTitle;
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public Toolbox color(List<Object> color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public Toolbox show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient orient() {
         return this.orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public Toolbox orient(Orient orient) {
         this.orient = orient;
         return this;
@@ -105,37 +126,69 @@ public class Toolbox extends Basic<Toolbox> implements Component {
         return this.color;
     }
 
+    /**
+     * 获取disableColor值
+     */
     public String disableColor() {
         return this.disableColor;
     }
 
+    /**
+     * 设置disableColor值
+     *
+     * @param disableColor
+     */
     public Toolbox disableColor(String disableColor) {
         this.disableColor = disableColor;
         return this;
     }
 
+    /**
+     * 获取effectiveColor值
+     */
     public String effectiveColor() {
         return this.effectiveColor;
     }
 
+    /**
+     * 设置effectiveColor值
+     *
+     * @param effectiveColor
+     */
     public Toolbox effectiveColor(String effectiveColor) {
         this.effectiveColor = effectiveColor;
         return this;
     }
 
+    /**
+     * 获取itemSize值
+     */
     public Integer itemSize() {
         return this.itemSize;
     }
 
+    /**
+     * 设置itemSize值
+     *
+     * @param itemSize
+     */
     public Toolbox itemSize(Integer itemSize) {
         this.itemSize = itemSize;
         return this;
     }
 
+    /**
+     * 获取showTitle值
+     */
     public Boolean showTitle() {
         return this.showTitle;
     }
 
+    /**
+     * 设置showTitle值
+     *
+     * @param showTitle
+     */
     public Toolbox showTitle(Boolean showTitle) {
         this.showTitle = showTitle;
         return this;
@@ -225,66 +278,130 @@ public class Toolbox extends Basic<Toolbox> implements Component {
         }
     }
 
+    /**
+     * 获取color值
+     */
     public List<Object> getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(List<Object> color) {
         this.color = color;
     }
 
+    /**
+     * 获取feature值
+     */
     public Map<String, Feature> getFeature() {
         return feature;
     }
 
+    /**
+     * 设置feature值
+     *
+     * @param feature
+     */
     public void setFeature(Map<String, Feature> feature) {
         this.feature = feature;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient getOrient() {
         return orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
+    /**
+     * 获取disableColor值
+     */
     public String getDisableColor() {
         return disableColor;
     }
 
+    /**
+     * 设置disableColor值
+     *
+     * @param disableColor
+     */
     public void setDisableColor(String disableColor) {
         this.disableColor = disableColor;
     }
 
+    /**
+     * 获取effectiveColor值
+     */
     public String getEffectiveColor() {
         return effectiveColor;
     }
 
+    /**
+     * 设置effectiveColor值
+     *
+     * @param effectiveColor
+     */
     public void setEffectiveColor(String effectiveColor) {
         this.effectiveColor = effectiveColor;
     }
 
+    /**
+     * 获取itemSize值
+     */
     public Integer getItemSize() {
         return itemSize;
     }
 
+    /**
+     * 设置itemSize值
+     *
+     * @param itemSize
+     */
     public void setItemSize(Integer itemSize) {
         this.itemSize = itemSize;
     }
 
+    /**
+     * 获取showTitle值
+     */
     public Boolean getShowTitle() {
         return showTitle;
     }
 
+    /**
+     * 设置showTitle值
+     *
+     * @param showTitle
+     */
     public void setShowTitle(Boolean showTitle) {
         this.showTitle = showTitle;
     }

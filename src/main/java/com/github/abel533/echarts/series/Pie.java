@@ -72,24 +72,43 @@ public class Pie extends Series<Pie> {
      */
     private SelectedMode selectedMode;
 
+    /**
+     * 构造函数
+     */
     public Pie() {
         this.type(SeriesType.pie);
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Pie(String name) {
         super(name);
         this.type(SeriesType.pie);
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] center() {
         return this.center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public Pie center(Object[] center) {
         this.center = center;
         return this;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object radius() {
         return this.radius;
     }
@@ -131,72 +150,136 @@ public class Pie extends Series<Pie> {
         return this;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer startAngle() {
         return this.startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public Pie startAngle(Integer startAngle) {
         this.startAngle = startAngle;
         return this;
     }
 
+    /**
+     * 获取minAngle值
+     */
     public Integer minAngle() {
         return this.minAngle;
     }
 
+    /**
+     * 设置minAngle值
+     *
+     * @param minAngle
+     */
     public Pie minAngle(Integer minAngle) {
         this.minAngle = minAngle;
         return this;
     }
 
+    /**
+     * 获取clockWise值
+     */
     public Boolean clockWise() {
         return this.clockWise;
     }
 
+    /**
+     * 设置clockWise值
+     *
+     * @param clockWise
+     */
     public Pie clockWise(Boolean clockWise) {
         this.clockWise = clockWise;
         return this;
     }
 
+    /**
+     * 获取roseType值
+     */
     public RoseType roseType() {
         return this.roseType;
     }
 
+    /**
+     * 设置roseType值
+     *
+     * @param roseType
+     */
     public Pie roseType(RoseType roseType) {
         this.roseType = roseType;
         return this;
     }
 
+    /**
+     * 获取selectedOffset值
+     */
     public Integer selectedOffset() {
         return this.selectedOffset;
     }
 
+    /**
+     * 设置selectedOffset值
+     *
+     * @param selectedOffset
+     */
     public Pie selectedOffset(Integer selectedOffset) {
         this.selectedOffset = selectedOffset;
         return this;
     }
 
+    /**
+     * 获取selectedMode值
+     */
     public SelectedMode selectedMode() {
         return this.selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public Pie selectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] getCenter() {
         return center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public void setCenter(Object[] center) {
         this.center = center;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object getRadius() {
         return radius;
     }
 
+    /**
+     * 设置radius值
+     *
+     * @param radius
+     */
     public void setRadius(Object radius) {
         this.radius = radius;
     }

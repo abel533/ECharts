@@ -89,47 +89,89 @@ public class Map extends Series<Map> {
      */
     private GeoCoord geoCoord;
 
+    /**
+     * 构造函数
+     */
     public Map() {
         this.type(SeriesType.map);
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Map(String name) {
         super(name);
         this.type(SeriesType.map);
     }
 
+    /**
+     * 设置mapLocation值
+     *
+     * @param mapLocation
+     */
     public Map mapLocation(MapLocation mapLocation) {
         this.mapLocation = mapLocation;
         return this;
     }
 
+    /**
+     * 获取selectedMode值
+     */
     public Object selectedMode() {
         return this.selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public Map selectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public Map selectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 获取mapType值
+     */
     public String mapType() {
         return this.mapType;
     }
 
+    /**
+     * 设置mapType值
+     *
+     * @param mapType
+     */
     public Map mapType(String mapType) {
         this.mapType = mapType;
         return this;
     }
 
+    /**
+     * 获取hoverable值
+     */
     public Boolean hoverable() {
         return this.hoverable;
     }
 
+    /**
+     * 设置hoverable值
+     *
+     * @param hoverable
+     */
     public Map hoverable(Boolean hoverable) {
         this.hoverable = hoverable;
         return this;
@@ -145,42 +187,77 @@ public class Map extends Series<Map> {
         return this.mapLocation;
     }
 
+    /**
+     * 获取mapValueCalculation值
+     */
     public Calculation mapValueCalculation() {
         return this.mapValueCalculation;
     }
 
+    /**
+     * 设置mapValueCalculation值
+     *
+     * @param mapValueCalculation
+     */
     public Map mapValueCalculation(Calculation mapValueCalculation) {
         this.mapValueCalculation = mapValueCalculation;
         return this;
     }
 
+    /**
+     * 获取mapValuePrecision值
+     */
     public Integer mapValuePrecision() {
         return this.mapValuePrecision;
     }
 
+    /**
+     * 设置mapValuePrecision值
+     *
+     * @param mapValuePrecision
+     */
     public Map mapValuePrecision(Integer mapValuePrecision) {
         this.mapValuePrecision = mapValuePrecision;
         return this;
     }
 
+    /**
+     * 获取showLegendSymbol值
+     */
     public Boolean showLegendSymbol() {
         return this.showLegendSymbol;
     }
 
+    /**
+     * 设置showLegendSymbol值
+     *
+     * @param showLegendSymbol
+     */
     public Map showLegendSymbol(Boolean showLegendSymbol) {
         this.showLegendSymbol = showLegendSymbol;
         return this;
     }
 
+    /**
+     * 获取roam值
+     */
     public Boolean roam() {
         return this.roam;
     }
 
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
     public Map roam(Boolean roam) {
         this.roam = roam;
         return this;
     }
 
+    /**
+     * 获取scaleLimit值
+     */
     public ScaleLimit scaleLimit() {
         if (this.scaleLimit == null) {
             this.scaleLimit = new ScaleLimit();
@@ -188,29 +265,53 @@ public class Map extends Series<Map> {
         return this.scaleLimit;
     }
 
+    /**
+     * 设置scaleLimit值
+     *
+     * @param scaleLimit
+     */
     public Map scaleLimit(ScaleLimit scaleLimit) {
         this.scaleLimit = scaleLimit;
         return this;
     }
 
+    /**
+     * 获取nameMap值
+     */
     public Object nameMap() {
         return this.nameMap;
     }
 
+    /**
+     * 设置nameMap值
+     *
+     * @param nameMap
+     */
     public Map nameMap(Object nameMap) {
         this.nameMap = nameMap;
         return this;
     }
 
+    /**
+     * 获取textFixed值
+     */
     public Object textFixed() {
         return this.textFixed;
     }
 
+    /**
+     * 设置textFixed值
+     *
+     * @param textFixed
+     */
     public Map textFixed(Object textFixed) {
         this.textFixed = textFixed;
         return this;
     }
 
+    /**
+     * 获取geoCoord值
+     */
     public GeoCoord geoCoord() {
         if (this.geoCoord == null) {
             this.geoCoord = new GeoCoord();
@@ -218,103 +319,206 @@ public class Map extends Series<Map> {
         return this.geoCoord;
     }
 
+    /**
+     * 设置name,x,y值
+     *
+     * @param name
+     * @param x
+     * @param y
+     */
     public Map geoCoord(String name, String x, String y) {
         this.geoCoord().put(name, x, y);
         return this;
     }
 
+    /**
+     * 获取selectedMode值
+     */
     public Object getSelectedMode() {
         return selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public void setSelectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
     }
 
+    /**
+     * 获取mapType值
+     */
     public String getMapType() {
         return mapType;
     }
 
+    /**
+     * 设置mapType值
+     *
+     * @param mapType
+     */
     public void setMapType(String mapType) {
         this.mapType = mapType;
     }
 
+    /**
+     * 获取hoverable值
+     */
     public Boolean getHoverable() {
         return hoverable;
     }
 
+    /**
+     * 设置hoverable值
+     *
+     * @param hoverable
+     */
     public void setHoverable(Boolean hoverable) {
         this.hoverable = hoverable;
     }
 
+    /**
+     * 获取mapLocation值
+     */
     public MapLocation getMapLocation() {
         return mapLocation;
     }
 
+    /**
+     * 设置mapLocation值
+     *
+     * @param mapLocation
+     */
     public void setMapLocation(MapLocation mapLocation) {
         this.mapLocation = mapLocation;
     }
 
+    /**
+     * 获取mapValueCalculation值
+     */
     public Calculation getMapValueCalculation() {
         return mapValueCalculation;
     }
 
+    /**
+     * 设置mapValueCalculation值
+     *
+     * @param mapValueCalculation
+     */
     public void setMapValueCalculation(Calculation mapValueCalculation) {
         this.mapValueCalculation = mapValueCalculation;
     }
 
+    /**
+     * 获取mapValuePrecision值
+     */
     public Integer getMapValuePrecision() {
         return mapValuePrecision;
     }
 
+    /**
+     * 设置mapValuePrecision值
+     *
+     * @param mapValuePrecision
+     */
     public void setMapValuePrecision(Integer mapValuePrecision) {
         this.mapValuePrecision = mapValuePrecision;
     }
 
+    /**
+     * 获取showLegendSymbol值
+     */
     public Boolean getShowLegendSymbol() {
         return showLegendSymbol;
     }
 
+    /**
+     * 设置showLegendSymbol值
+     *
+     * @param showLegendSymbol
+     */
     public void setShowLegendSymbol(Boolean showLegendSymbol) {
         this.showLegendSymbol = showLegendSymbol;
     }
 
+    /**
+     * 获取roam值
+     */
     public Boolean getRoam() {
         return roam;
     }
 
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
     public void setRoam(Boolean roam) {
         this.roam = roam;
     }
 
+    /**
+     * 获取scaleLimit值
+     */
     public ScaleLimit getScaleLimit() {
         return scaleLimit;
     }
 
+    /**
+     * 设置scaleLimit值
+     *
+     * @param scaleLimit
+     */
     public void setScaleLimit(ScaleLimit scaleLimit) {
         this.scaleLimit = scaleLimit;
     }
 
+    /**
+     * 获取nameMap值
+     */
     public Object getNameMap() {
         return nameMap;
     }
 
+    /**
+     * 设置nameMap值
+     *
+     * @param nameMap
+     */
     public void setNameMap(Object nameMap) {
         this.nameMap = nameMap;
     }
 
+    /**
+     * 获取textFixed值
+     */
     public Object getTextFixed() {
         return textFixed;
     }
 
+    /**
+     * 设置textFixed值
+     *
+     * @param textFixed
+     */
     public void setTextFixed(Object textFixed) {
         this.textFixed = textFixed;
     }
 
+    /**
+     * 获取geoCoord值
+     */
     public GeoCoord getGeoCoord() {
         return geoCoord;
     }
 
+    /**
+     * 设置geoCoord值
+     *
+     * @param geoCoord
+     */
     public void setGeoCoord(GeoCoord geoCoord) {
         this.geoCoord = geoCoord;
     }

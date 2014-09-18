@@ -66,141 +66,273 @@ public abstract class Basic<T> {
      */
     private Integer itemGap;
 
+    /**
+     * 获取x值
+     */
     public Object x() {
         return this.x;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public T x(Object x) {
         this.x = x;
         return (T) this;
     }
 
+    /**
+     * 获取y值
+     */
     public Object y() {
         return this.y;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public T y(Object y) {
         this.y = y;
         return (T) this;
     }
 
+    /**
+     * 获取backgroundColor值
+     */
     public String backgroundColor() {
         return this.backgroundColor;
     }
 
+    /**
+     * 设置backgroundColor值
+     *
+     * @param backgroundColor
+     */
     public T backgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return (T) this;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String borderColor() {
         return this.borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public T borderColor(String borderColor) {
         this.borderColor = borderColor;
         return (T) this;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Integer borderWidth() {
         return this.borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public T borderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
         return (T) this;
     }
 
+    /**
+     * 获取padding值
+     */
     public Integer padding() {
         return this.padding;
     }
 
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
     public T padding(Integer padding) {
         this.padding = padding;
         return (T) this;
     }
 
+    /**
+     * 获取itemGap值
+     */
     public Integer itemGap() {
         return this.itemGap;
     }
 
+    /**
+     * 设置itemGap值
+     *
+     * @param itemGap
+     */
     public T itemGap(Integer itemGap) {
         this.itemGap = itemGap;
         return (T) this;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public T x(Integer x) {
         this.x = x;
         return (T) this;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public T x(X x) {
         this.x = x;
         return (T) this;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public T y(Integer y) {
         this.y = y;
         return (T) this;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public T y(Y y) {
         this.y = y;
         return (T) this;
     }
 
+    /**
+     * 获取x值
+     */
     public Object getX() {
         return x;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public void setX(Object x) {
         this.x = x;
     }
 
+    /**
+     * 获取y值
+     */
     public Object getY() {
         return y;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public void setY(Object y) {
         this.y = y;
     }
 
+    /**
+     * 获取backgroundColor值
+     */
     public String getBackgroundColor() {
         return backgroundColor;
     }
 
+    /**
+     * 设置backgroundColor值
+     *
+     * @param backgroundColor
+     */
     public void setBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String getBorderColor() {
         return borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public void setBorderColor(String borderColor) {
         this.borderColor = borderColor;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Integer getBorderWidth() {
         return borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public void setBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
     }
 
+    /**
+     * 获取padding值
+     */
     public Integer getPadding() {
         return padding;
     }
 
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
     public void setPadding(Integer padding) {
         this.padding = padding;
     }
 
+    /**
+     * 获取itemGap值
+     */
     public Integer getItemGap() {
         return itemGap;
     }
 
+    /**
+     * 设置itemGap值
+     *
+     * @param itemGap
+     */
     public void setItemGap(Integer itemGap) {
         this.itemGap = itemGap;
     }

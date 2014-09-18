@@ -41,6 +41,9 @@ public abstract class AbstractData<T> implements Data<T> {
      */
     protected List<Object> data;
 
+    /**
+     * 获取data值
+     */
     public List<Object> data() {
         if (this.data == null) {
             this.data = new ArrayList<Object>();
@@ -62,10 +65,18 @@ public abstract class AbstractData<T> implements Data<T> {
         return (T) this;
     }
 
+    /**
+     * 获取data值
+     */
     public List<Object> getData() {
         return data;
     }
 
+    /**
+     * 设置data值
+     *
+     * @param data
+     */
     public void setData(List<Object> data) {
         this.data = data;
     }

@@ -56,11 +56,19 @@ public enum Event {
 
     private String event;
 
+    /**
+     * 构造函数,参数:event
+     *
+     * @param event
+     */
     private Event(String event) {
         this.event = event;
     }
 
     @Override
+    /**
+     * 获取toString值
+     */
     public String toString() {
         return this.event;
     }

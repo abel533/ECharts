@@ -84,215 +84,415 @@ public class Funnel extends Series<Funnel> {
      */
     private Integer gap;
 
+    /**
+     * 构造函数
+     */
     public Funnel() {
         this.type(SeriesType.funnel);
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Funnel(String name) {
         super(name);
         this.type(SeriesType.funnel);
     }
 
+    /**
+     * 获取x值
+     */
     public Object x() {
         return this.x;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public Funnel x(Object x) {
         this.x = x;
         return this;
     }
 
+    /**
+     * 获取y值
+     */
     public Object y() {
         return this.y;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public Funnel y(Object y) {
         this.y = y;
         return this;
     }
 
+    /**
+     * 获取x2值
+     */
     public Object x2() {
         return this.x2;
     }
 
+    /**
+     * 设置x2值
+     *
+     * @param x2
+     */
     public Funnel x2(Object x2) {
         this.x2 = x2;
         return this;
     }
 
+    /**
+     * 获取y2值
+     */
     public Object y2() {
         return this.y2;
     }
 
+    /**
+     * 设置y2值
+     *
+     * @param y2
+     */
     public Funnel y2(Object y2) {
         this.y2 = y2;
         return this;
     }
 
+    /**
+     * 获取width值
+     */
     public Object width() {
         return this.width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public Funnel width(Object width) {
         this.width = width;
         return this;
     }
 
+    /**
+     * 获取height值
+     */
     public Object height() {
         return this.height;
     }
 
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
     public Funnel height(Object height) {
         this.height = height;
         return this;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer min() {
         return this.min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public Funnel min(Integer min) {
         this.min = min;
         return this;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer max() {
         return this.max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public Funnel max(Integer max) {
         this.max = max;
         return this;
     }
 
+    /**
+     * 获取minSize值
+     */
     public String minSize() {
         return this.minSize;
     }
 
+    /**
+     * 设置minSize值
+     *
+     * @param minSize
+     */
     public Funnel minSize(String minSize) {
         this.minSize = minSize;
         return this;
     }
 
+    /**
+     * 获取maxSize值
+     */
     public String maxSize() {
         return this.maxSize;
     }
 
+    /**
+     * 设置maxSize值
+     *
+     * @param maxSize
+     */
     public Funnel maxSize(String maxSize) {
         this.maxSize = maxSize;
         return this;
     }
 
+    /**
+     * 获取sort值
+     */
     public Sort sort() {
         return this.sort;
     }
 
+    /**
+     * 设置sort值
+     *
+     * @param sort
+     */
     public Funnel sort(Sort sort) {
         this.sort = sort;
         return this;
     }
 
+    /**
+     * 获取gap值
+     */
     public Integer gap() {
         return this.gap;
     }
 
+    /**
+     * 设置gap值
+     *
+     * @param gap
+     */
     public Funnel gap(Integer gap) {
         this.gap = gap;
         return this;
     }
 
+    /**
+     * 获取x值
+     */
     public Object getX() {
         return x;
     }
 
+    /**
+     * 设置x值
+     *
+     * @param x
+     */
     public void setX(Object x) {
         this.x = x;
     }
 
+    /**
+     * 获取y值
+     */
     public Object getY() {
         return y;
     }
 
+    /**
+     * 设置y值
+     *
+     * @param y
+     */
     public void setY(Object y) {
         this.y = y;
     }
 
+    /**
+     * 获取x2值
+     */
     public Object getX2() {
         return x2;
     }
 
+    /**
+     * 设置x2值
+     *
+     * @param x2
+     */
     public void setX2(Object x2) {
         this.x2 = x2;
     }
 
+    /**
+     * 获取y2值
+     */
     public Object getY2() {
         return y2;
     }
 
+    /**
+     * 设置y2值
+     *
+     * @param y2
+     */
     public void setY2(Object y2) {
         this.y2 = y2;
     }
 
+    /**
+     * 获取width值
+     */
     public Object getWidth() {
         return width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public void setWidth(Object width) {
         this.width = width;
     }
 
+    /**
+     * 获取height值
+     */
     public Object getHeight() {
         return height;
     }
 
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
     public void setHeight(Object height) {
         this.height = height;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer getMin() {
         return min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public void setMin(Integer min) {
         this.min = min;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer getMax() {
         return max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public void setMax(Integer max) {
         this.max = max;
     }
 
+    /**
+     * 获取minSize值
+     */
     public String getMinSize() {
         return minSize;
     }
 
+    /**
+     * 设置minSize值
+     *
+     * @param minSize
+     */
     public void setMinSize(String minSize) {
         this.minSize = minSize;
     }
 
+    /**
+     * 获取maxSize值
+     */
     public String getMaxSize() {
         return maxSize;
     }
 
+    /**
+     * 设置maxSize值
+     *
+     * @param maxSize
+     */
     public void setMaxSize(String maxSize) {
         this.maxSize = maxSize;
     }
 
+    /**
+     * 获取sort值
+     */
     public Sort getSort() {
         return sort;
     }
 
+    /**
+     * 设置sort值
+     *
+     * @param sort
+     */
     public void setSort(Sort sort) {
         this.sort = sort;
     }
 
+    /**
+     * 获取gap值
+     */
     public Integer getGap() {
         return gap;
     }
 
+    /**
+     * 设置gap值
+     *
+     * @param gap
+     */
     public void setGap(Integer gap) {
         this.gap = gap;
     }

@@ -59,121 +59,233 @@ public class Effect {
      */
     private Integer shadowBlur;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public Effect show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取loop值
+     */
     public Boolean loop() {
         return this.loop;
     }
 
+    /**
+     * 设置loop值
+     *
+     * @param loop
+     */
     public Effect loop(Boolean loop) {
         this.loop = loop;
         return this;
     }
 
+    /**
+     * 获取period值
+     */
     public Integer period() {
         return this.period;
     }
 
+    /**
+     * 设置period值
+     *
+     * @param period
+     */
     public Effect period(Integer period) {
         this.period = period;
         return this;
     }
 
+    /**
+     * 获取scaleSize值
+     */
     public Integer scaleSize() {
         return this.scaleSize;
     }
 
+    /**
+     * 设置scaleSize值
+     *
+     * @param scaleSize
+     */
     public Effect scaleSize(Integer scaleSize) {
         this.scaleSize = scaleSize;
         return this;
     }
 
+    /**
+     * 获取color值
+     */
     public String color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public Effect color(String color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 获取shadowColor值
+     */
     public String shadowColor() {
         return this.shadowColor;
     }
 
+    /**
+     * 设置shadowColor值
+     *
+     * @param shadowColor
+     */
     public Effect shadowColor(String shadowColor) {
         this.shadowColor = shadowColor;
         return this;
     }
 
+    /**
+     * 获取shadowBlur值
+     */
     public Integer shadowBlur() {
         return this.shadowBlur;
     }
 
+    /**
+     * 设置shadowBlur值
+     *
+     * @param shadowBlur
+     */
     public Effect shadowBlur(Integer shadowBlur) {
         this.shadowBlur = shadowBlur;
         return this;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取loop值
+     */
     public Boolean getLoop() {
         return loop;
     }
 
+    /**
+     * 设置loop值
+     *
+     * @param loop
+     */
     public void setLoop(Boolean loop) {
         this.loop = loop;
     }
 
+    /**
+     * 获取period值
+     */
     public Integer getPeriod() {
         return period;
     }
 
+    /**
+     * 设置period值
+     *
+     * @param period
+     */
     public void setPeriod(Integer period) {
         this.period = period;
     }
 
+    /**
+     * 获取scaleSize值
+     */
     public Integer getScaleSize() {
         return scaleSize;
     }
 
+    /**
+     * 设置scaleSize值
+     *
+     * @param scaleSize
+     */
     public void setScaleSize(Integer scaleSize) {
         this.scaleSize = scaleSize;
     }
 
+    /**
+     * 获取color值
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * 获取shadowColor值
+     */
     public String getShadowColor() {
         return shadowColor;
     }
 
+    /**
+     * 设置shadowColor值
+     *
+     * @param shadowColor
+     */
     public void setShadowColor(String shadowColor) {
         this.shadowColor = shadowColor;
     }
 
+    /**
+     * 获取shadowBlur值
+     */
     public Integer getShadowBlur() {
         return shadowBlur;
     }
 
+    /**
+     * 设置shadowBlur值
+     *
+     * @param shadowBlur
+     */
     public void setShadowBlur(Integer shadowBlur) {
         this.shadowBlur = shadowBlur;
     }

@@ -57,51 +57,96 @@ public class CheckpointStyle {
      */
     private Label label;
 
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
     public CheckpointStyle label(Label label) {
         this.label = label;
         return this;
     }
 
+    /**
+     * 获取symbol值
+     */
     public Object symbol() {
         return this.symbol;
     }
 
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
     public CheckpointStyle symbol(Object symbol) {
         this.symbol = symbol;
         return this;
     }
 
+    /**
+     * 获取symbolSize值
+     */
     public Object symbolSize() {
         return this.symbolSize;
     }
 
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
     public CheckpointStyle symbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
         return this;
     }
 
+    /**
+     * 获取color值
+     */
     public String color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public CheckpointStyle color(String color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String borderColor() {
         return this.borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public CheckpointStyle borderColor(String borderColor) {
         this.borderColor = borderColor;
         return this;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Object borderWidth() {
         return this.borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public CheckpointStyle borderWidth(Object borderWidth) {
         this.borderWidth = borderWidth;
         return this;
@@ -117,50 +162,98 @@ public class CheckpointStyle {
         return this.label;
     }
 
+    /**
+     * 获取label值
+     */
     public Label getLabel() {
         return label;
     }
 
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
     public void setLabel(Label label) {
         this.label = label;
     }
 
+    /**
+     * 获取symbol值
+     */
     public Object getSymbol() {
         return symbol;
     }
 
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
     public void setSymbol(Object symbol) {
         this.symbol = symbol;
     }
 
+    /**
+     * 获取symbolSize值
+     */
     public Object getSymbolSize() {
         return symbolSize;
     }
 
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
     public void setSymbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
     }
 
+    /**
+     * 获取color值
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * 获取borderColor值
+     */
     public String getBorderColor() {
         return borderColor;
     }
 
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
     public void setBorderColor(String borderColor) {
         this.borderColor = borderColor;
     }
 
+    /**
+     * 获取borderWidth值
+     */
     public Object getBorderWidth() {
         return borderWidth;
     }
 
+    /**
+     * 设置borderWidth值
+     *
+     * @param borderWidth
+     */
     public void setBorderWidth(Object borderWidth) {
         this.borderWidth = borderWidth;
     }

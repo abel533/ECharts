@@ -111,15 +111,28 @@ public class Polar extends AbstractData<Polar> implements Component {
      */
     private List<Object> indicator;
 
+    /**
+     * 获取center值
+     */
     public Object[] center() {
         return this.center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public Polar center(Object[] center) {
         this.center = center;
         return this;
     }
 
+    /**
+     * 设置values值
+     *
+     * @param values
+     */
     public Polar indicator(Object... values) {
         if (values == null || values.length == 0) {
             return this;
@@ -128,44 +141,85 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object radius() {
         return this.radius;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public Polar name(Name name) {
         this.name = name;
         return this;
     }
 
+    /**
+     * 获取boundaryGap值
+     */
     public Object[] boundaryGap() {
         return this.boundaryGap;
     }
 
+    /**
+     * 设置boundaryGap值
+     *
+     * @param boundaryGap
+     */
     public Polar boundaryGap(Object[] boundaryGap) {
         this.boundaryGap = boundaryGap;
         return this;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public Polar axisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
         return this;
     }
 
+    /**
+     * 设置axisLabel值
+     *
+     * @param axisLabel
+     */
     public Polar axisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
         return this;
     }
 
+    /**
+     * 设置splitArea值
+     *
+     * @param splitArea
+     */
     public Polar splitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
         return this;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public Polar splitLine(SplitLine splitLine) {
         this.splitLine = splitLine;
         return this;
     }
 
+    /**
+     * 设置indicator值
+     *
+     * @param indicator
+     */
     public Polar indicator(List<Object> indicator) {
         this.indicator = indicator;
         return this;
@@ -208,19 +262,35 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer startAngle() {
         return this.startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public Polar startAngle(Integer startAngle) {
         this.startAngle = startAngle;
         return this;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer splitNumber() {
         return this.splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public Polar splitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
         return this;
@@ -244,28 +314,52 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this;
     }
 
+    /**
+     * 获取scale值
+     */
     public Boolean scale() {
         return this.scale;
     }
 
+    /**
+     * 设置scale值
+     *
+     * @param scale
+     */
     public Polar scale(Boolean scale) {
         this.scale = scale;
         return this;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer precision() {
         return this.precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public Polar precision(Integer precision) {
         this.precision = precision;
         return this;
     }
 
+    /**
+     * 获取power值
+     */
     public Integer power() {
         return this.power;
     }
 
+    /**
+     * 设置power值
+     *
+     * @param power
+     */
     public Polar power(Integer power) {
         this.power = power;
         return this;
@@ -319,10 +413,18 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this.splitLine;
     }
 
+    /**
+     * 获取type值
+     */
     public PolarType type() {
         return this.type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public Polar type(PolarType type) {
         this.type = type;
         return this;
@@ -338,123 +440,243 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this.indicator;
     }
 
+    /**
+     * 获取name值
+     */
     public Name getName() {
         return name;
     }
 
+    /**
+     * 设置name值
+     *
+     * @param name
+     */
     public void setName(Name name) {
         this.name = name;
     }
 
+    /**
+     * 获取boundaryGap值
+     */
     public Object[] getBoundaryGap() {
         return boundaryGap;
     }
 
+    /**
+     * 设置boundaryGap值
+     *
+     * @param boundaryGap
+     */
     public void setBoundaryGap(Object[] boundaryGap) {
         this.boundaryGap = boundaryGap;
     }
 
+    /**
+     * 获取axisLine值
+     */
     public AxisLine getAxisLine() {
         return axisLine;
     }
 
+    /**
+     * 设置axisLine值
+     *
+     * @param axisLine
+     */
     public void setAxisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
     }
 
+    /**
+     * 获取axisLabel值
+     */
     public AxisLabel getAxisLabel() {
         return axisLabel;
     }
 
+    /**
+     * 设置axisLabel值
+     *
+     * @param axisLabel
+     */
     public void setAxisLabel(AxisLabel axisLabel) {
         this.axisLabel = axisLabel;
     }
 
+    /**
+     * 获取splitArea值
+     */
     public SplitArea getSplitArea() {
         return splitArea;
     }
 
+    /**
+     * 设置splitArea值
+     *
+     * @param splitArea
+     */
     public void setSplitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
     }
 
+    /**
+     * 获取splitLine值
+     */
     public SplitLine getSplitLine() {
         return splitLine;
     }
 
+    /**
+     * 设置splitLine值
+     *
+     * @param splitLine
+     */
     public void setSplitLine(SplitLine splitLine) {
         this.splitLine = splitLine;
     }
 
+    /**
+     * 获取indicator值
+     */
     public List<Object> getIndicator() {
         return indicator;
     }
 
+    /**
+     * 设置indicator值
+     *
+     * @param indicator
+     */
     public void setIndicator(List<Object> indicator) {
 
         this.indicator = indicator;
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] getCenter() {
         return center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public void setCenter(Object[] center) {
         this.center = center;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object getRadius() {
         return radius;
     }
 
+    /**
+     * 设置radius值
+     *
+     * @param radius
+     */
     public void setRadius(Object radius) {
         this.radius = radius;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer getStartAngle() {
         return startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public void setStartAngle(Integer startAngle) {
         this.startAngle = startAngle;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer getSplitNumber() {
         return splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
     }
 
+    /**
+     * 获取scale值
+     */
     public Boolean getScale() {
         return scale;
     }
 
+    /**
+     * 设置scale值
+     *
+     * @param scale
+     */
     public void setScale(Boolean scale) {
         this.scale = scale;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer getPrecision() {
         return precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public void setPrecision(Integer precision) {
         this.precision = precision;
     }
 
+    /**
+     * 获取power值
+     */
     public Integer getPower() {
         return power;
     }
 
+    /**
+     * 设置power值
+     *
+     * @param power
+     */
     public void setPower(Integer power) {
         this.power = power;
     }
 
+    /**
+     * 获取type值
+     */
     public PolarType getType() {
         return type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public void setType(PolarType type) {
         this.type = type;
     }
@@ -463,21 +685,35 @@ public class Polar extends AbstractData<Polar> implements Component {
         private Boolean show;
         private TextStyle textStyle;
 
+        /**
+         * 构造函数
+         */
         public Name() {
             this.show(true);
             this.textStyle(new TextStyle());
             this.textStyle.color("#333");
         }
 
+        /**
+         * 获取show值
+         */
         public Boolean show() {
             return this.show;
         }
 
+        /**
+         * 设置show值
+         *
+         * @param show
+         */
         public Name show(Boolean show) {
             this.show = show;
             return this;
         }
 
+        /**
+         * 获取textStyle值
+         */
         public TextStyle textStyle() {
             if (this.textStyle == null) {
                 this.textStyle = new TextStyle();
@@ -485,23 +721,44 @@ public class Polar extends AbstractData<Polar> implements Component {
             return this.textStyle;
         }
 
+        /**
+         * 设置textStyle值
+         *
+         * @param textStyle
+         */
         public Name textStyle(TextStyle textStyle) {
             this.textStyle = textStyle;
             return this;
         }
 
+        /**
+         * 获取show值
+         */
         public Boolean getShow() {
             return show;
         }
 
+        /**
+         * 设置show值
+         *
+         * @param show
+         */
         public void setShow(Boolean show) {
             this.show = show;
         }
 
+        /**
+         * 获取textStyle值
+         */
         public TextStyle getTextStyle() {
             return textStyle;
         }
 
+        /**
+         * 设置textStyle值
+         *
+         * @param textStyle
+         */
         public void setTextStyle(TextStyle textStyle) {
             this.textStyle = textStyle;
         }

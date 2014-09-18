@@ -34,6 +34,13 @@ import java.util.HashMap;
  */
 public class GeoCoord extends HashMap<String, BigDecimal[]> {
 
+    /**
+     * 设置key,x,y值
+     *
+     * @param key
+     * @param x
+     * @param y
+     */
     public GeoCoord put(String key, String x, String y) {
         super.put(key, new BigDecimal[]{new BigDecimal(x), new BigDecimal(y)});
         return this;

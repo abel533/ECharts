@@ -43,15 +43,28 @@ public class SplitArea {
      */
     private AreaStyle areaStyle;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public SplitArea show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 设置areaStyle值
+     *
+     * @param areaStyle
+     */
     public SplitArea areaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
         return this;
@@ -69,18 +82,34 @@ public class SplitArea {
         return this.areaStyle;
     }
 
+    /**
+     * 获取areaStyle值
+     */
     public AreaStyle getAreaStyle() {
         return areaStyle;
     }
 
+    /**
+     * 设置areaStyle值
+     *
+     * @param areaStyle
+     */
     public void setAreaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }

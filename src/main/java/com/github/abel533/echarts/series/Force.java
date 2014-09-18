@@ -108,42 +108,83 @@ public class Force extends Series<Force> {
      * 每一帧布局计算的迭代次数，因为每一帧绘制的时间经常会比布局时间长很多，所以在使用 web worker 的时候可以把 steps 调大来平衡两者的时间从而达到效率最优化
      */
     private Integer steps;
+
+    /**
+     * 构造函数
+     */
     public Force() {
         this.type(SeriesType.force);
     }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Force(String name) {
         super(name);
         this.type(SeriesType.force);
     }
 
+    /**
+     * 获取coolDown值
+     */
     public Object coolDown() {
         return this.coolDown;
     }
 
+    /**
+     * 设置coolDown值
+     *
+     * @param coolDown
+     */
     public Force coolDown(Object coolDown) {
         this.coolDown = coolDown;
         return this;
     }
 
+    /**
+     * 获取ratioScaling值
+     */
     public Boolean ratioScaling() {
         return this.ratioScaling;
     }
 
+    /**
+     * 设置ratioScaling值
+     *
+     * @param ratioScaling
+     */
     public Force ratioScaling(Boolean ratioScaling) {
         this.ratioScaling = ratioScaling;
         return this;
     }
 
+    /**
+     * 设置categories值
+     *
+     * @param categories
+     */
     public Force categories(List<Category> categories) {
         this.categories = categories;
         return this;
     }
 
+    /**
+     * 设置nodes值
+     *
+     * @param nodes
+     */
     public Force nodes(List<Node> nodes) {
         this.nodes = nodes;
         return this;
     }
 
+    /**
+     * 设置links值
+     *
+     * @param links
+     */
     public Force links(List<Link> links) {
         this.links = links;
         return this;
@@ -258,251 +299,488 @@ public class Force extends Series<Force> {
         return this;
     }
 
+    /**
+     * 获取center值
+     */
     public Object center() {
         return this.center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public Force center(Object center) {
         this.center = center;
         return this;
     }
 
+    /**
+     * 获取size值
+     */
     public Object size() {
         return this.size;
     }
 
+    /**
+     * 设置size值
+     *
+     * @param size
+     */
     public Force size(Object size) {
         this.size = size;
         return this;
     }
 
+    /**
+     * 获取minRadius值
+     */
     public Integer minRadius() {
         return this.minRadius;
     }
 
+    /**
+     * 设置minRadius值
+     *
+     * @param minRadius
+     */
     public Force minRadius(Integer minRadius) {
         this.minRadius = minRadius;
         return this;
     }
 
+    /**
+     * 获取maxRadius值
+     */
     public Integer maxRadius() {
         return this.maxRadius;
     }
 
+    /**
+     * 设置maxRadius值
+     *
+     * @param maxRadius
+     */
     public Force maxRadius(Integer maxRadius) {
         this.maxRadius = maxRadius;
         return this;
     }
 
+    /**
+     * 获取linkSymbol值
+     */
     public Object linkSymbol() {
         return this.linkSymbol;
     }
 
+    /**
+     * 设置linkSymbol值
+     *
+     * @param linkSymbol
+     */
     public Force linkSymbol(Symbol linkSymbol) {
         this.linkSymbol = linkSymbol;
         return this;
     }
 
+    /**
+     * 设置linkSymbol值
+     *
+     * @param linkSymbol
+     */
     public Force linkSymbol(String linkSymbol) {
         this.linkSymbol = linkSymbol;
         return this;
     }
 
+    /**
+     * 获取linkSymbolSize值
+     */
     public Integer linkSymbolSize() {
         return this.linkSymbolSize;
     }
 
+    /**
+     * 设置linkSymbolSize值
+     *
+     * @param linkSymbolSize
+     */
     public Force linkSymbolSize(Integer linkSymbolSize) {
         this.linkSymbolSize = linkSymbolSize;
         return this;
     }
 
+    /**
+     * 获取scaling值
+     */
     public Double scaling() {
         return this.scaling;
     }
 
+    /**
+     * 设置scaling值
+     *
+     * @param scaling
+     */
     public Force scaling(Double scaling) {
         this.scaling = scaling;
         return this;
     }
 
+    /**
+     * 获取gravity值
+     */
     public Double gravity() {
         return this.gravity;
     }
 
+    /**
+     * 设置gravity值
+     *
+     * @param gravity
+     */
     public Force gravity(Double gravity) {
         this.gravity = gravity;
         return this;
     }
 
+    /**
+     * 获取draggable值
+     */
     public Boolean draggable() {
         return this.draggable;
     }
 
+    /**
+     * 设置draggable值
+     *
+     * @param draggable
+     */
     public Force draggable(Boolean draggable) {
         this.draggable = draggable;
         return this;
     }
 
+    /**
+     * 获取large值
+     */
     public Boolean large() {
         return this.large;
     }
 
+    /**
+     * 设置large值
+     *
+     * @param large
+     */
     public Force large(Boolean large) {
         this.large = large;
         return this;
     }
 
+    /**
+     * 获取useWorker值
+     */
     public Boolean useWorker() {
         return this.useWorker;
     }
 
+    /**
+     * 设置useWorker值
+     *
+     * @param useWorker
+     */
     public Force useWorker(Boolean useWorker) {
         this.useWorker = useWorker;
         return this;
     }
 
+    /**
+     * 获取steps值
+     */
     public Integer steps() {
         return this.steps;
     }
 
+    /**
+     * 设置steps值
+     *
+     * @param steps
+     */
     public Force steps(Integer steps) {
         this.steps = steps;
         return this;
     }
 
+    /**
+     * 获取categories值
+     */
     public List<Category> getCategories() {
         return categories;
     }
 
+    /**
+     * 设置categories值
+     *
+     * @param categories
+     */
     public void setCategories(List<Category> categories) {
         this.categories = categories;
     }
 
+    /**
+     * 获取nodes值
+     */
     public List<Node> getNodes() {
         return nodes;
     }
 
+    /**
+     * 设置nodes值
+     *
+     * @param nodes
+     */
     public void setNodes(List<Node> nodes) {
         this.nodes = nodes;
     }
 
+    /**
+     * 获取links值
+     */
     public List<Link> getLinks() {
         return links;
     }
 
+    /**
+     * 设置links值
+     *
+     * @param links
+     */
     public void setLinks(List<Link> links) {
         this.links = links;
     }
 
+    /**
+     * 获取center值
+     */
     public Object getCenter() {
         return center;
     }
 
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
     public void setCenter(Object center) {
         this.center = center;
     }
 
+    /**
+     * 获取size值
+     */
     public Object getSize() {
         return size;
     }
 
+    /**
+     * 设置size值
+     *
+     * @param size
+     */
     public void setSize(Object size) {
         this.size = size;
     }
 
+    /**
+     * 获取minRadius值
+     */
     public Integer getMinRadius() {
         return minRadius;
     }
 
+    /**
+     * 设置minRadius值
+     *
+     * @param minRadius
+     */
     public void setMinRadius(Integer minRadius) {
         this.minRadius = minRadius;
     }
 
+    /**
+     * 获取maxRadius值
+     */
     public Integer getMaxRadius() {
         return maxRadius;
     }
 
+    /**
+     * 设置maxRadius值
+     *
+     * @param maxRadius
+     */
     public void setMaxRadius(Integer maxRadius) {
         this.maxRadius = maxRadius;
     }
 
+    /**
+     * 获取linkSymbol值
+     */
     public Object getLinkSymbol() {
         return linkSymbol;
     }
 
+    /**
+     * 设置linkSymbol值
+     *
+     * @param linkSymbol
+     */
     public void setLinkSymbol(Object linkSymbol) {
         this.linkSymbol = linkSymbol;
     }
 
+    /**
+     * 获取linkSymbolSize值
+     */
     public Integer getLinkSymbolSize() {
         return linkSymbolSize;
     }
 
+    /**
+     * 设置linkSymbolSize值
+     *
+     * @param linkSymbolSize
+     */
     public void setLinkSymbolSize(Integer linkSymbolSize) {
         this.linkSymbolSize = linkSymbolSize;
     }
 
+    /**
+     * 获取scaling值
+     */
     public Double getScaling() {
         return scaling;
     }
 
+    /**
+     * 设置scaling值
+     *
+     * @param scaling
+     */
     public void setScaling(Double scaling) {
         this.scaling = scaling;
     }
 
+    /**
+     * 获取gravity值
+     */
     public Double getGravity() {
         return gravity;
     }
 
+    /**
+     * 设置gravity值
+     *
+     * @param gravity
+     */
     public void setGravity(Double gravity) {
         this.gravity = gravity;
     }
 
+    /**
+     * 获取draggable值
+     */
     public Boolean getDraggable() {
         return draggable;
     }
 
+    /**
+     * 设置draggable值
+     *
+     * @param draggable
+     */
     public void setDraggable(Boolean draggable) {
         this.draggable = draggable;
     }
 
+    /**
+     * 获取large值
+     */
     public Boolean getLarge() {
         return large;
     }
 
+    /**
+     * 设置large值
+     *
+     * @param large
+     */
     public void setLarge(Boolean large) {
         this.large = large;
     }
 
+    /**
+     * 获取useWorker值
+     */
     public Boolean getUseWorker() {
         return useWorker;
     }
 
+    /**
+     * 设置useWorker值
+     *
+     * @param useWorker
+     */
     public void setUseWorker(Boolean useWorker) {
         this.useWorker = useWorker;
     }
 
+    /**
+     * 获取steps值
+     */
     public Integer getSteps() {
         return steps;
     }
 
+    /**
+     * 设置steps值
+     *
+     * @param steps
+     */
     public void setSteps(Integer steps) {
         this.steps = steps;
     }
 
+    /**
+     * 获取coolDown值
+     */
     public Object getCoolDown() {
         return coolDown;
     }
 
+    /**
+     * 设置coolDown值
+     *
+     * @param coolDown
+     */
     public void setCoolDown(Object coolDown) {
         this.coolDown = coolDown;
     }
 
+    /**
+     * 获取ratioScaling值
+     */
     public Boolean getRatioScaling() {
         return ratioScaling;
     }
 
+    /**
+     * 设置ratioScaling值
+     *
+     * @param ratioScaling
+     */
     public void setRatioScaling(Boolean ratioScaling) {
         this.ratioScaling = ratioScaling;
     }

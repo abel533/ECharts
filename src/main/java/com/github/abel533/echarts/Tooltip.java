@@ -85,101 +85,191 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     private TextStyle textStyle;
 
+    /**
+     * 设置axisPointer值
+     *
+     * @param axisPointer
+     */
     public Tooltip axisPointer(AxisPointer axisPointer) {
         this.axisPointer = axisPointer;
         return this;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public Tooltip textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public Tooltip show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取showContent值
+     */
     public Boolean showContent() {
         return this.showContent;
     }
 
+    /**
+     * 设置showContent值
+     *
+     * @param showContent
+     */
     public Tooltip showContent(Boolean showContent) {
         this.showContent = showContent;
         return this;
     }
 
+    /**
+     * 获取trigger值
+     */
     public Trigger trigger() {
         return this.trigger;
     }
 
+    /**
+     * 设置trigger值
+     *
+     * @param trigger
+     */
     public Tooltip trigger(Trigger trigger) {
         this.trigger = trigger;
         return this;
     }
 
+    /**
+     * 获取position值
+     */
     public Object position() {
         return this.position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public Tooltip position(Object position) {
         this.position = position;
         return this;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object formatter() {
         return this.formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public Tooltip formatter(Object formatter) {
         this.formatter = formatter;
         return this;
     }
 
+    /**
+     * 获取islandFormatter值
+     */
     public String islandFormatter() {
         return this.islandFormatter;
     }
 
+    /**
+     * 设置islandFormatter值
+     *
+     * @param islandFormatter
+     */
     public Tooltip islandFormatter(String islandFormatter) {
         this.islandFormatter = islandFormatter;
         return this;
     }
 
+    /**
+     * 获取showDelay值
+     */
     public Integer showDelay() {
         return this.showDelay;
     }
 
+    /**
+     * 设置showDelay值
+     *
+     * @param showDelay
+     */
     public Tooltip showDelay(Integer showDelay) {
         this.showDelay = showDelay;
         return this;
     }
 
+    /**
+     * 获取hideDelay值
+     */
     public Integer hideDelay() {
         return this.hideDelay;
     }
 
+    /**
+     * 设置hideDelay值
+     *
+     * @param hideDelay
+     */
     public Tooltip hideDelay(Integer hideDelay) {
         this.hideDelay = hideDelay;
         return this;
     }
 
+    /**
+     * 获取transitionDuration值
+     */
     public Double transitionDuration() {
         return this.transitionDuration;
     }
 
+    /**
+     * 设置transitionDuration值
+     *
+     * @param transitionDuration
+     */
     public Tooltip transitionDuration(Double transitionDuration) {
         this.transitionDuration = transitionDuration;
         return this;
     }
 
+    /**
+     * 获取borderRadius值
+     */
     public Integer borderRadius() {
         return this.borderRadius;
     }
 
+    /**
+     * 设置borderRadius值
+     *
+     * @param borderRadius
+     */
     public Tooltip borderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
         return this;
@@ -207,98 +297,194 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         return this.textStyle;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取showContent值
+     */
     public Boolean getShowContent() {
         return showContent;
     }
 
+    /**
+     * 设置showContent值
+     *
+     * @param showContent
+     */
     public void setShowContent(Boolean showContent) {
         this.showContent = showContent;
     }
 
+    /**
+     * 获取trigger值
+     */
     public Trigger getTrigger() {
         return trigger;
     }
 
+    /**
+     * 设置trigger值
+     *
+     * @param trigger
+     */
     public void setTrigger(Trigger trigger) {
         this.trigger = trigger;
     }
 
+    /**
+     * 获取position值
+     */
     public Object getPosition() {
         return position;
     }
 
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
     public void setPosition(Object position) {
         this.position = position;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object getFormatter() {
         return formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public void setFormatter(Object formatter) {
         this.formatter = formatter;
     }
 
+    /**
+     * 获取islandFormatter值
+     */
     public String getIslandFormatter() {
         return islandFormatter;
     }
 
+    /**
+     * 设置islandFormatter值
+     *
+     * @param islandFormatter
+     */
     public void setIslandFormatter(String islandFormatter) {
         this.islandFormatter = islandFormatter;
     }
 
+    /**
+     * 获取showDelay值
+     */
     public Integer getShowDelay() {
         return showDelay;
     }
 
+    /**
+     * 设置showDelay值
+     *
+     * @param showDelay
+     */
     public void setShowDelay(Integer showDelay) {
         this.showDelay = showDelay;
     }
 
+    /**
+     * 获取hideDelay值
+     */
     public Integer getHideDelay() {
         return hideDelay;
     }
 
+    /**
+     * 设置hideDelay值
+     *
+     * @param hideDelay
+     */
     public void setHideDelay(Integer hideDelay) {
         this.hideDelay = hideDelay;
     }
 
+    /**
+     * 获取transitionDuration值
+     */
     public Double getTransitionDuration() {
         return transitionDuration;
     }
 
+    /**
+     * 设置transitionDuration值
+     *
+     * @param transitionDuration
+     */
     public void setTransitionDuration(Double transitionDuration) {
         this.transitionDuration = transitionDuration;
     }
 
+    /**
+     * 获取borderRadius值
+     */
     public Integer getBorderRadius() {
         return borderRadius;
     }
 
+    /**
+     * 设置borderRadius值
+     *
+     * @param borderRadius
+     */
     public void setBorderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
     }
 
+    /**
+     * 获取axisPointer值
+     */
     public AxisPointer getAxisPointer() {
         return axisPointer;
     }
 
+    /**
+     * 设置axisPointer值
+     *
+     * @param axisPointer
+     */
     public void setAxisPointer(AxisPointer axisPointer) {
         this.axisPointer = axisPointer;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }

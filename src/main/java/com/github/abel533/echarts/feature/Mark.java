@@ -34,6 +34,9 @@ import java.util.Map;
  * @author liuzh
  */
 public class Mark extends Feature {
+    /**
+     * 构造函数
+     */
     public Mark() {
         this.show(true);
         Map title = new HashMap<String, String>();

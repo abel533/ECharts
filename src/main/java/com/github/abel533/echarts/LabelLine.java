@@ -47,19 +47,35 @@ public class LabelLine {
      */
     private LineStyle lineStyle;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public LabelLine show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取length值
+     */
     public Integer length() {
         return this.length;
     }
 
+    /**
+     * 设置length值
+     *
+     * @param length
+     */
     public LabelLine length(Integer length) {
         this.length = length;
         return this;
@@ -77,15 +93,28 @@ public class LabelLine {
         return this.lineStyle;
     }
 
+    /**
+     * 设置style值
+     *
+     * @param style
+     */
     public LabelLine lineStyle(LineStyle style) {
         this.lineStyle = style;
         return this;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }

@@ -48,19 +48,35 @@ public class KData {
         this.value[3] = max;
     }
 
+    /**
+     * 获取value值
+     */
     public Double[] value() {
         return this.value;
     }
 
+    /**
+     * 设置value值
+     *
+     * @param value
+     */
     public KData value(Double[] value) {
         this.value = value;
         return this;
     }
 
+    /**
+     * 获取value值
+     */
     public Double[] getValue() {
         return value;
     }
 
+    /**
+     * 设置value值
+     *
+     * @param value
+     */
     public void setValue(Double[] value) {
         this.value = value;
     }

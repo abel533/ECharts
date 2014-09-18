@@ -49,37 +49,71 @@ public class Link {
      */
     private ItemStyle itemStyle;
 
+    /**
+     * 构造函数
+     */
     public Link() {
     }
 
+    /**
+     * 构造函数,参数:source,target,weight
+     *
+     * @param source
+     * @param target
+     * @param weight
+     */
     public Link(Object source, Object target, Integer weight) {
         this.source = source;
         this.target = target;
         this.weight = weight;
     }
 
+    /**
+     * 获取source值
+     */
     public Object source() {
         return this.source;
     }
 
+    /**
+     * 设置source值
+     *
+     * @param source
+     */
     public Link source(Object source) {
         this.source = source;
         return this;
     }
 
+    /**
+     * 获取target值
+     */
     public Object target() {
         return this.target;
     }
 
+    /**
+     * 设置target值
+     *
+     * @param target
+     */
     public Link target(Object target) {
         this.target = target;
         return this;
     }
 
+    /**
+     * 获取weight值
+     */
     public Integer weight() {
         return this.weight;
     }
 
+    /**
+     * 设置weight值
+     *
+     * @param weight
+     */
     public Link weight(Integer weight) {
         this.weight = weight;
         return this;
@@ -95,34 +129,66 @@ public class Link {
         return this.itemStyle;
     }
 
+    /**
+     * 获取itemStyle值
+     */
     public ItemStyle getItemStyle() {
         return itemStyle;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
     }
 
+    /**
+     * 获取source值
+     */
     public Object getSource() {
         return source;
     }
 
+    /**
+     * 设置source值
+     *
+     * @param source
+     */
     public void setSource(Object source) {
         this.source = source;
     }
 
+    /**
+     * 获取target值
+     */
     public Object getTarget() {
         return target;
     }
 
+    /**
+     * 设置target值
+     *
+     * @param target
+     */
     public void setTarget(Object target) {
         this.target = target;
     }
 
+    /**
+     * 获取weight值
+     */
     public Integer getWeight() {
         return weight;
     }
 
+    /**
+     * 设置weight值
+     *
+     * @param weight
+     */
     public void setWeight(Integer weight) {
         this.weight = weight;
     }

@@ -65,138 +65,266 @@ public class LineStyle {
      */
     private Integer shadowOffsetY;
 
+    /**
+     * 获取color值
+     */
     public Object color() {
         return this.color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public LineStyle color(Object color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 获取color0值
+     */
     public Object color0() {
         return this.color0;
     }
 
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
     public LineStyle color0(Object color0) {
         this.color0 = color0;
         return this;
     }
 
+    /**
+     * 获取type值
+     */
     public LineType type() {
         return this.type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public LineStyle type(LineType type) {
         this.type = type;
         return this;
     }
 
+    /**
+     * 获取width值
+     */
     public Integer width() {
         return this.width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public LineStyle width(Integer width) {
         this.width = width;
         return this;
     }
 
+    /**
+     * 获取shadowColor值
+     */
     public String shadowColor() {
         return this.shadowColor;
     }
 
+    /**
+     * 设置shadowColor值
+     *
+     * @param shadowColor
+     */
     public LineStyle shadowColor(String shadowColor) {
         this.shadowColor = shadowColor;
         return this;
     }
 
+    /**
+     * 获取shadowBlur值
+     */
     public Integer shadowBlur() {
         return this.shadowBlur;
     }
 
+    /**
+     * 设置shadowBlur值
+     *
+     * @param shadowBlur
+     */
     public LineStyle shadowBlur(Integer shadowBlur) {
         this.shadowBlur = shadowBlur;
         return this;
     }
 
+    /**
+     * 获取shadowOffsetX值
+     */
     public Integer shadowOffsetX() {
         return this.shadowOffsetX;
     }
 
+    /**
+     * 设置shadowOffsetX值
+     *
+     * @param shadowOffsetX
+     */
     public LineStyle shadowOffsetX(Integer shadowOffsetX) {
         this.shadowOffsetX = shadowOffsetX;
         return this;
     }
 
+    /**
+     * 获取shadowOffsetY值
+     */
     public Integer shadowOffsetY() {
         return this.shadowOffsetY;
     }
 
+    /**
+     * 设置shadowOffsetY值
+     *
+     * @param shadowOffsetY
+     */
     public LineStyle shadowOffsetY(Integer shadowOffsetY) {
         this.shadowOffsetY = shadowOffsetY;
         return this;
     }
 
+    /**
+     * 获取color值
+     */
     public Object getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(Object color) {
         this.color = color;
     }
 
+    /**
+     * 获取color0值
+     */
     public Object getColor0() {
         return color0;
     }
 
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
     public void setColor0(Object color0) {
         this.color0 = color0;
     }
 
+    /**
+     * 获取type值
+     */
     public LineType getType() {
         return type;
     }
 
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
     public void setType(LineType type) {
         this.type = type;
     }
 
+    /**
+     * 获取width值
+     */
     public Integer getWidth() {
         return width;
     }
 
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
     public void setWidth(Integer width) {
         this.width = width;
     }
 
+    /**
+     * 获取shadowColor值
+     */
     public String getShadowColor() {
         return shadowColor;
     }
 
+    /**
+     * 设置shadowColor值
+     *
+     * @param shadowColor
+     */
     public void setShadowColor(String shadowColor) {
         this.shadowColor = shadowColor;
     }
 
+    /**
+     * 获取shadowBlur值
+     */
     public Integer getShadowBlur() {
         return shadowBlur;
     }
 
+    /**
+     * 设置shadowBlur值
+     *
+     * @param shadowBlur
+     */
     public void setShadowBlur(Integer shadowBlur) {
         this.shadowBlur = shadowBlur;
     }
 
+    /**
+     * 获取shadowOffsetX值
+     */
     public Integer getShadowOffsetX() {
         return shadowOffsetX;
     }
 
+    /**
+     * 设置shadowOffsetX值
+     *
+     * @param shadowOffsetX
+     */
     public void setShadowOffsetX(Integer shadowOffsetX) {
         this.shadowOffsetX = shadowOffsetX;
     }
 
+    /**
+     * 获取shadowOffsetY值
+     */
     public Integer getShadowOffsetY() {
         return shadowOffsetY;
     }
 
+    /**
+     * 设置shadowOffsetY值
+     *
+     * @param shadowOffsetY
+     */
     public void setShadowOffsetY(Integer shadowOffsetY) {
         this.shadowOffsetY = shadowOffsetY;
     }

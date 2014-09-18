@@ -28,6 +28,9 @@ package com.github.abel533.echarts.feature;
  * @author liuzh
  */
 public class SaveAsImage extends Feature {
+    /**
+     * 构造函数
+     */
     public SaveAsImage() {
         this.show(true);
         this.title("保存为图片");

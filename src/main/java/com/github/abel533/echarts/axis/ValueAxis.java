@@ -57,108 +57,207 @@ public class ValueAxis extends Axis<ValueAxis> {
      */
     private Integer splitNumber;
 
+    /**
+     * 构造函数
+     */
     public ValueAxis() {
         this.type(AxisType.value);
     }
 
+    /**
+     * 获取min值
+     */
     public Integer min() {
         return this.min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public ValueAxis min(Integer min) {
         this.min = min;
         return this;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer max() {
         return this.max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public ValueAxis max(Integer max) {
         this.max = max;
         return this;
     }
 
+    /**
+     * 获取scale值
+     */
     public Boolean scale() {
         return this.scale;
     }
 
+    /**
+     * 设置scale值
+     *
+     * @param scale
+     */
     public ValueAxis scale(Boolean scale) {
         this.scale = scale;
         return this;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer precision() {
         return this.precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public ValueAxis precision(Integer precision) {
         this.precision = precision;
         return this;
     }
 
+    /**
+     * 获取power值
+     */
     public Integer power() {
         return this.power;
     }
 
+    /**
+     * 设置power值
+     *
+     * @param power
+     */
     public ValueAxis power(Integer power) {
         this.power = power;
         return this;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer splitNumber() {
         return this.splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public ValueAxis splitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
         return this;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer getMin() {
         return min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public void setMin(Integer min) {
         this.min = min;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer getMax() {
         return max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public void setMax(Integer max) {
         this.max = max;
     }
 
+    /**
+     * 获取scale值
+     */
     public Boolean getScale() {
         return scale;
     }
 
+    /**
+     * 设置scale值
+     *
+     * @param scale
+     */
     public void setScale(Boolean scale) {
         this.scale = scale;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer getPrecision() {
         return precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public void setPrecision(Integer precision) {
         this.precision = precision;
     }
 
+    /**
+     * 获取power值
+     */
     public Integer getPower() {
         return power;
     }
 
+    /**
+     * 设置power值
+     *
+     * @param power
+     */
     public void setPower(Integer power) {
         this.power = power;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer getSplitNumber() {
         return splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
     }

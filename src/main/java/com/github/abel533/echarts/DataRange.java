@@ -92,177 +92,344 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     private TextStyle textStyle;
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public DataRange color(List<String> color) {
         this.color = color;
         return this;
     }
 
+    /**
+     * 设置text值
+     *
+     * @param text
+     */
     public DataRange text(List<String> text) {
         this.text = text;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient getOrient() {
         return orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
+    /**
+     * 获取itemWidth值
+     */
     public Integer getItemWidth() {
         return itemWidth;
     }
 
+    /**
+     * 设置itemWidth值
+     *
+     * @param itemWidth
+     */
     public void setItemWidth(Integer itemWidth) {
         this.itemWidth = itemWidth;
     }
 
+    /**
+     * 获取itemHeight值
+     */
     public Integer getItemHeight() {
         return itemHeight;
     }
 
+    /**
+     * 设置itemHeight值
+     *
+     * @param itemHeight
+     */
     public void setItemHeight(Integer itemHeight) {
         this.itemHeight = itemHeight;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer getMin() {
         return min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public void setMin(Integer min) {
         this.min = min;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer getMax() {
         return max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public void setMax(Integer max) {
         this.max = max;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer getPrecision() {
         return precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public void setPrecision(Integer precision) {
         this.precision = precision;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer getSplitNumber() {
         return splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
     }
 
+    /**
+     * 获取calculable值
+     */
     public Boolean getCalculable() {
         return calculable;
     }
 
+    /**
+     * 设置calculable值
+     *
+     * @param calculable
+     */
     public void setCalculable(Boolean calculable) {
         this.calculable = calculable;
     }
 
+    /**
+     * 获取realtime值
+     */
     public Boolean getRealtime() {
         return realtime;
     }
 
+    /**
+     * 设置realtime值
+     *
+     * @param realtime
+     */
     public void setRealtime(Boolean realtime) {
         this.realtime = realtime;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object getFormatter() {
         return formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public void setFormatter(Object formatter) {
         this.formatter = formatter;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public DataRange textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient orient() {
         return this.orient;
     }
 
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
     public DataRange orient(Orient orient) {
         this.orient = orient;
         return this;
     }
 
+    /**
+     * 获取itemWidth值
+     */
     public Integer itemWidth() {
         return this.itemWidth;
     }
 
+    /**
+     * 设置itemWidth值
+     *
+     * @param itemWidth
+     */
     public DataRange itemWidth(Integer itemWidth) {
         this.itemWidth = itemWidth;
         return this;
     }
 
+    /**
+     * 获取itemHeight值
+     */
     public Integer itemHeight() {
         return this.itemHeight;
     }
 
+    /**
+     * 设置itemHeight值
+     *
+     * @param itemHeight
+     */
     public DataRange itemHeight(Integer itemHeight) {
         this.itemHeight = itemHeight;
         return this;
     }
 
+    /**
+     * 获取min值
+     */
     public Integer min() {
         return this.min;
     }
 
+    /**
+     * 设置min值
+     *
+     * @param min
+     */
     public DataRange min(Integer min) {
         this.min = min;
         return this;
     }
 
+    /**
+     * 获取max值
+     */
     public Integer max() {
         return this.max;
     }
 
+    /**
+     * 设置max值
+     *
+     * @param max
+     */
     public DataRange max(Integer max) {
         this.max = max;
         return this;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer precision() {
         return this.precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public DataRange precision(Integer precision) {
         this.precision = precision;
         return this;
     }
 
+    /**
+     * 获取splitNumber值
+     */
     public Integer splitNumber() {
         return this.splitNumber;
     }
 
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
     public DataRange splitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
         return this;
     }
 
+    /**
+     * 获取calculable值
+     */
     public Boolean calculable() {
         return this.calculable;
     }
 
+    /**
+     * 设置calculable值
+     *
+     * @param calculable
+     */
     public DataRange calculable(Boolean calculable) {
         this.calculable = calculable;
         return this;
     }
 
+    /**
+     * 获取realtime值
+     */
     public Boolean realtime() {
         return this.realtime;
     }
 
+    /**
+     * 设置realtime值
+     *
+     * @param realtime
+     */
     public DataRange realtime(Boolean realtime) {
         this.realtime = realtime;
         return this;
@@ -292,10 +459,18 @@ public class DataRange extends Basic<DataRange> implements Component {
         return this;
     }
 
+    /**
+     * 获取formatter值
+     */
     public Object formatter() {
         return this.formatter;
     }
 
+    /**
+     * 设置formatter值
+     *
+     * @param formatter
+     */
     public DataRange formatter(Object formatter) {
         this.formatter = formatter;
         return this;
@@ -335,26 +510,50 @@ public class DataRange extends Basic<DataRange> implements Component {
         return this.textStyle;
     }
 
+    /**
+     * 获取color值
+     */
     public List<String> getColor() {
         return color;
     }
 
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
     public void setColor(List<String> color) {
         this.color = color;
     }
 
+    /**
+     * 获取text值
+     */
     public List<String> getText() {
         return text;
     }
 
+    /**
+     * 设置text值
+     *
+     * @param text
+     */
     public void setText(List<String> text) {
         this.text = text;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }

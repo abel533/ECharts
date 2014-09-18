@@ -71,24 +71,43 @@ public class Chord extends Series<Chord> {
      */
     private Object[][] matrix;
 
+    /**
+     * 构造函数
+     */
     public Chord() {
         this.type(SeriesType.chord);
     }
 
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
     public Chord(String name) {
         super(name);
         this.type(SeriesType.chord);
     }
 
+    /**
+     * 获取padding值
+     */
     public Integer padding() {
         return this.padding;
     }
 
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
     public Chord padding(Integer padding) {
         this.padding = padding;
         return this;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object radius() {
         return this.radius;
     }
@@ -118,137 +137,265 @@ public class Chord extends Series<Chord> {
         return this;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer startAngle() {
         return this.startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public Chord startAngle(Integer startAngle) {
         this.startAngle = startAngle;
         return this;
     }
 
+    /**
+     * 获取sort值
+     */
     public Sort sort() {
         return this.sort;
     }
 
+    /**
+     * 设置sort值
+     *
+     * @param sort
+     */
     public Chord sort(Sort sort) {
         this.sort = sort;
         return this;
     }
 
+    /**
+     * 获取sortSub值
+     */
     public Sort sortSub() {
         return this.sortSub;
     }
 
+    /**
+     * 设置sortSub值
+     *
+     * @param sortSub
+     */
     public Chord sortSub(Sort sortSub) {
         this.sortSub = sortSub;
         return this;
     }
 
+    /**
+     * 获取showScale值
+     */
     public Boolean showScale() {
         return this.showScale;
     }
 
+    /**
+     * 设置showScale值
+     *
+     * @param showScale
+     */
     public Chord showScale(Boolean showScale) {
         this.showScale = showScale;
         return this;
     }
 
+    /**
+     * 获取showScaleText值
+     */
     public Boolean showScaleText() {
         return this.showScaleText;
     }
 
+    /**
+     * 设置showScaleText值
+     *
+     * @param showScaleText
+     */
     public Chord showScaleText(Boolean showScaleText) {
         this.showScaleText = showScaleText;
         return this;
     }
 
+    /**
+     * 获取clockWise值
+     */
     public Boolean clockWise() {
         return this.clockWise;
     }
 
+    /**
+     * 设置clockWise值
+     *
+     * @param clockWise
+     */
     public Chord clockWise(Boolean clockWise) {
         this.clockWise = clockWise;
         return this;
     }
 
+    /**
+     * 获取matrix值
+     */
     public Object[][] matrix() {
         return this.matrix;
     }
 
+    /**
+     * 设置matrix值
+     *
+     * @param matrix
+     */
     public Chord matrix(Object[][] matrix) {
         this.matrix = matrix;
         return this;
     }
 
+    /**
+     * 获取padding值
+     */
     public Integer getPadding() {
         return padding;
     }
 
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
     public void setPadding(Integer padding) {
         this.padding = padding;
     }
 
+    /**
+     * 获取radius值
+     */
     public Object getRadius() {
         return radius;
     }
 
+    /**
+     * 设置radius值
+     *
+     * @param radius
+     */
     public void setRadius(Object radius) {
         this.radius = radius;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer getStartAngle() {
         return startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public void setStartAngle(Integer startAngle) {
         this.startAngle = startAngle;
     }
 
+    /**
+     * 获取sort值
+     */
     public Sort getSort() {
         return sort;
     }
 
+    /**
+     * 设置sort值
+     *
+     * @param sort
+     */
     public void setSort(Sort sort) {
         this.sort = sort;
     }
 
+    /**
+     * 获取sortSub值
+     */
     public Sort getSortSub() {
         return sortSub;
     }
 
+    /**
+     * 设置sortSub值
+     *
+     * @param sortSub
+     */
     public void setSortSub(Sort sortSub) {
         this.sortSub = sortSub;
     }
 
+    /**
+     * 获取showScale值
+     */
     public Boolean getShowScale() {
         return showScale;
     }
 
+    /**
+     * 设置showScale值
+     *
+     * @param showScale
+     */
     public void setShowScale(Boolean showScale) {
         this.showScale = showScale;
     }
 
+    /**
+     * 获取showScaleText值
+     */
     public Boolean getShowScaleText() {
         return showScaleText;
     }
 
+    /**
+     * 设置showScaleText值
+     *
+     * @param showScaleText
+     */
     public void setShowScaleText(Boolean showScaleText) {
         this.showScaleText = showScaleText;
     }
 
+    /**
+     * 获取clockWise值
+     */
     public Boolean getClockWise() {
         return clockWise;
     }
 
+    /**
+     * 设置clockWise值
+     *
+     * @param clockWise
+     */
     public void setClockWise(Boolean clockWise) {
         this.clockWise = clockWise;
     }
 
+    /**
+     * 获取matrix值
+     */
     public Object[][] getMatrix() {
         return matrix;
     }
 
+    /**
+     * 设置matrix值
+     *
+     * @param matrix
+     */
     public void setMatrix(Object[][] matrix) {
         this.matrix = matrix;
     }

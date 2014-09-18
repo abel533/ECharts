@@ -34,10 +34,16 @@ import com.github.abel533.echarts.Option;
 public class GsonOption extends Option {
 
     @Override
+    /**
+     * 获取toString值
+     */
     public String toString() {
         return GsonUtil.format(this);
     }
 
+    /**
+     * 获取toPrettyString值
+     */
     public String toPrettyString() {
         return GsonUtil.prettyFormat(this);
     }

@@ -60,46 +60,86 @@ public class AxisTick {
      */
     private LineStyle lineStyle;
 
+    /**
+     * 获取show值
+     */
     public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public AxisTick show(Boolean show) {
         this.show = show;
         return this;
     }
 
+    /**
+     * 获取interval值
+     */
     public Object interval() {
         return this.interval;
     }
 
+    /**
+     * 设置interval值
+     *
+     * @param interval
+     */
     public AxisTick interval(Object interval) {
         this.interval = interval;
         return this;
     }
 
+    /**
+     * 获取onGap值
+     */
     public Boolean onGap() {
         return this.onGap;
     }
 
+    /**
+     * 设置onGap值
+     *
+     * @param onGap
+     */
     public AxisTick onGap(Boolean onGap) {
         this.onGap = onGap;
         return this;
     }
 
+    /**
+     * 获取inside值
+     */
     public Boolean inside() {
         return this.inside;
     }
 
+    /**
+     * 设置inside值
+     *
+     * @param inside
+     */
     public AxisTick inside(Boolean inside) {
         this.inside = inside;
         return this;
     }
 
+    /**
+     * 获取length值
+     */
     public Integer length() {
         return this.length;
     }
 
+    /**
+     * 设置length值
+     *
+     * @param length
+     */
     public AxisTick length(Integer length) {
         this.length = length;
         return this;
@@ -117,55 +157,108 @@ public class AxisTick {
         return this.lineStyle;
     }
 
+    /**
+     * 设置style值
+     *
+     * @param style
+     */
     public AxisTick lineStyle(LineStyle style) {
         this.lineStyle = style;
         return this;
     }
 
+    /**
+     * 获取lineStyle值
+     */
     public LineStyle getLineStyle() {
         return lineStyle;
     }
 
+    /**
+     * 设置lineStyle值
+     *
+     * @param lineStyle
+     */
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取interval值
+     */
     public Object getInterval() {
         return interval;
     }
 
+    /**
+     * 设置interval值
+     *
+     * @param interval
+     */
     public void setInterval(Object interval) {
         this.interval = interval;
     }
 
+    /**
+     * 获取onGap值
+     */
     public Boolean getOnGap() {
         return onGap;
     }
 
+    /**
+     * 设置onGap值
+     *
+     * @param onGap
+     */
     public void setOnGap(Boolean onGap) {
         this.onGap = onGap;
     }
 
+    /**
+     * 获取inside值
+     */
     public Boolean getInside() {
         return inside;
     }
 
+    /**
+     * 设置inside值
+     *
+     * @param inside
+     */
     public void setInside(Boolean inside) {
         this.inside = inside;
     }
 
+    /**
+     * 获取length值
+     */
     public Integer getLength() {
         return length;
     }
 
+    /**
+     * 设置length值
+     *
+     * @param length
+     */
     public void setLength(Integer length) {
         this.length = length;
     }
