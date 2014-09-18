@@ -29,6 +29,15 @@ package com.github.abel533.echarts.series;
  */
 public class ScaleLimit {
     private Double min;
+    private Double max;
+
+    public ScaleLimit() {
+    }
+
+    public ScaleLimit(Double min, Double max) {
+        this.min = min;
+        this.max = max;
+    }
 
     public Double min() {
         return this.min;
@@ -39,8 +48,6 @@ public class ScaleLimit {
         return this;
     }
 
-    private Double max;
-
     public Double max() {
         return this.max;
     }
@@ -48,14 +55,6 @@ public class ScaleLimit {
     public ScaleLimit max(Double max) {
         this.max = max;
         return this;
-    }
-
-    public ScaleLimit() {
-    }
-
-    public ScaleLimit(Double min, Double max) {
-        this.min = min;
-        this.max = max;
     }
 
     public Double getMin() {

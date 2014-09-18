@@ -254,6 +254,10 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return this.axisLabel;
     }
 
+    /**
+     * @param label
+     * @return
+     */
     public T axisLabel(AxisLabel label) {
         this.axisLabel = label;
         return (T) this;
