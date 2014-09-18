@@ -28,6 +28,8 @@ import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Component;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
+import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.code.Y;
 import com.github.abel533.echarts.style.LineStyle;
 
 import java.util.ArrayList;
@@ -216,6 +218,24 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * @param position
      */
     public T position(Object position) {
+        this.position = position;
+        return (T) this;
+    }
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
+    public T position(X position) {
+        this.position = position;
+        return (T) this;
+    }
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
+    public T position(Y position) {
         this.position = position;
         return (T) this;
     }

@@ -46,7 +46,7 @@ public class Option {
     /**
      * 数值系列的颜色列表，（详见color），可配数组，eg：['#87cefa', 'rgba(123,123,123,0.5)','...']，当系列数量个数比颜色列表长度大时将循环选取
      */
-    private Object[] color;
+    private List<Object> color;
     /**
      * 非IE8-支持渲染为图片，（详见renderAsImage）
      * {boolean | string} false，非IE8-支持渲染为图片，可设为true或指定图片格式（png | jpeg），渲染为图片后实例依然可用（如setOption，resize等），但各种交互失效
@@ -342,17 +342,23 @@ public class Option {
     /**
      * 获取color值
      */
-    public Object[] color() {
+    public List<Object> color() {
+        if (this.color == null) {
+            this.color = new ArrayList<Object>();
+        }
         return this.color;
     }
 
     /**
      * 设置color值
      *
-     * @param color
+     * @param colors
      */
-    public Option color(Object[] color) {
-        this.color = color;
+    public Option color(Object... colors) {
+        if (colors == null || colors.length == 0) {
+            return this;
+        }
+        this.color().addAll(Arrays.asList(colors));
         return this;
     }
 
@@ -785,7 +791,7 @@ public class Option {
     /**
      * 获取color值
      */
-    public Object[] getColor() {
+    public List<Object> getColor() {
         return color;
     }
 
@@ -794,7 +800,7 @@ public class Option {
      *
      * @param color
      */
-    public void setColor(Object[] color) {
+    public void setColor(List<Object> color) {
         this.color = color;
     }
 
