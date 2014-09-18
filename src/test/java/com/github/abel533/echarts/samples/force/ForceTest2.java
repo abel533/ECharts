@@ -75,14 +75,14 @@ public class ForceTest2 {
         option.view();
     }
 
-    private double rangeRandom(int min, int max) {
-        return Math.random() * (max - min) + min;
+    private int rangeRandom(int min, int max) {
+        return (int) (Math.random() * (max - min) + min);
     }
 
     private Node createRandomNode(List<Node> nodes, int depth) {
         Node node = new Node();
         node.name("NODE_" + nodes.size());
-        node.value((int) rangeRandom(MIN_RADIUS, MAX_RADIUS));
+        node.value(rangeRandom(MIN_RADIUS, MAX_RADIUS));
         node.put("id", nodes.size());
         node.put("depth", depth);
         node.category(depth == MAX_DEPTH ? 0 : 1);
@@ -93,7 +93,7 @@ public class ForceTest2 {
     private Node rootNode() {
         Node node = new Node();
         node.name("ROOT");
-        node.value((int) rangeRandom(MIN_RADIUS, MAX_RADIUS));
+        node.value(rangeRandom(MIN_RADIUS, MAX_RADIUS));
         node.put("id", 0);
         node.put("depth", 0);
         node.category(2);
@@ -107,7 +107,7 @@ public class ForceTest2 {
     }
 
     private void mock(List<Node> nodes, List<Link> links, Node parent, int depth) {
-        int nChildNode = (int) Math.round(rangeRandom(MIN_CHILDREN, MAX_CHILDREN));
+        int nChildNode = Math.round(rangeRandom(MIN_CHILDREN, MAX_CHILDREN));
         for (int i = 0; i < nChildNode; i++) {
             Node childNode = createRandomNode(nodes, depth);
             Link link = new Link();
