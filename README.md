@@ -70,7 +70,7 @@ option.tooltip().trigger(Trigger.axis).formatter("(function(){return 'Temperatur
 **上述对`function`的处理很简单，不限制在`formatter`使用，所有值都能这么写，你可以参考写出自己的`Option`**
 
 
-
+<br><br>
 ##挑两个例子大概的看看这个Java类库如何使用
 
 
@@ -204,8 +204,8 @@ public void test() {
     }]
 }
 ```
-
-###第二个例子，复杂的带时间轴的饼图
+<br><br>
+###第二个例子，使用`(function(){})()`执行JS代码
 
 对应的ECharts例子地址：  http://echarts.baidu.com/doc/example/pie6.html
 
@@ -259,7 +259,13 @@ public void test() {
 }
 ```
 
-这段代码注意`.x(`这个地方，这里巧妙的利用`(function(){})()`执行JS代码，实现了官方例子中的功能：
+这段代码注意
+
+```java
+.x("(function(){return document.getElementById('main').offsetWidth / 2;})()")
+```
+
+这个地方，这里巧妙的利用`(function(){})()`执行JS代码，实现了官方例子中的功能，生成的JSON结果如下：
 
 ```javascript
 {
