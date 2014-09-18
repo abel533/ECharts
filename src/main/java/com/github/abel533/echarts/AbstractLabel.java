@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
@@ -36,6 +37,9 @@ public abstract class AbstractLabel<T> {
      * 是否显示，在Timeline中默认true
      */
     private Boolean show;
+    /**
+     * 位置
+     */
     private Object position;
     /**
      * 挑选间隔，默认为'auto'，可选为：'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}
@@ -107,6 +111,16 @@ public abstract class AbstractLabel<T> {
      * @param position
      */
     public T position(Object position) {
+        this.position = position;
+        return (T) this;
+    }
+
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
+    public T position(Position position) {
         this.position = position;
         return (T) this;
     }
