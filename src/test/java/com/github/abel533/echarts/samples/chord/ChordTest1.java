@@ -37,6 +37,7 @@ public class ChordTest1 {
 
     @Test
     public void test() {
+        //地址：http://echarts.baidu.com/doc/example/chord1.html
         EnhancedOption option = new EnhancedOption();
         option.title().text("测试数据").subtext("From d3.js").x(X.right).y(Y.bottom);
         option.tooltip().trigger(Trigger.item);
