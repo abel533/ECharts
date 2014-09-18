@@ -1,12 +1,8 @@
 #ECharts - Java类库
 
-这是一个方便在Java中构造ECharts的Option数据结构的类库，使用这个可以让你很方便的在Java中操作Option.
+这是一个方便在Java中构造ECharts数据结构的类库（如Option,Line数据,Bar数据,ItemStyle等等），使用这个可以让你很方便的在Java中操作ECharts的各种数据.
 
 本项目目前为1.0.0-SNAPSHOT版本，尚未发布，发布前接口以及功能改动很大。
-
-该项目目前的进度是基本对象全部创建完成，当前阶段主要的工作是将ECharts官网上的大部分示例，在该项目中使用Java代码来实现。
-
-通过在实现过程中的摸索来简化Java中的操作。
 
 ##最新进展
 
