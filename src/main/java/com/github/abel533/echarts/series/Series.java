@@ -28,6 +28,7 @@ import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Chart;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -302,6 +303,16 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * @param symbol
      */
     public T symbol(Object symbol) {
+        this.symbol = symbol;
+        return (T) this;
+    }
+
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
+    public T symbol(Symbol symbol) {
         this.symbol = symbol;
         return (T) this;
     }
