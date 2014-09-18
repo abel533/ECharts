@@ -43,7 +43,7 @@ public class CommentsUtil {
         for (File file : files) {
             commentsFile(file);
         }
-//        commentsFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\Tooltip.java"));
+//        commentsFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\data\\Data.java"));
     }
 
     public static void commentsFile(File file) {
@@ -64,10 +64,26 @@ public class CommentsUtil {
                             tempLline = tempLline.trim();
                             String[] ps = getParameter(tempLline);
                             if (ps == EMPTY) {
-                                sb.append("\t/**\n\t * 获取"+getMethodFieldName(tempLline)+"值 \n");
+                                if (isConstructor(tempLline)) {
+                                    sb.append("\t/**\n\t * 构造函数 \n");
+                                } else {
+                                    sb.append("\t/**\n\t * 获取" + getMethodFieldName(tempLline) + "值 \n");
+                                }
                             } else {
+                                String v = "";
+                                for (String p : ps) {
+                                    if (!v.equals("")) {
+                                        v += ",";
+                                    }
+                                    v += p;
+                                }
+                                if (isConstructor(tempLline)) {
+                                    sb.append("\t/**\n\t * 构造函数,参数:" + v + " \n\t * \n");
+                                } else {
+                                    sb.append("\t/**\n\t * 设置" + v + "值 \n\t * \n");
+                                }
                                 for (String s : ps) {
-                                    sb.append("\t/**\n\t * 设置" + s + "值 \n\t * \n");
+
                                     sb.append("\t * @param " + s + "\n");
                                 }
                             }
@@ -107,6 +123,14 @@ public class CommentsUtil {
         }
     }
 
+    public static boolean isConstructor(String line){
+        line = line.substring(0,line.indexOf("(")).trim();
+        if (line.split(" ").length == 2) {
+            return true;
+        }
+        return false;
+    }
+
     public static String getMethodFieldName(String line) {
         int end = line.lastIndexOf("(");
         int start = line.lastIndexOf(" ", end);
@@ -125,10 +149,17 @@ public class CommentsUtil {
             if (all.equals("")) {
                 return EMPTY;
             }
+            while (all.contains("<")) {
+                int start = all.indexOf("<");
+                int end = all.indexOf(">", start);
+                all = all.substring(0, start) + all.substring(end + 1);
+            }
             String[] alls = all.split(",");
             String[] parameters = new String[alls.length];
+            System.out.println("All:" + all);
             for (int i = 0; i < alls.length; i++) {
-                parameters[i] = alls[i].split(" ")[1].trim();
+                System.out.println("\t" + alls[i]);
+                parameters[i] = alls[i].trim().split(" ")[1].trim();
             }
             return parameters;
         }
