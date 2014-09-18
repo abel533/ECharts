@@ -80,15 +80,15 @@ public class BarTest12 {
 
         Bar b4 = new Bar("ECharts1 - 2k数据");
         b4.itemStyle().normal().color("rgba(193,35,43,0.5)").label().show(true).formatter("function(a,b,c){return c>0 ? (c +'\n'):'';}");
-        b4.data(96, 224, 164, 124, 0);
+        b4.data(96, 224, 164, 124, 0).xAxisIndex(1);
 
         Bar b5 = new Bar("ECharts1 - 2w数据");
         b5.itemStyle().normal().color("rgba(181,195,52,0.5)").label().show(true);
-        b5.data(491, 2035, 389, 955, 347);
+        b5.data(491, 2035, 389, 955, 347).xAxisIndex(1);
 
         Bar b6 = new Bar("ECharts1 - 20w数据");
         b6.itemStyle().normal().color("rgba(252,206,16,0.5)").label().show(true).formatter("function(a,b,c){return c>0 ? (c +'+'):'';}");
-        b6.data(3000, 3000, 2817, 3000, 0, 1242);
+        b6.data(3000, 3000, 2817, 3000, 0, 1242).xAxisIndex(1);
 
         option.series(b1, b2, b3, b4, b5, b6);
         option.exportToHtml("bar12.html");
