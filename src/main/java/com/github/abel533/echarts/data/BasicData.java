@@ -29,6 +29,10 @@ import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Description: BasicData
  *
@@ -191,6 +195,24 @@ public abstract class BasicData<T> {
      */
     public T value(Object value) {
         this.value = value;
+        return (T) this;
+    }
+
+    /**
+     * 设置value值
+     *
+     * @param values
+     */
+    public T value(Object... values) {
+        if (values == null || values.length == 0) {
+            return (T) this;
+        }
+        if (this.value == null) {
+            this.value = new ArrayList<Object>(values.length);
+        }
+        if (this.value instanceof List) {
+            ((List)this.value).addAll(Arrays.asList(values));
+        }
         return (T) this;
     }
 
