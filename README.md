@@ -30,6 +30,46 @@ http://echarts.baidu.com/
 
 3. `EnhancedOption`测试专用，主要方便在浏览器中直接查看效果。
 
+##function说明
+
+由于JSON标准中不包含`function`类型，因而大多数的JSON库都不直接支持这种类型，处理这种类型最简单的方式就是转换为JSON字符串时，对字符串进行处理。
+
+虽然像jackson json和fastjson通过注解或者自定义的实现序列化接口可以实现，毕竟和JSON库的结合太密切了，而且使用起来也很麻烦，不如直接处理字符串，或者在js中处理。
+
+本项目中提供了GSON实现的`GsonOption`，就是重写了`toString()`方法，改为输出JSON结构的字符串，并且支持以下两种`function`形式:
+
+```javascript
+{
+    formatter:function(value){
+        return value.substring(0,8);
+    }
+}
+
+//和
+
+{
+    formatter:(function(){
+        return 'Temperature : <br/>{b}km : {c}°C';
+    })()
+}
+```
+
+当然这种形式在Java中书写的时候有着严格的要求：
+
+```java
+option.tooltip().trigger(Trigger.axis).formatter("function(value){return value.substring(0,8);}");
+
+option.tooltip().trigger(Trigger.axis).formatter("(function(){return 'Temperature : <br/>{b}km : {c}°C';})()");
+
+```
+
+ 1. 先看第一种，这里的`"function`中，双引号和`function`必须连着，中间不能存在空格，否则不会识别。然后是结尾的`}"`，这里也必须连着不能有空格，在首位这两段代码之间不能出现`}"`，否则会判断出错。如果在`{}`中的代码有字符串，请使用单引号`'`，双引号出现在单引号内时使用`\\"`即可。除此之外没有别的限制。
+
+ 2. 再看第二种，这里的`"(function`中，双引号、括号和`function`必须连着，中间不能存在空格，否则不会识别。然后是结尾的`})()"`，这里也必须连着不能有空格，在首位这两段代码之间不能出现`})()"`，否则会判断出错。如果在`{}`中的代码有字符串，请使用单引号`'`，双引号出现在单引号内时使用`\\"`即可。除此之外没有别的限制。
+
+**上述对`function`的处理很简单，不限制在`formatter`使用，所有值都能这么写，你可以参考写出自己的`Option`**
+
+
 
 ##挑两个例子大概的看看这个Java类库如何使用
 
