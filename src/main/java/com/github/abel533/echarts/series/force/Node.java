@@ -26,157 +26,113 @@ package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.util.HashMap;
+
 /**
  * 力导向图的顶点数据
  *
  * @author liuzh
  */
-public class Node {
-    /**
-     * 节点名称
-     */
-    private String name;
-    /**
-     * 节点值，在不指定 symbolSize 的时候会被映射成 minRadius - maxRadius 作为节点大小
-     */
-    private Integer value;
-    /**
-     * 强制指定节点的初始值，在不指定的时候会在某个范围内随机生成
-     */
-    private Object initial;
-    /**
-     * 是否固定节点在 X 轴上的值，配合 initial 使用
-     */
-    private Boolean fixX;
-    /**
-     * 是否固定节点在 Y 轴上的值，配合 initial 使用
-     */
-    private Boolean fixY;
-    /**
-     * 是否忽略该节点
-     */
-    private Boolean ignore;
-    /**
-     * 节点的形状, 详见 symbolList
-     *
-     * @see com.github.abel533.echarts.code.Symbol
-     */
-    private Object symbol;
-    /**
-     * 强制指定节点的大小
-     */
-    private Object symbolSize;
-    /**
-     * 节点是否能被拖拽
-     */
-    private Boolean draggable;
-    /**
-     * 节点的 category index
-     */
-    private Integer category;
-    /**
-     * 详见 itemStyle
-     *
-     * @see com.github.abel533.echarts.style.ItemStyle
-     */
-    private ItemStyle itemStyle;
+public class Node extends HashMap<String, Object> {
 
     public Node() {
+        super();
     }
 
     public Node(Integer category, String name, Integer value) {
-        this.category = category;
-        this.name = name;
-        this.value = value;
+        super();
+        put("category", category);
+        put("name", name);
+        put("value", value);
     }
 
     public String name() {
-        return this.name;
+        return (String) get("name");
     }
 
     public Node name(String name) {
-        this.name = name;
+        put("name", name);
         return this;
     }
 
     public Integer value() {
-        return this.value;
+        return (Integer) get("value");
     }
 
     public Node value(Integer value) {
-        this.value = value;
+        put("value", value);
         return this;
     }
 
     public Object initial() {
-        return this.initial;
+        return get("initial");
     }
 
     public Node initial(Object initial) {
-        this.initial = initial;
+        put("initial", initial);
         return this;
     }
 
     public Boolean fixX() {
-        return this.fixX;
+        return (Boolean) get("fixX");
     }
 
     public Node fixX(Boolean fixX) {
-        this.fixX = fixX;
+        put("fixX", fixX);
         return this;
     }
 
     public Boolean fixY() {
-        return this.fixY;
+        return (Boolean) get("fixY");
     }
 
     public Node fixY(Boolean fixY) {
-        this.fixY = fixY;
+        put("fixY", fixY);
         return this;
     }
 
     public Boolean ignore() {
-        return this.ignore;
+        return (Boolean) get("ignore");
     }
 
     public Node ignore(Boolean ignore) {
-        this.ignore = ignore;
+        put("ignore", ignore);
         return this;
     }
 
     public Object symbol() {
-        return this.symbol;
+        return get("symbol");
     }
 
     public Node symbol(Object symbol) {
-        this.symbol = symbol;
+        put("symbol", symbol);
         return this;
     }
 
     public Object symbolSize() {
-        return this.symbolSize;
+        return get("symbolSize");
     }
 
     public Node symbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
+        put("symbolSize", symbolSize);
         return this;
     }
 
     public Boolean draggable() {
-        return this.draggable;
+        return (Boolean) get("draggable");
     }
 
     public Node draggable(Boolean draggable) {
-        this.draggable = draggable;
+        put("draggable", draggable);
         return this;
     }
 
     public Integer category() {
-        return this.category;
+        return (Integer) get("category");
     }
 
     public Node category(Integer category) {
-        this.category = category;
+        put("category", category);
         return this;
     }
 
@@ -186,97 +142,97 @@ public class Node {
      * @see com.github.abel533.echarts.style.ItemStyle
      */
     public ItemStyle itemStyle() {
-        if (this.itemStyle == null) {
-            this.itemStyle = new ItemStyle();
+        if (get("itemStyle") == null) {
+            put("itemStyle", new ItemStyle());
         }
-        return this.itemStyle;
+        return (ItemStyle) get("itemStyle");
     }
 
     public ItemStyle getItemStyle() {
-        return itemStyle;
+        return (ItemStyle) get("itemStyle");
     }
 
     public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
+        put("itemStyle", itemStyle);
     }
 
     public String getName() {
-        return name;
+        return (String) get("name");
     }
 
     public void setName(String name) {
-        this.name = name;
+        put("name", name);
     }
 
     public Integer getValue() {
-        return value;
+        return (Integer) get("value");
     }
 
     public void setValue(Integer value) {
-        this.value = value;
+        put("value", value);
     }
 
     public Object getInitial() {
-        return initial;
+        return get("initial");
     }
 
     public void setInitial(Object initial) {
-        this.initial = initial;
+        put("initial", initial);
     }
 
     public Boolean getFixX() {
-        return fixX;
+        return (Boolean) get("fixX");
     }
 
     public void setFixX(Boolean fixX) {
-        this.fixX = fixX;
+        put("fixX", fixX);
     }
 
     public Boolean getFixY() {
-        return fixY;
+        return (Boolean) get("fixY");
     }
 
     public void setFixY(Boolean fixY) {
-        this.fixY = fixY;
+        put("fixY", fixY);
     }
 
     public Boolean getIgnore() {
-        return ignore;
+        return (Boolean) get("ignore");
     }
 
     public void setIgnore(Boolean ignore) {
-        this.ignore = ignore;
+        put("ignore", ignore);
     }
 
     public Object getSymbol() {
-        return symbol;
+        return get("symbol");
     }
 
     public void setSymbol(Object symbol) {
-        this.symbol = symbol;
+        put("symbol", symbol);
     }
 
     public Object getSymbolSize() {
-        return symbolSize;
+        return get("symbolSize");
     }
 
     public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
+        put("symbolSize", symbolSize);
     }
 
     public Boolean getDraggable() {
-        return draggable;
+        return (Boolean) get("draggable");
     }
 
     public void setDraggable(Boolean draggable) {
-        this.draggable = draggable;
+        put("draggable", draggable);
     }
 
     public Integer getCategory() {
-        return category;
+        return (Integer) get("category");
     }
 
     public void setCategory(Integer category) {
-        this.category = category;
+        put("category", category);
     }
 }
