@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
@@ -40,9 +40,9 @@ public class DataRange extends Basic<DataRange> implements Component {
     /**
      * 布局方式，默认为垂直布局，可选为：'horizontal' | 'vertical'
      *
-     * @see com.github.abel533.echarts.code.Align
+     * @see com.github.abel533.echarts.code.Orient
      */
-    private Align orient;
+    private Orient orient;
     /**
      * 默认值20，值域控件图形宽度
      */
@@ -102,11 +102,11 @@ public class DataRange extends Basic<DataRange> implements Component {
         return this;
     }
 
-    public Align getOrient() {
+    public Orient getOrient() {
         return orient;
     }
 
-    public void setOrient(Align orient) {
+    public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
@@ -187,11 +187,11 @@ public class DataRange extends Basic<DataRange> implements Component {
         return this;
     }
 
-    public Align orient() {
+    public Orient orient() {
         return this.orient;
     }
 
-    public DataRange orient(Align orient) {
+    public DataRange orient(Orient orient) {
         this.orient = orient;
         return this;
     }

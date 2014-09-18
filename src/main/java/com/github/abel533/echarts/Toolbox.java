@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
 
@@ -48,9 +48,9 @@ public class Toolbox extends Basic<Toolbox> implements Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
-     * @see com.github.abel533.echarts.code.Align
+     * @see com.github.abel533.echarts.code.Orient
      */
-    private Align orient;
+    private Orient orient;
     /**
      * 工具箱背景颜色，默认透明
      */
@@ -86,11 +86,11 @@ public class Toolbox extends Basic<Toolbox> implements Component {
         return this;
     }
 
-    public Align orient() {
+    public Orient orient() {
         return this.orient;
     }
 
-    public Toolbox orient(Align orient) {
+    public Toolbox orient(Orient orient) {
         this.orient = orient;
         return this;
     }
@@ -249,11 +249,11 @@ public class Toolbox extends Basic<Toolbox> implements Component {
         this.show = show;
     }
 
-    public Align getOrient() {
+    public Orient getOrient() {
         return orient;
     }
 
-    public void setOrient(Align orient) {
+    public void setOrient(Orient orient) {
         this.orient = orient;
     }
 

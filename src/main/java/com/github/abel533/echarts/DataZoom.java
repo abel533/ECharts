@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Orient;
 
 /**
  * 数据区域缩放。与toolbox.feature.dataZoom同步，仅对直角坐标系图表有效
@@ -39,7 +39,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      */
-    private Align orient;
+    private Orient orient;
     /**
      * 默认#ccc，数据缩略背景颜色
      */
@@ -86,11 +86,11 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         return this;
     }
 
-    public Align orient() {
+    public Orient orient() {
         return this.orient;
     }
 
-    public DataZoom orient(Align orient) {
+    public DataZoom orient(Orient orient) {
         this.orient = orient;
         return this;
     }
@@ -184,11 +184,11 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         this.show = show;
     }
 
-    public Align getOrient() {
+    public Orient getOrient() {
         return orient;
     }
 
-    public void setOrient(Align orient) {
+    public void setOrient(Orient orient) {
         this.orient = orient;
     }
 

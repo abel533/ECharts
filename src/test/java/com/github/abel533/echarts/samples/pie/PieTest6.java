@@ -25,7 +25,7 @@
 package com.github.abel533.echarts.samples.pie;
 
 import com.github.abel533.echarts.Label;
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
@@ -64,7 +64,7 @@ public class PieTest6 {
                 .fontSize(35)
                 .fontWeight("bolder");
         option.tooltip().show(true).formatter("{a} <br/>{b} : {c} ({d}%)");
-        option.legend().orient(Align.vertical)
+        option.legend().orient(Orient.vertical)
                 .x("(function(){return document.getElementById('main').offsetWidth / 2;})()")
                 .y(56)
                 .itemGap(12)

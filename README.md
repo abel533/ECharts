@@ -234,7 +234,7 @@ public void test() {
             .fontSize(35)
             .fontWeight("bolder");
     option.tooltip().show(true).formatter("{a} <br/>{b} : {c} ({d}%)");
-    option.legend().orient(Align.vertical)
+    option.legend().orient(Orient.vertical)
             .x("(function(){return document.getElementById('main').offsetWidth / 2;})()")
             .y(56)
             .itemGap(12)

@@ -24,7 +24,7 @@
 
 package com.github.abel533.echarts;
 
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
@@ -38,9 +38,9 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
-     * @see com.github.abel533.echarts.code.Align
+     * @see com.github.abel533.echarts.code.Orient
      */
-    private Align orient;
+    private Orient orient;
     /**
      * 图例图形宽度
      */
@@ -85,11 +85,11 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         return this;
     }
 
-    public Align orient() {
+    public Orient orient() {
         return this.orient;
     }
 
-    public Legend orient(Align orient) {
+    public Legend orient(Orient orient) {
         this.orient = orient;
         return this;
     }
@@ -170,11 +170,11 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         this.data = data;
     }
 
-    public Align getOrient() {
+    public Orient getOrient() {
         return orient;
     }
 
-    public void setOrient(Align orient) {
+    public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
