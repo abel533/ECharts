@@ -48,7 +48,7 @@ public class LineTest5 {
         option.toolbox().show(true).feature(Tool.mark, Tool.dataView, new MagicType(Magic.line, Magic.bar), Tool.restore, Tool.saveAsImage);
 
         option.calculable(true);
-        option.tooltip().trigger(Trigger.axis).formatter("Temperature : <br/>{b}km : {c}°C");
+        option.tooltip().trigger(Trigger.axis).formatter("(function(){return 'Temperature : <br/>{b}km : {c}°C';})()");
 
         ValueAxis valueAxis = new ValueAxis();
         valueAxis.axisLabel().formatter("{value} °C");

@@ -50,17 +50,9 @@ public class GsonUtil {
         String prettyJsonString = gson.toJson(je);
         //简单处理function
         String[] lines = prettyJsonString.split("\n");
+        lines = replaceFunctionQuote(lines);
         StringBuilder stringBuilder = new StringBuilder();
-        boolean function = false;
         for (String line : lines) {
-            if (!function && line.contains("\"function")) {
-                function = true;
-                line = line.replaceAll("\"function", "function");
-            }
-            if (function && line.contains("}\"")) {
-                function = false;
-                line = line.replaceAll("\\}\"", "\\}");
-            }
             stringBuilder.append(line);
         }
         return stringBuilder.toString();
@@ -79,9 +71,25 @@ public class GsonUtil {
         String prettyJsonString = gson.toJson(je);
         //简单处理function
         String[] lines = prettyJsonString.split("\n");
+        lines = replaceFunctionQuote(lines);
         StringBuilder stringBuilder = new StringBuilder();
-        boolean function = false;
         for (String line : lines) {
+            stringBuilder.append(line + "\n");
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 处理字符串中的function和(function(){})()，除{}中的代码外，其他地方不允许有空格
+     *
+     * @param lines
+     * @return
+     */
+    public static String[] replaceFunctionQuote(String[] lines) {
+        boolean function = false;
+        boolean immediately = false;
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i];
             if (!function && line.contains("\"function")) {
                 function = true;
                 line = line.replaceAll("\"function", "function");
@@ -90,9 +98,18 @@ public class GsonUtil {
                 function = false;
                 line = line.replaceAll("\\}\"", "\\}");
             }
-            stringBuilder.append(line + "\n");
+
+            if (!immediately && line.contains("\"(function")) {
+                immediately = true;
+                line = line.replaceAll("\"\\(function", "\\(function");
+            }
+            if (immediately && line.contains("})()\"")) {
+                immediately = false;
+                line = line.replaceAll("\\}\\)\\(\\)\"", "\\}\\)\\(\\)");
+            }
+            lines[i] = line;
         }
-        return stringBuilder.toString();
+        return lines;
     }
 
     /**

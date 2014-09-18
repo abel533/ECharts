@@ -45,6 +45,13 @@ public class EnhancedOption extends GsonOption implements TestConfig {
     }
 
     /**
+     * 输出到控制台
+     */
+    public void printPretty() {
+        GsonUtil.printPretty(this);
+    }
+
+    /**
      * 在浏览器中查看
      */
     public void view() {
