@@ -26,7 +26,7 @@ http://echarts.baidu.com/
 
 1. `Option`正式代码中使用，不需要任何依赖。
 
-2. `GsonOption`正式代码中可以使用，需要引入`Gson`包，使用`toString()`方法可以转换为JSON结构的数据（支持`function`，详情看下面的**function说明**）。
+2. `GsonOption`正式代码中可以使用，需要引入`Gson`包，使用`toString()`方法可以转换为JSON结构的数据（支持`function`，详情看下面的 **function说明** ）。
 
 3. `EnhancedOption`测试专用，主要方便在浏览器中直接查看效果。
 
