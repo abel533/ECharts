@@ -25,7 +25,6 @@
 package com.github.abel533.echarts.util;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,16 +36,14 @@ public class CommentsUtil {
     public static final String[] EMPTY = new String[0];
 
     public static void main(String[] args) {
-//        System.out.println(getMethodFieldName("public Boolean getShow() {"));
-        //System.out.println();//
         //输出全部类
-//        String srcPath = getSrcPath();
-//        File srcFoler = new File(srcPath);
-//        List<File> all = allFiles(srcFoler);
-//        for (File file : all) {
-//            chainFile(file);
-//        }
-        commentsFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\Tooltip.java"));
+        String srcPath = ChainUtil.getSrcPath();
+        File srcFoler = new File(srcPath);
+        List<File> files = ChainUtil.allFiles(srcFoler);
+        for (File file : files) {
+            commentsFile(file);
+        }
+//        commentsFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\Tooltip.java"));
     }
 
     public static void commentsFile(File file) {
@@ -136,46 +133,5 @@ public class CommentsUtil {
             return parameters;
         }
         return EMPTY;
-    }
-
-    public static List<File> allFiles(File file) {
-        List<File> result = new ArrayList<File>();
-        if (file.isFile()) {
-            result.add(file);
-        } else if (file.isDirectory()) {
-            File[] files = file.listFiles(new FilenameFilter() {
-                @Override
-                public boolean accept(File dir, String name) {
-                    if (dir.isDirectory()) {
-                        return true;
-                    } else if (name.toUpperCase().endsWith(".JAVA")) {
-                        return true;
-                    }
-                    return false;
-                }
-            });
-            for (File f : files) {
-                result.addAll(allFiles(f));
-            }
-        }
-        return result;
-    }
-
-    public static String getSrcPath() {
-        String basePath = getBasePath();
-        return basePath + "src/main/java";
-    }
-
-    public static String getBasePath() {
-        String path = CommentsUtil.class.getResource("/").getPath();
-        if (path.startsWith("/")) {
-            path = path.substring(1);
-        }
-        if (path.indexOf("target1") > 0) {
-            path = path.substring(0, path.indexOf("target"));
-        } else if (path.indexOf("ECharts") > 0) {
-            path = path.substring(0, path.indexOf("ECharts")) + "Echarts/";
-        }
-        return path;
     }
 }
