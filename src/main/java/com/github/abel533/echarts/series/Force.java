@@ -61,6 +61,34 @@ public class Force extends Series<Force> {
      */
     private Object size;
     /**
+     * 布局冷却因子，值越小结束时间越短，值越大时间越长但是结果也越收敛
+     */
+    private Object coolDown;
+
+    public Object coolDown() {
+        return this.coolDown;
+    }
+
+    public Force coolDown(Object coolDown) {
+        this.coolDown = coolDown;
+        return this;
+    }
+
+    /**
+     * 是否根据屏幕比例拉伸
+     */
+    private Boolean ratioScaling;
+
+    public Boolean ratioScaling() {
+        return this.ratioScaling;
+    }
+
+    public Force ratioScaling(Boolean ratioScaling) {
+        this.ratioScaling = ratioScaling;
+        return this;
+    }
+
+    /**
      * 顶点数据映射成圆半径后的最小半径
      */
     private Integer minRadius;
@@ -465,5 +493,21 @@ public class Force extends Series<Force> {
 
     public void setSteps(Integer steps) {
         this.steps = steps;
+    }
+
+    public Object getCoolDown() {
+        return coolDown;
+    }
+
+    public void setCoolDown(Object coolDown) {
+        this.coolDown = coolDown;
+    }
+
+    public Boolean getRatioScaling() {
+        return ratioScaling;
+    }
+
+    public void setRatioScaling(Boolean ratioScaling) {
+        this.ratioScaling = ratioScaling;
     }
 }
