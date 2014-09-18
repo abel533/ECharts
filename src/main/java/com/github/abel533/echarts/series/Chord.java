@@ -38,6 +38,15 @@ public class Chord extends Series<Chord> {
      */
     private Integer padding;
     /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     */
+    private Object radius;
+    /**
+     * 开始角度, 有效输入范围：[-180,180]
+     */
+    private Integer startAngle;
+    /**
      * 数据排序， 可以取none, ascending, descending
      */
     private Sort sort;
@@ -77,6 +86,44 @@ public class Chord extends Series<Chord> {
 
     public Chord padding(Integer padding) {
         this.padding = padding;
+        return this;
+    }
+
+    public Object radius() {
+        return this.radius;
+    }
+
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param value
+     * @return
+     */
+    public Chord radius(Object value) {
+        this.radius = value;
+        return this;
+    }
+
+    /**
+     * 半径，支持绝对值（px）和百分比，百分比计算比，min(width, height) / 2 * 75%，
+     * 传数组实现环形图，[内半径，外半径]
+     *
+     * @param width
+     * @param height
+     * @return
+     */
+    public Chord radius(Object width, Object height) {
+        radius = new Object[]{width, height};
+        return this;
+    }
+
+    public Integer startAngle() {
+        return this.startAngle;
+    }
+
+    public Chord startAngle(Integer startAngle) {
+        this.startAngle = startAngle;
         return this;
     }
 
@@ -140,6 +187,22 @@ public class Chord extends Series<Chord> {
 
     public void setPadding(Integer padding) {
         this.padding = padding;
+    }
+
+    public Object getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Object radius) {
+        this.radius = radius;
+    }
+
+    public Integer getStartAngle() {
+        return startAngle;
+    }
+
+    public void setStartAngle(Integer startAngle) {
+        this.startAngle = startAngle;
     }
 
     public Sort getSort() {

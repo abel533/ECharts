@@ -62,6 +62,11 @@ public abstract class AbstractLabel<T> {
      */
     private Integer margin;
 
+    /**
+     * 颜色
+     */
+    private String color;
+
     public T textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return (T) this;
@@ -118,6 +123,15 @@ public abstract class AbstractLabel<T> {
 
     public T formatter(Object formatter) {
         this.formatter = formatter;
+        return (T) this;
+    }
+
+    public String color() {
+        return this.color;
+    }
+
+    public T color(String color) {
+        this.color = color;
         return (T) this;
     }
 
@@ -202,5 +216,13 @@ public abstract class AbstractLabel<T> {
 
     public void setMargin(Integer margin) {
         this.margin = margin;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

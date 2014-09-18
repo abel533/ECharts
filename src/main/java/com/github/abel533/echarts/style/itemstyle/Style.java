@@ -31,7 +31,7 @@ import com.github.abel533.echarts.style.*;
 /**
  * @author liuzh
  */
-public class Style {
+public abstract class Style<T> {
     /**
      * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置
      * 折线图，柱形图，K线图，散点图可指定position见下
@@ -96,34 +96,34 @@ public class Style {
      */
     private Integer borderWidth;
 
-    public Style label(Label label) {
+    public T label(Label label) {
         this.label = label;
-        return this;
+        return (T) this;
     }
 
-    public Style labelLine(LabelLine labelLine) {
+    public T labelLine(LabelLine labelLine) {
         this.labelLine = labelLine;
-        return this;
+        return (T) this;
     }
 
-    public Style areaStyle(AreaStyle areaStyle) {
+    public T areaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
-        return this;
+        return (T) this;
     }
 
-    public Style chordStyle(ChordStyle chordStyle) {
+    public T chordStyle(ChordStyle chordStyle) {
         this.chordStyle = chordStyle;
-        return this;
+        return (T) this;
     }
 
-    public Style nodeStyle(NodeStyle nodeStyle) {
+    public T nodeStyle(NodeStyle nodeStyle) {
         this.nodeStyle = nodeStyle;
-        return this;
+        return (T) this;
     }
 
-    public Style linkStyle(LinkStyle linkStyle) {
+    public T linkStyle(LinkStyle linkStyle) {
         this.linkStyle = linkStyle;
-        return this;
+        return (T) this;
     }
 
     /**
@@ -155,23 +155,23 @@ public class Style {
         return this.color;
     }
 
-    public Style color(String color) {
+    public T color(String color) {
         this.color = color;
-        return this;
+        return (T) this;
     }
 
     public String color0() {
         return this.color0;
     }
 
-    public Style color0(String color0) {
+    public T color0(String color0) {
         this.color0 = color0;
-        return this;
+        return (T) this;
     }
 
-    public Style lineStyle(LineStyle lineStyle) {
+    public T lineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
-        return this;
+        return (T) this;
     }
 
     /**
@@ -238,27 +238,27 @@ public class Style {
         return this.borderColor;
     }
 
-    public Style borderColor(String borderColor) {
+    public T borderColor(String borderColor) {
         this.borderColor = borderColor;
-        return this;
+        return (T) this;
     }
 
     public Integer borderRadius() {
         return this.borderRadius;
     }
 
-    public Style borderRadius(Integer borderRadius) {
+    public T borderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
-        return this;
+        return (T) this;
     }
 
     public Integer borderWidth() {
         return this.borderWidth;
     }
 
-    public Style borderWidth(Integer borderWidth) {
+    public T borderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
-        return this;
+        return (T) this;
     }
 
     public Label getLabel() {

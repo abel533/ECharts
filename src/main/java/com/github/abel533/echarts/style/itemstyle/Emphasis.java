@@ -27,5 +27,5 @@ package com.github.abel533.echarts.style.itemstyle;
 /**
  * @author liuzh
  */
-public class Emphasis extends Style {
+public class Emphasis extends Style<Emphasis> {
 }

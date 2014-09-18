@@ -27,5 +27,5 @@ package com.github.abel533.echarts.style.itemstyle;
 /**
  * @author liuzh
  */
-public class Normal extends Style {
+public class Normal extends Style<Normal> {
 }

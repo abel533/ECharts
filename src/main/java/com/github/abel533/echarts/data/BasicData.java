@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.code.MarkType;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.style.TextStyle;
 
@@ -40,8 +41,8 @@ public abstract class BasicData<T> {
     /**
      * 饼图、雷达图、力导、和弦图使用x,y
      */
-    private Integer x;
-    private Integer y;
+    private Object x;
+    private Object y;
     /**
      * 在存在直角坐标系的图表如折线、柱形、K线、散点图中
      * 除了通过直接指定位置外，如果希望标注基于直角系的定位，可以通过xAxis，yAxis
@@ -127,20 +128,20 @@ public abstract class BasicData<T> {
         return (T) this;
     }
 
-    public Integer x() {
+    public Object x() {
         return this.x;
     }
 
-    public T x(Integer x) {
+    public T x(Object x) {
         this.x = x;
         return (T) this;
     }
 
-    public Integer y() {
+    public Object y() {
         return this.y;
     }
 
-    public T y(Integer y) {
+    public T y(Object y) {
         this.y = y;
         return (T) this;
     }
@@ -177,6 +178,11 @@ public abstract class BasicData<T> {
     }
 
     public T symbol(Object symbol) {
+        this.symbol = symbol;
+        return (T) this;
+    }
+
+    public T symbol(Symbol symbol) {
         this.symbol = symbol;
         return (T) this;
     }
@@ -220,20 +226,20 @@ public abstract class BasicData<T> {
         return (T) this;
     }
 
-    public Integer getX() {
+    public Object getX() {
         return x;
     }
 
-    public T setX(Integer x) {
+    public T setX(Object x) {
         this.x = x;
         return (T) this;
     }
 
-    public Integer getY() {
+    public Object getY() {
         return y;
     }
 
-    public T setY(Integer y) {
+    public T setY(Object y) {
         this.y = y;
         return (T) this;
     }
