@@ -65,7 +65,9 @@ public class PieTest6 {
                 .fontWeight("bolder");
         option.tooltip().show(true).formatter("{a} <br/>{b} : {c} ({d}%)");
         option.legend().orient(Align.vertical)
-                .x("52%").y(56).itemGap(12)
+                .x("(function(){return document.getElementById('main').offsetWidth / 2;})()")
+                .y(56)
+                .itemGap(12)
                 .data("68%的人表示过的不错", "29%的人表示生活压力很大", "3%的人表示“我姓曾”");
         option.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
 
