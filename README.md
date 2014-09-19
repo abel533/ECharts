@@ -1,18 +1,46 @@
 #ECharts - Java类库
 
-这是一个方便在Java中构造ECharts数据结构的类库（如Option,Line数据,Bar数据,ItemStyle等等），使用这个可以让你很方便的在Java中操作ECharts的各种数据.
+本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
-本项目目前为1.0.0-SNAPSHOT版本，尚未发布，发布前接口以及功能改动很大。
+你可以使用本项目直接构造一个`Option`对象，转换为JSON后直接用js设置`myChart.setOption(option)`，或者你也可以在前段构造基本的`Option`对象，然后使用本项目来构造其中需要的任意某部分的数据，如使用`Series`支持的图表类型创建`Series`数据。
 
-##最新进展
+##文档地址  
 
- 1. 【已完成】已经包含了全部类型的图表，每种图表至少有一个例子。
+>http://git.oschina.net/free/ECharts/wikis/Home  
 
- 2. 【已完成】即使同一类的图表，在写的过程中仍然有不同的地方，所以后续后为每种图表再增加一两个例子。
+目前文档并不全面，但是我本人并不知道大家需要什么样的文档，所以暂时就这样了，如果有建议可以在这里提建议
 
- 3. 【已完成】等例子完成后，给代码增加尽可能完整的api文档（注释），然后导出一份doc文档。
+>http://git.oschina.net/free/ECharts/issues
 
- 4. 最后会写一个基础的的教程，然后正式发布本项目。
+##项目支持
+
+###图表类型  
+
+ - Line - 折线（面积）图  
+ - Bar - 柱状（条形）图
+ - Scatter - 散点（气泡）图  
+ - K - K线图
+ - Pie - 饼（圆环）图
+ - Radar - 雷达（面积）图
+ - Chord - 和弦图
+ - Force - 力导向布局图
+ - Map - 地图
+ - Gauge - 仪表盘  
+ - Funnel - 漏斗图 
+ - Island - 孤岛图（官方未提供，这里只有数据Island对象）  
+
+
+###ECharts组件  
+
+ - Axis - 坐标轴 
+ - Grid - 网格  
+ - Title - 标题  
+ - Tooltip - 提示  
+ - Legend - 图例 
+ - DataZoom - 数据区域缩放 
+ - DataRange - 值域漫游
+ - Toolbox - 工具箱
+ - Timeline - 时间线
 
 ##ECharts网址
 
