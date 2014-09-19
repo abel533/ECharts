@@ -14,6 +14,16 @@
 
 >http://git.oschina.net/free/ECharts/issues
 
+##Maven坐标
+
+```xml
+<dependency>
+  <groupId>com.github.abel533</groupId>
+  <artifactId>ECharts</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ##项目支持
 
 ###图表类型  
