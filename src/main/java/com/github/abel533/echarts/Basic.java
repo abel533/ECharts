@@ -190,28 +190,8 @@ public abstract class Basic<T> {
      *
      * @param x
      */
-    public T x(Integer x) {
-        this.x = x;
-        return (T) this;
-    }
-
-    /**
-     * 设置x值
-     *
-     * @param x
-     */
     public T x(X x) {
         this.x = x;
-        return (T) this;
-    }
-
-    /**
-     * 设置y值
-     *
-     * @param y
-     */
-    public T y(Integer y) {
-        this.y = y;
         return (T) this;
     }
 
