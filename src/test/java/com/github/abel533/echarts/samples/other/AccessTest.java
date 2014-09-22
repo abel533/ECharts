@@ -91,9 +91,13 @@ public class AccessTest {
         //设置图例,居中底部显示，显示边框
         option.legend().data("访问量").x(X.center).y(Y.bottom).borderWidth(1);
         //设置y轴为值轴，并且不显示y轴，最大值设置400（实际上这个属性不必设置，默认即可）
-        option.yAxis(new ValueAxis().name("IP").axisLine(new AxisLine().show(true).lineStyle(new LineStyle().width(0))).max(400));
+        option.yAxis(new ValueAxis().name("IP")
+                .axisLine(new AxisLine().show(true).lineStyle(new LineStyle().width(0)))
+                .max(400).min(-100));
         //创建类目轴，并且不显示竖着的分割线
-        CategoryAxis categoryAxis = new CategoryAxis().splitLine(new SplitLine().show(false));
+        CategoryAxis categoryAxis = new CategoryAxis()
+                .splitLine(new SplitLine().show(false))
+                .axisLine(new AxisLine().onZero(false));
         //不显示表格边框，就是围着图标的方框
         option.grid().borderWidth(0);
         //创建Line数据
