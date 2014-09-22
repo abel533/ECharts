@@ -114,6 +114,7 @@ public class AccessTest {
         //设置数据
         option.series(line);
         //打开浏览器预览
+        option.exportToHtml("access.html");
         option.view();
     }
 }
