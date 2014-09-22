@@ -33,6 +33,13 @@ import com.github.abel533.echarts.Option;
  */
 public class GsonOption extends Option {
 
+    /**
+     * 在浏览器中查看
+     */
+    public void view() {
+        OptionUtil.browse(this);
+    }
+
     @Override
     /**
      * 获取toString值
