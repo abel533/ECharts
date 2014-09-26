@@ -221,6 +221,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         this.position = position;
         return (T) this;
     }
+
     /**
      * 设置position值
      *
@@ -230,6 +231,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         this.position = position;
         return (T) this;
     }
+
     /**
      * 设置position值
      *
@@ -306,6 +308,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      *
      * @param boundaryGap
      */
+    //TODO 可以增加更多方法
     public T boundaryGap(Object boundaryGap) {
         this.boundaryGap = boundaryGap;
         return (T) this;
