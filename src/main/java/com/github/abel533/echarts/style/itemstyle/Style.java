@@ -84,17 +84,29 @@ public abstract class Style<T> {
      */
     private LinkStyle linkStyle;
     /**
-     * 柱形边框颜色
+     * 边框颜色
      */
     private String borderColor;
     /**
-     * 柱形边框圆角，单位px，默认为0
+     * 边框圆角，单位px，默认为0
      */
     private Integer borderRadius;
     /**
-     * 柱形边框线宽，单位px，默认为1
+     * 边框线宽，单位px，默认为1
      */
     private Integer borderWidth;
+    /**
+     * 柱形边框颜色
+     */
+    private String barBorderColor;
+    /**
+     * 柱形边框圆角，单位px，默认为0
+     */
+    private Integer barBorderRadius;
+    /**
+     * 柱形边框线宽，单位px，默认为1
+     */
+    private Integer barBorderWidth;
 
     /**
      * 设置label值
@@ -337,6 +349,57 @@ public abstract class Style<T> {
     }
 
     /**
+     * 获取barBorderColor值
+     */
+    public String barBorderColor() {
+        return this.barBorderColor;
+    }
+
+    /**
+     * 设置barBorderColor值
+     *
+     * @param barBorderColor
+     */
+    public T barBorderColor(String barBorderColor) {
+        this.barBorderColor = barBorderColor;
+        return (T) this;
+    }
+
+    /**
+     * 获取barBorderRadius值
+     */
+    public Integer barBorderRadius() {
+        return this.barBorderRadius;
+    }
+
+    /**
+     * 设置barBorderRadius值
+     *
+     * @param barBorderRadius
+     */
+    public T barBorderRadius(Integer barBorderRadius) {
+        this.barBorderRadius = barBorderRadius;
+        return (T) this;
+    }
+
+    /**
+     * 获取barBorderWidth值
+     */
+    public Integer barBorderWidth() {
+        return this.barBorderWidth;
+    }
+
+    /**
+     * 设置barBorderWidth值
+     *
+     * @param barBorderWidth
+     */
+    public T barBorderWidth(Integer barBorderWidth) {
+        this.barBorderWidth = barBorderWidth;
+        return (T) this;
+    }
+
+    /**
      * 获取label值
      */
     public Label getLabel() {
@@ -526,5 +589,53 @@ public abstract class Style<T> {
      */
     public void setBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
+    }
+
+    /**
+     * 获取barBorderColor值
+     */
+    public String getBarBorderColor() {
+        return barBorderColor;
+    }
+
+    /**
+     * 设置barBorderColor值
+     *
+     * @param barBorderColor
+     */
+    public void setBarBorderColor(String barBorderColor) {
+        this.barBorderColor = barBorderColor;
+    }
+
+    /**
+     * 获取barBorderRadius值
+     */
+    public Integer getBarBorderRadius() {
+        return barBorderRadius;
+    }
+
+    /**
+     * 设置barBorderRadius值
+     *
+     * @param barBorderRadius
+     */
+    public void setBarBorderRadius(Integer barBorderRadius) {
+        this.barBorderRadius = barBorderRadius;
+    }
+
+    /**
+     * 获取barBorderWidth值
+     */
+    public Integer getBarBorderWidth() {
+        return barBorderWidth;
+    }
+
+    /**
+     * 设置barBorderWidth值
+     *
+     * @param barBorderWidth
+     */
+    public void setBarBorderWidth(Integer barBorderWidth) {
+        this.barBorderWidth = barBorderWidth;
     }
 }
