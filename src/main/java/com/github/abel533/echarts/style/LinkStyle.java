@@ -24,6 +24,8 @@
 
 package com.github.abel533.echarts.style;
 
+import com.github.abel533.echarts.code.LinkType;
+
 /**
  * Description: LinkStyle
  *
@@ -31,28 +33,49 @@ package com.github.abel533.echarts.style;
  */
 public class LinkStyle {
     /**
+     * 线条类型，可选为：'curve'（曲线） | 'line'（直线）
+     */
+    private LinkType type;
+    /**
      * 线条颜色
      */
-    private String strokeColor;
+    private String borderColor;
     /**
      * 线宽
      */
     private Integer lineWidth;
 
     /**
-     * 获取strokeColor值
+     * 获取type值
      */
-    public String strokeColor() {
-        return this.strokeColor;
+    public LinkType type() {
+        return this.type;
     }
 
     /**
-     * 设置strokeColor值
+     * 设置type值
      *
-     * @param strokeColor
+     * @param type
      */
-    public LinkStyle strokeColor(String strokeColor) {
-        this.strokeColor = strokeColor;
+    public LinkStyle type(LinkType type) {
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * 获取borderColor值
+     */
+    public String borderColor() {
+        return this.borderColor;
+    }
+
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
+    public LinkStyle borderColor(String borderColor) {
+        this.borderColor = borderColor;
         return this;
     }
 
@@ -74,19 +97,34 @@ public class LinkStyle {
     }
 
     /**
-     * 获取strokeColor值
+     * 获取type值
      */
-    public String getStrokeColor() {
-        return strokeColor;
+    public LinkType getType() {
+        return type;
     }
 
     /**
-     * 设置strokeColor值
-     *
-     * @param strokeColor
+     * 设置type值
+     * @param type
      */
-    public void setStrokeColor(String strokeColor) {
-        this.strokeColor = strokeColor;
+    public void setType(LinkType type) {
+        this.type = type;
+    }
+
+    /**
+     * 获取borderColor值
+     */
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    /**
+     * 设置borderColor值
+     *
+     * @param borderColor
+     */
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
     }
 
     /**
