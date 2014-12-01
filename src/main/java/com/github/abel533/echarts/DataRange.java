@@ -480,10 +480,10 @@ public class DataRange extends Basic<DataRange> implements Component {
      * 值域文字显示，splitNumber生效时默认以计算所得数值作为值域文字显示，可指定长度为2的文本数组显示简介的值域文本，如['高', '低']，'\n'指定换行
      */
     public List<String> text() {
-        if (this.color == null) {
-            this.color = new ArrayList<String>();
+        if (this.text == null) {
+            this.text = new ArrayList<String>();
         }
-        return this.color;
+        return this.text;
     }
 
     /**
