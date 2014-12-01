@@ -32,10 +32,6 @@ import com.github.abel533.echarts.style.TextStyle;
  */
 public class Tooltip extends Basic<Tooltip> implements Component {
     /**
-     * 显示策略，可选为：true（显示） | false（隐藏）
-     */
-    private Boolean show;
-    /**
      * tooltip主体内容显示策略，只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为falase，
      * 可选为：true（显示） | false（隐藏）
      */
@@ -102,23 +98,6 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     public Tooltip textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
-        return this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean show() {
-        return this.show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public Tooltip show(Boolean show) {
-        this.show = show;
         return this;
     }
 
@@ -295,22 +274,6 @@ public class Tooltip extends Basic<Tooltip> implements Component {
             this.textStyle = new TextStyle();
         }
         return this.textStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
     }
 
     /**

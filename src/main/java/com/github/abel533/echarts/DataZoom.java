@@ -33,10 +33,6 @@ import com.github.abel533.echarts.code.Orient;
  */
 public class DataZoom extends Basic<DataZoom> implements Component {
     /**
-     * 是否显示，当show为true时则接管使用指定类目轴的全部系列数据，如不指定则接管全部直角坐标系数据
-     */
-    private Boolean show;
-    /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      */
     private Orient orient;
@@ -80,23 +76,6 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      * 缩放变化是否显示定位详情
      */
     private Boolean showDetail;
-
-    /**
-     * 获取show值
-     */
-    public Boolean show() {
-        return this.show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public DataZoom show(Boolean show) {
-        this.show = show;
-        return this;
-    }
 
     /**
      * 获取orient值
@@ -283,22 +262,6 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     public DataZoom showDetail(Boolean showDetail){
         this.showDetail = showDetail;
         return this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
     }
 
     /**

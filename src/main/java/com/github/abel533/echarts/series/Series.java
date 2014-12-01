@@ -38,10 +38,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  */
 public abstract class Series<T> extends AbstractData<T> implements Chart {
     /**
-     * 是否可点击，默认开启
-     */
-    private Boolean clickable;
-    /**
      * 是否启用图例（legend）hover时的联动响应（高亮显示）
      */
     private Boolean legendHoverLink;
@@ -163,23 +159,6 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     public Series markLine(MarkLine markLine) {
         this.markLine = markLine;
         return this;
-    }
-
-    /**
-     * 获取clickable值
-     */
-    public Boolean clickable() {
-        return this.clickable;
-    }
-
-    /**
-     * 设置clickable值
-     *
-     * @param clickable
-     */
-    public T clickable(Boolean clickable) {
-        this.clickable = clickable;
-        return (T) this;
     }
 
     /**
@@ -410,22 +389,6 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     public T showAllSymbol(Boolean showAllSymbol) {
         this.showAllSymbol = showAllSymbol;
         return (T) this;
-    }
-
-    /**
-     * 获取clickable值
-     */
-    public Boolean getClickable() {
-        return clickable;
-    }
-
-    /**
-     * 设置clickable值
-     *
-     * @param clickable
-     */
-    public void setClickable(Boolean clickable) {
-        this.clickable = clickable;
     }
 
     /**

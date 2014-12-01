@@ -42,10 +42,6 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      */
     private Map<String, Feature> feature;
     /**
-     * 默认false，显示策略，可选为：true（显示） | false（隐藏）
-     */
-    private Boolean show;
-    /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
      * @see com.github.abel533.echarts.code.Orient
@@ -79,23 +75,6 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      */
     public Toolbox color(List<Object> color) {
         this.color = color;
-        return this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean show() {
-        return this.show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public Toolbox show(Boolean show) {
-        this.show = show;
         return this;
     }
 
@@ -308,22 +287,6 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      */
     public void setFeature(Map<String, Feature> feature) {
         this.feature = feature;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
     }
 
     /**
