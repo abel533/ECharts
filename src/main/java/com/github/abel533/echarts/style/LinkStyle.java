@@ -43,7 +43,7 @@ public class LinkStyle {
     /**
      * 线宽
      */
-    private Integer lineWidth;
+    private Integer borderWidth;
 
     /**
      * 获取type值
@@ -80,19 +80,19 @@ public class LinkStyle {
     }
 
     /**
-     * 获取lineWidth值
+     * 获取borderWidth值
      */
-    public Integer lineWidth() {
-        return this.lineWidth;
+    public Integer borderWidth() {
+        return this.borderWidth;
     }
 
     /**
-     * 设置lineWidth值
+     * 设置borderWidth值
      *
-     * @param lineWidth
+     * @param borderWidth
      */
-    public LinkStyle lineWidth(Integer lineWidth) {
-        this.lineWidth = lineWidth;
+    public LinkStyle borderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
         return this;
     }
 
@@ -128,18 +128,18 @@ public class LinkStyle {
     }
 
     /**
-     * 获取lineWidth值
+     * 获取borderWidth值
      */
-    public Integer getLineWidth() {
-        return lineWidth;
+    public Integer getBorderWidth() {
+        return borderWidth;
     }
 
     /**
-     * 设置lineWidth值
+     * 设置borderWidth值
      *
-     * @param lineWidth
+     * @param borderWidth
      */
-    public void setLineWidth(Integer lineWidth) {
-        this.lineWidth = lineWidth;
+    public void setBorderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
     }
 }
