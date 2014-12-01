@@ -69,6 +69,10 @@ public class Map extends Series<Map> {
      */
     private Boolean showLegendSymbol;
     /**
+     * 是否启用值域漫游组件（dataRange）hover时的联动响应
+     */
+    private Boolean dataRangeHoverLink;
+    /**
      * 是否开启滚轮缩放和拖拽漫游
      */
     private Boolean roam;
@@ -235,6 +239,23 @@ public class Map extends Series<Map> {
      */
     public Map showLegendSymbol(Boolean showLegendSymbol) {
         this.showLegendSymbol = showLegendSymbol;
+        return this;
+    }
+
+    /**
+     * 获取dataRangeHoverLink值
+     */
+    public Boolean dataRangeHoverLink() {
+        return this.dataRangeHoverLink;
+    }
+
+    /**
+     * 设置dataRangeHoverLink值
+     *
+     * @param dataRangeHoverLink
+     */
+    public Map dataRangeHoverLink(Boolean dataRangeHoverLink) {
+        this.dataRangeHoverLink = dataRangeHoverLink;
         return this;
     }
 
@@ -441,6 +462,22 @@ public class Map extends Series<Map> {
      */
     public void setShowLegendSymbol(Boolean showLegendSymbol) {
         this.showLegendSymbol = showLegendSymbol;
+    }
+
+    /**
+     * 获取dataRangeHoverLink值
+     */
+    public Boolean getDataRangeHoverLink() {
+        return dataRangeHoverLink;
+    }
+
+    /**
+     * 设置dataRangeHoverLink值
+     *
+     * @param dataRangeHoverLink
+     */
+    public void setDataRangeHoverLink(Boolean dataRangeHoverLink) {
+        this.dataRangeHoverLink = dataRangeHoverLink;
     }
 
     /**
