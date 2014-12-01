@@ -93,6 +93,11 @@ public class DataRange extends Basic<DataRange> implements Component {
     private TextStyle textStyle;
 
     /**
+     * 是否启用地图hover时的联动响应
+     */
+    private Boolean hoverLink;
+
+    /**
      * 设置color值
      *
      * @param color
@@ -109,6 +114,23 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     public DataRange text(List<String> text) {
         this.text = text;
+        return this;
+    }
+
+    /**
+     * 获取hoverLink值
+     */
+    public Boolean hoverLink(){
+        return this.hoverLink;
+    }
+
+    /**
+     * 设置hoverLink值
+     *
+     * @param hoverLink
+     */
+    public DataRange hoverLink(Boolean hoverLink){
+        this.hoverLink = hoverLink;
         return this;
     }
 
@@ -556,5 +578,21 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
+    }
+
+    /**
+     * 获取hoverLink值
+     */
+    public Boolean getHoverLink() {
+        return hoverLink;
+    }
+
+    /**
+     * 设置hoverLink值
+     *
+     * @param hoverLink
+     */
+    public void setHoverLink(Boolean hoverLink) {
+        this.hoverLink = hoverLink;
     }
 }

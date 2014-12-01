@@ -35,6 +35,6 @@ public class DataView extends Feature {
         this.show(true);
         this.title("数据视图");
         this.readOnly(false);
-        this.lang(new String[]{"Data View", "close", "refresh"});
+        this.lang(new String[]{"数据视图", "关闭", "刷新"});
     }
 }

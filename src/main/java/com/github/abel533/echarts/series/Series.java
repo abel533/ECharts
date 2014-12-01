@@ -38,6 +38,14 @@ import com.github.abel533.echarts.style.ItemStyle;
  */
 public abstract class Series<T> extends AbstractData<T> implements Chart {
     /**
+     * 是否可点击，默认开启
+     */
+    private Boolean clickable;
+    /**
+     * 是否启用图例（legend）hover时的联动响应（高亮显示）
+     */
+    private Boolean legendHoverLink;
+    /**
      * xAxis坐标轴数组的索引，指定该系列数据所用的横坐标轴
      */
     private Integer xAxisIndex;
@@ -155,6 +163,42 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     public Series markLine(MarkLine markLine) {
         this.markLine = markLine;
         return this;
+    }
+
+    /**
+     * 获取clickable值
+     */
+    public Boolean clickable() {
+        return this.clickable;
+    }
+
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
+    public T clickable(Boolean clickable) {
+        this.clickable = clickable;
+        return (T) this;
+    }
+
+    /**
+     * 获取legendHoverLink值
+     *
+     * @return
+     */
+    public Boolean legendHoverLink() {
+        return this.legendHoverLink;
+    }
+
+    /**
+     * 设置legendHoverLink值
+     *
+     * @param legendHoverLink
+     */
+    public T legendHoverLink(Boolean legendHoverLink) {
+        this.legendHoverLink = legendHoverLink;
+        return (T) this;
     }
 
     /**
@@ -366,6 +410,40 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     public T showAllSymbol(Boolean showAllSymbol) {
         this.showAllSymbol = showAllSymbol;
         return (T) this;
+    }
+
+    /**
+     * 获取clickable值
+     */
+    public Boolean getClickable() {
+        return clickable;
+    }
+
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
+    public void setClickable(Boolean clickable) {
+        this.clickable = clickable;
+    }
+
+    /**
+     * 获取legendHoverLink值
+     *
+     * @return
+     */
+    public Boolean getLegendHoverLink() {
+        return legendHoverLink;
+    }
+
+    /**
+     * 设置legendHoverLink值
+     *
+     * @param legendHoverLink
+     */
+    public void setLegendHoverLink(Boolean legendHoverLink) {
+        this.legendHoverLink = legendHoverLink;
     }
 
     /**

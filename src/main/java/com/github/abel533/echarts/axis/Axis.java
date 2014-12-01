@@ -41,7 +41,10 @@ import java.util.Arrays;
  * @author liuzh
  */
 public abstract class Axis<T> extends AbstractData<T> implements Component {
-
+    /**
+     * 是否显示
+     */
+    private Boolean show;
     /**
      * 坐标轴类型，横轴默认为类目型'category'，纵轴默认为数值型'value'
      *
@@ -106,6 +109,23 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      */
     private SplitArea splitArea;
+
+    /**
+     * 获取show值
+     */
+    public Boolean show() {
+        return this.show;
+    }
+
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
+    public T show(Boolean show) {
+        this.show = show;
+        return (T) this;
+    }
 
     /**
      * 获取type值
@@ -451,6 +471,22 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         }
         this.data.addAll(Arrays.asList(values));
         return (T) this;
+    }
+
+    /**
+     * 获取show值
+     */
+    public Boolean getShow() {
+        return show;
+    }
+
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
+    public void setShow(Boolean show) {
+        this.show = show;
     }
 
     /**
