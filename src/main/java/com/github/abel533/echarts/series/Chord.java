@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
+import com.github.abel533.echarts.code.Symbol;
 
 /**
  * Description: Chord
@@ -66,6 +67,14 @@ public class Chord extends Series<Chord> {
      * 显示是否顺时针
      */
     private Boolean clockWise;
+    /**
+     * 顶点数据映射成圆半径后的最小半径
+     */
+    private Integer minRadius;
+    /**
+     * 顶点数据映射成圆半径后的最大半径
+     */
+    private Integer maxRadius;
     /**
      * 关系数据，用二维数组表示，项 [i][j] 的数值表示 i 到 j 的关系数据
      */
@@ -240,6 +249,40 @@ public class Chord extends Series<Chord> {
     }
 
     /**
+     * 获取minRadius值
+     */
+    public Integer minRadius() {
+        return this.minRadius;
+    }
+
+    /**
+     * 设置minRadius值
+     *
+     * @param minRadius
+     */
+    public Chord minRadius(Integer minRadius) {
+        this.minRadius = minRadius;
+        return this;
+    }
+
+    /**
+     * 获取maxRadius值
+     */
+    public Integer maxRadius() {
+        return this.maxRadius;
+    }
+
+    /**
+     * 设置maxRadius值
+     *
+     * @param maxRadius
+     */
+    public Chord maxRadius(Integer maxRadius) {
+        this.maxRadius = maxRadius;
+        return this;
+    }
+
+    /**
      * 获取matrix值
      */
     public Object[][] matrix() {
@@ -398,5 +441,36 @@ public class Chord extends Series<Chord> {
      */
     public void setMatrix(Object[][] matrix) {
         this.matrix = matrix;
+    }
+
+    /**
+     * 获取minRadius值
+     */
+    public Integer getMinRadius() {
+        return minRadius;
+    }
+
+    /**
+     * 设置minRadius值
+     * @param minRadius
+     */
+    public void setMinRadius(Integer minRadius) {
+        this.minRadius = minRadius;
+    }
+
+    /**
+     * 获取maxRadius值
+     * @return
+     */
+    public Integer getMaxRadius() {
+        return maxRadius;
+    }
+
+    /**
+     * 设置maxRadius值
+     * @param maxRadius
+     */
+    public void setMaxRadius(Integer maxRadius) {
+        this.maxRadius = maxRadius;
     }
 }

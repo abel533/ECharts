@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
+import com.github.abel533.echarts.code.X;
 
 /**
  * 漏斗图
@@ -57,6 +58,10 @@ public class Funnel extends Series<Funnel> {
      * 总宽度，默认为绘图区总高度 - y - y2，数值单位px，指定width后将忽略x2，支持百分比（字符串），如'50%'(显示区域一半的高度)
      */
     private Object height;
+    /**
+     * 水平方向对齐布局类型，默认居中对齐，可用选项还有：'left' | 'right' | 'center'
+     */
+    private X funnelAlign;
     /**
      * 指定的最小值
      */
@@ -200,6 +205,23 @@ public class Funnel extends Series<Funnel> {
      */
     public Funnel height(Object height) {
         this.height = height;
+        return this;
+    }
+
+    /**
+     * 获取funnelAlign值
+     */
+    public X funnelAlign() {
+        return this.funnelAlign;
+    }
+
+    /**
+     * 设置funnelAlign值
+     *
+     * @param funnelAlign
+     */
+    public Funnel funnelAlign(X funnelAlign) {
+        this.funnelAlign = funnelAlign;
         return this;
     }
 
@@ -495,5 +517,21 @@ public class Funnel extends Series<Funnel> {
      */
     public void setGap(Integer gap) {
         this.gap = gap;
+    }
+
+    /**
+     * 设置funnelAlign值
+     */
+    public X getFunnelAlign() {
+        return funnelAlign;
+    }
+
+    /**
+     * 获取funnelAlign值
+     *
+     * @param funnelAlign
+     */
+    public void setFunnelAlign(X funnelAlign) {
+        this.funnelAlign = funnelAlign;
     }
 }

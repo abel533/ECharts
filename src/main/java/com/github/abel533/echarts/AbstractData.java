@@ -35,6 +35,10 @@ import java.util.List;
  */
 public abstract class AbstractData<T> implements Data<T> {
     /**
+     * 是否可点击，默认开启
+     */
+    private Boolean clickable;
+    /**
      * 标线图形数据
      *
      * @see com.github.abel533.echarts.data.PointData
@@ -63,6 +67,40 @@ public abstract class AbstractData<T> implements Data<T> {
         }
         this.data().addAll(Arrays.asList(values));
         return (T) this;
+    }
+
+
+    /**
+     * 获取clickable值
+     */
+    public Boolean clickable() {
+        return this.clickable;
+    }
+
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
+    public T clickable(Boolean clickable) {
+        this.clickable = clickable;
+        return (T) this;
+    }
+
+    /**
+     * 获取clickable值
+     */
+    public Boolean getClickable() {
+        return clickable;
+    }
+
+    /**
+     * 设置clickable值
+     *
+     * @param clickable
+     */
+    public void setClickable(Boolean clickable) {
+        this.clickable = clickable;
     }
 
     /**
