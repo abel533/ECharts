@@ -59,6 +59,10 @@ public class AxisTick {
      * @see com.github.abel533.echarts.style.LineStyle
      */
     private LineStyle lineStyle;
+    /**
+     * 分割段数，默认为5，为0时为线性渐变，calculable为true是默认均分100份
+     */
+    private Integer splitNumber;
 
     /**
      * 获取show值
@@ -168,6 +172,23 @@ public class AxisTick {
     }
 
     /**
+     * 获取splitNumber值
+     */
+    public Integer splitNumber() {
+        return this.splitNumber;
+    }
+
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
+    public AxisTick splitNumber(Integer splitNumber) {
+        this.splitNumber = splitNumber;
+        return this;
+    }
+
+    /**
      * 获取lineStyle值
      */
     public LineStyle getLineStyle() {
@@ -261,5 +282,21 @@ public class AxisTick {
      */
     public void setLength(Integer length) {
         this.length = length;
+    }
+
+    /**
+     * 获取splitNumber值
+     */
+    public Integer getSplitNumber() {
+        return splitNumber;
+    }
+
+    /**
+     * 设置splitNumber值
+     *
+     * @param splitNumber
+     */
+    public void setSplitNumber(Integer splitNumber) {
+        this.splitNumber = splitNumber;
     }
 }
