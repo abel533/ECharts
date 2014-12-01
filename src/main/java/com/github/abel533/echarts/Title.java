@@ -32,10 +32,6 @@ import com.github.abel533.echarts.style.TextStyle;
  */
 public class Title extends Basic<Title> implements Component {
     /**
-     * 是否显示
-     */
-    private Boolean show;
-    /**
      * 主标题文本，'\n'指定换行
      */
     private String text;
@@ -81,23 +77,6 @@ public class Title extends Basic<Title> implements Component {
      * 属性offsetCenter用于详情定位，数组为横纵相对仪表盘圆心坐标偏移，支持百分比（相对外半径）
      */
     private Object offsetCenter;
-
-    /**
-     * 获取show值
-     */
-    public Boolean show() {
-        return this.show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public Title show(Boolean show) {
-        this.show = show;
-        return this;
-    }
 
     /**
      * 设置textStyle值
@@ -280,23 +259,6 @@ public class Title extends Basic<Title> implements Component {
     }
 
     /**
-     * 获取show值
-     *
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
      * 获取textStyle值
      */
     public TextStyle getTextStyle() {
@@ -447,11 +409,7 @@ public class Title extends Basic<Title> implements Component {
         return offsetCenter;
     }
 
-    /**
-     * 设置offsetCenter值
-     *
-     * @param offsetCenter
-     */
+
     public void setOffsetCenter(Object offsetCenter) {
         this.offsetCenter = offsetCenter;
     }

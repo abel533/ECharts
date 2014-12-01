@@ -36,10 +36,6 @@ import java.util.List;
  */
 public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
-     * 是否显示
-     */
-    private Boolean show;
-    /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      *
      * @see com.github.abel533.echarts.code.Orient
@@ -104,23 +100,6 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     public Legend data(List<Object> data) {
         this.data = data;
-        return this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean show() {
-        return this.show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public Legend show(Boolean show) {
-        this.show = show;
         return this;
     }
 
@@ -226,23 +205,6 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         }
         this.data().addAll(Arrays.asList(values));
         return this;
-    }
-
-    /**
-     * 获取show值
-     *
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
     }
 
     /**

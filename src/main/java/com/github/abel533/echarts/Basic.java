@@ -34,6 +34,10 @@ import com.github.abel533.echarts.code.Y;
  */
 public abstract class Basic<T> {
     /**
+     * 是否显示
+     */
+    private Boolean show;
+    /**
      * 水平安放位置，默认为左侧，可选为：'center' | 'left' | 'right' | {number}（x坐标，单位px）
      *
      * @see com.github.abel533.echarts.code.X
@@ -65,6 +69,23 @@ public abstract class Basic<T> {
      * 主副标题纵向间隔，单位px，默认为10
      */
     private Integer itemGap;
+
+    /**
+     * 获取show值
+     */
+    public Boolean show() {
+        return this.show;
+    }
+
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
+    public T show(Boolean show) {
+        this.show = show;
+        return (T) this;
+    }
 
     /**
      * 获取x值
@@ -203,6 +224,14 @@ public abstract class Basic<T> {
     public T y(Y y) {
         this.y = y;
         return (T) this;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
     }
 
     /**
