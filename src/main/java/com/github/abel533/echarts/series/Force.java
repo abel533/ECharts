@@ -61,6 +61,10 @@ public class Force extends Series<Force> {
      */
     private Object size;
     /**
+     * 防止节点和节点，节点和边之间的重叠
+     */
+    private Boolean preventOverlap;
+    /**
      * 布局冷却因子，值越小结束时间越短，值越大时间越长但是结果也越收敛
      */
     private Object coolDown;
@@ -157,6 +161,24 @@ public class Force extends Series<Force> {
      */
     public Force ratioScaling(Boolean ratioScaling) {
         this.ratioScaling = ratioScaling;
+        return this;
+    }
+
+
+    /**
+     * 获取preventOverlap值
+     */
+    public Boolean preventOverlap() {
+        return this.preventOverlap;
+    }
+
+    /**
+     * 设置preventOverlap值
+     *
+     * @param preventOverlap
+     */
+    public Force preventOverlap(Boolean preventOverlap) {
+        this.preventOverlap = preventOverlap;
         return this;
     }
 
@@ -783,5 +805,21 @@ public class Force extends Series<Force> {
      */
     public void setRatioScaling(Boolean ratioScaling) {
         this.ratioScaling = ratioScaling;
+    }
+
+    /**
+     * 获取preventOverlap值
+     */
+    public Boolean getPreventOverlap() {
+        return preventOverlap;
+    }
+
+    /**
+     * 设置preventOverlap值
+     *
+     * @param preventOverlap
+     */
+    public void setPreventOverlap(Boolean preventOverlap) {
+        this.preventOverlap = preventOverlap;
     }
 }
