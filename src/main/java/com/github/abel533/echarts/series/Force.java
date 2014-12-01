@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.Roam;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.series.force.Category;
@@ -112,6 +113,10 @@ public class Force extends Series<Force> {
      * 每一帧布局计算的迭代次数，因为每一帧绘制的时间经常会比布局时间长很多，所以在使用 web worker 的时候可以把 steps 调大来平衡两者的时间从而达到效率最优化
      */
     private Integer steps;
+    /**
+     * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
+     */
+    private Object roam;
 
     /**
      * 构造函数
@@ -536,6 +541,33 @@ public class Force extends Series<Force> {
     }
 
     /**
+     * 获取roam值
+     */
+    public Object roam(){
+        return this.roam;
+    }
+
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
+    public Force roam(Boolean roam){
+        this.roam = roam;
+        return this;
+    }
+
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
+    public Force roam(Roam roam){
+        this.roam = roam;
+        return this;
+    }
+
+    /**
      * 获取categories值
      */
     public List<Category> getCategories() {
@@ -821,5 +853,21 @@ public class Force extends Series<Force> {
      */
     public void setPreventOverlap(Boolean preventOverlap) {
         this.preventOverlap = preventOverlap;
+    }
+
+    /**
+     * 获取roam值
+     */
+    public Object getRoam() {
+        return roam;
+    }
+
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
+    public void setRoam(Object roam) {
+        this.roam = roam;
     }
 }
