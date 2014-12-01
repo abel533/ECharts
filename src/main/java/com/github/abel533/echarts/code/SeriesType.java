@@ -40,4 +40,5 @@ public enum SeriesType {
     funnel,//漏斗图
     gauge,//仪表盘
     island,//孤岛
+    eventRiver,//事件河流图
 }

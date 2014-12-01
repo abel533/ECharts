@@ -42,7 +42,7 @@ public class ChainUtil {
 //        for (File file : all) {
 //            chainFile(file);
 //        }
-//        chainFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\Tooltip.java"));
+        chainFile(new File("G:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\RoamController.java"));
     }
 
     public static void chainFile(File file) {

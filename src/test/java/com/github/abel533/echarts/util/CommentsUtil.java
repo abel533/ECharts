@@ -25,7 +25,6 @@
 package com.github.abel533.echarts.util;
 
 import java.io.*;
-import java.util.List;
 
 /**
  * 自动生成链式调用方法 - 仅针对本项目之前的代码
@@ -37,13 +36,13 @@ public class CommentsUtil {
 
     public static void main(String[] args) {
         //输出全部类
-        String srcPath = ChainUtil.getSrcPath();
-        File srcFoler = new File(srcPath);
-        List<File> files = ChainUtil.allFiles(srcFoler);
-        for (File file : files) {
-            commentsFile(file);
-        }
-//        commentsFile(new File("D:\\IdeaProjects\\GitHub\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\data\\Data.java"));
+//        String srcPath = ChainUtil.getSrcPath();
+//        File srcFoler = new File(srcPath);
+//        List<File> files = ChainUtil.allFiles(srcFoler);
+//        for (File file : files) {
+//            commentsFile(file);
+//        }
+        commentsFile(new File("G:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\RoamController.java"));
     }
 
     public static void commentsFile(File file) {

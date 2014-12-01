@@ -80,11 +80,11 @@ public class ChordTest {
                 itemStyle().normal(
                 new Normal()
                         .lineStyle(new LineStyle().width(0).color("#000"))
-                        .chordStyle(new ChordStyle().lineStyle(new LineStyle().width(1).color("#333")))
+                        .chordStyle(new ChordStyle().width(1).color("#333"))
                         .label(new Label().show(true).color("red")))
                 .emphasis(new Emphasis()
                         .lineStyle(new LineStyle().width(0).color("#000"))
-                        .chordStyle(new ChordStyle().lineStyle(new LineStyle().width(2).color("black"))));
+                        .chordStyle(new ChordStyle().width(2).color("black")));
         option.series(chord);
         option.exportToHtml("chord.html");
         option.view();

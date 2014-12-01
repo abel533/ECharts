@@ -54,7 +54,7 @@ public class ForceTest1 {
         force.categories("人物", "家人", "朋友");
         force.itemStyle().normal()
                 .label(new Label().show(true).textStyle(new TextStyle().color("#333")))
-                .nodeStyle().brushType(BrushType.both).strokeColor("rgba(255,215,0,0.4)").lineWidth(1);
+                .nodeStyle().brushType(BrushType.both).color("rgba(255,215,0,0.4)").borderWidth(1);
 
         force.itemStyle().emphasis()
                 .linkStyle(new LinkStyle())

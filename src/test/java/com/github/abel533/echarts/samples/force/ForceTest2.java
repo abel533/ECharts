@@ -66,7 +66,7 @@ public class ForceTest2 {
         Force force = new Force("Force tree");
         force.categories("叶子节点", "非叶子节点", "根节点");
         force.itemStyle().normal().label(new Label().show(false))
-                .nodeStyle().brushType(BrushType.both).strokeColor("rgba(255,215,0,0.6)").lineWidth(1);
+                .nodeStyle().brushType(BrushType.both).color("rgba(255,215,0,0.6)").borderWidth(1);
         force.minRadius(MIN_RADIUS).maxRadius(MAX_RADIUS);
         force.coolDown(0.995).steps(10);
         force.nodes(nodes).links(links);
