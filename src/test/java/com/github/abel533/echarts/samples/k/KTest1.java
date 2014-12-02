@@ -78,7 +78,7 @@ public class KTest1 {
                 "2013/6/6", "2013/6/7", "2013/6/13");
         option.xAxis(categoryAxis);
 
-        option.yAxis(new ValueAxis().scale(true).precision(2).splitNumber(9).boundaryGap(new Object[]{0.01, 0.01}));
+        option.yAxis(new ValueAxis().scale(true).precision(2).splitNumber(9).boundaryGap(0.01, 0.01));
 
         K k = new K("上证指数");
         k.data(new Object[]{2320.26, 2302.6, 2287.3, 2362.94},

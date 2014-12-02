@@ -42,7 +42,10 @@ public class CommentsUtil {
 //        for (File file : files) {
 //            commentsFile(file);
 //        }
-        commentsFile(new File("G:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\RoamController.java"));
+        commentsFile(new File("E:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\series\\EventRiver.java"));
+        commentsFile(new File("E:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\series\\event\\Detail.java"));
+        commentsFile(new File("E:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\series\\event\\Event.java"));
+        commentsFile(new File("E:\\Git\\OpenSource\\ECharts\\src\\main\\java\\com\\github\\abel533\\echarts\\series\\event\\Evolution.java"));
     }
 
     public static void commentsFile(File file) {

@@ -72,13 +72,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
      */
     private LineStyle nameTextStyle;
-    /**
-     * [类目型]类目起始和结束两端空白策略，见下图，默认为true留空，false则顶头
-     * <p/>
-     * [数值型]数值轴两端空白策略，数组内数值代表百分比，
-     * [原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
-     */
-    private Object boundaryGap;
+
     /**
      * 坐标轴线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -199,22 +193,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     }
 
     /**
-     * 获取boundaryGap值
-     */
-    public Object getBoundaryGap() {
-        return boundaryGap;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param boundaryGap
-     */
-    public void setBoundaryGap(Object boundaryGap) {
-        this.boundaryGap = boundaryGap;
-    }
-
-    /**
      * 设置type值
      *
      * @param type
@@ -313,24 +291,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     public T nameTextStyle(LineStyle style) {
         this.nameTextStyle = style;
-        return (T) this;
-    }
-
-    /**
-     * 获取boundaryGap值
-     */
-    public Object boundaryGap() {
-        return this.boundaryGap;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param boundaryGap
-     */
-    //TODO 可以增加更多方法
-    public T boundaryGap(Object boundaryGap) {
-        this.boundaryGap = boundaryGap;
         return (T) this;
     }
 
@@ -451,12 +411,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      *
      * @param values
      * @return
-     */
-    @Override
-    /**
-     * 设置values值
-     *
-     * @param values
      */
     public T data(Object... values) {
         if (values == null || values.length == 0) {
