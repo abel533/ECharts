@@ -50,7 +50,7 @@ public class LineTest3 {
                 Tool.dataView,
                 new MagicType(Magic.line, Magic.bar, Magic.stack, Magic.tiled),
                 Tool.restore,
-                Tool.saveAsImage);
+                Tool.saveAsImage).padding(20);
         option.calculable(true);
         option.xAxis(new CategoryAxis().boundaryGap(false).data("周一", "周二", "周三", "周四", "周五", "周六", "周日"));
         option.yAxis(new ValueAxis());

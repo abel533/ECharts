@@ -64,7 +64,7 @@ public abstract class Basic<T> {
     /**
      * 标题内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
      */
-    private Integer padding;
+    private Object padding;
     /**
      * 主副标题纵向间隔，单位px，默认为10
      */
@@ -175,7 +175,7 @@ public abstract class Basic<T> {
     /**
      * 获取padding值
      */
-    public Integer padding() {
+    public Object padding() {
         return this.padding;
     }
 
@@ -185,6 +185,19 @@ public abstract class Basic<T> {
      * @param padding
      */
     public T padding(Integer padding) {
+        this.padding = padding;
+        return (T) this;
+    }
+
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
+    public T padding(Integer... padding) {
+        if (padding != null && padding.length > 4) {
+            throw new RuntimeException("padding属性最多可以接收4个参数!");
+        }
         this.padding = padding;
         return (T) this;
     }
@@ -325,7 +338,7 @@ public abstract class Basic<T> {
     /**
      * 获取padding值
      */
-    public Integer getPadding() {
+    public Object getPadding() {
         return padding;
     }
 
