@@ -89,7 +89,7 @@ public class GsonUtil {
         boolean function = false;
         boolean immediately = false;
         for (int i = 0; i < lines.length; i++) {
-            String line = lines[i];
+            String line = lines[i].trim();
             if (!function && line.contains("\"function")) {
                 function = true;
                 line = line.replaceAll("\"function", "function");
