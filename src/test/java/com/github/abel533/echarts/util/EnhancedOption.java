@@ -76,7 +76,6 @@ public class EnhancedOption extends GsonOption implements TestConfig {
      * @return 返回html路径
      */
     public String exportToHtml(String fileName) {
-        this.filepath = OptionUtil.exportToHtml(this, EXPORT_PATH, fileName);
-        return this.filepath;
+        return exportToHtml(EXPORT_PATH, fileName);
     }
 }
