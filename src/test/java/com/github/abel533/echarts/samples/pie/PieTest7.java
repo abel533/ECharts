@@ -25,10 +25,14 @@
 package com.github.abel533.echarts.samples.pie;
 
 import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.code.Magic;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
+import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.data.LineData;
 import com.github.abel533.echarts.data.PieData;
+import com.github.abel533.echarts.feature.MagicType;
+import com.github.abel533.echarts.series.Funnel;
 import com.github.abel533.echarts.series.Pie;
 import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
@@ -54,7 +58,9 @@ public class PieTest7 {
         basic.title().text("浏览器占比变化").subtext("纯属虚构");
         basic.tooltip().trigger(Trigger.item).formatter("{a} <br/>{b} : {c} ({d}%)");
         basic.legend().data("Chrome", "Firefox", "Safari", "IE9+", "IE8-");
-        basic.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
+        basic.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage, new MagicType(Magic.pie, Magic.funnel)
+                .option(new MagicType.Option().funnel(
+                        new Funnel().x("25%").width("50%").funnelAlign(X.left).max(1548))));
 
         int idx = 1;
         basic.series(getPie(idx++).center("50%", "45%").radius("50%"));

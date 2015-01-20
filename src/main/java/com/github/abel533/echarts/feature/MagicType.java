@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.feature;
 
 import com.github.abel533.echarts.code.Magic;
+import com.github.abel533.echarts.series.Funnel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +34,71 @@ import java.util.Map;
  * @author liuzh
  */
 public class MagicType extends Feature {
+    /**
+     * 内部类 Option
+     */
+    public static class Option {
+        private Funnel funnel;
+
+        public Option funnel(Funnel funnel){
+            this.funnel = funnel;
+            return this;
+        }
+
+        public Funnel funnel(){
+            return this.funnel;
+        }
+
+        public Funnel getFunnel() {
+            return funnel;
+        }
+
+        public void setFunnel(Funnel funnel) {
+            this.funnel = funnel;
+        }
+    }
+
+    private Option option;
+
+
+    /**
+     * 设置Option
+     *
+     * @param option
+     * @return
+     */
+    public Feature option(Option option){
+        this.option = option;
+        return this;
+    }
+
+    /**
+     * 获取Option
+     *
+     * @return
+     */
+    public Option option(){
+        return this.option;
+    }
+
+    /**
+     * 获取option值
+     *
+     * @return
+     */
+    public Option getOption() {
+        return option;
+    }
+
+    /**
+     * 设置option
+     *
+     * @param option
+     */
+    public void setOption(Option option) {
+        this.option = option;
+    }
+
     /**
      * 构造函数,参数:magics
      *
