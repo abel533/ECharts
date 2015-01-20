@@ -10,9 +10,11 @@
 
 ##2.1.8.1
 
-该版本在2.1.8基础上解决如下问题：
+- 该版本在2.1.8基础上解决该问题：[http://www.oschina.net/question/2303268_219485](http://www.oschina.net/question/2303268_219485)
+  
+- `GsonOption`解决序列化多余空白的问题
 
->[http://www.oschina.net/question/2303268_219485](http://www.oschina.net/question/2303268_219485)
+- `GsonOption`增加`view`和`exportToHtml`方法，和测试类中的`EnhancedOption`功能完全一样
 
 ##文档地址  
 
@@ -28,7 +30,7 @@
 <dependency>
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>1.0.0</version>
+  <version>2.1.8.1</version>
 </dependency>
 ```
 
