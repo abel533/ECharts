@@ -26,6 +26,7 @@ package com.github.abel533.echarts.json;
 
 import com.github.abel533.echarts.axis.Axis;
 import com.github.abel533.echarts.axis.CategoryAxis;
+import com.github.abel533.echarts.axis.TimeAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.AxisType;
 import com.google.gson.*;
@@ -55,6 +56,9 @@ public class AxisDeserializer implements JsonDeserializer<Axis> {
                 break;
             case value:
                 axis = context.deserialize(jsonObject, ValueAxis.class);
+                break;
+            case time:
+                axis = context.deserialize(jsonObject, TimeAxis.class);
                 break;
         }
         return axis;

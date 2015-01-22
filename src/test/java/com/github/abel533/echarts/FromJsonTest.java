@@ -106,4 +106,11 @@ public class FromJsonTest {
         option.series(bar);
         option.view();
     }
+
+    @Test
+    public void testAxisFromJson() {
+        String json = "{\"xAxis\": [{\"splitNumber\":10, \"type\": \"time\"}]}";
+        EnhancedOption option = GsonUtil.fromJSON(json, EnhancedOption.class);
+        System.out.println(option);
+    }
 }
