@@ -71,7 +71,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 数据缩放锁，默认为false，当设置为true时选择区域不能伸缩，即(end - start)值保持不变，仅能做数据漫游
      */
-    private Boolean zoomLook;
+    private Boolean zoomLock;
     /**
      * 缩放变化是否显示定位详情
      */
@@ -231,19 +231,19 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     }
 
     /**
-     * 获取zoomLook值
+     * 获取zoomLock值
      */
-    public Boolean zoomLook() {
-        return this.zoomLook;
+    public Boolean zoomLock() {
+        return this.zoomLock;
     }
 
     /**
-     * 设置zoomLook值
+     * 设置zoomLock值
      *
-     * @param zoomLook
+     * @param zoomLock
      */
-    public DataZoom zoomLook(Boolean zoomLook) {
-        this.zoomLook = zoomLook;
+    public DataZoom zoomLock(Boolean zoomLock) {
+        this.zoomLock = zoomLock;
         return this;
     }
 
@@ -409,19 +409,19 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     }
 
     /**
-     * 获取zoomLook值
+     * 获取zoomLock值
      */
-    public Boolean getZoomLook() {
-        return zoomLook;
+    public Boolean getZoomLock() {
+        return zoomLock;
     }
 
     /**
-     * 设置zoomLook值
+     * 设置zoomLock值
      *
-     * @param zoomLook
+     * @param zoomLock
      */
-    public void setZoomLook(Boolean zoomLook) {
-        this.zoomLook = zoomLook;
+    public void setZoomLock(Boolean zoomLock) {
+        this.zoomLock = zoomLock;
     }
 
     /**
