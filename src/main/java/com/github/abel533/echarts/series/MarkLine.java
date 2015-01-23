@@ -71,6 +71,10 @@ public class MarkLine extends AbstractData<MarkLine> {
      * @see com.github.abel533.echarts.series.Map#geoCoord
      */
     private GeoCoord geoCoord;
+    /**
+     * 平滑曲线
+     */
+    private Boolean smooth;
 
     /**
      * 设置effect值
@@ -191,6 +195,23 @@ public class MarkLine extends AbstractData<MarkLine> {
     }
 
     /**
+     * 获取smooth值
+     */
+    public Boolean smooth() {
+        return this.smooth;
+    }
+
+    /**
+     * 设置smooth值
+     *
+     * @param smooth
+     */
+    public MarkLine smooth(Boolean smooth) {
+        this.smooth = smooth;
+        return this;
+    }
+
+    /**
      * 获取effect值
      */
     public Effect getEffect() {
@@ -284,5 +305,21 @@ public class MarkLine extends AbstractData<MarkLine> {
      */
     public void setGeoCoord(GeoCoord geoCoord) {
         this.geoCoord = geoCoord;
+    }
+
+    /**
+     * 获取smooth值
+     */
+    public Boolean getSmooth() {
+        return smooth;
+    }
+
+    /**
+     * 设置smooth值
+     *
+     * @param smooth
+     */
+    public void setSmooth(Boolean smooth) {
+        this.smooth = smooth;
     }
 }
