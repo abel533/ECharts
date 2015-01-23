@@ -1,12 +1,18 @@
 #ECharts - Java类库
 
-**当前版本2.1.8.2** 
+**当前版本2.1.8.3** 
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
 你可以使用本项目直接构造一个`Option`对象，转换为JSON后直接用js设置`myChart.setOption(option)`，或者你也可以在前端构造基本的`Option`对象，然后使用本项目来构造其中需要的任意某部分的数据，如使用`Series`支持的图表类型创建`Series`数据。
 
 **为了便于使用对应版本的ECcharts，本项目的版本号会使用和ECharts相同的版本号。**
+
+**由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
+
+##2.1.8.3
+
+- `DataZoom`类中`zoomLook`属性名字错误，修改为`zoomLock`
 
 ##2.1.8.2
 
