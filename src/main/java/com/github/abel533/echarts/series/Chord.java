@@ -26,7 +26,13 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
-import com.github.abel533.echarts.code.Symbol;
+import com.github.abel533.echarts.series.force.Category;
+import com.github.abel533.echarts.series.force.Link;
+import com.github.abel533.echarts.series.force.Node;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Description: Chord
@@ -34,6 +40,22 @@ import com.github.abel533.echarts.code.Symbol;
  * @author liuzh
  */
 public class Chord extends Series<Chord> {
+    /**
+     * 力导向图中节点的分类
+     */
+    private List<Category> categories;
+    /**
+     * 力导向图的顶点数据
+     */
+    private List<Node> nodes;
+    /**
+     * 力导向图的边数据
+     */
+    private List<Link> links;
+    /**
+     * ribbonType的和弦图节点使用扇形绘制，边使用有大小端的ribbon绘制，可以表示出边的权重，图的节点边之间必须是双向边，非ribbonType的和弦图节点使用symbol绘制，边使用贝塞尔曲线，不能表示边的权重，但是可以使用单向边
+     */
+    private Boolean ribbonType;
     /**
      * 每个sector之间的间距(用角度表示)
      */
@@ -95,6 +117,165 @@ public class Chord extends Series<Chord> {
     public Chord(String name) {
         super(name);
         this.type(SeriesType.chord);
+    }
+
+    /**
+     * 设置categories值
+     *
+     * @param categories
+     */
+    public Chord categories(List<Category> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    /**
+     * 设置nodes值
+     *
+     * @param nodes
+     */
+    public Chord nodes(List<Node> nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+
+    /**
+     * 设置links值
+     *
+     * @param links
+     */
+    public Chord links(List<Link> links) {
+        this.links = links;
+        return this;
+    }
+
+    /**
+     * 力导向图中节点的分类
+     */
+    public List<Category> categories() {
+        if (this.categories == null) {
+            this.categories = new ArrayList<Category>();
+        }
+        return this.categories;
+    }
+
+    /**
+     * 添加节点分类
+     *
+     * @param values
+     * @return
+     */
+    public Chord categories(Category... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.categories().addAll(Arrays.asList(values));
+        return this;
+    }
+
+    /**
+     * 添加节点分类，使用分类名
+     *
+     * @param names
+     * @return
+     */
+    public Chord categories(String... names) {
+        if (names == null || names.length == 0) {
+            return this;
+        }
+        for (String name : names) {
+            this.categories().add(new Category(name));
+        }
+        return this;
+    }
+
+    /**
+     * 添加节点分类，使用分类名
+     *
+     * @param values
+     * @return
+     */
+    public Chord categories(Object... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        for (Object value : values) {
+            if (value instanceof String) {
+                this.categories().add(new Category((String) value));
+            } else if (value instanceof Category) {
+                this.categories().add((Category) value);
+            }
+            //其他忽略
+        }
+        return this;
+    }
+
+    /**
+     * 力导向图的顶点数据
+     */
+    public List<Node> nodes() {
+        if (this.nodes == null) {
+            this.nodes = new ArrayList<Node>();
+        }
+        return this.nodes;
+    }
+
+    /**
+     * 添加力导向图的顶点数据
+     *
+     * @param values
+     * @return
+     */
+    public Chord nodes(Node... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.nodes().addAll(Arrays.asList(values));
+        return this;
+    }
+
+    /**
+     * 力导向图的边数据
+     */
+    public List<Link> links() {
+        if (this.links == null) {
+            this.links = new ArrayList<Link>();
+        }
+        return this.links;
+    }
+
+    /**
+     * 添加力导向图的边数据
+     *
+     * @param values
+     * @return
+     */
+    public Chord links(Link... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.links().addAll(Arrays.asList(values));
+        return this;
+    }
+
+    /**
+     * 获取ribbonType值
+     *
+     * @return
+     */
+    public Boolean ribbonType(){
+        return this.ribbonType;
+    }
+
+    /**
+     * 设置ribbonType值
+     *
+     * @param ribbonType
+     * @return
+     */
+    public Chord ribbonType(Boolean ribbonType){
+        this.ribbonType = ribbonType;
+        return this;
     }
 
     /**
@@ -297,6 +478,38 @@ public class Chord extends Series<Chord> {
     public Chord matrix(Object[][] matrix) {
         this.matrix = matrix;
         return this;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
+
+    public List<Node> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Node> nodes) {
+        this.nodes = nodes;
+    }
+
+    public List<Link> getLinks() {
+        return links;
+    }
+
+    public void setLinks(List<Link> links) {
+        this.links = links;
+    }
+
+    public Boolean getRibbonType() {
+        return ribbonType;
+    }
+
+    public void setRibbonType(Boolean ribbonType) {
+        this.ribbonType = ribbonType;
     }
 
     /**

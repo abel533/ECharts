@@ -67,6 +67,12 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     private Double transitionDuration;
     /**
+     * 2.1.9新增属性，默认true，含义未知
+     *
+     * @since 2.1.9
+     */
+    private Boolean enterable;
+    /**
      * 提示边框圆角，单位px，默认为4
      */
     private Integer borderRadius;
@@ -237,6 +243,15 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         return this;
     }
 
+    public Boolean enterable(){
+        return this.enterable;
+    }
+
+    public Tooltip enterable(Boolean enterable){
+        this.enterable = enterable;
+        return this;
+    }
+
     /**
      * 获取borderRadius值
      */
@@ -402,6 +417,14 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     public void setTransitionDuration(Double transitionDuration) {
         this.transitionDuration = transitionDuration;
+    }
+
+    public Boolean getEnterable() {
+        return enterable;
+    }
+
+    public void setEnterable(Boolean enterable) {
+        this.enterable = enterable;
     }
 
     /**

@@ -26,7 +26,7 @@
  * echarts默认配置项
  *
  * @desc echarts基于Canvas，纯Javascript图表库，提供直观，生动，可交互，可个性化定制的数据统计图表。
- * @author Kener (@Kener-林峰, linzhifeng@baidu.com)
+ * @author Kener (@Kener-林峰, kener.linfeng@gmail.com)
  *
  */
 define(function() {
@@ -160,7 +160,7 @@ define(function() {
             calculable: false,         // 是否值域漫游，启用后无视splitNumber，线性渐变
             hoverLink: true,
             realtime: true,
-            color:['#006edd','#e0ffff'],//颜色
+            color:['#006edd','#e0ffff'],//颜色 
             // formatter: null,
             // text:['高','低'],         // 文本，默认为数值文本
             textStyle: {
@@ -268,6 +268,7 @@ define(function() {
             showDelay: 20,             // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
             hideDelay: 100,            // 隐藏延迟，单位ms
             transitionDuration: 0.4,   // 动画变换时间，单位s
+            enterable: true,
             backgroundColor: 'rgba(0,0,0,0.7)',     // 提示背景颜色，默认为透明度为0.7的黑色
             borderColor: '#333',       // 提示边框颜色
             borderRadius: 4,           // 提示边框圆角，单位px，默认为4
@@ -354,7 +355,7 @@ define(function() {
             axisTick: {            // 坐标轴小标记
                 show: true,        // 属性show控制显示与否，默认不显示
                 interval: 'auto',
-                inside: false,    // 控制小标记是否在grid里
+                inside: false,    // 控制小标记是否在grid里 
                 // onGap: null,
                 length :5,         // 属性length控制线长
                 lineStyle: {       // 属性lineStyle控制线条样式
@@ -414,7 +415,7 @@ define(function() {
             },
             axisTick: {            // 坐标轴小标记
                 show: false,       // 属性show控制显示与否，默认不显示
-                inside: false,     // 控制小标记是否在grid里
+                inside: false,     // 控制小标记是否在grid里 
                 length :5,         // 属性length控制线长
                 lineStyle: {       // 属性lineStyle控制线条样式
                     color: '#333',
@@ -661,7 +662,7 @@ define(function() {
             xAxisIndex: 0,
             yAxisIndex: 0,
             // barWidth: null               // 默认自适应
-            // barMaxWidth: null            // 默认自适应
+            // barMaxWidth: null            // 默认自适应 
             itemStyle: {
                 normal: {
                     color: '#fff',          // 阳线填充颜色
@@ -1233,7 +1234,7 @@ define(function() {
             itemStyle: {
                 normal: {
                     // color: 各异，
-                    // borderColor: 各异,        // 标注边线颜色，优先于color
+                    // borderColor: 各异,        // 标注边线颜色，优先于color 
                     borderWidth: 2,             // 标注边线线宽，单位px，默认为1
                     label: {
                         show: true,
@@ -1278,7 +1279,7 @@ define(function() {
             itemStyle: {
                 normal: {
                     // color: 各异,               // 标线主色，线色，symbol主色
-                    // borderColor: 随color,     // 标线symbol边框颜色，优先于color
+                    // borderColor: 随color,     // 标线symbol边框颜色，优先于color 
                     borderWidth: 1.5,           // 标线symbol边框线宽，单位px，默认为2
                     label: {
                         show: true,

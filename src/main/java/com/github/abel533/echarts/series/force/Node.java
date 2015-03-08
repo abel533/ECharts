@@ -74,6 +74,26 @@ public class Node extends HashMap<String, Object> {
     }
 
     /**
+     * 获取label值
+     *
+     * @since 2.1.9
+     */
+    public String label() {
+        return (String) get("label");
+    }
+
+    /**
+     * 设置label值
+     *
+     * @param label
+     * @since 2.1.9
+     */
+    public Node label(String label) {
+        put("label", label);
+        return this;
+    }
+
+    /**
      * 获取value值
      */
     public Integer value() {
@@ -412,5 +432,21 @@ public class Node extends HashMap<String, Object> {
      */
     public void setCategory(Integer category) {
         put("category", category);
+    }
+
+    /**
+     * 获取label值
+     */
+    public String getLabel() {
+        return (String) get("label");
+    }
+
+    /**
+     * 设置label值
+     *
+     * @param label
+     */
+    public void setLabel(String label) {
+        put("label", label);
     }
 }

@@ -1,6 +1,6 @@
 #ECharts - Java类库
 
-**当前版本2.1.8.4**
+**当前版本2.1.9**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -10,9 +10,15 @@
 
 **由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
 
+##2.1.9
+
+- `Node`节点增加`label`属性[#963](https://github.com/ecomfe/echarts/issues/963)
+- `Chord`图表加入`categories,nodes,links`三项属性
+- `Tooltip`加入`enterable`属性，含义未知
+
 ##2.1.8.4
 
-解决`MarkLine`缺少`smooth`属性的问题，这是2.1.8的最后一个版本。
+- 解决`MarkLine`缺少`smooth`属性的问题，这是2.1.8的最后一个版本。
 
 ##2.1.8.3
 
