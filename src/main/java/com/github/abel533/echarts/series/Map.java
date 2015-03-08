@@ -47,10 +47,6 @@ public class Map extends Series<Map> {
      */
     private String mapType;
     /**
-     * 非数值显示（如仅用于显示标注标线时），可以通过hoverable:false关闭区域悬浮高亮
-     */
-    private Boolean hoverable;
-    /**
      * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
      */
     private MapLocation mapLocation;
@@ -161,23 +157,6 @@ public class Map extends Series<Map> {
      */
     public Map mapType(String mapType) {
         this.mapType = mapType;
-        return this;
-    }
-
-    /**
-     * 获取hoverable值
-     */
-    public Boolean hoverable() {
-        return this.hoverable;
-    }
-
-    /**
-     * 设置hoverable值
-     *
-     * @param hoverable
-     */
-    public Map hoverable(Boolean hoverable) {
-        this.hoverable = hoverable;
         return this;
     }
 
@@ -382,22 +361,6 @@ public class Map extends Series<Map> {
      */
     public void setMapType(String mapType) {
         this.mapType = mapType;
-    }
-
-    /**
-     * 获取hoverable值
-     */
-    public Boolean getHoverable() {
-        return hoverable;
-    }
-
-    /**
-     * 设置hoverable值
-     *
-     * @param hoverable
-     */
-    public void setHoverable(Boolean hoverable) {
-        this.hoverable = hoverable;
     }
 
     /**

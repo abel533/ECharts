@@ -39,6 +39,12 @@ public abstract class AbstractData<T> implements Data<T> {
      */
     private Boolean clickable;
     /**
+     * 非数值显示（如仅用于显示标注标线时），可以通过hoverable:false关闭区域悬浮高亮
+     *
+     * @since 2.2.0
+     */
+    private Boolean hoverable;
+    /**
      * 标线图形数据
      *
      * @see com.github.abel533.echarts.data.PointData
@@ -101,6 +107,39 @@ public abstract class AbstractData<T> implements Data<T> {
      */
     public void setClickable(Boolean clickable) {
         this.clickable = clickable;
+    }
+
+    /**
+     * 获取hoverable值
+     */
+    public Boolean hoverable() {
+        return this.hoverable;
+    }
+
+    /**
+     * 设置hoverable值
+     *
+     * @param hoverable
+     */
+    public T hoverable(Boolean hoverable) {
+        this.hoverable = hoverable;
+        return (T) this;
+    }
+
+    /**
+     * 获取hoverable值
+     */
+    public Boolean getHoverable() {
+        return hoverable;
+    }
+
+    /**
+     * 设置hoverable值
+     *
+     * @param hoverable
+     */
+    public void setHoverable(Boolean hoverable) {
+        this.hoverable = hoverable;
     }
 
     /**
