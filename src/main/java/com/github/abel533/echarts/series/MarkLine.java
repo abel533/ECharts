@@ -75,6 +75,52 @@ public class MarkLine extends AbstractData<MarkLine> {
      * 平滑曲线
      */
     private Boolean smooth;
+    /**
+     * 平滑度，默认0.2
+     *
+     * @since 2.2.0
+     */
+    private Double smoothness;
+    /**
+     * 小数精度，默认2
+     *
+     * @since 2.2.0
+     */
+    private Integer precision;
+
+    /**
+     * 获取平滑度
+     */
+    public Double smoothness(){
+        return this.smoothness;
+    }
+
+    /**
+     * 设置平滑度
+     *
+     * @param smoothness
+     */
+    public MarkLine smoothness(Double smoothness){
+        this.smoothness = smoothness;
+        return this;
+    }
+
+    /**
+     * 获取小数精度
+     */
+    public Integer precision(){
+        return this.precision;
+    }
+
+    /**
+     * 设置小数精度
+     *
+     * @param precision
+     */
+    public MarkLine precision(Integer precision){
+        this.precision = precision;
+        return this;
+    }
 
     /**
      * 设置effect值
@@ -321,5 +367,21 @@ public class MarkLine extends AbstractData<MarkLine> {
      */
     public void setSmooth(Boolean smooth) {
         this.smooth = smooth;
+    }
+
+    public Double getSmoothness() {
+        return smoothness;
+    }
+
+    public void setSmoothness(Double smoothness) {
+        this.smoothness = smoothness;
+    }
+
+    public Integer getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(Integer precision) {
+        this.precision = precision;
     }
 }
