@@ -14,7 +14,7 @@
 
 - `Node`节点增加`label`属性[#963](https://github.com/ecomfe/echarts/issues/963)
 - `Chord`图表加入`categories,nodes,links`三项属性
-- `Tooltip`加入`enterable`属性，含义未知
+- `Tooltip`加入`enterable`属性:[tooltip mouse enterable 优化](https://github.com/ecomfe/echarts/commit/781887f31619b0f7e7c3b69746d1ef314f6f9bfd)
 
 ##2.1.8.4
 
