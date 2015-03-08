@@ -30,6 +30,16 @@ package com.github.abel533.echarts.series;
  * @author liuzh
  */
 public class Effect {
+    public static enum Type {
+        scale,bounce
+    }
+
+    /**
+     * 特效类型，默认为'scale'（放大），可选还有'bounce'（跳动）
+     *
+     * @since 2.2.0
+     */
+    private Type type;
     /**
      * 是否开启，默认关闭
      */
@@ -58,6 +68,26 @@ public class Effect {
      * 光影模糊度，默认为0
      */
     private Integer shadowBlur;
+    /**
+     * 跳动距离，单位为px，type为bounce时有效
+     */
+    private Integer bounceDistance;
+    /**
+     * 获取type值
+     */
+    public Type type(){
+        return this.type;
+    }
+
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
+    public Effect type(Type type){
+        this.type = type;
+        return this;
+    }
 
     /**
      * 获取show值
@@ -179,6 +209,23 @@ public class Effect {
     }
 
     /**
+     * 获取bounceDistance值
+     */
+    public Integer bounceDistance(){
+        return this.bounceDistance;
+    }
+
+    /**
+     * 设置bounceDistance值
+     *
+     * @param bounceDistance
+     */
+    public Effect bounceDistance(Integer bounceDistance){
+        this.bounceDistance = bounceDistance;
+        return this;
+    }
+
+    /**
      * 获取show值
      */
     public Boolean getShow() {
@@ -288,5 +335,37 @@ public class Effect {
      */
     public void setShadowBlur(Integer shadowBlur) {
         this.shadowBlur = shadowBlur;
+    }
+
+    /**
+     * 获取type值
+     */
+    public Type getType() {
+        return type;
+    }
+
+    /**
+     * 设置type值
+     *
+     * @param type
+     */
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    /**
+     * 获取bounceDistance值
+     */
+    public Integer getBounceDistance() {
+        return bounceDistance;
+    }
+
+    /**
+     * 设置bounceDistance值
+     *
+     * @param bounceDistance
+     */
+    public void setBounceDistance(Integer bounceDistance) {
+        this.bounceDistance = bounceDistance;
     }
 }
