@@ -47,6 +47,11 @@ public class Data extends BasicData<Data> {
     private Tooltip tooltip;
 
     /**
+     * 平滑曲线弧度，smooth为true时有效，指定平滑曲线弧度
+     */
+    private Double smoothRadian;
+
+    /**
      * 构造函数
      */
     public Data() {
@@ -101,6 +106,23 @@ public class Data extends BasicData<Data> {
      */
     public Data(Object value, Object symbol, Object symbolSize) {
         super(value, symbol, symbolSize);
+    }
+
+    /**
+     * 获取平滑曲线弧度
+     */
+    public Double smoothRadian() {
+        return this.smoothRadian;
+    }
+
+    /**
+     * 设置平滑曲线弧度
+     *
+     * @param smoothRadian
+     */
+    public Data smoothRadian(Double smoothRadian) {
+        this.smoothRadian = smoothRadian;
+        return this;
     }
 
     /**
@@ -303,5 +325,13 @@ public class Data extends BasicData<Data> {
      */
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
+    }
+
+    public Double getSmoothRadian() {
+        return smoothRadian;
+    }
+
+    public void setSmoothRadian(Double smoothRadian) {
+        this.smoothRadian = smoothRadian;
     }
 }
