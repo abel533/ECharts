@@ -1,6 +1,6 @@
 #ECharts - Java类库
 
-**当前版本2.2.0**
+**当前版本2.2.0.1**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -9,6 +9,10 @@
 **为了便于使用对应版本的ECcharts，本项目的版本号会使用和ECharts相同的版本号。**
 
 **由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
+
+##2.2.0.1
+
+- 增加`Serializable`序列化
 
 ##2.2.0
 
