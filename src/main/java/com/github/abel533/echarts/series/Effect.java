@@ -29,7 +29,9 @@ package com.github.abel533.echarts.series;
  *
  * @author liuzh
  */
-public class Effect {
+public class Effect implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     public static enum Type {
         scale,bounce
     }

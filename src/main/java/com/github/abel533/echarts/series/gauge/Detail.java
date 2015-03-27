@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.TextStyle;
  *
  * @author liuzh
  */
-public class Detail {
+public class Detail implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 属性show控制显示与否
      */

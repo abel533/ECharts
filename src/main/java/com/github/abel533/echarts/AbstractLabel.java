@@ -32,7 +32,9 @@ import com.github.abel533.echarts.style.TextStyle;
  *
  * @author liuzh
  */
-public abstract class AbstractLabel<T> {
+public abstract class AbstractLabel<T> implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 是否显示，在Timeline中默认true
      */

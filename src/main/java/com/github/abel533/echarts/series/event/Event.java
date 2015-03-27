@@ -9,7 +9,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Event {
+public class Event implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String name;
 
     /**

@@ -32,7 +32,9 @@ import com.github.abel533.echarts.style.ItemStyle;
  *
  * @author liuzh
  */
-public class SeriesData {
+public class SeriesData implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Object value;
     private Tooltip tooltip;
     private ItemStyle itemStyle;

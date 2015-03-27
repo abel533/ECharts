@@ -33,7 +33,8 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class ScatterData {
+public class ScatterData implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<Object> value;
 

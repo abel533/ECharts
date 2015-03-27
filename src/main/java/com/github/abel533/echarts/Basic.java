@@ -27,12 +27,16 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
 
+import java.io.Serializable;
+
 /**
  * 组件的基础类
  *
  * @author liuzh
  */
-public abstract class Basic<T> {
+public abstract class Basic<T> implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 是否显示
      */

@@ -30,7 +30,9 @@ import com.github.abel533.echarts.style.TextStyle;
 /**
  * @author liuzh
  */
-public class Feature {
+public class Feature implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 获取DataView值
      */

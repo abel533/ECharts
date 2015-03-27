@@ -29,7 +29,9 @@ package com.github.abel533.echarts.series.gauge;
  *
  * @author liuzh
  */
-public class Pointer {
+public class Pointer implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 属性length控制线长，百分比相对的是仪表盘的外半径
      */

@@ -33,7 +33,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public abstract class AbstractData<T> implements Data<T> {
+public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 是否可点击，默认开启
      */

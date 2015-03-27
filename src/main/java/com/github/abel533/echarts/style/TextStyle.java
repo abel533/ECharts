@@ -33,7 +33,9 @@ import com.github.abel533.echarts.code.X;
  * @author liuzh
  *         Created by liuzh on 14-8-25.
  */
-public class TextStyle {
+public class TextStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 颜色
      */

@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.ItemStyle;
  *
  * @author liuzh
  */
-public class Category {
+public class Category implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 类目名称
      */

@@ -29,7 +29,9 @@ package com.github.abel533.echarts.style;
  *
  * @author liuzh
  */
-public class ControlStyle {
+public class ControlStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 正常
      */

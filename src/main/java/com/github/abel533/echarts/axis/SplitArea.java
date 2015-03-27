@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.AreaStyle;
  *
  * @author liuzh
  */
-public class SplitArea {
+public class SplitArea implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 默认不显示，属性show控制显示与否
      */

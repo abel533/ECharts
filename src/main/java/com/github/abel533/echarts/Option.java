@@ -38,7 +38,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Option {
+public class Option implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 全图默认背景，（详见backgroundColor），默认为无，透明
      */

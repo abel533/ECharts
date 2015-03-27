@@ -32,7 +32,9 @@ import com.github.abel533.echarts.code.Y;
  *
  * @author liuzh
  */
-public class MapLocation {
+public class MapLocation implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Object x;
     private Object y;
     private Object width;

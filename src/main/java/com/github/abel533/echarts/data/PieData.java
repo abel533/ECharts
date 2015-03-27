@@ -29,7 +29,9 @@ package com.github.abel533.echarts.data;
  *
  * @author liuzh
  */
-public class PieData {
+public class PieData implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Object value;
     private String name;
 

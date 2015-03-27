@@ -31,7 +31,9 @@ import com.github.abel533.echarts.Label;
  *
  * @author liuzh
  */
-public class CheckpointStyle {
+public class CheckpointStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 当前点symbol，默认随轴上的symbol
      */

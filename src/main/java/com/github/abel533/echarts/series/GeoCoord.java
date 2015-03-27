@@ -32,7 +32,8 @@ import java.util.HashMap;
  *
  * @author liuzh
  */
-public class GeoCoord extends HashMap<String, BigDecimal[]> {
+public class GeoCoord extends HashMap<String, BigDecimal[]> implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * 设置key,x,y值

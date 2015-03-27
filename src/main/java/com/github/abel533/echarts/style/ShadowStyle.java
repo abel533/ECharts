@@ -29,7 +29,9 @@ package com.github.abel533.echarts.style;
  *
  * @author liuzh
  */
-public class ShadowStyle {
+public class ShadowStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 阴影颜色
      */

@@ -29,7 +29,9 @@ package com.github.abel533.echarts.style;
  *
  * @author liuzh
  */
-public class ChordStyle {
+public class ChordStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 贝塞尔曲线的宽度
      */
