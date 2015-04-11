@@ -137,4 +137,28 @@ public class SeriesData {
         this.itemStyle = itemStyle;
         return this;
     }
+
+    public Object getValue() {
+        return value;
+    }
+
+    public void setValue(Object value) {
+        this.value = value;
+    }
+
+    public Tooltip getTooltip() {
+        return tooltip;
+    }
+
+    public void setTooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
+    }
+
+    public ItemStyle getItemStyle() {
+        return itemStyle;
+    }
+
+    public void setItemStyle(ItemStyle itemStyle) {
+        this.itemStyle = itemStyle;
+    }
 }

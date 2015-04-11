@@ -118,4 +118,20 @@ public class LabelLine {
     public void setLineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
     }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Integer getLength() {
+        return length;
+    }
+
+    public void setLength(Integer length) {
+        this.length = length;
+    }
 }

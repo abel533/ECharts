@@ -283,4 +283,52 @@ public class Pie extends Series<Pie> {
     public void setRadius(Object radius) {
         this.radius = radius;
     }
+
+    public Integer getStartAngle() {
+        return startAngle;
+    }
+
+    public void setStartAngle(Integer startAngle) {
+        this.startAngle = startAngle;
+    }
+
+    public Integer getMinAngle() {
+        return minAngle;
+    }
+
+    public void setMinAngle(Integer minAngle) {
+        this.minAngle = minAngle;
+    }
+
+    public Boolean getClockWise() {
+        return clockWise;
+    }
+
+    public void setClockWise(Boolean clockWise) {
+        this.clockWise = clockWise;
+    }
+
+    public RoseType getRoseType() {
+        return roseType;
+    }
+
+    public void setRoseType(RoseType roseType) {
+        this.roseType = roseType;
+    }
+
+    public Integer getSelectedOffset() {
+        return selectedOffset;
+    }
+
+    public void setSelectedOffset(Integer selectedOffset) {
+        this.selectedOffset = selectedOffset;
+    }
+
+    public SelectedMode getSelectedMode() {
+        return selectedMode;
+    }
+
+    public void setSelectedMode(SelectedMode selectedMode) {
+        this.selectedMode = selectedMode;
+    }
 }

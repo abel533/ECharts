@@ -366,4 +366,8 @@ public abstract class Basic<T> {
     public void setItemGap(Integer itemGap) {
         this.itemGap = itemGap;
     }
+
+    public void setPadding(Object padding) {
+        this.padding = padding;
+    }
 }

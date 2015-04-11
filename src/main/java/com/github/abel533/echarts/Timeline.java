@@ -619,4 +619,172 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     public void setControlStyle(ControlStyle controlStyle) {
         this.controlStyle = controlStyle;
     }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public TimeLineType getType() {
+        return type;
+    }
+
+    public void setType(TimeLineType type) {
+        this.type = type;
+    }
+
+    public Boolean getNotMerge() {
+        return notMerge;
+    }
+
+    public void setNotMerge(Boolean notMerge) {
+        this.notMerge = notMerge;
+    }
+
+    public Boolean getRealtime() {
+        return realtime;
+    }
+
+    public void setRealtime(Boolean realtime) {
+        this.realtime = realtime;
+    }
+
+    public Object getX() {
+        return x;
+    }
+
+    public void setX(Object x) {
+        this.x = x;
+    }
+
+    public Object getY() {
+        return y;
+    }
+
+    public void setY(Object y) {
+        this.y = y;
+    }
+
+    public Object getX2() {
+        return x2;
+    }
+
+    public void setX2(Object x2) {
+        this.x2 = x2;
+    }
+
+    public Object getY2() {
+        return y2;
+    }
+
+    public void setY2(Object y2) {
+        this.y2 = y2;
+    }
+
+    public Object getWidth() {
+        return width;
+    }
+
+    public void setWidth(Object width) {
+        this.width = width;
+    }
+
+    public Object getHeight() {
+        return height;
+    }
+
+    public void setHeight(Object height) {
+        this.height = height;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public Integer getBorderWidth() {
+        return borderWidth;
+    }
+
+    public void setBorderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+    }
+
+    public Integer getPadding() {
+        return padding;
+    }
+
+    public void setPadding(Integer padding) {
+        this.padding = padding;
+    }
+
+    public ControlPosition getControlPosition() {
+        return controlPosition;
+    }
+
+    public void setControlPosition(ControlPosition controlPosition) {
+        this.controlPosition = controlPosition;
+    }
+
+    public Boolean getAutoPlay() {
+        return autoPlay;
+    }
+
+    public void setAutoPlay(Boolean autoPlay) {
+        this.autoPlay = autoPlay;
+    }
+
+    public Boolean getLoop() {
+        return loop;
+    }
+
+    public void setLoop(Boolean loop) {
+        this.loop = loop;
+    }
+
+    public Integer getPlayInterval() {
+        return playInterval;
+    }
+
+    public void setPlayInterval(Integer playInterval) {
+        this.playInterval = playInterval;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public Integer getCurrentIndex() {
+        return currentIndex;
+    }
+
+    public void setCurrentIndex(Integer currentIndex) {
+        this.currentIndex = currentIndex;
+    }
 }
