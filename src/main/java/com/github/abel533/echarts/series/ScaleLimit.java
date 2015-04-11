@@ -27,7 +27,9 @@ package com.github.abel533.echarts.series;
 /**
  * @author liuzh
  */
-public class ScaleLimit {
+public class ScaleLimit implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Double min;
     private Double max;
 

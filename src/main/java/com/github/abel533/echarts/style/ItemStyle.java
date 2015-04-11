@@ -32,7 +32,8 @@ import com.github.abel533.echarts.style.itemstyle.Normal;
  *
  * @author liuzh
  */
-public class ItemStyle {
+public class ItemStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * 默认样式

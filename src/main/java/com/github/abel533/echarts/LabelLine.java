@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.LineStyle;
  *
  * @author liuzh
  */
-public class LabelLine {
+public class LabelLine implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 饼图标签视觉引导线显示策略，可选为：true（显示） | false（隐藏）
      */

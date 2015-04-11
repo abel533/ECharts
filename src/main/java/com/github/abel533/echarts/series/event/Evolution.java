@@ -8,7 +8,9 @@ import java.util.Date;
  *
  * @author liuzh
  */
-public class Evolution {
+public class Evolution implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     private String time;

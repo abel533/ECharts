@@ -34,7 +34,9 @@ import com.github.abel533.echarts.style.ShadowStyle;
  *
  * @author liuzh
  */
-public class AxisPointer {
+public class AxisPointer implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 默认为直线，可选为：'line' | 'shadow' | 'cross'
      *

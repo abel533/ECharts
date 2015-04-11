@@ -29,7 +29,9 @@ import com.github.abel533.echarts.code.LineType;
 /**
  * @author liuzh
  */
-public class LineStyle {
+public class LineStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 阳线颜色
      */

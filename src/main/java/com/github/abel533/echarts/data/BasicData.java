@@ -38,7 +38,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public abstract class BasicData<T> {
+public abstract class BasicData<T> implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String name;
     private String text;
     private Object value;

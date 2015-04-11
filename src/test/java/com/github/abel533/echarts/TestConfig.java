@@ -36,5 +36,5 @@ public interface TestConfig {
     /**
      * 通过view控制所有测试是否打开浏览器
      */
-    Boolean VIEW = true;
+    Boolean VIEW = false;
 }

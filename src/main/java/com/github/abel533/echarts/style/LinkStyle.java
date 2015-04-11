@@ -31,7 +31,9 @@ import com.github.abel533.echarts.code.LinkType;
  *
  * @author liuzh
  */
-public class LinkStyle {
+public class LinkStyle implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 线条类型，可选为：'curve'（曲线） | 'line'（直线）
      */

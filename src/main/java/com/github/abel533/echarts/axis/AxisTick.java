@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.LineStyle;
  *
  * @author liuzh
  */
-public class AxisTick {
+public class AxisTick implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 是否显示，默认为false，设为true后下面为默认样式
      */

@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.LineStyle;
  *
  * @author liuzh
  */
-public class SplitLine {
+public class SplitLine implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 默认显示，属性show控制显示与否
      */

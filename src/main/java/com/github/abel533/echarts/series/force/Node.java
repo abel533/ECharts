@@ -33,7 +33,8 @@ import java.util.HashMap;
  *
  * @author liuzh
  */
-public class Node extends HashMap<String, Object> {
+public class Node extends HashMap<String, Object> implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * 构造函数

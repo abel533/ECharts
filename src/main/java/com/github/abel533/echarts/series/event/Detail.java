@@ -5,7 +5,9 @@ package com.github.abel533.echarts.series.event;
  *
  * @author liuzh
  */
-public class Detail {
+public class Detail implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String link;
 
     /**

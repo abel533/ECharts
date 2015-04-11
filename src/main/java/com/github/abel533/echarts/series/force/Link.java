@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.ItemStyle;
  *
  * @author liuzh
  */
-public class Link {
+public class Link implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 源节点的index或者源节点的name
      */

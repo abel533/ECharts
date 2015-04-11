@@ -31,7 +31,9 @@ import com.github.abel533.echarts.style.*;
 /**
  * @author liuzh
  */
-public abstract class Style<T> {
+public abstract class Style<T> implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置
      * 折线图，柱形图，K线图，散点图可指定position见下
