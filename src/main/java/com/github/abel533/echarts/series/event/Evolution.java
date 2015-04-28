@@ -1,5 +1,6 @@
 package com.github.abel533.echarts.series.event;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,8 +9,9 @@ import java.util.Date;
  *
  * @author liuzh
  */
-public class Evolution implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Evolution implements Serializable {
+
+    private static final long serialVersionUID = -3014023133802074740L;
 
     private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 

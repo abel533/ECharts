@@ -29,13 +29,16 @@ import com.github.abel533.echarts.style.CrossStyle;
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.ShadowStyle;
 
+import java.io.Serializable;
+
 /**
  * 坐标轴指示器，坐标轴触发有效
  *
  * @author liuzh
  */
-public class AxisPointer implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class AxisPointer implements Serializable {
+
+    private static final long serialVersionUID = 6421899185681683630L;
 
     /**
      * 默认为直线，可选为：'line' | 'shadow' | 'cross'

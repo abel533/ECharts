@@ -28,11 +28,14 @@ import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.LabelLine;
 import com.github.abel533.echarts.style.*;
 
+import java.io.Serializable;
+
 /**
  * @author liuzh
  */
-public abstract class Style<T> implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public abstract class Style<T> implements Serializable {
+
+    private static final long serialVersionUID = -3920258078225722832L;
 
     /**
      * 标签，饼图默认显示在外部，离饼图距离由labelLine.length决定，地图标签不可指定位置

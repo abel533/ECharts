@@ -27,13 +27,16 @@ package com.github.abel533.echarts.style;
 import com.github.abel533.echarts.style.itemstyle.Emphasis;
 import com.github.abel533.echarts.style.itemstyle.Normal;
 
+import java.io.Serializable;
+
 /**
  * Description: ItemStyle
  *
  * @author liuzh
  */
-public class ItemStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ItemStyle implements Serializable {
+
+    private static final long serialVersionUID = 418674375057055357L;
 
     /**
      * 默认样式

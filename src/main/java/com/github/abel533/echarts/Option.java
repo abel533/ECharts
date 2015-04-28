@@ -29,6 +29,7 @@ import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.series.Series;
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,8 +39,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Option implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Option implements Serializable {
+
+    private static final long serialVersionUID = 4664955083296866542L;
 
     /**
      * 全图默认背景，（详见backgroundColor），默认为无，透明
@@ -86,6 +88,10 @@ public class Option implements java.io.Serializable {
      * 值域选择（详见dataRange）,值域范围
      */
     private DataRange dataRange;
+    /**
+     * 缩放漫游组件（详见RoamController）,数据缩放漫游选择
+     */
+    private RoamController roamController;
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
@@ -497,6 +503,16 @@ public class Option implements java.io.Serializable {
     }
 
     /**
+     * 数据缩放漫游选择（详见roamController）,数据缩放漫游选择
+     */
+    public RoamController roamController() {
+        if (this.roamController == null) {
+            this.roamController = new RoamController();
+        }
+        return this.roamController;
+    }
+
+    /**
      * 直角坐标系内绘图网格（详见grid）
      */
     public Grid grid() {
@@ -715,6 +731,22 @@ public class Option implements java.io.Serializable {
      */
     public DataZoom getDataZoom() {
         return dataZoom;
+    }
+
+    /**
+     * 设置roamController值
+     *
+     * @param roamController
+     */
+    public void setRoamController(RoamController roamController) {
+        this.roamController = roamController;
+    }
+
+    /**
+     * 获取roamController值
+     */
+    public RoamController getRoamController() {
+        return roamController;
     }
 
     /**

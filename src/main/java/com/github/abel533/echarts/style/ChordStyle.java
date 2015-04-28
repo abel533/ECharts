@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.style;
 
+import java.io.Serializable;
+
 /**
  * 弦样式
  *
  * @author liuzh
  */
-public class ChordStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ChordStyle implements Serializable {
+
+    private static final long serialVersionUID = -9135284895463659472L;
 
     /**
      * 贝塞尔曲线的宽度

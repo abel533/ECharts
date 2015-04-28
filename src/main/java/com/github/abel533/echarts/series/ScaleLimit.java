@@ -24,11 +24,14 @@
 
 package com.github.abel533.echarts.series;
 
+import java.io.Serializable;
+
 /**
  * @author liuzh
  */
-public class ScaleLimit implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ScaleLimit implements Serializable {
+
+    private static final long serialVersionUID = 6026916937450874614L;
 
     private Double min;
     private Double max;

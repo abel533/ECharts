@@ -1,12 +1,15 @@
 package com.github.abel533.echarts.series.event;
 
+import java.io.Serializable;
+
 /**
  * 事件的详细信息
  *
  * @author liuzh
  */
-public class Detail implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Detail implements Serializable {
+
+    private static final long serialVersionUID = 680903438457621422L;
 
     private String link;
 

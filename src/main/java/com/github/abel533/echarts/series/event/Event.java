@@ -1,5 +1,6 @@
 package com.github.abel533.echarts.series.event;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +10,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class Event implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Event implements Serializable {
+
+    private static final long serialVersionUID = 2936961594659788171L;
 
     private String name;
 

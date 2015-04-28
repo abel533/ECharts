@@ -27,13 +27,16 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.io.Serializable;
+
 /**
  * Description: Label
  *
  * @author liuzh
  */
-public abstract class AbstractLabel<T> implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public abstract class AbstractLabel<T> implements Serializable {
+
+    private static final long serialVersionUID = -6908403517815789999L;
 
     /**
      * 是否显示，在Timeline中默认true

@@ -29,6 +29,7 @@ import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,8 +39,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public abstract class BasicData<T> implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public abstract class BasicData<T> implements Serializable {
+
+    private static final long serialVersionUID = 3510060011221090087L;
 
     private String name;
     private String text;

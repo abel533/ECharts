@@ -26,13 +26,16 @@ package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.style.LineStyle;
 
+import java.io.Serializable;
+
 /**
  * 坐标轴线
  *
  * @author liuzh
  */
-public class AxisLine implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class AxisLine implements Serializable {
+
+    private static final long serialVersionUID = -7486014114670118509L;
 
     /**
      * 默认显示，属性show控制显示与否

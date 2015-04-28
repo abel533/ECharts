@@ -27,14 +27,17 @@ package com.github.abel533.echarts.style;
 import com.github.abel533.echarts.code.FontStyle;
 import com.github.abel533.echarts.code.X;
 
+import java.io.Serializable;
+
 /**
  * 文字样式
  *
  * @author liuzh
  *         Created by liuzh on 14-8-25.
  */
-public class TextStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class TextStyle implements Serializable {
+
+    private static final long serialVersionUID = 5748410562515851843L;
 
     /**
      * 颜色

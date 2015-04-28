@@ -26,13 +26,16 @@ package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.io.Serializable;
+
 /**
  * 力导向图的边数据
  *
  * @author liuzh
  */
-public class Link implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Link implements Serializable {
+
+    private static final long serialVersionUID = 7882141565696266870L;
 
     /**
      * 源节点的index或者源节点的name

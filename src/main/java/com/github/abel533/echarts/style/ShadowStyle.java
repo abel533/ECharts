@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.style;
 
+import java.io.Serializable;
+
 /**
  * 阴影指示器样式设置
  *
  * @author liuzh
  */
-public class ShadowStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ShadowStyle implements Serializable {
+
+    private static final long serialVersionUID = -1996366699438984171L;
 
     /**
      * 阴影颜色

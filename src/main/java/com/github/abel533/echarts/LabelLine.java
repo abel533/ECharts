@@ -26,13 +26,16 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.style.LineStyle;
 
+import java.io.Serializable;
+
 /**
  * 标签视觉引导线l
  *
  * @author liuzh
  */
-public class LabelLine implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class LabelLine implements Serializable {
+
+    private static final long serialVersionUID = 3359589478018844177L;
 
     /**
      * 饼图标签视觉引导线显示策略，可选为：true（显示） | false（隐藏）

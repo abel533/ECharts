@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.data;
 
+import java.io.Serializable;
+
 /**
  * MapData
  *
  * @author liuzh
  */
-public class MapData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class MapData implements Serializable {
+
+    private static final long serialVersionUID = 7814199168511760158L;
 
     private String name;
     private Object value;

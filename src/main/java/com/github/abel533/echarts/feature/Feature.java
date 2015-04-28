@@ -27,11 +27,14 @@ package com.github.abel533.echarts.feature;
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.io.Serializable;
+
 /**
  * @author liuzh
  */
-public class Feature implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Feature implements Serializable {
+
+    private static final long serialVersionUID = 8546465308711709471L;
 
     /**
      * 获取DataView值

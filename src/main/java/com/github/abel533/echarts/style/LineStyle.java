@@ -26,11 +26,14 @@ package com.github.abel533.echarts.style;
 
 import com.github.abel533.echarts.code.LineType;
 
+import java.io.Serializable;
+
 /**
  * @author liuzh
  */
-public class LineStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class LineStyle implements Serializable {
+
+    private static final long serialVersionUID = 4765717693423256102L;
 
     /**
      * 阳线颜色

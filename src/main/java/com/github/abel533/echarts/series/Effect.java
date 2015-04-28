@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.series;
 
+import java.io.Serializable;
+
 /**
  * 图形炫光特效
  *
  * @author liuzh
  */
-public class Effect implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Effect implements Serializable {
+
+    private static final long serialVersionUID = 2768587032945006946L;
 
     public static enum Type {
         scale,bounce

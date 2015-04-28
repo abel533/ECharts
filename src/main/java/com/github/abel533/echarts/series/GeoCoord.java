@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashMap;
 
@@ -32,8 +33,9 @@ import java.util.HashMap;
  *
  * @author liuzh
  */
-public class GeoCoord extends HashMap<String, BigDecimal[]> implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class GeoCoord extends HashMap<String, BigDecimal[]> implements Serializable {
+
+    private static final long serialVersionUID = 7548362611708057870L;
 
     /**
      * 设置key,x,y值

@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.data;
 
+import java.io.Serializable;
+
 /**
  * 饼图
  *
  * @author liuzh
  */
-public class PieData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class PieData implements Serializable {
+
+    private static final long serialVersionUID = -2573889018261931162L;
 
     private Object value;
     private String name;

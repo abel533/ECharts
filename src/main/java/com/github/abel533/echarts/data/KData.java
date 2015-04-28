@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.data;
 
+import java.io.Serializable;
+
 /**
  * KData
  *
  * @author liuzh
  */
-public class KData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class KData implements Serializable {
+
+    private static final long serialVersionUID = 3593085721806381731L;
 
     private Double[] value;
 

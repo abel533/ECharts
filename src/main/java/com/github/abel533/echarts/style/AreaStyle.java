@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.style;
 
+import java.io.Serializable;
+
 /**
  * 区域填充样式
  *
  * @author liuzh
  */
-public class AreaStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class AreaStyle implements Serializable {
+
+    private static final long serialVersionUID = -6547716731700677234L;
 
     /**
      * 颜色

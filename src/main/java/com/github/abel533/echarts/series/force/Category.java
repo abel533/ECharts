@@ -26,13 +26,16 @@ package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.io.Serializable;
+
 /**
  * 力导向图中节点的分类
  *
  * @author liuzh
  */
-public class Category implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Category implements Serializable {
+
+    private static final long serialVersionUID = 5805816011061262622L;
 
     /**
      * 类目名称

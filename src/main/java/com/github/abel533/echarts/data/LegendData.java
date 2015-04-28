@@ -26,13 +26,16 @@ package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.io.Serializable;
+
 /**
  * Description : LegendData
  *
  * @author liuzh
  */
-public class LegendData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class LegendData implements Serializable {
+
+    private static final long serialVersionUID = 7218201600361155091L;
 
     /**
      * 名称

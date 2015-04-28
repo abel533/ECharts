@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
@@ -33,8 +34,9 @@ import java.util.HashMap;
  *
  * @author liuzh
  */
-public class Node extends HashMap<String, Object> implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Node extends HashMap<String, Object> implements Serializable {
+
+    private static final long serialVersionUID = 4254895945303983318L;
 
     /**
      * 构造函数

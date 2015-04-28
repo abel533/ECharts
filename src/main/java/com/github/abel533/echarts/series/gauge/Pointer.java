@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.series.gauge;
 
+import java.io.Serializable;
+
 /**
  * 仪表盘 - 指针样式
  *
  * @author liuzh
  */
-public class Pointer implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class Pointer implements Serializable {
+
+    private static final long serialVersionUID = 2575834098541231673L;
 
     /**
      * 属性length控制线长，百分比相对的是仪表盘的外半径

@@ -27,13 +27,16 @@ package com.github.abel533.echarts.data;
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.style.ItemStyle;
 
+import java.io.Serializable;
+
 /**
  * Description: Series.Data
  *
  * @author liuzh
  */
-public class SeriesData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class SeriesData implements Serializable {
+
+    private static final long serialVersionUID = -3295595963653443202L;
 
     private Object value;
     private Tooltip tooltip;

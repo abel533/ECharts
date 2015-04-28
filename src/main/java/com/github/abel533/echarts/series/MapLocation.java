@@ -27,13 +27,16 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
 
+import java.io.Serializable;
+
 /**
  * 地图位置设置，默认只适应上下左右居中可配x，y，width，height，任意参数为空都将根据其他参数自适应
  *
  * @author liuzh
  */
-public class MapLocation implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class MapLocation implements Serializable {
+
+    private static final long serialVersionUID = -9175820401945407194L;
 
     private Object x;
     private Object y;

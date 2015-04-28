@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,8 +34,9 @@ import java.util.List;
  *
  * @author liuzh
  */
-public class ScatterData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ScatterData implements Serializable {
+
+    private static final long serialVersionUID = 658151140767993468L;
 
     private List<Object> value;
 

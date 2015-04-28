@@ -24,13 +24,16 @@
 
 package com.github.abel533.echarts.style;
 
+import java.io.Serializable;
+
 /**
  * 时间轴控制器样式
  *
  * @author liuzh
  */
-public class ControlStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class ControlStyle implements Serializable {
+
+    private static final long serialVersionUID = -3442438026749918760L;
 
     /**
      * 正常

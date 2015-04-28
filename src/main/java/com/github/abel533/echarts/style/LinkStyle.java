@@ -26,13 +26,16 @@ package com.github.abel533.echarts.style;
 
 import com.github.abel533.echarts.code.LinkType;
 
+import java.io.Serializable;
+
 /**
  * Description: LinkStyle
  *
  * @author liuzh
  */
-public class LinkStyle implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class LinkStyle implements Serializable {
+
+    private static final long serialVersionUID = -547421614869188616L;
 
     /**
      * 线条类型，可选为：'curve'（曲线） | 'line'（直线）

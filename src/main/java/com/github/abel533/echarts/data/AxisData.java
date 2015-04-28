@@ -26,13 +26,16 @@ package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.style.TextStyle;
 
+import java.io.Serializable;
+
 /**
  * 自定义样式的数据 - 适用于axis.data
  *
  * @author liuzh
  */
-public class AxisData implements java.io.Serializable {
-    private static final long serialVersionUID = 1L;
+public class AxisData implements Serializable {
+
+    private static final long serialVersionUID = -6515942952591477027L;
 
     /**
      * 值
