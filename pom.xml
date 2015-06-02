@@ -60,11 +60,19 @@
 
   <dependencies>
     <!-- 可选依赖 -->
+    <!--GsonOption必须-->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.2.4</version>
       <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <!--FsonOption必须-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.5</version>
       <optional>true</optional>
     </dependency>
 
@@ -73,12 +81,6 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.5</version>
     </dependency>
   </dependencies>
 
