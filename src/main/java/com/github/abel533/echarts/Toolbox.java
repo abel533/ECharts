@@ -29,7 +29,7 @@ import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -178,7 +178,7 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      */
     public Map<String, Feature> feature() {
         if (this.feature == null) {
-            this.feature = new HashMap<String, Feature>();
+            this.feature = new LinkedHashMap<String, Feature>();
         }
         return this.feature;
     }
@@ -211,7 +211,7 @@ public class Toolbox extends Basic<Toolbox> implements Component {
             return this;
         }
         if (this.feature == null) {
-            this.feature = new HashMap<String, Feature>();
+            this.feature = new LinkedHashMap<String, Feature>();
         }
         for (Object t : values) {
             if (t instanceof Feature) {
