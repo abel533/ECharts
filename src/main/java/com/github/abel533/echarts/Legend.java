@@ -27,9 +27,7 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author liuzh
@@ -61,6 +59,10 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      * @see com.github.abel533.echarts.code.SelectedMode
      */
     private Object selectedMode;
+    /**
+     * 配置默认选中状态，可配合LEGEND.SELECTED事件做动态数据载入
+     */
+    private Map<String, Boolean> selected;
     /**
      * 图例内容数组，数组项通常为{string}，每一项代表一个系列的name。
      *
@@ -183,6 +185,38 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         return this;
     }
 
+
+    /**
+     * 获取selected值
+     *
+     * @param name
+     */
+    public Boolean selected(String name) {
+        if (this.selected == null) {
+            return null;
+        } else {
+            return selected.get(name);
+        }
+    }
+
+    /**
+     * 设置默认选中状态
+     *
+     * @param name
+     * @param selected
+     * @return
+     */
+    public Legend selected(String name, Boolean selected) {
+        if (!this.data.contains(name)) {
+            throw new RuntimeException("Legend中不包含name为" + name + "的图例");
+        }
+        if (this.selected == null) {
+            this.selected = new LinkedHashMap<String, Boolean>();
+        }
+        this.selected.put(name,selected);
+        return this;
+    }
+
     /**
      * 获取data值
      */
@@ -301,5 +335,21 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     public void setSelectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
+    }
+
+    /**
+     * 获取selected
+     */
+    public Map<String, Boolean> getSelected() {
+        return selected;
+    }
+
+    /**
+     * 设置selected
+     *
+     * @param selected
+     */
+    public void setSelected(Map<String, Boolean> selected) {
+        this.selected = selected;
     }
 }

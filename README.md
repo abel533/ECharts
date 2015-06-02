@@ -18,6 +18,7 @@
 - 测试代码添加fastjson对应的`FsonOption`测试 - [galaxist](http://git.oschina.net/galaxist)
 - `Toolbox`的`feature`改为有序的`LinkedHashMap`[#21](http://git.oschina.net/free/ECharts/issues/21)
 - `Bar`和`K`的`barWidth`和`barMaxWidth`属性[#32](http://git.oschina.net/free/ECharts/issues/32)
+- `Legend`增加`selected`属性，可以配置默认选中状态[#34](http://git.oschina.net/free/ECharts/issues/34)
 - 感谢[galaxist](http://git.oschina.net/galaxist)提交的合并请求，欢迎各位参与
 
 ##2.2.0.2
