@@ -33,6 +33,15 @@ import com.github.abel533.echarts.code.SeriesType;
  */
 public class K extends Series<K> {
     /**
+     * 柱条（K线蜡烛）宽度，不设时自适应
+     */
+    private Integer barWidth;
+    /**
+     * 柱条（K线蜡烛）最大宽度，不设时自适应
+     */
+    private Integer barMaxWidth;
+
+    /**
      * 构造函数
      */
     public K() {
@@ -61,5 +70,71 @@ public class K extends Series<K> {
         Object[] kData = new Object[]{open, close, min, max};
         super.data(kData);
         return this;
+    }
+
+    /**
+     * 获取barWidth值
+     */
+    public Integer barWidth() {
+        return this.barWidth;
+    }
+
+    /**
+     * 设置barWidth值
+     *
+     * @param barWidth
+     */
+    public K barWidth(Integer barWidth) {
+        this.barWidth = barWidth;
+        return this;
+    }
+
+    /**
+     * 获取barMaxWidth值
+     */
+    public Integer barMaxWidth() {
+        return this.barMaxWidth;
+    }
+
+    /**
+     * 设置barMaxWidth值
+     *
+     * @param barMaxWidth
+     */
+    public K barMaxWidth(Integer barMaxWidth) {
+        this.barMaxWidth = barMaxWidth;
+        return this;
+    }
+
+    /**
+     * 获取barWidth
+     */
+    public Integer getBarWidth() {
+        return barWidth;
+    }
+
+    /**
+     * 设置barWidth
+     *
+     * @param barWidth
+     */
+    public void setBarWidth(Integer barWidth) {
+        this.barWidth = barWidth;
+    }
+
+    /**
+     * 获取barMaxWidth
+     */
+    public Integer getBarMaxWidth() {
+        return barMaxWidth;
+    }
+
+    /**
+     * 设置barMaxWidth
+     *
+     * @param barMaxWidth
+     */
+    public void setBarMaxWidth(Integer barMaxWidth) {
+        this.barMaxWidth = barMaxWidth;
     }
 }
