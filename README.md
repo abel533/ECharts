@@ -1,6 +1,6 @@
 #ECharts - Java类库
 
-**当前版本2.2.0.1**
+**当前版本2.2.0.3**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -9,6 +9,16 @@
 **为了便于使用对应版本的ECcharts，本项目的版本号会使用和ECharts相同的版本号。**
 
 **由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
+
+##2.2.0.3
+
+- 更新`serialVersionUID`生成方式(不是默认的`1L`) - [galaxist](http://git.oschina.net/galaxist)
+- `Option`中添加`RoamController` - [galaxist](http://git.oschina.net/galaxist)
+- 添加fastjson转换，可以使用`FsonOption` - [galaxist](http://git.oschina.net/galaxist)
+- 测试代码添加fastjson对应的`FsonOption`测试 - [galaxist](http://git.oschina.net/galaxist)
+- `Toolbox`的`feature`改为有序的`LinkedHashMap`[#21](http://git.oschina.net/free/ECharts/issues/21)
+- `Bar`和`K`的`barWidth`和`barMaxWidth`属性[#32](http://git.oschina.net/free/ECharts/issues/32)
+- 感谢[galaxist](http://git.oschina.net/galaxist)提交的合并请求，欢迎各位参与
 
 ##2.2.0.2
 
@@ -68,7 +78,7 @@
 <dependency>
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>2.1.8.1</version>
+  <version>2.1.8.3</version>
 </dependency>
 ```
 

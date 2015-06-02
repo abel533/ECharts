@@ -28,7 +28,7 @@
 
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>2.2.0.2</version>
+  <version>2.2.0.3</version>
   <packaging>jar</packaging>
 
   <name>ECharts</name>
