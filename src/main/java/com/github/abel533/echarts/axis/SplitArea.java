@@ -25,14 +25,13 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.style.AreaStyle;
-import sunw.io.Serializable;
 
 /**
  * 分隔区域
  *
  * @author liuzh
  */
-public class SplitArea implements Serializable {
+public class SplitArea implements java.io.Serializable {
 
     private static final long serialVersionUID = -5528605504445280383L;
 
