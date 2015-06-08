@@ -28,5 +28,5 @@ package com.github.abel533.echarts.code;
  * @author liuzh
  */
 public enum AxisType {
-    category, value, time
+    category, value, time, log
 }
