@@ -70,7 +70,7 @@ define(function() {
             itemStyle: {
                 normal: {
                     // color: 各异，
-                    // borderColor: 各异,        // 标注边线颜色，优先于color
+                    // borderColor: 各异,        // 标注边线颜色，优先于color 
                     borderWidth: 2,             // 标注边线线宽，单位px，默认为1
                     label: {
                         show: true,
@@ -102,7 +102,7 @@ define(function() {
             // 标线起始和结束的symbol旋转控制
             //symbolRotate: null,
             //smooth: false,
-            smoothRadian: 0.2,    // 平滑弧度
+            smoothness: 0.2,    // 平滑度
             precision: 2,
             effect: {
                 show: false,
@@ -113,10 +113,16 @@ define(function() {
                 // shadowColor: 'rgba(255,215,0,0.8)',
                 // shadowBlur: lineWidth * 2    // 炫光模糊，默认等于scaleSize计算所得
             },
+            // 边捆绑
+            bundling: {
+                enable: false,
+                // [0, 90]
+                maxTurningAngle: 45
+            },
             itemStyle: {
                 normal: {
                     // color: 各异,               // 标线主色，线色，symbol主色
-                    // borderColor: 随color,     // 标线symbol边框颜色，优先于color
+                    // borderColor: 随color,     // 标线symbol边框颜色，优先于color 
                     borderWidth: 1.5,           // 标线symbol边框线宽，单位px，默认为2
                     label: {
                         show: true,
