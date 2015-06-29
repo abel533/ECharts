@@ -72,6 +72,7 @@ public class ChordStyle implements Serializable {
         this.color = color;
         return this;
     }
+
     /**
      * 获取color值
      */

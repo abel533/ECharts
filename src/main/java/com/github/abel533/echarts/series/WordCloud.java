@@ -26,18 +26,68 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
 
+import java.io.Serializable;
+
 /**
  * 雷达图
  *
  * @author liuzh
  */
-public class Treemap extends Series<Treemap> {
-
+public class WordCloud extends Series<WordCloud> {
     private Object[] center;
     private Object[] size;
-    private String root;
+    private Integer[] textRotation;
+    private AutoSize autoSize;
 
-    public Treemap center(Object val1, Object val2) {
+    public static class AutoSize implements Serializable {
+        private static final long serialVersionUID = 1L;
+        private Boolean enable;
+        private Integer minSize;
+
+        public AutoSize() {
+        }
+
+        public AutoSize(Boolean enable, Integer minSize) {
+            this.enable = enable;
+            this.minSize = minSize;
+        }
+
+        public AutoSize enable(Boolean enable){
+            this.enable = enable;
+            return this;
+        }
+
+        public Boolean enable(){
+            return this.enable;
+        }
+
+        public AutoSize minSize(Integer minSize){
+            this.minSize = minSize;
+            return this;
+        }
+
+        public Integer minSize(){
+            return this.minSize;
+        }
+
+        public Boolean getEnable() {
+            return enable;
+        }
+
+        public void setEnable(Boolean enable) {
+            this.enable = enable;
+        }
+
+        public Integer getMinSize() {
+            return minSize;
+        }
+
+        public void setMinSize(Integer minSize) {
+            this.minSize = minSize;
+        }
+    }
+
+    public WordCloud center(Object val1, Object val2) {
         this.center = new Object[2];
         this.center[0] = val1;
         this.center[1] = val2;
@@ -51,7 +101,7 @@ public class Treemap extends Series<Treemap> {
         return this.center;
     }
 
-    public Treemap size(Object val1, Object val2) {
+    public WordCloud size(Object val1, Object val2) {
         this.size = new Object[2];
         this.size[0] = val1;
         this.size[1] = val2;
@@ -65,20 +115,34 @@ public class Treemap extends Series<Treemap> {
         return this.size;
     }
 
-    public Treemap root(String root) {
-        this.root = root;
+    public WordCloud textRotation(Integer val1, Integer val2) {
+        this.textRotation = new Integer[2];
+        this.textRotation[0] = val1;
+        this.textRotation[1] = val2;
         return this;
     }
 
-    public String root() {
-        return this.root;
+    public Integer[] textRotation() {
+        if (this.textRotation == null) {
+            this.textRotation = new Integer[2];
+        }
+        return this.textRotation;
+    }
+
+    public WordCloud autoSize(AutoSize autoSize) {
+        this.autoSize = autoSize;
+        return this;
+    }
+
+    public AutoSize autoSize() {
+        return this.autoSize;
     }
 
     /**
      * 构造函数
      */
-    public Treemap() {
-        this.type(SeriesType.treemap);
+    public WordCloud() {
+        this.type(SeriesType.wordCloud);
     }
 
     /**
@@ -86,32 +150,8 @@ public class Treemap extends Series<Treemap> {
      *
      * @param name
      */
-    public Treemap(String name) {
+    public WordCloud(String name) {
         super(name);
-        this.type(SeriesType.treemap);
-    }
-
-    public Object[] getCenter() {
-        return center;
-    }
-
-    public void setCenter(Object[] center) {
-        this.center = center;
-    }
-
-    public Object[] getSize() {
-        return size;
-    }
-
-    public void setSize(Object[] size) {
-        this.size = size;
-    }
-
-    public String getRoot() {
-        return root;
-    }
-
-    public void setRoot(String root) {
-        this.root = root;
+        this.type(SeriesType.wordCloud);
     }
 }

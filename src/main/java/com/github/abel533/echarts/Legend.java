@@ -213,7 +213,7 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         if (this.selected == null) {
             this.selected = new LinkedHashMap<String, Boolean>();
         }
-        this.selected.put(name,selected);
+        this.selected.put(name, selected);
         return this;
     }
 

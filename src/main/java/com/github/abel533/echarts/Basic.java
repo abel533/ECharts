@@ -73,6 +73,32 @@ public abstract class Basic<T> implements Serializable {
      * 主副标题纵向间隔，单位px，默认为10
      */
     private Integer itemGap;
+    /**
+     * 一级层叠控制
+     */
+    private Integer zlevel;
+    /**
+     * 二级层叠控制
+     */
+    private Integer z;
+
+    public T zlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+        return (T) this;
+    }
+
+    public Integer zlevel() {
+        return this.zlevel;
+    }
+
+    public T z(Integer z) {
+        this.z = z;
+        return (T) this;
+    }
+
+    public Integer z() {
+        return this.z;
+    }
 
     /**
      * 获取show值
@@ -373,5 +399,21 @@ public abstract class Basic<T> implements Serializable {
 
     public void setPadding(Object padding) {
         this.padding = padding;
+    }
+
+    public Integer getZlevel() {
+        return zlevel;
+    }
+
+    public void setZlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public void setZ(Integer z) {
+        this.z = z;
     }
 }

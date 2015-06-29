@@ -263,7 +263,7 @@ public class Chord extends Series<Chord> {
      *
      * @return
      */
-    public Boolean ribbonType(){
+    public Boolean ribbonType() {
         return this.ribbonType;
     }
 
@@ -273,7 +273,7 @@ public class Chord extends Series<Chord> {
      * @param ribbonType
      * @return
      */
-    public Chord ribbonType(Boolean ribbonType){
+    public Chord ribbonType(Boolean ribbonType) {
         this.ribbonType = ribbonType;
         return this;
     }
@@ -665,6 +665,7 @@ public class Chord extends Series<Chord> {
 
     /**
      * 设置minRadius值
+     *
      * @param minRadius
      */
     public void setMinRadius(Integer minRadius) {
@@ -673,6 +674,7 @@ public class Chord extends Series<Chord> {
 
     /**
      * 获取maxRadius值
+     *
      * @return
      */
     public Integer getMaxRadius() {
@@ -681,6 +683,7 @@ public class Chord extends Series<Chord> {
 
     /**
      * 设置maxRadius值
+     *
      * @param maxRadius
      */
     public void setMaxRadius(Integer maxRadius) {

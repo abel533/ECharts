@@ -173,7 +173,6 @@ public class ValueAxis extends Axis<ValueAxis> {
     }
 
 
-
     /**
      * 获取boundaryGap值
      */
@@ -200,7 +199,7 @@ public class ValueAxis extends Axis<ValueAxis> {
      * @param min
      * @param max
      */
-    public ValueAxis boundaryGap(Double min,Double max) {
+    public ValueAxis boundaryGap(Double min, Double max) {
         this.boundaryGap()[0] = min;
         this.boundaryGap()[1] = max;
         return this;
@@ -301,7 +300,6 @@ public class ValueAxis extends Axis<ValueAxis> {
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
     }
-
 
 
     /**

@@ -36,7 +36,7 @@ public class Effect implements Serializable {
     private static final long serialVersionUID = 2768587032945006946L;
 
     public static enum Type {
-        scale,bounce
+        scale, bounce
     }
 
     /**
@@ -77,10 +77,11 @@ public class Effect implements Serializable {
      * 跳动距离，单位为px，type为bounce时有效
      */
     private Integer bounceDistance;
+
     /**
      * 获取type值
      */
-    public Type type(){
+    public Type type() {
         return this.type;
     }
 
@@ -89,7 +90,7 @@ public class Effect implements Serializable {
      *
      * @param type
      */
-    public Effect type(Type type){
+    public Effect type(Type type) {
         this.type = type;
         return this;
     }
@@ -216,7 +217,7 @@ public class Effect implements Serializable {
     /**
      * 获取bounceDistance值
      */
-    public Integer bounceDistance(){
+    public Integer bounceDistance() {
         return this.bounceDistance;
     }
 
@@ -225,7 +226,7 @@ public class Effect implements Serializable {
      *
      * @param bounceDistance
      */
-    public Effect bounceDistance(Integer bounceDistance){
+    public Effect bounceDistance(Integer bounceDistance) {
         this.bounceDistance = bounceDistance;
         return this;
     }

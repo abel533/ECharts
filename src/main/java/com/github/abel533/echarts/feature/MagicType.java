@@ -40,12 +40,12 @@ public class MagicType extends Feature {
     public static class Option {
         private Funnel funnel;
 
-        public Option funnel(Funnel funnel){
+        public Option funnel(Funnel funnel) {
             this.funnel = funnel;
             return this;
         }
 
-        public Funnel funnel(){
+        public Funnel funnel() {
             return this.funnel;
         }
 
@@ -67,7 +67,7 @@ public class MagicType extends Feature {
      * @param option
      * @return
      */
-    public Feature option(Option option){
+    public Feature option(Option option) {
         this.option = option;
         return this;
     }
@@ -77,7 +77,7 @@ public class MagicType extends Feature {
      *
      * @return
      */
-    public Option option(){
+    public Option option() {
         return this.option;
     }
 

@@ -250,7 +250,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 获取showDetail值
      */
-    public Boolean showDetail(){
+    public Boolean showDetail() {
         return this.showDetail;
     }
 
@@ -259,7 +259,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      *
      * @param showDetail
      */
-    public DataZoom showDetail(Boolean showDetail){
+    public DataZoom showDetail(Boolean showDetail) {
         this.showDetail = showDetail;
         return this;
     }

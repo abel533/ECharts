@@ -1,9 +1,9 @@
 /*!
  * ECharts, a javascript interactive chart library.
- *  
+ *
  * Copyright (c) 2015, Baidu Inc.
  * All rights reserved.
- * 
+ *
  * LICENSE
  * https://github.com/ecomfe/echarts/blob/master/LICENSE.txt
  */
@@ -27,9 +27,9 @@ define(function (require) {
     var _instances = {};    // ECharts实例map索引
     var DOM_ATTRIBUTE_KEY = '_echarts_instance_';
 
-    self.version = '2.2.2';
+    self.version = '2.2.3';
     self.dependencies = {
-        zrender: '2.0.8'
+        zrender: '2.0.9'
     };
     /**
      * 入口方法
@@ -182,18 +182,21 @@ define(function (require) {
                 eventPackage.event = event;
 
                 self._messageCenter.dispatchWithContext(type, eventPackage, that);
-                if (type != 'HOVER' && type != 'MOUSEOUT') {    // 频繁事件直接抛出
-                    setTimeout(function(){
-                        self._messageCenterOutSide.dispatchWithContext(
-                            type, eventPackage, that
-                        );
-                    },50);
-                }
-                else {
-                    self._messageCenterOutSide.dispatchWithContext(
-                        type, eventPackage, that
-                    );
-                }
+                self._messageCenterOutSide.dispatchWithContext(type, eventPackage, that);
+
+                // 如下注掉的代码，@see: https://github.com/ecomfe/echarts-discuss/issues/3
+                // if (type != 'HOVER' && type != 'MOUSEOUT') {    // 频繁事件直接抛出
+                //     setTimeout(function(){
+                //         self._messageCenterOutSide.dispatchWithContext(
+                //             type, eventPackage, that
+                //         );
+                //     },50);
+                // }
+                // else {
+                //     self._messageCenterOutSide.dispatchWithContext(
+                //         type, eventPackage, that
+                //     );
+                // }
             };
 
             this._onevent = function(param){

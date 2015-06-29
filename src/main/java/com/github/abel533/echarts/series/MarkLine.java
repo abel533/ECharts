@@ -38,20 +38,24 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @since 2.2.0
      */
-    public static class Bundling{
+    public static class Bundling {
         private Boolean enable;
         private Integer maxTurningAngle;
-        public Boolean enable(){
+
+        public Boolean enable() {
             return this.enable;
         }
-        public Bundling enable(Boolean enable){
+
+        public Bundling enable(Boolean enable) {
             this.enable = enable;
             return this;
         }
-        public Integer maxTurningAngle(){
+
+        public Integer maxTurningAngle() {
             return this.maxTurningAngle;
         }
-        public Bundling maxTurningAngle(Integer maxTurningAngle){
+
+        public Bundling maxTurningAngle(Integer maxTurningAngle) {
             this.maxTurningAngle = maxTurningAngle;
             return this;
         }
@@ -149,7 +153,7 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @param bundling
      */
-    public MarkLine bundling(Bundling bundling){
+    public MarkLine bundling(Bundling bundling) {
         this.bundling = bundling;
         return this;
     }
@@ -157,7 +161,7 @@ public class MarkLine extends AbstractData<MarkLine> {
     /**
      * 获取平滑度
      */
-    public Double smoothness(){
+    public Double smoothness() {
         return this.smoothness;
     }
 
@@ -166,7 +170,7 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @param smoothness
      */
-    public MarkLine smoothness(Double smoothness){
+    public MarkLine smoothness(Double smoothness) {
         this.smoothness = smoothness;
         return this;
     }
@@ -174,7 +178,7 @@ public class MarkLine extends AbstractData<MarkLine> {
     /**
      * 获取小数精度
      */
-    public Integer precision(){
+    public Integer precision() {
         return this.precision;
     }
 
@@ -183,7 +187,7 @@ public class MarkLine extends AbstractData<MarkLine> {
      *
      * @param precision
      */
-    public MarkLine precision(Integer precision){
+    public MarkLine precision(Integer precision) {
         this.precision = precision;
         return this;
     }

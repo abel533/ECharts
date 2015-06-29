@@ -118,4 +118,72 @@ public class ItemStyle implements Serializable {
     public void setEmphasis(Emphasis emphasis) {
         this.emphasis = emphasis;
     }
+
+    //以下属性是TreeMap特有
+    /**
+     * 面包屑
+     */
+    private Breadcrumb breadcrumb;
+    /**
+     * 二级边框宽度
+     */
+    private Integer childBorderWidth;
+    /**
+     * 二级边框颜色
+     */
+    private Object childBorderColor;
+
+    public ItemStyle breadcrumb(Breadcrumb breadcrumb) {
+        this.breadcrumb = breadcrumb;
+        return this;
+    }
+
+    public Breadcrumb breadcrumb() {
+        if (this.breadcrumb == null) {
+            this.breadcrumb = new Breadcrumb();
+        }
+        return this.breadcrumb;
+    }
+
+    public ItemStyle childBorderWidth(Integer childBorderWidth) {
+        this.childBorderWidth = childBorderWidth;
+        return this;
+    }
+
+    public Integer childBorderWidth() {
+        return this.childBorderWidth;
+    }
+
+    public ItemStyle childBorderColor(Object childBorderColor) {
+        this.childBorderColor = childBorderColor;
+        return this;
+    }
+
+    public Object childBorderColor() {
+        return this.childBorderColor;
+    }
+
+    public Breadcrumb getBreadcrumb() {
+        return breadcrumb;
+    }
+
+    public void setBreadcrumb(Breadcrumb breadcrumb) {
+        this.breadcrumb = breadcrumb;
+    }
+
+    public Integer getChildBorderWidth() {
+        return childBorderWidth;
+    }
+
+    public void setChildBorderWidth(Integer childBorderWidth) {
+        this.childBorderWidth = childBorderWidth;
+    }
+
+    public Object getChildBorderColor() {
+        return childBorderColor;
+    }
+
+    public void setChildBorderColor(Object childBorderColor) {
+        this.childBorderColor = childBorderColor;
+    }
 }

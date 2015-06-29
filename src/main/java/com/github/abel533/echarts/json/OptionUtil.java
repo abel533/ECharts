@@ -92,7 +92,7 @@ public class OptionUtil {
      * @param option
      * @return
      */
-    private static List<String> readLines(Option option){
+    private static List<String> readLines(Option option) {
         String optionStr = GsonUtil.format(option);
         InputStream is = null;
         InputStreamReader iReader = null;

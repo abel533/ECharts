@@ -63,7 +63,6 @@ public class CategoryAxis extends Axis<CategoryAxis> {
 
     /**
      * 获取boundaryGap值
-     *
      */
     public Boolean getBoundaryGap() {
         return boundaryGap;

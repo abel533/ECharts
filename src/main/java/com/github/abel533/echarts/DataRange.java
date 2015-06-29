@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Orient;
+import com.github.abel533.echarts.data.RangeData;
 import com.github.abel533.echarts.style.TextStyle;
 
 import java.util.ArrayList;
@@ -98,6 +99,40 @@ public class DataRange extends Basic<DataRange> implements Component {
     private Boolean hoverLink;
 
     /**
+     * 用于设置dataRange的初始选中范围。calculable为true时有效。
+     */
+    private RangeData range;
+
+    public DataRange range(RangeData range) {
+        this.range = range;
+        return this;
+    }
+
+    public RangeData range() {
+        return this.range;
+    }
+
+    /**
+     * 自定义分割方式，支持不等距分割。splitList被指定时，splitNumber将被忽略。
+     */
+    private List<RangeData> splitList;
+
+    public DataRange splitList(RangeData... splitList) {
+        if (splitList == null || splitList.length == 0) {
+            return this;
+        }
+        this.splitList().addAll(Arrays.asList(splitList));
+        return this;
+    }
+
+    public List<RangeData> splitList() {
+        if (this.splitList == null) {
+            this.splitList = new ArrayList<RangeData>();
+        }
+        return this.splitList;
+    }
+
+    /**
      * 设置color值
      *
      * @param color
@@ -120,7 +155,7 @@ public class DataRange extends Basic<DataRange> implements Component {
     /**
      * 获取hoverLink值
      */
-    public Boolean hoverLink(){
+    public Boolean hoverLink() {
         return this.hoverLink;
     }
 
@@ -129,7 +164,7 @@ public class DataRange extends Basic<DataRange> implements Component {
      *
      * @param hoverLink
      */
-    public DataRange hoverLink(Boolean hoverLink){
+    public DataRange hoverLink(Boolean hoverLink) {
         this.hoverLink = hoverLink;
         return this;
     }
@@ -594,5 +629,21 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     public void setHoverLink(Boolean hoverLink) {
         this.hoverLink = hoverLink;
+    }
+
+    public RangeData getRange() {
+        return range;
+    }
+
+    public void setRange(RangeData range) {
+        this.range = range;
+    }
+
+    public List<RangeData> getSplitList() {
+        return splitList;
+    }
+
+    public void setSplitList(List<RangeData> splitList) {
+        this.splitList = splitList;
     }
 }

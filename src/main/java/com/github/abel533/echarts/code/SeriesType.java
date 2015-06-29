@@ -42,5 +42,7 @@ public enum SeriesType {
     island,//孤岛
     eventRiver,//事件河流图
     venn,//韦恩图
-    treemap,//树图
+    treemap,//矩形树图
+    wordCloud,//词云
+    tree,//树图
 }

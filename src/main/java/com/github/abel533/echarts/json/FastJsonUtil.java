@@ -29,6 +29,7 @@ import com.github.abel533.echarts.Option;
 
 /**
  * FastJson辅助工具类
+ *
  * @author zhangjunhui galaxist@vip.qq.com
  */
 public class FastJsonUtil {

@@ -243,11 +243,11 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         return this;
     }
 
-    public Boolean enterable(){
+    public Boolean enterable() {
         return this.enterable;
     }
 
-    public Tooltip enterable(Boolean enterable){
+    public Tooltip enterable(Boolean enterable) {
         this.enterable = enterable;
         return this;
     }

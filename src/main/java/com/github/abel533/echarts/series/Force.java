@@ -543,7 +543,7 @@ public class Force extends Series<Force> {
     /**
      * 获取roam值
      */
-    public Object roam(){
+    public Object roam() {
         return this.roam;
     }
 
@@ -552,7 +552,7 @@ public class Force extends Series<Force> {
      *
      * @param roam
      */
-    public Force roam(Boolean roam){
+    public Force roam(Boolean roam) {
         this.roam = roam;
         return this;
     }
@@ -562,7 +562,7 @@ public class Force extends Series<Force> {
      *
      * @param roam
      */
-    public Force roam(Roam roam){
+    public Force roam(Roam roam) {
         this.roam = roam;
         return this;
     }

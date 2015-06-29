@@ -33,112 +33,117 @@ import java.util.Map;
  * @author liuzh
  */
 public class RoamController extends Basic<RoamController> implements Component {
-	private Integer width;
+    private Integer width;
 
-	/**
-	 * 获取width值 
-	 */
-	public Integer width(){
-		return this.width;
-	}
+    /**
+     * 获取width值
+     */
+    public Integer width() {
+        return this.width;
+    }
 
-	/**
-	 * 设置width值 
-	 * 
-	 * @param width
-	 */
-	public RoamController width(Integer width){
-		this.width = width;
-		return this;
-	}
-	private Integer height;
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
+    public RoamController width(Integer width) {
+        this.width = width;
+        return this;
+    }
 
-	/**
-	 * 获取height值 
-	 */
-	public Integer height(){
-		return this.height;
-	}
+    private Integer height;
 
-	/**
-	 * 设置height值 
-	 * 
-	 * @param height
-	 */
-	public RoamController height(Integer height){
-		this.height = height;
-		return this;
-	}
-	private String fillerColor;
+    /**
+     * 获取height值
+     */
+    public Integer height() {
+        return this.height;
+    }
 
-	/**
-	 * 获取fillerColor值 
-	 */
-	public String fillerColor(){
-		return this.fillerColor;
-	}
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
+    public RoamController height(Integer height) {
+        this.height = height;
+        return this;
+    }
 
-	/**
-	 * 设置fillerColor值 
-	 * 
-	 * @param fillerColor
-	 */
-	public RoamController fillerColor(String fillerColor){
-		this.fillerColor = fillerColor;
-		return this;
-	}
-	private String handleColor;
+    private String fillerColor;
 
-	/**
-	 * 获取handleColor值 
-	 */
-	public String handleColor(){
-		return this.handleColor;
-	}
+    /**
+     * 获取fillerColor值
+     */
+    public String fillerColor() {
+        return this.fillerColor;
+    }
 
-	/**
-	 * 设置handleColor值 
-	 * 
-	 * @param handleColor
-	 */
-	public RoamController handleColor(String handleColor){
-		this.handleColor = handleColor;
-		return this;
-	}
-	private Integer step;
+    /**
+     * 设置fillerColor值
+     *
+     * @param fillerColor
+     */
+    public RoamController fillerColor(String fillerColor) {
+        this.fillerColor = fillerColor;
+        return this;
+    }
 
-	/**
-	 * 获取step值 
-	 */
-	public Integer step(){
-		return this.step;
-	}
+    private String handleColor;
 
-	/**
-	 * 设置step值 
-	 * 
-	 * @param step
-	 */
-	public RoamController step(Integer step){
-		this.step = step;
-		return this;
-	}
-	private Map<String,Boolean> mapTypeControl;
+    /**
+     * 获取handleColor值
+     */
+    public String handleColor() {
+        return this.handleColor;
+    }
 
-	/**
-	 * 获取mapTypeControl值 
-	 */
-	public Map<String,Boolean> mapTypeControl(){
-		return this.mapTypeControl;
-	}
+    /**
+     * 设置handleColor值
+     *
+     * @param handleColor
+     */
+    public RoamController handleColor(String handleColor) {
+        this.handleColor = handleColor;
+        return this;
+    }
+
+    private Integer step;
+
+    /**
+     * 获取step值
+     */
+    public Integer step() {
+        return this.step;
+    }
+
+    /**
+     * 设置step值
+     *
+     * @param step
+     */
+    public RoamController step(Integer step) {
+        this.step = step;
+        return this;
+    }
+
+    private Map<String, Boolean> mapTypeControl;
+
+    /**
+     * 获取mapTypeControl值
+     */
+    public Map<String, Boolean> mapTypeControl() {
+        return this.mapTypeControl;
+    }
 
     /**
      * 设置mapTypeControl值
      *
-     * @param key 地名
+     * @param key   地名
      * @param value true|false
      */
-	public RoamController mapTypeControl(String key,Boolean value) {
+    public RoamController mapTypeControl(String key, Boolean value) {
         if (this.mapTypeControl == null) {
             this.mapTypeControl = new HashMap<String, Boolean>();
         }
@@ -146,99 +151,99 @@ public class RoamController extends Basic<RoamController> implements Component {
         return this;
     }
 
-	/**
-	 * 获取width值 
-	 */
-	public Integer getWidth() {
+    /**
+     * 获取width值
+     */
+    public Integer getWidth() {
         return width;
     }
 
-	/**
-	 * 设置width值 
-	 * 
-	 * @param width
-	 */
-	public void setWidth(Integer width) {
+    /**
+     * 设置width值
+     *
+     * @param width
+     */
+    public void setWidth(Integer width) {
         this.width = width;
     }
 
-	/**
-	 * 获取height值 
-	 */
-	public Integer getHeight() {
+    /**
+     * 获取height值
+     */
+    public Integer getHeight() {
         return height;
     }
 
-	/**
-	 * 设置height值 
-	 * 
-	 * @param height
-	 */
-	public void setHeight(Integer height) {
+    /**
+     * 设置height值
+     *
+     * @param height
+     */
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
-	/**
-	 * 获取fillerColor值 
-	 */
-	public String getFillerColor() {
+    /**
+     * 获取fillerColor值
+     */
+    public String getFillerColor() {
         return fillerColor;
     }
 
-	/**
-	 * 设置fillerColor值 
-	 * 
-	 * @param fillerColor
-	 */
-	public void setFillerColor(String fillerColor) {
+    /**
+     * 设置fillerColor值
+     *
+     * @param fillerColor
+     */
+    public void setFillerColor(String fillerColor) {
         this.fillerColor = fillerColor;
     }
 
-	/**
-	 * 获取handleColor值 
-	 */
-	public String getHandleColor() {
+    /**
+     * 获取handleColor值
+     */
+    public String getHandleColor() {
         return handleColor;
     }
 
-	/**
-	 * 设置handleColor值 
-	 * 
-	 * @param handleColor
-	 */
-	public void setHandleColor(String handleColor) {
+    /**
+     * 设置handleColor值
+     *
+     * @param handleColor
+     */
+    public void setHandleColor(String handleColor) {
         this.handleColor = handleColor;
     }
 
-	/**
-	 * 获取step值 
-	 */
-	public Integer getStep() {
+    /**
+     * 获取step值
+     */
+    public Integer getStep() {
         return step;
     }
 
-	/**
-	 * 设置step值 
-	 * 
-	 * @param step
-	 */
-	public void setStep(Integer step) {
+    /**
+     * 设置step值
+     *
+     * @param step
+     */
+    public void setStep(Integer step) {
         this.step = step;
     }
 
-	/**
-	 * 获取mapTypeControl值 
-	 */
-	public Map<String, Boolean> getMapTypeControl() {
+    /**
+     * 获取mapTypeControl值
+     */
+    public Map<String, Boolean> getMapTypeControl() {
         return mapTypeControl;
     }
 
-	/**
-	 * 设置mapTypeControl值 
-	 * 
-	 * @param mapTypeControl
-	 */
-	public void setMapTypeControl(Map<String, Boolean> mapTypeControl) {
+    /**
+     * 设置mapTypeControl值
+     *
+     * @param mapTypeControl
+     */
+    public void setMapTypeControl(Map<String, Boolean> mapTypeControl) {
         this.mapTypeControl = mapTypeControl;
     }
 }

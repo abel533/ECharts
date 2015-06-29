@@ -13,12 +13,12 @@ public class LogAxis extends Axis<LogAxis> {
      */
     private Integer logLabelBase;
 
-    public LogAxis logLabelBase(Integer logLabelBase){
+    public LogAxis logLabelBase(Integer logLabelBase) {
         this.logLabelBase = logLabelBase;
         return this;
     }
 
-    public Integer logLabelBase(){
+    public Integer logLabelBase() {
         return this.logLabelBase;
     }
 
@@ -27,12 +27,12 @@ public class LogAxis extends Axis<LogAxis> {
      */
     private Boolean logPositive;
 
-    public LogAxis logPositive(Boolean logPositive){
+    public LogAxis logPositive(Boolean logPositive) {
         this.logPositive = logPositive;
         return this;
     }
 
-    public Boolean logPositive(){
+    public Boolean logPositive() {
         return this.logPositive;
     }
 

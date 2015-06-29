@@ -109,6 +109,32 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * 重新计算
      */
     private Boolean calculable;
+    /**
+     * 一级层叠控制
+     */
+    private Integer zlevel;
+    /**
+     * 二级层叠控制
+     */
+    private Integer z;
+
+    public T zlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+        return (T) this;
+    }
+
+    public Integer zlevel() {
+        return this.zlevel;
+    }
+
+    public T z(Integer z) {
+        this.z = z;
+        return (T) this;
+    }
+
+    public Integer z() {
+        return this.z;
+    }
 
     /**
      * 构造函数
@@ -391,17 +417,18 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * @param calculable
      * @return
      */
-    public T calcuable(Boolean calculable){
+    public T calcuable(Boolean calculable) {
         this.calculable = calculable;
-        return (T)this;
+        return (T) this;
     }
 
     /**
      * 获取calculable值
      */
-    public Boolean calculable(){
+    public Boolean calculable() {
         return this.calculable;
     }
+
     /**
      * 设置showAllSymbol值
      *
@@ -652,5 +679,21 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     public void setCalculable(Boolean calculable) {
         this.calculable = calculable;
+    }
+
+    public Integer getZlevel() {
+        return zlevel;
+    }
+
+    public void setZlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public void setZ(Integer z) {
+        this.z = z;
     }
 }

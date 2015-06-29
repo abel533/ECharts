@@ -110,6 +110,7 @@ public class LinkStyle implements Serializable {
 
     /**
      * 设置type值
+     *
      * @param type
      */
     public void setType(LinkType type) {
