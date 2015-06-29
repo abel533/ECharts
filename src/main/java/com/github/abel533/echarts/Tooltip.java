@@ -67,7 +67,7 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     private Double transitionDuration;
     /**
-     * 2.1.9新增属性，默认true，含义未知
+     * 2.1.9新增属性，默认true，鼠标是否可进入详情气泡中，默认为false，如需详情内交互，如添加链接，按钮，可设置为true。
      *
      * @since 2.1.9
      */

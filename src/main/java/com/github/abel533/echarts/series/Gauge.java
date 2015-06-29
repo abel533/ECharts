@@ -64,10 +64,6 @@ public class Gauge extends Series<Gauge> {
      */
     private Integer max;
     /**
-     * 小数精度，默认为0，无小数点
-     */
-    private Integer precision;
-    /**
      * 分割段数，默认为5，为0时为线性渐变，calculable为true是默认均分100份
      */
     private Integer splitNumber;
@@ -323,23 +319,6 @@ public class Gauge extends Series<Gauge> {
      */
     public Gauge max(Integer max) {
         this.max = max;
-        return this;
-    }
-
-    /**
-     * 获取precision值
-     */
-    public Integer precision() {
-        return this.precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public Gauge precision(Integer precision) {
-        this.precision = precision;
         return this;
     }
 
@@ -650,22 +629,6 @@ public class Gauge extends Series<Gauge> {
      */
     public void setMax(Integer max) {
         this.max = max;
-    }
-
-    /**
-     * 获取precision值
-     */
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
     }
 
     /**
