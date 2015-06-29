@@ -105,6 +105,10 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
      */
     private Boolean showAllSymbol;
+    /**
+     * 重新计算
+     */
+    private Boolean calculable;
 
     /**
      * 构造函数
@@ -382,6 +386,23 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     }
 
     /**
+     * 设置calculable值
+     *
+     * @param calculable
+     * @return
+     */
+    public T calcuable(Boolean calculable){
+        this.calculable = calculable;
+        return (T)this;
+    }
+
+    /**
+     * 获取calculable值
+     */
+    public Boolean calculable(){
+        return this.calculable;
+    }
+    /**
      * 设置showAllSymbol值
      *
      * @param showAllSymbol
@@ -615,5 +636,21 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     public void setShowAllSymbol(Boolean showAllSymbol) {
         this.showAllSymbol = showAllSymbol;
+    }
+
+    /**
+     * 获取calculable值
+     */
+    public Boolean getCalculable() {
+        return calculable;
+    }
+
+    /**
+     * 设置calculable值
+     *
+     * @param calculable
+     */
+    public void setCalculable(Boolean calculable) {
+        this.calculable = calculable;
     }
 }

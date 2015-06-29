@@ -22,25 +22,31 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.code;
+package com.github.abel533.echarts.series;
+
+import com.github.abel533.echarts.code.SeriesType;
 
 /**
+ * 雷达图
+ *
  * @author liuzh
  */
-public enum SeriesType {
-    line,//折线图
-    bar,//柱状图
-    scatter,//散点图
-    k,//K线图
-    pie,//饼图
-    radar,//雷达图
-    chord,//和弦图
-    force,//力导向布局图
-    map,//地图
-    funnel,//漏斗图
-    gauge,//仪表盘
-    island,//孤岛
-    eventRiver,//事件河流图
-    venn,//韦恩图
-    treemap,//树图
+public class Venn extends Series<Venn> {
+
+    /**
+     * 构造函数
+     */
+    public Venn() {
+        this.type(SeriesType.radar);
+    }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    public Venn(String name) {
+        super(name);
+        this.type(SeriesType.venn);
+    }
 }

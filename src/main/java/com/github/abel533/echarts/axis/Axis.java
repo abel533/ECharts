@@ -103,14 +103,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      */
     private SplitArea splitArea;
-    /**
-     * axis.type === 'log'时生效。指定时，axisLabel显示为指数形式，如指定为4时，axisLabel可显示为4²、4³。不指定时，显示为普通形式，如 1,000,000
-     */
-    private Integer logLabelBase;
-    /**
-     * axis.type === 'log'时生效。指明是否使用反向log数轴（从而支持value为负值）。默认自适应，即如果value全为负值，则logPositive自动设为false，否则为true。
-     */
-    private Boolean logPositive;
 
     /**
      * 获取show值
@@ -415,40 +407,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     }
 
     /**
-     * axis.type === 'log'时生效。指定时，axisLabel显示为指数形式，如指定为4时，axisLabel可显示为4²、4³。不指定时，显示为普通形式，如 1,000,000
-     */
-    public Integer logLabelBase() {
-        return this.logLabelBase;
-    }
-
-    /**
-     * 设置logLabelBase值
-     *
-     * @param logLabelBase
-     */
-    public T logLabelBase(Integer logLabelBase) {
-        this.logLabelBase = logLabelBase;
-        return (T) this;
-    }
-
-    /**
-     * axis.type === 'log'时生效。指明是否使用反向log数轴（从而支持value为负值）。默认自适应，即如果value全为负值，则logPositive自动设为false，否则为true。
-     */
-    public Boolean logPositive() {
-        return this.logPositive;
-    }
-
-    /**
-     * 设置logPositive值
-     *
-     * @param logPositive
-     */
-    public T logPositive(boolean logPositive) {
-        this.logPositive = logPositive;
-        return (T) this;
-    }
-
-    /**
      * 添加坐标轴的类目属性
      *
      * @param values
@@ -579,37 +537,5 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     public void setSplitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
-    }
-
-    /**
-     * 获取logLabelBase
-     */
-    public Integer getLogLabelBase() {
-        return logLabelBase;
-    }
-
-    /**
-     * 设置logLabelBase
-     *
-     * @param logLabelBase
-     */
-    public void setLogLabelBase(Integer logLabelBase) {
-        this.logLabelBase = logLabelBase;
-    }
-
-    /**
-     * 获取logPositive
-     */
-    public Boolean getLogPositive() {
-        return logPositive;
-    }
-
-    /**
-     * 设置logPositive
-     *
-     * @param logPositive
-     */
-    public void setLogPositive(Boolean logPositive) {
-        this.logPositive = logPositive;
     }
 }
