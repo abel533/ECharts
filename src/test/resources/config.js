@@ -1,27 +1,3 @@
-/*
- * The MIT License (MIT)
- *
- * Copyright (c) 2014 abel533@gmail.com
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
 /**
  * echarts默认配置项
  *
@@ -126,7 +102,7 @@ define(function() {
             // 标线起始和结束的symbol旋转控制
             //symbolRotate: null,
             //smooth: false,
-            smoothness: 0.2,    // 平滑度
+            smoothRadian: 0.2,    // 平滑弧度
             precision: 2,
             effect: {
                 show: false,
@@ -136,12 +112,6 @@ define(function() {
                 // color: 'gold',
                 // shadowColor: 'rgba(255,215,0,0.8)',
                 // shadowBlur: lineWidth * 2    // 炫光模糊，默认等于scaleSize计算所得
-            },
-            // 边捆绑
-            bundling: {
-                enable: false,
-                // [0, 90]
-                maxTurningAngle: 45
             },
             itemStyle: {
                 normal: {
