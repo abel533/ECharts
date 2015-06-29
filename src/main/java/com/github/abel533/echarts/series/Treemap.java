@@ -100,7 +100,7 @@ public class Treemap extends Series<Treemap> {
      * 构造函数
      */
     public Treemap() {
-        this.type(SeriesType.radar);
+        this.type(SeriesType.treemap);
     }
 
     /**

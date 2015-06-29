@@ -37,7 +37,7 @@ public class Venn extends Series<Venn> {
      * 构造函数
      */
     public Venn() {
-        this.type(SeriesType.radar);
+        this.type(SeriesType.venn);
     }
 
     /**
