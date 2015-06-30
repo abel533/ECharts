@@ -9,14 +9,14 @@ import com.github.abel533.echarts.Option;
  */
 public class OptionExtender {
 
+    private Option option;
+
     /**
      * 在浏览器中查看
      */
     public void view() {
         OptionUtil.browse(option);
     }
-
-    private Option option;
 
     /**
      * 获取option.

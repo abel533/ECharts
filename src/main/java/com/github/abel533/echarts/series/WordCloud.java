@@ -43,60 +43,29 @@ public class WordCloud extends Series<WordCloud> {
     private AutoSize autoSize;
     private Integer textPadding;
 
-    public static class AutoSize implements Serializable {
-        private static final long serialVersionUID = 1L;
-        private Boolean enable;
-        private Integer minSize;
-
-        public AutoSize() {
-        }
-
-        public AutoSize(Boolean enable, Integer minSize) {
-            this.enable = enable;
-            this.minSize = minSize;
-        }
-
-        public AutoSize enable(Boolean enable){
-            this.enable = enable;
-            return this;
-        }
-
-        public Boolean enable(){
-            return this.enable;
-        }
-
-        public AutoSize minSize(Integer minSize){
-            this.minSize = minSize;
-            return this;
-        }
-
-        public Integer minSize(){
-            return this.minSize;
-        }
-
-        public Boolean getEnable() {
-            return enable;
-        }
-
-        public void setEnable(Boolean enable) {
-            this.enable = enable;
-        }
-
-        public Integer getMinSize() {
-            return minSize;
-        }
-
-        public void setMinSize(Integer minSize) {
-            this.minSize = minSize;
-        }
+    /**
+     * 构造函数
+     */
+    public WordCloud() {
+        this.type(SeriesType.wordCloud);
     }
 
-    public WordCloud textPadding(Integer textPadding){
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    public WordCloud(String name) {
+        super(name);
+        this.type(SeriesType.wordCloud);
+    }
+
+    public WordCloud textPadding(Integer textPadding) {
         this.textPadding = textPadding;
         return this;
     }
 
-    public Integer textPadding(){
+    public Integer textPadding() {
         return this.textPadding;
     }
 
@@ -129,7 +98,7 @@ public class WordCloud extends Series<WordCloud> {
     }
 
     public WordCloud textRotation(Integer... textRotation) {
-        if(textRotation == null || textRotation.length == 0){
+        if (textRotation == null || textRotation.length == 0) {
             return this;
         }
         this.textRotation().addAll(Arrays.asList(textRotation));
@@ -149,27 +118,10 @@ public class WordCloud extends Series<WordCloud> {
     }
 
     public AutoSize autoSize() {
-        if(this.autoSize == null){
+        if (this.autoSize == null) {
             this.autoSize = new AutoSize();
         }
         return this.autoSize;
-    }
-
-    /**
-     * 构造函数
-     */
-    public WordCloud() {
-        this.type(SeriesType.wordCloud);
-    }
-
-    /**
-     * 构造函数,参数:name
-     *
-     * @param name
-     */
-    public WordCloud(String name) {
-        super(name);
-        this.type(SeriesType.wordCloud);
     }
 
     public Object[] getCenter() {
@@ -210,5 +162,53 @@ public class WordCloud extends Series<WordCloud> {
 
     public void setTextPadding(Integer textPadding) {
         this.textPadding = textPadding;
+    }
+
+    public static class AutoSize implements Serializable {
+        private static final long serialVersionUID = 1L;
+        private Boolean enable;
+        private Integer minSize;
+
+        public AutoSize() {
+        }
+
+        public AutoSize(Boolean enable, Integer minSize) {
+            this.enable = enable;
+            this.minSize = minSize;
+        }
+
+        public AutoSize enable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+
+        public Boolean enable() {
+            return this.enable;
+        }
+
+        public AutoSize minSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+
+        public Integer minSize() {
+            return this.minSize;
+        }
+
+        public Boolean getEnable() {
+            return enable;
+        }
+
+        public void setEnable(Boolean enable) {
+            this.enable = enable;
+        }
+
+        public Integer getMinSize() {
+            return minSize;
+        }
+
+        public void setMinSize(Integer minSize) {
+            this.minSize = minSize;
+        }
     }
 }

@@ -3,9 +3,6 @@ package com.github.abel533.echarts.data;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 词云

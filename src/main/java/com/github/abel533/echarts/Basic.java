@@ -381,6 +381,10 @@ public abstract class Basic<T> implements Serializable {
         this.padding = padding;
     }
 
+    public void setPadding(Object padding) {
+        this.padding = padding;
+    }
+
     /**
      * 获取itemGap值
      */
@@ -395,10 +399,6 @@ public abstract class Basic<T> implements Serializable {
      */
     public void setItemGap(Integer itemGap) {
         this.itemGap = itemGap;
-    }
-
-    public void setPadding(Object padding) {
-        this.padding = padding;
     }
 
     public Integer getZlevel() {

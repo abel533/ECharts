@@ -102,6 +102,10 @@ public class DataRange extends Basic<DataRange> implements Component {
      * 用于设置dataRange的初始选中范围。calculable为true时有效。
      */
     private RangeData range;
+    /**
+     * 自定义分割方式，支持不等距分割。splitList被指定时，splitNumber将被忽略。
+     */
+    private List<RangeData> splitList;
 
     public DataRange range(RangeData range) {
         this.range = range;
@@ -111,11 +115,6 @@ public class DataRange extends Basic<DataRange> implements Component {
     public RangeData range() {
         return this.range;
     }
-
-    /**
-     * 自定义分割方式，支持不等距分割。splitList被指定时，splitNumber将被忽略。
-     */
-    private List<RangeData> splitList;
 
     public DataRange splitList(RangeData... splitList) {
         if (splitList == null || splitList.length == 0) {

@@ -38,6 +38,13 @@ public class CategoryAxis extends Axis<CategoryAxis> {
     private Boolean boundaryGap;
 
     /**
+     * 构造函数
+     */
+    public CategoryAxis() {
+        this.type(AxisType.category);
+    }
+
+    /**
      * 获取boundaryGap值
      */
     public Boolean boundaryGap() {
@@ -52,13 +59,6 @@ public class CategoryAxis extends Axis<CategoryAxis> {
     public CategoryAxis boundaryGap(Boolean boundaryGap) {
         this.boundaryGap = boundaryGap;
         return this;
-    }
-
-    /**
-     * 构造函数
-     */
-    public CategoryAxis() {
-        this.type(AxisType.category);
     }
 
     /**

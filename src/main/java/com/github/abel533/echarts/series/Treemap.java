@@ -37,6 +37,23 @@ public class Treemap extends Series<Treemap> {
     private Object[] size;
     private String root;
 
+    /**
+     * 构造函数
+     */
+    public Treemap() {
+        this.type(SeriesType.treemap);
+    }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    public Treemap(String name) {
+        super(name);
+        this.type(SeriesType.treemap);
+    }
+
     public Treemap center(Object val1, Object val2) {
         this.center = new Object[2];
         this.center[0] = val1;
@@ -72,23 +89,6 @@ public class Treemap extends Series<Treemap> {
 
     public String root() {
         return this.root;
-    }
-
-    /**
-     * 构造函数
-     */
-    public Treemap() {
-        this.type(SeriesType.treemap);
-    }
-
-    /**
-     * 构造函数,参数:name
-     *
-     * @param name
-     */
-    public Treemap(String name) {
-        super(name);
-        this.type(SeriesType.treemap);
     }
 
     public Object[] getCenter() {

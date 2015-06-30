@@ -16,6 +16,30 @@ public class EventRiver extends Series<EventRiver> {
      * 该事件类别的权重
      */
     private Integer weight;
+    private List<Event> eventList;
+
+    /**
+     * 构造函数
+     */
+    public EventRiver() {
+        this.type(SeriesType.eventRiver);
+    }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    public EventRiver(String name) {
+        super(name);
+        this.type(SeriesType.eventRiver);
+    }
+
+    public EventRiver(String name, Integer weight) {
+        super(name);
+        this.type(SeriesType.eventRiver);
+        this.weight(weight);
+    }
 
     /**
      * 获取weight值
@@ -33,8 +57,6 @@ public class EventRiver extends Series<EventRiver> {
         this.weight = weight;
         return this;
     }
-
-    private List<Event> eventList;
 
     /**
      * 获取eventList值
@@ -68,29 +90,6 @@ public class EventRiver extends Series<EventRiver> {
         }
         this.eventList().addAll(Arrays.asList(values));
         return this;
-    }
-
-    /**
-     * 构造函数
-     */
-    public EventRiver() {
-        this.type(SeriesType.eventRiver);
-    }
-
-    /**
-     * 构造函数,参数:name
-     *
-     * @param name
-     */
-    public EventRiver(String name) {
-        super(name);
-        this.type(SeriesType.eventRiver);
-    }
-
-    public EventRiver(String name, Integer weight) {
-        super(name);
-        this.type(SeriesType.eventRiver);
-        this.weight(weight);
     }
 
     /**

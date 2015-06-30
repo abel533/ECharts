@@ -118,6 +118,21 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     private Integer z;
 
+    /**
+     * 构造函数
+     */
+    protected Series() {
+    }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    protected Series(String name) {
+        this.name = name;
+    }
+
     public T zlevel(Integer zlevel) {
         this.zlevel = zlevel;
         return (T) this;
@@ -134,21 +149,6 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
 
     public Integer z() {
         return this.z;
-    }
-
-    /**
-     * 构造函数
-     */
-    protected Series() {
-    }
-
-    /**
-     * 构造函数,参数:name
-     *
-     * @param name
-     */
-    protected Series(String name) {
-        this.name = name;
     }
 
     /**

@@ -34,11 +34,6 @@ import java.io.Serializable;
 public class Effect implements Serializable {
 
     private static final long serialVersionUID = 2768587032945006946L;
-
-    public static enum Type {
-        scale, bounce
-    }
-
     /**
      * 特效类型，默认为'scale'（放大），可选还有'bounce'（跳动）
      *
@@ -373,5 +368,9 @@ public class Effect implements Serializable {
      */
     public void setBounceDistance(Integer bounceDistance) {
         this.bounceDistance = bounceDistance;
+    }
+
+    public static enum Type {
+        scale, bounce
     }
 }

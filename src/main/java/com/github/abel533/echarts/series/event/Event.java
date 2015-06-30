@@ -15,6 +15,34 @@ public class Event implements Serializable {
     private static final long serialVersionUID = 2936961594659788171L;
 
     private String name;
+    private Integer weight;
+    private List<Evolution> evolution;
+
+    /**
+     * 构造方法
+     */
+    public Event() {
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param name
+     */
+    public Event(String name) {
+        this.name = name;
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param name
+     * @param weight
+     */
+    public Event(String name, Integer weight) {
+        this.name = name;
+        this.weight = weight;
+    }
 
     /**
      * 获取name值
@@ -33,8 +61,6 @@ public class Event implements Serializable {
         return this;
     }
 
-    private Integer weight;
-
     /**
      * 获取weight值
      */
@@ -51,8 +77,6 @@ public class Event implements Serializable {
         this.weight = weight;
         return this;
     }
-
-    private List<Evolution> evolution;
 
     /**
      * 获取evolution值
@@ -86,32 +110,6 @@ public class Event implements Serializable {
         }
         this.evolution().addAll(Arrays.asList(values));
         return this;
-    }
-
-    /**
-     * 构造方法
-     */
-    public Event() {
-    }
-
-    /**
-     * 构造方法
-     *
-     * @param name
-     */
-    public Event(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 构造方法
-     *
-     * @param name
-     * @param weight
-     */
-    public Event(String name, Integer weight) {
-        this.name = name;
-        this.weight = weight;
     }
 
     /**

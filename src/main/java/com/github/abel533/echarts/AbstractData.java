@@ -35,7 +35,12 @@ import java.util.List;
  */
 public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     private static final long serialVersionUID = 1L;
-
+    /**
+     * 标线图形数据
+     *
+     * @see com.github.abel533.echarts.data.PointData
+     */
+    protected List<Object> data;
     /**
      * 是否可点击，默认开启
      */
@@ -46,12 +51,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
      * @since 2.2.0
      */
     private Boolean hoverable;
-    /**
-     * 标线图形数据
-     *
-     * @see com.github.abel533.echarts.data.PointData
-     */
-    protected List<Object> data;
 
     /**
      * 获取data值

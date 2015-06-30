@@ -46,6 +46,18 @@ public class ItemStyle implements Serializable {
      * 强调样式（悬浮时样式）
      */
     private Emphasis emphasis;
+    /**
+     * 面包屑
+     */
+    private Breadcrumb breadcrumb;
+    /**
+     * 二级边框宽度
+     */
+    private Integer childBorderWidth;
+    /**
+     * 二级边框颜色
+     */
+    private Object childBorderColor;
 
     /**
      * 获取normal值
@@ -94,6 +106,8 @@ public class ItemStyle implements Serializable {
         return normal;
     }
 
+    //以下属性是TreeMap特有
+
     /**
      * 设置normal值
      *
@@ -118,20 +132,6 @@ public class ItemStyle implements Serializable {
     public void setEmphasis(Emphasis emphasis) {
         this.emphasis = emphasis;
     }
-
-    //以下属性是TreeMap特有
-    /**
-     * 面包屑
-     */
-    private Breadcrumb breadcrumb;
-    /**
-     * 二级边框宽度
-     */
-    private Integer childBorderWidth;
-    /**
-     * 二级边框颜色
-     */
-    private Object childBorderColor;
 
     public ItemStyle breadcrumb(Breadcrumb breadcrumb) {
         this.breadcrumb = breadcrumb;

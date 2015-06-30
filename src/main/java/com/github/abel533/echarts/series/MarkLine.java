@@ -34,50 +34,6 @@ import com.github.abel533.echarts.style.ItemStyle;
  */
 public class MarkLine extends AbstractData<MarkLine> {
     /**
-     * 边捆绑
-     *
-     * @since 2.2.0
-     */
-    public static class Bundling {
-        private Boolean enable;
-        private Integer maxTurningAngle;
-
-        public Boolean enable() {
-            return this.enable;
-        }
-
-        public Bundling enable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-
-        public Integer maxTurningAngle() {
-            return this.maxTurningAngle;
-        }
-
-        public Bundling maxTurningAngle(Integer maxTurningAngle) {
-            this.maxTurningAngle = maxTurningAngle;
-            return this;
-        }
-
-        public Boolean getEnable() {
-            return enable;
-        }
-
-        public void setEnable(Boolean enable) {
-            this.enable = enable;
-        }
-
-        public Integer getMaxTurningAngle() {
-            return maxTurningAngle;
-        }
-
-        public void setMaxTurningAngle(Integer maxTurningAngle) {
-            this.maxTurningAngle = maxTurningAngle;
-        }
-    }
-
-    /**
      * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
      *
      * @see com.github.abel533.echarts.code.Symbol
@@ -461,5 +417,49 @@ public class MarkLine extends AbstractData<MarkLine> {
 
     public void setBundling(Bundling bundling) {
         this.bundling = bundling;
+    }
+
+    /**
+     * 边捆绑
+     *
+     * @since 2.2.0
+     */
+    public static class Bundling {
+        private Boolean enable;
+        private Integer maxTurningAngle;
+
+        public Boolean enable() {
+            return this.enable;
+        }
+
+        public Bundling enable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+
+        public Integer maxTurningAngle() {
+            return this.maxTurningAngle;
+        }
+
+        public Bundling maxTurningAngle(Integer maxTurningAngle) {
+            this.maxTurningAngle = maxTurningAngle;
+            return this;
+        }
+
+        public Boolean getEnable() {
+            return enable;
+        }
+
+        public void setEnable(Boolean enable) {
+            this.enable = enable;
+        }
+
+        public Integer getMaxTurningAngle() {
+            return maxTurningAngle;
+        }
+
+        public void setMaxTurningAngle(Integer maxTurningAngle) {
+            this.maxTurningAngle = maxTurningAngle;
+        }
     }
 }

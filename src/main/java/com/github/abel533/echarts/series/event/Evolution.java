@@ -16,6 +16,28 @@ public class Evolution implements Serializable {
     private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     private String time;
+    private Integer value;
+    /**
+     * 事件的详细信息
+     */
+    private Detail detail;
+
+    /**
+     * 构造方法
+     */
+    public Evolution() {
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param time
+     * @param value
+     */
+    public Evolution(String time, Integer value) {
+        this.time = time;
+        this.value = value;
+    }
 
     /**
      * 获取time值
@@ -44,8 +66,6 @@ public class Evolution implements Serializable {
         return this;
     }
 
-    private Integer value;
-
     /**
      * 获取value值
      */
@@ -62,11 +82,6 @@ public class Evolution implements Serializable {
         this.value = value;
         return this;
     }
-
-    /**
-     * 事件的详细信息
-     */
-    private Detail detail;
 
     /**
      * 获取detail值
@@ -106,23 +121,6 @@ public class Evolution implements Serializable {
     public Evolution detail(String link, String text, String img) {
         this.detail = new Detail(link, text, img);
         return this;
-    }
-
-    /**
-     * 构造方法
-     */
-    public Evolution() {
-    }
-
-    /**
-     * 构造方法
-     *
-     * @param time
-     * @param value
-     */
-    public Evolution(String time, Integer value) {
-        this.time = time;
-        this.value = value;
     }
 
     /**

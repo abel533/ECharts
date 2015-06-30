@@ -39,79 +39,22 @@ public class Tree extends Series<Tree> {
      * 根节点坐标，支持绝对值（px）、字符和百分比
      */
     private RootLocation rootLocation;
-
-    public Tree rootLocation(RootLocation rootLocation) {
-        this.rootLocation = rootLocation;
-        return this;
-    }
-
-    public RootLocation rootLocation() {
-        if(this.rootLocation == null){
-            this.rootLocation = new RootLocation();
-        }
-        return this.rootLocation;
-    }
-
     /**
      * 层间距
      */
     private Integer layerPadding;
-
-    public Tree layerPadding(Integer layerPadding) {
-        this.layerPadding = layerPadding;
-        return this;
-    }
-
-    public Integer layerPadding() {
-        return this.layerPadding;
-    }
-
     /**
      * 节点间距
      */
     private Integer nodePadding;
-
-    public Tree nodePadding(Integer nodePadding) {
-        this.nodePadding = nodePadding;
-        return this;
-    }
-
-    public Integer nodePadding() {
-        return this.nodePadding;
-    }
-
     /**
      * 树的方向可选：'vertical' | 'horizontal' | 'radial'
      */
     private Orient orient;
-
-    public Tree orient(Orient orient) {
-        this.orient = orient;
-        return this;
-    }
-
-    public Orient orient() {
-        return this.orient;
-    }
-
     /**
      * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
      */
     private Object roam;
-
-    public Tree roam(Boolean roam) {
-        this.roam = roam;
-        return this;
-    }
-
-    public Tree roam(Roam roam) {
-        this.roam = roam;
-        return this;
-    }
-
-    public Object roam() {
-        return this.roam;
-    }
 
     /**
      * 构造函数
@@ -128,6 +71,59 @@ public class Tree extends Series<Tree> {
     public Tree(String name) {
         super(name);
         this.type(SeriesType.tree);
+    }
+
+    public Tree rootLocation(RootLocation rootLocation) {
+        this.rootLocation = rootLocation;
+        return this;
+    }
+
+    public RootLocation rootLocation() {
+        if (this.rootLocation == null) {
+            this.rootLocation = new RootLocation();
+        }
+        return this.rootLocation;
+    }
+
+    public Tree layerPadding(Integer layerPadding) {
+        this.layerPadding = layerPadding;
+        return this;
+    }
+
+    public Integer layerPadding() {
+        return this.layerPadding;
+    }
+
+    public Tree nodePadding(Integer nodePadding) {
+        this.nodePadding = nodePadding;
+        return this;
+    }
+
+    public Integer nodePadding() {
+        return this.nodePadding;
+    }
+
+    public Tree orient(Orient orient) {
+        this.orient = orient;
+        return this;
+    }
+
+    public Orient orient() {
+        return this.orient;
+    }
+
+    public Tree roam(Boolean roam) {
+        this.roam = roam;
+        return this;
+    }
+
+    public Tree roam(Roam roam) {
+        this.roam = roam;
+        return this;
+    }
+
+    public Object roam() {
+        return this.roam;
     }
 
     public Integer getLayerPadding() {

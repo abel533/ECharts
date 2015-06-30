@@ -34,8 +34,6 @@ import java.io.Serializable;
  */
 public class Feature implements Serializable {
 
-    private static final long serialVersionUID = 8546465308711709471L;
-
     /**
      * 获取DataView值
      */
@@ -60,7 +58,7 @@ public class Feature implements Serializable {
      * 获取Restore值
      */
     public static final Restore restore = new Restore();
-
+    private static final long serialVersionUID = 8546465308711709471L;
     /**
      * 是否显示
      */

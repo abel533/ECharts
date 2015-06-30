@@ -34,6 +34,11 @@ import java.util.Map;
  */
 public class RoamController extends Basic<RoamController> implements Component {
     private Integer width;
+    private Integer height;
+    private String fillerColor;
+    private String handleColor;
+    private Integer step;
+    private Map<String, Boolean> mapTypeControl;
 
     /**
      * 获取width值
@@ -52,8 +57,6 @@ public class RoamController extends Basic<RoamController> implements Component {
         return this;
     }
 
-    private Integer height;
-
     /**
      * 获取height值
      */
@@ -70,8 +73,6 @@ public class RoamController extends Basic<RoamController> implements Component {
         this.height = height;
         return this;
     }
-
-    private String fillerColor;
 
     /**
      * 获取fillerColor值
@@ -90,8 +91,6 @@ public class RoamController extends Basic<RoamController> implements Component {
         return this;
     }
 
-    private String handleColor;
-
     /**
      * 获取handleColor值
      */
@@ -109,8 +108,6 @@ public class RoamController extends Basic<RoamController> implements Component {
         return this;
     }
 
-    private Integer step;
-
     /**
      * 获取step值
      */
@@ -127,8 +124,6 @@ public class RoamController extends Basic<RoamController> implements Component {
         this.step = step;
         return this;
     }
-
-    private Map<String, Boolean> mapTypeControl;
 
     /**
      * 获取mapTypeControl值

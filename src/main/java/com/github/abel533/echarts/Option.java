@@ -734,12 +734,12 @@ public class Option implements Serializable {
     }
 
     /**
-     * 设置roamController值
+     * 设置dataZoom值
      *
-     * @param roamController
+     * @param dataZoom
      */
-    public void setRoamController(RoamController roamController) {
-        this.roamController = roamController;
+    public void setDataZoom(DataZoom dataZoom) {
+        this.dataZoom = dataZoom;
     }
 
     /**
@@ -750,12 +750,12 @@ public class Option implements Serializable {
     }
 
     /**
-     * 设置dataZoom值
+     * 设置roamController值
      *
-     * @param dataZoom
+     * @param roamController
      */
-    public void setDataZoom(DataZoom dataZoom) {
-        this.dataZoom = dataZoom;
+    public void setRoamController(RoamController roamController) {
+        this.roamController = roamController;
     }
 
     /**
