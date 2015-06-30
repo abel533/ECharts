@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2014 abel533@gmail.com
+ * Copyright (c) 2014-2015 abel533@gmail.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -372,16 +372,16 @@ public abstract class Basic<T> implements Serializable {
         return padding;
     }
 
+    public void setPadding(Object padding) {
+        this.padding = padding;
+    }
+
     /**
      * 设置padding值
      *
      * @param padding
      */
     public void setPadding(Integer padding) {
-        this.padding = padding;
-    }
-
-    public void setPadding(Object padding) {
         this.padding = padding;
     }
 

@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2014 abel533@gmail.com
+ * Copyright (c) 2014-2015 abel533@gmail.com
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -42,27 +42,6 @@ import java.util.List;
  * @author liuzh
  */
 public class AccessTest {
-    //数据对象
-    class AccessData {
-        //日期
-        private String date;
-        //访问量
-        private Integer nums;
-
-        AccessData(String date, Integer nums) {
-            this.date = date;
-            this.nums = nums;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public Integer getNums() {
-            return nums;
-        }
-    }
-
     /**
      * 模拟从数据库获取数据
      *
@@ -116,5 +95,26 @@ public class AccessTest {
         //打开浏览器预览
         option.exportToHtml("access.html");
         option.view();
+    }
+
+    //数据对象
+    class AccessData {
+        //日期
+        private String date;
+        //访问量
+        private Integer nums;
+
+        AccessData(String date, Integer nums) {
+            this.date = date;
+            this.nums = nums;
+        }
+
+        public String getDate() {
+            return date;
+        }
+
+        public Integer getNums() {
+            return nums;
+        }
     }
 }
