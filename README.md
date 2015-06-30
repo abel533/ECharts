@@ -20,6 +20,10 @@
 </dependency>
 ```
 
+##下载地址
+
+[ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
+
 ##项目支持
 
 ###图表类型
