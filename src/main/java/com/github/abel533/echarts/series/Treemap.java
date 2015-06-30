@@ -27,7 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 
 /**
- * 雷达图
+ * 矩形树图
  *
  * @author liuzh
  */

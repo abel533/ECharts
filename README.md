@@ -24,6 +24,7 @@
 
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
+[API文档-2.2.4](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/2.2.4/ECharts-2.2.4-javadoc.jar) 下载后解压即可
 ##项目支持
 
 ###图表类型

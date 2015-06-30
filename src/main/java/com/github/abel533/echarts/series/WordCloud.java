@@ -32,7 +32,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 雷达图
+ * 词云图
  *
  * @author liuzh
  */

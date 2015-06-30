@@ -30,7 +30,7 @@ import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.other.RootLocation;
 
 /**
- * 雷达图
+ * 树图
  *
  * @author liuzh
  */
