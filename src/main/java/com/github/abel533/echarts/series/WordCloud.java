@@ -27,6 +27,9 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 雷达图
@@ -36,8 +39,9 @@ import java.io.Serializable;
 public class WordCloud extends Series<WordCloud> {
     private Object[] center;
     private Object[] size;
-    private Integer[] textRotation;
+    private List<Integer> textRotation;
     private AutoSize autoSize;
+    private Integer textPadding;
 
     public static class AutoSize implements Serializable {
         private static final long serialVersionUID = 1L;
@@ -87,6 +91,15 @@ public class WordCloud extends Series<WordCloud> {
         }
     }
 
+    public WordCloud textPadding(Integer textPadding){
+        this.textPadding = textPadding;
+        return this;
+    }
+
+    public Integer textPadding(){
+        return this.textPadding;
+    }
+
     public WordCloud center(Object val1, Object val2) {
         this.center = new Object[2];
         this.center[0] = val1;
@@ -115,16 +128,17 @@ public class WordCloud extends Series<WordCloud> {
         return this.size;
     }
 
-    public WordCloud textRotation(Integer val1, Integer val2) {
-        this.textRotation = new Integer[2];
-        this.textRotation[0] = val1;
-        this.textRotation[1] = val2;
+    public WordCloud textRotation(Integer... textRotation) {
+        if(textRotation == null || textRotation.length == 0){
+            return this;
+        }
+        this.textRotation().addAll(Arrays.asList(textRotation));
         return this;
     }
 
-    public Integer[] textRotation() {
+    public List<Integer> textRotation() {
         if (this.textRotation == null) {
-            this.textRotation = new Integer[2];
+            this.textRotation = new LinkedList<Integer>();
         }
         return this.textRotation;
     }
@@ -135,6 +149,9 @@ public class WordCloud extends Series<WordCloud> {
     }
 
     public AutoSize autoSize() {
+        if(this.autoSize == null){
+            this.autoSize = new AutoSize();
+        }
         return this.autoSize;
     }
 
@@ -153,5 +170,45 @@ public class WordCloud extends Series<WordCloud> {
     public WordCloud(String name) {
         super(name);
         this.type(SeriesType.wordCloud);
+    }
+
+    public Object[] getCenter() {
+        return center;
+    }
+
+    public void setCenter(Object[] center) {
+        this.center = center;
+    }
+
+    public Object[] getSize() {
+        return size;
+    }
+
+    public void setSize(Object[] size) {
+        this.size = size;
+    }
+
+    public List<Integer> getTextRotation() {
+        return textRotation;
+    }
+
+    public void setTextRotation(List<Integer> textRotation) {
+        this.textRotation = textRotation;
+    }
+
+    public AutoSize getAutoSize() {
+        return autoSize;
+    }
+
+    public void setAutoSize(AutoSize autoSize) {
+        this.autoSize = autoSize;
+    }
+
+    public Integer getTextPadding() {
+        return textPadding;
+    }
+
+    public void setTextPadding(Integer textPadding) {
+        this.textPadding = textPadding;
     }
 }
