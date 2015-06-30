@@ -16,56 +16,59 @@ public class RootLocation implements Serializable {
     private Object x;
     private Object y;
 
+    public RootLocation() {
+    }
+
     public RootLocation(Object x, Object y) {
         this.x = x;
         this.y = y;
     }
 
-    private RootLocation x(X x) {
+    public RootLocation x(X x) {
         this.x = x;
         return this;
     }
 
-    private RootLocation x(Integer x) {
+    public RootLocation x(Integer x) {
         this.x = x;
         return this;
     }
 
-    private RootLocation x(String x) {
+    public RootLocation x(String x) {
         this.x = x;
         return this;
     }
 
-    private RootLocation x(Object x) {
+    public RootLocation x(Object x) {
         this.x = x;
         return this;
     }
 
-    private Object x() {
+    public Object x() {
         return this.x;
     }
 
-    private RootLocation y(Y y) {
+    public RootLocation y(Y y) {
         this.y = y;
         return this;
     }
 
-    private RootLocation y(Integer y) {
+    public RootLocation y(Integer y) {
         this.y = y;
         return this;
     }
 
-    private RootLocation y(String y) {
+    public RootLocation y(String y) {
         this.y = y;
         return this;
     }
 
-    private RootLocation y(Object y) {
+    public RootLocation y(Object y) {
         this.y = y;
         return this;
     }
 
-    private Object y() {
+    public Object y() {
         return this.y;
     }
 

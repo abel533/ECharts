@@ -46,6 +46,9 @@ public class Tree extends Series<Tree> {
     }
 
     public RootLocation rootLocation() {
+        if(this.rootLocation == null){
+            this.rootLocation = new RootLocation();
+        }
         return this.rootLocation;
     }
 

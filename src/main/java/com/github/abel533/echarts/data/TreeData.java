@@ -13,23 +13,23 @@ import java.util.List;
  * @author liuzh
  * @since 2015-06-29
  */
-public class TreemapData implements Serializable {
+public class TreeData implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
     private Integer value;
-    private List<TreemapData> children;
+    private List<TreeData> children;
     private ItemStyle itemStyle;
 
-    public TreemapData() {
+    public TreeData() {
     }
 
-    public TreemapData(String name, Integer value) {
+    public TreeData(String name, Integer value) {
         this.name = name;
         this.value = value;
     }
 
-    public TreemapData name(String name) {
+    public TreeData name(String name) {
         this.name = name;
         return this;
     }
@@ -38,7 +38,7 @@ public class TreemapData implements Serializable {
         return this.name;
     }
 
-    public TreemapData value(Integer value) {
+    public TreeData value(Integer value) {
         this.value = value;
         return this;
     }
@@ -47,22 +47,22 @@ public class TreemapData implements Serializable {
         return this.value;
     }
 
-    public TreemapData children(TreemapData... treemapDatas) {
-        if (treemapDatas == null || treemapDatas.length == 0) {
+    public TreeData children(TreeData... treeDatas) {
+        if (treeDatas == null || treeDatas.length == 0) {
             return this;
         }
-        this.children().addAll(Arrays.asList(treemapDatas));
+        this.children().addAll(Arrays.asList(treeDatas));
         return this;
     }
 
-    public List<TreemapData> children() {
+    public List<TreeData> children() {
         if (this.children == null) {
-            this.children = new LinkedList<TreemapData>();
+            this.children = new LinkedList<TreeData>();
         }
         return this.children;
     }
 
-    public TreemapData itemStyle(ItemStyle itemStyle) {
+    public TreeData itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return this;
     }
@@ -90,11 +90,11 @@ public class TreemapData implements Serializable {
         this.value = value;
     }
 
-    public List<TreemapData> getChildren() {
+    public List<TreeData> getChildren() {
         return children;
     }
 
-    public void setChildren(List<TreemapData> children) {
+    public void setChildren(List<TreeData> children) {
         this.children = children;
     }
 
