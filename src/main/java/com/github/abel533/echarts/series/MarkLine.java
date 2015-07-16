@@ -395,26 +395,50 @@ public class MarkLine extends AbstractData<MarkLine> {
         this.smooth = smooth;
     }
 
+    /**
+     * 获取smoothness值
+     */
     public Double getSmoothness() {
         return smoothness;
     }
 
+    /**
+     * 设置smoothness值
+     *
+     * @param smoothness
+     */
     public void setSmoothness(Double smoothness) {
         this.smoothness = smoothness;
     }
 
+    /**
+     * 获取precision值
+     */
     public Integer getPrecision() {
         return precision;
     }
 
+    /**
+     * 设置precision值
+     *
+     * @param precision
+     */
     public void setPrecision(Integer precision) {
         this.precision = precision;
     }
 
+    /**
+     * 获取bundling值
+     */
     public Bundling getBundling() {
         return bundling;
     }
 
+    /**
+     * 设置bundling值
+     *
+     * @param bundling
+     */
     public void setBundling(Bundling bundling) {
         this.bundling = bundling;
     }
@@ -428,37 +452,69 @@ public class MarkLine extends AbstractData<MarkLine> {
         private Boolean enable;
         private Integer maxTurningAngle;
 
-        public Boolean enable() {
-            return this.enable;
-        }
+        /**
+         * 获取enable值
+         */
+	public Boolean enable() {
+        return this.enable;
+    }
 
+        /**
+         * 设置enable值
+         *
+         * @param enable
+         */
         public Bundling enable(Boolean enable) {
             this.enable = enable;
-            return this;
-        }
+        return this;
+    }
 
-        public Integer maxTurningAngle() {
-            return this.maxTurningAngle;
-        }
+        /**
+         * 获取maxTurningAngle值
+         */
+	public Integer maxTurningAngle() {
+        return this.maxTurningAngle;
+    }
 
+        /**
+         * 设置maxTurningAngle值
+         *
+         * @param maxTurningAngle
+         */
         public Bundling maxTurningAngle(Integer maxTurningAngle) {
             this.maxTurningAngle = maxTurningAngle;
             return this;
         }
 
-        public Boolean getEnable() {
-            return enable;
-        }
+	/**
+     * 获取enable值
+     */
+    public Boolean getEnable() {
+        return enable;
+    }
 
-        public void setEnable(Boolean enable) {
-            this.enable = enable;
-        }
+        /**
+         * 设置enable值
+         *
+	 * @param enable
+	 */
+	public void setEnable(Boolean enable) {
+        this.enable = enable;
+    }
 
-        public Integer getMaxTurningAngle() {
-            return maxTurningAngle;
-        }
+        /**
+         * 获取maxTurningAngle值
+	 */
+	public Integer getMaxTurningAngle() {
+        return maxTurningAngle;
+    }
 
-        public void setMaxTurningAngle(Integer maxTurningAngle) {
+        /**
+         * 设置maxTurningAngle值
+         *
+         * @param maxTurningAngle
+         */
+	public void setMaxTurningAngle(Integer maxTurningAngle) {
             this.maxTurningAngle = maxTurningAngle;
         }
     }

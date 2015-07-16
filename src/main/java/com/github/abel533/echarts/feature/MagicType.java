@@ -100,19 +100,35 @@ public class MagicType extends Feature {
     public static class Option {
         private Funnel funnel;
 
+        /**
+         * 设置funnel值
+         *
+         * @param funnel
+         */
         public Option funnel(Funnel funnel) {
             this.funnel = funnel;
             return this;
         }
 
+        /**
+         * 获取funnel值
+         */
         public Funnel funnel() {
-            return this.funnel;
-        }
+        return this.funnel;
+    }
 
-        public Funnel getFunnel() {
-            return funnel;
-        }
+        /**
+         * 获取funnel值
+         */
+	public Funnel getFunnel() {
+        return funnel;
+    }
 
+        /**
+         * 设置funnel值
+         *
+         * @param funnel
+         */
         public void setFunnel(Funnel funnel) {
             this.funnel = funnel;
         }

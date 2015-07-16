@@ -170,10 +170,18 @@ public class Option implements Serializable {
     private List<Option> options;
     private ItemStyle itemStyle;
 
+    /**
+     * 获取symbolList值
+     */
     public List<Symbol> symbolList() {
         return this.symbolList;
     }
 
+    /**
+     * 设置symbolList值
+     *
+     * @param symbolList
+     */
     public Option symbolList(List<Symbol> symbolList) {
         if (this.symbolList == null) {
             this.symbolList = new LinkedList<Symbol>();
@@ -182,6 +190,11 @@ public class Option implements Serializable {
         return this;
     }
 
+    /**
+     * 设置symbolList值
+     *
+     * @param symbolList
+     */
     public Option symbolList(Symbol... symbolList) {
         if (symbolList == null || symbolList.length == 0) {
             return this;
@@ -190,94 +203,174 @@ public class Option implements Serializable {
         return this;
     }
 
+    /**
+     * 获取calculableColor值
+     */
     public String calculableColor() {
         return this.calculableColor;
     }
 
+    /**
+     * 设置calculableColor值
+     *
+     * @param calculableColor
+     */
     public Option calculableColor(String calculableColor) {
         this.calculableColor = calculableColor;
         return this;
     }
 
+    /**
+     * 获取calculableHolderColo值
+     */
     public String calculableHolderColo() {
         return this.calculableHolderColo;
     }
 
+    /**
+     * 设置calculableHolderColo值
+     *
+     * @param calculableHolderColo
+     */
     public Option calculableHolderColo(String calculableHolderColo) {
         this.calculableHolderColo = calculableHolderColo;
         return this;
     }
 
-    public String nameConnector() {
+    /**
+     * 获取nameConnector值
+     */
+	public String nameConnector() {
         return this.nameConnector;
     }
 
+    /**
+     * 设置nameConnector值
+     *
+     * @param nameConnector
+     */
     public Option nameConnector(String nameConnector) {
         this.nameConnector = nameConnector;
         return this;
     }
 
-    public String valueConnector() {
+    /**
+     * 获取valueConnector值
+     */
+	public String valueConnector() {
         return this.valueConnector;
     }
 
+    /**
+     * 设置valueConnector值
+     *
+     * @param valueConnector
+     */
     public Option valueConnector(String valueConnector) {
         this.valueConnector = valueConnector;
         return this;
     }
 
-    public Boolean addDataAnimation() {
+    /**
+     * 获取addDataAnimation值
+     */
+	public Boolean addDataAnimation() {
         return this.addDataAnimation;
     }
 
-    public Option addDataAnimation(Boolean addDataAnimation) {
+    /**
+     * 设置addDataAnimation值
+     *
+     * @param addDataAnimation
+     */
+	public Option addDataAnimation(Boolean addDataAnimation) {
         this.addDataAnimation = addDataAnimation;
         return this;
     }
 
-    public Integer animationThreshold() {
+    /**
+     * 获取animationThreshold值
+     */
+	public Integer animationThreshold() {
         return this.animationThreshold;
     }
 
+    /**
+     * 设置animationThreshold值
+     *
+     * @param animationThreshold
+     */
     public Option animationThreshold(Integer animationThreshold) {
         this.animationThreshold = animationThreshold;
         return this;
     }
 
-    public Integer animationDuration() {
+    /**
+     * 获取animationDuration值
+     */
+	public Integer animationDuration() {
         return this.animationDuration;
     }
 
+    /**
+     * 设置animationDuration值
+     *
+     * @param animationDuration
+     */
     public Option animationDuration(Integer animationDuration) {
         this.animationDuration = animationDuration;
         return this;
     }
 
-    public Integer animationDurationUpdate() {
+    /**
+     * 获取animationDurationUpdate值
+     */
+	public Integer animationDurationUpdate() {
         return this.animationDurationUpdate;
     }
 
+    /**
+     * 设置animationDurationUpdate值
+     *
+     * @param animationDurationUpdate
+     */
     public Option animationDurationUpdate(Integer animationDurationUpdate) {
         this.animationDurationUpdate = animationDurationUpdate;
         return this;
     }
 
-    public Easing animationEasing() {
+	/**
+     * 获取animationEasing值
+	 */
+	public Easing animationEasing() {
         return this.animationEasing;
     }
 
-    public Option animationEasing(Easing animationEasing) {
+    /**
+     * 设置animationEasing值
+     *
+     * @param animationEasing
+     */
+	public Option animationEasing(Easing animationEasing) {
         this.animationEasing = animationEasing;
         return this;
     }
 
-    public NoDataLoadingOption noDataLoadingOption() {
+    /**
+     * 获取noDataLoadingOption值
+     */
+	public NoDataLoadingOption noDataLoadingOption() {
         if (this.noDataLoadingOption == null) {
             this.noDataLoadingOption = new NoDataLoadingOption();
         }
         return this.noDataLoadingOption;
     }
 
+    /**
+     * 设置noDataLoadingOption值
+     *
+     * @param noDataLoadingOption
+     */
     public Option noDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
         this.noDataLoadingOption = noDataLoadingOption;
         return this;
@@ -1109,91 +1202,179 @@ public class Option implements Serializable {
         this.itemStyle = itemStyle;
     }
 
+	/**
+     * 获取symbolList值
+     */
     public List<Symbol> getSymbolList() {
         return symbolList;
     }
 
-    public void setSymbolList(List<Symbol> symbolList) {
+    /**
+     * 设置symbolList值
+     *
+     * @param symbolList
+	 */
+	public void setSymbolList(List<Symbol> symbolList) {
         this.symbolList = symbolList;
     }
 
+	/**
+     * 获取calculableColor值
+     */
     public String getCalculableColor() {
         return calculableColor;
     }
 
-    public void setCalculableColor(String calculableColor) {
+    /**
+     * 设置calculableColor值
+     *
+     * @param calculableColor
+     */
+	public void setCalculableColor(String calculableColor) {
         this.calculableColor = calculableColor;
     }
 
-    public String getCalculableHolderColo() {
+	/**
+     * 获取calculableHolderColo值
+	 */
+	public String getCalculableHolderColo() {
         return calculableHolderColo;
     }
 
-    public void setCalculableHolderColo(String calculableHolderColo) {
+    /**
+     * 设置calculableHolderColo值
+     *
+     * @param calculableHolderColo
+     */
+	public void setCalculableHolderColo(String calculableHolderColo) {
         this.calculableHolderColo = calculableHolderColo;
     }
 
+	/**
+     * 获取nameConnector值
+     */
     public String getNameConnector() {
         return nameConnector;
     }
 
-    public void setNameConnector(String nameConnector) {
+    /**
+     * 设置nameConnector值
+     *
+     * @param nameConnector
+	 */
+	public void setNameConnector(String nameConnector) {
         this.nameConnector = nameConnector;
     }
 
+	/**
+     * 获取valueConnector值
+     */
     public String getValueConnector() {
         return valueConnector;
     }
 
-    public void setValueConnector(String valueConnector) {
+    /**
+     * 设置valueConnector值
+     *
+     * @param valueConnector
+     */
+	public void setValueConnector(String valueConnector) {
         this.valueConnector = valueConnector;
     }
 
+	/**
+     * 获取addDataAnimation值
+     */
     public Boolean getAddDataAnimation() {
         return addDataAnimation;
     }
 
-    public void setAddDataAnimation(Boolean addDataAnimation) {
+    /**
+     * 设置addDataAnimation值
+     *
+     * @param addDataAnimation
+     */
+	public void setAddDataAnimation(Boolean addDataAnimation) {
         this.addDataAnimation = addDataAnimation;
     }
 
+	/**
+     * 获取animationThreshold值
+	 */
     public Integer getAnimationThreshold() {
         return animationThreshold;
     }
 
-    public void setAnimationThreshold(Integer animationThreshold) {
+    /**
+     * 设置animationThreshold值
+     *
+     * @param animationThreshold
+     */
+	public void setAnimationThreshold(Integer animationThreshold) {
         this.animationThreshold = animationThreshold;
     }
 
+	/**
+     * 获取animationDuration值
+     */
     public Integer getAnimationDuration() {
         return animationDuration;
     }
 
-    public void setAnimationDuration(Integer animationDuration) {
+    /**
+     * 设置animationDuration值
+     *
+     * @param animationDuration
+     */
+	public void setAnimationDuration(Integer animationDuration) {
         this.animationDuration = animationDuration;
     }
 
-    public Integer getAnimationDurationUpdate() {
+    /**
+     * 获取animationDurationUpdate值
+	 */
+	public Integer getAnimationDurationUpdate() {
         return animationDurationUpdate;
     }
 
-    public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
+    /**
+     * 设置animationDurationUpdate值
+     *
+     * @param animationDurationUpdate
+     */
+	public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
         this.animationDurationUpdate = animationDurationUpdate;
     }
 
+	/**
+     * 获取animationEasing值
+     */
     public Easing getAnimationEasing() {
         return animationEasing;
     }
 
-    public void setAnimationEasing(Easing animationEasing) {
+    /**
+     * 设置animationEasing值
+     *
+     * @param animationEasing
+     */
+	public void setAnimationEasing(Easing animationEasing) {
         this.animationEasing = animationEasing;
     }
 
-    public NoDataLoadingOption getNoDataLoadingOption() {
+    /**
+     * 获取noDataLoadingOption值
+     */
+	public NoDataLoadingOption getNoDataLoadingOption() {
         return noDataLoadingOption;
     }
 
-    public void setNoDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
+    /**
+     * 设置noDataLoadingOption值
+     *
+     * @param noDataLoadingOption
+     */
+	public void setNoDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
         this.noDataLoadingOption = noDataLoadingOption;
     }
 }

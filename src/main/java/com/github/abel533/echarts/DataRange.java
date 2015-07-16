@@ -114,29 +114,55 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     private Object selectedMode;
 
+    /**
+     * 获取selectedMode值
+     */
     public Object selectedMode() {
         return this.selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public DataRange selectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public DataRange selectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
         return this;
     }
 
+    /**
+     * 设置range值
+     *
+     * @param range
+     */
     public DataRange range(RangeData range) {
         this.range = range;
         return this;
     }
 
-    public RangeData range() {
+    /**
+     * 获取range值
+     */
+	public RangeData range() {
         return this.range;
     }
 
+    /**
+     * 设置splitList值
+     *
+     * @param splitList
+     */
     public DataRange splitList(RangeData... splitList) {
         if (splitList == null || splitList.length == 0) {
             return this;
@@ -145,7 +171,10 @@ public class DataRange extends Basic<DataRange> implements Component {
         return this;
     }
 
-    public List<RangeData> splitList() {
+    /**
+     * 获取splitList值
+     */
+	public List<RangeData> splitList() {
         if (this.splitList == null) {
             this.splitList = new ArrayList<RangeData>();
         }
@@ -651,26 +680,50 @@ public class DataRange extends Basic<DataRange> implements Component {
         this.hoverLink = hoverLink;
     }
 
-    public RangeData getRange() {
+    /**
+     * 获取range值
+     */
+	public RangeData getRange() {
         return range;
     }
 
+    /**
+     * 设置range值
+     *
+     * @param range
+     */
     public void setRange(RangeData range) {
         this.range = range;
     }
 
+    /**
+     * 获取splitList值
+     */
     public List<RangeData> getSplitList() {
         return splitList;
     }
 
+    /**
+     * 设置splitList值
+     *
+     * @param splitList
+     */
     public void setSplitList(List<RangeData> splitList) {
         this.splitList = splitList;
     }
 
-    public Object getSelectedMode() {
+    /**
+     * 获取selectedMode值
+     */
+	public Object getSelectedMode() {
         return selectedMode;
     }
 
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
     public void setSelectedMode(Object selectedMode) {
         this.selectedMode = selectedMode;
     }

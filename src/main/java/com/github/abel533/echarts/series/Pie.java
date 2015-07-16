@@ -284,51 +284,99 @@ public class Pie extends Series<Pie> {
         this.radius = radius;
     }
 
+    /**
+     * 获取startAngle值
+     */
     public Integer getStartAngle() {
         return startAngle;
     }
 
+    /**
+     * 设置startAngle值
+     *
+     * @param startAngle
+     */
     public void setStartAngle(Integer startAngle) {
         this.startAngle = startAngle;
     }
 
+    /**
+     * 获取minAngle值
+     */
     public Integer getMinAngle() {
         return minAngle;
     }
 
+    /**
+     * 设置minAngle值
+     *
+     * @param minAngle
+     */
     public void setMinAngle(Integer minAngle) {
         this.minAngle = minAngle;
     }
 
+    /**
+     * 获取clockWise值
+     */
     public Boolean getClockWise() {
         return clockWise;
     }
 
+    /**
+     * 设置clockWise值
+     *
+     * @param clockWise
+     */
     public void setClockWise(Boolean clockWise) {
         this.clockWise = clockWise;
     }
 
-    public RoseType getRoseType() {
+    /**
+     * 获取roseType值
+     */
+	public RoseType getRoseType() {
         return roseType;
     }
 
+    /**
+     * 设置roseType值
+     *
+     * @param roseType
+     */
     public void setRoseType(RoseType roseType) {
         this.roseType = roseType;
     }
 
-    public Integer getSelectedOffset() {
+    /**
+     * 获取selectedOffset值
+     */
+	public Integer getSelectedOffset() {
         return selectedOffset;
     }
 
+    /**
+     * 设置selectedOffset值
+     *
+     * @param selectedOffset
+     */
     public void setSelectedOffset(Integer selectedOffset) {
         this.selectedOffset = selectedOffset;
     }
 
-    public SelectedMode getSelectedMode() {
+    /**
+     * 获取selectedMode值
+     */
+	public SelectedMode getSelectedMode() {
         return selectedMode;
     }
 
-    public void setSelectedMode(SelectedMode selectedMode) {
+    /**
+     * 设置selectedMode值
+     *
+     * @param selectedMode
+     */
+	public void setSelectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
     }
 }

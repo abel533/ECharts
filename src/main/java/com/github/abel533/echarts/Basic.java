@@ -82,20 +82,36 @@ public abstract class Basic<T> implements Serializable {
      */
     private Integer z;
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public T zlevel(Integer zlevel) {
         this.zlevel = zlevel;
         return (T) this;
     }
 
+    /**
+     * 获取zlevel值
+     */
     public Integer zlevel() {
         return this.zlevel;
     }
 
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
     public T z(Integer z) {
         this.z = z;
         return (T) this;
     }
 
+    /**
+     * 获取z值
+     */
     public Integer z() {
         return this.z;
     }
@@ -372,7 +388,12 @@ public abstract class Basic<T> implements Serializable {
         return padding;
     }
 
-    public void setPadding(Object padding) {
+    /**
+     * 设置padding值
+     *
+     * @param padding
+     */
+    public void setPadding(Integer padding) {
         this.padding = padding;
     }
 
@@ -381,7 +402,7 @@ public abstract class Basic<T> implements Serializable {
      *
      * @param padding
      */
-    public void setPadding(Integer padding) {
+    public void setPadding(Object padding) {
         this.padding = padding;
     }
 
@@ -401,19 +422,35 @@ public abstract class Basic<T> implements Serializable {
         this.itemGap = itemGap;
     }
 
-    public Integer getZlevel() {
+    /**
+     * 获取zlevel值
+     */
+	public Integer getZlevel() {
         return zlevel;
     }
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public void setZlevel(Integer zlevel) {
         this.zlevel = zlevel;
     }
 
-    public Integer getZ() {
+	/**
+     * 获取z值
+	 */
+	public Integer getZ() {
         return z;
     }
 
-    public void setZ(Integer z) {
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
+	public void setZ(Integer z) {
         this.z = z;
     }
 }

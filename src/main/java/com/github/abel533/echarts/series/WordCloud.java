@@ -60,15 +60,29 @@ public class WordCloud extends Series<WordCloud> {
         this.type(SeriesType.wordCloud);
     }
 
+    /**
+     * 设置textPadding值
+     *
+     * @param textPadding
+     */
     public WordCloud textPadding(Integer textPadding) {
         this.textPadding = textPadding;
         return this;
     }
 
+    /**
+     * 获取textPadding值
+     */
     public Integer textPadding() {
         return this.textPadding;
     }
 
+    /**
+     * 设置val1,val2值
+     *
+     * @param val1
+     * @param val2
+     */
     public WordCloud center(Object val1, Object val2) {
         this.center = new Object[2];
         this.center[0] = val1;
@@ -76,6 +90,9 @@ public class WordCloud extends Series<WordCloud> {
         return this;
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] center() {
         if (this.center == null) {
             this.center = new Object[2];
@@ -83,6 +100,12 @@ public class WordCloud extends Series<WordCloud> {
         return this.center;
     }
 
+    /**
+     * 设置val1,val2值
+     *
+     * @param val1
+     * @param val2
+     */
     public WordCloud size(Object val1, Object val2) {
         this.size = new Object[2];
         this.size[0] = val1;
@@ -90,13 +113,21 @@ public class WordCloud extends Series<WordCloud> {
         return this;
     }
 
-    public Object[] size() {
+    /**
+     * 获取size值
+	 */
+	public Object[] size() {
         if (this.size == null) {
             this.size = new Object[2];
         }
         return this.size;
     }
 
+    /**
+     * 设置textRotation值
+     *
+     * @param textRotation
+     */
     public WordCloud textRotation(Integer... textRotation) {
         if (textRotation == null || textRotation.length == 0) {
             return this;
@@ -105,18 +136,29 @@ public class WordCloud extends Series<WordCloud> {
         return this;
     }
 
-    public List<Integer> textRotation() {
+    /**
+     * 获取textRotation值
+     */
+	public List<Integer> textRotation() {
         if (this.textRotation == null) {
             this.textRotation = new LinkedList<Integer>();
         }
         return this.textRotation;
     }
 
-    public WordCloud autoSize(AutoSize autoSize) {
+    /**
+     * 设置autoSize值
+     *
+     * @param autoSize
+     */
+	public WordCloud autoSize(AutoSize autoSize) {
         this.autoSize = autoSize;
         return this;
     }
 
+    /**
+     * 获取autoSize值
+     */
     public AutoSize autoSize() {
         if (this.autoSize == null) {
             this.autoSize = new AutoSize();
@@ -124,43 +166,83 @@ public class WordCloud extends Series<WordCloud> {
         return this.autoSize;
     }
 
+    /**
+     * 获取center值
+     */
     public Object[] getCenter() {
         return center;
     }
 
-    public void setCenter(Object[] center) {
+    /**
+     * 设置center值
+     *
+     * @param center
+     */
+	public void setCenter(Object[] center) {
         this.center = center;
     }
 
+	/**
+     * 获取size值
+	 */
     public Object[] getSize() {
         return size;
     }
 
-    public void setSize(Object[] size) {
+    /**
+     * 设置size值
+     *
+     * @param size
+     */
+	public void setSize(Object[] size) {
         this.size = size;
     }
 
-    public List<Integer> getTextRotation() {
+    /**
+     * 获取textRotation值
+     */
+	public List<Integer> getTextRotation() {
         return textRotation;
     }
 
+    /**
+     * 设置textRotation值
+     *
+     * @param textRotation
+     */
     public void setTextRotation(List<Integer> textRotation) {
         this.textRotation = textRotation;
     }
 
+	/**
+     * 获取autoSize值
+	 */
     public AutoSize getAutoSize() {
         return autoSize;
     }
 
-    public void setAutoSize(AutoSize autoSize) {
+    /**
+     * 设置autoSize值
+     *
+     * @param autoSize
+     */
+	public void setAutoSize(AutoSize autoSize) {
         this.autoSize = autoSize;
     }
 
-    public Integer getTextPadding() {
+	/**
+     * 获取textPadding值
+	 */
+	public Integer getTextPadding() {
         return textPadding;
     }
 
-    public void setTextPadding(Integer textPadding) {
+    /**
+     * 设置textPadding值
+     *
+     * @param textPadding
+     */
+	public void setTextPadding(Integer textPadding) {
         this.textPadding = textPadding;
     }
 
@@ -169,45 +251,86 @@ public class WordCloud extends Series<WordCloud> {
         private Boolean enable;
         private Integer minSize;
 
+        /**
+         * 构造函数
+         */
         public AutoSize() {
         }
 
-        public AutoSize(Boolean enable, Integer minSize) {
-            this.enable = enable;
-            this.minSize = minSize;
+        /**
+         * 构造函数,参数:enable,minSize
+         *
+         * @param enable
+         * @param minSize
+         */
+	public AutoSize(Boolean enable, Integer minSize) {
+        this.enable = enable;
+        this.minSize = minSize;
+    }
+
+        /**
+         * 设置enable值
+         *
+	 * @param enable
+	 */
+	public AutoSize enable(Boolean enable) {
+        this.enable = enable;
+        return this;
         }
 
-        public AutoSize enable(Boolean enable) {
-            this.enable = enable;
-            return this;
+	/**
+     * 获取enable值
+     */
+    public Boolean enable() {
+        return this.enable;
+    }
+
+        /**
+         * 设置minSize值
+         *
+	 * @param minSize
+	 */
+	public AutoSize minSize(Integer minSize) {
+        this.minSize = minSize;
+        return this;
         }
 
-        public Boolean enable() {
-            return this.enable;
+	/**
+     * 获取minSize值
+     */
+    public Integer minSize() {
+        return this.minSize;
         }
 
-        public AutoSize minSize(Integer minSize) {
-            this.minSize = minSize;
-            return this;
+	/**
+     * 获取enable值
+     */
+    public Boolean getEnable() {
+        return enable;
+    }
+
+        /**
+         * 设置enable值
+         *
+	 * @param enable
+	 */
+	public void setEnable(Boolean enable) {
+        this.enable = enable;
         }
 
-        public Integer minSize() {
-            return this.minSize;
-        }
+	/**
+     * 获取minSize值
+     */
+    public Integer getMinSize() {
+        return minSize;
+    }
 
-        public Boolean getEnable() {
-            return enable;
-        }
-
-        public void setEnable(Boolean enable) {
-            this.enable = enable;
-        }
-
-        public Integer getMinSize() {
-            return minSize;
-        }
-
-        public void setMinSize(Integer minSize) {
+        /**
+         * 设置minSize值
+         *
+	 * @param minSize
+	 */
+	public void setMinSize(Integer minSize) {
             this.minSize = minSize;
         }
     }

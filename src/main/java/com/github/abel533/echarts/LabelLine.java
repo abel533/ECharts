@@ -124,18 +124,34 @@ public class LabelLine implements Serializable {
         this.lineStyle = lineStyle;
     }
 
+    /**
+     * 获取show值
+     */
     public Boolean getShow() {
         return show;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public void setShow(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 获取length值
+     */
     public Integer getLength() {
         return length;
     }
 
+    /**
+     * 设置length值
+     *
+     * @param length
+     */
     public void setLength(Integer length) {
         this.length = length;
     }

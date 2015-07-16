@@ -243,10 +243,18 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         return this;
     }
 
+    /**
+     * 获取enterable值
+     */
     public Boolean enterable() {
         return this.enterable;
     }
 
+    /**
+     * 设置enterable值
+     *
+     * @param enterable
+     */
     public Tooltip enterable(Boolean enterable) {
         this.enterable = enterable;
         return this;
@@ -419,10 +427,18 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         this.transitionDuration = transitionDuration;
     }
 
+    /**
+     * 获取enterable值
+     */
     public Boolean getEnterable() {
         return enterable;
     }
 
+    /**
+     * 设置enterable值
+     *
+     * @param enterable
+     */
     public void setEnterable(Boolean enterable) {
         this.enterable = enterable;
     }

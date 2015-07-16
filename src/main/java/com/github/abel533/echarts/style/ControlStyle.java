@@ -57,19 +57,35 @@ public class ControlStyle implements Serializable {
     public ControlStyle() {
     }
 
+    /**
+     * 获取itemSize值
+     */
     public Integer itemSize() {
         return this.itemSize;
     }
 
+    /**
+     * 设置itemSize值
+     *
+     * @param itemSize
+     */
     public ControlStyle itemSize(Integer itemSize) {
         this.itemSize = itemSize;
         return this;
     }
 
+    /**
+     * 获取itemGap值
+     */
     public Integer itemGap() {
         return this.itemGap;
     }
 
+    /**
+     * 设置itemGap值
+     *
+     * @param itemGap
+     */
     public ControlStyle itemGap(Integer itemGap) {
         this.itemGap = itemGap;
         return this;
@@ -147,18 +163,34 @@ public class ControlStyle implements Serializable {
         this.emphasis = emphasis;
     }
 
+    /**
+     * 获取itemSize值
+     */
     public Integer getItemSize() {
         return itemSize;
     }
 
+    /**
+     * 设置itemSize值
+     *
+     * @param itemSize
+     */
     public void setItemSize(Integer itemSize) {
         this.itemSize = itemSize;
     }
 
-    public Integer getItemGap() {
+    /**
+     * 获取itemGap值
+     */
+	public Integer getItemGap() {
         return itemGap;
     }
 
+    /**
+     * 设置itemGap值
+     *
+     * @param itemGap
+     */
     public void setItemGap(Integer itemGap) {
         this.itemGap = itemGap;
     }

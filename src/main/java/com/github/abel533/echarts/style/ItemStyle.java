@@ -133,11 +133,19 @@ public class ItemStyle implements Serializable {
         this.emphasis = emphasis;
     }
 
+    /**
+     * 设置breadcrumb值
+     *
+     * @param breadcrumb
+     */
     public ItemStyle breadcrumb(Breadcrumb breadcrumb) {
         this.breadcrumb = breadcrumb;
         return this;
     }
 
+    /**
+     * 获取breadcrumb值
+     */
     public Breadcrumb breadcrumb() {
         if (this.breadcrumb == null) {
             this.breadcrumb = new Breadcrumb();
@@ -145,44 +153,84 @@ public class ItemStyle implements Serializable {
         return this.breadcrumb;
     }
 
+    /**
+     * 设置childBorderWidth值
+     *
+     * @param childBorderWidth
+     */
     public ItemStyle childBorderWidth(Integer childBorderWidth) {
         this.childBorderWidth = childBorderWidth;
         return this;
     }
 
+    /**
+     * 获取childBorderWidth值
+     */
     public Integer childBorderWidth() {
         return this.childBorderWidth;
     }
 
+    /**
+     * 设置childBorderColor值
+     *
+     * @param childBorderColor
+     */
     public ItemStyle childBorderColor(Object childBorderColor) {
         this.childBorderColor = childBorderColor;
         return this;
     }
 
+    /**
+     * 获取childBorderColor值
+     */
     public Object childBorderColor() {
         return this.childBorderColor;
     }
 
+    /**
+     * 获取breadcrumb值
+     */
     public Breadcrumb getBreadcrumb() {
         return breadcrumb;
     }
 
+    /**
+     * 设置breadcrumb值
+     *
+     * @param breadcrumb
+     */
     public void setBreadcrumb(Breadcrumb breadcrumb) {
         this.breadcrumb = breadcrumb;
     }
 
-    public Integer getChildBorderWidth() {
+    /**
+     * 获取childBorderWidth值
+     */
+	public Integer getChildBorderWidth() {
         return childBorderWidth;
     }
 
+    /**
+     * 设置childBorderWidth值
+     *
+     * @param childBorderWidth
+     */
     public void setChildBorderWidth(Integer childBorderWidth) {
         this.childBorderWidth = childBorderWidth;
     }
 
-    public Object getChildBorderColor() {
+    /**
+     * 获取childBorderColor值
+     */
+	public Object getChildBorderColor() {
         return childBorderColor;
     }
 
+    /**
+     * 设置childBorderColor值
+     *
+     * @param childBorderColor
+     */
     public void setChildBorderColor(Object childBorderColor) {
         this.childBorderColor = childBorderColor;
     }

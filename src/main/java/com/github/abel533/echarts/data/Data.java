@@ -327,10 +327,18 @@ public class Data extends BasicData<Data> {
         this.tooltip = tooltip;
     }
 
+    /**
+     * 获取smoothRadian值
+     */
     public Double getSmoothRadian() {
         return smoothRadian;
     }
 
+    /**
+     * 设置smoothRadian值
+     *
+     * @param smoothRadian
+     */
     public void setSmoothRadian(Double smoothRadian) {
         this.smoothRadian = smoothRadian;
     }

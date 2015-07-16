@@ -59,6 +59,12 @@ public class EventRiver extends Series<EventRiver> {
         this.type(SeriesType.eventRiver);
     }
 
+    /**
+     * 构造函数,参数:name,weight
+     *
+     * @param name
+     * @param weight
+     */
     public EventRiver(String name, Integer weight) {
         super(name);
         this.type(SeriesType.eventRiver);

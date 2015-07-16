@@ -78,20 +78,36 @@ public class Tree extends Series<Tree> {
         this.type(SeriesType.tree);
     }
 
+    /**
+     * 获取direction值
+     */
     public Direction direction() {
         return this.direction;
     }
 
+    /**
+     * 设置direction值
+     *
+     * @param direction
+     */
     public Tree direction(Direction direction) {
         this.direction = direction;
         return this;
     }
 
+    /**
+     * 设置rootLocation值
+     *
+     * @param rootLocation
+     */
     public Tree rootLocation(RootLocation rootLocation) {
         this.rootLocation = rootLocation;
         return this;
     }
 
+    /**
+     * 获取rootLocation值
+     */
     public RootLocation rootLocation() {
         if (this.rootLocation == null) {
             this.rootLocation = new RootLocation();
@@ -99,92 +115,177 @@ public class Tree extends Series<Tree> {
         return this.rootLocation;
     }
 
+    /**
+     * 设置layerPadding值
+     *
+     * @param layerPadding
+     */
     public Tree layerPadding(Integer layerPadding) {
         this.layerPadding = layerPadding;
         return this;
     }
 
-    public Integer layerPadding() {
+    /**
+     * 获取layerPadding值
+     */
+	public Integer layerPadding() {
         return this.layerPadding;
     }
 
+    /**
+     * 设置nodePadding值
+     *
+     * @param nodePadding
+     */
     public Tree nodePadding(Integer nodePadding) {
         this.nodePadding = nodePadding;
         return this;
     }
 
-    public Integer nodePadding() {
+    /**
+     * 获取nodePadding值
+     */
+	public Integer nodePadding() {
         return this.nodePadding;
     }
 
-    public Tree orient(Orient orient) {
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
+	public Tree orient(Orient orient) {
         this.orient = orient;
         return this;
     }
 
+    /**
+     * 获取orient值
+     */
     public Orient orient() {
         return this.orient;
     }
 
-    public Tree roam(Boolean roam) {
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
+	public Tree roam(Boolean roam) {
         this.roam = roam;
         return this;
     }
 
-    public Tree roam(Roam roam) {
+    /**
+     * 设置roam值
+     *
+     * @param roam
+     */
+	public Tree roam(Roam roam) {
         this.roam = roam;
         return this;
     }
 
-    public Object roam() {
+	/**
+     * 获取roam值
+	 */
+	public Object roam() {
         return this.roam;
     }
 
-    public Integer getLayerPadding() {
+    /**
+     * 获取layerPadding值
+     */
+	public Integer getLayerPadding() {
         return layerPadding;
     }
 
+    /**
+     * 设置layerPadding值
+     *
+     * @param layerPadding
+     */
     public void setLayerPadding(Integer layerPadding) {
         this.layerPadding = layerPadding;
     }
 
-    public Integer getNodePadding() {
+    /**
+     * 获取nodePadding值
+	 */
+	public Integer getNodePadding() {
         return nodePadding;
     }
 
-    public void setNodePadding(Integer nodePadding) {
+    /**
+     * 设置nodePadding值
+     *
+     * @param nodePadding
+     */
+	public void setNodePadding(Integer nodePadding) {
         this.nodePadding = nodePadding;
     }
 
+	/**
+     * 获取orient值
+	 */
     public Orient getOrient() {
         return orient;
     }
 
-    public void setOrient(Orient orient) {
+    /**
+     * 设置orient值
+     *
+     * @param orient
+     */
+	public void setOrient(Orient orient) {
         this.orient = orient;
     }
 
+	/**
+     * 获取roam值
+     */
     public Object getRoam() {
         return roam;
     }
 
-    public void setRoam(Object roam) {
+    /**
+     * 设置roam值
+     *
+     * @param roam
+	 */
+	public void setRoam(Object roam) {
         this.roam = roam;
     }
 
-    public RootLocation getRootLocation() {
+    /**
+     * 获取rootLocation值
+     */
+	public RootLocation getRootLocation() {
         return rootLocation;
     }
 
+    /**
+     * 设置rootLocation值
+     *
+     * @param rootLocation
+     */
     public void setRootLocation(RootLocation rootLocation) {
         this.rootLocation = rootLocation;
     }
 
-    public Direction getDirection() {
+    /**
+     * 获取direction值
+	 */
+	public Direction getDirection() {
         return direction;
     }
 
-    public void setDirection(Direction direction) {
+    /**
+     * 设置direction值
+     *
+     * @param direction
+     */
+	public void setDirection(Direction direction) {
         this.direction = direction;
     }
 }

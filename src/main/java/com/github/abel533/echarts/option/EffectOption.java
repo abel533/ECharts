@@ -37,57 +37,105 @@ public class EffectOption {
     private Integer progress;
     private TextStyle textStyle;
 
-    public Object effect() {
+	/**
+	 * 获取effect值 
+	 */
+	public Object effect() {
         return this.effect;
     }
 
-    public EffectOption effect(Object effect) {
+	/**
+	 * 设置effect值 
+	 * 
+	 * @param effect
+	 */
+	public EffectOption effect(Object effect) {
         this.effect = effect;
         return this;
     }
 
-    public Integer progress() {
+	/**
+	 * 获取progress值 
+	 */
+	public Integer progress() {
         return this.progress;
     }
 
-    public EffectOption progress(Integer progress) {
+	/**
+	 * 设置progress值 
+	 * 
+	 * @param progress
+	 */
+	public EffectOption progress(Integer progress) {
         this.progress = progress;
         return this;
     }
 
-    public TextStyle textStyle() {
+	/**
+	 * 获取textStyle值 
+	 */
+	public TextStyle textStyle() {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
         }
         return this.textStyle;
     }
 
-    public EffectOption textStyle(TextStyle textStyle) {
+	/**
+	 * 设置textStyle值 
+	 * 
+	 * @param textStyle
+	 */
+	public EffectOption textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
-    public Object getEffect() {
+	/**
+	 * 获取effect值 
+	 */
+	public Object getEffect() {
         return effect;
     }
 
-    public void setEffect(Object effect) {
+	/**
+	 * 设置effect值 
+	 * 
+	 * @param effect
+	 */
+	public void setEffect(Object effect) {
         this.effect = effect;
     }
 
-    public Integer getProgress() {
+	/**
+	 * 获取progress值 
+	 */
+	public Integer getProgress() {
         return progress;
     }
 
-    public void setProgress(Integer progress) {
+	/**
+	 * 设置progress值 
+	 * 
+	 * @param progress
+	 */
+	public void setProgress(Integer progress) {
         this.progress = progress;
     }
 
-    public TextStyle getTextStyle() {
+	/**
+	 * 获取textStyle值 
+	 */
+	public TextStyle getTextStyle() {
         return textStyle;
     }
 
-    public void setTextStyle(TextStyle textStyle) {
+	/**
+	 * 设置textStyle值 
+	 * 
+	 * @param textStyle
+	 */
+	public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }
 }

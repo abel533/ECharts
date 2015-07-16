@@ -82,10 +82,18 @@ public class TextStyle implements Serializable {
      */
     private Object fontWeight;
 
+    /**
+     * 获取baseline值
+     */
     public Baseline baseline() {
         return this.baseline;
     }
 
+    /**
+     * 设置baseline值
+     *
+     * @param baseline
+     */
     public TextStyle baseline(Baseline baseline) {
         this.baseline = baseline;
         return this;
@@ -355,10 +363,18 @@ public class TextStyle implements Serializable {
         this.fontWeight = fontWeight;
     }
 
+    /**
+     * 获取baseline值
+     */
     public Baseline getBaseline() {
         return baseline;
     }
 
+    /**
+     * 设置baseline值
+     *
+     * @param baseline
+     */
     public void setBaseline(Baseline baseline) {
         this.baseline = baseline;
     }

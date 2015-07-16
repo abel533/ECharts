@@ -99,20 +99,36 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     private Integer z;
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public T zlevel(Integer zlevel) {
         this.zlevel = zlevel;
         return (T) this;
     }
 
+    /**
+     * 获取zlevel值
+     */
     public Integer zlevel() {
         return this.zlevel;
     }
 
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
     public T z(Integer z) {
         this.z = z;
         return (T) this;
     }
 
+    /**
+     * 获取z值
+     */
     public Integer z() {
         return this.z;
     }
@@ -483,19 +499,35 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         this.splitArea = splitArea;
     }
 
+    /**
+     * 获取zlevel值
+     */
     public Integer getZlevel() {
         return zlevel;
     }
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public void setZlevel(Integer zlevel) {
         this.zlevel = zlevel;
     }
 
-    public Integer getZ() {
+    /**
+     * 获取z值
+	 */
+	public Integer getZ() {
         return z;
     }
 
-    public void setZ(Integer z) {
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
+	public void setZ(Integer z) {
         this.z = z;
     }
 }

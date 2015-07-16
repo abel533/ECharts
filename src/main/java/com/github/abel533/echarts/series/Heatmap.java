@@ -77,15 +77,26 @@ public class Heatmap extends Series<Heatmap> {
         this.type(SeriesType.heatmap);
     }
 
+    /**
+     * 获取blurSize值
+     */
     public Integer blurSize() {
         return this.blurSize;
     }
 
+    /**
+     * 设置blurSize值
+     *
+     * @param blurSize
+     */
     public Heatmap blurSize(Integer blurSize) {
         this.blurSize = blurSize;
         return this;
     }
 
+    /**
+     * 获取gradientColors值
+     */
     public List<Object> gradientColors() {
         if (this.gradientColors == null) {
             this.gradientColors = new LinkedList<Object>();
@@ -93,11 +104,21 @@ public class Heatmap extends Series<Heatmap> {
         return this.gradientColors;
     }
 
+    /**
+     * 设置gradientColors值
+     *
+     * @param gradientColors
+     */
     public Heatmap gradientColors(List<Object> gradientColors) {
         this.gradientColors = gradientColors;
         return this;
     }
 
+    /**
+     * 设置gradientColors值
+     *
+     * @param gradientColors
+     */
     public Heatmap gradientColors(Object... gradientColors) {
         if (gradientColors == null || gradientColors.length == 0) {
             return this;
@@ -106,70 +127,134 @@ public class Heatmap extends Series<Heatmap> {
         return this;
     }
 
-    public Double minAlpha() {
+    /**
+     * 获取minAlpha值
+     */
+	public Double minAlpha() {
         return this.minAlpha;
     }
 
+    /**
+     * 设置minAlpha值
+     *
+     * @param minAlpha
+     */
     public Heatmap minAlpha(Double minAlpha) {
         this.minAlpha = minAlpha;
         return this;
     }
 
-    public Double valueScale() {
+    /**
+     * 获取valueScale值
+     */
+	public Double valueScale() {
         return this.valueScale;
     }
 
+    /**
+     * 设置valueScale值
+     *
+     * @param valueScale
+     */
     public Heatmap valueScale(Double valueScale) {
         this.valueScale = valueScale;
         return this;
     }
 
-    public Double opacity() {
+    /**
+     * 获取opacity值
+	 */
+	public Double opacity() {
         return this.opacity;
     }
 
-    public Heatmap opacity(Double opacity) {
+    /**
+     * 设置opacity值
+     *
+     * @param opacity
+     */
+	public Heatmap opacity(Double opacity) {
         this.opacity = opacity;
         return this;
     }
 
-    public Integer getBlurSize() {
+    /**
+     * 获取blurSize值
+     */
+	public Integer getBlurSize() {
         return blurSize;
     }
 
-    public void setBlurSize(Integer blurSize) {
+    /**
+     * 设置blurSize值
+     *
+     * @param blurSize
+     */
+	public void setBlurSize(Integer blurSize) {
         this.blurSize = blurSize;
     }
 
-    public List<Object> getGradientColors() {
+    /**
+     * 获取gradientColors值
+     */
+	public List<Object> getGradientColors() {
         return gradientColors;
     }
 
+    /**
+     * 设置gradientColors值
+     *
+     * @param gradientColors
+     */
     public void setGradientColors(List<Object> gradientColors) {
         this.gradientColors = gradientColors;
     }
 
-    public Double getMinAlpha() {
+	/**
+     * 获取minAlpha值
+	 */
+	public Double getMinAlpha() {
         return minAlpha;
     }
 
-    public void setMinAlpha(Double minAlpha) {
+    /**
+     * 设置minAlpha值
+     *
+     * @param minAlpha
+     */
+	public void setMinAlpha(Double minAlpha) {
         this.minAlpha = minAlpha;
     }
 
-    public Double getValueScale() {
+    /**
+     * 获取valueScale值
+	 */
+	public Double getValueScale() {
         return valueScale;
     }
 
-    public void setValueScale(Double valueScale) {
+    /**
+     * 设置valueScale值
+     *
+     * @param valueScale
+     */
+	public void setValueScale(Double valueScale) {
         this.valueScale = valueScale;
     }
 
+	/**
+     * 获取opacity值
+	 */
     public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(Double opacity) {
+    /**
+     * 设置opacity值
+     *
+     * @param opacity
+     */
+	public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 }

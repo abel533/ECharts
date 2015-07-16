@@ -410,6 +410,11 @@ public class Title extends Basic<Title> implements Component {
     }
 
 
+    /**
+     * 设置offsetCenter值
+     *
+     * @param offsetCenter
+     */
     public void setOffsetCenter(Object offsetCenter) {
         this.offsetCenter = offsetCenter;
     }

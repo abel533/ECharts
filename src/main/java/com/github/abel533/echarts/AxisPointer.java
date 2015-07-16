@@ -66,10 +66,18 @@ public class AxisPointer implements Serializable {
      */
     private TextStyle textStyle;
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle textStyle() {
         return this.textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public AxisPointer textStyle(TextStyle textStyle) {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
@@ -221,10 +229,18 @@ public class AxisPointer implements Serializable {
         this.type = type;
     }
 
+    /**
+     * 获取textStyle值
+     */
     public TextStyle getTextStyle() {
         return textStyle;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public void setTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
     }

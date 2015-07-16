@@ -37,33 +37,63 @@ public class Breadcrumb implements Serializable {
     private Boolean show;
     private TextStyle textStyle;
 
+    /**
+     * 构造函数
+     */
     public Breadcrumb() {
     }
 
+    /**
+     * 构造函数,参数:show
+     *
+     * @param show
+     */
     public Breadcrumb(Boolean show) {
         this.show = show;
     }
 
+    /**
+     * 构造函数,参数:show,textStyle
+     *
+     * @param show
+     * @param textStyle
+     */
     public Breadcrumb(Boolean show, TextStyle textStyle) {
         this.show = show;
         this.textStyle = textStyle;
     }
 
+    /**
+     * 设置show值
+     *
+     * @param show
+     */
     public Breadcrumb show(Boolean show) {
         this.show = show;
         return this;
     }
 
-    public Boolean show() {
+    /**
+     * 获取show值
+     */
+	public Boolean show() {
         return this.show;
     }
 
+    /**
+     * 设置textStyle值
+     *
+     * @param textStyle
+     */
     public Breadcrumb textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
 
-    public TextStyle textStyle() {
+    /**
+     * 获取textStyle值
+     */
+	public TextStyle textStyle() {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
         }

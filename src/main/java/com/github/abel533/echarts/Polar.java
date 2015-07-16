@@ -119,20 +119,36 @@ public class Polar extends AbstractData<Polar> implements Component {
      */
     private Integer z;
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public Polar zlevel(Integer zlevel) {
         this.zlevel = zlevel;
         return this;
     }
 
+    /**
+     * 获取zlevel值
+     */
     public Integer zlevel() {
         return this.zlevel;
     }
 
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
     public Polar z(Integer z) {
         this.z = z;
         return this;
     }
 
+    /**
+     * 获取z值
+     */
     public Integer z() {
         return this.z;
     }
@@ -706,19 +722,35 @@ public class Polar extends AbstractData<Polar> implements Component {
         this.type = type;
     }
 
+    /**
+     * 获取zlevel值
+     */
     public Integer getZlevel() {
         return zlevel;
     }
 
+    /**
+     * 设置zlevel值
+     *
+     * @param zlevel
+     */
     public void setZlevel(Integer zlevel) {
         this.zlevel = zlevel;
     }
 
-    public Integer getZ() {
+    /**
+     * 获取z值
+	 */
+	public Integer getZ() {
         return z;
     }
 
-    public void setZ(Integer z) {
+    /**
+     * 设置z值
+     *
+     * @param z
+     */
+	public void setZ(Integer z) {
         this.z = z;
     }
 

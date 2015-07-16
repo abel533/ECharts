@@ -143,26 +143,50 @@ public class SeriesData implements Serializable {
         return this;
     }
 
+    /**
+     * 获取value值
+     */
     public Object getValue() {
         return value;
     }
 
+    /**
+     * 设置value值
+     *
+     * @param value
+     */
     public void setValue(Object value) {
         this.value = value;
     }
 
+    /**
+     * 获取tooltip值
+     */
     public Tooltip getTooltip() {
         return tooltip;
     }
 
+    /**
+     * 设置tooltip值
+     *
+     * @param tooltip
+     */
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
     }
 
+    /**
+     * 获取itemStyle值
+     */
     public ItemStyle getItemStyle() {
         return itemStyle;
     }
 
+    /**
+     * 设置itemStyle值
+     *
+     * @param itemStyle
+     */
     public void setItemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
     }

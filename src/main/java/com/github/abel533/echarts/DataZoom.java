@@ -81,10 +81,18 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      */
     private Boolean showDetail;
 
+    /**
+     * 获取handleSize值
+     */
     public Integer handleSize() {
         return this.handleSize;
     }
 
+    /**
+     * 设置handleSize值
+     *
+     * @param handleSize
+     */
     public DataZoom handleSize(Integer handleSize) {
         this.handleSize = handleSize;
         return this;
@@ -453,10 +461,18 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         this.showDetail = showDetail;
     }
 
+    /**
+     * 获取handleSize值
+     */
     public Integer getHandleSize() {
         return handleSize;
     }
 
+    /**
+     * 设置handleSize值
+     *
+     * @param handleSize
+     */
     public void setHandleSize(Integer handleSize) {
         this.handleSize = handleSize;
     }

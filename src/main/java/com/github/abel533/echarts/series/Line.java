@@ -58,15 +58,28 @@ public class Line extends Series<Line> {
         this.type(SeriesType.line);
     }
 
+    /**
+     * 获取dataFilter值
+     */
     public Object dataFilter() {
         return this.dataFilter;
     }
 
+    /**
+     * 设置dataFilter值
+     *
+     * @param dataFilter
+     */
     public Line dataFilter(Object dataFilter) {
         this.dataFilter = dataFilter;
         return this;
     }
 
+    /**
+     * 设置dataFilter值
+     *
+     * @param dataFilter
+     */
     public Line dataFilter(DataFilter dataFilter) {
         this.dataFilter = dataFilter;
         return this;
@@ -105,10 +118,18 @@ public class Line extends Series<Line> {
         this.smooth = smooth;
     }
 
+    /**
+     * 获取dataFilter值
+     */
     public Object getDataFilter() {
         return dataFilter;
     }
 
+    /**
+     * 设置dataFilter值
+     *
+     * @param dataFilter
+     */
     public void setDataFilter(Object dataFilter) {
         this.dataFilter = dataFilter;
     }

@@ -48,20 +48,36 @@ public class LogAxis extends Axis<LogAxis> {
         this.type(AxisType.log);
     }
 
+    /**
+     * 设置logLabelBase值
+     *
+     * @param logLabelBase
+     */
     public LogAxis logLabelBase(Integer logLabelBase) {
         this.logLabelBase = logLabelBase;
         return this;
     }
 
+    /**
+     * 获取logLabelBase值
+     */
     public Integer logLabelBase() {
         return this.logLabelBase;
     }
 
+    /**
+     * 设置logPositive值
+     *
+     * @param logPositive
+     */
     public LogAxis logPositive(Boolean logPositive) {
         this.logPositive = logPositive;
         return this;
     }
 
+    /**
+     * 获取logPositive值
+     */
     public Boolean logPositive() {
         return this.logPositive;
     }
