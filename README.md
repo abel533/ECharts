@@ -16,7 +16,7 @@
 <dependency>
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>2.2.4</version>
+  <version>2.2.6</version>
 </dependency>
 ```
 
