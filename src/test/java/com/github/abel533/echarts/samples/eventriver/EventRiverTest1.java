@@ -49,7 +49,7 @@ public class EventRiverTest1 {
         option.xAxis(new TimeAxis().boundaryGap(0.05, 0.1));
 
         EventRiver eventRiver1 = new EventRiver("财经事件", 123);
-        eventRiver1.eventList(new Event("阿里巴巴上市", 123).evolution(
+        eventRiver1.data(new Event("阿里巴巴上市", 123).evolution(
                         new Evolution("2014-05-01", 14).detail(
                                 "http://www.baidu.com", "百度指数", "http://echarts.baidu.com/doc/asset/ico/favicon.png"),
                         new Evolution("2014-05-02", 34).detail(
@@ -85,7 +85,7 @@ public class EventRiverTest1 {
                 ));
 
         EventRiver eventRiver2 = new EventRiver("政治事件", 123);
-        eventRiver2.eventList(new Event("Apec峰会", 123).evolution(
+        eventRiver2.data(new Event("Apec峰会", 123).evolution(
                         new Evolution("2014-05-06", 14).detail(
                                 "http://www.baidu.com", "百度指数", "http://echarts.baidu.com/doc/asset/ico/favicon.png"),
                         new Evolution("2014-05-07", 34).detail(
