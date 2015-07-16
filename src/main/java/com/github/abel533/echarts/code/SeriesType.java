@@ -45,4 +45,5 @@ public enum SeriesType {
     treemap,//矩形树图
     wordCloud,//词云
     tree,//树图
+    heatmap,//热力图
 }

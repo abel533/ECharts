@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.code.AxisType;
+import com.github.abel533.echarts.code.NameLocation;
+import com.github.abel533.echarts.style.LineStyle;
 
 /**
  * 值轴
@@ -32,6 +34,16 @@ import com.github.abel533.echarts.code.AxisType;
  * @author liuzh.
  */
 public class ValueAxis extends Axis<ValueAxis> {
+    /**
+     * 坐标轴名称位置，默认为'end'，可选为：'start' | 'end'
+     *
+     * @see com.github.abel533.echarts.code.NameLocation
+     */
+    private NameLocation nameLocation;
+    /**
+     * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
+     */
+    private LineStyle nameTextStyle;
     /**
      * 指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
      */
@@ -317,4 +329,75 @@ public class ValueAxis extends Axis<ValueAxis> {
     public void setBoundaryGap(Double[] boundaryGap) {
         this.boundaryGap = boundaryGap;
     }
+
+    /**
+     * 获取nameLocation值
+     */
+    public NameLocation getNameLocation() {
+        return nameLocation;
+    }
+
+    /**
+     * 设置nameLocation值
+     *
+     * @param nameLocation
+     */
+    public void setNameLocation(NameLocation nameLocation) {
+        this.nameLocation = nameLocation;
+    }
+
+
+    /**
+     * 获取nameTextStyle值
+     */
+    public LineStyle getNameTextStyle() {
+        return nameTextStyle;
+    }
+
+    /**
+     * 设置nameTextStyle值
+     *
+     * @param nameTextStyle
+     */
+    public void setNameTextStyle(LineStyle nameTextStyle) {
+        this.nameTextStyle = nameTextStyle;
+    }
+
+    /**
+     * 获取nameLocation值
+     */
+    public NameLocation nameLocation() {
+        return this.nameLocation;
+    }
+
+    /**
+     * 设置nameLocation值
+     *
+     * @param nameLocation
+     */
+    public ValueAxis nameLocation(NameLocation nameLocation) {
+        this.nameLocation = nameLocation;
+        return this;
+    }
+
+    /**
+     * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
+     */
+    public LineStyle nameTextStyle() {
+        if (this.nameTextStyle == null) {
+            this.nameTextStyle = new LineStyle();
+        }
+        return this.nameTextStyle;
+    }
+
+    /**
+     * 设置style值
+     *
+     * @param style
+     */
+    public ValueAxis nameTextStyle(LineStyle style) {
+        this.nameTextStyle = style;
+        return this;
+    }
+
 }

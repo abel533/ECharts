@@ -28,6 +28,7 @@ import com.github.abel533.echarts.code.PointerType;
 import com.github.abel533.echarts.style.CrossStyle;
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.ShadowStyle;
+import com.github.abel533.echarts.style.TextStyle;
 
 import java.io.Serializable;
 
@@ -60,6 +61,22 @@ public class AxisPointer implements Serializable {
      * 设置阴影指示器
      */
     private ShadowStyle shadowStyle;
+    /**
+     * 文本样式
+     */
+    private TextStyle textStyle;
+
+    public TextStyle textStyle() {
+        return this.textStyle;
+    }
+
+    public AxisPointer textStyle(TextStyle textStyle) {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        this.textStyle = textStyle;
+        return this;
+    }
 
     /**
      * 设置lineStyle值
@@ -202,5 +219,13 @@ public class AxisPointer implements Serializable {
      */
     public void setType(PointerType type) {
         this.type = type;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
     }
 }

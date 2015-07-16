@@ -32,9 +32,17 @@ import com.github.abel533.echarts.code.SeriesType;
  * @author liuzh
  */
 public class Treemap extends Series<Treemap> {
-
+    /**
+     * 中心坐标，支持绝对值（px）和百分比
+     */
     private Object[] center;
+    /**
+     * 大小，支持绝对值（px）和百分比
+     */
     private Object[] size;
+    /**
+     * 当前显示的根节点的名字
+     */
     private String root;
 
     /**

@@ -43,10 +43,6 @@ public abstract class AbstractLabel<T> implements Serializable {
      */
     private Boolean show;
     /**
-     * 位置
-     */
-    private Object position;
-    /**
      * 挑选间隔，默认为'auto'，可选为：'auto'（自动隐藏显示不下的） | 0（全部显示） | {number}
      */
     private Object interval;
@@ -54,10 +50,6 @@ public abstract class AbstractLabel<T> implements Serializable {
      * rotate : 旋转角度，默认为0，不旋转，正值为逆时针，负值为顺时针，可选为：-90 ~ 90
      */
     private Integer rotate;
-    /**
-     * [Axis有效]坐标轴文本标签是否可点击
-     */
-    private Boolean clickable;
     /**
      * 间隔名称格式器：{string}（Template） | {Function}
      */
@@ -67,10 +59,17 @@ public abstract class AbstractLabel<T> implements Serializable {
      */
     private TextStyle textStyle;
     /**
+     * 位置
+     */
+    private Object position;
+    /**
+     * [Axis有效]坐标轴文本标签是否可点击
+     */
+    private Boolean clickable;
+    /**
      * 坐标轴文本标签与坐标轴的间距
      */
     private Integer margin;
-
     /**
      * 颜色
      */

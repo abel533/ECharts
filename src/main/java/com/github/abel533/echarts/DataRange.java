@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Orient;
+import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.data.RangeData;
 import com.github.abel533.echarts.style.TextStyle;
 
@@ -106,6 +107,26 @@ public class DataRange extends Basic<DataRange> implements Component {
      * 自定义分割方式，支持不等距分割。splitList被指定时，splitNumber将被忽略。
      */
     private List<RangeData> splitList;
+    /**
+     * 选择模式，默认开启图例开关
+     *
+     * @see com.github.abel533.echarts.code.SelectedMode
+     */
+    private Object selectedMode;
+
+    public Object selectedMode() {
+        return this.selectedMode;
+    }
+
+    public DataRange selectedMode(Object selectedMode) {
+        this.selectedMode = selectedMode;
+        return this;
+    }
+
+    public DataRange selectedMode(SelectedMode selectedMode) {
+        this.selectedMode = selectedMode;
+        return this;
+    }
 
     public DataRange range(RangeData range) {
         this.range = range;
@@ -644,5 +665,13 @@ public class DataRange extends Basic<DataRange> implements Component {
 
     public void setSplitList(List<RangeData> splitList) {
         this.splitList = splitList;
+    }
+
+    public Object getSelectedMode() {
+        return selectedMode;
+    }
+
+    public void setSelectedMode(Object selectedMode) {
+        this.selectedMode = selectedMode;
     }
 }

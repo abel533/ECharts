@@ -27,10 +27,8 @@ package com.github.abel533.echarts.axis;
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Component;
 import com.github.abel533.echarts.code.AxisType;
-import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
-import com.github.abel533.echarts.style.LineStyle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,17 +61,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     private String name;
     /**
-     * 坐标轴名称位置，默认为'end'，可选为：'start' | 'end'
-     *
-     * @see com.github.abel533.echarts.code.NameLocation
-     */
-    private NameLocation nameLocation;
-    /**
-     * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
-     */
-    private LineStyle nameTextStyle;
-
-    /**
      * 坐标轴线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
      * @see com.github.abel533.echarts.axis.AxisLine
@@ -103,6 +90,32 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 分隔区域，默认不显示，属性show控制显示与否，属性areaStyle（详见areaStyle）控制区域样式
      */
     private SplitArea splitArea;
+    /**
+     * 一级层叠控制
+     */
+    private Integer zlevel;
+    /**
+     * 二级层叠控制
+     */
+    private Integer z;
+
+    public T zlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+        return (T) this;
+    }
+
+    public Integer zlevel() {
+        return this.zlevel;
+    }
+
+    public T z(Integer z) {
+        this.z = z;
+        return (T) this;
+    }
+
+    public Integer z() {
+        return this.z;
+    }
 
     /**
      * 获取show值
@@ -177,22 +190,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     }
 
     /**
-     * 获取nameLocation值
-     */
-    public NameLocation getNameLocation() {
-        return nameLocation;
-    }
-
-    /**
-     * 设置nameLocation值
-     *
-     * @param nameLocation
-     */
-    public void setNameLocation(NameLocation nameLocation) {
-        this.nameLocation = nameLocation;
-    }
-
-    /**
      * 设置type值
      *
      * @param type
@@ -254,43 +251,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     public T name(String name) {
         this.name = name;
-        return (T) this;
-    }
-
-    /**
-     * 获取nameLocation值
-     */
-    public NameLocation nameLocation() {
-        return this.nameLocation;
-    }
-
-    /**
-     * 设置nameLocation值
-     *
-     * @param nameLocation
-     */
-    public T nameLocation(NameLocation nameLocation) {
-        this.nameLocation = nameLocation;
-        return (T) this;
-    }
-
-    /**
-     * 坐标轴名称文字样式，默认取全局配置，颜色跟随axisLine主色，可设
-     */
-    public LineStyle nameTextStyle() {
-        if (this.nameTextStyle == null) {
-            this.nameTextStyle = new LineStyle();
-        }
-        return this.nameTextStyle;
-    }
-
-    /**
-     * 设置style值
-     *
-     * @param style
-     */
-    public T nameTextStyle(LineStyle style) {
-        this.nameTextStyle = style;
         return (T) this;
     }
 
@@ -444,22 +404,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     }
 
     /**
-     * 获取nameTextStyle值
-     */
-    public LineStyle getNameTextStyle() {
-        return nameTextStyle;
-    }
-
-    /**
-     * 设置nameTextStyle值
-     *
-     * @param nameTextStyle
-     */
-    public void setNameTextStyle(LineStyle nameTextStyle) {
-        this.nameTextStyle = nameTextStyle;
-    }
-
-    /**
      * 获取axisLine值
      */
     public AxisLine getAxisLine() {
@@ -537,5 +481,21 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     public void setSplitArea(SplitArea splitArea) {
         this.splitArea = splitArea;
+    }
+
+    public Integer getZlevel() {
+        return zlevel;
+    }
+
+    public void setZlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public void setZ(Integer z) {
+        this.z = z;
     }
 }

@@ -41,6 +41,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      */
     private Boolean show;
     /**
+     * 一级层叠控制。每一个不同的zlevel将产生一个独立的canvas，相同zlevel的组件或图标将在同一个canvas上渲染。zlevel越高越靠顶层，canvas对象增多会消耗更多的内存和性能，并不建议设置过多的zlevel，大部分情况可以通过二级层叠控制z实现层叠控制
+     */
+    private Integer zlevel;
+    /**
+     * 二级层叠控制，同一个canvas（相同zlevel）上z越高约靠顶层
+     */
+    private Integer z;
+    /**
      * 默认为time,模式是时间类型，时间轴间隔根据时间跨度计算，可选为：'number'
      *
      * @see com.github.abel533.echarts.code.TimeLineType
@@ -86,13 +94,13 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      */
     private String backgroundColor;
     /**
-     * 默认值#ccc，边框颜色
-     */
-    private String borderColor;
-    /**
      * 默认值0，边框线宽
      */
     private Integer borderWidth;
+    /**
+     * 默认值#ccc，边框颜色
+     */
+    private String borderColor;
     /**
      * 默认值5，内边距，单位px，默认各方向内边距为5，接受数组分别设定上右下左边距，同css，见下图
      */
@@ -556,6 +564,24 @@ public class Timeline extends AbstractData<Timeline> implements Component {
         return this;
     }
 
+    public Timeline zlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+        return this;
+    }
+
+    public Integer zlevel() {
+        return this.zlevel;
+    }
+
+    public Timeline z(Integer z) {
+        this.z = z;
+        return this;
+    }
+
+    public Integer z() {
+        return this.z;
+    }
+
     /**
      * 获取lineStyle值
      */
@@ -786,5 +812,21 @@ public class Timeline extends AbstractData<Timeline> implements Component {
 
     public void setCurrentIndex(Integer currentIndex) {
         this.currentIndex = currentIndex;
+    }
+
+    public Integer getZlevel() {
+        return zlevel;
+    }
+
+    public void setZlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public void setZ(Integer z) {
+        this.z = z;
     }
 }

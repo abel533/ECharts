@@ -34,7 +34,14 @@ import java.io.Serializable;
 public class ControlStyle implements Serializable {
 
     private static final long serialVersionUID = -3442438026749918760L;
-
+    /**
+     * 按钮大小
+     */
+    private Integer itemSize;
+    /**
+     * 按钮间隔
+     */
+    private Integer itemGap;
     /**
      * 正常
      */
@@ -48,6 +55,24 @@ public class ControlStyle implements Serializable {
      * 构造函数
      */
     public ControlStyle() {
+    }
+
+    public Integer itemSize() {
+        return this.itemSize;
+    }
+
+    public ControlStyle itemSize(Integer itemSize) {
+        this.itemSize = itemSize;
+        return this;
+    }
+
+    public Integer itemGap() {
+        return this.itemGap;
+    }
+
+    public ControlStyle itemGap(Integer itemGap) {
+        this.itemGap = itemGap;
+        return this;
     }
 
     /**
@@ -120,6 +145,22 @@ public class ControlStyle implements Serializable {
      */
     public void setEmphasis(Color emphasis) {
         this.emphasis = emphasis;
+    }
+
+    public Integer getItemSize() {
+        return itemSize;
+    }
+
+    public void setItemSize(Integer itemSize) {
+        this.itemSize = itemSize;
+    }
+
+    public Integer getItemGap() {
+        return itemGap;
+    }
+
+    public void setItemGap(Integer itemGap) {
+        this.itemGap = itemGap;
     }
 
     public class Color {

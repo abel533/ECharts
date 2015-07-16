@@ -49,6 +49,10 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      */
     private String handleColor;
     /**
+     * 控制手柄大小
+     */
+    private Integer handleSize;
+    /**
      * 当不指定时默认控制所有横向类目，可通过数组指定多个需要控制的横向类目坐标轴Index，仅一个时可直接为数字
      */
     private Object xAxisIndex;
@@ -76,6 +80,15 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      * 缩放变化是否显示定位详情
      */
     private Boolean showDetail;
+
+    public Integer handleSize() {
+        return this.handleSize;
+    }
+
+    public DataZoom handleSize(Integer handleSize) {
+        this.handleSize = handleSize;
+        return this;
+    }
 
     /**
      * 获取orient值
@@ -438,5 +451,13 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      */
     public void setShowDetail(Boolean showDetail) {
         this.showDetail = showDetail;
+    }
+
+    public Integer getHandleSize() {
+        return handleSize;
+    }
+
+    public void setHandleSize(Integer handleSize) {
+        this.handleSize = handleSize;
     }
 }

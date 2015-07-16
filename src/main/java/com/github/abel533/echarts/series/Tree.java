@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.Direction;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.Roam;
 import com.github.abel533.echarts.code.SeriesType;
@@ -55,6 +56,10 @@ public class Tree extends Series<Tree> {
      * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
      */
     private Object roam;
+    /**
+     * 方向反转
+     */
+    private Direction direction;
 
     /**
      * 构造函数
@@ -71,6 +76,15 @@ public class Tree extends Series<Tree> {
     public Tree(String name) {
         super(name);
         this.type(SeriesType.tree);
+    }
+
+    public Direction direction() {
+        return this.direction;
+    }
+
+    public Tree direction(Direction direction) {
+        this.direction = direction;
+        return this;
     }
 
     public Tree rootLocation(RootLocation rootLocation) {
@@ -164,5 +178,13 @@ public class Tree extends Series<Tree> {
 
     public void setRootLocation(RootLocation rootLocation) {
         this.rootLocation = rootLocation;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }

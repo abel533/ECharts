@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.style;
 
+import com.github.abel533.echarts.code.Baseline;
 import com.github.abel533.echarts.code.FontStyle;
 import com.github.abel533.echarts.code.X;
 
@@ -44,15 +45,19 @@ public class TextStyle implements Serializable {
      */
     private String color;
     /**
-     * 修饰，仅对tooltip.textStyle生效
-     */
-    private String decoration;
-    /**
      * 水平对齐方式，可选为：'left' | 'right' | 'center'
      *
      * @see com.github.abel533.echarts.code.X
      */
     private X align;
+    /**
+     * 垂直对齐方式
+     */
+    private Baseline baseline;
+    /**
+     * 修饰，仅对tooltip.textStyle生效
+     */
+    private String decoration;
     /**
      * 字号 ，单位px
      */
@@ -76,6 +81,15 @@ public class TextStyle implements Serializable {
      * @see com.github.abel533.echarts.code.FontWeight
      */
     private Object fontWeight;
+
+    public Baseline baseline() {
+        return this.baseline;
+    }
+
+    public TextStyle baseline(Baseline baseline) {
+        this.baseline = baseline;
+        return this;
+    }
 
     /**
      * 获取color值
@@ -339,5 +353,13 @@ public class TextStyle implements Serializable {
      */
     public void setFontWeight(Object fontWeight) {
         this.fontWeight = fontWeight;
+    }
+
+    public Baseline getBaseline() {
+        return baseline;
+    }
+
+    public void setBaseline(Baseline baseline) {
+        this.baseline = baseline;
     }
 }

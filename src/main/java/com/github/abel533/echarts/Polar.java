@@ -110,7 +110,32 @@ public class Polar extends AbstractData<Polar> implements Component {
      * 雷达指标列表，同时也是label内容
      */
     private List<Object> indicator;
+    /**
+     * 一级层叠控制
+     */
+    private Integer zlevel;
+    /**
+     * 二级层叠控制
+     */
+    private Integer z;
 
+    public Polar zlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+        return this;
+    }
+
+    public Integer zlevel() {
+        return this.zlevel;
+    }
+
+    public Polar z(Integer z) {
+        this.z = z;
+        return this;
+    }
+
+    public Integer z() {
+        return this.z;
+    }
     /**
      * 获取center值
      */
@@ -679,6 +704,22 @@ public class Polar extends AbstractData<Polar> implements Component {
      */
     public void setType(PolarType type) {
         this.type = type;
+    }
+
+    public Integer getZlevel() {
+        return zlevel;
+    }
+
+    public void setZlevel(Integer zlevel) {
+        this.zlevel = zlevel;
+    }
+
+    public Integer getZ() {
+        return z;
+    }
+
+    public void setZ(Integer z) {
+        this.z = z;
     }
 
     public static class Name {
