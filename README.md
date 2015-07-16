@@ -1,6 +1,6 @@
 #ECharts - Java类库
 
-**当前版本2.2.4**
+**当前版本2.2.6**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -24,7 +24,7 @@
 
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
-[API文档-2.2.4](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/2.2.4/ECharts-2.2.4-javadoc.jar) 下载后解压即可
+[API文档-2.2.6](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/2.2.6/ECharts-2.2.6-javadoc.jar) 下载后解压即可
 ##项目支持
 
 ###图表类型
@@ -46,6 +46,7 @@
  - Tree - 树图
  - Treemap - 矩形树图
  - WordCloud - 词云
+ - Heatmap - 热力图
 
 ###ECharts组件
 
@@ -60,6 +61,12 @@
  - Timeline - 时间线
 
 ##更新日志
+
+###2.2.6
+
+- 由于echarts.js-2.2.5版本只是修复bug，对本项目没有影响,可以直接用echarts-java-2.2.4，所以跳过2.2.5版本
+- echarts.js-2.2.6新增Option 查找工具，本项目已经完全和这个工具对照过，已经补充部分缺少的属性
+- 新增热力图`heatmap`，对应测试代码[HeatmapTest](http://git.oschina.net/free/ECharts/blob/master/src/test/java/com/github/abel533/echarts/samples/heatmap/HeatmapTest.java)(如果看不到效果，那就是因为测试中的引用的echarts-all.js还不是2.2.6版本，自己替换就行)
 
 ###2.2.4
 
