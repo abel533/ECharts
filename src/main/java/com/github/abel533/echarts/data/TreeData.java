@@ -41,7 +41,7 @@ public class TreeData implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private Integer value;
+    private Double value;
     private List<TreeData> children;
     private ItemStyle itemStyle;
 
@@ -57,9 +57,20 @@ public class TreeData implements Serializable {
      * @param name
      * @param value
      */
-    public TreeData(String name, Integer value) {
+    public TreeData(String name, Double value) {
         this.name = name;
         this.value = value;
+    }
+
+    /**
+     * 构造函数,参数:name,value
+     *
+     * @param name
+     * @param value
+     */
+    public TreeData(String name, Integer value) {
+        this.name = name;
+        this.value = value.doubleValue();
     }
 
     /**
@@ -84,7 +95,7 @@ public class TreeData implements Serializable {
      *
      * @param value
      */
-    public TreeData value(Integer value) {
+    public TreeData value(Double value) {
         this.value = value;
         return this;
     }
@@ -92,7 +103,7 @@ public class TreeData implements Serializable {
     /**
      * 获取value值
      */
-	public Integer value() {
+    public Double value() {
         return this.value;
     }
 
@@ -158,7 +169,7 @@ public class TreeData implements Serializable {
 	/**
      * 获取value值
 	 */
-    public Integer getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -167,7 +178,7 @@ public class TreeData implements Serializable {
      *
      * @param value
      */
-	public void setValue(Integer value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
