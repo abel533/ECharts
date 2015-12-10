@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.Title;
+import com.github.abel533.echarts.axis.AxisLine;
 import com.github.abel533.echarts.axis.AxisTick;
 import com.github.abel533.echarts.axis.SplitLine;
 import com.github.abel533.echarts.code.SeriesType;
@@ -72,7 +73,7 @@ public class Gauge extends Series<Gauge> {
      *
      * @see com.github.abel533.echarts.series.Line
      */
-    private Line axisLine;
+    private AxisLine axisLine;
     /**
      * 坐标轴小标记，默认显示
      *
@@ -156,7 +157,7 @@ public class Gauge extends Series<Gauge> {
      *
      * @param axisLine
      */
-    public Gauge axisLine(Line axisLine) {
+    public Gauge axisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
         return this;
     }
@@ -344,9 +345,9 @@ public class Gauge extends Series<Gauge> {
      *
      * @see com.github.abel533.echarts.series.Line
      */
-    public Line axisLine() {
+    public AxisLine axisLine() {
         if (this.axisLine == null) {
-            this.axisLine = new Line();
+            this.axisLine = new AxisLine();
         }
         return this.axisLine;
     }
@@ -458,7 +459,7 @@ public class Gauge extends Series<Gauge> {
     /**
      * 获取axisLine值
      */
-    public Line getAxisLine() {
+    public AxisLine getAxisLine() {
         return axisLine;
     }
 
@@ -467,7 +468,7 @@ public class Gauge extends Series<Gauge> {
      *
      * @param axisLine
      */
-    public void setAxisLine(Line axisLine) {
+    public void setAxisLine(AxisLine axisLine) {
         this.axisLine = axisLine;
     }
 
