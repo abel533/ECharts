@@ -28,5 +28,5 @@ package com.github.abel533.echarts.code;
  * @author liuzh
  */
 public enum LineType {
-    solid, dotted, dashed, booken, curve
+    solid, dotted, dashed, broken, curve
 }
