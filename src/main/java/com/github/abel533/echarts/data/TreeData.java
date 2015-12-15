@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts.data;
 
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
 
 import java.io.Serializable;
@@ -42,6 +43,8 @@ public class TreeData implements Serializable {
 
     private String name;
     private Double value;
+    private Object symbol;
+    private Object symbolSize;
     private List<TreeData> children;
     private ItemStyle itemStyle;
 
@@ -105,6 +108,82 @@ public class TreeData implements Serializable {
      */
     public Double value() {
         return this.value;
+    }
+
+    /**
+     * 获取symbol值
+     * @return symbol值
+     */
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    /**
+     * 设置symbol值
+     * @param symbol symbol值
+     */
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    /**
+     * 获取symbolSize值
+     * @return symbolSize值
+     */
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    /**
+     * 设置symbolSize值
+     * @param symbolSize symbolSize值
+     */
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    /**
+     * 获取symbol值
+     */
+    public Object symbol() {
+        return this.symbol;
+    }
+
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
+    public TreeData symbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    /**
+     * 设置symbol值
+     *
+     * @param symbol
+     */
+    public TreeData symbol(Symbol symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    /**
+     * 获取symbolSize值
+     */
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    /**
+     * 设置symbolSize值
+     *
+     * @param symbolSize
+     */
+    public TreeData symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
     }
 
     /**
