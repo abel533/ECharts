@@ -62,6 +62,16 @@
 
 ##更新日志
 
+###2.2.7
+
+- 修复`Gauge`中`AxisLine`类型使用错误的bug#65
+- 解决`LineType`中的`broken`拼写错误#58
+- `TreeData`中的`value`改为`Double`类型，仍然保留一个`Integer`的构造方法
+- `TreeData`添加缺少的两个属性`symbol`和`symbolSize`#69
+- `AbstractData`中的`List<Object> data`属性和相关调用都去掉泛型类型`<Object>`
+- `Legend`通用去掉`<Object>`
+- 由于fastjson存在多种bug，从这个版本移除`FsonOption`相关的类
+
 ###2.2.6
 
 - 由于echarts.js-2.2.5版本只是修复bug，对本项目没有影响,可以直接用echarts-java-2.2.4，所以跳过2.2.5版本

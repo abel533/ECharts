@@ -28,7 +28,7 @@
 
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-    <version>2.2.6</version>
+    <version>2.2.7</version>
   <packaging>jar</packaging>
 
   <name>ECharts</name>
@@ -66,13 +66,6 @@
       <artifactId>gson</artifactId>
       <version>2.2.4</version>
       <scope>compile</scope>
-      <optional>true</optional>
-    </dependency>
-    <!--FsonOption必须-->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.5</version>
       <optional>true</optional>
     </dependency>
 
