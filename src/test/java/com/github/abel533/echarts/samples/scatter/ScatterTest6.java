@@ -26,12 +26,10 @@ package com.github.abel533.echarts.samples.scatter;
 
 import com.github.abel533.echarts.axis.TimeAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
-import com.github.abel533.echarts.code.Orient;
-import com.github.abel533.echarts.code.Tool;
-import com.github.abel533.echarts.code.Trigger;
-import com.github.abel533.echarts.code.Y;
+import com.github.abel533.echarts.code.*;
 import com.github.abel533.echarts.series.Scatter;
 import com.github.abel533.echarts.util.EnhancedOption;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -45,6 +43,7 @@ import java.util.List;
 /**
  * @author liuzh
  */
+@Ignore("由于时间轴data中的时间必须是时间类型，这里由于只能生成字符串，所以会没有效果，解决办法就是在js中将日期字符串转化为日期类型")
 public class ScatterTest6 {
 
     @Test
@@ -52,12 +51,10 @@ public class ScatterTest6 {
         //地址：http://echarts.baidu.com/doc/example/scatter6.html
         // echarts只能认识js的Date...
         EnhancedOption option = new EnhancedOption();
-        option.title("时间坐标散点图","dataZoom支持");
-        option.tooltip().trigger(Trigger.item).formatter("function (params) {" +
-                "            return params.seriesName + ' （'  + '类目' + params.value[0] + '）<br/>'" +
-                "                   + params.value[1] + ', ' " +
-                "                   + params.value[2];" +
-                "        }");
+        option.title("时间坐标散点图", "dataZoom支持");
+        option.tooltip().trigger(Trigger.axis).axisPointer()
+                .show(true)
+                .type(PointerType.cross).lineStyle().type(LineType.dashed).width(1);
         option.legend("series1");
         option.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
         option.dataZoom().show(true).start(30).end(70);
@@ -68,6 +65,19 @@ public class ScatterTest6 {
         option.animation(false);
 
         Scatter series1 = new Scatter("series1");
+        series1.tooltip().formatter("function(params){" +
+                "                    var date = new Date(params.value[0]);" +
+                "                    return params.seriesName " +
+                "                           + ' （'" +
+                "                           + date.getFullYear() + '-'" +
+                "                           + (date.getMonth() + 1) + '-'" +
+                "                           + date.getDate() + ' '" +
+                "                           + date.getHours() + ':'" +
+                "                           + date.getMinutes()" +
+                "                           +  '）<br/>'" +
+                "                           + params.value[1] + ', ' " +
+                "                           + params.value[2];" +
+                "                }");
         series1.symbolSize("function (value){" +
                 "                return Math.round(value[2]/10);" +
                 "            }");
