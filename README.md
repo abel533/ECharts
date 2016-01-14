@@ -68,6 +68,7 @@
 - 解决`LineType`中的`broken`拼写错误#58
 - `TreeData`中的`value`改为`Double`类型，仍然保留一个`Integer`的构造方法
 - `TreeData`添加缺少的两个属性`symbol`和`symbolSize`#69
+- `AxisPointer`增加`show`属性，该属性出现在scatter6的例子中
 - `AbstractData`中的`List<Object> data`属性和相关调用都去掉泛型类型`<Object>`
 - `Legend`通用去掉`<Object>`
 - 由于fastjson存在多种bug，从这个版本移除`FsonOption`相关的类

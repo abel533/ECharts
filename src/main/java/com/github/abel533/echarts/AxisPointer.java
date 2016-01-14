@@ -42,6 +42,11 @@ public class AxisPointer implements Serializable {
     private static final long serialVersionUID = 6421899185681683630L;
 
     /**
+     * 是否显示
+     */
+    private Boolean show;
+
+    /**
      * 默认为直线，可选为：'line' | 'shadow' | 'cross'
      *
      * @see com.github.abel533.echarts.code.PointerType
@@ -134,6 +139,21 @@ public class AxisPointer implements Serializable {
     }
 
     /**
+     * 是否显示
+     */
+    public Boolean show(){
+        return this.show;
+    }
+
+    /**
+     * 设置是否显示
+     */
+    public AxisPointer show(Boolean show){
+        this.show = show;
+        return this;
+    }
+
+    /**
      * 设置直线指示器
      *
      * @see com.github.abel533.echarts.style.LineStyle
@@ -163,6 +183,20 @@ public class AxisPointer implements Serializable {
             this.shadowStyle = new ShadowStyle();
         }
         return this.shadowStyle;
+    }
+
+    /**
+     * 是否显示
+     */
+    public Boolean getShow() {
+        return show;
+    }
+
+    /**
+     * 设置是否显示
+     */
+    public void setShow(Boolean show) {
+        this.show = show;
     }
 
     /**
