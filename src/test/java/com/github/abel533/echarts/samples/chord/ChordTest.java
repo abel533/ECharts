@@ -73,7 +73,7 @@ public class ChordTest {
                         {8010, 16145, 8090, 8045},
                         {1013, 990, 940, 6907}
                 }).
-                markPoint(new MarkPoint().symbol(Symbol.star).
+                markPoint(new MarkPoint().symbol(Symbol.star).symbolSize("function(v){return 10+v/2000;}").
                         data(new PointData("打酱油的标注", 100).x("5%").y("50%").symbolSize(32),
                                 new PointData("打酱油的标注", 100).x("95%").y("50%").symbolSize(32)
                         )).
