@@ -40,7 +40,7 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
      *
      * @see com.github.abel533.echarts.data.PointData
      */
-    protected List<Object> data;
+    protected List data;
     /**
      * 是否可点击，默认开启
      */
@@ -55,9 +55,9 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     /**
      * 获取data值
      */
-    public List<Object> data() {
+    public List data() {
         if (this.data == null) {
-            this.data = new ArrayList<Object>();
+            this.data = new ArrayList();
         }
         return this.data;
     }
@@ -72,7 +72,9 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
         if (values == null || values.length == 0) {
             return (T) this;
         }
-        this.data().addAll(Arrays.asList(values));
+        for(Object value: values){
+            this.data().add(value);
+        }
         return (T) this;
     }
 
@@ -146,7 +148,7 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     /**
      * 获取data值
      */
-    public List<Object> getData() {
+    public List getData() {
         return data;
     }
 
@@ -155,7 +157,7 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
      *
      * @param data
      */
-    public void setData(List<Object> data) {
+    public void setData(List data) {
         this.data = data;
     }
 }

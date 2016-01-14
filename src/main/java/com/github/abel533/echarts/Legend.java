@@ -68,7 +68,7 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      *
      * @see com.github.abel533.echarts.data.LegendData
      */
-    private List<Object> data;
+    private List data;
 
     /**
      * 构造函数
@@ -100,7 +100,7 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      *
      * @param data
      */
-    public Legend data(List<Object> data) {
+    public Legend data(List data) {
         this.data = data;
         return this;
     }
@@ -220,9 +220,9 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
      * 获取data值
      */
-    public List<Object> data() {
+    public List data() {
         if (this.data == null) {
-            this.data = new ArrayList<Object>();
+            this.data = new ArrayList();
         }
         return this.data;
     }
@@ -260,7 +260,7 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
      * 获取data值
      */
-    public List<Object> getData() {
+    public List getData() {
         return data;
     }
 
@@ -269,7 +269,7 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      *
      * @param data
      */
-    public void setData(List<Object> data) {
+    public void setData(List data) {
         this.data = data;
     }
 
