@@ -28,6 +28,7 @@ import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
 import com.github.abel533.echarts.data.Data;
+import com.github.abel533.echarts.series.EMap;
 import com.github.abel533.echarts.series.Map;
 import com.github.abel533.echarts.series.MapLocation;
 import com.github.abel533.echarts.util.EnhancedOption;
@@ -42,7 +43,7 @@ public class MapTest {
     public void test() {
         //地址：http://echarts.baidu.com/doc/example/map.html
         EnhancedOption option = new EnhancedOption();
-        Map map = new Map("Map");
+        EMap map = new EMap("Map");
         map.mapLocation(new MapLocation(X.left, Y.top, 500));
         map.selectedMode(SelectedMode.multiple);
         map.itemStyle().normal().borderWidth(2)

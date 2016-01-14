@@ -70,6 +70,8 @@
 - `TreeData`添加缺少的两个属性`symbol`和`symbolSize`#69
 - `AxisPointer`增加`show`属性，该属性出现在scatter6的例子中
 - `AbstractData`中的`List<Object> data`属性和相关调用都去掉泛型类型`<Object>`
+- 新增`EMap`，和`Map`（地图）类完全相同，只是为了避免和`java.util.Map`同时使用时不方便
+- 新增简单工厂`SeriesFactory`，提供了所有`Series`子类的创建方法
 - `Legend`通用去掉`<Object>`
 - 由于fastjson存在多种bug，从这个版本移除`FsonOption`相关的类
 
