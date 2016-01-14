@@ -101,7 +101,7 @@ public class OptionUtil {
         String line;
         try {
             is = OptionUtil.class.getResourceAsStream("/template");
-            iReader = new InputStreamReader(is);
+            iReader = new InputStreamReader(is, "UTF-8");
             bufferedReader = new BufferedReader(iReader);
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains("##option##")) {
@@ -134,12 +134,12 @@ public class OptionUtil {
         if (fileName == null || fileName.length() == 0) {
             return exportToHtml(option, folderPath);
         }
-        FileWriter writer = null;
+        Writer writer = null;
         List<String> lines = readLines(option);
         //写入文件
         File html = new File(getFolderPath(folderPath) + "/" + fileName);
         try {
-            writer = new FileWriter(html);
+            writer = new OutputStreamWriter(new FileOutputStream(html), "UTF-8");
             for (String l : lines) {
                 writer.write(l + "\n");
             }
