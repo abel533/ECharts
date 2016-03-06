@@ -28,11 +28,11 @@
 
     <groupId>com.github.abel533</groupId>
     <artifactId>ECharts</artifactId>
-    <version>2.2.7</version>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ECharts</name>
-    <description>这是一个针对ECharts2.0版本的Java类库，实现了所有ECharts中的Json结构对应的Java对象，并且可以很方便的创建Option,Series等</description>
+    <description>这是一个针对ECharts3.0版本的Java类库，实现了所有ECharts中的Json结构对应的Java对象，并且可以很方便的创建Option,Series等</description>
     <url>https://github.com/abel533</url>
 
     <licenses>
