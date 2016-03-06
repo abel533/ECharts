@@ -1,6 +1,6 @@
 #ECharts - Java类库
 
-**当前版本2.2.7**
+**当前版本3.0.0**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -16,7 +16,7 @@
 <dependency>
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>2.2.7</version>
+  <version>3.0.0</version>
 </dependency>
 ```
 
@@ -24,36 +24,27 @@
 
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
-[API文档-2.2.7](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/2.2.7/ECharts-2.2.7-javadoc.jar) 下载后解压即可
+[API文档-3.0.0](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/3.0.0/ECharts-3.0.0-javadoc.jar) 下载后解压即可
 ##项目支持
 
-###图表类型(<font color="red">红色的3.0版本移除</font>，<font color="green">绿色的3.0版本新增</font>)
+###图表类型3.x版本(2.x版本支持的图表不一样)
 
  - Line - 折线（面积）图
- - <font color="green">Lines - 线图</font>
+ - <b>Lines - 线图</b>
  - Bar - 柱状（条形）图
  - Scatter - 散点（气泡）图
- - <font color="green">EffectScatter - 涟漪效果散点图</font>
- - <font color="red">K - K线图</font>
- - <font color="green">Candlestick - K线图</font>
+ - <b>EffectScatter - 涟漪效果散点图</b>
+ - <b>Candlestick - K线图</b>
  - Pie - 饼（圆环）图
- - <font color="red">Radar - 雷达（面积）图</font>
- - <font color="red">Chord - 和弦图</font>
- - <font color="red">Force - 力导向布局图</font>
- - <font color="green">Graph - 关系图,可以实现force</font>
+ - <b>Graph - 关系图,可以实现force</b>
  - Map - 地图
  - Gauge - 仪表盘
  - Funnel - 漏斗图
- - <font color="red">Island - 孤岛图（官方未提供，这里只有数据Island对象）</font>
- - <font color="red">EventRiver - 事件河流图</font>
- - <font color="red">Venn - 韦恩图</font>
- - <font color="red">Tree - 树图</font>
  - Treemap - 矩形树图
- - <font color="red">WordCloud - 词云</font>
  - Heatmap - 热力图
- - <font color="green">Boxplot - 箱形图</font>
- - <font color="green">Parallel - 平行坐标系</font>
- - <font color="green">Sankey - 桑基图</font>
+ - <b>Boxplot - 箱形图</b>
+ - <b>Parallel - 平行坐标系</b>
+ - <b>Sankey - 桑基图</b>
 
 ###ECharts组件
 
@@ -66,26 +57,11 @@
  - DataRange - 值域漫游
  - Toolbox - 工具箱
  - Timeline - 时间线
+ - visualMap - 视觉映射组件
 
 ##更新日志
 
-ECharts.js的2.2.7版本只是优化和改进，没有新增对象或者属性，因此EChats-Java项目长期以来一直是2.2.6版本。
-最近发布了ECharts.js的3.0版本，为了准备升级到3.0版本，先对长期以来的问题进行修复和完善，发布了2.2.7版本。
-这个版本的变化可以查看下面的更新日志。2.2.7版本仍然会持续维护，大家发现bug或者缺少属性，以及方法调用不方便或者不合理都可以[提意见](http://git.oschina.net/free/ECharts/issues)。
-
-当前可以直接在ECharts3中使用的有如下图表：
-
- - Line - 折线（面积）图
- - Bar - 柱状（条形）图
- - Scatter - 散点（气泡）图
- - K - K线图
- - Pie - 饼（圆环）图
- - Radar - 雷达（面积）图
- - Gauge - 仪表盘
- - Funnel - 漏斗图
- - Treemap - 矩形树图
-
-本项目近期会针对ECharts.js-3.0版本进行测试和更新，欢迎大家继续关注本项目。
+<b>3.x版本相比2.x版本改动很大，除了部分图表不一样外，少数api也有改动，因此如果要从2.x升级3.x，一定要做好测试!</b>
 
 ###3.0.0 - 2016-02-28
 
