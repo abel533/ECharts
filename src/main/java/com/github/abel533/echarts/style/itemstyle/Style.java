@@ -112,6 +112,132 @@ public abstract class Style<T> implements Serializable {
      * 柱形边框线宽，单位px，默认为1
      */
     private Integer barBorderWidth;
+    /**
+     * 显示
+     */
+    private Boolean show;
+    /**
+     * 图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果
+     */
+    private Integer shadowBlur;
+    /**
+     * 阴影颜色
+     */
+    private String shadowColor;
+    /**
+     * 阴影水平方向上的偏移距离
+     */
+    private Integer shadowOffsetX;
+    /**
+     * 阴影垂直方向上的偏移距离
+     */
+    private Integer shadowOffsetY;
+    /**
+     * 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形
+     */
+    private Double opacity;
+
+    public Integer shadowBlur() {
+        return this.shadowBlur;
+    }
+
+    public T shadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+        return (T) this;
+    }
+
+    public String shadowColor() {
+        return this.shadowColor;
+    }
+
+    public T shadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+        return (T) this;
+    }
+
+    public Integer shadowOffsetX() {
+        return this.shadowOffsetX;
+    }
+
+    public T shadowOffsetX(Integer shadowOffsetX) {
+        this.shadowOffsetX = shadowOffsetX;
+        return (T) this;
+    }
+
+    public Integer shadowOffsetY() {
+        return this.shadowOffsetY;
+    }
+
+    public T shadowOffsetY(Integer shadowOffsetY) {
+        this.shadowOffsetY = shadowOffsetY;
+        return (T) this;
+    }
+
+    public Double opacity() {
+        return this.opacity;
+    }
+
+    public T opacity(Double opacity) {
+        this.opacity = opacity;
+        return (T) this;
+    }
+
+    public Integer getShadowBlur() {
+        return shadowBlur;
+    }
+
+    public void setShadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+    }
+
+    public String getShadowColor() {
+        return shadowColor;
+    }
+
+    public void setShadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+    }
+
+    public Integer getShadowOffsetX() {
+        return shadowOffsetX;
+    }
+
+    public void setShadowOffsetX(Integer shadowOffsetX) {
+        this.shadowOffsetX = shadowOffsetX;
+    }
+
+    public Integer getShadowOffsetY() {
+        return shadowOffsetY;
+    }
+
+    public void setShadowOffsetY(Integer shadowOffsetY) {
+        this.shadowOffsetY = shadowOffsetY;
+    }
+
+    public Double getOpacity() {
+        return opacity;
+    }
+
+    public void setOpacity(Double opacity) {
+        this.opacity = opacity;
+    }
+
+    public Boolean show() {
+        return this.show;
+    }
+
+    public T show(Boolean show) {
+        this.show = show;
+        return (T) this;
+    }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
 
     /**
      * 设置label值

@@ -197,6 +197,12 @@ public class Option implements Serializable {
         return this.visualMap;
     }
 
+    public VisualMap visualMapNew() {
+        VisualMap v = new VisualMap();
+        this.visualMap().add(v);
+        return v;
+    }
+
     public Option visualMap(List<VisualMap> visualMap) {
         this.visualMap = visualMap;
         return this;

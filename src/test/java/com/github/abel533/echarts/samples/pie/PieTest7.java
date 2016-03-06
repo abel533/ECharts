@@ -52,7 +52,7 @@ public class PieTest7 {
         option.timeline().data("2013-01-01", "2013-02-01", "2013-03-01", "2013-04-01", "2013-05-01",
                 new LineData("2013-06-01", "emptyStart6", 8), "2013-07-01", "2013-08-01", "2013-09-01", "2013-10-01",
                 "2013-11-01", new LineData("2013-12-01", "star6", 8));
-        option.timeline().autoPlay(true).label().formatter("function(s){return s.slice(0,7);}");
+        option.timeline().autoPlay(true);
         //timeline变态的地方在于多个Option
         Option basic = new Option();
         basic.title().text("浏览器占比变化").subtext("纯属虚构");

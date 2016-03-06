@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.code.TriggerOn;
 import com.github.abel533.echarts.style.TextStyle;
@@ -199,6 +200,16 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      * @param position
      */
     public Tooltip position(Object position) {
+        this.position = position;
+        return this;
+    }
+
+    /**
+     * 设置position值
+     *
+     * @param position
+     */
+    public Tooltip position(Position position) {
         this.position = position;
         return this;
     }
