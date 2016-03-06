@@ -49,7 +49,7 @@ public enum SeriesType {
     //venn,//韦恩图
     treemap,//矩形树图
     //wordCloud,//词云
-    tree,//树图
+    //tree,//树图
     heatmap,//热力图
     boxplot,//中文可以称为『箱形图』、『盒须图』、『盒式图』、『盒状图』、『箱线图』++++++++++++++++++++++++
     parallel,//平行坐标系++++++++++++++++++++++

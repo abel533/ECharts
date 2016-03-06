@@ -57,7 +57,7 @@ public class ScatterTest6 {
                 .type(PointerType.cross).lineStyle().type(LineType.dashed).width(1);
         option.legend("series1");
         option.toolbox().show(true).feature(Tool.mark, Tool.dataView, Tool.restore, Tool.saveAsImage);
-        option.dataZoom().show(true).start(30).end(70);
+        option.dataZoomNew().show(true).start(30).end(70);
         option.dataRange().min(0).max(100).orient(Orient.horizontal).x(30).y(Y.center).color("lightgreen", "orange").splitNumber(5);
         option.grid().y2(80);
         option.xAxis(new TimeAxis().splitNumber(10));

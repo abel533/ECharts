@@ -58,12 +58,6 @@ public class ValueAxis extends Axis<ValueAxis> {
     private Integer splitNumber;
 
     /**
-     * [数值型]数值轴两端空白策略，数组内数值代表百分比，
-     * [原始数据最小值与最终最小值之间的差额，原始数据最大值与最终最大值之间的差额]
-     */
-    private Double[] boundaryGap;
-
-    /**
      * 构造函数
      */
     public ValueAxis() {
@@ -121,39 +115,6 @@ public class ValueAxis extends Axis<ValueAxis> {
         return this;
     }
 
-
-    /**
-     * 获取boundaryGap值
-     */
-    public Double[] boundaryGap() {
-        if (this.boundaryGap == null) {
-            this.boundaryGap = new Double[2];
-        }
-        return this.boundaryGap;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param boundaryGap
-     */
-    public ValueAxis boundaryGap(Double[] boundaryGap) {
-        this.boundaryGap = boundaryGap;
-        return this;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param min
-     * @param max
-     */
-    public ValueAxis boundaryGap(Double min, Double max) {
-        this.boundaryGap()[0] = min;
-        this.boundaryGap()[1] = max;
-        return this;
-    }
-
     /**
      * 获取precision值
      */
@@ -200,23 +161,6 @@ public class ValueAxis extends Axis<ValueAxis> {
      */
     public void setSplitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
-    }
-
-
-    /**
-     * 获取boundaryGap值
-     */
-    public Double[] getBoundaryGap() {
-        return boundaryGap;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param boundaryGap
-     */
-    public void setBoundaryGap(Double[] boundaryGap) {
-        this.boundaryGap = boundaryGap;
     }
 
     /**

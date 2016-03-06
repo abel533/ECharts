@@ -863,6 +863,15 @@ public class Option implements Serializable {
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
+    public DataZoom dataZoomNew() {
+        DataZoom dataZoom = new DataZoom();
+        this.dataZoom().add(dataZoom);
+        return dataZoom;
+    }
+
+    /**
+     * 数据区域缩放（详见dataZoom）,数据展现范围选择
+     */
     public List<DataZoom> dataZoom() {
         if (this.dataZoom == null) {
             this.dataZoom = new ArrayList<DataZoom>();

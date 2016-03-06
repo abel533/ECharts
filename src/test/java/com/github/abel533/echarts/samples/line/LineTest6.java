@@ -63,7 +63,7 @@ public class LineTest6 {
                 Tool.restore,
                 Tool.saveAsImage);
 
-        option.dataZoom().show(true).realtime(true).start(0).end(100);
+        option.dataZoomNew().show(true).realtime(true).start(0).end(100);
 
         option.yAxis(new ValueAxis().name("流量(m^3/s)").max(500));
         option.yAxis(new ValueAxis().name("降雨量(mm)").axisLabel(new AxisLabel().formatter("function(v){return -v;}")));

@@ -63,26 +63,32 @@ public class SeriesDeserializer implements JsonDeserializer<Series> {
             case pie:
                 series = context.deserialize(jsonObject, Pie.class);
                 break;
-            case force:
-                series = context.deserialize(jsonObject, Force.class);
-                break;
             case gauge:
                 series = context.deserialize(jsonObject, Gauge.class);
                 break;
             case map:
                 series = context.deserialize(jsonObject, Map.class);
                 break;
-            case island:
-                series = context.deserialize(jsonObject, Island.class);
+            case lines:
+                series = context.deserialize(jsonObject, Lines.class);
                 break;
-            case k:
-                series = context.deserialize(jsonObject, K.class);
+            case effectScatter:
+                series = context.deserialize(jsonObject, EffectScatter.class);
                 break;
-            case radar:
-                series = context.deserialize(jsonObject, Radar.class);
+            case candlestick:
+                series = context.deserialize(jsonObject, Candlestick.class);
                 break;
-            case chord:
-                series = context.deserialize(jsonObject, Chord.class);
+            case graph:
+                series = context.deserialize(jsonObject, Graph.class);
+                break;
+            case boxplot:
+                series = context.deserialize(jsonObject, Boxplot.class);
+                break;
+            case parallel:
+                series = context.deserialize(jsonObject, Parallel.class);
+                break;
+            case sankey:
+                series = context.deserialize(jsonObject, Sankey.class);
                 break;
         }
         return series;
