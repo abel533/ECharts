@@ -27,6 +27,7 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
+import com.github.abel533.echarts.style.ItemStyle;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -67,6 +68,27 @@ public class Toolbox extends Basic<Toolbox> implements Component {
      * 是否显示工具箱文字提示，默认启用
      */
     private Boolean showTitle;
+    /**
+     * 公用的 icon 样式设置
+     */
+    private ItemStyle iconStyle;
+
+    public ItemStyle iconStyle() {
+        return this.iconStyle;
+    }
+
+    public Toolbox iconStyle(ItemStyle iconStyle) {
+        this.iconStyle = iconStyle;
+        return this;
+    }
+
+    public ItemStyle getIconStyle() {
+        return iconStyle;
+    }
+
+    public void setIconStyle(ItemStyle iconStyle) {
+        this.iconStyle = iconStyle;
+    }
 
     /**
      * 设置color值

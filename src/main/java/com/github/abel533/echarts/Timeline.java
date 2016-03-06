@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.ControlPosition;
 import com.github.abel533.echarts.code.TimeLineType;
 import com.github.abel533.echarts.style.CheckpointStyle;
@@ -36,6 +37,18 @@ import com.github.abel533.echarts.style.LineStyle;
  * @author liuzh
  */
 public class Timeline extends AbstractData<Timeline> implements Component {
+    /**
+     * 轴的类型
+     */
+    private AxisType axisType;
+    /**
+     * 表示是否反向播放
+     */
+    private Boolean rewind;
+    /**
+     * 是否反向放置 timeline，反向则首位颠倒过来
+     */
+    private Boolean inverse;
     /**
      * 默认值true,显示策略，可选为：true（显示） | false（隐藏）
      */
@@ -160,6 +173,57 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      * 默认值0，当前索引位置，对应options数组，用于指定显示特定系列
      */
     private Integer currentIndex;
+
+    public AxisType axisType() {
+        return this.axisType;
+    }
+
+    public Timeline axisType(AxisType axisType) {
+        this.axisType = axisType;
+        return this;
+    }
+
+    public Boolean rewind() {
+        return this.rewind;
+    }
+
+    public Timeline rewind(Boolean rewind) {
+        this.rewind = rewind;
+        return this;
+    }
+
+    public Boolean inverse() {
+        return this.inverse;
+    }
+
+    public Timeline inverse(Boolean inverse) {
+        this.inverse = inverse;
+        return this;
+    }
+
+    public AxisType getAxisType() {
+        return axisType;
+    }
+
+    public void setAxisType(AxisType axisType) {
+        this.axisType = axisType;
+    }
+
+    public Boolean getRewind() {
+        return rewind;
+    }
+
+    public void setRewind(Boolean rewind) {
+        this.rewind = rewind;
+    }
+
+    public Boolean getInverse() {
+        return inverse;
+    }
+
+    public void setInverse(Boolean inverse) {
+        this.inverse = inverse;
+    }
 
     /**
      * 获取show值
@@ -681,7 +745,7 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 获取type值
      */
-	public TimeLineType getType() {
+    public TimeLineType getType() {
         return type;
     }
 
@@ -697,7 +761,7 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 获取notMerge值
      */
-	public Boolean getNotMerge() {
+    public Boolean getNotMerge() {
         return notMerge;
     }
 
@@ -706,14 +770,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param notMerge
      */
-	public void setNotMerge(Boolean notMerge) {
+    public void setNotMerge(Boolean notMerge) {
         this.notMerge = notMerge;
     }
 
     /**
      * 获取realtime值
      */
-	public Boolean getRealtime() {
+    public Boolean getRealtime() {
         return realtime;
     }
 
@@ -722,13 +786,13 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param realtime
      */
-	public void setRealtime(Boolean realtime) {
+    public void setRealtime(Boolean realtime) {
         this.realtime = realtime;
     }
 
-	/**
+    /**
      * 获取x值
-	 */
+     */
     public Object getX() {
         return x;
     }
@@ -737,14 +801,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      * 设置x值
      *
      * @param x
-	 */
-	public void setX(Object x) {
+     */
+    public void setX(Object x) {
         this.x = x;
     }
 
-	/**
+    /**
      * 获取y值
-	 */
+     */
     public Object getY() {
         return y;
     }
@@ -753,14 +817,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      * 设置y值
      *
      * @param y
-	 */
-	public void setY(Object y) {
+     */
+    public void setY(Object y) {
         this.y = y;
     }
 
-	/**
+    /**
      * 获取x2值
-	 */
+     */
     public Object getX2() {
         return x2;
     }
@@ -770,13 +834,13 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param x2
      */
-	public void setX2(Object x2) {
+    public void setX2(Object x2) {
         this.x2 = x2;
     }
 
-	/**
+    /**
      * 获取y2值
-	 */
+     */
     public Object getY2() {
         return y2;
     }
@@ -786,14 +850,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param y2
      */
-	public void setY2(Object y2) {
+    public void setY2(Object y2) {
         this.y2 = y2;
     }
 
     /**
      * 获取width值
-	 */
-	public Object getWidth() {
+     */
+    public Object getWidth() {
         return width;
     }
 
@@ -802,14 +866,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param width
      */
-	public void setWidth(Object width) {
+    public void setWidth(Object width) {
         this.width = width;
     }
 
     /**
      * 获取height值
-	 */
-	public Object getHeight() {
+     */
+    public Object getHeight() {
         return height;
     }
 
@@ -818,14 +882,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param height
      */
-	public void setHeight(Object height) {
+    public void setHeight(Object height) {
         this.height = height;
     }
 
     /**
      * 获取backgroundColor值
      */
-	public String getBackgroundColor() {
+    public String getBackgroundColor() {
         return backgroundColor;
     }
 
@@ -840,8 +904,8 @@ public class Timeline extends AbstractData<Timeline> implements Component {
 
     /**
      * 获取borderColor值
-	 */
-	public String getBorderColor() {
+     */
+    public String getBorderColor() {
         return borderColor;
     }
 
@@ -850,14 +914,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param borderColor
      */
-	public void setBorderColor(String borderColor) {
+    public void setBorderColor(String borderColor) {
         this.borderColor = borderColor;
     }
 
     /**
      * 获取borderWidth值
-	 */
-	public Integer getBorderWidth() {
+     */
+    public Integer getBorderWidth() {
         return borderWidth;
     }
 
@@ -866,14 +930,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param borderWidth
      */
-	public void setBorderWidth(Integer borderWidth) {
+    public void setBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
     }
 
-	/**
+    /**
      * 获取padding值
-	 */
-	public Integer getPadding() {
+     */
+    public Integer getPadding() {
         return padding;
     }
 
@@ -882,14 +946,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param padding
      */
-	public void setPadding(Integer padding) {
+    public void setPadding(Integer padding) {
         this.padding = padding;
     }
 
     /**
      * 获取controlPosition值
      */
-	public ControlPosition getControlPosition() {
+    public ControlPosition getControlPosition() {
         return controlPosition;
     }
 
@@ -902,7 +966,7 @@ public class Timeline extends AbstractData<Timeline> implements Component {
         this.controlPosition = controlPosition;
     }
 
-	/**
+    /**
      * 获取autoPlay值
      */
     public Boolean getAutoPlay() {
@@ -914,11 +978,11 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param autoPlay
      */
-	public void setAutoPlay(Boolean autoPlay) {
+    public void setAutoPlay(Boolean autoPlay) {
         this.autoPlay = autoPlay;
     }
 
-	/**
+    /**
      * 获取loop值
      */
     public Boolean getLoop() {
@@ -928,16 +992,16 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 设置loop值
      *
-	 * @param loop
-	 */
+     * @param loop
+     */
     public void setLoop(Boolean loop) {
         this.loop = loop;
     }
 
-	/**
+    /**
      * 获取playInterval值
-	 */
-	public Integer getPlayInterval() {
+     */
+    public Integer getPlayInterval() {
         return playInterval;
     }
 
@@ -946,11 +1010,11 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param playInterval
      */
-	public void setPlayInterval(Integer playInterval) {
+    public void setPlayInterval(Integer playInterval) {
         this.playInterval = playInterval;
     }
 
-	/**
+    /**
      * 获取symbol值
      */
     public Object getSymbol() {
@@ -960,13 +1024,13 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 设置symbol值
      *
-	 * @param symbol
-	 */
-	public void setSymbol(Object symbol) {
+     * @param symbol
+     */
+    public void setSymbol(Object symbol) {
         this.symbol = symbol;
     }
 
-	/**
+    /**
      * 获取symbolSize值
      */
     public Object getSymbolSize() {
@@ -978,14 +1042,14 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param symbolSize
      */
-	public void setSymbolSize(Object symbolSize) {
+    public void setSymbolSize(Object symbolSize) {
         this.symbolSize = symbolSize;
     }
 
-	/**
+    /**
      * 获取currentIndex值
-	 */
-	public Integer getCurrentIndex() {
+     */
+    public Integer getCurrentIndex() {
         return currentIndex;
     }
 
@@ -994,11 +1058,11 @@ public class Timeline extends AbstractData<Timeline> implements Component {
      *
      * @param currentIndex
      */
-	public void setCurrentIndex(Integer currentIndex) {
+    public void setCurrentIndex(Integer currentIndex) {
         this.currentIndex = currentIndex;
     }
 
-	/**
+    /**
      * 获取zlevel值
      */
     public Integer getZlevel() {
@@ -1008,9 +1072,9 @@ public class Timeline extends AbstractData<Timeline> implements Component {
     /**
      * 设置zlevel值
      *
-	 * @param zlevel
-	 */
-	public void setZlevel(Integer zlevel) {
+     * @param zlevel
+     */
+    public void setZlevel(Integer zlevel) {
         this.zlevel = zlevel;
     }
 
@@ -1021,12 +1085,12 @@ public class Timeline extends AbstractData<Timeline> implements Component {
         return z;
     }
 
-	/**
+    /**
      * 设置z值
-	 * 
-	 * @param z
-	 */
-	public void setZ(Integer z) {
+     *
+     * @param z
+     */
+    public void setZ(Integer z) {
         this.z = z;
     }
 }

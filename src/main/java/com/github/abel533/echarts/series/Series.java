@@ -27,8 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.Chart;
 import com.github.abel533.echarts.Tooltip;
-import com.github.abel533.echarts.code.SeriesType;
-import com.github.abel533.echarts.code.Symbol;
+import com.github.abel533.echarts.code.*;
 import com.github.abel533.echarts.style.ItemStyle;
 
 /**
@@ -49,6 +48,10 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * yAxis坐标轴数组的索引，指定该系列数据所用的纵坐标轴
      */
     private Integer yAxisIndex;
+    /**
+     * 使用的地理坐标系的 index，在单个图表实例中存在多个地理坐标系的时候有用
+     */
+    private Integer geoIndex;
     /**
      * 系列名称，如启用legend，该值将被legend.data索引相关
      */
@@ -102,6 +105,35 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     private Object symbolRoate;
     /**
+     * 标记相对于原本位置的偏移
+     */
+    private Object[] symbolOffset;
+
+    /**
+     * treemap 组件离容器左侧的距离
+     */
+    private Object left;
+    /**
+     * treemap 组件离容器上侧的距离
+     */
+    private Object top;
+    /**
+     * treemap 组件离容器右侧的距离
+     */
+    private Object right;
+    /**
+     * treemap 组件离容器下侧的距离
+     */
+    private Object bottom;
+    /**
+     * treemap 组件的宽度
+     */
+    private Object width;
+    /**
+     * treemap 组件的高度
+     */
+    private Object height;
+    /**
      * 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把showAllSymbol设为true
      */
     private Boolean showAllSymbol;
@@ -117,6 +149,15 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      * 二级层叠控制
      */
     private Integer z;
+    /**
+     * 图形上的文本标签，课用于说明图形的一些数据信息，比如值，名称等，label选项在 ECharts 2.x 中放置于itemStyle.normal下，在 ECharts 3 中为了让整个配置项结构更扁平合理，label被拿出来跟 itemStyle 平级，并且跟 itemStyle 一样拥有 normal, emphasis 两个状态
+     */
+    private ItemStyle label;
+
+    /**
+     * 坐标系
+     */
+    private Object coordinateSystem;
 
     /**
      * 构造函数
@@ -131,6 +172,161 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      */
     protected Series(String name) {
         this.name = name;
+    }
+
+    public Object left() {
+        return this.left;
+    }
+
+    public T left(Object left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public T left(Integer left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public T left(X left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public Object top() {
+        return this.top;
+    }
+
+    public T top(Object top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public T top(Integer top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public T top(Y top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public Object right() {
+        return this.right;
+    }
+
+    public T right(Object right) {
+        this.right = right;
+        return (T) this;
+    }
+
+    public T right(Integer right) {
+        this.right = right;
+        return (T) this;
+    }
+
+    public Object bottom() {
+        return this.bottom;
+    }
+
+    public T bottom(Object bottom) {
+        this.bottom = bottom;
+        return (T) this;
+    }
+
+    public T bottom(Integer bottom) {
+        this.bottom = bottom;
+        return (T) this;
+    }
+
+    public Object width() {
+        return this.width;
+    }
+
+    public T width(Object width) {
+        this.width = width;
+        return (T) this;
+    }
+
+    public T width(Integer width) {
+        this.width = width;
+        return (T) this;
+    }
+
+    public Object height() {
+        return this.height;
+    }
+
+    public T height(Object height) {
+        this.height = height;
+        return (T) this;
+    }
+
+    public T height(Integer height) {
+        this.height = height;
+        return (T) this;
+    }
+
+    public Object[] symbolOffset() {
+        return this.symbolOffset;
+    }
+
+    public T symbolOffset(Object[] symbolOffset) {
+        this.symbolOffset = symbolOffset;
+        return (T) this;
+    }
+
+    public T symbolOffset(Object o1, Object o2) {
+        this.symbolOffset = new Object[]{o1, o2};
+        return (T) this;
+    }
+
+    public Object[] getSymbolOffset() {
+        return symbolOffset;
+    }
+
+    public void setSymbolOffset(Object[] symbolOffset) {
+        this.symbolOffset = symbolOffset;
+    }
+
+    public Object coordinateSystem() {
+        return this.coordinateSystem;
+    }
+
+    public T coordinateSystem(Object coordinateSystem) {
+        this.coordinateSystem = coordinateSystem;
+        return (T) this;
+    }
+
+    public T coordinateSystem(CoordinateSystem coordinateSystem) {
+        this.coordinateSystem = coordinateSystem;
+        return (T) this;
+    }
+
+    public Object getCoordinateSystem() {
+        return coordinateSystem;
+    }
+
+    public void setCoordinateSystem(Object coordinateSystem) {
+        this.coordinateSystem = coordinateSystem;
+    }
+
+    public ItemStyle getLabel() {
+        return label;
+    }
+
+    public void setLabel(ItemStyle label) {
+        this.label = label;
+    }
+
+    public T label(ItemStyle label) {
+        this.label = label;
+        return (T) this;
+    }
+
+    public ItemStyle label() {
+        return this.label;
     }
 
     /**
@@ -259,6 +455,16 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
         this.yAxisIndex = yAxisIndex;
         return (T) this;
     }
+
+    public Integer geoIndex() {
+        return this.geoIndex;
+    }
+
+    public T geoIndex(Integer geoIndex) {
+        this.geoIndex = geoIndex;
+        return (T) this;
+    }
+
 
     /**
      * 获取name值
@@ -569,6 +775,14 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
         this.yAxisIndex = yAxisIndex;
     }
 
+    public Integer getGeoIndex() {
+        return geoIndex;
+    }
+
+    public void setGeoIndex(Integer geoIndex) {
+        this.geoIndex = geoIndex;
+    }
+
     /**
      * 获取name值
      */
@@ -715,8 +929,8 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
 
     /**
      * 获取z值
-	 */
-	public Integer getZ() {
+     */
+    public Integer getZ() {
         return z;
     }
 
@@ -725,7 +939,55 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      *
      * @param z
      */
-	public void setZ(Integer z) {
+    public void setZ(Integer z) {
         this.z = z;
+    }
+
+    public Object getLeft() {
+        return left;
+    }
+
+    public void setLeft(Object left) {
+        this.left = left;
+    }
+
+    public Object getTop() {
+        return top;
+    }
+
+    public void setTop(Object top) {
+        this.top = top;
+    }
+
+    public Object getRight() {
+        return right;
+    }
+
+    public void setRight(Object right) {
+        this.right = right;
+    }
+
+    public Object getBottom() {
+        return bottom;
+    }
+
+    public void setBottom(Object bottom) {
+        this.bottom = bottom;
+    }
+
+    public Object getWidth() {
+        return width;
+    }
+
+    public void setWidth(Object width) {
+        this.width = width;
+    }
+
+    public Object getHeight() {
+        return height;
+    }
+
+    public void setHeight(Object height) {
+        this.height = height;
     }
 }

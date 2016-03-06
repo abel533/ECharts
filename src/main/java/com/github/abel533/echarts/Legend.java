@@ -24,6 +24,7 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.Align;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
 
@@ -70,6 +71,9 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     private List data;
 
+    private Align align;
+    private String formatter;
+
     /**
      * 构造函数
      */
@@ -83,6 +87,40 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     public Legend(Object... values) {
         this.data(values);
+    }
+
+    public Align align() {
+        return this.align;
+    }
+
+    public Legend align(Align align) {
+        this.align = align;
+        return this;
+    }
+
+    public String formatter() {
+        return this.formatter;
+    }
+
+    public Legend formatter(String formatter) {
+        this.formatter = formatter;
+        return this;
+    }
+
+    public Align getAlign() {
+        return align;
+    }
+
+    public void setAlign(Align align) {
+        this.align = align;
+    }
+
+    public String getFormatter() {
+        return formatter;
+    }
+
+    public void setFormatter(String formatter) {
+        this.formatter = formatter;
     }
 
     /**

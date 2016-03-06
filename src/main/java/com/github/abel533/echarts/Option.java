@@ -29,6 +29,7 @@ import com.github.abel533.echarts.code.Easing;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.option.NoDataLoadingOption;
+import com.github.abel533.echarts.series.Parallel;
 import com.github.abel533.echarts.series.Series;
 import com.github.abel533.echarts.style.ItemStyle;
 
@@ -95,7 +96,7 @@ public class Option implements Serializable {
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
-    private DataZoom dataZoom;
+    private List<DataZoom> dataZoom;
     /**
      * 缩放漫游组件（详见RoamController）,数据缩放漫游选择
      */
@@ -161,6 +162,10 @@ public class Option implements Serializable {
      */
     private Easing animationEasing;
     /**
+     * 数据更新动画的缓动效果
+     */
+    private Object animationEasingUpdate;
+    /**
      * 无数据时载入配置
      */
     private NoDataLoadingOption noDataLoadingOption;
@@ -168,7 +173,105 @@ public class Option implements Serializable {
      * 当使用timeline时，每一组数据要放到单独的option中
      */
     private List<Option> options;
+    /**
+     * 样式
+     */
     private ItemStyle itemStyle;
+    /**
+     * 地理坐标系组件
+     */
+    private Geo geo;
+    /**
+     * 平行坐标系介绍
+     */
+    private Parallel parallel;
+    /**
+     * visualMap 是视觉映射组件，用于进行『视觉编码』，也就是将数据映射到视觉元素（视觉通道）
+     */
+    private List<VisualMap> visualMap;
+
+    public List<VisualMap> visualMap() {
+        if (this.visualMap == null) {
+            this.visualMap = new ArrayList<VisualMap>();
+        }
+        return this.visualMap;
+    }
+
+    public Option visualMap(List<VisualMap> visualMap) {
+        this.visualMap = visualMap;
+        return this;
+    }
+
+    public List<VisualMap> getVisualMap() {
+        return visualMap;
+    }
+
+    public void setVisualMap(List<VisualMap> visualMap) {
+        this.visualMap = visualMap;
+    }
+
+    public Object animationEasingUpdate() {
+        return this.animationEasingUpdate;
+    }
+
+    public Option animationEasingUpdate(Object animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+        return this;
+    }
+
+    public Option animationEasingUpdate(Easing animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+        return this;
+    }
+
+    public Object getAnimationEasingUpdate() {
+        return animationEasingUpdate;
+    }
+
+    public void setAnimationEasingUpdate(Object animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+    }
+
+    public Parallel parallel() {
+        if (this.parallel == null) {
+            this.parallel = new Parallel();
+        }
+        return this.parallel;
+    }
+
+    public Option parallel(Parallel parallel) {
+        this.parallel = parallel;
+        return this;
+    }
+
+    public Parallel getParallel() {
+        return parallel;
+    }
+
+    public void setParallel(Parallel parallel) {
+        this.parallel = parallel;
+    }
+
+    public Geo geo() {
+        if (this.geo == null) {
+            this.geo = new Geo();
+        }
+        return this.geo;
+    }
+
+    public Option geo(Geo geo) {
+        this.geo = geo;
+        return this;
+    }
+
+
+    public Geo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(Geo geo) {
+        this.geo = geo;
+    }
 
     /**
      * 获取symbolList值
@@ -240,7 +343,7 @@ public class Option implements Serializable {
     /**
      * 获取nameConnector值
      */
-	public String nameConnector() {
+    public String nameConnector() {
         return this.nameConnector;
     }
 
@@ -257,7 +360,7 @@ public class Option implements Serializable {
     /**
      * 获取valueConnector值
      */
-	public String valueConnector() {
+    public String valueConnector() {
         return this.valueConnector;
     }
 
@@ -274,7 +377,7 @@ public class Option implements Serializable {
     /**
      * 获取addDataAnimation值
      */
-	public Boolean addDataAnimation() {
+    public Boolean addDataAnimation() {
         return this.addDataAnimation;
     }
 
@@ -283,7 +386,7 @@ public class Option implements Serializable {
      *
      * @param addDataAnimation
      */
-	public Option addDataAnimation(Boolean addDataAnimation) {
+    public Option addDataAnimation(Boolean addDataAnimation) {
         this.addDataAnimation = addDataAnimation;
         return this;
     }
@@ -291,7 +394,7 @@ public class Option implements Serializable {
     /**
      * 获取animationThreshold值
      */
-	public Integer animationThreshold() {
+    public Integer animationThreshold() {
         return this.animationThreshold;
     }
 
@@ -308,7 +411,7 @@ public class Option implements Serializable {
     /**
      * 获取animationDuration值
      */
-	public Integer animationDuration() {
+    public Integer animationDuration() {
         return this.animationDuration;
     }
 
@@ -325,7 +428,7 @@ public class Option implements Serializable {
     /**
      * 获取animationDurationUpdate值
      */
-	public Integer animationDurationUpdate() {
+    public Integer animationDurationUpdate() {
         return this.animationDurationUpdate;
     }
 
@@ -339,10 +442,10 @@ public class Option implements Serializable {
         return this;
     }
 
-	/**
+    /**
      * 获取animationEasing值
-	 */
-	public Easing animationEasing() {
+     */
+    public Easing animationEasing() {
         return this.animationEasing;
     }
 
@@ -351,7 +454,7 @@ public class Option implements Serializable {
      *
      * @param animationEasing
      */
-	public Option animationEasing(Easing animationEasing) {
+    public Option animationEasing(Easing animationEasing) {
         this.animationEasing = animationEasing;
         return this;
     }
@@ -359,7 +462,7 @@ public class Option implements Serializable {
     /**
      * 获取noDataLoadingOption值
      */
-	public NoDataLoadingOption noDataLoadingOption() {
+    public NoDataLoadingOption noDataLoadingOption() {
         if (this.noDataLoadingOption == null) {
             this.noDataLoadingOption = new NoDataLoadingOption();
         }
@@ -527,8 +630,21 @@ public class Option implements Serializable {
      *
      * @param dataZoom
      */
-    public Option dataZoom(DataZoom dataZoom) {
+    public Option dataZoom(List<DataZoom> dataZoom) {
         this.dataZoom = dataZoom;
+        return this;
+    }
+
+    /**
+     * 设置dataZoom值
+     *
+     * @param dataZoom
+     */
+    public Option dataZoom(DataZoom... dataZoom) {
+        if (dataZoom == null || dataZoom.length == 0) {
+            return this;
+        }
+        this.dataZoom().addAll(Arrays.asList(dataZoom));
         return this;
     }
 
@@ -747,9 +863,9 @@ public class Option implements Serializable {
     /**
      * 数据区域缩放（详见dataZoom）,数据展现范围选择
      */
-    public DataZoom dataZoom() {
+    public List<DataZoom> dataZoom() {
         if (this.dataZoom == null) {
-            this.dataZoom = new DataZoom();
+            this.dataZoom = new ArrayList<DataZoom>();
         }
         return this.dataZoom;
     }
@@ -981,7 +1097,7 @@ public class Option implements Serializable {
     /**
      * 获取dataZoom值
      */
-    public DataZoom getDataZoom() {
+    public List<DataZoom> getDataZoom() {
         return dataZoom;
     }
 
@@ -990,7 +1106,7 @@ public class Option implements Serializable {
      *
      * @param dataZoom
      */
-    public void setDataZoom(DataZoom dataZoom) {
+    public void setDataZoom(List<DataZoom> dataZoom) {
         this.dataZoom = dataZoom;
     }
 
@@ -1202,7 +1318,7 @@ public class Option implements Serializable {
         this.itemStyle = itemStyle;
     }
 
-	/**
+    /**
      * 获取symbolList值
      */
     public List<Symbol> getSymbolList() {
@@ -1213,12 +1329,12 @@ public class Option implements Serializable {
      * 设置symbolList值
      *
      * @param symbolList
-	 */
-	public void setSymbolList(List<Symbol> symbolList) {
+     */
+    public void setSymbolList(List<Symbol> symbolList) {
         this.symbolList = symbolList;
     }
 
-	/**
+    /**
      * 获取calculableColor值
      */
     public String getCalculableColor() {
@@ -1230,14 +1346,14 @@ public class Option implements Serializable {
      *
      * @param calculableColor
      */
-	public void setCalculableColor(String calculableColor) {
+    public void setCalculableColor(String calculableColor) {
         this.calculableColor = calculableColor;
     }
 
-	/**
+    /**
      * 获取calculableHolderColo值
-	 */
-	public String getCalculableHolderColo() {
+     */
+    public String getCalculableHolderColo() {
         return calculableHolderColo;
     }
 
@@ -1246,11 +1362,11 @@ public class Option implements Serializable {
      *
      * @param calculableHolderColo
      */
-	public void setCalculableHolderColo(String calculableHolderColo) {
+    public void setCalculableHolderColo(String calculableHolderColo) {
         this.calculableHolderColo = calculableHolderColo;
     }
 
-	/**
+    /**
      * 获取nameConnector值
      */
     public String getNameConnector() {
@@ -1261,12 +1377,12 @@ public class Option implements Serializable {
      * 设置nameConnector值
      *
      * @param nameConnector
-	 */
-	public void setNameConnector(String nameConnector) {
+     */
+    public void setNameConnector(String nameConnector) {
         this.nameConnector = nameConnector;
     }
 
-	/**
+    /**
      * 获取valueConnector值
      */
     public String getValueConnector() {
@@ -1278,11 +1394,11 @@ public class Option implements Serializable {
      *
      * @param valueConnector
      */
-	public void setValueConnector(String valueConnector) {
+    public void setValueConnector(String valueConnector) {
         this.valueConnector = valueConnector;
     }
 
-	/**
+    /**
      * 获取addDataAnimation值
      */
     public Boolean getAddDataAnimation() {
@@ -1294,13 +1410,13 @@ public class Option implements Serializable {
      *
      * @param addDataAnimation
      */
-	public void setAddDataAnimation(Boolean addDataAnimation) {
+    public void setAddDataAnimation(Boolean addDataAnimation) {
         this.addDataAnimation = addDataAnimation;
     }
 
-	/**
+    /**
      * 获取animationThreshold值
-	 */
+     */
     public Integer getAnimationThreshold() {
         return animationThreshold;
     }
@@ -1310,11 +1426,11 @@ public class Option implements Serializable {
      *
      * @param animationThreshold
      */
-	public void setAnimationThreshold(Integer animationThreshold) {
+    public void setAnimationThreshold(Integer animationThreshold) {
         this.animationThreshold = animationThreshold;
     }
 
-	/**
+    /**
      * 获取animationDuration值
      */
     public Integer getAnimationDuration() {
@@ -1326,14 +1442,14 @@ public class Option implements Serializable {
      *
      * @param animationDuration
      */
-	public void setAnimationDuration(Integer animationDuration) {
+    public void setAnimationDuration(Integer animationDuration) {
         this.animationDuration = animationDuration;
     }
 
     /**
      * 获取animationDurationUpdate值
-	 */
-	public Integer getAnimationDurationUpdate() {
+     */
+    public Integer getAnimationDurationUpdate() {
         return animationDurationUpdate;
     }
 
@@ -1342,11 +1458,11 @@ public class Option implements Serializable {
      *
      * @param animationDurationUpdate
      */
-	public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
+    public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
         this.animationDurationUpdate = animationDurationUpdate;
     }
 
-	/**
+    /**
      * 获取animationEasing值
      */
     public Easing getAnimationEasing() {
@@ -1358,14 +1474,14 @@ public class Option implements Serializable {
      *
      * @param animationEasing
      */
-	public void setAnimationEasing(Easing animationEasing) {
+    public void setAnimationEasing(Easing animationEasing) {
         this.animationEasing = animationEasing;
     }
 
     /**
      * 获取noDataLoadingOption值
      */
-	public NoDataLoadingOption getNoDataLoadingOption() {
+    public NoDataLoadingOption getNoDataLoadingOption() {
         return noDataLoadingOption;
     }
 
@@ -1374,7 +1490,7 @@ public class Option implements Serializable {
      *
      * @param noDataLoadingOption
      */
-	public void setNoDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
+    public void setNoDataLoadingOption(NoDataLoadingOption noDataLoadingOption) {
         this.noDataLoadingOption = noDataLoadingOption;
     }
 }

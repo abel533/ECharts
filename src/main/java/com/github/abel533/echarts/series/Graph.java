@@ -24,23 +24,41 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.Layout;
 import com.github.abel533.echarts.code.Roam;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.series.force.Category;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
+import com.github.abel533.echarts.series.other.Force;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Description: Force
+ * 关系图
  *
  * @author liuzh
  */
-public class Force extends Series<Force> {
+public class Graph extends Series<Graph> {
+    /**
+     * 图的布局
+     */
+    private Layout layout;
+    /**
+     * 力引导布局相关的配置项
+     */
+    private Force force;
+    /**
+     * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
+     */
+    private Object roam;
+    /**
+     * 鼠标漫游缩放时节点的相应缩放比例，当设为0时节点不随着鼠标的缩放而缩放
+     */
+    private Double nodeScaleRatio;
     /**
      * 力导向图中节点的分类
      */
@@ -48,11 +66,15 @@ public class Force extends Series<Force> {
     /**
      * 力导向图的顶点数据
      */
-    private List<Node> nodes;
+    private List nodes;
     /**
      * 力导向图的边数据
      */
     private List<Link> links;
+    /**
+     * 力导向图的边数据
+     */
+    private List<Link> edges;
     /**
      * 布局中心，可以是绝对值或者相对百分比
      */
@@ -113,16 +135,12 @@ public class Force extends Series<Force> {
      * 每一帧布局计算的迭代次数，因为每一帧绘制的时间经常会比布局时间长很多，所以在使用 web worker 的时候可以把 steps 调大来平衡两者的时间从而达到效率最优化
      */
     private Integer steps;
-    /**
-     * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
-     */
-    private Object roam;
 
     /**
      * 构造函数
      */
-    public Force() {
-        this.type(SeriesType.force);
+    public Graph() {
+        this.type(SeriesType.graph);
     }
 
     /**
@@ -130,9 +148,51 @@ public class Force extends Series<Force> {
      *
      * @param name
      */
-    public Force(String name) {
+    public Graph(String name) {
         super(name);
-        this.type(SeriesType.force);
+        this.type(SeriesType.graph);
+    }
+
+    /**
+     * 构造函数
+     *
+     * @param name
+     * @param layout
+     */
+    public Graph(String name, Layout layout) {
+        super(name);
+        this.type(SeriesType.graph);
+        this.layout = layout;
+    }
+
+    public Layout layout() {
+        return this.layout;
+    }
+
+    public Graph layout(Layout layout) {
+        this.layout = layout;
+        return this;
+    }
+
+    public Force force() {
+        if (this.force == null) {
+            this.force = new Force();
+        }
+        return this.force;
+    }
+
+    public Graph force(Force force) {
+        this.force = force;
+        return this;
+    }
+
+    public Double nodeScaleRatio() {
+        return this.nodeScaleRatio;
+    }
+
+    public Graph nodeScaleRatio(Double nodeScaleRatio) {
+        this.nodeScaleRatio = nodeScaleRatio;
+        return this;
     }
 
     /**
@@ -147,7 +207,7 @@ public class Force extends Series<Force> {
      *
      * @param coolDown
      */
-    public Force coolDown(Object coolDown) {
+    public Graph coolDown(Object coolDown) {
         this.coolDown = coolDown;
         return this;
     }
@@ -164,7 +224,7 @@ public class Force extends Series<Force> {
      *
      * @param ratioScaling
      */
-    public Force ratioScaling(Boolean ratioScaling) {
+    public Graph ratioScaling(Boolean ratioScaling) {
         this.ratioScaling = ratioScaling;
         return this;
     }
@@ -182,7 +242,7 @@ public class Force extends Series<Force> {
      *
      * @param preventOverlap
      */
-    public Force preventOverlap(Boolean preventOverlap) {
+    public Graph preventOverlap(Boolean preventOverlap) {
         this.preventOverlap = preventOverlap;
         return this;
     }
@@ -192,7 +252,7 @@ public class Force extends Series<Force> {
      *
      * @param categories
      */
-    public Force categories(List<Category> categories) {
+    public Graph categories(List<Category> categories) {
         this.categories = categories;
         return this;
     }
@@ -202,7 +262,7 @@ public class Force extends Series<Force> {
      *
      * @param nodes
      */
-    public Force nodes(List<Node> nodes) {
+    public Graph nodes(List nodes) {
         this.nodes = nodes;
         return this;
     }
@@ -212,8 +272,18 @@ public class Force extends Series<Force> {
      *
      * @param links
      */
-    public Force links(List<Link> links) {
+    public Graph links(List<Link> links) {
         this.links = links;
+        return this;
+    }
+
+    /**
+     * 设置links值
+     *
+     * @param edges
+     */
+    public Graph edges(List<Link> edges) {
+        this.edges = edges;
         return this;
     }
 
@@ -233,7 +303,7 @@ public class Force extends Series<Force> {
      * @param values
      * @return
      */
-    public Force categories(Category... values) {
+    public Graph categories(Category... values) {
         if (values == null || values.length == 0) {
             return this;
         }
@@ -247,7 +317,7 @@ public class Force extends Series<Force> {
      * @param names
      * @return
      */
-    public Force categories(String... names) {
+    public Graph categories(String... names) {
         if (names == null || names.length == 0) {
             return this;
         }
@@ -263,7 +333,7 @@ public class Force extends Series<Force> {
      * @param values
      * @return
      */
-    public Force categories(Object... values) {
+    public Graph categories(Object... values) {
         if (values == null || values.length == 0) {
             return this;
         }
@@ -283,7 +353,7 @@ public class Force extends Series<Force> {
      */
     public List<Node> nodes() {
         if (this.nodes == null) {
-            this.nodes = new ArrayList<Node>();
+            this.nodes = new ArrayList();
         }
         return this.nodes;
     }
@@ -294,7 +364,7 @@ public class Force extends Series<Force> {
      * @param values
      * @return
      */
-    public Force nodes(Node... values) {
+    public Graph nodes(Node... values) {
         if (values == null || values.length == 0) {
             return this;
         }
@@ -318,11 +388,35 @@ public class Force extends Series<Force> {
      * @param values
      * @return
      */
-    public Force links(Link... values) {
+    public Graph links(Link... values) {
         if (values == null || values.length == 0) {
             return this;
         }
         this.links().addAll(Arrays.asList(values));
+        return this;
+    }
+
+    /**
+     * 力导向图的边数据
+     */
+    public List<Link> edges() {
+        if (this.edges == null) {
+            this.edges = new ArrayList<Link>();
+        }
+        return this.edges;
+    }
+
+    /**
+     * 添加力导向图的边数据
+     *
+     * @param values
+     * @return
+     */
+    public Graph edges(Link... values) {
+        if (values == null || values.length == 0) {
+            return this;
+        }
+        this.edges().addAll(Arrays.asList(values));
         return this;
     }
 
@@ -338,7 +432,7 @@ public class Force extends Series<Force> {
      *
      * @param center
      */
-    public Force center(Object center) {
+    public Graph center(Object center) {
         this.center = center;
         return this;
     }
@@ -355,7 +449,7 @@ public class Force extends Series<Force> {
      *
      * @param size
      */
-    public Force size(Object size) {
+    public Graph size(Object size) {
         this.size = size;
         return this;
     }
@@ -372,7 +466,7 @@ public class Force extends Series<Force> {
      *
      * @param minRadius
      */
-    public Force minRadius(Integer minRadius) {
+    public Graph minRadius(Integer minRadius) {
         this.minRadius = minRadius;
         return this;
     }
@@ -389,7 +483,7 @@ public class Force extends Series<Force> {
      *
      * @param maxRadius
      */
-    public Force maxRadius(Integer maxRadius) {
+    public Graph maxRadius(Integer maxRadius) {
         this.maxRadius = maxRadius;
         return this;
     }
@@ -406,7 +500,7 @@ public class Force extends Series<Force> {
      *
      * @param linkSymbol
      */
-    public Force linkSymbol(Symbol linkSymbol) {
+    public Graph linkSymbol(Symbol linkSymbol) {
         this.linkSymbol = linkSymbol;
         return this;
     }
@@ -416,7 +510,7 @@ public class Force extends Series<Force> {
      *
      * @param linkSymbol
      */
-    public Force linkSymbol(String linkSymbol) {
+    public Graph linkSymbol(String linkSymbol) {
         this.linkSymbol = linkSymbol;
         return this;
     }
@@ -433,7 +527,7 @@ public class Force extends Series<Force> {
      *
      * @param linkSymbolSize
      */
-    public Force linkSymbolSize(Integer linkSymbolSize) {
+    public Graph linkSymbolSize(Integer linkSymbolSize) {
         this.linkSymbolSize = linkSymbolSize;
         return this;
     }
@@ -450,7 +544,7 @@ public class Force extends Series<Force> {
      *
      * @param scaling
      */
-    public Force scaling(Double scaling) {
+    public Graph scaling(Double scaling) {
         this.scaling = scaling;
         return this;
     }
@@ -467,7 +561,7 @@ public class Force extends Series<Force> {
      *
      * @param gravity
      */
-    public Force gravity(Double gravity) {
+    public Graph gravity(Double gravity) {
         this.gravity = gravity;
         return this;
     }
@@ -484,7 +578,7 @@ public class Force extends Series<Force> {
      *
      * @param draggable
      */
-    public Force draggable(Boolean draggable) {
+    public Graph draggable(Boolean draggable) {
         this.draggable = draggable;
         return this;
     }
@@ -501,7 +595,7 @@ public class Force extends Series<Force> {
      *
      * @param large
      */
-    public Force large(Boolean large) {
+    public Graph large(Boolean large) {
         this.large = large;
         return this;
     }
@@ -518,7 +612,7 @@ public class Force extends Series<Force> {
      *
      * @param useWorker
      */
-    public Force useWorker(Boolean useWorker) {
+    public Graph useWorker(Boolean useWorker) {
         this.useWorker = useWorker;
         return this;
     }
@@ -535,7 +629,7 @@ public class Force extends Series<Force> {
      *
      * @param steps
      */
-    public Force steps(Integer steps) {
+    public Graph steps(Integer steps) {
         this.steps = steps;
         return this;
     }
@@ -552,7 +646,7 @@ public class Force extends Series<Force> {
      *
      * @param roam
      */
-    public Force roam(Boolean roam) {
+    public Graph roam(Boolean roam) {
         this.roam = roam;
         return this;
     }
@@ -562,7 +656,7 @@ public class Force extends Series<Force> {
      *
      * @param roam
      */
-    public Force roam(Roam roam) {
+    public Graph roam(Roam roam) {
         this.roam = roam;
         return this;
     }
@@ -586,7 +680,7 @@ public class Force extends Series<Force> {
     /**
      * 获取nodes值
      */
-    public List<Node> getNodes() {
+    public List getNodes() {
         return nodes;
     }
 
@@ -595,7 +689,7 @@ public class Force extends Series<Force> {
      *
      * @param nodes
      */
-    public void setNodes(List<Node> nodes) {
+    public void setNodes(List nodes) {
         this.nodes = nodes;
     }
 
@@ -613,6 +707,14 @@ public class Force extends Series<Force> {
      */
     public void setLinks(List<Link> links) {
         this.links = links;
+    }
+
+    public List<Link> getEdges() {
+        return edges;
+    }
+
+    public void setEdges(List<Link> edges) {
+        this.edges = edges;
     }
 
     /**
@@ -869,5 +971,29 @@ public class Force extends Series<Force> {
      */
     public void setRoam(Object roam) {
         this.roam = roam;
+    }
+
+    public Layout getLayout() {
+        return layout;
+    }
+
+    public void setLayout(Layout layout) {
+        this.layout = layout;
+    }
+
+    public Force getForce() {
+        return force;
+    }
+
+    public void setForce(Force force) {
+        this.force = force;
+    }
+
+    public Double getNodeScaleRatio() {
+        return nodeScaleRatio;
+    }
+
+    public void setNodeScaleRatio(Double nodeScaleRatio) {
+        this.nodeScaleRatio = nodeScaleRatio;
     }
 }

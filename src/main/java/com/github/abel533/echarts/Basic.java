@@ -83,6 +83,225 @@ public abstract class Basic<T> implements Serializable {
     private Integer z;
 
     /**
+     * treemap 组件离容器左侧的距离
+     */
+    private Object left;
+    /**
+     * treemap 组件离容器上侧的距离
+     */
+    private Object top;
+    /**
+     * treemap 组件离容器右侧的距离
+     */
+    private Object right;
+    /**
+     * treemap 组件离容器下侧的距离
+     */
+    private Object bottom;
+    /**
+     * treemap 组件的宽度
+     */
+    private Object width;
+    /**
+     * treemap 组件的高度
+     */
+    private Object height;
+    /**
+     * 图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果
+     */
+    private Integer shadowBlur;
+    /**
+     * 阴影颜色
+     */
+    private String shadowColor;
+    /**
+     * 阴影水平方向上的偏移距离
+     */
+    private Integer shadowOffsetX;
+    /**
+     * 阴影垂直方向上的偏移距离
+     */
+    private Integer shadowOffsetY;
+
+    public Object width() {
+        return this.width;
+    }
+
+    public T width(Object width) {
+        this.width = width;
+        return (T) this;
+    }
+
+    public T width(Integer width) {
+        this.width = width;
+        return (T) this;
+    }
+
+    public Object height() {
+        return this.height;
+    }
+
+    public T height(Object height) {
+        this.height = height;
+        return (T) this;
+    }
+
+    public T height(Integer height) {
+        this.height = height;
+        return (T) this;
+    }
+
+    public Object getWidth() {
+        return width;
+    }
+
+    public void setWidth(Object width) {
+        this.width = width;
+    }
+
+    public Object getHeight() {
+        return height;
+    }
+
+    public void setHeight(Object height) {
+        this.height = height;
+    }
+
+    public Integer shadowBlur() {
+        return this.shadowBlur;
+    }
+
+    public T shadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+        return (T) this;
+    }
+
+    public String shadowColor() {
+        return this.shadowColor;
+    }
+
+    public T shadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+        return (T) this;
+    }
+
+    public Integer shadowOffsetX() {
+        return this.shadowOffsetX;
+    }
+
+    public T shadowOffsetX(Integer shadowOffsetX) {
+        this.shadowOffsetX = shadowOffsetX;
+        return (T) this;
+    }
+
+    public Integer shadowOffsetY() {
+        return this.shadowOffsetY;
+    }
+
+    public T shadowOffsetY(Integer shadowOffsetY) {
+        this.shadowOffsetY = shadowOffsetY;
+        return (T) this;
+    }
+
+    public Object left() {
+        return this.left;
+    }
+
+    public T left(Object left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public T left(Integer left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public T left(X left) {
+        this.left = left;
+        return (T) this;
+    }
+
+    public Object top() {
+        return this.top;
+    }
+
+    public T top(Object top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public T top(Integer top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public T top(Y top) {
+        this.top = top;
+        return (T) this;
+    }
+
+    public Object right() {
+        return this.right;
+    }
+
+    public T right(Object right) {
+        this.right = right;
+        return (T) this;
+    }
+
+    public T right(Integer right) {
+        this.right = right;
+        return (T) this;
+    }
+
+    public Object bottom() {
+        return this.bottom;
+    }
+
+    public T bottom(Object bottom) {
+        this.bottom = bottom;
+        return (T) this;
+    }
+
+    public T bottom(Integer bottom) {
+        this.bottom = bottom;
+        return (T) this;
+    }
+
+    public Object getLeft() {
+        return left;
+    }
+
+    public void setLeft(Object left) {
+        this.left = left;
+    }
+
+    public Object getTop() {
+        return top;
+    }
+
+    public void setTop(Object top) {
+        this.top = top;
+    }
+
+    public Object getRight() {
+        return right;
+    }
+
+    public void setRight(Object right) {
+        this.right = right;
+    }
+
+    public Object getBottom() {
+        return bottom;
+    }
+
+    public void setBottom(Object bottom) {
+        this.bottom = bottom;
+    }
+
+    /**
      * 设置zlevel值
      *
      * @param zlevel
@@ -393,7 +612,7 @@ public abstract class Basic<T> implements Serializable {
      *
      * @param padding
      */
-    public void setPadding(Integer padding) {
+    public void setPadding(Object padding) {
         this.padding = padding;
     }
 
@@ -402,7 +621,7 @@ public abstract class Basic<T> implements Serializable {
      *
      * @param padding
      */
-    public void setPadding(Object padding) {
+    public void setPadding(Integer padding) {
         this.padding = padding;
     }
 
@@ -425,7 +644,7 @@ public abstract class Basic<T> implements Serializable {
     /**
      * 获取zlevel值
      */
-	public Integer getZlevel() {
+    public Integer getZlevel() {
         return zlevel;
     }
 
@@ -438,10 +657,10 @@ public abstract class Basic<T> implements Serializable {
         this.zlevel = zlevel;
     }
 
-	/**
+    /**
      * 获取z值
-	 */
-	public Integer getZ() {
+     */
+    public Integer getZ() {
         return z;
     }
 
@@ -450,7 +669,39 @@ public abstract class Basic<T> implements Serializable {
      *
      * @param z
      */
-	public void setZ(Integer z) {
+    public void setZ(Integer z) {
         this.z = z;
+    }
+
+    public Integer getShadowBlur() {
+        return shadowBlur;
+    }
+
+    public void setShadowBlur(Integer shadowBlur) {
+        this.shadowBlur = shadowBlur;
+    }
+
+    public String getShadowColor() {
+        return shadowColor;
+    }
+
+    public void setShadowColor(String shadowColor) {
+        this.shadowColor = shadowColor;
+    }
+
+    public Integer getShadowOffsetX() {
+        return shadowOffsetX;
+    }
+
+    public void setShadowOffsetX(Integer shadowOffsetX) {
+        this.shadowOffsetX = shadowOffsetX;
+    }
+
+    public Integer getShadowOffsetY() {
+        return shadowOffsetY;
+    }
+
+    public void setShadowOffsetY(Integer shadowOffsetY) {
+        this.shadowOffsetY = shadowOffsetY;
     }
 }

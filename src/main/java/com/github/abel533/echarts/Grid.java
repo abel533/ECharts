@@ -39,15 +39,26 @@ public class Grid extends Basic<Grid> implements Component {
      */
     private Object y2;
     /**
-     * 直角坐标系内绘图网格（不含坐标轴）宽度，默认为总宽度 - x - x2，数值单位px，指定width后将忽略x2，见下图。
-     * 支持百分比（字符串），如'50%'(显示区域一半的宽度)
+     * grid 区域是否包含坐标轴的刻度标签，在无法确定坐标轴标签的宽度，容器有比较小无法预留较多空间的时候，可以设为 true 防止标签溢出容器
      */
-    private Object width;
-    /**
-     * 直角坐标系内绘图网格（不含坐标轴）高度，默认为总宽度 - y - y2，数值单位px，指定height后将忽略y2，见下图。
-     * 支持百分比（字符串），如'50%'(显示区域一半的高度)
-     */
-    private Object height;
+    private Boolean containLabel;
+
+    public Boolean containLabel() {
+        return this.containLabel;
+    }
+
+    public Grid containLabel(Boolean containLabel) {
+        this.containLabel = containLabel;
+        return this;
+    }
+
+    public Boolean getContainLabel() {
+        return containLabel;
+    }
+
+    public void setContainLabel(Boolean containLabel) {
+        this.containLabel = containLabel;
+    }
 
     /**
      * 获取x2值
@@ -84,40 +95,6 @@ public class Grid extends Basic<Grid> implements Component {
     }
 
     /**
-     * 获取width值
-     */
-    public Object width() {
-        return this.width;
-    }
-
-    /**
-     * 设置width值
-     *
-     * @param width
-     */
-    public Grid width(Object width) {
-        this.width = width;
-        return this;
-    }
-
-    /**
-     * 获取height值
-     */
-    public Object height() {
-        return this.height;
-    }
-
-    /**
-     * 设置height值
-     *
-     * @param height
-     */
-    public Grid height(Object height) {
-        this.height = height;
-        return this;
-    }
-
-    /**
      * 获取x2值
      */
     public Object getX2() {
@@ -149,35 +126,4 @@ public class Grid extends Basic<Grid> implements Component {
         this.y2 = y2;
     }
 
-    /**
-     * 获取width值
-     */
-    public Object getWidth() {
-        return width;
-    }
-
-    /**
-     * 设置width值
-     *
-     * @param width
-     */
-    public void setWidth(Object width) {
-        this.width = width;
-    }
-
-    /**
-     * 获取height值
-     */
-    public Object getHeight() {
-        return height;
-    }
-
-    /**
-     * 设置height值
-     *
-     * @param height
-     */
-    public void setHeight(Object height) {
-        this.height = height;
-    }
 }

@@ -27,6 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
 import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.style.ItemStyle;
 
 /**
  * 漏斗图
@@ -50,14 +51,6 @@ public class Funnel extends Series<Funnel> {
      * 右下角纵坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域纵向中心)
      */
     private Object y2;
-    /**
-     * 总宽度，默认为绘图区总宽度 - x - x2，数值单位px，指定width后将忽略x2，支持百分比（字符串），如'50%'(显示区域一半的宽度)
-     */
-    private Object width;
-    /**
-     * 总宽度，默认为绘图区总高度 - y - y2，数值单位px，指定width后将忽略x2，支持百分比（字符串），如'50%'(显示区域一半的高度)
-     */
-    private Object height;
     /**
      * 水平方向对齐布局类型，默认居中对齐，可用选项还有：'left' | 'right' | 'center'
      */
@@ -88,6 +81,10 @@ public class Funnel extends Series<Funnel> {
      * 数据图形间距
      */
     private Integer gap;
+    /**
+     * 标签的视觉引导线样式，在 label 位置 设置为'left'或者'right'的时候会显示视觉引导线
+     */
+    private ItemStyle labelLine;
 
     /**
      * 构造函数
@@ -104,6 +101,18 @@ public class Funnel extends Series<Funnel> {
     public Funnel(String name) {
         super(name);
         this.type(SeriesType.funnel);
+    }
+
+    public ItemStyle labelLine() {
+        if (this.labelLine == null) {
+            this.labelLine = new ItemStyle();
+        }
+        return this.labelLine;
+    }
+
+    public Funnel labelLine(ItemStyle labelLine) {
+        this.labelLine = labelLine;
+        return this;
     }
 
     /**
@@ -171,40 +180,6 @@ public class Funnel extends Series<Funnel> {
      */
     public Funnel y2(Object y2) {
         this.y2 = y2;
-        return this;
-    }
-
-    /**
-     * 获取width值
-     */
-    public Object width() {
-        return this.width;
-    }
-
-    /**
-     * 设置width值
-     *
-     * @param width
-     */
-    public Funnel width(Object width) {
-        this.width = width;
-        return this;
-    }
-
-    /**
-     * 获取height值
-     */
-    public Object height() {
-        return this.height;
-    }
-
-    /**
-     * 设置height值
-     *
-     * @param height
-     */
-    public Funnel height(Object height) {
-        this.height = height;
         return this;
     }
 
@@ -392,38 +367,6 @@ public class Funnel extends Series<Funnel> {
     }
 
     /**
-     * 获取width值
-     */
-    public Object getWidth() {
-        return width;
-    }
-
-    /**
-     * 设置width值
-     *
-     * @param width
-     */
-    public void setWidth(Object width) {
-        this.width = width;
-    }
-
-    /**
-     * 获取height值
-     */
-    public Object getHeight() {
-        return height;
-    }
-
-    /**
-     * 设置height值
-     *
-     * @param height
-     */
-    public void setHeight(Object height) {
-        this.height = height;
-    }
-
-    /**
      * 获取min值
      */
     public Integer getMin() {
@@ -533,5 +476,13 @@ public class Funnel extends Series<Funnel> {
      */
     public void setFunnelAlign(X funnelAlign) {
         this.funnelAlign = funnelAlign;
+    }
+
+    public ItemStyle getLabelLine() {
+        return labelLine;
+    }
+
+    public void setLabelLine(ItemStyle labelLine) {
+        this.labelLine = labelLine;
     }
 }

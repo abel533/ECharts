@@ -52,6 +52,14 @@ public class Category implements Serializable {
      */
     private Object symbolSize;
     /**
+     * 该类目节点标记的旋转角度
+     */
+    private Integer symbolRotate;
+    /**
+     * 该类目节点标记相对于原本位置的偏移
+     */
+    private Object[] symbolOffset;
+    /**
      * 所有该类目的节点是否能被拖拽
      */
     private Boolean draggable;
@@ -61,6 +69,12 @@ public class Category implements Serializable {
      * @see com.github.abel533.echarts.style.ItemStyle
      */
     private ItemStyle itemStyle;
+    /**
+     * 详见 itemStyle
+     *
+     * @see com.github.abel533.echarts.style.ItemStyle
+     */
+    private ItemStyle label;
 
     /**
      * 构造函数
@@ -75,6 +89,41 @@ public class Category implements Serializable {
      */
     public Category(String name) {
         this.name = name;
+    }
+
+    public Integer symbolRotate() {
+        return this.symbolRotate;
+    }
+
+    public Category symbolRotate(Integer symbolRotate) {
+        this.symbolRotate = symbolRotate;
+        return this;
+    }
+
+    public Object[] symbolOffset() {
+        return this.symbolOffset;
+    }
+
+    public Category symbolOffset(Object[] symbolOffset) {
+        this.symbolOffset = symbolOffset;
+        return this;
+    }
+
+    public Category symbolOffset(Object o1, Object o2) {
+        this.symbolOffset = new Object[]{o1, o2};
+        return this;
+    }
+
+    public ItemStyle label() {
+        if (this.label == null) {
+            this.label = new ItemStyle();
+        }
+        return this.label;
+    }
+
+    public Category label(ItemStyle label) {
+        this.label = label;
+        return this;
     }
 
     /**
@@ -235,5 +284,29 @@ public class Category implements Serializable {
      */
     public void setDraggable(Boolean draggable) {
         this.draggable = draggable;
+    }
+
+    public Integer getSymbolRotate() {
+        return symbolRotate;
+    }
+
+    public void setSymbolRotate(Integer symbolRotate) {
+        this.symbolRotate = symbolRotate;
+    }
+
+    public Object[] getSymbolOffset() {
+        return symbolOffset;
+    }
+
+    public void setSymbolOffset(Object[] symbolOffset) {
+        this.symbolOffset = symbolOffset;
+    }
+
+    public ItemStyle getLabel() {
+        return label;
+    }
+
+    public void setLabel(ItemStyle label) {
+        this.label = label;
     }
 }

@@ -24,7 +24,12 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.DataZoomType;
+import com.github.abel533.echarts.code.FilterMode;
 import com.github.abel533.echarts.code.Orient;
+import com.github.abel533.echarts.style.TextStyle;
+
+import java.util.Date;
 
 /**
  * 数据区域缩放。与toolbox.feature.dataZoom同步，仅对直角坐标系图表有效
@@ -32,6 +37,50 @@ import com.github.abel533.echarts.code.Orient;
  * @author liuzh
  */
 public class DataZoom extends Basic<DataZoom> implements Component {
+    /**
+     * 类型
+     */
+    private DataZoomType type;
+    /**
+     * 显示label的小数精度。默认根据数据自动决定
+     */
+    private String labelPrecision;
+    /**
+     * 显示的label的格式化器
+     */
+    private String labelFormatter;
+    /**
+     * 是否在 dataZoom-silder 组件中显示数据阴影。数据阴影可以简单得反应数据走势
+     */
+    private String showDataShadow;
+    /**
+     * 文字样式
+     */
+    private TextStyle textStyle;
+    /**
+     * 数据窗口范围的起始数值。如果设置了 dataZoom-slider.start 则 startValue 失效
+     */
+    private Object startValue;
+    /**
+     * 数据窗口范围的结束数值。如果设置了 dataZoom-slider.end 则 endValue 失效
+     */
+    private Object endValue;
+    /**
+     * 设置 dataZoom-inside 组件控制的 角度轴
+     */
+    private Object angleAxisIndex;
+    /**
+     * 设置 dataZoom-inside 组件控制的 半径轴
+     */
+    private Object radiusAxisIndex;
+    /**
+     * dataZoom 的运行原理是通过 数据过滤 来达到 数据窗口缩放 的效果
+     */
+    private FilterMode filterMode;
+    /**
+     * 设置触发视图刷新的频率。单位为毫秒（ms）。一般不需要更改这个值
+     */
+    private Integer throttle;
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
      */
@@ -80,6 +129,246 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      * 缩放变化是否显示定位详情
      */
     private Boolean showDetail;
+
+    public String labelPrecision() {
+        return this.labelPrecision;
+    }
+
+    public DataZoom labelPrecision(String labelPrecision) {
+        this.labelPrecision = labelPrecision;
+        return this;
+    }
+
+    public String labelFormatter() {
+        return this.labelFormatter;
+    }
+
+    public DataZoom labelFormatter(String labelFormatter) {
+        this.labelFormatter = labelFormatter;
+        return this;
+    }
+
+    public String showDataShadow() {
+        return this.showDataShadow;
+    }
+
+    public DataZoom showDataShadow(String showDataShadow) {
+        this.showDataShadow = showDataShadow;
+        return this;
+    }
+
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public DataZoom textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return this;
+    }
+
+    public Object startValue() {
+        return this.startValue;
+    }
+
+    public DataZoom startValue(Object startValue) {
+        this.startValue = startValue;
+        return this;
+    }
+
+    public DataZoom startValue(String startValue) {
+        this.startValue = startValue;
+        return this;
+    }
+
+    public DataZoom startValue(Integer startValue) {
+        this.startValue = startValue;
+        return this;
+    }
+
+    public DataZoom startValue(Date startValue) {
+        this.startValue = startValue;
+        return this;
+    }
+
+    public Object endValue() {
+        return this.endValue;
+    }
+
+    public DataZoom endValue(Object endValue) {
+        this.endValue = endValue;
+        return this;
+    }
+
+    public DataZoom endValue(Integer endValue) {
+        this.endValue = endValue;
+        return this;
+    }
+
+    public DataZoom endValue(String endValue) {
+        this.endValue = endValue;
+        return this;
+    }
+
+    public DataZoom endValue(Date endValue) {
+        this.endValue = endValue;
+        return this;
+    }
+
+    public String getLabelPrecision() {
+        return labelPrecision;
+    }
+
+    public void setLabelPrecision(String labelPrecision) {
+        this.labelPrecision = labelPrecision;
+    }
+
+    public String getLabelFormatter() {
+        return labelFormatter;
+    }
+
+    public void setLabelFormatter(String labelFormatter) {
+        this.labelFormatter = labelFormatter;
+    }
+
+    public String getShowDataShadow() {
+        return showDataShadow;
+    }
+
+    public void setShowDataShadow(String showDataShadow) {
+        this.showDataShadow = showDataShadow;
+    }
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
+
+    public Object getStartValue() {
+        return startValue;
+    }
+
+    public void setStartValue(Object startValue) {
+        this.startValue = startValue;
+    }
+
+    public Object getEndValue() {
+        return endValue;
+    }
+
+    public void setEndValue(Object endValue) {
+        this.endValue = endValue;
+    }
+
+    public DataZoomType type() {
+        return this.type;
+    }
+
+    public DataZoom type(DataZoomType type) {
+        this.type = type;
+        return this;
+    }
+
+    public Object angleAxisIndex() {
+        return this.angleAxisIndex;
+    }
+
+    public DataZoom angleAxisIndex(Object angleAxisIndex) {
+        this.angleAxisIndex = angleAxisIndex;
+        return this;
+    }
+
+    public DataZoom angleAxisIndex(Integer angleAxisIndex) {
+        this.angleAxisIndex = angleAxisIndex;
+        return this;
+    }
+
+    public DataZoom angleAxisIndex(Integer... angleAxisIndex) {
+        this.angleAxisIndex = angleAxisIndex;
+        return this;
+    }
+
+    public Object radiusAxisIndex() {
+        return this.radiusAxisIndex;
+    }
+
+    public DataZoom radiusAxisIndex(Object radiusAxisIndex) {
+        this.radiusAxisIndex = radiusAxisIndex;
+        return this;
+    }
+
+    public DataZoom radiusAxisIndex(Integer radiusAxisIndex) {
+        this.radiusAxisIndex = radiusAxisIndex;
+        return this;
+    }
+
+    public DataZoom radiusAxisIndex(Integer... radiusAxisIndex) {
+        this.radiusAxisIndex = radiusAxisIndex;
+        return this;
+    }
+
+    public FilterMode filterMode() {
+        return this.filterMode;
+    }
+
+    public DataZoom filterMode(FilterMode filterMode) {
+        this.filterMode = filterMode;
+        return this;
+    }
+
+    public Integer throttle() {
+        return this.throttle;
+    }
+
+    public DataZoom throttle(Integer throttle) {
+        this.throttle = throttle;
+        return this;
+    }
+
+    public DataZoomType getType() {
+        return type;
+    }
+
+    public void setType(DataZoomType type) {
+        this.type = type;
+    }
+
+    public Object getAngleAxisIndex() {
+        return angleAxisIndex;
+    }
+
+    public void setAngleAxisIndex(Object angleAxisIndex) {
+        this.angleAxisIndex = angleAxisIndex;
+    }
+
+    public Object getRadiusAxisIndex() {
+        return radiusAxisIndex;
+    }
+
+    public void setRadiusAxisIndex(Object radiusAxisIndex) {
+        this.radiusAxisIndex = radiusAxisIndex;
+    }
+
+    public FilterMode getFilterMode() {
+        return filterMode;
+    }
+
+    public void setFilterMode(FilterMode filterMode) {
+        this.filterMode = filterMode;
+    }
+
+    public Integer getThrottle() {
+        return throttle;
+    }
+
+    public void setThrottle(Integer throttle) {
+        this.throttle = throttle;
+    }
 
     /**
      * 获取handleSize值

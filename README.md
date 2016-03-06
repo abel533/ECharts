@@ -27,26 +27,33 @@
 [API文档-2.2.7](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/2.2.7/ECharts-2.2.7-javadoc.jar) 下载后解压即可
 ##项目支持
 
-###图表类型
+###图表类型(<font color="red">红色的3.0版本移除</font>，<font color="green">绿色的3.0版本新增</font>)
 
  - Line - 折线（面积）图
+ - <font color="green">Lines - 线图</font>
  - Bar - 柱状（条形）图
  - Scatter - 散点（气泡）图
- - K - K线图
+ - <font color="green">EffectScatter - 涟漪效果散点图</font>
+ - <font color="red">K - K线图</font>
+ - <font color="green">Candlestick - K线图</font>
  - Pie - 饼（圆环）图
- - Radar - 雷达（面积）图
- - Chord - 和弦图
- - Force - 力导向布局图
+ - <font color="red">Radar - 雷达（面积）图</font>
+ - <font color="red">Chord - 和弦图</font>
+ - <font color="red">Force - 力导向布局图</font>
+ - <font color="green">Graph - 关系图,可以实现force</font>
  - Map - 地图
  - Gauge - 仪表盘
  - Funnel - 漏斗图
- - Island - 孤岛图（官方未提供，这里只有数据Island对象）
- - EventRiver - 事件河流图
- - Venn - 韦恩图
- - Tree - 树图
+ - <font color="red">Island - 孤岛图（官方未提供，这里只有数据Island对象）</font>
+ - <font color="red">EventRiver - 事件河流图</font>
+ - <font color="red">Venn - 韦恩图</font>
+ - <font color="red">Tree - 树图</font>
  - Treemap - 矩形树图
- - WordCloud - 词云
+ - <font color="red">WordCloud - 词云</font>
  - Heatmap - 热力图
+ - <font color="green">Boxplot - 箱形图</font>
+ - <font color="green">Parallel - 平行坐标系</font>
+ - <font color="green">Sankey - 桑基图</font>
 
 ###ECharts组件
 
@@ -79,6 +86,13 @@ ECharts.js的2.2.7版本只是优化和改进，没有新增对象或者属性�
  - Treemap - 矩形树图
 
 本项目近期会针对ECharts.js-3.0版本进行测试和更新，欢迎大家继续关注本项目。
+
+###3.0.0 - 2016-02-28
+
+- 3.0版本去掉了k(改为candlestick),radar(雷达图),chord(和弦图),force(使用graph,layout=force替代),island(孤岛),eventRiver(事件河流图),venn(韦恩图),wordCloud(词云),Tree(树图)
+- 3.0版本新增了lines(线图),effectScatter(涟漪效果散点图),candlestick(新的k线图),graph(关系图,可以实现force),boxplot(箱形图),parallel(平行坐标系),sankey(桑基图)
+- 新增大量相关类，部分已有类增加大量属性
+
 
 ###2.2.7 - 2016-01-15
 

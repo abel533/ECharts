@@ -24,8 +24,9 @@
 
 package com.github.abel533.echarts;
 
+import com.github.abel533.echarts.code.Easing;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -53,6 +54,122 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     private Boolean hoverable;
 
     /**
+     * 是否开启动画，默认开启。
+     */
+    private Boolean animation;
+    /**
+     * 初始动画的时长。
+     */
+    private Integer animationDuration;
+    /**
+     * 初始动画的缓动效果
+     */
+    private Object animationEasing;
+    /**
+     * 数据更新动画的时长。
+     */
+    private Integer animationDurationUpdate;
+    /**
+     * 数据更新动画的缓动效果
+     */
+    private Object animationEasingUpdate;
+
+    public Boolean animation() {
+        return this.animation;
+    }
+
+    public T animation(Boolean animation) {
+        this.animation = animation;
+        return (T) this;
+    }
+
+    public T animationEasing(Easing animationEasing) {
+        this.animationEasing = animationEasing;
+        return (T) this;
+    }
+
+    public Integer animationDuration() {
+        return this.animationDuration;
+    }
+
+    public T animationDuration(Integer animationDuration) {
+        this.animationDuration = animationDuration;
+        return (T) this;
+    }
+
+    public Object animationEasing() {
+        return this.animationEasing;
+    }
+
+    public T animationEasing(Object animationEasing) {
+        this.animationEasing = animationEasing;
+        return (T) this;
+    }
+
+    public Integer animationDurationUpdate() {
+        return this.animationDurationUpdate;
+    }
+
+    public T animationDurationUpdate(Integer animationDurationUpdate) {
+        this.animationDurationUpdate = animationDurationUpdate;
+        return (T) this;
+    }
+
+    public Object animationEasingUpdate() {
+        return this.animationEasingUpdate;
+    }
+
+    public T animationEasingUpdate(Object animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+        return (T) this;
+    }
+
+    public T animationEasingUpdate(Easing animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+        return (T) this;
+    }
+
+    public Boolean getAnimation() {
+        return animation;
+    }
+
+    public void setAnimation(Boolean animation) {
+        this.animation = animation;
+    }
+
+    public Integer getAnimationDuration() {
+        return animationDuration;
+    }
+
+    public void setAnimationDuration(Integer animationDuration) {
+        this.animationDuration = animationDuration;
+    }
+
+    public Object getAnimationEasing() {
+        return animationEasing;
+    }
+
+    public void setAnimationEasing(Object animationEasing) {
+        this.animationEasing = animationEasing;
+    }
+
+    public Integer getAnimationDurationUpdate() {
+        return animationDurationUpdate;
+    }
+
+    public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
+        this.animationDurationUpdate = animationDurationUpdate;
+    }
+
+    public Object getAnimationEasingUpdate() {
+        return animationEasingUpdate;
+    }
+
+    public void setAnimationEasingUpdate(Object animationEasingUpdate) {
+        this.animationEasingUpdate = animationEasingUpdate;
+    }
+
+    /**
      * 获取data值
      */
     public List data() {
@@ -72,7 +189,7 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
         if (values == null || values.length == 0) {
             return (T) this;
         }
-        for(Object value: values){
+        for (Object value : values) {
             this.data().add(value);
         }
         return (T) this;

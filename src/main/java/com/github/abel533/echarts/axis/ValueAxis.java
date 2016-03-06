@@ -45,18 +45,6 @@ public class ValueAxis extends Axis<ValueAxis> {
      */
     private LineStyle nameTextStyle;
     /**
-     * 指定的最小值，eg: 0，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[0]
-     */
-    private Integer min;
-    /**
-     * 指定的最大值，eg: 100，默认无，会自动根据具体数值调整，指定后将忽略boundaryGap[1]
-     */
-    private Integer max;
-    /**
-     * 默认值false，脱离0值比例，放大聚焦到最终_min，_max区间
-     */
-    private Boolean scale;
-    /**
      * 小数精度，默认为0，无小数点
      */
     private Integer precision;
@@ -80,57 +68,6 @@ public class ValueAxis extends Axis<ValueAxis> {
      */
     public ValueAxis() {
         this.type(AxisType.value);
-    }
-
-    /**
-     * 获取min值
-     */
-    public Integer min() {
-        return this.min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public ValueAxis min(Integer min) {
-        this.min = min;
-        return this;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Integer max() {
-        return this.max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public ValueAxis max(Integer max) {
-        this.max = max;
-        return this;
-    }
-
-    /**
-     * 获取scale值
-     */
-    public Boolean scale() {
-        return this.scale;
-    }
-
-    /**
-     * 设置scale值
-     *
-     * @param scale
-     */
-    public ValueAxis scale(Boolean scale) {
-        this.scale = scale;
-        return this;
     }
 
     /**
@@ -215,54 +152,6 @@ public class ValueAxis extends Axis<ValueAxis> {
         this.boundaryGap()[0] = min;
         this.boundaryGap()[1] = max;
         return this;
-    }
-
-    /**
-     * 获取min值
-     */
-    public Integer getMin() {
-        return min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Integer getMax() {
-        return max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public void setMax(Integer max) {
-        this.max = max;
-    }
-
-    /**
-     * 获取scale值
-     */
-    public Boolean getScale() {
-        return scale;
-    }
-
-    /**
-     * 设置scale值
-     *
-     * @param scale
-     */
-    public void setScale(Boolean scale) {
-        this.scale = scale;
     }
 
     /**

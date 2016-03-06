@@ -28,5 +28,5 @@ package com.github.abel533.echarts.code;
  * @author liuzh
  */
 public enum NameLocation {
-    start, end
+    start, middle, end
 }

@@ -98,6 +98,135 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 二级层叠控制
      */
     private Integer z;
+    /**
+     * x 轴所在的 grid 的索引，默认位于第一个 grid
+     */
+    private Integer gridIndex;
+    /**
+     * 坐标轴名称与轴线之间的距离
+     */
+    private Integer nameGap;
+    /**
+     * 是否是反向坐标轴。ECharts 3 中新加
+     */
+    private Boolean inverse;
+    /**
+     * 坐标轴两边留白策略，类目轴和非类目轴的设置和表现不一样
+     */
+    private Object boundaryGap;
+    /**
+     * 坐标轴刻度最小值，在类目轴中无效
+     */
+    private Object min;
+    /**
+     * 坐标轴刻度最大值，在类目轴中无效
+     */
+    private Object max;
+    /**
+     * 只在数值轴中（type: 'value'）有效
+     */
+    private Boolean scale;
+    /**
+     * 坐标轴分割间隔
+     */
+    private Object interval;
+
+    public Boolean scale() {
+        return this.scale;
+    }
+
+    public T scale(Boolean scale) {
+        this.scale = scale;
+        return (T) this;
+    }
+
+    public Object interval() {
+        return this.interval;
+    }
+
+    public T interval(Object interval) {
+        this.interval = interval;
+        return (T) this;
+    }
+
+    public T interval(Double interval) {
+        this.interval = interval;
+        return (T) this;
+    }
+
+    public Integer gridIndex() {
+        return this.gridIndex;
+    }
+
+    public T gridIndex(Integer gridIndex) {
+        this.gridIndex = gridIndex;
+        return (T) this;
+    }
+
+    public Integer nameGap() {
+        return this.nameGap;
+    }
+
+    public T nameGap(Integer nameGap) {
+        this.nameGap = nameGap;
+        return (T) this;
+    }
+
+    public Boolean inverse() {
+        return this.inverse;
+    }
+
+    public T inverse(Boolean inverse) {
+        this.inverse = inverse;
+        return (T) this;
+    }
+
+    public Object boundaryGap() {
+        return this.boundaryGap;
+    }
+
+    public T boundaryGap(Object boundaryGap) {
+        this.boundaryGap = boundaryGap;
+        return (T) this;
+    }
+
+    public T boundaryGap(Object[] boundaryGap) {
+        this.boundaryGap = boundaryGap;
+        return (T) this;
+    }
+
+    public T boundaryGap(Object o1, Object o2) {
+        this.boundaryGap = new Object[]{o1, o2};
+        return (T) this;
+    }
+
+    public Object min() {
+        return this.min;
+    }
+
+    public T min(Object min) {
+        this.min = min;
+        return (T) this;
+    }
+
+    public T min(Double min) {
+        this.min = min;
+        return (T) this;
+    }
+
+    public Object max() {
+        return this.max;
+    }
+
+    public T max(Object max) {
+        this.max = max;
+        return (T) this;
+    }
+
+    public T max(Double max) {
+        this.max = max;
+        return (T) this;
+    }
 
     /**
      * 设置zlevel值
@@ -517,8 +646,8 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
 
     /**
      * 获取z值
-	 */
-	public Integer getZ() {
+     */
+    public Integer getZ() {
         return z;
     }
 
@@ -527,7 +656,71 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      *
      * @param z
      */
-	public void setZ(Integer z) {
+    public void setZ(Integer z) {
         this.z = z;
+    }
+
+    public Integer getGridIndex() {
+        return gridIndex;
+    }
+
+    public void setGridIndex(Integer gridIndex) {
+        this.gridIndex = gridIndex;
+    }
+
+    public Integer getNameGap() {
+        return nameGap;
+    }
+
+    public void setNameGap(Integer nameGap) {
+        this.nameGap = nameGap;
+    }
+
+    public Boolean getInverse() {
+        return inverse;
+    }
+
+    public void setInverse(Boolean inverse) {
+        this.inverse = inverse;
+    }
+
+    public Object getBoundaryGap() {
+        return boundaryGap;
+    }
+
+    public void setBoundaryGap(Object boundaryGap) {
+        this.boundaryGap = boundaryGap;
+    }
+
+    public Object getMin() {
+        return min;
+    }
+
+    public void setMin(Object min) {
+        this.min = min;
+    }
+
+    public Object getMax() {
+        return max;
+    }
+
+    public void setMax(Object max) {
+        this.max = max;
+    }
+
+    public Boolean getScale() {
+        return scale;
+    }
+
+    public void setScale(Boolean scale) {
+        this.scale = scale;
+    }
+
+    public Object getInterval() {
+        return interval;
+    }
+
+    public void setInterval(Object interval) {
+        this.interval = interval;
     }
 }

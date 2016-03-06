@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Trigger;
+import com.github.abel533.echarts.code.TriggerOn;
 import com.github.abel533.echarts.style.TextStyle;
 
 /**
@@ -43,7 +44,11 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      */
     private Trigger trigger;
     /**
-     *
+     * 提示框触发的条件
+     */
+    private TriggerOn triggerOn;
+    /**
+     * 提示框浮层的位置，默认不设置时位置会跟随鼠标的位置
      */
     private Object position;
     /**
@@ -86,6 +91,46 @@ public class Tooltip extends Basic<Tooltip> implements Component {
      * @see com.github.abel533.echarts.style.TextStyle
      */
     private TextStyle textStyle;
+    /**
+     * 是否永远显示提示框内容，默认情况下在移出可触发提示框区域后 一定时间 后隐藏，设置为 true 可以保证一直显示提示框内容
+     *
+     * @since 3.0
+     */
+    private Boolean alwaysShowContent;
+
+    public Boolean alwaysShowContent() {
+        return this.alwaysShowContent;
+    }
+
+    public Tooltip alwaysShowContent(Boolean alwaysShowContent) {
+        this.alwaysShowContent = alwaysShowContent;
+        return this;
+    }
+
+    public Boolean getAlwaysShowContent() {
+        return alwaysShowContent;
+    }
+
+    public void setAlwaysShowContent(Boolean alwaysShowContent) {
+        this.alwaysShowContent = alwaysShowContent;
+    }
+
+    public TriggerOn triggerOn() {
+        return this.triggerOn;
+    }
+
+    public Tooltip triggerOn(TriggerOn triggerOn) {
+        this.triggerOn = triggerOn;
+        return this;
+    }
+
+    public TriggerOn getTriggerOn() {
+        return triggerOn;
+    }
+
+    public void setTriggerOn(TriggerOn triggerOn) {
+        this.triggerOn = triggerOn;
+    }
 
     /**
      * 设置axisPointer值

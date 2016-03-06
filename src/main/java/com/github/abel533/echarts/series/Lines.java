@@ -22,11 +22,54 @@
  * THE SOFTWARE.
  */
 
-package com.github.abel533.echarts.code;
+package com.github.abel533.echarts.series;
+
+import com.github.abel533.echarts.code.SeriesType;
 
 /**
- * 是否开启滚轮缩放和拖拽漫游，默认为false（关闭），其他有效输入为true（开启），'scale'（仅开启滚轮缩放），'move'（仅开启拖拽漫游）
+ * 线图
+ * 用于带有起点和终点信息的线数据的绘制，主要用于地图上的航线，路线的可视化
+ *
+ * @author liuzh
  */
-public enum Roam {
-    scale, move, zoom, pan
+public class Lines extends Series<Lines> {
+
+    private Effect effect;
+
+    /**
+     * 构造函数
+     */
+    public Lines() {
+        this.type(SeriesType.lines);
+    }
+
+    /**
+     * 构造函数,参数:name
+     *
+     * @param name
+     */
+    public Lines(String name) {
+        super(name);
+        this.type(SeriesType.lines);
+    }
+
+    public Effect effect() {
+        if (this.effect == null) {
+            this.effect = new Effect();
+        }
+        return this.effect;
+    }
+
+    public Lines effect(Effect effect) {
+        this.effect = effect;
+        return this;
+    }
+
+    public Effect getEffect() {
+        return effect;
+    }
+
+    public void setEffect(Effect effect) {
+        this.effect = effect;
+    }
 }

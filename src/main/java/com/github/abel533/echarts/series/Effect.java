@@ -24,6 +24,8 @@
 
 package com.github.abel533.echarts.series;
 
+import com.github.abel533.echarts.code.Symbol;
+
 import java.io.Serializable;
 
 /**
@@ -72,6 +74,18 @@ public class Effect implements Serializable {
      * 跳动距离，单位为px，type为bounce时有效
      */
     private Integer bounceDistance;
+    /**
+     * 特效图形的标记
+     */
+    private Object symbol;
+    /**
+     * 特效标记的大小，可以设置成诸如 10 这样单一的数字，也可以用数组分开表示高和宽，例如 [20, 10] 表示标记宽为20，高为10
+     */
+    private Object symbolSize;
+    /**
+     * 特效尾迹的长度。取从 0 到 1 的值，数值越大尾迹越长
+     */
+    private Double trailLength;
 
     /**
      * 获取type值
@@ -226,6 +240,48 @@ public class Effect implements Serializable {
         return this;
     }
 
+    public Object symbol() {
+        return this.symbol;
+    }
+
+    public Effect symbol(Object symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public Effect symbol(Symbol symbol) {
+        this.symbol = symbol;
+        return this;
+    }
+
+    public Object symbolSize() {
+        return this.symbolSize;
+    }
+
+    public Effect symbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public Effect symbolSize(Object[] symbolSize) {
+        this.symbolSize = symbolSize;
+        return this;
+    }
+
+    public Effect symbolSize(Object width, Object height) {
+        this.symbolSize = new Object[]{width, height};
+        return this;
+    }
+
+    public Double trailLength() {
+        return this.trailLength;
+    }
+
+    public Effect trailLength(Double trailLength) {
+        this.trailLength = trailLength;
+        return this;
+    }
+
     /**
      * 获取show值
      */
@@ -368,6 +424,30 @@ public class Effect implements Serializable {
      */
     public void setBounceDistance(Integer bounceDistance) {
         this.bounceDistance = bounceDistance;
+    }
+
+    public Object getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(Object symbol) {
+        this.symbol = symbol;
+    }
+
+    public Object getSymbolSize() {
+        return symbolSize;
+    }
+
+    public void setSymbolSize(Object symbolSize) {
+        this.symbolSize = symbolSize;
+    }
+
+    public Double getTrailLength() {
+        return trailLength;
+    }
+
+    public void setTrailLength(Double trailLength) {
+        this.trailLength = trailLength;
     }
 
     public static enum Type {
