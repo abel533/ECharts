@@ -68,7 +68,7 @@
 - 3.0版本去掉了k(改为candlestick),radar(雷达图),chord(和弦图),force(使用graph,layout=force替代),island(孤岛),eventRiver(事件河流图),venn(韦恩图),wordCloud(词云),Tree(树图)
 - 3.0版本新增了lines(线图),effectScatter(涟漪效果散点图),candlestick(新的k线图),graph(关系图,可以实现force),boxplot(箱形图),parallel(平行坐标系),sankey(桑基图)
 - 新增大量相关类，部分已有类增加大量属性
-
+- 新版本改动非常大，如果发现问题或者不合理的方法，可以在项目中提交issues
 
 ###2.2.7 - 2016-01-15
 
