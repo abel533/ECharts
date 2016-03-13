@@ -1,5 +1,7 @@
 #ECharts - Java类库
 
+#本项目短域名为 http://echarts.tk
+
 **当前版本3.0.0**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
@@ -84,44 +86,16 @@
 - 由于fastjson存在多种bug，从这个版本移除`FsonOption`相关的类
 - 增加了一个`BarTest14`测试，彩虹柱状图
 
-###2.2.6
-
-- 由于echarts.js-2.2.5版本只是修复bug，对本项目没有影响,可以直接用echarts-java-2.2.4，所以跳过2.2.5版本
-- echarts.js-2.2.6新增Option 查找工具，本项目已经完全和这个工具对照过，已经补充部分缺少的属性
-- 新增热力图`heatmap`，对应测试代码[HeatmapTest](http://git.oschina.net/free/ECharts/blob/master/src/test/java/com/github/abel533/echarts/samples/heatmap/HeatmapTest.java)(如果看不到效果，那就是因为测试中的引用的echarts-all.js还不是2.2.6版本，自己替换就行)
-
-###2.2.4
-
-- `TreeMap`增加`root`
-- 官方该版本主要解决一些bug
-- 由于2.2.1,2.2.2,2.2.3版本添加比较匆忙，所以没有进行过测试，但是在2.2.4版本进行了全面的测试，对新增的图表和一些属性进行了测试，所以如果使用2.2.0以后的版本，请直接使用2.2.4版本
-- 测试过程中发现一些官方没有提到的属性，都已经添加到2.2.4版本
-- 新增的4个图表在`src/test`下面有相应的测试
-- 由于2.2.0~2.2.4间隔周期长，可能存在一些还没发现的bug，主要是少属性或者属性类型的问题，如果大家发现问题，欢迎及时反馈
-
-###2.2.3
-
-- 新增词云`WordCloud`
-- 新增树图`Tree`
-- `DataRange`增加`splitList`
-- <b>重要：由于`WordCloud`和`Tree`在2.2.4中才添加的测试，因此修复了一些bug，如果需要这两个新功能，请使用2.2.4版本</b>
-
-###2.2.2
-
-- 新增韦恩图`Venn`
-- 新增`Treemap`
-- 新增对数轴`LogAxis`
-- <b>重要：由于`Venn`和`Treemap`在2.2.4中才添加的测试，因此修复了一些bug，如果需要这两个新功能，请使用2.2.4版本</b>
-
 ##[完整更新日志](http://git.oschina.net/free/ECharts/blob/master/CHANGELOG.md)
 
-##文档地址
+##如果你觉得这个项目对你有帮助，你可以通过捐赠来支持作者
+###支付宝二维码
+![支付宝二维码](http://www.mybatis.tk/alipay.png)
+###或
+###微信二维码
+![微信二维码](http://www.mybatis.tk/weixinpay.png)
 
->http://git.oschina.net/free/ECharts/wikis/Home  
-
-目前文档并不全面，但是我本人并不知道大家需要什么样的文档，所以暂时就这样了，如果有建议可以在这里提建议
-
->http://git.oschina.net/free/ECharts/issues
+##感谢各位的支持~~
 
 ##ECharts网址
 
