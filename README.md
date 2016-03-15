@@ -12,6 +12,10 @@
 
 **由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
 
+##示例
+
+[ECharts-Java使用Java快速开发ECharts图表](http://blog.csdn.net/isea533/article/details/43225717)
+
 ##Maven坐标
 
 ```xml
@@ -27,6 +31,7 @@
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
 [API文档-3.0.0](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/3.0.0/ECharts-3.0.0-javadoc.jar) 下载后解压即可
+
 ##项目支持
 
 ###图表类型3.x版本(2.x版本支持的图表不一样)
@@ -96,6 +101,8 @@
 ![微信二维码](http://www.mybatis.tk/weixinpay.png)
 
 ##感谢各位的支持~~
+
+- 宇哲 - ￥10 - 2016-03-15
 
 ##ECharts网址
 
