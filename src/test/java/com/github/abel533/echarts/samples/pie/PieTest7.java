@@ -63,7 +63,9 @@ public class PieTest7 {
                         new Funnel().x("25%").width("50%").funnelAlign(X.left).max(1548))));
 
         int idx = 1;
-        basic.series(getPie(idx++).center("50%", "45%").radius("50%"));
+        Pie pie = getPie(idx++).center("50%", "45%").radius("50%");
+        pie.label().normal().show(true).formatter("{b}{c}({d}%)");
+        basic.series(pie);
         //加入
         option.options(basic);
         //构造11个数据
