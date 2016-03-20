@@ -26,6 +26,7 @@ package com.github.abel533.echarts.style.itemstyle;
 
 import com.github.abel533.echarts.Label;
 import com.github.abel533.echarts.LabelLine;
+import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.style.*;
 
 import java.io.Serializable;
@@ -136,6 +137,72 @@ public abstract class Style<T> implements Serializable {
      * 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形
      */
     private Double opacity;
+    /**
+     * 标签内容格式器，支持字符串模板和回调函数两种形式
+     */
+    private String formatter;
+    /**
+     * 标签的位置
+     */
+    private Position position;
+    /**
+     * 标签的字体样式
+     */
+    private TextStyle textStyle;
+
+    public TextStyle getTextStyle() {
+        return textStyle;
+    }
+
+    public void setTextStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+    }
+
+    public TextStyle textStyle() {
+        if (this.textStyle == null) {
+            this.textStyle = new TextStyle();
+        }
+        return this.textStyle;
+    }
+
+    public T textStyle(TextStyle textStyle) {
+        this.textStyle = textStyle;
+        return (T) this;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public Position position() {
+        return this.position;
+    }
+
+    public T position(Position position) {
+        this.position = position;
+        return (T) this;
+    }
+
+    public String formatter() {
+        return this.formatter;
+    }
+
+    public T formatter(String formatter) {
+        this.formatter = formatter;
+        return (T) this;
+    }
+
+    public String getFormatter() {
+        return formatter;
+    }
+
+    public void setFormatter(String formatter) {
+        this.formatter = formatter;
+    }
 
     public Integer shadowBlur() {
         return this.shadowBlur;
