@@ -70,6 +70,10 @@
 
 <b>3.x版本相比2.x版本改动很大，除了部分图表不一样外，少数api也有改动，因此如果要从2.x升级3.x，一定要做好测试!</b>
 
+###3.0.0.1 - 2016-03-20
+
+- 完善`Style`和`Label`的属性，对应的`normal`和`emphasis`增加`position,formatter,textStyle`三个属性
+
 ###3.0.0 - 2016-02-28
 
 - 3.0版本去掉了k(改为candlestick),radar(雷达图),chord(和弦图),force(使用graph,layout=force替代),island(孤岛),eventRiver(事件河流图),venn(韦恩图),wordCloud(词云),Tree(树图)
