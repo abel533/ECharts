@@ -26,6 +26,7 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.DataFilter;
 import com.github.abel533.echarts.code.SeriesType;
+import com.github.abel533.echarts.style.AreaStyle;
 
 /**
  * @author liuzh
@@ -37,9 +38,14 @@ public class Line extends Series<Line> {
     private Boolean smooth;
     /**
      * ECharts 会在折线图的数据数量大于实际显示的像素宽度（高度）的时候会启用优化，对显示在一个像素宽度内的数据做筛选，该选项是指明数据筛选的策略
+     *
      * @see DataFilter
      */
     private Object dataFilter;
+    /**
+     * 区域填充样式。
+     */
+    private AreaStyle areaStyle;
 
     /**
      * 构造函数
@@ -132,5 +138,47 @@ public class Line extends Series<Line> {
      */
     public void setDataFilter(Object dataFilter) {
         this.dataFilter = dataFilter;
+    }
+
+
+    /**
+     * 新建并返回areaStyle
+     *
+     * @return
+     */
+    public AreaStyle areaStyle() {
+        if (this.areaStyle == null) {
+            this.areaStyle = new AreaStyle();
+        }
+        return this.areaStyle;
+    }
+
+    /**
+     * 设置areaStyle
+     *
+     * @param areaStyle
+     * @return
+     */
+    public Line areaStyle(AreaStyle areaStyle) {
+        this.areaStyle = areaStyle;
+        return this;
+    }
+
+    /**
+     * 设置areaStyle
+     *
+     * @param areaStyle
+     */
+    public void setAreaStyle(AreaStyle areaStyle) {
+        this.areaStyle = areaStyle;
+    }
+
+    /**
+     * 获取areaStyle
+     *
+     * @return
+     */
+    public AreaStyle getAreaStyle() {
+        return areaStyle;
     }
 }

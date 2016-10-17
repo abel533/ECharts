@@ -150,6 +150,11 @@ public abstract class Style<T> implements Serializable {
      */
     private TextStyle textStyle;
 
+    /**
+     * 边的曲度，支持从 0 到 1 的值，值越大曲度越大。
+     */
+    private Double curveness;
+
     public TextStyle getTextStyle() {
         return textStyle;
     }
@@ -835,5 +840,34 @@ public abstract class Style<T> implements Serializable {
      */
     public void setBarBorderWidth(Integer barBorderWidth) {
         this.barBorderWidth = barBorderWidth;
+    }
+
+    /**
+     * 设置curveness
+     *
+     * @param curveness
+     */
+    public void setCurveness(Double curveness) {
+        this.curveness = curveness;
+    }
+
+    /**
+     * 获取curveness
+     *
+     * @return
+     */
+    public Double getCurveness() {
+        return curveness;
+    }
+
+    /**
+     * 设置curveness ，返回T对象
+     *
+     * @param curveness
+     * @return
+     */
+    public T curveness(Double curveness) {
+        this.curveness = curveness;
+        return (T) this;
     }
 }

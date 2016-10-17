@@ -73,6 +73,11 @@ public class Pie extends Series<Pie> {
     private SelectedMode selectedMode;
 
     /**
+     * 是否启用防止标签重叠策略，默认开启
+     */
+    private Boolean avoidLabelOverlap;
+
+    /**
      * 构造函数
      */
     public Pie() {
@@ -335,7 +340,7 @@ public class Pie extends Series<Pie> {
     /**
      * 获取roseType值
      */
-	public RoseType getRoseType() {
+    public RoseType getRoseType() {
         return roseType;
     }
 
@@ -351,7 +356,7 @@ public class Pie extends Series<Pie> {
     /**
      * 获取selectedOffset值
      */
-	public Integer getSelectedOffset() {
+    public Integer getSelectedOffset() {
         return selectedOffset;
     }
 
@@ -367,7 +372,7 @@ public class Pie extends Series<Pie> {
     /**
      * 获取selectedMode值
      */
-	public SelectedMode getSelectedMode() {
+    public SelectedMode getSelectedMode() {
         return selectedMode;
     }
 
@@ -376,7 +381,41 @@ public class Pie extends Series<Pie> {
      *
      * @param selectedMode
      */
-	public void setSelectedMode(SelectedMode selectedMode) {
+    public void setSelectedMode(SelectedMode selectedMode) {
         this.selectedMode = selectedMode;
+    }
+
+    /**
+     * 返回avoidLabelOverlap
+     *
+     * @return
+     */
+    public Boolean getAvoidLabelOverlap() {
+        return avoidLabelOverlap;
+    }
+
+    /**
+     * 设置 avoidLabelOverlap值
+     *
+     * @param avoidLabelOverlap
+     */
+    public void setAvoidLabelOverlap(Boolean avoidLabelOverlap) {
+        this.avoidLabelOverlap = avoidLabelOverlap;
+    }
+
+    public Boolean avoidLabelOverlap() {
+        return this.avoidLabelOverlap;
+
+    }
+
+    /**
+     * 设置 avoidLabelOverlap
+     *
+     * @param avoidLabelOverlap
+     * @return
+     */
+    public Pie avoidLabelOverlap(Boolean avoidLabelOverlap) {
+        this.avoidLabelOverlap = avoidLabelOverlap;
+        return this;
     }
 }
