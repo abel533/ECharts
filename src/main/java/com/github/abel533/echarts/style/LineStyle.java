@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.style;
 
 import com.github.abel533.echarts.code.LineType;
+import com.github.abel533.echarts.style.itemstyle.Emphasis;
+import com.github.abel533.echarts.style.itemstyle.Normal;
 
 import java.io.Serializable;
 
@@ -69,6 +71,15 @@ public class LineStyle implements Serializable {
      * 默认值3，折线主线(IE8+)有效，阴影纵向偏移，正值往下，负值往上
      */
     private Integer shadowOffsetY;
+
+    /**
+     * normal属性
+     */
+    private Normal normal;
+    /**
+     * emphasis属性
+     */
+    private Emphasis emphasis;
 
     /**
      * 获取color值
@@ -332,5 +343,89 @@ public class LineStyle implements Serializable {
      */
     public void setShadowOffsetY(Integer shadowOffsetY) {
         this.shadowOffsetY = shadowOffsetY;
+    }
+
+    /**
+     * 获取normal
+     *
+     * @return
+     */
+    public Normal getNormal() {
+        return normal;
+    }
+
+    /**
+     * 设置normal
+     *
+     * @param normal
+     */
+    public void setNormal(Normal normal) {
+        this.normal = normal;
+    }
+
+    /**
+     * 新建返回normal
+     *
+     * @return
+     */
+    public Normal normal() {
+        if (this.normal == null) {
+            this.normal = new Normal();
+        }
+        return this.normal;
+
+    }
+
+    /**
+     * 设置normal
+     *
+     * @param normal
+     * @return
+     */
+    public LineStyle normal(Normal normal) {
+        this.normal = normal;
+        return this;
+    }
+
+    /**
+     * 获取emphasis
+     *
+     * @return
+     */
+    public Emphasis getEmphasis() {
+        return emphasis;
+    }
+
+    /**
+     * 设置emphasis
+     *
+     * @param emphasis
+     */
+    public void setEmphasis(Emphasis emphasis) {
+        this.emphasis = emphasis;
+    }
+
+    /**
+     * 新建返回emphasis
+     *
+     * @return
+     */
+    public Emphasis emphasis() {
+        if (this.emphasis == null) {
+            this.emphasis = new Emphasis();
+        }
+        return this.emphasis;
+
+    }
+
+    /**
+     * 设置emphasis
+     *
+     * @param emphasis
+     * @return
+     */
+    public LineStyle emphasis(Emphasis emphasis) {
+        this.emphasis = emphasis;
+        return this;
     }
 }

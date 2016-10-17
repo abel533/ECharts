@@ -25,6 +25,7 @@
 package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
+import com.github.abel533.echarts.style.LineStyle;
 
 import java.io.Serializable;
 
@@ -53,6 +54,11 @@ public class Link implements Serializable {
      * 详见 itemStyle, 只能设置 lineWidth, strokeColor, lineType 等描边的属性
      */
     private ItemStyle itemStyle;
+
+    /**
+     * lineStyle样式
+     */
+    private LineStyle lineStyle;
 
     /**
      * 构造函数
@@ -196,5 +202,46 @@ public class Link implements Serializable {
      */
     public void setWeight(Integer weight) {
         this.weight = weight;
+    }
+
+    /**
+     * 设置lineStyle
+     *
+     * @param lineStyle
+     */
+    public void setLineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+    }
+
+    /**
+     * 获取lineStyle
+     *
+     * @return
+     */
+    public LineStyle getLineStyle() {
+        return lineStyle;
+    }
+
+    /**
+     * 设置lineStyle，返回object
+     *
+     * @param lineStyle
+     * @return
+     */
+    public Link lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
+        return this;
+    }
+
+    /**
+     * 返回lineStyle
+     *
+     * @return
+     */
+    public LineStyle lineStyle() {
+        if (lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
     }
 }
