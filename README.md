@@ -70,6 +70,15 @@
 
 <b>3.x版本相比2.x版本改动很大，除了部分图表不一样外，少数api也有改动，因此如果要从2.x升级3.x，一定要做好测试!</b>
 
+###3.0.0.2 - 2016-10-18
+
+- `avoidLabelOverlap`参数
+- `Position`位置 `center`
+- `Line` 的`areaStyle`属性
+- `LineStyle`属性
+- 本次更新全部内容由 mic <fallow5@qq.com> 提供
+
+
 ###3.0.0.1 - 2016-03-20
 
 - 完善`Style`和`Label`的属性，对应的`normal`和`emphasis`增加`position,formatter,textStyle`三个属性
