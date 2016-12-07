@@ -45,7 +45,8 @@ public class Boxplot extends Series<Boxplot> {
     /**
      * boxplot 图形样式，有 normal 和 emphasis 两个状态，normal 是图形正常的样式，emphasis 是图形高亮的样式，比如鼠标悬浮或者图例联动高亮的时候会使用 emphasis 作为图形的样式
      */
-    private ItemStyle itemStyle;
+    //private ItemStyle itemStyle;
+    //在Gson生成json时会出现该成员变量重复定义的问题
 
     /**
      * 构造函数
