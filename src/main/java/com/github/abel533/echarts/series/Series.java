@@ -77,7 +77,7 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
      *
      * @see com.github.abel533.echarts.style.ItemStyle
      */
-    private ItemStyle itemStyle;
+    protected ItemStyle itemStyle;
     /**
      * 标注
      *
