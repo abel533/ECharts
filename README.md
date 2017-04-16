@@ -1,6 +1,6 @@
-#ECharts - Java类库
+# ECharts - Java类库
 
-#本项目短域名为 http://echarts.tk
+# 本项目短域名为 http://echarts.tk
 
 **当前版本3.0.0**
 
@@ -12,11 +12,11 @@
 
 **由于本项目反馈的bug并不多，为了方便每一个开发人员，每次修复bug都会发布一个小版本，并且bug修复只针对当前的大版本进行修复。**
 
-##示例
+## 示例
 
 [ECharts-Java使用Java快速开发ECharts图表](http://blog.csdn.net/isea533/article/details/43225717)
 
-##Maven坐标
+## Maven坐标
 
 ```xml
 <dependency>
@@ -26,15 +26,15 @@
 </dependency>
 ```
 
-##下载地址
+## 下载地址
 
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
 [API文档-3.0.0](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/3.0.0/ECharts-3.0.0-javadoc.jar) 下载后解压即可
 
-##项目支持
+## 项目支持
 
-###图表类型3.x版本(2.x版本支持的图表不一样)
+### 图表类型3.x版本(2.x版本支持的图表不一样)
 
  - Line - 折线（面积）图
  - <b>Lines - 线图</b>
@@ -53,7 +53,7 @@
  - <b>Parallel - 平行坐标系</b>
  - <b>Sankey - 桑基图</b>
 
-###ECharts组件
+### ECharts组件
 
  - Axis - 坐标轴
  - Grid - 网格
@@ -66,11 +66,11 @@
  - Timeline - 时间线
  - visualMap - 视觉映射组件
 
-##更新日志
+## 更新日志
 
 <b>3.x版本相比2.x版本改动很大，除了部分图表不一样外，少数api也有改动，因此如果要从2.x升级3.x，一定要做好测试!</b>
 
-###3.0.0.2 - 2016-10-18
+### 3.0.0.2 - 2016-10-18
 
 - `avoidLabelOverlap`参数
 - `Position`位置 `center`
@@ -79,18 +79,18 @@
 - 本次更新全部内容由 mic <fallow5@qq.com> 提供
 
 
-###3.0.0.1 - 2016-03-20
+### 3.0.0.1 - 2016-03-20
 
 - 完善`Style`和`Label`的属性，对应的`normal`和`emphasis`增加`position,formatter,textStyle`三个属性
 
-###3.0.0 - 2016-02-28
+### 3.0.0 - 2016-02-28
 
 - 3.0版本去掉了k(改为candlestick),radar(雷达图),chord(和弦图),force(使用graph,layout=force替代),island(孤岛),eventRiver(事件河流图),venn(韦恩图),wordCloud(词云),Tree(树图)
 - 3.0版本新增了lines(线图),effectScatter(涟漪效果散点图),candlestick(新的k线图),graph(关系图,可以实现force),boxplot(箱形图),parallel(平行坐标系),sankey(桑基图)
 - 新增大量相关类，部分已有类增加大量属性
 - 新版本改动非常大，如果发现问题或者不合理的方法，可以在项目中提交issues
 
-###2.2.7 - 2016-01-15
+### 2.2.7 - 2016-01-15
 
 - 修复`Gauge`中`AxisLine`类型使用错误的bug#65
 - 解决`LineType`中的`broken`拼写错误#58
@@ -104,24 +104,24 @@
 - 由于fastjson存在多种bug，从这个版本移除`FsonOption`相关的类
 - 增加了一个`BarTest14`测试，彩虹柱状图
 
-##[完整更新日志](http://git.oschina.net/free/ECharts/blob/master/CHANGELOG.md)
+## [完整更新日志](http://git.oschina.net/free/ECharts/blob/master/CHANGELOG.md)
 
-##如果你觉得这个项目对你有帮助，你可以通过捐赠来支持作者
-###支付宝二维码
+## 如果你觉得这个项目对你有帮助，你可以通过捐赠来支持作者
+### 支付宝二维码
 ![支付宝二维码](http://www.mybatis.tk/alipay.png)
-###或
-###微信二维码
+### 或
+### 微信二维码
 ![微信二维码](http://www.mybatis.tk/weixinpay.png)
 
-##感谢各位的支持~~
+## 感谢各位的支持~~
 
 - 宇哲 - ￥10 - 2016-03-15
 
-##ECharts网址
+## ECharts网址
 
 http://echarts.baidu.com/
 
-##Option说明
+## Option说明
 
 1. `Option`正式代码中使用，不需要任何依赖。
 
@@ -131,7 +131,7 @@ http://echarts.baidu.com/
 
 4. 使用`GsonOption`,`FsonOption`的`toString()`方法返回给前端时，前端需要使用`eval('('+optionJsonStr+')')`转换为JSON结构
 
-##function说明
+## function说明
 
 由于JSON标准中不包含`function`类型，因而大多数的JSON库都不直接支持这种类型，处理这种类型最简单的方式就是转换为JSON字符串时，对字符串进行处理。
 
@@ -172,10 +172,10 @@ option.tooltip().trigger(Trigger.axis).formatter("(function(){return 'Temperatur
 
 
 <br><br>
-##挑两个例子大概的看看这个Java类库如何使用
+## 挑两个例子大概的看看这个Java类库如何使用
 
 
-###第一个例子，简单的折线图
+### 第一个例子，简单的折线图
 
 对应的ECharts例子地址：  http://echarts.baidu.com/doc/example/line5.html
 
@@ -306,7 +306,7 @@ public void test() {
 }
 ```
 <br><br>
-###第二个例子，使用`(function(){})()`执行JS代码
+### 第二个例子，使用`(function(){})()`执行JS代码
 
 对应的ECharts例子地址：  http://echarts.baidu.com/doc/example/pie6.html
 
