@@ -25,12 +25,16 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.code.AxisType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 时间型坐标轴用法同数值型，只是目标处理和格式化显示时会自动转变为时间，并且随着时间跨度的不同自动切换需要显示的时间粒度
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class LogAxis extends Axis<LogAxis> {
     /**
      * axis.type === 'log'时生效。指定时，axisLabel显示为指数形式，如指定为4时，axisLabel可显示为4²、4³。不指定时，显示为普通形式，如 1,000,000
@@ -80,37 +84,5 @@ public class LogAxis extends Axis<LogAxis> {
      */
     public Boolean logPositive() {
         return this.logPositive;
-    }
-
-    /**
-     * 获取logLabelBase
-     */
-    public Integer getLogLabelBase() {
-        return logLabelBase;
-    }
-
-    /**
-     * 设置logLabelBase
-     *
-     * @param logLabelBase
-     */
-    public void setLogLabelBase(Integer logLabelBase) {
-        this.logLabelBase = logLabelBase;
-    }
-
-    /**
-     * 获取logPositive
-     */
-    public Boolean getLogPositive() {
-        return logPositive;
-    }
-
-    /**
-     * 设置logPositive
-     *
-     * @param logPositive
-     */
-    public void setLogPositive(Boolean logPositive) {
-        this.logPositive = logPositive;
     }
 }

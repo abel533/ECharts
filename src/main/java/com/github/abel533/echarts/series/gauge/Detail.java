@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.series.gauge;
 
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Detail implements Serializable {
 
     private static final long serialVersionUID = 4155443904476463247L;

@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -31,6 +34,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class KData implements Serializable {
 
     private static final long serialVersionUID = 3593085721806381731L;
@@ -68,21 +73,5 @@ public class KData implements Serializable {
     public KData value(Double[] value) {
         this.value = value;
         return this;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Double[] getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Double[] value) {
-        this.value = value;
     }
 }

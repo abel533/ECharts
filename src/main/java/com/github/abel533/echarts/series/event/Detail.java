@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.series.event;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -31,6 +34,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Detail implements Serializable {
 
     private static final long serialVersionUID = 680903438457621422L;
@@ -118,53 +123,5 @@ public class Detail implements Serializable {
     public Detail img(String img) {
         this.img = img;
         return this;
-    }
-
-    /**
-     * 获取link值
-     */
-    public String getLink() {
-        return link;
-    }
-
-    /**
-     * 设置link值
-     *
-     * @param link
-     */
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    /**
-     * 获取text值
-     */
-    public String getText() {
-        return text;
-    }
-
-    /**
-     * 设置text值
-     *
-     * @param text
-     */
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    /**
-     * 获取img值
-     */
-    public String getImg() {
-        return img;
-    }
-
-    /**
-     * 设置img值
-     *
-     * @param img
-     */
-    public void setImg(String img) {
-        this.img = img;
     }
 }

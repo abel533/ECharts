@@ -29,6 +29,8 @@ import com.github.abel533.echarts.style.CrossStyle;
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.ShadowStyle;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -37,6 +39,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class AxisPointer implements Serializable {
 
     private static final long serialVersionUID = 6421899185681683630L;
@@ -183,99 +187,5 @@ public class AxisPointer implements Serializable {
             this.shadowStyle = new ShadowStyle();
         }
         return this.shadowStyle;
-    }
-
-    /**
-     * 是否显示
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置是否显示
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取crossStyle值
-     */
-    public CrossStyle getCrossStyle() {
-        return crossStyle;
-    }
-
-    /**
-     * 设置crossStyle值
-     *
-     * @param crossStyle
-     */
-    public void setCrossStyle(CrossStyle crossStyle) {
-        this.crossStyle = crossStyle;
-    }
-
-    /**
-     * 获取shadowStyle值
-     */
-    public ShadowStyle getShadowStyle() {
-        return shadowStyle;
-    }
-
-    /**
-     * 设置shadowStyle值
-     *
-     * @param shadowStyle
-     */
-    public void setShadowStyle(ShadowStyle shadowStyle) {
-        this.shadowStyle = shadowStyle;
-    }
-
-    /**
-     * 获取type值
-     */
-    public PointerType getType() {
-        return type;
-    }
-
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public void setType(PointerType type) {
-        this.type = type;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
     }
 }

@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,6 +37,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class ScatterData implements Serializable {
 
     private static final long serialVersionUID = 658151140767993468L;
@@ -82,21 +87,5 @@ public class ScatterData implements Serializable {
         }
         this.value().addAll(Arrays.asList(values));
         return this;
-    }
-
-    /**
-     * 获取value值
-     */
-    public List<Object> getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(List<Object> value) {
-        this.value = value;
     }
 }

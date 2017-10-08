@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class SplitLine implements Serializable {
 
     private static final long serialVersionUID = 6968396515815364363L;
@@ -108,51 +112,4 @@ public class SplitLine implements Serializable {
         return this.lineStyle;
     }
 
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取onGap值
-     */
-    public Boolean getOnGap() {
-        return onGap;
-    }
-
-    /**
-     * 设置onGap值
-     *
-     * @param onGap
-     */
-    public void setOnGap(Boolean onGap) {
-        this.onGap = onGap;
-    }
 }

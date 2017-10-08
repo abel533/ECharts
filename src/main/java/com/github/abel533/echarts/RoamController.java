@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +35,8 @@ import java.util.Map;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class RoamController extends Basic<RoamController> implements Component {
     private String fillerColor;
     private String handleColor;
@@ -108,69 +113,5 @@ public class RoamController extends Basic<RoamController> implements Component {
         }
         this.mapTypeControl.put(key, value);
         return this;
-    }
-
-    /**
-     * 获取fillerColor值
-     */
-    public String getFillerColor() {
-        return fillerColor;
-    }
-
-    /**
-     * 设置fillerColor值
-     *
-     * @param fillerColor
-     */
-    public void setFillerColor(String fillerColor) {
-        this.fillerColor = fillerColor;
-    }
-
-    /**
-     * 获取handleColor值
-     */
-    public String getHandleColor() {
-        return handleColor;
-    }
-
-    /**
-     * 设置handleColor值
-     *
-     * @param handleColor
-     */
-    public void setHandleColor(String handleColor) {
-        this.handleColor = handleColor;
-    }
-
-    /**
-     * 获取step值
-     */
-    public Integer getStep() {
-        return step;
-    }
-
-    /**
-     * 设置step值
-     *
-     * @param step
-     */
-    public void setStep(Integer step) {
-        this.step = step;
-    }
-
-    /**
-     * 获取mapTypeControl值
-     */
-    public Map<String, Boolean> getMapTypeControl() {
-        return mapTypeControl;
-    }
-
-    /**
-     * 设置mapTypeControl值
-     *
-     * @param mapTypeControl
-     */
-    public void setMapTypeControl(Map<String, Boolean> mapTypeControl) {
-        this.mapTypeControl = mapTypeControl;
     }
 }

@@ -26,6 +26,8 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public abstract class Basic<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -151,22 +155,6 @@ public abstract class Basic<T> implements Serializable {
         return (T) this;
     }
 
-    public Object getWidth() {
-        return width;
-    }
-
-    public void setWidth(Object width) {
-        this.width = width;
-    }
-
-    public Object getHeight() {
-        return height;
-    }
-
-    public void setHeight(Object height) {
-        this.height = height;
-    }
-
     public Integer shadowBlur() {
         return this.shadowBlur;
     }
@@ -267,38 +255,6 @@ public abstract class Basic<T> implements Serializable {
     public T bottom(Integer bottom) {
         this.bottom = bottom;
         return (T) this;
-    }
-
-    public Object getLeft() {
-        return left;
-    }
-
-    public void setLeft(Object left) {
-        this.left = left;
-    }
-
-    public Object getTop() {
-        return top;
-    }
-
-    public void setTop(Object top) {
-        this.top = top;
-    }
-
-    public Object getRight() {
-        return right;
-    }
-
-    public void setRight(Object right) {
-        this.right = right;
-    }
-
-    public Object getBottom() {
-        return bottom;
-    }
-
-    public void setBottom(Object bottom) {
-        this.bottom = bottom;
     }
 
     /**
@@ -502,206 +458,5 @@ public abstract class Basic<T> implements Serializable {
     public T y(Y y) {
         this.y = y;
         return (T) this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取x值
-     */
-    public Object getX() {
-        return x;
-    }
-
-    /**
-     * 设置x值
-     *
-     * @param x
-     */
-    public void setX(Object x) {
-        this.x = x;
-    }
-
-    /**
-     * 获取y值
-     */
-    public Object getY() {
-        return y;
-    }
-
-    /**
-     * 设置y值
-     *
-     * @param y
-     */
-    public void setY(Object y) {
-        this.y = y;
-    }
-
-    /**
-     * 获取backgroundColor值
-     */
-    public String getBackgroundColor() {
-        return backgroundColor;
-    }
-
-    /**
-     * 设置backgroundColor值
-     *
-     * @param backgroundColor
-     */
-    public void setBackgroundColor(String backgroundColor) {
-        this.backgroundColor = backgroundColor;
-    }
-
-    /**
-     * 获取borderColor值
-     */
-    public String getBorderColor() {
-        return borderColor;
-    }
-
-    /**
-     * 设置borderColor值
-     *
-     * @param borderColor
-     */
-    public void setBorderColor(String borderColor) {
-        this.borderColor = borderColor;
-    }
-
-    /**
-     * 获取borderWidth值
-     */
-    public Integer getBorderWidth() {
-        return borderWidth;
-    }
-
-    /**
-     * 设置borderWidth值
-     *
-     * @param borderWidth
-     */
-    public void setBorderWidth(Integer borderWidth) {
-        this.borderWidth = borderWidth;
-    }
-
-    /**
-     * 获取padding值
-     */
-    public Object getPadding() {
-        return padding;
-    }
-
-    /**
-     * 设置padding值
-     *
-     * @param padding
-     */
-    public void setPadding(Object padding) {
-        this.padding = padding;
-    }
-
-    /**
-     * 设置padding值
-     *
-     * @param padding
-     */
-    public void setPadding(Integer padding) {
-        this.padding = padding;
-    }
-
-    /**
-     * 获取itemGap值
-     */
-    public Integer getItemGap() {
-        return itemGap;
-    }
-
-    /**
-     * 设置itemGap值
-     *
-     * @param itemGap
-     */
-    public void setItemGap(Integer itemGap) {
-        this.itemGap = itemGap;
-    }
-
-    /**
-     * 获取zlevel值
-     */
-    public Integer getZlevel() {
-        return zlevel;
-    }
-
-    /**
-     * 设置zlevel值
-     *
-     * @param zlevel
-     */
-    public void setZlevel(Integer zlevel) {
-        this.zlevel = zlevel;
-    }
-
-    /**
-     * 获取z值
-     */
-    public Integer getZ() {
-        return z;
-    }
-
-    /**
-     * 设置z值
-     *
-     * @param z
-     */
-    public void setZ(Integer z) {
-        this.z = z;
-    }
-
-    public Integer getShadowBlur() {
-        return shadowBlur;
-    }
-
-    public void setShadowBlur(Integer shadowBlur) {
-        this.shadowBlur = shadowBlur;
-    }
-
-    public String getShadowColor() {
-        return shadowColor;
-    }
-
-    public void setShadowColor(String shadowColor) {
-        this.shadowColor = shadowColor;
-    }
-
-    public Integer getShadowOffsetX() {
-        return shadowOffsetX;
-    }
-
-    public void setShadowOffsetX(Integer shadowOffsetX) {
-        this.shadowOffsetX = shadowOffsetX;
-    }
-
-    public Integer getShadowOffsetY() {
-        return shadowOffsetY;
-    }
-
-    public void setShadowOffsetY(Integer shadowOffsetY) {
-        this.shadowOffsetY = shadowOffsetY;
     }
 }

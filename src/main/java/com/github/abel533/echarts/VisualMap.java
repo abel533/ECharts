@@ -2,6 +2,8 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.*;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 视觉映射组件，用于进行『视觉编码』，也就是将数据映射到视觉元素（视觉通道）
@@ -9,6 +11,8 @@ import com.github.abel533.echarts.style.TextStyle;
  * @author liuzh
  * @since 2016-03-03 22:19
  */
+@Getter
+@Setter
 public class VisualMap extends Basic<VisualMap> {
     /**
      * 类型
@@ -306,213 +310,5 @@ public class VisualMap extends Basic<VisualMap> {
     public VisualMap categories(Object[] categories) {
         this.categories = categories;
         return this;
-    }
-
-    public VisualMapType getType() {
-        return type;
-    }
-
-    public void setType(VisualMapType type) {
-        this.type = type;
-    }
-
-    public Integer getMin() {
-        return min;
-    }
-
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
-    public Integer getMax() {
-        return max;
-    }
-
-    public void setMax(Integer max) {
-        this.max = max;
-    }
-
-    public Boolean getCalculable() {
-        return calculable;
-    }
-
-    public void setCalculable(Boolean calculable) {
-        this.calculable = calculable;
-    }
-
-    public Boolean getRealtime() {
-        return realtime;
-    }
-
-    public void setRealtime(Boolean realtime) {
-        this.realtime = realtime;
-    }
-
-    public Boolean getInverse() {
-        return inverse;
-    }
-
-    public void setInverse(Boolean inverse) {
-        this.inverse = inverse;
-    }
-
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
-    }
-
-    public Integer getItemWidth() {
-        return itemWidth;
-    }
-
-    public void setItemWidth(Integer itemWidth) {
-        this.itemWidth = itemWidth;
-    }
-
-    public Integer getItemHeight() {
-        return itemHeight;
-    }
-
-    public void setItemHeight(Integer itemHeight) {
-        this.itemHeight = itemHeight;
-    }
-
-    public Symbol getItemSymbol() {
-        return itemSymbol;
-    }
-
-    public void setItemSymbol(Symbol itemSymbol) {
-        this.itemSymbol = itemSymbol;
-    }
-
-    public Align getAlign() {
-        return align;
-    }
-
-    public void setAlign(Align align) {
-        this.align = align;
-    }
-
-    public Object[] getText() {
-        return text;
-    }
-
-    public void setText(Object[] text) {
-        this.text = text;
-    }
-
-    public Object[] getTextGap() {
-        return textGap;
-    }
-
-    public void setTextGap(Object[] textGap) {
-        this.textGap = textGap;
-    }
-
-    public Align getHandlePosition() {
-        return handlePosition;
-    }
-
-    public void setHandlePosition(Align handlePosition) {
-        this.handlePosition = handlePosition;
-    }
-
-    public Object getDimension() {
-        return dimension;
-    }
-
-    public void setDimension(Object dimension) {
-        this.dimension = dimension;
-    }
-
-    public Integer getSeriesIndex() {
-        return seriesIndex;
-    }
-
-    public void setSeriesIndex(Integer seriesIndex) {
-        this.seriesIndex = seriesIndex;
-    }
-
-    public VisualMapType getInRange() {
-        return inRange;
-    }
-
-    public void setInRange(VisualMapType inRange) {
-        this.inRange = inRange;
-    }
-
-    public VisualMapType getOutOfRange() {
-        return outOfRange;
-    }
-
-    public void setOutOfRange(VisualMapType outOfRange) {
-        this.outOfRange = outOfRange;
-    }
-
-    public Orient getOrient() {
-        return orient;
-    }
-
-    public void setOrient(Orient orient) {
-        this.orient = orient;
-    }
-
-    public String getFormatter() {
-        return formatter;
-    }
-
-    public void setFormatter(String formatter) {
-        this.formatter = formatter;
-    }
-
-    public Object[] getColor() {
-        return color;
-    }
-
-    public void setColor(Object[] color) {
-        this.color = color;
-    }
-
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
-    }
-
-    public Object[] getPieces() {
-        return pieces;
-    }
-
-    public void setPieces(Object[] pieces) {
-        this.pieces = pieces;
-    }
-
-    public Object[] getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Object[] categories) {
-        this.categories = categories;
-    }
-
-    public SelectedMode getSelectedMode() {
-        return selectedMode;
-    }
-
-    public void setSelectedMode(SelectedMode selectedMode) {
-        this.selectedMode = selectedMode;
     }
 }

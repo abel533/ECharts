@@ -25,6 +25,8 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Easing;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     private static final long serialVersionUID = 1L;
     /**
@@ -129,46 +133,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
         return (T) this;
     }
 
-    public Boolean getAnimation() {
-        return animation;
-    }
-
-    public void setAnimation(Boolean animation) {
-        this.animation = animation;
-    }
-
-    public Integer getAnimationDuration() {
-        return animationDuration;
-    }
-
-    public void setAnimationDuration(Integer animationDuration) {
-        this.animationDuration = animationDuration;
-    }
-
-    public Object getAnimationEasing() {
-        return animationEasing;
-    }
-
-    public void setAnimationEasing(Object animationEasing) {
-        this.animationEasing = animationEasing;
-    }
-
-    public Integer getAnimationDurationUpdate() {
-        return animationDurationUpdate;
-    }
-
-    public void setAnimationDurationUpdate(Integer animationDurationUpdate) {
-        this.animationDurationUpdate = animationDurationUpdate;
-    }
-
-    public Object getAnimationEasingUpdate() {
-        return animationEasingUpdate;
-    }
-
-    public void setAnimationEasingUpdate(Object animationEasingUpdate) {
-        this.animationEasingUpdate = animationEasingUpdate;
-    }
-
     /**
      * 获取data值
      */
@@ -212,23 +176,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
         this.clickable = clickable;
         return (T) this;
     }
-
-    /**
-     * 获取clickable值
-     */
-    public Boolean getClickable() {
-        return clickable;
-    }
-
-    /**
-     * 设置clickable值
-     *
-     * @param clickable
-     */
-    public void setClickable(Boolean clickable) {
-        this.clickable = clickable;
-    }
-
     /**
      * 获取hoverable值
      */
@@ -244,37 +191,5 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     public T hoverable(Boolean hoverable) {
         this.hoverable = hoverable;
         return (T) this;
-    }
-
-    /**
-     * 获取hoverable值
-     */
-    public Boolean getHoverable() {
-        return hoverable;
-    }
-
-    /**
-     * 设置hoverable值
-     *
-     * @param hoverable
-     */
-    public void setHoverable(Boolean hoverable) {
-        this.hoverable = hoverable;
-    }
-
-    /**
-     * 获取data值
-     */
-    public List getData() {
-        return data;
-    }
-
-    /**
-     * 设置data值
-     *
-     * @param data
-     */
-    public void setData(List data) {
-        this.data = data;
     }
 }

@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  * @author liuzh
  * @since 2015-06-29
  */
+@Getter
+@Setter
 public class WordCloudData implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -110,53 +114,5 @@ public class WordCloudData implements Serializable {
             this.itemStyle = new ItemStyle();
         }
         return this.itemStyle;
-    }
-
-    /**
-     * 获取name值
-	 */
-	public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-	public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取value值
-	 */
-	public Integer getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-	public void setValue(Integer value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取itemStyle值
-     */
-	public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
     }
 }

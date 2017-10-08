@@ -37,7 +37,6 @@ import java.lang.reflect.Type;
  * @author liuzh
  */
 public class AxisDeserializer implements JsonDeserializer<Axis> {
-    @Override
     /**
      * 设置json,typeOfT,context值
      *
@@ -45,6 +44,7 @@ public class AxisDeserializer implements JsonDeserializer<Axis> {
      * @param typeOfT
      * @param context
      */
+    @Override
     public Axis deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         final JsonObject jsonObject = json.getAsJsonObject();
         String _type = jsonObject.get("type").getAsString();

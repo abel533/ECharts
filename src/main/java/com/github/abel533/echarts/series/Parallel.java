@@ -25,12 +25,16 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 平行坐标系
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Parallel extends Series<Parallel> {
     /**
      * 使用的平行坐标系的 index，在单个图表实例中存在多个平行坐标系的时候有用
@@ -87,29 +91,5 @@ public class Parallel extends Series<Parallel> {
     public Parallel activeOpacity(Double activeOpacity) {
         this.activeOpacity = activeOpacity;
         return this;
-    }
-
-    public Integer getParallelIndex() {
-        return parallelIndex;
-    }
-
-    public void setParallelIndex(Integer parallelIndex) {
-        this.parallelIndex = parallelIndex;
-    }
-
-    public Double getInactiveOpacity() {
-        return inactiveOpacity;
-    }
-
-    public void setInactiveOpacity(Double inactiveOpacity) {
-        this.inactiveOpacity = inactiveOpacity;
-    }
-
-    public Double getActiveOpacity() {
-        return activeOpacity;
-    }
-
-    public void setActiveOpacity(Double activeOpacity) {
-        this.activeOpacity = activeOpacity;
     }
 }

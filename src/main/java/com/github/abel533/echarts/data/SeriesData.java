@@ -26,6 +26,8 @@ package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.Tooltip;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class SeriesData implements Serializable {
 
     private static final long serialVersionUID = -3295595963653443202L;

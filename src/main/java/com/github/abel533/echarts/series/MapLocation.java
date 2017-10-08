@@ -26,6 +26,8 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class MapLocation implements Serializable {
 
     private static final long serialVersionUID = -9175820401945407194L;
@@ -213,69 +217,5 @@ public class MapLocation implements Serializable {
     public MapLocation height(Object height) {
         this.height = height;
         return this;
-    }
-
-    /**
-     * 获取x值
-     */
-    public Object getX() {
-        return x;
-    }
-
-    /**
-     * 设置x值
-     *
-     * @param x
-     */
-    public void setX(Object x) {
-        this.x = x;
-    }
-
-    /**
-     * 获取y值
-     */
-    public Object getY() {
-        return y;
-    }
-
-    /**
-     * 设置y值
-     *
-     * @param y
-     */
-    public void setY(Object y) {
-        this.y = y;
-    }
-
-    /**
-     * 获取width值
-     */
-    public Object getWidth() {
-        return width;
-    }
-
-    /**
-     * 设置width值
-     *
-     * @param width
-     */
-    public void setWidth(Object width) {
-        this.width = width;
-    }
-
-    /**
-     * 获取height值
-     */
-    public Object getHeight() {
-        return height;
-    }
-
-    /**
-     * 设置height值
-     *
-     * @param height
-     */
-    public void setHeight(Object height) {
-        this.height = height;
     }
 }

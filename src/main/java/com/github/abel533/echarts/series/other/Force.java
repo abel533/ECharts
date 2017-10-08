@@ -1,6 +1,8 @@
 package com.github.abel533.echarts.series.other;
 
 import com.github.abel533.echarts.code.Layout;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -10,6 +12,8 @@ import java.io.Serializable;
  * @author liuzh
  * @since 2016-02-28 11:44
  */
+@Getter
+@Setter
 public class Force implements Serializable {
     private static final long serialVersionUID = 1L;
 

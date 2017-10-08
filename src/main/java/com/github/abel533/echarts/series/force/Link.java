@@ -26,6 +26,8 @@ package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Link implements Serializable {
 
     private static final long serialVersionUID = 7882141565696266870L;
@@ -139,89 +143,6 @@ public class Link implements Serializable {
         }
         return this.itemStyle;
     }
-
-    /**
-     * 获取itemStyle值
-     */
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
-    }
-
-    /**
-     * 获取source值
-     */
-    public Object getSource() {
-        return source;
-    }
-
-    /**
-     * 设置source值
-     *
-     * @param source
-     */
-    public void setSource(Object source) {
-        this.source = source;
-    }
-
-    /**
-     * 获取target值
-     */
-    public Object getTarget() {
-        return target;
-    }
-
-    /**
-     * 设置target值
-     *
-     * @param target
-     */
-    public void setTarget(Object target) {
-        this.target = target;
-    }
-
-    /**
-     * 获取weight值
-     */
-    public Integer getWeight() {
-        return weight;
-    }
-
-    /**
-     * 设置weight值
-     *
-     * @param weight
-     */
-    public void setWeight(Integer weight) {
-        this.weight = weight;
-    }
-
-    /**
-     * 设置lineStyle
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取lineStyle
-     *
-     * @return
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
     /**
      * 设置lineStyle，返回object
      *

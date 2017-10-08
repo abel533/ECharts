@@ -28,6 +28,8 @@ import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.data.RangeData;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +40,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class DataRange extends Basic<DataRange> implements Component {
     /**
      * 布局方式，默认为垂直布局，可选为：'horizontal' | 'vertical'
@@ -216,166 +220,6 @@ public class DataRange extends Basic<DataRange> implements Component {
     public DataRange hoverLink(Boolean hoverLink) {
         this.hoverLink = hoverLink;
         return this;
-    }
-
-    /**
-     * 获取orient值
-     */
-    public Orient getOrient() {
-        return orient;
-    }
-
-    /**
-     * 设置orient值
-     *
-     * @param orient
-     */
-    public void setOrient(Orient orient) {
-        this.orient = orient;
-    }
-
-    /**
-     * 获取itemWidth值
-     */
-    public Integer getItemWidth() {
-        return itemWidth;
-    }
-
-    /**
-     * 设置itemWidth值
-     *
-     * @param itemWidth
-     */
-    public void setItemWidth(Integer itemWidth) {
-        this.itemWidth = itemWidth;
-    }
-
-    /**
-     * 获取itemHeight值
-     */
-    public Integer getItemHeight() {
-        return itemHeight;
-    }
-
-    /**
-     * 设置itemHeight值
-     *
-     * @param itemHeight
-     */
-    public void setItemHeight(Integer itemHeight) {
-        this.itemHeight = itemHeight;
-    }
-
-    /**
-     * 获取min值
-     */
-    public Integer getMin() {
-        return min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Integer getMax() {
-        return max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public void setMax(Integer max) {
-        this.max = max;
-    }
-
-    /**
-     * 获取precision值
-     */
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
-    }
-
-    /**
-     * 获取splitNumber值
-     */
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    /**
-     * 设置splitNumber值
-     *
-     * @param splitNumber
-     */
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
-    }
-
-    /**
-     * 获取calculable值
-     */
-    public Boolean getCalculable() {
-        return calculable;
-    }
-
-    /**
-     * 设置calculable值
-     *
-     * @param calculable
-     */
-    public void setCalculable(Boolean calculable) {
-        this.calculable = calculable;
-    }
-
-    /**
-     * 获取realtime值
-     */
-    public Boolean getRealtime() {
-        return realtime;
-    }
-
-    /**
-     * 设置realtime值
-     *
-     * @param realtime
-     */
-    public void setRealtime(Boolean realtime) {
-        this.realtime = realtime;
-    }
-
-    /**
-     * 获取formatter值
-     */
-    public Object getFormatter() {
-        return formatter;
-    }
-
-    /**
-     * 设置formatter值
-     *
-     * @param formatter
-     */
-    public void setFormatter(Object formatter) {
-        this.formatter = formatter;
     }
 
     /**
@@ -614,117 +458,5 @@ public class DataRange extends Basic<DataRange> implements Component {
             this.textStyle = new TextStyle();
         }
         return this.textStyle;
-    }
-
-    /**
-     * 获取color值
-     */
-    public List<String> getColor() {
-        return color;
-    }
-
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public void setColor(List<String> color) {
-        this.color = color;
-    }
-
-    /**
-     * 获取text值
-     */
-    public List<String> getText() {
-        return text;
-    }
-
-    /**
-     * 设置text值
-     *
-     * @param text
-     */
-    public void setText(List<String> text) {
-        this.text = text;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取hoverLink值
-     */
-    public Boolean getHoverLink() {
-        return hoverLink;
-    }
-
-    /**
-     * 设置hoverLink值
-     *
-     * @param hoverLink
-     */
-    public void setHoverLink(Boolean hoverLink) {
-        this.hoverLink = hoverLink;
-    }
-
-    /**
-     * 获取range值
-     */
-	public RangeData getRange() {
-        return range;
-    }
-
-    /**
-     * 设置range值
-     *
-     * @param range
-     */
-    public void setRange(RangeData range) {
-        this.range = range;
-    }
-
-    /**
-     * 获取splitList值
-     */
-    public List<RangeData> getSplitList() {
-        return splitList;
-    }
-
-    /**
-     * 设置splitList值
-     *
-     * @param splitList
-     */
-    public void setSplitList(List<RangeData> splitList) {
-        this.splitList = splitList;
-    }
-
-    /**
-     * 获取selectedMode值
-     */
-	public Object getSelectedMode() {
-        return selectedMode;
-    }
-
-    /**
-     * 设置selectedMode值
-     *
-     * @param selectedMode
-     */
-    public void setSelectedMode(Object selectedMode) {
-        this.selectedMode = selectedMode;
     }
 }

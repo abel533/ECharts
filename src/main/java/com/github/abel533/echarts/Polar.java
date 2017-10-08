@@ -30,6 +30,8 @@ import com.github.abel533.echarts.axis.SplitArea;
 import com.github.abel533.echarts.axis.SplitLine;
 import com.github.abel533.echarts.code.PolarType;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,6 +42,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Polar extends AbstractData<Polar> implements Component {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
@@ -481,279 +485,8 @@ public class Polar extends AbstractData<Polar> implements Component {
         return this.indicator;
     }
 
-    /**
-     * 获取name值
-     */
-    public Name getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(Name name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取boundaryGap值
-     */
-    public Object[] getBoundaryGap() {
-        return boundaryGap;
-    }
-
-    /**
-     * 设置boundaryGap值
-     *
-     * @param boundaryGap
-     */
-    public void setBoundaryGap(Object[] boundaryGap) {
-        this.boundaryGap = boundaryGap;
-    }
-
-    /**
-     * 获取axisLine值
-     */
-    public AxisLine getAxisLine() {
-        return axisLine;
-    }
-
-    /**
-     * 设置axisLine值
-     *
-     * @param axisLine
-     */
-    public void setAxisLine(AxisLine axisLine) {
-        this.axisLine = axisLine;
-    }
-
-    /**
-     * 获取axisLabel值
-     */
-    public AxisLabel getAxisLabel() {
-        return axisLabel;
-    }
-
-    /**
-     * 设置axisLabel值
-     *
-     * @param axisLabel
-     */
-    public void setAxisLabel(AxisLabel axisLabel) {
-        this.axisLabel = axisLabel;
-    }
-
-    /**
-     * 获取splitArea值
-     */
-    public SplitArea getSplitArea() {
-        return splitArea;
-    }
-
-    /**
-     * 设置splitArea值
-     *
-     * @param splitArea
-     */
-    public void setSplitArea(SplitArea splitArea) {
-        this.splitArea = splitArea;
-    }
-
-    /**
-     * 获取splitLine值
-     */
-    public SplitLine getSplitLine() {
-        return splitLine;
-    }
-
-    /**
-     * 设置splitLine值
-     *
-     * @param splitLine
-     */
-    public void setSplitLine(SplitLine splitLine) {
-        this.splitLine = splitLine;
-    }
-
-    /**
-     * 获取indicator值
-     */
-    public List<Object> getIndicator() {
-        return indicator;
-    }
-
-    /**
-     * 设置indicator值
-     *
-     * @param indicator
-     */
-    public void setIndicator(List<Object> indicator) {
-
-        this.indicator = indicator;
-    }
-
-    /**
-     * 获取center值
-     */
-    public Object[] getCenter() {
-        return center;
-    }
-
-    /**
-     * 设置center值
-     *
-     * @param center
-     */
-    public void setCenter(Object[] center) {
-        this.center = center;
-    }
-
-    /**
-     * 获取radius值
-     */
-    public Object getRadius() {
-        return radius;
-    }
-
-    /**
-     * 设置radius值
-     *
-     * @param radius
-     */
-    public void setRadius(Object radius) {
-        this.radius = radius;
-    }
-
-    /**
-     * 获取startAngle值
-     */
-    public Integer getStartAngle() {
-        return startAngle;
-    }
-
-    /**
-     * 设置startAngle值
-     *
-     * @param startAngle
-     */
-    public void setStartAngle(Integer startAngle) {
-        this.startAngle = startAngle;
-    }
-
-    /**
-     * 获取splitNumber值
-     */
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    /**
-     * 设置splitNumber值
-     *
-     * @param splitNumber
-     */
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
-    }
-
-    /**
-     * 获取scale值
-     */
-    public Boolean getScale() {
-        return scale;
-    }
-
-    /**
-     * 设置scale值
-     *
-     * @param scale
-     */
-    public void setScale(Boolean scale) {
-        this.scale = scale;
-    }
-
-    /**
-     * 获取precision值
-     */
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
-    }
-
-    /**
-     * 获取power值
-     */
-    public Integer getPower() {
-        return power;
-    }
-
-    /**
-     * 设置power值
-     *
-     * @param power
-     */
-    public void setPower(Integer power) {
-        this.power = power;
-    }
-
-    /**
-     * 获取type值
-     */
-    public PolarType getType() {
-        return type;
-    }
-
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public void setType(PolarType type) {
-        this.type = type;
-    }
-
-    /**
-     * 获取zlevel值
-     */
-    public Integer getZlevel() {
-        return zlevel;
-    }
-
-    /**
-     * 设置zlevel值
-     *
-     * @param zlevel
-     */
-    public void setZlevel(Integer zlevel) {
-        this.zlevel = zlevel;
-    }
-
-    /**
-     * 获取z值
-	 */
-	public Integer getZ() {
-        return z;
-    }
-
-    /**
-     * 设置z值
-     *
-     * @param z
-     */
-	public void setZ(Integer z) {
-        this.z = z;
-    }
-
+    @Setter
+    @Getter
     public static class Name {
         private Boolean show;
         private TextStyle textStyle;
@@ -802,38 +535,6 @@ public class Polar extends AbstractData<Polar> implements Component {
         public Name textStyle(TextStyle textStyle) {
             this.textStyle = textStyle;
             return this;
-        }
-
-        /**
-         * 获取show值
-         */
-        public Boolean getShow() {
-            return show;
-        }
-
-        /**
-         * 设置show值
-         *
-         * @param show
-         */
-        public void setShow(Boolean show) {
-            this.show = show;
-        }
-
-        /**
-         * 获取textStyle值
-         */
-        public TextStyle getTextStyle() {
-            return textStyle;
-        }
-
-        /**
-         * 设置textStyle值
-         *
-         * @param textStyle
-         */
-        public void setTextStyle(TextStyle textStyle) {
-            this.textStyle = textStyle;
         }
     }
 }

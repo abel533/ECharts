@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.Symbol;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Effect implements Serializable {
 
     private static final long serialVersionUID = 2768587032945006946L;
@@ -281,175 +285,6 @@ public class Effect implements Serializable {
         this.trailLength = trailLength;
         return this;
     }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取loop值
-     */
-    public Boolean getLoop() {
-        return loop;
-    }
-
-    /**
-     * 设置loop值
-     *
-     * @param loop
-     */
-    public void setLoop(Boolean loop) {
-        this.loop = loop;
-    }
-
-    /**
-     * 获取period值
-     */
-    public Integer getPeriod() {
-        return period;
-    }
-
-    /**
-     * 设置period值
-     *
-     * @param period
-     */
-    public void setPeriod(Integer period) {
-        this.period = period;
-    }
-
-    /**
-     * 获取scaleSize值
-     */
-    public Integer getScaleSize() {
-        return scaleSize;
-    }
-
-    /**
-     * 设置scaleSize值
-     *
-     * @param scaleSize
-     */
-    public void setScaleSize(Integer scaleSize) {
-        this.scaleSize = scaleSize;
-    }
-
-    /**
-     * 获取color值
-     */
-    public String getColor() {
-        return color;
-    }
-
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    /**
-     * 获取shadowColor值
-     */
-    public String getShadowColor() {
-        return shadowColor;
-    }
-
-    /**
-     * 设置shadowColor值
-     *
-     * @param shadowColor
-     */
-    public void setShadowColor(String shadowColor) {
-        this.shadowColor = shadowColor;
-    }
-
-    /**
-     * 获取shadowBlur值
-     */
-    public Integer getShadowBlur() {
-        return shadowBlur;
-    }
-
-    /**
-     * 设置shadowBlur值
-     *
-     * @param shadowBlur
-     */
-    public void setShadowBlur(Integer shadowBlur) {
-        this.shadowBlur = shadowBlur;
-    }
-
-    /**
-     * 获取type值
-     */
-    public Type getType() {
-        return type;
-    }
-
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    /**
-     * 获取bounceDistance值
-     */
-    public Integer getBounceDistance() {
-        return bounceDistance;
-    }
-
-    /**
-     * 设置bounceDistance值
-     *
-     * @param bounceDistance
-     */
-    public void setBounceDistance(Integer bounceDistance) {
-        this.bounceDistance = bounceDistance;
-    }
-
-    public Object getSymbol() {
-        return symbol;
-    }
-
-    public void setSymbol(Object symbol) {
-        this.symbol = symbol;
-    }
-
-    public Object getSymbolSize() {
-        return symbolSize;
-    }
-
-    public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
-    }
-
-    public Double getTrailLength() {
-        return trailLength;
-    }
-
-    public void setTrailLength(Double trailLength) {
-        this.trailLength = trailLength;
-    }
-
     public static enum Type {
         scale, bounce
     }

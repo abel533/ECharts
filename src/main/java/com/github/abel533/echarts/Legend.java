@@ -27,12 +27,16 @@ package com.github.abel533.echarts;
 import com.github.abel533.echarts.code.Align;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.*;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Legend extends Basic<Legend> implements Data<Legend>, Component {
     /**
      * 布局方式，默认为水平布局，可选为：'horizontal' | 'vertical'
@@ -106,23 +110,6 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         this.formatter = formatter;
         return this;
     }
-
-    public Align getAlign() {
-        return align;
-    }
-
-    public void setAlign(Align align) {
-        this.align = align;
-    }
-
-    public String getFormatter() {
-        return formatter;
-    }
-
-    public void setFormatter(String formatter) {
-        this.formatter = formatter;
-    }
-
     /**
      * 设置textStyle值
      *
@@ -277,117 +264,5 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
         }
         this.data().addAll(Arrays.asList(values));
         return this;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取data值
-     */
-    public List getData() {
-        return data;
-    }
-
-    /**
-     * 设置data值
-     *
-     * @param data
-     */
-    public void setData(List data) {
-        this.data = data;
-    }
-
-    /**
-     * 获取orient值
-     */
-    public Orient getOrient() {
-        return orient;
-    }
-
-    /**
-     * 设置orient值
-     *
-     * @param orient
-     */
-    public void setOrient(Orient orient) {
-        this.orient = orient;
-    }
-
-    /**
-     * 获取itemWidth值
-     */
-    public Integer getItemWidth() {
-        return itemWidth;
-    }
-
-    /**
-     * 设置itemWidth值
-     *
-     * @param itemWidth
-     */
-    public void setItemWidth(Integer itemWidth) {
-        this.itemWidth = itemWidth;
-    }
-
-    /**
-     * 获取itemHeight值
-     */
-    public Integer getItemHeight() {
-        return itemHeight;
-    }
-
-    /**
-     * 设置itemHeight值
-     *
-     * @param itemHeight
-     */
-    public void setItemHeight(Integer itemHeight) {
-        this.itemHeight = itemHeight;
-    }
-
-    /**
-     * 获取selectedMode值
-     */
-    public Object getSelectedMode() {
-        return selectedMode;
-    }
-
-    /**
-     * 设置selectedMode值
-     *
-     * @param selectedMode
-     */
-    public void setSelectedMode(Object selectedMode) {
-        this.selectedMode = selectedMode;
-    }
-
-    /**
-     * 获取selected
-     */
-    public Map<String, Boolean> getSelected() {
-        return selected;
-    }
-
-    /**
-     * 设置selected
-     *
-     * @param selected
-     */
-    public void setSelected(Map<String, Boolean> selected) {
-        this.selected = selected;
     }
 }

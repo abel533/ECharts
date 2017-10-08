@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Category implements Serializable {
 
     private static final long serialVersionUID = 5805816011061262622L;
@@ -204,109 +208,5 @@ public class Category implements Serializable {
             this.itemStyle = new ItemStyle();
         }
         return this.itemStyle;
-    }
-
-    /**
-     * 获取itemStyle值
-     */
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
-    }
-
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取symbol值
-     */
-    public Object getSymbol() {
-        return symbol;
-    }
-
-    /**
-     * 设置symbol值
-     *
-     * @param symbol
-     */
-    public void setSymbol(Object symbol) {
-        this.symbol = symbol;
-    }
-
-    /**
-     * 获取symbolSize值
-     */
-    public Object getSymbolSize() {
-        return symbolSize;
-    }
-
-    /**
-     * 设置symbolSize值
-     *
-     * @param symbolSize
-     */
-    public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
-    }
-
-    /**
-     * 获取draggable值
-     */
-    public Boolean getDraggable() {
-        return draggable;
-    }
-
-    /**
-     * 设置draggable值
-     *
-     * @param draggable
-     */
-    public void setDraggable(Boolean draggable) {
-        this.draggable = draggable;
-    }
-
-    public Integer getSymbolRotate() {
-        return symbolRotate;
-    }
-
-    public void setSymbolRotate(Integer symbolRotate) {
-        this.symbolRotate = symbolRotate;
-    }
-
-    public Object[] getSymbolOffset() {
-        return symbolOffset;
-    }
-
-    public void setSymbolOffset(Object[] symbolOffset) {
-        this.symbolOffset = symbolOffset;
-    }
-
-    public ItemStyle getLabel() {
-        return label;
-    }
-
-    public void setLabel(ItemStyle label) {
-        this.label = label;
     }
 }

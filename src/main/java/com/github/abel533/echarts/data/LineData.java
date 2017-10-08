@@ -24,11 +24,16 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * LineData
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class LineData extends BasicData<LineData> {
     /**
      * 可以通过valueIndex:0指定为横轴特殊点
@@ -96,23 +101,6 @@ public class LineData extends BasicData<LineData> {
      * @param valueIndex
      */
     public LineData valueIndex(Integer valueIndex) {
-        this.valueIndex = valueIndex;
-        return this;
-    }
-
-    /**
-     * 获取valueIndex值
-     */
-    public Integer getValueIndex() {
-        return valueIndex;
-    }
-
-    /**
-     * 设置valueIndex值
-     *
-     * @param valueIndex
-     */
-    public LineData setValueIndex(Integer valueIndex) {
         this.valueIndex = valueIndex;
         return this;
     }

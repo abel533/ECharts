@@ -28,6 +28,8 @@ import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.feature.Feature;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -37,6 +39,8 @@ import java.util.Map;
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Toolbox extends Basic<Toolbox> implements Component {
     /**
      * 启用功能，目前支持feature见下，工具箱自定义功能回调处理
@@ -80,14 +84,6 @@ public class Toolbox extends Basic<Toolbox> implements Component {
     public Toolbox iconStyle(ItemStyle iconStyle) {
         this.iconStyle = iconStyle;
         return this;
-    }
-
-    public ItemStyle getIconStyle() {
-        return iconStyle;
-    }
-
-    public void setIconStyle(ItemStyle iconStyle) {
-        this.iconStyle = iconStyle;
     }
 
     /**
@@ -277,117 +273,5 @@ public class Toolbox extends Basic<Toolbox> implements Component {
         if (!this.feature().containsKey(_name)) {
             this.feature().put(_name, feature);
         }
-    }
-
-    /**
-     * 获取color值
-     */
-    public List<Object> getColor() {
-        return color;
-    }
-
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public void setColor(List<Object> color) {
-        this.color = color;
-    }
-
-    /**
-     * 获取feature值
-     */
-    public Map<String, Feature> getFeature() {
-        return feature;
-    }
-
-    /**
-     * 设置feature值
-     *
-     * @param feature
-     */
-    public void setFeature(Map<String, Feature> feature) {
-        this.feature = feature;
-    }
-
-    /**
-     * 获取orient值
-     */
-    public Orient getOrient() {
-        return orient;
-    }
-
-    /**
-     * 设置orient值
-     *
-     * @param orient
-     */
-    public void setOrient(Orient orient) {
-        this.orient = orient;
-    }
-
-    /**
-     * 获取disableColor值
-     */
-    public String getDisableColor() {
-        return disableColor;
-    }
-
-    /**
-     * 设置disableColor值
-     *
-     * @param disableColor
-     */
-    public void setDisableColor(String disableColor) {
-        this.disableColor = disableColor;
-    }
-
-    /**
-     * 获取effectiveColor值
-     */
-    public String getEffectiveColor() {
-        return effectiveColor;
-    }
-
-    /**
-     * 设置effectiveColor值
-     *
-     * @param effectiveColor
-     */
-    public void setEffectiveColor(String effectiveColor) {
-        this.effectiveColor = effectiveColor;
-    }
-
-    /**
-     * 获取itemSize值
-     */
-    public Integer getItemSize() {
-        return itemSize;
-    }
-
-    /**
-     * 设置itemSize值
-     *
-     * @param itemSize
-     */
-    public void setItemSize(Integer itemSize) {
-        this.itemSize = itemSize;
-    }
-
-    /**
-     * 获取showTitle值
-     */
-    public Boolean getShowTitle() {
-        return showTitle;
-    }
-
-    /**
-     * 设置showTitle值
-     *
-     * @param showTitle
-     */
-    public void setShowTitle(Boolean showTitle) {
-        this.showTitle = showTitle;
     }
 }
