@@ -4,6 +4,8 @@ import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.style.AreaSelectStyle;
 import com.github.abel533.echarts.style.NameTextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 平行坐标系
@@ -11,6 +13,8 @@ import com.github.abel533.echarts.style.NameTextStyle;
  * @author liuzh
  * @since 2016-02-28 17:13
  */
+@Getter
+@Setter
 public class ParallelAxis extends Axis<ParallelAxis> {
     /**
      * 坐标轴的维度号
@@ -79,39 +83,6 @@ public class ParallelAxis extends Axis<ParallelAxis> {
         this.nameLocation = nameLocation;
         return this;
     }
-
-    public Integer getDim() {
-        return dim;
-    }
-
-    public void setDim(Integer dim) {
-        this.dim = dim;
-    }
-
-    public Integer getParallelIndex() {
-        return parallelIndex;
-    }
-
-    public void setParallelIndex(Integer parallelIndex) {
-        this.parallelIndex = parallelIndex;
-    }
-
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
-    }
-
-    public NameLocation getNameLocation() {
-        return nameLocation;
-    }
-
-    public void setNameLocation(NameLocation nameLocation) {
-        this.nameLocation = nameLocation;
-    }
-
     public AreaSelectStyle areaSelectStyle() {
         if (this.areaSelectStyle == null) {
             this.areaSelectStyle = new AreaSelectStyle();
@@ -134,21 +105,5 @@ public class ParallelAxis extends Axis<ParallelAxis> {
     public ParallelAxis nameTextStyle(NameTextStyle nameTextStyle) {
         this.nameTextStyle = nameTextStyle;
         return this;
-    }
-
-    public AreaSelectStyle getAreaSelectStyle() {
-        return areaSelectStyle;
-    }
-
-    public void setAreaSelectStyle(AreaSelectStyle areaSelectStyle) {
-        this.areaSelectStyle = areaSelectStyle;
-    }
-
-    public NameTextStyle getNameTextStyle() {
-        return nameTextStyle;
-    }
-
-    public void setNameTextStyle(NameTextStyle nameTextStyle) {
-        this.nameTextStyle = nameTextStyle;
     }
 }

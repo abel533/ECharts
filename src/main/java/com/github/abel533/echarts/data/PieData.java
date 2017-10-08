@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -31,6 +34,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class PieData implements Serializable {
 
     private static final long serialVersionUID = -2573889018261931162L;
@@ -64,54 +69,5 @@ public class PieData implements Serializable {
     public PieData value(Object value) {
         this.value = value;
         return this;
-    }
-
-    /**
-     * 获取name值
-     */
-    public String name() {
-        return this.name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public PieData name(String name) {
-        this.name = name;
-        return this;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Object getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 }

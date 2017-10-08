@@ -30,12 +30,16 @@ import com.github.abel533.echarts.code.Roam;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.other.Level;
 import com.github.abel533.echarts.style.Breadcrumb;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 矩形树图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Treemap extends Series<Treemap> {
     /**
      * 中心坐标，支持绝对值（px）和百分比
@@ -218,62 +222,6 @@ public class Treemap extends Series<Treemap> {
         return this;
     }
 
-    public Integer getVisualDimension() {
-        return visualDimension;
-    }
-
-    public void setVisualDimension(Integer visualDimension) {
-        this.visualDimension = visualDimension;
-    }
-
-    public Object[] getColor() {
-        return color;
-    }
-
-    public void setColor(Object[] color) {
-        this.color = color;
-    }
-
-    public Object[] getColorAlpha() {
-        return colorAlpha;
-    }
-
-    public void setColorAlpha(Object[] colorAlpha) {
-        this.colorAlpha = colorAlpha;
-    }
-
-    public Double getColorSaturation() {
-        return colorSaturation;
-    }
-
-    public void setColorSaturation(Double colorSaturation) {
-        this.colorSaturation = colorSaturation;
-    }
-
-    public Object getColorMappingBy() {
-        return colorMappingBy;
-    }
-
-    public void setColorMappingBy(Object colorMappingBy) {
-        this.colorMappingBy = colorMappingBy;
-    }
-
-    public Double getVisibleMin() {
-        return visibleMin;
-    }
-
-    public void setVisibleMin(Double visibleMin) {
-        this.visibleMin = visibleMin;
-    }
-
-    public Double getChildrenVisibleMin() {
-        return childrenVisibleMin;
-    }
-
-    public void setChildrenVisibleMin(Double childrenVisibleMin) {
-        this.childrenVisibleMin = childrenVisibleMin;
-    }
-
     public Double zoomToNodeRatio() {
         return this.zoomToNodeRatio;
     }
@@ -282,15 +230,6 @@ public class Treemap extends Series<Treemap> {
         this.zoomToNodeRatio = zoomToNodeRatio;
         return this;
     }
-
-    public Double getZoomToNodeRatio() {
-        return zoomToNodeRatio;
-    }
-
-    public void setZoomToNodeRatio(Double zoomToNodeRatio) {
-        this.zoomToNodeRatio = zoomToNodeRatio;
-    }
-
     public Object nodeClick() {
         return this.nodeClick;
     }
@@ -308,14 +247,6 @@ public class Treemap extends Series<Treemap> {
     public Treemap nodeClick(NodeClick nodeClick) {
         this.nodeClick = nodeClick;
         return this;
-    }
-
-    public Object getNodeClick() {
-        return nodeClick;
-    }
-
-    public void setNodeClick(Object nodeClick) {
-        this.nodeClick = nodeClick;
     }
 
     public Object roam() {
@@ -336,16 +267,6 @@ public class Treemap extends Series<Treemap> {
         this.roam = roam;
         return this;
     }
-
-    public Object getRoam() {
-        return roam;
-    }
-
-    public void setRoam(Object roam) {
-        this.roam = roam;
-    }
-
-
     public Double squareRatio() {
         return this.squareRatio;
     }
@@ -354,15 +275,6 @@ public class Treemap extends Series<Treemap> {
         this.squareRatio = squareRatio;
         return this;
     }
-
-    public Double getSquareRatio() {
-        return squareRatio;
-    }
-
-    public void setSquareRatio(Double squareRatio) {
-        this.squareRatio = squareRatio;
-    }
-
     /**
      * 设置val1,val2值
      *
@@ -426,51 +338,4 @@ public class Treemap extends Series<Treemap> {
         return this.root;
     }
 
-    /**
-     * 获取center值
-     */
-    public Object[] getCenter() {
-        return center;
-    }
-
-    /**
-     * 设置center值
-     *
-     * @param center
-     */
-    public void setCenter(Object[] center) {
-        this.center = center;
-    }
-
-    /**
-     * 获取size值
-     */
-    public Object[] getSize() {
-        return size;
-    }
-
-    /**
-     * 设置size值
-     *
-     * @param size
-     */
-    public void setSize(Object[] size) {
-        this.size = size;
-    }
-
-    /**
-     * 获取root值
-     */
-    public String getRoot() {
-        return root;
-    }
-
-    /**
-     * 设置root值
-     *
-     * @param root
-     */
-    public void setRoot(String root) {
-        this.root = root;
-    }
 }

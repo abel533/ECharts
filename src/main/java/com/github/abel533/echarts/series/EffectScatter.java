@@ -28,12 +28,16 @@ import com.github.abel533.echarts.code.EffectType;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.ShowEffectOn;
 import com.github.abel533.echarts.series.other.RippleEffect;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 带有涟漪特效动画的散点（气泡）图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class EffectScatter extends Series<EffectScatter> {
     /**
      * 特效类型
@@ -100,30 +104,6 @@ public class EffectScatter extends Series<EffectScatter> {
     public EffectScatter rippleEffect(RippleEffect rippleEffect) {
         this.rippleEffect = rippleEffect;
         return this;
-    }
-
-    public Object getEffectType() {
-        return effectType;
-    }
-
-    public void setEffectType(Object effectType) {
-        this.effectType = effectType;
-    }
-
-    public Object getShowEffectOn() {
-        return showEffectOn;
-    }
-
-    public void setShowEffectOn(Object showEffectOn) {
-        this.showEffectOn = showEffectOn;
-    }
-
-    public RippleEffect getRippleEffect() {
-        return rippleEffect;
-    }
-
-    public void setRippleEffect(RippleEffect rippleEffect) {
-        this.rippleEffect = rippleEffect;
     }
 
 }

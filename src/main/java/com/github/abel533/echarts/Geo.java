@@ -2,11 +2,15 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Roam;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author liuzh
  * @since 2016-02-28 17:05
  */
+@Getter
+@Setter
 public class Geo extends Basic<Geo> implements Component {
     private String map;
     private Roam roam;
@@ -53,37 +57,5 @@ public class Geo extends Basic<Geo> implements Component {
     public Geo itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return this;
-    }
-
-    public String getMap() {
-        return map;
-    }
-
-    public void setMap(String map) {
-        this.map = map;
-    }
-
-    public Roam getRoam() {
-        return roam;
-    }
-
-    public void setRoam(Roam roam) {
-        this.roam = roam;
-    }
-
-    public ItemStyle getLabel() {
-        return label;
-    }
-
-    public void setLabel(ItemStyle label) {
-        this.label = label;
-    }
-
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
     }
 }

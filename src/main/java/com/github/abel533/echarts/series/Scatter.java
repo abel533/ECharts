@@ -25,12 +25,16 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 散点图、气泡图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Scatter extends Series<Scatter> {
     /**
      * 大规模散点图
@@ -90,37 +94,5 @@ public class Scatter extends Series<Scatter> {
     public Scatter largeThreshold(Long largeThreshold) {
         this.largeThreshold = largeThreshold;
         return this;
-    }
-
-    /**
-     * 获取large值
-     */
-    public Boolean getLarge() {
-        return large;
-    }
-
-    /**
-     * 设置large值
-     *
-     * @param large
-     */
-    public void setLarge(Boolean large) {
-        this.large = large;
-    }
-
-    /**
-     * 获取largeThreshold值
-     */
-    public Long getLargeThreshold() {
-        return largeThreshold;
-    }
-
-    /**
-     * 设置largeThreshold值
-     *
-     * @param largeThreshold
-     */
-    public void setLargeThreshold(Long largeThreshold) {
-        this.largeThreshold = largeThreshold;
     }
 }

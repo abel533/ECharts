@@ -26,12 +26,16 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Description: MarkLine
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class MarkLine extends AbstractData<MarkLine> {
     /**
      * 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string，同series中的symbol
@@ -282,172 +286,13 @@ public class MarkLine extends AbstractData<MarkLine> {
         this.smooth = smooth;
         return this;
     }
-
-    /**
-     * 获取effect值
-     */
-    public Effect getEffect() {
-        return effect;
-    }
-
-    /**
-     * 设置effect值
-     *
-     * @param effect
-     */
-    public void setEffect(Effect effect) {
-        this.effect = effect;
-    }
-
-    /**
-     * 获取itemStyle值
-     */
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
-    }
-
-    /**
-     * 获取symbol值
-     */
-    public Object getSymbol() {
-        return symbol;
-    }
-
-    /**
-     * 设置symbol值
-     *
-     * @param symbol
-     */
-    public void setSymbol(Object symbol) {
-        this.symbol = symbol;
-    }
-
-    /**
-     * 获取symbolSize值
-     */
-    public Object getSymbolSize() {
-        return symbolSize;
-    }
-
-    /**
-     * 设置symbolSize值
-     *
-     * @param symbolSize
-     */
-    public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
-    }
-
-    /**
-     * 获取symbolRoate值
-     */
-    public Object getSymbolRoate() {
-        return symbolRoate;
-    }
-
-    /**
-     * 设置symbolRoate值
-     *
-     * @param symbolRoate
-     */
-    public void setSymbolRoate(Object symbolRoate) {
-        this.symbolRoate = symbolRoate;
-    }
-
-    /**
-     * 获取geoCoord值
-     */
-    public GeoCoord getGeoCoord() {
-        return geoCoord;
-    }
-
-    /**
-     * 设置geoCoord值
-     *
-     * @param geoCoord
-     */
-    public void setGeoCoord(GeoCoord geoCoord) {
-        this.geoCoord = geoCoord;
-    }
-
-    /**
-     * 获取smooth值
-     */
-    public Boolean getSmooth() {
-        return smooth;
-    }
-
-    /**
-     * 设置smooth值
-     *
-     * @param smooth
-     */
-    public void setSmooth(Boolean smooth) {
-        this.smooth = smooth;
-    }
-
-    /**
-     * 获取smoothness值
-     */
-    public Double getSmoothness() {
-        return smoothness;
-    }
-
-    /**
-     * 设置smoothness值
-     *
-     * @param smoothness
-     */
-    public void setSmoothness(Double smoothness) {
-        this.smoothness = smoothness;
-    }
-
-    /**
-     * 获取precision值
-     */
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
-    }
-
-    /**
-     * 获取bundling值
-     */
-    public Bundling getBundling() {
-        return bundling;
-    }
-
-    /**
-     * 设置bundling值
-     *
-     * @param bundling
-     */
-    public void setBundling(Bundling bundling) {
-        this.bundling = bundling;
-    }
-
     /**
      * 边捆绑
      *
      * @since 2.2.0
      */
+    @Getter
+    @Setter
     public static class Bundling {
         private Boolean enable;
         private Integer maxTurningAngle;
@@ -484,38 +329,6 @@ public class MarkLine extends AbstractData<MarkLine> {
         public Bundling maxTurningAngle(Integer maxTurningAngle) {
             this.maxTurningAngle = maxTurningAngle;
             return this;
-        }
-
-	/**
-     * 获取enable值
-     */
-    public Boolean getEnable() {
-        return enable;
-    }
-
-        /**
-         * 设置enable值
-         *
-	 * @param enable
-	 */
-	public void setEnable(Boolean enable) {
-        this.enable = enable;
-    }
-
-        /**
-         * 获取maxTurningAngle值
-	 */
-	public Integer getMaxTurningAngle() {
-        return maxTurningAngle;
-    }
-
-        /**
-         * 设置maxTurningAngle值
-         *
-         * @param maxTurningAngle
-         */
-	public void setMaxTurningAngle(Integer maxTurningAngle) {
-            this.maxTurningAngle = maxTurningAngle;
         }
     }
 }

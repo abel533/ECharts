@@ -26,6 +26,8 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -34,6 +36,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public abstract class AbstractLabel<T> implements Serializable {
 
     private static final long serialVersionUID = -6908403517815789999L;
@@ -239,149 +243,5 @@ public abstract class AbstractLabel<T> implements Serializable {
     public T margin(Integer margin) {
         this.margin = margin;
         return (T) this;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取position值
-     */
-    public Object getPosition() {
-        return position;
-    }
-
-    /**
-     * 设置position值
-     *
-     * @param position
-     */
-    public void setPosition(Object position) {
-        this.position = position;
-    }
-
-    /**
-     * 获取interval值
-     */
-    public Object getInterval() {
-        return interval;
-    }
-
-    /**
-     * 设置interval值
-     *
-     * @param interval
-     */
-    public void setInterval(Object interval) {
-        this.interval = interval;
-    }
-
-    /**
-     * 获取rotate值
-     */
-    public Integer getRotate() {
-        return rotate;
-    }
-
-    /**
-     * 设置rotate值
-     *
-     * @param rotate
-     */
-    public void setRotate(Integer rotate) {
-        this.rotate = rotate;
-    }
-
-    /**
-     * 获取clickable值
-     */
-    public Boolean getClickable() {
-        return clickable;
-    }
-
-    /**
-     * 设置clickable值
-     *
-     * @param clickable
-     */
-    public void setClickable(Boolean clickable) {
-        this.clickable = clickable;
-    }
-
-    /**
-     * 获取formatter值
-     */
-    public Object getFormatter() {
-        return formatter;
-    }
-
-    /**
-     * 设置formatter值
-     *
-     * @param formatter
-     */
-    public void setFormatter(Object formatter) {
-        this.formatter = formatter;
-    }
-
-    /**
-     * 获取margin值
-     */
-    public Integer getMargin() {
-        return margin;
-    }
-
-    /**
-     * 设置margin值
-     *
-     * @param margin
-     */
-    public void setMargin(Integer margin) {
-        this.margin = margin;
-    }
-
-    /**
-     * 获取color值
-     */
-    public String getColor() {
-        return color;
-    }
-
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public void setColor(String color) {
-        this.color = color;
     }
 }

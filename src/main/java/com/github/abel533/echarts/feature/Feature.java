@@ -26,12 +26,16 @@ package com.github.abel533.echarts.feature;
 
 import com.github.abel533.echarts.style.LineStyle;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Feature implements Serializable {
 
     /**
@@ -233,133 +237,5 @@ public class Feature implements Serializable {
     public Feature icon(String icon) {
         this.icon = icon;
         return this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取title值
-     */
-    public Object getTitle() {
-        return title;
-    }
-
-    /**
-     * 设置title值
-     *
-     * @param title
-     */
-    public void setTitle(Object title) {
-        this.title = title;
-    }
-
-    /**
-     * 获取type值
-     */
-    public Object getType() {
-        return type;
-    }
-
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public void setType(Object type) {
-        this.type = type;
-    }
-
-    /**
-     * 获取readOnly值
-     */
-    public Boolean getReadOnly() {
-        return readOnly;
-    }
-
-    /**
-     * 设置readOnly值
-     *
-     * @param readOnly
-     */
-    public void setReadOnly(Boolean readOnly) {
-        this.readOnly = readOnly;
-    }
-
-    /**
-     * 获取lang值
-     */
-    public Object getLang() {
-        return lang;
-    }
-
-    /**
-     * 设置lang值
-     *
-     * @param lang
-     */
-    public void setLang(Object lang) {
-        this.lang = lang;
-    }
-
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取icon值
-     */
-    public String getIcon() {
-        return icon;
-    }
-
-    /**
-     * 设置icon值
-     *
-     * @param icon
-     */
-    public void setIcon(String icon) {
-        this.icon = icon;
     }
 }

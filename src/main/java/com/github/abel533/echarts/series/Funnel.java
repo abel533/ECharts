@@ -28,12 +28,16 @@ import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.code.Sort;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 漏斗图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Funnel extends Series<Funnel> {
     /**
      * 左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
@@ -300,189 +304,5 @@ public class Funnel extends Series<Funnel> {
     public Funnel gap(Integer gap) {
         this.gap = gap;
         return this;
-    }
-
-    /**
-     * 获取x值
-     */
-    public Object getX() {
-        return x;
-    }
-
-    /**
-     * 设置x值
-     *
-     * @param x
-     */
-    public void setX(Object x) {
-        this.x = x;
-    }
-
-    /**
-     * 获取y值
-     */
-    public Object getY() {
-        return y;
-    }
-
-    /**
-     * 设置y值
-     *
-     * @param y
-     */
-    public void setY(Object y) {
-        this.y = y;
-    }
-
-    /**
-     * 获取x2值
-     */
-    public Object getX2() {
-        return x2;
-    }
-
-    /**
-     * 设置x2值
-     *
-     * @param x2
-     */
-    public void setX2(Object x2) {
-        this.x2 = x2;
-    }
-
-    /**
-     * 获取y2值
-     */
-    public Object getY2() {
-        return y2;
-    }
-
-    /**
-     * 设置y2值
-     *
-     * @param y2
-     */
-    public void setY2(Object y2) {
-        this.y2 = y2;
-    }
-
-    /**
-     * 获取min值
-     */
-    public Integer getMin() {
-        return min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Integer getMax() {
-        return max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public void setMax(Integer max) {
-        this.max = max;
-    }
-
-    /**
-     * 获取minSize值
-     */
-    public String getMinSize() {
-        return minSize;
-    }
-
-    /**
-     * 设置minSize值
-     *
-     * @param minSize
-     */
-    public void setMinSize(String minSize) {
-        this.minSize = minSize;
-    }
-
-    /**
-     * 获取maxSize值
-     */
-    public String getMaxSize() {
-        return maxSize;
-    }
-
-    /**
-     * 设置maxSize值
-     *
-     * @param maxSize
-     */
-    public void setMaxSize(String maxSize) {
-        this.maxSize = maxSize;
-    }
-
-    /**
-     * 获取sort值
-     */
-    public Sort getSort() {
-        return sort;
-    }
-
-    /**
-     * 设置sort值
-     *
-     * @param sort
-     */
-    public void setSort(Sort sort) {
-        this.sort = sort;
-    }
-
-    /**
-     * 获取gap值
-     */
-    public Integer getGap() {
-        return gap;
-    }
-
-    /**
-     * 设置gap值
-     *
-     * @param gap
-     */
-    public void setGap(Integer gap) {
-        this.gap = gap;
-    }
-
-    /**
-     * 设置funnelAlign值
-     */
-    public X getFunnelAlign() {
-        return funnelAlign;
-    }
-
-    /**
-     * 获取funnelAlign值
-     *
-     * @param funnelAlign
-     */
-    public void setFunnelAlign(X funnelAlign) {
-        this.funnelAlign = funnelAlign;
-    }
-
-    public ItemStyle getLabelLine() {
-        return labelLine;
-    }
-
-    public void setLabelLine(ItemStyle labelLine) {
-        this.labelLine = labelLine;
     }
 }

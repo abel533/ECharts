@@ -27,12 +27,16 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.RoseType;
 import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 饼图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Pie extends Series<Pie> {
     /**
      * 圆心坐标，支持绝对值（px）和百分比，百分比计算min(width, height) * 50%
@@ -221,191 +225,6 @@ public class Pie extends Series<Pie> {
     public Pie roseType(RoseType roseType) {
         this.roseType = roseType;
         return this;
-    }
-
-    /**
-     * 获取selectedOffset值
-     */
-    public Integer selectedOffset() {
-        return this.selectedOffset;
-    }
-
-    /**
-     * 设置selectedOffset值
-     *
-     * @param selectedOffset
-     */
-    public Pie selectedOffset(Integer selectedOffset) {
-        this.selectedOffset = selectedOffset;
-        return this;
-    }
-
-    /**
-     * 获取selectedMode值
-     */
-    public SelectedMode selectedMode() {
-        return this.selectedMode;
-    }
-
-    /**
-     * 设置selectedMode值
-     *
-     * @param selectedMode
-     */
-    public Pie selectedMode(SelectedMode selectedMode) {
-        this.selectedMode = selectedMode;
-        return this;
-    }
-
-    /**
-     * 获取center值
-     */
-    public Object[] getCenter() {
-        return center;
-    }
-
-    /**
-     * 设置center值
-     *
-     * @param center
-     */
-    public void setCenter(Object[] center) {
-        this.center = center;
-    }
-
-    /**
-     * 获取radius值
-     */
-    public Object getRadius() {
-        return radius;
-    }
-
-    /**
-     * 设置radius值
-     *
-     * @param radius
-     */
-    public void setRadius(Object radius) {
-        this.radius = radius;
-    }
-
-    /**
-     * 获取startAngle值
-     */
-    public Integer getStartAngle() {
-        return startAngle;
-    }
-
-    /**
-     * 设置startAngle值
-     *
-     * @param startAngle
-     */
-    public void setStartAngle(Integer startAngle) {
-        this.startAngle = startAngle;
-    }
-
-    /**
-     * 获取minAngle值
-     */
-    public Integer getMinAngle() {
-        return minAngle;
-    }
-
-    /**
-     * 设置minAngle值
-     *
-     * @param minAngle
-     */
-    public void setMinAngle(Integer minAngle) {
-        this.minAngle = minAngle;
-    }
-
-    /**
-     * 获取clockWise值
-     */
-    public Boolean getClockWise() {
-        return clockWise;
-    }
-
-    /**
-     * 设置clockWise值
-     *
-     * @param clockWise
-     */
-    public void setClockWise(Boolean clockWise) {
-        this.clockWise = clockWise;
-    }
-
-    /**
-     * 获取roseType值
-     */
-    public RoseType getRoseType() {
-        return roseType;
-    }
-
-    /**
-     * 设置roseType值
-     *
-     * @param roseType
-     */
-    public void setRoseType(RoseType roseType) {
-        this.roseType = roseType;
-    }
-
-    /**
-     * 获取selectedOffset值
-     */
-    public Integer getSelectedOffset() {
-        return selectedOffset;
-    }
-
-    /**
-     * 设置selectedOffset值
-     *
-     * @param selectedOffset
-     */
-    public void setSelectedOffset(Integer selectedOffset) {
-        this.selectedOffset = selectedOffset;
-    }
-
-    /**
-     * 获取selectedMode值
-     */
-    public SelectedMode getSelectedMode() {
-        return selectedMode;
-    }
-
-    /**
-     * 设置selectedMode值
-     *
-     * @param selectedMode
-     */
-    public void setSelectedMode(SelectedMode selectedMode) {
-        this.selectedMode = selectedMode;
-    }
-
-    /**
-     * 返回avoidLabelOverlap
-     *
-     * @return
-     */
-    public Boolean getAvoidLabelOverlap() {
-        return avoidLabelOverlap;
-    }
-
-    /**
-     * 设置 avoidLabelOverlap值
-     *
-     * @param avoidLabelOverlap
-     */
-    public void setAvoidLabelOverlap(Boolean avoidLabelOverlap) {
-        this.avoidLabelOverlap = avoidLabelOverlap;
-    }
-
-    public Boolean avoidLabelOverlap() {
-        return this.avoidLabelOverlap;
-
     }
 
     /**

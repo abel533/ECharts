@@ -28,10 +28,14 @@ import com.github.abel533.echarts.code.Position;
 import com.github.abel533.echarts.code.Trigger;
 import com.github.abel533.echarts.code.TriggerOn;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Tooltip extends Basic<Tooltip> implements Component {
     /**
      * tooltip主体内容显示策略，只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为falase，
@@ -107,15 +111,6 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         this.alwaysShowContent = alwaysShowContent;
         return this;
     }
-
-    public Boolean getAlwaysShowContent() {
-        return alwaysShowContent;
-    }
-
-    public void setAlwaysShowContent(Boolean alwaysShowContent) {
-        this.alwaysShowContent = alwaysShowContent;
-    }
-
     public TriggerOn triggerOn() {
         return this.triggerOn;
     }
@@ -124,15 +119,6 @@ public class Tooltip extends Basic<Tooltip> implements Component {
         this.triggerOn = triggerOn;
         return this;
     }
-
-    public TriggerOn getTriggerOn() {
-        return triggerOn;
-    }
-
-    public void setTriggerOn(TriggerOn triggerOn) {
-        this.triggerOn = triggerOn;
-    }
-
     /**
      * 设置axisPointer值
      *
@@ -353,197 +339,5 @@ public class Tooltip extends Basic<Tooltip> implements Component {
             this.textStyle = new TextStyle();
         }
         return this.textStyle;
-    }
-
-    /**
-     * 获取showContent值
-     */
-    public Boolean getShowContent() {
-        return showContent;
-    }
-
-    /**
-     * 设置showContent值
-     *
-     * @param showContent
-     */
-    public void setShowContent(Boolean showContent) {
-        this.showContent = showContent;
-    }
-
-    /**
-     * 获取trigger值
-     */
-    public Trigger getTrigger() {
-        return trigger;
-    }
-
-    /**
-     * 设置trigger值
-     *
-     * @param trigger
-     */
-    public void setTrigger(Trigger trigger) {
-        this.trigger = trigger;
-    }
-
-    /**
-     * 获取position值
-     */
-    public Object getPosition() {
-        return position;
-    }
-
-    /**
-     * 设置position值
-     *
-     * @param position
-     */
-    public void setPosition(Object position) {
-        this.position = position;
-    }
-
-    /**
-     * 获取formatter值
-     */
-    public Object getFormatter() {
-        return formatter;
-    }
-
-    /**
-     * 设置formatter值
-     *
-     * @param formatter
-     */
-    public void setFormatter(Object formatter) {
-        this.formatter = formatter;
-    }
-
-    /**
-     * 获取islandFormatter值
-     */
-    public String getIslandFormatter() {
-        return islandFormatter;
-    }
-
-    /**
-     * 设置islandFormatter值
-     *
-     * @param islandFormatter
-     */
-    public void setIslandFormatter(String islandFormatter) {
-        this.islandFormatter = islandFormatter;
-    }
-
-    /**
-     * 获取showDelay值
-     */
-    public Integer getShowDelay() {
-        return showDelay;
-    }
-
-    /**
-     * 设置showDelay值
-     *
-     * @param showDelay
-     */
-    public void setShowDelay(Integer showDelay) {
-        this.showDelay = showDelay;
-    }
-
-    /**
-     * 获取hideDelay值
-     */
-    public Integer getHideDelay() {
-        return hideDelay;
-    }
-
-    /**
-     * 设置hideDelay值
-     *
-     * @param hideDelay
-     */
-    public void setHideDelay(Integer hideDelay) {
-        this.hideDelay = hideDelay;
-    }
-
-    /**
-     * 获取transitionDuration值
-     */
-    public Double getTransitionDuration() {
-        return transitionDuration;
-    }
-
-    /**
-     * 设置transitionDuration值
-     *
-     * @param transitionDuration
-     */
-    public void setTransitionDuration(Double transitionDuration) {
-        this.transitionDuration = transitionDuration;
-    }
-
-    /**
-     * 获取enterable值
-     */
-    public Boolean getEnterable() {
-        return enterable;
-    }
-
-    /**
-     * 设置enterable值
-     *
-     * @param enterable
-     */
-    public void setEnterable(Boolean enterable) {
-        this.enterable = enterable;
-    }
-
-    /**
-     * 获取borderRadius值
-     */
-    public Integer getBorderRadius() {
-        return borderRadius;
-    }
-
-    /**
-     * 设置borderRadius值
-     *
-     * @param borderRadius
-     */
-    public void setBorderRadius(Integer borderRadius) {
-        this.borderRadius = borderRadius;
-    }
-
-    /**
-     * 获取axisPointer值
-     */
-    public AxisPointer getAxisPointer() {
-        return axisPointer;
-    }
-
-    /**
-     * 设置axisPointer值
-     *
-     * @param axisPointer
-     */
-    public void setAxisPointer(AxisPointer axisPointer) {
-        this.axisPointer = axisPointer;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
     }
 }

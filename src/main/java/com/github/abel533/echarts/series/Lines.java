@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 线图
@@ -32,6 +34,8 @@ import com.github.abel533.echarts.code.SeriesType;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Lines extends Series<Lines> {
 
     private Effect effect;
@@ -63,13 +67,5 @@ public class Lines extends Series<Lines> {
     public Lines effect(Effect effect) {
         this.effect = effect;
         return this;
-    }
-
-    public Effect getEffect() {
-        return effect;
-    }
-
-    public void setEffect(Effect effect) {
-        this.effect = effect;
     }
 }

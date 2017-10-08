@@ -24,11 +24,16 @@
 
 package com.github.abel533.echarts.series;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class ScaleLimit implements Serializable {
 
     private static final long serialVersionUID = 6026916937450874614L;
@@ -85,37 +90,5 @@ public class ScaleLimit implements Serializable {
     public ScaleLimit max(Double max) {
         this.max = max;
         return this;
-    }
-
-    /**
-     * 获取min值
-     */
-    public Double getMin() {
-        return min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public void setMin(Double min) {
-        this.min = min;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Double getMax() {
-        return max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public void setMax(Double max) {
-        this.max = max;
     }
 }

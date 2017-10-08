@@ -26,6 +26,8 @@ package com.github.abel533.echarts.series.other;
 
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -35,6 +37,8 @@ import java.io.Serializable;
  * @author liuzh
  * @since 2015-06-29
  */
+@Getter
+@Setter
 public class RootLocation implements Serializable {
     private static final long serialVersionUID = 1L;
     private Object x;

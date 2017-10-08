@@ -27,12 +27,16 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 『箱形图』、『盒须图』、『盒式图』、『盒状图』、『箱线图』
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Boxplot extends Series<Boxplot> {
     /**
      * 布局方式
@@ -97,31 +101,5 @@ public class Boxplot extends Series<Boxplot> {
     public Boxplot itemStyle(ItemStyle itemStyle) {
         this.itemStyle = itemStyle;
         return this;
-    }
-
-    public Orient getLayout() {
-        return layout;
-    }
-
-    public void setLayout(Orient layout) {
-        this.layout = layout;
-    }
-
-    public Object[] getBoxWidth() {
-        return boxWidth;
-    }
-
-    public void setBoxWidth(Object[] boxWidth) {
-        this.boxWidth = boxWidth;
-    }
-
-    @Override
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    @Override
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
     }
 }

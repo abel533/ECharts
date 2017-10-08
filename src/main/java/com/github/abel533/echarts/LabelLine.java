@@ -25,6 +25,8 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class LabelLine implements Serializable {
 
     private static final long serialVersionUID = 3359589478018844177L;
@@ -106,53 +110,5 @@ public class LabelLine implements Serializable {
     public LabelLine lineStyle(LineStyle style) {
         this.lineStyle = style;
         return this;
-    }
-
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取length值
-     */
-    public Integer getLength() {
-        return length;
-    }
-
-    /**
-     * 设置length值
-     *
-     * @param length
-     */
-    public void setLength(Integer length) {
-        this.length = length;
     }
 }

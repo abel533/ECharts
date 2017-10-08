@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.series.event;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,6 +36,8 @@ import java.util.Date;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Evolution implements Serializable {
 
     private static final long serialVersionUID = -3014023133802074740L;
@@ -145,53 +150,5 @@ public class Evolution implements Serializable {
     public Evolution detail(String link, String text, String img) {
         this.detail = new Detail(link, text, img);
         return this;
-    }
-
-    /**
-     * 获取time值
-     */
-    public String getTime() {
-        return time;
-    }
-
-    /**
-     * 设置time值
-     *
-     * @param time
-     */
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Integer getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Integer value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取detail值
-     */
-    public Detail getDetail() {
-        return detail;
-    }
-
-    /**
-     * 设置detail值
-     *
-     * @param detail
-     */
-    public void setDetail(Detail detail) {
-        this.detail = detail;
     }
 }

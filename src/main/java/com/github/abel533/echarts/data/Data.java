@@ -25,12 +25,16 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.Tooltip;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 通用的Data对象...和Data接口同名，Data接口中的data使用的就是这里的Data..
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Data extends BasicData<Data> {
     /**
      * 可以通过valueIndex:0指定为横轴特殊点
@@ -245,101 +249,5 @@ public class Data extends BasicData<Data> {
     public Data setValueIndex(Integer valueIndex) {
         this.valueIndex = valueIndex;
         return this;
-    }
-
-    /**
-     * 获取min值
-     */
-    public Object getMin() {
-        return min;
-    }
-
-    /**
-     * 设置min值
-     *
-     * @param min
-     */
-    public void setMin(Object min) {
-        this.min = min;
-    }
-
-    /**
-     * 获取max值
-     */
-    public Object getMax() {
-        return max;
-    }
-
-    /**
-     * 设置max值
-     *
-     * @param max
-     */
-    public void setMax(Object max) {
-        this.max = max;
-    }
-
-    /**
-     * 获取icon值
-     */
-    public String getIcon() {
-        return icon;
-    }
-
-    /**
-     * 设置icon值
-     *
-     * @param icon
-     */
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    /**
-     * 获取selected值
-     */
-    public Boolean getSelected() {
-        return selected;
-    }
-
-    /**
-     * 设置selected值
-     *
-     * @param selected
-     */
-    public void setSelected(Boolean selected) {
-        this.selected = selected;
-    }
-
-    /**
-     * 获取tooltip值
-     */
-    public Tooltip getTooltip() {
-        return tooltip;
-    }
-
-    /**
-     * 设置tooltip值
-     *
-     * @param tooltip
-     */
-    public void setTooltip(Tooltip tooltip) {
-        this.tooltip = tooltip;
-    }
-
-    /**
-     * 获取smoothRadian值
-     */
-    public Double getSmoothRadian() {
-        return smoothRadian;
-    }
-
-    /**
-     * 设置smoothRadian值
-     *
-     * @param smoothRadian
-     */
-    public void setSmoothRadian(Double smoothRadian) {
-        this.smoothRadian = smoothRadian;
     }
 }

@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class LegendData implements Serializable {
 
     private static final long serialVersionUID = 7218201600361155091L;
@@ -137,53 +141,5 @@ public class LegendData implements Serializable {
     public LegendData icon(String icon) {
         this.icon = icon;
         return this;
-    }
-
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取icon值
-     */
-    public String getIcon() {
-        return icon;
-    }
-
-    /**
-     * 设置icon值
-     *
-     * @param icon
-     */
-    public void setIcon(String icon) {
-        this.icon = icon;
     }
 }

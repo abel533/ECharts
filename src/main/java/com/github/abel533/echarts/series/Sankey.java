@@ -27,6 +27,8 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.series.force.Link;
 import com.github.abel533.echarts.series.force.Node;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +40,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Sankey extends Series<Sankey> {
     /**
      * 图中每个矩形节点的宽度
@@ -210,53 +214,5 @@ public class Sankey extends Series<Sankey> {
         }
         this.edges().addAll(Arrays.asList(values));
         return this;
-    }
-
-    public Integer getNodeWidth() {
-        return nodeWidth;
-    }
-
-    public void setNodeWidth(Integer nodeWidth) {
-        this.nodeWidth = nodeWidth;
-    }
-
-    public Integer getNodeGap() {
-        return nodeGap;
-    }
-
-    public void setNodeGap(Integer nodeGap) {
-        this.nodeGap = nodeGap;
-    }
-
-    public Integer getLayoutIterations() {
-        return layoutIterations;
-    }
-
-    public void setLayoutIterations(Integer layoutIterations) {
-        this.layoutIterations = layoutIterations;
-    }
-
-    public List getNodes() {
-        return nodes;
-    }
-
-    public void setNodes(List nodes) {
-        this.nodes = nodes;
-    }
-
-    public List<Link> getLinks() {
-        return links;
-    }
-
-    public void setLinks(List<Link> links) {
-        this.links = links;
-    }
-
-    public List<Link> getEdges() {
-        return edges;
-    }
-
-    public void setEdges(List<Link> edges) {
-        this.edges = edges;
     }
 }

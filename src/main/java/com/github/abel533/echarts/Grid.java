@@ -24,11 +24,16 @@
 
 package com.github.abel533.echarts;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * 直角坐标系内绘图网格
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Grid extends Basic<Grid> implements Component {
     /**
      * 直角坐标系内绘图网格左上角横坐标，数值单位px，支持百分比（字符串），如'50%'(显示区域横向中心)
@@ -93,37 +98,4 @@ public class Grid extends Basic<Grid> implements Component {
         this.y2 = y2;
         return this;
     }
-
-    /**
-     * 获取x2值
-     */
-    public Object getX2() {
-        return x2;
-    }
-
-    /**
-     * 设置x2值
-     *
-     * @param x2
-     */
-    public void setX2(Object x2) {
-        this.x2 = x2;
-    }
-
-    /**
-     * 获取y2值
-     */
-    public Object getY2() {
-        return y2;
-    }
-
-    /**
-     * 设置y2值
-     *
-     * @param y2
-     */
-    public void setY2(Object y2) {
-        this.y2 = y2;
-    }
-
 }

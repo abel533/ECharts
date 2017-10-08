@@ -27,12 +27,16 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.Calculation;
 import com.github.abel533.echarts.code.SelectedMode;
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 地图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Map extends Series<Map> {
     /**
      * 选中模式，默认关闭，可选single，multiple
@@ -329,197 +333,5 @@ public class Map extends Series<Map> {
     public Map geoCoord(String name, String x, String y) {
         this.geoCoord().put(name, x, y);
         return this;
-    }
-
-    /**
-     * 获取selectedMode值
-     */
-    public Object getSelectedMode() {
-        return selectedMode;
-    }
-
-    /**
-     * 设置selectedMode值
-     *
-     * @param selectedMode
-     */
-    public void setSelectedMode(Object selectedMode) {
-        this.selectedMode = selectedMode;
-    }
-
-    /**
-     * 获取mapType值
-     */
-    public String getMapType() {
-        return mapType;
-    }
-
-    /**
-     * 设置mapType值
-     *
-     * @param mapType
-     */
-    public void setMapType(String mapType) {
-        this.mapType = mapType;
-    }
-
-    /**
-     * 获取mapLocation值
-     */
-    public MapLocation getMapLocation() {
-        return mapLocation;
-    }
-
-    /**
-     * 设置mapLocation值
-     *
-     * @param mapLocation
-     */
-    public void setMapLocation(MapLocation mapLocation) {
-        this.mapLocation = mapLocation;
-    }
-
-    /**
-     * 获取mapValueCalculation值
-     */
-    public Calculation getMapValueCalculation() {
-        return mapValueCalculation;
-    }
-
-    /**
-     * 设置mapValueCalculation值
-     *
-     * @param mapValueCalculation
-     */
-    public void setMapValueCalculation(Calculation mapValueCalculation) {
-        this.mapValueCalculation = mapValueCalculation;
-    }
-
-    /**
-     * 获取mapValuePrecision值
-     */
-    public Integer getMapValuePrecision() {
-        return mapValuePrecision;
-    }
-
-    /**
-     * 设置mapValuePrecision值
-     *
-     * @param mapValuePrecision
-     */
-    public void setMapValuePrecision(Integer mapValuePrecision) {
-        this.mapValuePrecision = mapValuePrecision;
-    }
-
-    /**
-     * 获取showLegendSymbol值
-     */
-    public Boolean getShowLegendSymbol() {
-        return showLegendSymbol;
-    }
-
-    /**
-     * 设置showLegendSymbol值
-     *
-     * @param showLegendSymbol
-     */
-    public void setShowLegendSymbol(Boolean showLegendSymbol) {
-        this.showLegendSymbol = showLegendSymbol;
-    }
-
-    /**
-     * 获取dataRangeHoverLink值
-     */
-    public Boolean getDataRangeHoverLink() {
-        return dataRangeHoverLink;
-    }
-
-    /**
-     * 设置dataRangeHoverLink值
-     *
-     * @param dataRangeHoverLink
-     */
-    public void setDataRangeHoverLink(Boolean dataRangeHoverLink) {
-        this.dataRangeHoverLink = dataRangeHoverLink;
-    }
-
-    /**
-     * 获取roam值
-     */
-    public Boolean getRoam() {
-        return roam;
-    }
-
-    /**
-     * 设置roam值
-     *
-     * @param roam
-     */
-    public void setRoam(Boolean roam) {
-        this.roam = roam;
-    }
-
-    /**
-     * 获取scaleLimit值
-     */
-    public ScaleLimit getScaleLimit() {
-        return scaleLimit;
-    }
-
-    /**
-     * 设置scaleLimit值
-     *
-     * @param scaleLimit
-     */
-    public void setScaleLimit(ScaleLimit scaleLimit) {
-        this.scaleLimit = scaleLimit;
-    }
-
-    /**
-     * 获取nameMap值
-     */
-    public Object getNameMap() {
-        return nameMap;
-    }
-
-    /**
-     * 设置nameMap值
-     *
-     * @param nameMap
-     */
-    public void setNameMap(Object nameMap) {
-        this.nameMap = nameMap;
-    }
-
-    /**
-     * 获取textFixed值
-     */
-    public Object getTextFixed() {
-        return textFixed;
-    }
-
-    /**
-     * 设置textFixed值
-     *
-     * @param textFixed
-     */
-    public void setTextFixed(Object textFixed) {
-        this.textFixed = textFixed;
-    }
-
-    /**
-     * 获取geoCoord值
-     */
-    public GeoCoord getGeoCoord() {
-        return geoCoord;
-    }
-
-    /**
-     * 设置geoCoord值
-     *
-     * @param geoCoord
-     */
-    public void setGeoCoord(GeoCoord geoCoord) {
-        this.geoCoord = geoCoord;
     }
 }

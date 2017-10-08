@@ -29,6 +29,8 @@ import com.github.abel533.echarts.Component;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.code.Y;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,6 +40,8 @@ import java.util.Arrays;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public abstract class Axis<T> extends AbstractData<T> implements Component {
     /**
      * 是否显示
@@ -530,197 +534,5 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         }
         this.data.addAll(Arrays.asList(values));
         return (T) this;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取axisLine值
-     */
-    public AxisLine getAxisLine() {
-        return axisLine;
-    }
-
-    /**
-     * 设置axisLine值
-     *
-     * @param axisLine
-     */
-    public void setAxisLine(AxisLine axisLine) {
-        this.axisLine = axisLine;
-    }
-
-    /**
-     * 获取axisTick值
-     */
-    public AxisTick getAxisTick() {
-        return axisTick;
-    }
-
-    /**
-     * 设置axisTick值
-     *
-     * @param axisTick
-     */
-    public void setAxisTick(AxisTick axisTick) {
-        this.axisTick = axisTick;
-    }
-
-    /**
-     * 获取axisLabel值
-     */
-    public AxisLabel getAxisLabel() {
-        return axisLabel;
-    }
-
-    /**
-     * 设置axisLabel值
-     *
-     * @param axisLabel
-     */
-    public void setAxisLabel(AxisLabel axisLabel) {
-        this.axisLabel = axisLabel;
-    }
-
-    /**
-     * 获取splitLine值
-     */
-    public SplitLine getSplitLine() {
-        return splitLine;
-    }
-
-    /**
-     * 设置splitLine值
-     *
-     * @param splitLine
-     */
-    public void setSplitLine(SplitLine splitLine) {
-        this.splitLine = splitLine;
-    }
-
-    /**
-     * 获取splitArea值
-     */
-    public SplitArea getSplitArea() {
-        return splitArea;
-    }
-
-    /**
-     * 设置splitArea值
-     *
-     * @param splitArea
-     */
-    public void setSplitArea(SplitArea splitArea) {
-        this.splitArea = splitArea;
-    }
-
-    /**
-     * 获取zlevel值
-     */
-    public Integer getZlevel() {
-        return zlevel;
-    }
-
-    /**
-     * 设置zlevel值
-     *
-     * @param zlevel
-     */
-    public void setZlevel(Integer zlevel) {
-        this.zlevel = zlevel;
-    }
-
-    /**
-     * 获取z值
-     */
-    public Integer getZ() {
-        return z;
-    }
-
-    /**
-     * 设置z值
-     *
-     * @param z
-     */
-    public void setZ(Integer z) {
-        this.z = z;
-    }
-
-    public Integer getGridIndex() {
-        return gridIndex;
-    }
-
-    public void setGridIndex(Integer gridIndex) {
-        this.gridIndex = gridIndex;
-    }
-
-    public Integer getNameGap() {
-        return nameGap;
-    }
-
-    public void setNameGap(Integer nameGap) {
-        this.nameGap = nameGap;
-    }
-
-    public Boolean getInverse() {
-        return inverse;
-    }
-
-    public void setInverse(Boolean inverse) {
-        this.inverse = inverse;
-    }
-
-    public Object getBoundaryGap() {
-        return boundaryGap;
-    }
-
-    public void setBoundaryGap(Object boundaryGap) {
-        this.boundaryGap = boundaryGap;
-    }
-
-    public Object getMin() {
-        return min;
-    }
-
-    public void setMin(Object min) {
-        this.min = min;
-    }
-
-    public Object getMax() {
-        return max;
-    }
-
-    public void setMax(Object max) {
-        this.max = max;
-    }
-
-    public Boolean getScale() {
-        return scale;
-    }
-
-    public void setScale(Boolean scale) {
-        this.scale = scale;
-    }
-
-    public Object getInterval() {
-        return interval;
-    }
-
-    public void setInterval(Object interval) {
-        this.interval = interval;
     }
 }

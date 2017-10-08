@@ -25,12 +25,16 @@
 package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 柱形图
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Bar extends Series<Bar> {
     /**
      * 柱条最小高度，可用于防止某item的值过小而影响交互
@@ -153,85 +157,5 @@ public class Bar extends Series<Bar> {
     public Bar barCategoryGap(String barCategoryGap) {
         this.barCategoryGap = barCategoryGap;
         return this;
-    }
-
-    /**
-     * 获取barMinHeight值
-     */
-    public Integer getBarMinHeight() {
-        return barMinHeight;
-    }
-
-    /**
-     * 设置barMinHeight值
-     *
-     * @param barMinHeight
-     */
-    public void setBarMinHeight(Integer barMinHeight) {
-        this.barMinHeight = barMinHeight;
-    }
-
-    /**
-     * 获取barGap值
-     */
-    public String getBarGap() {
-        return barGap;
-    }
-
-    /**
-     * 设置barGap值
-     *
-     * @param barGap
-     */
-    public void setBarGap(String barGap) {
-        this.barGap = barGap;
-    }
-
-    /**
-     * 获取barCategoryGap值
-     */
-    public String getBarCategoryGap() {
-        return barCategoryGap;
-    }
-
-    /**
-     * 设置barCategoryGap值
-     *
-     * @param barCategoryGap
-     */
-    public void setBarCategoryGap(String barCategoryGap) {
-        this.barCategoryGap = barCategoryGap;
-    }
-
-    /**
-     * 获取barWidth
-     */
-    public Integer getBarWidth() {
-        return barWidth;
-    }
-
-    /**
-     * 设置barWidth
-     *
-     * @param barWidth
-     */
-    public void setBarWidth(Integer barWidth) {
-        this.barWidth = barWidth;
-    }
-
-    /**
-     * 获取barMaxWidth
-     */
-    public Integer getBarMaxWidth() {
-        return barMaxWidth;
-    }
-
-    /**
-     * 设置barMaxWidth
-     *
-     * @param barMaxWidth
-     */
-    public void setBarMaxWidth(Integer barMaxWidth) {
-        this.barMaxWidth = barMaxWidth;
     }
 }

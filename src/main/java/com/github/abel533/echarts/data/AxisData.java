@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class AxisData implements Serializable {
 
     private static final long serialVersionUID = -6515942952591477027L;
@@ -103,37 +107,5 @@ public class AxisData implements Serializable {
     public AxisData textStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Object getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
     }
 }

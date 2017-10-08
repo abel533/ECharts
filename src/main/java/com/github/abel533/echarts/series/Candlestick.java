@@ -26,12 +26,16 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.code.SeriesType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Description: K
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Candlestick extends Series<Candlestick> {
     /**
      * 柱条（K线蜡烛）宽度，不设时自适应
@@ -118,45 +122,5 @@ public class Candlestick extends Series<Candlestick> {
     public Candlestick layout(Orient layout) {
         this.layout = layout;
         return this;
-    }
-
-    /**
-     * 获取barWidth
-     */
-    public Integer getBarWidth() {
-        return barWidth;
-    }
-
-    /**
-     * 设置barWidth
-     *
-     * @param barWidth
-     */
-    public void setBarWidth(Integer barWidth) {
-        this.barWidth = barWidth;
-    }
-
-    /**
-     * 获取barMaxWidth
-     */
-    public Integer getBarMaxWidth() {
-        return barMaxWidth;
-    }
-
-    /**
-     * 设置barMaxWidth
-     *
-     * @param barMaxWidth
-     */
-    public void setBarMaxWidth(Integer barMaxWidth) {
-        this.barMaxWidth = barMaxWidth;
-    }
-
-    public Orient getLayout() {
-        return layout;
-    }
-
-    public void setLayout(Orient layout) {
-        this.layout = layout;
     }
 }

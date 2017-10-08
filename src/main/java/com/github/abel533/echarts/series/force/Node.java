@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.series.force;
 
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -34,6 +36,8 @@ import java.util.HashMap;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Node extends HashMap<String, Object> implements Serializable {
 
     private static final long serialVersionUID = 4254895945303983318L;
@@ -259,197 +263,5 @@ public class Node extends HashMap<String, Object> implements Serializable {
             put("itemStyle", new ItemStyle());
         }
         return (ItemStyle) get("itemStyle");
-    }
-
-    /**
-     * 获取itemStyle值
-     */
-    public ItemStyle getItemStyle() {
-        return (ItemStyle) get("itemStyle");
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        put("itemStyle", itemStyle);
-    }
-
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return (String) get("name");
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        put("name", name);
-    }
-
-    /**
-     * 获取value值
-     */
-    public Integer getValue() {
-        return (Integer) get("value");
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Integer value) {
-        put("value", value);
-    }
-
-    /**
-     * 获取initial值
-     */
-    public Object getInitial() {
-        return get("initial");
-    }
-
-    /**
-     * 设置initial值
-     *
-     * @param initial
-     */
-    public void setInitial(Object initial) {
-        put("initial", initial);
-    }
-
-    /**
-     * 获取fixX值
-     */
-    public Boolean getFixX() {
-        return (Boolean) get("fixX");
-    }
-
-    /**
-     * 设置fixX值
-     *
-     * @param fixX
-     */
-    public void setFixX(Boolean fixX) {
-        put("fixX", fixX);
-    }
-
-    /**
-     * 获取fixY值
-     */
-    public Boolean getFixY() {
-        return (Boolean) get("fixY");
-    }
-
-    /**
-     * 设置fixY值
-     *
-     * @param fixY
-     */
-    public void setFixY(Boolean fixY) {
-        put("fixY", fixY);
-    }
-
-    /**
-     * 获取ignore值
-     */
-    public Boolean getIgnore() {
-        return (Boolean) get("ignore");
-    }
-
-    /**
-     * 设置ignore值
-     *
-     * @param ignore
-     */
-    public void setIgnore(Boolean ignore) {
-        put("ignore", ignore);
-    }
-
-    /**
-     * 获取symbol值
-     */
-    public Object getSymbol() {
-        return get("symbol");
-    }
-
-    /**
-     * 设置symbol值
-     *
-     * @param symbol
-     */
-    public void setSymbol(Object symbol) {
-        put("symbol", symbol);
-    }
-
-    /**
-     * 获取symbolSize值
-     */
-    public Object getSymbolSize() {
-        return get("symbolSize");
-    }
-
-    /**
-     * 设置symbolSize值
-     *
-     * @param symbolSize
-     */
-    public void setSymbolSize(Object symbolSize) {
-        put("symbolSize", symbolSize);
-    }
-
-    /**
-     * 获取draggable值
-     */
-    public Boolean getDraggable() {
-        return (Boolean) get("draggable");
-    }
-
-    /**
-     * 设置draggable值
-     *
-     * @param draggable
-     */
-    public void setDraggable(Boolean draggable) {
-        put("draggable", draggable);
-    }
-
-    /**
-     * 获取category值
-     */
-    public Integer getCategory() {
-        return (Integer) get("category");
-    }
-
-    /**
-     * 设置category值
-     *
-     * @param category
-     */
-    public void setCategory(Integer category) {
-        put("category", category);
-    }
-
-    /**
-     * 获取label值
-     */
-    public String getLabel() {
-        return (String) get("label");
-    }
-
-    /**
-     * 设置label值
-     *
-     * @param label
-     */
-    public void setLabel(String label) {
-        put("label", label);
     }
 }

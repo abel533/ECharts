@@ -114,23 +114,10 @@ public class MagicType extends Feature {
          * 获取funnel值
          */
         public Funnel funnel() {
-        return this.funnel;
-    }
-
-        /**
-         * 获取funnel值
-         */
-	public Funnel getFunnel() {
-        return funnel;
-    }
-
-        /**
-         * 设置funnel值
-         *
-         * @param funnel
-         */
-        public void setFunnel(Funnel funnel) {
-            this.funnel = funnel;
+            if (this.funnel == null) {
+                this.funnel = new Funnel();
+            }
+            return this.funnel;
         }
     }
 }

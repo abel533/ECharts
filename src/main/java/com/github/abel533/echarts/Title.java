@@ -26,10 +26,14 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.X;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Title extends Basic<Title> implements Component {
     /**
      * 主标题文本，'\n'指定换行
@@ -256,166 +260,5 @@ public class Title extends Basic<Title> implements Component {
     public Title offsetCenter(Object offsetCenter) {
         this.offsetCenter = offsetCenter;
         return this;
-    }
-
-    /**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-     * @param textStyle
-     */
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    /**
-     * 获取subtextStyle值
-     */
-    public TextStyle getSubtextStyle() {
-        return subtextStyle;
-    }
-
-    /**
-     * 设置subtextStyle值
-     *
-     * @param subtextStyle
-     */
-    public void setSubtextStyle(TextStyle subtextStyle) {
-        this.subtextStyle = subtextStyle;
-    }
-
-    /**
-     * 获取text值
-     */
-    public String getText() {
-        return text;
-    }
-
-    /**
-     * 设置text值
-     *
-     * @param text
-     */
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    /**
-     * 获取link值
-     */
-    public String getLink() {
-        return link;
-    }
-
-    /**
-     * 设置link值
-     *
-     * @param link
-     */
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    /**
-     * 获取target值
-     */
-    public String getTarget() {
-        return target;
-    }
-
-    /**
-     * 设置target值
-     *
-     * @param target
-     */
-    public void setTarget(String target) {
-        this.target = target;
-    }
-
-    /**
-     * 获取subtext值
-     */
-    public String getSubtext() {
-        return subtext;
-    }
-
-    /**
-     * 设置subtext值
-     *
-     * @param subtext
-     */
-    public void setSubtext(String subtext) {
-        this.subtext = subtext;
-    }
-
-    /**
-     * 获取sublink值
-     */
-    public String getSublink() {
-        return sublink;
-    }
-
-    /**
-     * 设置sublink值
-     *
-     * @param sublink
-     */
-    public void setSublink(String sublink) {
-        this.sublink = sublink;
-    }
-
-    /**
-     * 获取subtarget值
-     */
-    public String getSubtarget() {
-        return subtarget;
-    }
-
-    /**
-     * 设置subtarget值
-     *
-     * @param subtarget
-     */
-    public void setSubtarget(String subtarget) {
-        this.subtarget = subtarget;
-    }
-
-    /**
-     * 获取textAlign值
-     */
-    public X getTextAlign() {
-        return textAlign;
-    }
-
-    /**
-     * 设置textAlign值
-     *
-     * @param textAlign
-     */
-    public void setTextAlign(X textAlign) {
-        this.textAlign = textAlign;
-    }
-
-    /**
-     * 获取offsetCenter值
-     */
-    public Object getOffsetCenter() {
-        return offsetCenter;
-    }
-
-
-    /**
-     * 设置offsetCenter值
-     *
-     * @param offsetCenter
-     */
-    public void setOffsetCenter(Object offsetCenter) {
-        this.offsetCenter = offsetCenter;
     }
 }

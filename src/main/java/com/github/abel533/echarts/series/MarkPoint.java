@@ -26,12 +26,16 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.AbstractData;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Description: MarkPoint
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class MarkPoint extends AbstractData<MarkPoint> {
     /**
      * 标注类型
@@ -207,117 +211,5 @@ public class MarkPoint extends AbstractData<MarkPoint> {
     public MarkPoint geoCoord(String name, String x, String y) {
         this.geoCoord().put(name, x, y);
         return this;
-    }
-
-    /**
-     * 获取itemStyle值
-     */
-    public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-    public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
-    }
-
-    /**
-     * 获取effect值
-     */
-    public Effect getEffect() {
-        return effect;
-    }
-
-    /**
-     * 设置effect值
-     *
-     * @param effect
-     */
-    public void setEffect(Effect effect) {
-        this.effect = effect;
-    }
-
-    /**
-     * 获取symbol值
-     */
-    public Object getSymbol() {
-        return symbol;
-    }
-
-    /**
-     * 设置symbol值
-     *
-     * @param symbol
-     */
-    public void setSymbol(Object symbol) {
-        this.symbol = symbol;
-    }
-
-    /**
-     * 获取symbolSize值
-     */
-    public Object getSymbolSize() {
-        return symbolSize;
-    }
-
-    /**
-     * 设置symbolSize值
-     *
-     * @param symbolSize
-     */
-    public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
-    }
-
-    /**
-     * 获取symbolRoate值
-     */
-    public Object getSymbolRoate() {
-        return symbolRoate;
-    }
-
-    /**
-     * 设置symbolRoate值
-     *
-     * @param symbolRoate
-     */
-    public void setSymbolRoate(Object symbolRoate) {
-        this.symbolRoate = symbolRoate;
-    }
-
-    /**
-     * 获取large值
-     */
-    public Boolean getLarge() {
-        return large;
-    }
-
-    /**
-     * 设置large值
-     *
-     * @param large
-     */
-    public void setLarge(Boolean large) {
-        this.large = large;
-    }
-
-    /**
-     * 获取geoCoord值
-     */
-    public GeoCoord getGeoCoord() {
-        return geoCoord;
-    }
-
-    /**
-     * 设置geoCoord值
-     *
-     * @param geoCoord
-     */
-    public void setGeoCoord(GeoCoord geoCoord) {
-        this.geoCoord = geoCoord;
     }
 }

@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.series.gauge;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -31,6 +34,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Pointer implements Serializable {
 
     private static final long serialVersionUID = 2575834098541231673L;

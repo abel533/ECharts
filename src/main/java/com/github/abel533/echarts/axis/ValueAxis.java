@@ -27,12 +27,16 @@ package com.github.abel533.echarts.axis;
 import com.github.abel533.echarts.code.AxisType;
 import com.github.abel533.echarts.code.NameLocation;
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 值轴
  *
  * @author liuzh.
  */
+@Getter
+@Setter
 public class ValueAxis extends Axis<ValueAxis> {
     /**
      * 坐标轴名称位置，默认为'end'，可选为：'start' | 'end'
@@ -114,95 +118,6 @@ public class ValueAxis extends Axis<ValueAxis> {
         this.splitNumber = splitNumber;
         return this;
     }
-
-    /**
-     * 获取precision值
-     */
-    public Integer getPrecision() {
-        return precision;
-    }
-
-    /**
-     * 设置precision值
-     *
-     * @param precision
-     */
-    public void setPrecision(Integer precision) {
-        this.precision = precision;
-    }
-
-    /**
-     * 获取power值
-     */
-    public Integer getPower() {
-        return power;
-    }
-
-    /**
-     * 设置power值
-     *
-     * @param power
-     */
-    public void setPower(Integer power) {
-        this.power = power;
-    }
-
-    /**
-     * 获取splitNumber值
-     */
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    /**
-     * 设置splitNumber值
-     *
-     * @param splitNumber
-     */
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
-    }
-
-    /**
-     * 获取nameLocation值
-     */
-    public NameLocation getNameLocation() {
-        return nameLocation;
-    }
-
-    /**
-     * 设置nameLocation值
-     *
-     * @param nameLocation
-     */
-    public void setNameLocation(NameLocation nameLocation) {
-        this.nameLocation = nameLocation;
-    }
-
-
-    /**
-     * 获取nameTextStyle值
-     */
-    public LineStyle getNameTextStyle() {
-        return nameTextStyle;
-    }
-
-    /**
-     * 设置nameTextStyle值
-     *
-     * @param nameTextStyle
-     */
-    public void setNameTextStyle(LineStyle nameTextStyle) {
-        this.nameTextStyle = nameTextStyle;
-    }
-
-    /**
-     * 获取nameLocation值
-     */
-    public NameLocation nameLocation() {
-        return this.nameLocation;
-    }
-
     /**
      * 设置nameLocation值
      *

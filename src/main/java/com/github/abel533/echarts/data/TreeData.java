@@ -26,6 +26,8 @@ package com.github.abel533.echarts.data;
 
 import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.style.ItemStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -38,6 +40,8 @@ import java.util.List;
  * @author liuzh
  * @since 2015-06-29
  */
+@Getter
+@Setter
 public class TreeData implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -101,52 +105,6 @@ public class TreeData implements Serializable {
     public TreeData value(Double value) {
         this.value = value;
         return this;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Double value() {
-        return this.value;
-    }
-
-    /**
-     * 获取symbol值
-     * @return symbol值
-     */
-    public Object getSymbol() {
-        return symbol;
-    }
-
-    /**
-     * 设置symbol值
-     * @param symbol symbol值
-     */
-    public void setSymbol(Object symbol) {
-        this.symbol = symbol;
-    }
-
-    /**
-     * 获取symbolSize值
-     * @return symbolSize值
-     */
-    public Object getSymbolSize() {
-        return symbolSize;
-    }
-
-    /**
-     * 设置symbolSize值
-     * @param symbolSize symbolSize值
-     */
-    public void setSymbolSize(Object symbolSize) {
-        this.symbolSize = symbolSize;
-    }
-
-    /**
-     * 获取symbol值
-     */
-    public Object symbol() {
-        return this.symbol;
     }
 
     /**
@@ -227,69 +185,5 @@ public class TreeData implements Serializable {
             this.itemStyle = new ItemStyle();
         }
         return this.itemStyle;
-    }
-
-	/**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-	 */
-	public void setName(String name) {
-        this.name = name;
-    }
-
-	/**
-     * 获取value值
-	 */
-    public Double getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Double value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取children值
-     */
-	public List<TreeData> getChildren() {
-        return children;
-    }
-
-    /**
-     * 设置children值
-     *
-     * @param children
-     */
-	public void setChildren(List<TreeData> children) {
-        this.children = children;
-    }
-
-    /**
-     * 获取itemStyle值
-	 */
-	public ItemStyle getItemStyle() {
-        return itemStyle;
-    }
-
-    /**
-     * 设置itemStyle值
-     *
-     * @param itemStyle
-     */
-	public void setItemStyle(ItemStyle itemStyle) {
-        this.itemStyle = itemStyle;
     }
 }

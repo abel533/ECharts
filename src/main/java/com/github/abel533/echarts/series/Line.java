@@ -27,10 +27,14 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.DataFilter;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.AreaStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author liuzh
  */
+@Getter
+@Setter
 public class Line extends Series<Line> {
     /**
      * 平滑曲线
@@ -107,40 +111,6 @@ public class Line extends Series<Line> {
         this.smooth = smooth;
         return this;
     }
-
-    /**
-     * 获取smooth值
-     */
-    public Boolean getSmooth() {
-        return smooth;
-    }
-
-    /**
-     * 设置smooth值
-     *
-     * @param smooth
-     */
-    public void setSmooth(Boolean smooth) {
-        this.smooth = smooth;
-    }
-
-    /**
-     * 获取dataFilter值
-     */
-    public Object getDataFilter() {
-        return dataFilter;
-    }
-
-    /**
-     * 设置dataFilter值
-     *
-     * @param dataFilter
-     */
-    public void setDataFilter(Object dataFilter) {
-        this.dataFilter = dataFilter;
-    }
-
-
     /**
      * 新建并返回areaStyle
      *
@@ -162,23 +132,5 @@ public class Line extends Series<Line> {
     public Line areaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
         return this;
-    }
-
-    /**
-     * 设置areaStyle
-     *
-     * @param areaStyle
-     */
-    public void setAreaStyle(AreaStyle areaStyle) {
-        this.areaStyle = areaStyle;
-    }
-
-    /**
-     * 获取areaStyle
-     *
-     * @return
-     */
-    public AreaStyle getAreaStyle() {
-        return areaStyle;
     }
 }

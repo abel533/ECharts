@@ -28,6 +28,8 @@ import com.github.abel533.echarts.code.DataZoomType;
 import com.github.abel533.echarts.code.FilterMode;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -36,6 +38,8 @@ import java.util.Date;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 类型
@@ -216,55 +220,6 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         this.endValue = endValue;
         return this;
     }
-
-    public String getLabelPrecision() {
-        return labelPrecision;
-    }
-
-    public void setLabelPrecision(String labelPrecision) {
-        this.labelPrecision = labelPrecision;
-    }
-
-    public String getLabelFormatter() {
-        return labelFormatter;
-    }
-
-    public void setLabelFormatter(String labelFormatter) {
-        this.labelFormatter = labelFormatter;
-    }
-
-    public String getShowDataShadow() {
-        return showDataShadow;
-    }
-
-    public void setShowDataShadow(String showDataShadow) {
-        this.showDataShadow = showDataShadow;
-    }
-
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-    public Object getStartValue() {
-        return startValue;
-    }
-
-    public void setStartValue(Object startValue) {
-        this.startValue = startValue;
-    }
-
-    public Object getEndValue() {
-        return endValue;
-    }
-
-    public void setEndValue(Object endValue) {
-        this.endValue = endValue;
-    }
-
     public DataZoomType type() {
         return this.type;
     }
@@ -328,46 +283,6 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     public DataZoom throttle(Integer throttle) {
         this.throttle = throttle;
         return this;
-    }
-
-    public DataZoomType getType() {
-        return type;
-    }
-
-    public void setType(DataZoomType type) {
-        this.type = type;
-    }
-
-    public Object getAngleAxisIndex() {
-        return angleAxisIndex;
-    }
-
-    public void setAngleAxisIndex(Object angleAxisIndex) {
-        this.angleAxisIndex = angleAxisIndex;
-    }
-
-    public Object getRadiusAxisIndex() {
-        return radiusAxisIndex;
-    }
-
-    public void setRadiusAxisIndex(Object radiusAxisIndex) {
-        this.radiusAxisIndex = radiusAxisIndex;
-    }
-
-    public FilterMode getFilterMode() {
-        return filterMode;
-    }
-
-    public void setFilterMode(FilterMode filterMode) {
-        this.filterMode = filterMode;
-    }
-
-    public Integer getThrottle() {
-        return throttle;
-    }
-
-    public void setThrottle(Integer throttle) {
-        this.throttle = throttle;
     }
 
     /**
@@ -572,197 +487,5 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     public DataZoom showDetail(Boolean showDetail) {
         this.showDetail = showDetail;
         return this;
-    }
-
-    /**
-     * 获取orient值
-     */
-    public Orient getOrient() {
-        return orient;
-    }
-
-    /**
-     * 设置orient值
-     *
-     * @param orient
-     */
-    public void setOrient(Orient orient) {
-        this.orient = orient;
-    }
-
-    /**
-     * 获取dataBackgroundColor值
-     */
-    public String getDataBackgroundColor() {
-        return dataBackgroundColor;
-    }
-
-    /**
-     * 设置dataBackgroundColor值
-     *
-     * @param dataBackgroundColor
-     */
-    public void setDataBackgroundColor(String dataBackgroundColor) {
-        this.dataBackgroundColor = dataBackgroundColor;
-    }
-
-    /**
-     * 获取fillerColor值
-     */
-    public String getFillerColor() {
-        return fillerColor;
-    }
-
-    /**
-     * 设置fillerColor值
-     *
-     * @param fillerColor
-     */
-    public void setFillerColor(String fillerColor) {
-        this.fillerColor = fillerColor;
-    }
-
-    /**
-     * 获取handleColor值
-     */
-    public String getHandleColor() {
-        return handleColor;
-    }
-
-    /**
-     * 设置handleColor值
-     *
-     * @param handleColor
-     */
-    public void setHandleColor(String handleColor) {
-        this.handleColor = handleColor;
-    }
-
-    /**
-     * 获取xAxisIndex值
-     */
-    public Object getxAxisIndex() {
-        return xAxisIndex;
-    }
-
-    /**
-     * 设置xAxisIndex值
-     *
-     * @param xAxisIndex
-     */
-    public void setxAxisIndex(Object xAxisIndex) {
-        this.xAxisIndex = xAxisIndex;
-    }
-
-    /**
-     * 获取yAxisIndex值
-     */
-    public Object getyAxisIndex() {
-        return yAxisIndex;
-    }
-
-    /**
-     * 设置yAxisIndex值
-     *
-     * @param yAxisIndex
-     */
-    public void setyAxisIndex(Object yAxisIndex) {
-        this.yAxisIndex = yAxisIndex;
-    }
-
-    /**
-     * 获取start值
-     */
-    public Integer getStart() {
-        return start;
-    }
-
-    /**
-     * 设置start值
-     *
-     * @param start
-     */
-    public void setStart(Integer start) {
-        this.start = start;
-    }
-
-    /**
-     * 获取end值
-     */
-    public Integer getEnd() {
-        return end;
-    }
-
-    /**
-     * 设置end值
-     *
-     * @param end
-     */
-    public void setEnd(Integer end) {
-        this.end = end;
-    }
-
-    /**
-     * 获取realtime值
-     */
-    public Boolean getRealtime() {
-        return realtime;
-    }
-
-    /**
-     * 设置realtime值
-     *
-     * @param realtime
-     */
-    public void setRealtime(Boolean realtime) {
-        this.realtime = realtime;
-    }
-
-    /**
-     * 获取zoomLock值
-     */
-    public Boolean getZoomLock() {
-        return zoomLock;
-    }
-
-    /**
-     * 设置zoomLock值
-     *
-     * @param zoomLock
-     */
-    public void setZoomLock(Boolean zoomLock) {
-        this.zoomLock = zoomLock;
-    }
-
-    /**
-     * 获取showDetail值
-     */
-    public Boolean getShowDetail() {
-        return showDetail;
-    }
-
-    /**
-     * 设置showDetail值
-     *
-     * @param showDetail
-     */
-    public void setShowDetail(Boolean showDetail) {
-        this.showDetail = showDetail;
-    }
-
-    /**
-     * 获取handleSize值
-     */
-    public Integer getHandleSize() {
-        return handleSize;
-    }
-
-    /**
-     * 设置handleSize值
-     *
-     * @param handleSize
-     */
-    public void setHandleSize(Integer handleSize) {
-        this.handleSize = handleSize;
     }
 }

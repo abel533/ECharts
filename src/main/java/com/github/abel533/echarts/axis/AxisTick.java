@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class AxisTick implements Serializable {
 
     private static final long serialVersionUID = -1941931349381173253L;
@@ -191,117 +195,5 @@ public class AxisTick implements Serializable {
     public AxisTick splitNumber(Integer splitNumber) {
         this.splitNumber = splitNumber;
         return this;
-    }
-
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取interval值
-     */
-    public Object getInterval() {
-        return interval;
-    }
-
-    /**
-     * 设置interval值
-     *
-     * @param interval
-     */
-    public void setInterval(Object interval) {
-        this.interval = interval;
-    }
-
-    /**
-     * 获取onGap值
-     */
-    public Boolean getOnGap() {
-        return onGap;
-    }
-
-    /**
-     * 设置onGap值
-     *
-     * @param onGap
-     */
-    public void setOnGap(Boolean onGap) {
-        this.onGap = onGap;
-    }
-
-    /**
-     * 获取inside值
-     */
-    public Boolean getInside() {
-        return inside;
-    }
-
-    /**
-     * 设置inside值
-     *
-     * @param inside
-     */
-    public void setInside(Boolean inside) {
-        this.inside = inside;
-    }
-
-    /**
-     * 获取length值
-     */
-    public Integer getLength() {
-        return length;
-    }
-
-    /**
-     * 设置length值
-     *
-     * @param length
-     */
-    public void setLength(Integer length) {
-        this.length = length;
-    }
-
-    /**
-     * 获取splitNumber值
-     */
-    public Integer getSplitNumber() {
-        return splitNumber;
-    }
-
-    /**
-     * 设置splitNumber值
-     *
-     * @param splitNumber
-     */
-    public void setSplitNumber(Integer splitNumber) {
-        this.splitNumber = splitNumber;
     }
 }

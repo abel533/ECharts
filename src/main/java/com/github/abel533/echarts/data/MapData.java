@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -31,6 +34,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class MapData implements Serializable {
 
     private static final long serialVersionUID = 7814199168511760158L;
@@ -112,53 +117,5 @@ public class MapData implements Serializable {
     public MapData selected(Boolean selected) {
         this.selected = selected;
         return this;
-    }
-
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取value值
-     */
-    public Object getValue() {
-        return value;
-    }
-
-    /**
-     * 设置value值
-     *
-     * @param value
-     */
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
-    /**
-     * 获取selected值
-     */
-    public Boolean getSelected() {
-        return selected;
-    }
-
-    /**
-     * 设置selected值
-     *
-     * @param selected
-     */
-    public void setSelected(Boolean selected) {
-        this.selected = selected;
     }
 }

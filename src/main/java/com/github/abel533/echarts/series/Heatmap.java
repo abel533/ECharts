@@ -26,6 +26,8 @@ package com.github.abel533.echarts.series;
 
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.data.GradientColor;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -36,6 +38,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Heatmap extends Series<Heatmap> {
     /**
      * 一个热力图数据点的模糊范围，单位是像素
@@ -176,85 +180,5 @@ public class Heatmap extends Series<Heatmap> {
 	public Heatmap opacity(Double opacity) {
         this.opacity = opacity;
         return this;
-    }
-
-    /**
-     * 获取blurSize值
-     */
-	public Integer getBlurSize() {
-        return blurSize;
-    }
-
-    /**
-     * 设置blurSize值
-     *
-     * @param blurSize
-     */
-	public void setBlurSize(Integer blurSize) {
-        this.blurSize = blurSize;
-    }
-
-    /**
-     * 获取gradientColors值
-     */
-	public List<Object> getGradientColors() {
-        return gradientColors;
-    }
-
-    /**
-     * 设置gradientColors值
-     *
-     * @param gradientColors
-     */
-    public void setGradientColors(List<Object> gradientColors) {
-        this.gradientColors = gradientColors;
-    }
-
-	/**
-     * 获取minAlpha值
-	 */
-	public Double getMinAlpha() {
-        return minAlpha;
-    }
-
-    /**
-     * 设置minAlpha值
-     *
-     * @param minAlpha
-     */
-	public void setMinAlpha(Double minAlpha) {
-        this.minAlpha = minAlpha;
-    }
-
-    /**
-     * 获取valueScale值
-	 */
-	public Double getValueScale() {
-        return valueScale;
-    }
-
-    /**
-     * 设置valueScale值
-     *
-     * @param valueScale
-     */
-	public void setValueScale(Double valueScale) {
-        this.valueScale = valueScale;
-    }
-
-	/**
-     * 获取opacity值
-	 */
-    public Double getOpacity() {
-        return opacity;
-    }
-
-    /**
-     * 设置opacity值
-     *
-     * @param opacity
-     */
-	public void setOpacity(Double opacity) {
-        this.opacity = opacity;
     }
 }

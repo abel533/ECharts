@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.series.event;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,6 +37,8 @@ import java.util.List;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class Event implements Serializable {
 
     private static final long serialVersionUID = 2936961594659788171L;
@@ -136,51 +141,4 @@ public class Event implements Serializable {
         return this;
     }
 
-    /**
-     * 获取name值
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * 设置name值
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * 获取weight值
-     */
-    public Integer getWeight() {
-        return weight;
-    }
-
-    /**
-     * 设置weight值
-     *
-     * @param weight
-     */
-    public void setWeight(Integer weight) {
-        this.weight = weight;
-    }
-
-    /**
-     * 获取evolution值
-     */
-    public List<Evolution> getEvolution() {
-        return evolution;
-    }
-
-    /**
-     * 设置evolution值
-     *
-     * @param evolution
-     */
-    public void setEvolution(List<Evolution> evolution) {
-        this.evolution = evolution;
-    }
 }

@@ -26,6 +26,8 @@ package com.github.abel533.echarts.option;
 
 import com.github.abel533.echarts.code.LoadingEffect;
 import com.github.abel533.echarts.style.TextStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 描述信息
@@ -33,6 +35,8 @@ import com.github.abel533.echarts.style.TextStyle;
  * @author liuzh
  * @since 2015-07-16
  */
+@Getter
+@Setter
 public class NoDataLoadingOption {
     private String text;
     private Object x;
@@ -91,7 +95,7 @@ public class NoDataLoadingOption {
     /**
      * 获取y值
      */
-	public Object y() {
+    public Object y() {
         return this.y;
     }
 
@@ -108,7 +112,7 @@ public class NoDataLoadingOption {
     /**
      * 获取textStyle值
      */
-	public TextStyle textStyle() {
+    public TextStyle textStyle() {
         if (this.textStyle == null) {
             this.textStyle = new TextStyle();
         }
@@ -155,7 +159,7 @@ public class NoDataLoadingOption {
     /**
      * 获取effectOption值
      */
-	public EffectOption effectOption() {
+    public EffectOption effectOption() {
         if (this.effectOption == null) {
             this.effectOption = new EffectOption();
         }
@@ -172,7 +176,7 @@ public class NoDataLoadingOption {
         return this;
     }
 
-	/**
+    /**
      * 获取progress值
      */
     public Integer progress() {
@@ -184,120 +188,8 @@ public class NoDataLoadingOption {
      *
      * @param progress
      */
-	public NoDataLoadingOption progress(Integer progress) {
+    public NoDataLoadingOption progress(Integer progress) {
         this.progress = progress;
         return this;
-    }
-
-	/**
-     * 获取text值
-     */
-    public String getText() {
-        return text;
-    }
-
-    /**
-     * 设置text值
-     *
-	 * @param text
-	 */
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    /**
-     * 获取x值
-     */
-    public Object getX() {
-        return x;
-    }
-
-	/**
-     * 设置x值
-	 *
-     * @param x
-     */
-    public void setX(Object x) {
-        this.x = x;
-    }
-
-    /**
-     * 获取y值
-     */
-    public Object getY() {
-        return y;
-    }
-
-	/**
-     * 设置y值
-     *
-     * @param y
-     */
-    public void setY(Object y) {
-        this.y = y;
-    }
-
-	/**
-     * 获取textStyle值
-     */
-    public TextStyle getTextStyle() {
-        return textStyle;
-    }
-
-    /**
-     * 设置textStyle值
-     *
-	 * @param textStyle
-	 */
-	public void setTextStyle(TextStyle textStyle) {
-        this.textStyle = textStyle;
-    }
-
-	/**
-     * 获取effect值
-     */
-    public Object getEffect() {
-        return effect;
-    }
-
-    /**
-     * 设置effect值
-     *
-	 * @param effect
-     */
-    public void setEffect(Object effect) {
-        this.effect = effect;
-    }
-
-	/**
-     * 获取effectOption值
-     */
-    public EffectOption getEffectOption() {
-        return effectOption;
-    }
-
-    /**
-     * 设置effectOption值
-     *
-     * @param effectOption
-     */
-	public void setEffectOption(EffectOption effectOption) {
-        this.effectOption = effectOption;
-    }
-
-	/**
-     * 获取progress值
-     */
-    public Integer getProgress() {
-        return progress;
-    }
-
-    /**
-     * 设置progress值
-     *
-	 * @param progress
-	 */
-	public void setProgress(Integer progress) {
-        this.progress = progress;
     }
 }

@@ -24,6 +24,9 @@
 
 package com.github.abel533.echarts.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 /**
@@ -32,6 +35,8 @@ import java.io.Serializable;
  * @author liuzh
  * @since 2015-06-29
  */
+@Getter
+@Setter
 public class RangeData implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -126,67 +131,4 @@ public class RangeData implements Serializable {
         return this.color;
     }
 
-    /**
-     * 获取start值
-	 */
-	public Integer getStart() {
-        return start;
-    }
-
-    /**
-     * 设置start值
-     *
-     * @param start
-     */
-	public void setStart(Integer start) {
-        this.start = start;
-    }
-
-    /**
-     * 获取end值
-     */
-    public Integer getEnd() {
-        return end;
-    }
-
-    /**
-     * 设置end值
-     *
-     * @param end
-     */
-	public void setEnd(Integer end) {
-        this.end = end;
-    }
-
-    /**
-     * 获取label值
-	 */
-	public String getLabel() {
-        return label;
-    }
-
-    /**
-     * 设置label值
-     *
-     * @param label
-     */
-	public void setLabel(String label) {
-        this.label = label;
-    }
-
-    /**
-     * 获取color值
-	 */
-	public Object getColor() {
-        return color;
-    }
-
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-	public void setColor(Object color) {
-        this.color = color;
-    }
 }

@@ -25,6 +25,8 @@
 package com.github.abel533.echarts.axis;
 
 import com.github.abel533.echarts.style.LineStyle;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -33,6 +35,8 @@ import java.io.Serializable;
  *
  * @author liuzh
  */
+@Getter
+@Setter
 public class AxisLine implements Serializable {
 
     private static final long serialVersionUID = -7486014114670118509L;
@@ -106,53 +110,5 @@ public class AxisLine implements Serializable {
     public AxisLine lineStyle(LineStyle lineStyle) {
         this.lineStyle = lineStyle;
         return this;
-    }
-
-    /**
-     * 获取lineStyle值
-     */
-    public LineStyle getLineStyle() {
-        return lineStyle;
-    }
-
-    /**
-     * 设置lineStyle值
-     *
-     * @param lineStyle
-     */
-    public void setLineStyle(LineStyle lineStyle) {
-        this.lineStyle = lineStyle;
-    }
-
-    /**
-     * 获取show值
-     */
-    public Boolean getShow() {
-        return show;
-    }
-
-    /**
-     * 设置show值
-     *
-     * @param show
-     */
-    public void setShow(Boolean show) {
-        this.show = show;
-    }
-
-    /**
-     * 获取onZero值
-     */
-    public Boolean getOnZero() {
-        return onZero;
-    }
-
-    /**
-     * 设置onZero值
-     *
-     * @param onZero
-     */
-    public void setOnZero(Boolean onZero) {
-        this.onZero = onZero;
     }
 }
