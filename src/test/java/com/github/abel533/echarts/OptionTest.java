@@ -26,6 +26,7 @@ package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.LegendType;
 import com.github.abel533.echarts.code.MarkType;
 import com.github.abel533.echarts.code.Tool;
 import com.github.abel533.echarts.code.Trigger;
@@ -45,7 +46,7 @@ public class OptionTest {
     @Test
     public void basicOption() {
         EnhancedOption option = new EnhancedOption();
-        option.legend().padding(5).itemGap(10).data("ios7", "android4");
+        option.legend().padding(5).itemGap(10).type(LegendType.scroll).data("ios7", "android4");
         option.toolbox().show(true).feature(Tool.dataView, Tool.saveAsImage, Tool.dataZoom, Tool.magicType);
         option.tooltip().trigger(Trigger.item);
         option.xAxis(new CategoryAxis().data("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"));
