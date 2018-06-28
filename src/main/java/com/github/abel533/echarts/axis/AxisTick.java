@@ -213,8 +213,6 @@ public class AxisTick implements Serializable {
      * AxisTick
      * @version v1.0
      * @author w
-     * @param <T>
-     * @param <T>
      * @return 
      * @date 2018年6月27日 下午4:33:23
      *
