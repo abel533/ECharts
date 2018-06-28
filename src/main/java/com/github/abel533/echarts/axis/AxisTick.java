@@ -214,12 +214,14 @@ public class AxisTick implements Serializable {
      * @version v1.0
      * @author w
      * @param <T>
+     * @param <T>
+     * @return 
      * @date 2018年6月27日 下午4:33:23
      *
      */
-    public <T> T alignWithLabel(Boolean alignWithLabel){
+    public  AxisTick alignWithLabel(Boolean alignWithLabel){
     	this.alignWithLabel=alignWithLabel;
-    	return (T)this;
+    	return this;
     }
     
     /**
