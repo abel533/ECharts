@@ -194,6 +194,11 @@ public class Option implements Serializable {
      */
     private List<VisualMap> visualMap;
 
+    /**
+     * 图形元素组件
+     */
+    private Graphic graphic;
+
     public List<VisualMap> visualMap() {
         if (this.visualMap == null) {
             this.visualMap = new ArrayList<VisualMap>();
@@ -1016,4 +1021,17 @@ public class Option implements Serializable {
         this.options().addAll(Arrays.asList(values));
         return this;
     }
+
+    /**
+     * 添加图形元素组件
+     *
+     * @param graphic
+     * @return
+     */
+    public Option graphic(Graphic graphic) {
+        this.graphic = graphic;
+        return this;
+
+    }
+
 }

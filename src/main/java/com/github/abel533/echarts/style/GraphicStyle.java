@@ -24,7 +24,9 @@
 
 package com.github.abel533.echarts.style;
 
-import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.X;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 图形元素样式
@@ -32,6 +34,8 @@ import com.github.abel533.echarts.code.Align;
  * @author liuxu
  * @date 18-7-9下午2:57
  */
+@Getter
+@Setter
 public class GraphicStyle {
 
     /**
@@ -42,7 +46,7 @@ public class GraphicStyle {
     /**
      * 文本排列
      */
-    private Align textAlign;
+    private X textAlign;
 
     /**
      *文本填充颜色
@@ -66,7 +70,7 @@ public class GraphicStyle {
     }
 
     
-    public GraphicStyle textAlign(Align textAlign) {
+    public GraphicStyle textAlign(X textAlign) {
         this.textAlign = textAlign;
         return this;
     }
