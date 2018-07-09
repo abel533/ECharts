@@ -60,31 +60,31 @@ public class GraphicStyle {
     private Object height;
 
     
-    public GraphicStyle setText(String text) {
+    public GraphicStyle text(String text) {
         this.text = text;
         return this;
     }
 
     
-    public GraphicStyle setTextAlign(Align textAlign) {
+    public GraphicStyle textalign(Align textAlign) {
         this.textAlign = textAlign;
         return this;
     }
 
     
-    public GraphicStyle setFill(String fill) {
+    public GraphicStyle fill(String fill) {
         this.fill = fill;
         return this;
     }
 
     
-    public GraphicStyle setWidth(Object width) {
+    public GraphicStyle width(Object width) {
         this.width = width;
         return this;
     }
 
     
-    public GraphicStyle setHeight(Object height) {
+    public GraphicStyle height(Object height) {
         this.height = height;
         return this;
     }
