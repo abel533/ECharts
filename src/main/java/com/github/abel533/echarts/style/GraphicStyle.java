@@ -66,7 +66,7 @@ public class GraphicStyle {
     }
 
     
-    public GraphicStyle textalign(Align textAlign) {
+    public GraphicStyle textAlign(Align textAlign) {
         this.textAlign = textAlign;
         return this;
     }
