@@ -32,13 +32,16 @@ import com.github.abel533.echarts.util.EnhancedOption;
 import org.junit.Test;
 
 /**
- * @author liuzh
+ * 雷达图测试1
+ *
+ * @author liuxu
+ * @date 18-7-10下午4:21
  */
 public class RadarTest1 {
 
     @Test
     public void test() {
-        //地址：http://echarts.baidu.com/doc/example/bar1.html
+
         EnhancedOption option = new EnhancedOption();
 
         option.title().text("基础雷达图").subtext("基础雷达图subtext");
