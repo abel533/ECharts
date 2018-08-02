@@ -133,7 +133,7 @@ public class LineTest6 {
         line2.yAxisIndex(1).itemStyle().normal().areaStyle().typeDefault();
 
 
-        line2.setData(getData());
+        line2.data(getData());
         option.series(line1, line2);
         option.exportToHtml("line6.html");
         option.view();

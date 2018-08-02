@@ -2,7 +2,7 @@
 
 # 本项目短域名为 http://echarts.tk
 
-**当前版本3.0.0**
+**当前版本[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.github.abel533/ECharts/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.abel533/ECharts)**
 
 本项目是一个供Java开发使用的ECharts的开发包，主要目的是方便在Java中构造ECharts中可能用到的全部数据结构，如完整的结构Option。Option中的数据Series，包含Bar-柱状图，Line-折线图，Pie-饼图，Chord-和弦图等，支持ECharts中的所有图表。支持所有的Style类，如AreaStyle,ChordStyle,ItemStyle,LineStyle,LinkStyle等等。支持多种Data数据类型，一个通用的Data数据，以及PieData,MapData,ScatterData,KData等针对性的数据结构。  
 
@@ -22,7 +22,7 @@
 <dependency>
   <groupId>com.github.abel533</groupId>
   <artifactId>ECharts</artifactId>
-  <version>3.0.0</version>
+  <version>最新版本</version>
 </dependency>
 ```
 
@@ -30,7 +30,9 @@
 
 [ECharts-x.x.x.jar](http://mvnrepository.com/artifact/com.github.abel533/ECharts)
 
-[API文档-3.0.0](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/3.0.0/ECharts-3.0.0-javadoc.jar) 下载后解压即可
+[API文档](https://oss.sonatype.org/content/repositories/releases/com/github/abel533/ECharts/) 
+
+打开后，查找需要的版本，下载其中的 javadoc 文件，解压即可。
 
 ## 项目支持
 
@@ -69,6 +71,10 @@
 ## 更新日志
 
 <b>3.x版本相比2.x版本改动很大，除了部分图表不一样外，少数api也有改动，因此如果要从2.x升级3.x，一定要做好测试!</b>
+
+### 3.0.0.3 - 2018-06-24
+
+- 增加图例类型 by [freelyshadow](https://github.com/freelyshadow) [pr#46](https://github.com/abel533/ECharts/pull/46)
 
 ### 3.0.0.2 - 2016-10-18
 

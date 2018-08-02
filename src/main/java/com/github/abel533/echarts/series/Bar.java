@@ -43,7 +43,8 @@ public class Bar extends Series<Bar> {
     /**
      * 柱条（K线蜡烛）宽度，不设时自适应
      */
-    private Integer barWidth;
+  //  private Integer barWidth;
+    private Object barWidth;
     /**
      * 柱条（K线蜡烛）最大宽度，不设时自适应
      */
@@ -94,7 +95,7 @@ public class Bar extends Series<Bar> {
     /**
      * 获取barWidth值
      */
-    public Integer barWidth() {
+    public Object barWidth() {
         return this.barWidth;
     }
 
@@ -103,7 +104,7 @@ public class Bar extends Series<Bar> {
      *
      * @param barWidth
      */
-    public Bar barWidth(Integer barWidth) {
+    public Bar barWidth(Object barWidth) {
         this.barWidth = barWidth;
         return this;
     }

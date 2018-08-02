@@ -25,6 +25,7 @@
 package com.github.abel533.echarts;
 
 import com.github.abel533.echarts.code.Align;
+import com.github.abel533.echarts.code.LegendType;
 import com.github.abel533.echarts.code.Orient;
 import com.github.abel533.echarts.style.TextStyle;
 import lombok.Getter;
@@ -44,6 +45,12 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      * @see com.github.abel533.echarts.code.Orient
      */
     private Orient orient;
+
+    /**
+     * 设置分页方式
+     */
+    private LegendType type ;
+
     /**
      * 图例图形宽度
      */
@@ -91,6 +98,15 @@ public class Legend extends Basic<Legend> implements Data<Legend>, Component {
      */
     public Legend(Object... values) {
         this.data(values);
+    }
+
+    public LegendType type(){
+        return this.type;
+    }
+
+    public Legend type(LegendType type) {
+        this.type = type;
+        return this;
     }
 
     public Align align() {
