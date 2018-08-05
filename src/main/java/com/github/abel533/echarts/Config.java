@@ -60,6 +60,7 @@ public interface Config {
     String COMPONENT_TYPE_AXIS_CATEGORY = "categoryAxis";
     String COMPONENT_TYPE_AXIS_VALUE = "valueAxis";
     String COMPONENT_TYPE_TIMELINE = "timeline";
+    String COMPONENT_TYPE_GRAPHIC = "graphic";
 
     // 全图默认背景
     String backgroundColor = "rgba(0,0,0,0)";

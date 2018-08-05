@@ -193,6 +193,14 @@ public class Option implements Serializable {
      * visualMap 是视觉映射组件，用于进行『视觉编码』，也就是将数据映射到视觉元素（视觉通道）
      */
     private List<VisualMap> visualMap;
+    /**
+     * 图形元素组件
+     */
+    private Graphic graphic;
+    /**
+     * 雷达图
+     */
+    private Radar radar;
 
     public List<VisualMap> visualMap() {
         if (this.visualMap == null) {
@@ -1016,4 +1024,28 @@ public class Option implements Serializable {
         this.options().addAll(Arrays.asList(values));
         return this;
     }
+
+    /**
+     * 添加图形元素组件
+     *
+     * @param graphic
+     * @return
+     */
+    public Option graphic(Graphic graphic) {
+        this.graphic = graphic;
+        return this;
+
+    }
+
+    /**
+     * 雷达图
+     *
+     * @param radar
+     * @return
+     */
+    public Option radar(Radar radar) {
+        this.radar = radar;
+        return this;
+    }
+
 }

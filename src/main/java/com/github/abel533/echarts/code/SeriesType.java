@@ -36,7 +36,7 @@ public enum SeriesType {
     //k,//K线图，3.0会转换为下面的candlestick----------------------------
     candlestick,//K线图，k会自动转换这个新的++++++++++++++++++++
     pie,//饼图
-    //radar,//雷达图
+    radar,//雷达图
     //chord,//和弦图
     //force,//力导向布局图,ECharts 2.x 中 force 类型的图表不再在 ECharts 3 中提供支持，转为统一使用 graph
     // 去展现关系数据。如果要使用力引导布局，可以将 layout 配置项设为'force'。--------------------

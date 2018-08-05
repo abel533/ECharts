@@ -81,6 +81,19 @@ public class TextStyle implements Serializable {
      * @see com.github.abel533.echarts.code.FontWeight
      */
     private Object fontWeight;
+    /**
+     * 背景色
+     */
+    private String backgroundColor;
+    /**
+     * 文字块的圆角
+     */
+    private Object borderRadius;
+    /**
+     * 边距
+     */
+    private Object padding;
+
 
     /**
      * 获取baseline值
@@ -378,4 +391,38 @@ public class TextStyle implements Serializable {
     public void setBaseline(Baseline baseline) {
         this.baseline = baseline;
     }
+
+    /**
+     * 背景色
+     *
+     * @param backgroundColor
+     * @return
+     */
+    public TextStyle backgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
+    /**
+     * 文字块的圆角
+     *
+     * @param borderRadius
+     * @return
+     */
+    public TextStyle borderRadius(Object borderRadius) {
+        this.borderRadius = borderRadius;
+        return this;
+    }
+
+    /**
+     * 边距
+     *
+     * @param padding
+     * @return
+     */
+    public TextStyle padding(Object padding) {
+        this.padding = padding;
+        return this;
+    }
+
 }
