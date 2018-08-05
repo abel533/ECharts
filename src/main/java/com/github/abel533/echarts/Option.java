@@ -1048,4 +1048,36 @@ public class Option implements Serializable {
         return this;
     }
 
+    /**
+     * 获取xAxis值
+     */
+    public List<Axis> getxAxis() {
+        return xAxis;
+    }
+
+    /**
+     * 设置xAxis值
+     *
+     * @param xAxis
+     */
+    public void setxAxis(List<Axis> xAxis) {
+        this.xAxis = xAxis;
+    }
+
+    /**
+     * 获取yAxis值
+     */
+    public List<Axis> getyAxis() {
+        return yAxis;
+    }
+
+    /**
+     * 设置yAxis值
+     *
+     * @param yAxis
+     */
+    public void setyAxis(List<Axis> yAxis) {
+        this.yAxis = yAxis;
+    }
+
 }
