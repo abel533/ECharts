@@ -115,7 +115,7 @@ public class ItemStyle implements Serializable {
         return normal;
     }
 
-    // 以下属性是TreeMap特有
+    //以下属性是TreeMap特有
 
     /**
      * 设置normal值
