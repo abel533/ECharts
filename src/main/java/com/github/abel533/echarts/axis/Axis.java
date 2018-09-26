@@ -203,7 +203,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
     }
 
     public T boundaryGap(Object o1, Object o2) {
-        this.boundaryGap = new Object[] { o1, o2 };
+        this.boundaryGap = new Object[]{o1, o2};
         return (T) this;
     }
 
