@@ -31,6 +31,12 @@ import java.util.Map;
  * @author liuzh
  */
 public class DataZoom extends Feature {
+
+    /**
+     * 当不指定时默认控制所有纵向类目，可通过数组指定多个需要控制的纵向类目坐标轴Index，仅一个时可直接为数字
+     */
+    private Object yAxisIndex;
+
     /**
      * 构造函数
      */
@@ -41,4 +47,22 @@ public class DataZoom extends Feature {
         title.put("dataZoomReset", "区域缩放后退");
         this.title(title);
     }
+
+    /**
+     * 获取yAxisIndex值
+     */
+    public Object yAxisIndex() {
+        return this.yAxisIndex;
+    }
+
+    /**
+     * 设置yAxisIndex值
+     *
+     * @param yAxisIndex
+     */
+    public DataZoom yAxisIndex(Object yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+        return this;
+    }
+
 }

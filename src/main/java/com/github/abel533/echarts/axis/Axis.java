@@ -54,7 +54,8 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      */
     private AxisType type;
     /**
-     * 坐标轴类型，横轴默认为类目型'bottom'，纵轴默认为数值型'left'，可选为：'bottom' | 'top' | 'left' | 'right'
+     * 坐标轴类型，横轴默认为类目型'bottom'，纵轴默认为数值型'left'，可选为：'bottom' | 'top' | 'left' |
+     * 'right'
      *
      * @see com.github.abel533.echarts.code.X
      * @see com.github.abel533.echarts.code.Y
@@ -134,6 +135,8 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * 坐标轴分割间隔
      */
     private Object interval;
+
+    private Number minInterval;
 
     public Boolean scale() {
         return this.scale;
@@ -470,7 +473,6 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
         return (T) this;
     }
 
-
     /**
      * 分隔线，默认显示，属性show控制显示与否，属性lineStyle（详见lineStyle）控制线条样式
      *
@@ -521,6 +523,7 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
      * @param values
      * @return
      */
+    @Override
     public T data(Object... values) {
         if (values == null || values.length == 0) {
             return (T) this;
@@ -533,6 +536,15 @@ public abstract class Axis<T> extends AbstractData<T> implements Component {
             }
         }
         this.data.addAll(Arrays.asList(values));
+        return (T) this;
+    }
+
+    public Number minInterval() {
+        return this.minInterval;
+    }
+
+    public T minInterval(Number minInterval) {
+        this.minInterval = minInterval;
         return (T) this;
     }
 }

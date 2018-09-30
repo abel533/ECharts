@@ -52,7 +52,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     /**
      * 显示的label的格式化器
      */
-    private String labelFormatter;
+    private Object labelFormatter;
     /**
      * 是否在 dataZoom-silder 组件中显示数据阴影。数据阴影可以简单得反应数据走势
      */
@@ -134,6 +134,8 @@ public class DataZoom extends Basic<DataZoom> implements Component {
      */
     private Boolean showDetail;
 
+    private Object minValueSpan;
+
     public String labelPrecision() {
         return this.labelPrecision;
     }
@@ -143,11 +145,11 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         return this;
     }
 
-    public String labelFormatter() {
+    public Object labelFormatter() {
         return this.labelFormatter;
     }
 
-    public DataZoom labelFormatter(String labelFormatter) {
+    public DataZoom labelFormatter(Object labelFormatter) {
         this.labelFormatter = labelFormatter;
         return this;
     }
@@ -220,6 +222,7 @@ public class DataZoom extends Basic<DataZoom> implements Component {
         this.endValue = endValue;
         return this;
     }
+
     public DataZoomType type() {
         return this.type;
     }
@@ -487,5 +490,22 @@ public class DataZoom extends Basic<DataZoom> implements Component {
     public DataZoom showDetail(Boolean showDetail) {
         this.showDetail = showDetail;
         return this;
+    }
+
+    /**
+     * minValueSpan
+     *
+     * @param minValueSpan
+     */
+    public DataZoom minValueSpan(Object minValueSpan) {
+        this.minValueSpan = minValueSpan;
+        return this;
+    }
+
+    /**
+     * minValueSpan
+     */
+    public Object minValueSpan() {
+        return this.minValueSpan;
     }
 }

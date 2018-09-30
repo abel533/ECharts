@@ -39,6 +39,15 @@ public class ItemStyle implements Serializable {
     private static final long serialVersionUID = 418674375057055357L;
 
     /**
+     * 阳线颜色
+     */
+    private Object color;
+    /**
+     * 阴线颜色
+     */
+    private Object color0;
+
+    /**
      * 默认样式
      */
     private Normal normal;
@@ -206,7 +215,7 @@ public class ItemStyle implements Serializable {
     /**
      * 获取childBorderWidth值
      */
-	public Integer getChildBorderWidth() {
+    public Integer getChildBorderWidth() {
         return childBorderWidth;
     }
 
@@ -222,7 +231,7 @@ public class ItemStyle implements Serializable {
     /**
      * 获取childBorderColor值
      */
-	public Object getChildBorderColor() {
+    public Object getChildBorderColor() {
         return childBorderColor;
     }
 
@@ -233,5 +242,71 @@ public class ItemStyle implements Serializable {
      */
     public void setChildBorderColor(Object childBorderColor) {
         this.childBorderColor = childBorderColor;
+    }
+
+    /**
+     * 获取color值
+     */
+    public Object color() {
+        return this.color;
+    }
+
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
+    public ItemStyle color(Object color) {
+        this.color = color;
+        return this;
+    }
+
+    /**
+     * 获取color0值
+     */
+    public Object color0() {
+        return this.color0;
+    }
+
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
+    public ItemStyle color0(Object color0) {
+        this.color0 = color0;
+        return this;
+    }
+
+    /**
+     * 获取color值
+     */
+    public Object getColor() {
+        return color;
+    }
+
+    /**
+     * 设置color值
+     *
+     * @param color
+     */
+    public void setColor(Object color) {
+        this.color = color;
+    }
+
+    /**
+     * 获取color0值
+     */
+    public Object getColor0() {
+        return color0;
+    }
+
+    /**
+     * 设置color0值
+     *
+     * @param color0
+     */
+    public void setColor0(Object color0) {
+        this.color0 = color0;
     }
 }

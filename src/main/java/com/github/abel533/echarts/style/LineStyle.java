@@ -38,6 +38,11 @@ public class LineStyle implements Serializable {
     private static final long serialVersionUID = 4765717693423256102L;
 
     /**
+     * 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形
+     */
+    private Double opacity;
+
+    /**
      * 阳线颜色
      */
     private Object color;
@@ -426,6 +431,15 @@ public class LineStyle implements Serializable {
      */
     public LineStyle emphasis(Emphasis emphasis) {
         this.emphasis = emphasis;
+        return this;
+    }
+
+    public Double opacity() {
+        return this.opacity;
+    }
+
+    public LineStyle opacity(Double opacity) {
+        this.opacity = opacity;
         return this;
     }
 }

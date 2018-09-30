@@ -27,6 +27,7 @@ package com.github.abel533.echarts.series;
 import com.github.abel533.echarts.code.DataFilter;
 import com.github.abel533.echarts.code.SeriesType;
 import com.github.abel533.echarts.style.AreaStyle;
+import com.github.abel533.echarts.style.LineStyle;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -50,6 +51,11 @@ public class Line extends Series<Line> {
      * 区域填充样式。
      */
     private AreaStyle areaStyle;
+
+    /**
+     * lineStyle
+     */
+    private LineStyle lineStyle;
 
     /**
      * 构造函数
@@ -111,6 +117,7 @@ public class Line extends Series<Line> {
         this.smooth = smooth;
         return this;
     }
+
     /**
      * 新建并返回areaStyle
      *
@@ -131,6 +138,29 @@ public class Line extends Series<Line> {
      */
     public Line areaStyle(AreaStyle areaStyle) {
         this.areaStyle = areaStyle;
+        return this;
+    }
+
+    /**
+     * 新建并返回lineStyle
+     *
+     * @return
+     */
+    public LineStyle lineStyle() {
+        if (this.lineStyle == null) {
+            this.lineStyle = new LineStyle();
+        }
+        return this.lineStyle;
+    }
+
+    /**
+     * 设置lineStyle
+     *
+     * @param lineStyle
+     * @return
+     */
+    public Line lineStyle(LineStyle lineStyle) {
+        this.lineStyle = lineStyle;
         return this;
     }
 }
