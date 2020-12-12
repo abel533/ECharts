@@ -53,9 +53,9 @@ public class MarkLine extends AbstractData<MarkLine> {
     /**
      * 标线起始和结束的symbol旋转控制，同series中的symbolRotate
      *
-     * @see com.github.abel533.echarts.series.Series#symbolRoate
+     * @see com.github.abel533.echarts.series.Series#symbolRotate
      */
-    private Object symbolRoate;
+    private Object symbolRotate;
     /**
      * 标线图形炫光特效
      *
@@ -207,19 +207,19 @@ public class MarkLine extends AbstractData<MarkLine> {
     }
 
     /**
-     * 获取symbolRoate值
+     * 获取symbolRotate值
      */
-    public Object symbolRoate() {
-        return this.symbolRoate;
+    public Object symbolRotate() {
+        return this.symbolRotate;
     }
 
     /**
-     * 设置symbolRoate值
+     * 设置symbolRotate值
      *
-     * @param symbolRoate
+     * @param symbolRotate
      */
-    public MarkLine symbolRoate(Object symbolRoate) {
-        this.symbolRoate = symbolRoate;
+    public MarkLine symbolRotate(Object symbolRotate) {
+        this.symbolRotate = symbolRotate;
         return this;
     }
 
