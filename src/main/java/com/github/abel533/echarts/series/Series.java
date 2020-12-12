@@ -107,7 +107,7 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     /**
      * 标志图形旋转角度[-180,180]
      */
-    private Object symbolRoate;
+    private Object symbolRotate;
     /**
      * 标记相对于原本位置的偏移
      */
@@ -592,19 +592,19 @@ public abstract class Series<T> extends AbstractData<T> implements Chart {
     }
 
     /**
-     * 获取symbolRoate值
+     * 获取symbolRotate值
      */
-    public Object symbolRoate() {
-        return this.symbolRoate;
+    public Object symbolRotate() {
+        return this.symbolRotate;
     }
 
     /**
-     * 设置symbolRoate值
+     * 设置symbolRotate值
      *
-     * @param symbolRoate
+     * @param symbolRotate
      */
-    public T symbolRoate(Object symbolRoate) {
-        this.symbolRoate = symbolRoate;
+    public T symbolRotate(Object symbolRotate) {
+        this.symbolRotate = symbolRotate;
         return (T) this;
     }
 

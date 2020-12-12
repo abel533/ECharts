@@ -52,9 +52,9 @@ public class MarkPoint extends AbstractData<MarkPoint> {
     /**
      * 标注图形旋转角度
      *
-     * @see com.github.abel533.echarts.series.Series#symbolRoate
+     * @see com.github.abel533.echarts.series.Series#symbolRotate
      */
-    private Object symbolRoate;
+    private Object symbolRotate;
     /**
      * 是否启动大规模标注模式
      */
@@ -133,19 +133,19 @@ public class MarkPoint extends AbstractData<MarkPoint> {
     }
 
     /**
-     * 获取symbolRoate值
+     * 获取symbolRotate值
      */
-    public Object symbolRoate() {
-        return this.symbolRoate;
+    public Object symbolRotate() {
+        return this.symbolRotate;
     }
 
     /**
-     * 设置symbolRoate值
+     * 设置symbolRotate值
      *
-     * @param symbolRoate
+     * @param symbolRotate
      */
-    public MarkPoint symbolRoate(Object symbolRoate) {
-        this.symbolRoate = symbolRoate;
+    public MarkPoint symbolRotate(Object symbolRotate) {
+        this.symbolRotate = symbolRotate;
         return this;
     }
 
