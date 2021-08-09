@@ -52,7 +52,7 @@ public class Sunburst extends Series<Sunburst> {
      * 构造函数
      */
     public Sunburst() {
-        this.type(SeriesType.Sunburst);
+        this.type(SeriesType.sunburst);
     }
 
     /**
