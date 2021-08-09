@@ -143,6 +143,9 @@ public class SeriesFactory {
     public static Sankey newSankey(String name) {
         return new Sankey(name);
     }
+    public static Sunburst newSunburst(String name) {
+        return new Sunburst(name);
+    }
 
 
 }
